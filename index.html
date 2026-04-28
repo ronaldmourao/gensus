@@ -41,7 +41,7 @@
     <div id="root"></div>
 
     <script type="text/babel">
-        const { useState, useMemo, useEffect } = React;
+        const { useState, useMemo, useEffect, useRef } = React;
 
         const CSV_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vSunO3dVP4m3_zA1WIBxLQCMDvwPD2gqJTX0DbyYCvR21DnDO2kNeJSLKgmOaIfRXWKFo5asfzR6SM5/pub?output=csv";
 
@@ -61,7 +61,10 @@
             Check: () => <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3"><polyline points="20 6 9 17 4 12"/></svg>,
             AlertCircle: () => <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>,
             Loader: () => <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3"><path d="M21 12a9 9 0 1 1-6.219-8.56" style={{animation: 'spin 1s linear infinite'}}/></svg>,
-            Star: ({filled}) => <svg width="18" height="18" viewBox="0 0 24 24" fill={filled ? "currentColor" : "none"} stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            Star: ({filled}) => <svg width="18" height="18" viewBox="0 0 24 24" fill={filled ? "currentColor" : "none"} stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>,
+            Scissors: () => <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><line x1="20" y1="4" x2="8.12" y2="15.88"/><line x1="14.47" y1="14.48" x2="20" y2="20"/><line x1="8.12" y1="8.12" x2="12" y2="12"/></svg>,
+            ChevronLeft: () => <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>,
+            ChevronRight: () => <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
         };
 
         const themeColors = {
@@ -177,12 +180,10 @@
                         const rowStatus = row[3]?.replace(/"/g, '').trim();
 
                         if (rowUser === userName.toLowerCase() && !isNaN(rawId)) {
-                            // SE ID > 0: É histórico de estudo normal
                             if (rawId > 0 && (rowStatus === "ACERTO" || rowStatus === "ERRO")) {
                                 if (!newHistory[rawId]) newHistory[rawId] = [];
                                 newHistory[rawId].push({ ans: "?", isCorrect: rowStatus === "ACERTO", date: row[0] });
                             } 
-                            // SE ID < 0: É ação da estrela (Arquitetura blindada)
                             else if (rawId < 0) {
                                 const targetId = Math.abs(rawId);
                                 if (rowStatus === "FAVORITOU") newFavorites.add(targetId);
@@ -250,8 +251,9 @@
                 setScreen('dashboard');
             };
 
-            const handleAnswer = (qId, option) => {
-                if (sessionAnswers[qId]) return;
+            // Nova função de responder separada da seleção
+            const handleAnswerSubmit = (qId, option) => {
+                if (!option || sessionAnswers[qId]) return;
                 const question = activeBank.find(q => q.id === qId);
                 const isCorrect = question.correct === option;
                 const statusText = isCorrect ? "ACERTO" : "ERRO";
@@ -262,7 +264,6 @@
                     return { ...prev, [qId]: [...qHist, { ans: option, isCorrect, date: new Date().toISOString() }] };
                 });
 
-                // Envia ID Positivo para Histórico
                 syncCommandToCloud(currentUser, qId, statusText);
             };
 
@@ -275,7 +276,6 @@
                     return [...prev, qId];
                 });
 
-                // Envia ID Negativo para proteger o formulário de estatísticas
                 syncCommandToCloud(currentUser, -qId, newStatus);
             };
 
@@ -321,15 +321,14 @@
                     const att = history[qId];
                     if (!att || att.length === 0) return;
                     const last = att[att.length - 1];
-                    const prev = att.length > 1 ? att[att.length - 2] : null;
+                    // Só entra no caderno se a ÚLTIMA for erro.
                     if (!last.isCorrect) status[qId] = "red";
-                    else if (last.isCorrect && (!prev || !prev.isCorrect)) status[qId] = "yellow";
                     else status[qId] = "green";
                 });
                 return status;
             }, [history]);
 
-            const errorQuestions = activeBank.filter(q => cadernoStatus[q.id] === 'red' || cadernoStatus[q.id] === 'yellow');
+            const errorQuestions = activeBank.filter(q => cadernoStatus[q.id] === 'red');
 
             const subjectsData = useMemo(() => {
                 const map = {};
@@ -526,7 +525,7 @@
                                     <div className="p-3 bg-red-500 text-white rounded-xl shadow-md"><Icons.BookX /></div>
                                     <div className="text-left">
                                         <h2 className="text-xl font-black text-slate-800 dark:text-white group-hover:text-red-600 dark:group-hover:text-red-400 transition-colors">Caderno</h2>
-                                        <p className="text-sm text-slate-500 dark:text-slate-400 font-medium">{errorQuestions.length} erros</p>
+                                        <p className="text-sm text-slate-500 dark:text-slate-400 font-medium">{errorQuestions.length} erros pendentes</p>
                                     </div>
                                 </div>
                             </button>
@@ -546,7 +545,7 @@
                                     <div className="p-3 bg-blue-600 text-white rounded-xl shadow-md"><Icons.BarChart /></div>
                                     <div className="text-left">
                                         <h2 className="text-xl font-black text-slate-800 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">Estatísticas</h2>
-                                        <p className="text-sm text-slate-500 dark:text-slate-400 font-medium">Diagnóstico</p>
+                                        <p className="text-sm text-slate-500 dark:text-slate-400 font-medium">Diagnóstico de Guerra</p>
                                     </div>
                                 </div>
                             </button>
@@ -599,15 +598,60 @@
                 const DiffIcon = diffStyle.icon;
                 const isFav = currentQ ? favorites.includes(currentQ.id) : false;
                 
+                // Estados para Eliminação e Seleção (Duas Etapas)
+                const [eliminated, setEliminated] = useState({});
+                const [selectedOption, setSelectedOption] = useState(null);
+                
+                // Estados para o Swipe Mobile
+                const touchStartX = useRef(null);
+                const isSwiping = useRef(false);
+
+                // Limpa configurações sempre que a questão mudar
+                useEffect(() => {
+                    setEliminated({});
+                    setSelectedOption(null);
+                }, [currentQ?.id]);
+
+                const toggleEliminate = (k) => {
+                    setEliminated(prev => ({ ...prev, [k]: !prev[k] }));
+                };
+
+                const handleOptionClick = (k) => {
+                    if (isSwiping.current) {
+                        isSwiping.current = false;
+                        return;
+                    }
+                    if (!sessionAns) setSelectedOption(k);
+                };
+
+                const handleTouchStart = (e) => {
+                    touchStartX.current = e.touches[0].clientX;
+                    isSwiping.current = false;
+                };
+
+                const handleTouchEnd = (e, k) => {
+                    if (touchStartX.current === null) return;
+                    const touchEndX = e.changedTouches[0].clientX;
+                    const diff = touchStartX.current - touchEndX;
+                    
+                    // Se deslizou mais de 40px, ativa a eliminação
+                    if (Math.abs(diff) > 40) {
+                        isSwiping.current = true;
+                        toggleEliminate(k);
+                    }
+                    touchStartX.current = null;
+                };
+                
                 if (!currentQ) return null;
                 
                 return (
-                    <div className="max-w-4xl mx-auto p-4 md:p-10 animate-in slide-in-from-right min-h-screen">
-                        <header className="flex justify-between items-center mb-8">
+                    <div className="max-w-4xl mx-auto p-4 md:p-10 animate-in slide-in-from-right min-h-screen flex flex-col">
+                        <header className="flex justify-between items-center mb-6 md:mb-8">
                             <button onClick={() => setScreen('dashboard')} className="text-slate-400 dark:text-slate-500 font-bold hover:text-slate-800 dark:hover:text-slate-300 text-sm md:text-base">← Pausar Treino</button>
                             <div className="bg-white dark:bg-slate-800 px-4 py-1.5 rounded-full border dark:border-slate-700 shadow-sm font-mono font-bold text-slate-500 dark:text-slate-400 text-sm">{idx + 1}/{quizConfig.questions.length}</div>
                         </header>
-                        <div className="bg-white dark:bg-slate-800 rounded-[2rem] border dark:border-slate-700 border-slate-200 shadow-2xl overflow-hidden relative flex flex-col">
+                        
+                        <div className="bg-white dark:bg-slate-800 rounded-[2rem] border dark:border-slate-700 border-slate-200 shadow-2xl overflow-hidden relative flex-1 flex flex-col">
                             <div className="h-2 w-full bg-slate-100 dark:bg-slate-900">
                                 <div className={`h-full ${theme.bar} transition-all duration-500 relative overflow-hidden`} style={{width:`${((idx+1)/quizConfig.questions.length)*100}%`}}>
                                     <div className="absolute inset-0 w-full h-full animate-[shimmer_1.5s_infinite] -translate-x-full bg-gradient-to-r from-transparent via-white/40 to-transparent"></div>
@@ -633,20 +677,56 @@
                                     </button>
                                 </div>
                                 <h2 className="text-xl md:text-2xl font-bold text-slate-800 dark:text-white mb-8 leading-relaxed">{currentQ.text}</h2>
+                                
                                 <div className="space-y-3">
                                     {Object.entries(currentQ.options).map(([k, v]) => {
-                                        const isSel = sessionAns === k;
+                                        const isSubmittedSel = sessionAns === k;
+                                        const isPendingSel = selectedOption === k;
                                         const isRight = currentQ.correct === k;
-                                        let bClass = "w-full text-left p-4 md:p-5 rounded-2xl border-2 transition-all duration-200 flex gap-4 text-sm md:text-base font-medium ";
-                                        if (!sessionAns) bClass += "border-slate-100 dark:border-slate-700 hover:border-blue-300 dark:hover:border-blue-500 hover:bg-blue-50 dark:hover:bg-blue-900/20 hover:-translate-y-1 shadow-sm hover:shadow-md";
-                                        else if (isRight) bClass += "border-emerald-500 bg-emerald-50 dark:bg-emerald-900/20 text-emerald-800 dark:text-emerald-200";
-                                        else if (isSel) bClass += "border-rose-500 bg-rose-50 dark:bg-rose-900/20 text-rose-800 dark:text-rose-200";
-                                        else bClass += "border-slate-50 dark:border-slate-800 opacity-40 grayscale";
-                                        return <button key={k} onClick={() => handleAnswer(currentQ.id, k)} disabled={!!sessionAns} className={bClass}><span className="font-black text-blue-600 dark:text-blue-400 shrink-0 mt-0.5">{k}</span><span className="">{v}</span></button>;
+                                        const isEliminated = eliminated[k];
+
+                                        let bClass = "flex-1 text-left p-4 md:p-5 rounded-2xl border-2 transition-all duration-200 flex gap-4 text-sm md:text-base font-medium ";
+                                        
+                                        if (!sessionAns) {
+                                            if (isPendingSel) {
+                                                bClass += "border-blue-500 bg-blue-50 dark:bg-blue-900/40 text-blue-800 dark:text-blue-200 shadow-md transform -translate-y-1";
+                                            } else {
+                                                bClass += "border-slate-100 dark:border-slate-700 hover:border-blue-300 dark:hover:border-blue-500 hover:bg-blue-50 dark:hover:bg-blue-900/20";
+                                            }
+                                        } else {
+                                            if (isRight) bClass += "border-emerald-500 bg-emerald-50 dark:bg-emerald-900/20 text-emerald-800 dark:text-emerald-200";
+                                            else if (isSubmittedSel) bClass += "border-rose-500 bg-rose-50 dark:bg-rose-900/20 text-rose-800 dark:text-rose-200";
+                                            else bClass += "border-slate-50 dark:border-slate-800 opacity-40 grayscale";
+                                        }
+
+                                        return (
+                                            <div 
+                                                key={k} 
+                                                className="flex gap-2 items-stretch relative group"
+                                                onTouchStart={handleTouchStart}
+                                                onTouchEnd={(e) => handleTouchEnd(e, k)}
+                                            >
+                                                {/* Tesoura: visível só no PC ao passar o mouse ou se estiver eliminada. No mobile desliza para ativar */}
+                                                <button
+                                                    onClick={() => toggleEliminate(k)}
+                                                    disabled={!!sessionAns}
+                                                    className={`px-3 md:px-4 flex items-center justify-center rounded-2xl border-2 transition-all duration-200 md:opacity-0 md:group-hover:opacity-100 ${isEliminated ? 'opacity-100 bg-slate-200 border-slate-300 text-slate-500 dark:bg-slate-700 dark:border-slate-600 dark:text-slate-400' : 'bg-transparent border-slate-100 text-slate-300 hover:text-slate-500 hover:bg-slate-50 dark:border-slate-700 dark:text-slate-600 dark:hover:text-slate-400 dark:hover:bg-slate-800'} ${!!sessionAns ? 'grayscale cursor-not-allowed' : ''}`}
+                                                    title="Eliminar alternativa (ou deslize para o lado)"
+                                                >
+                                                    <Icons.Scissors />
+                                                </button>
+
+                                                <button onClick={() => handleOptionClick(k)} disabled={!!sessionAns} className={`${bClass} ${isEliminated && !sessionAns ? 'opacity-40 grayscale' : ''}`}>
+                                                    <span className={`font-black text-blue-600 dark:text-blue-400 shrink-0 mt-0.5 ${isEliminated && !sessionAns ? 'line-through' : ''}`}>{k}</span>
+                                                    <span className={`${isEliminated && !sessionAns ? 'line-through italic text-slate-400' : ''}`}>{v}</span>
+                                                </button>
+                                            </div>
+                                        );
                                     })}
                                 </div>
                             </div>
-                            
+
+                            {/* FeedBack de Resposta */}
                             {sessionAns && (
                                 <div className={`p-6 md:p-10 border-t-2 ${sessionAns === currentQ.correct ? 'bg-emerald-50/50 dark:bg-emerald-900/10 border-emerald-100 dark:border-emerald-900/30' : 'bg-rose-50/50 dark:bg-rose-900/10 border-rose-100 dark:border-rose-900/30'} animate-in fade-in`}>
                                     <div className="bg-white dark:bg-slate-800 p-5 md:p-6 rounded-2xl shadow-md border dark:border-slate-700 border-slate-100">
@@ -656,13 +736,28 @@
                                 </div>
                             )}
 
-                            {/* Nova Barra de Navegação Inferior Fixa */}
-                            <div className="p-4 md:p-6 border-t-2 border-slate-100 dark:border-slate-700 bg-slate-50 dark:bg-slate-800/30 flex gap-3 md:gap-4 mt-auto">
-                                <button onClick={() => setIdx(i => i - 1)} disabled={idx === 0} className="flex-1 py-3 md:py-4 bg-white dark:bg-slate-800 border-2 border-slate-200 dark:border-slate-600 text-slate-600 dark:text-slate-300 font-black rounded-xl hover:bg-slate-50 dark:hover:bg-slate-700 transition-all disabled:opacity-40 disabled:hover:bg-white dark:disabled:hover:bg-slate-800 text-xs md:text-sm">
-                                    ← ANTERIOR
+                            {/* NOVA BARRA TRIPLA DE NAVEGAÇÃO */}
+                            <div className="p-3 md:p-6 border-t-2 border-slate-100 dark:border-slate-700 bg-slate-50 dark:bg-slate-800/30 flex gap-2 md:gap-4 mt-auto">
+                                <button onClick={() => setIdx(i => i - 1)} disabled={idx === 0} className="flex-1 py-3 md:py-4 bg-white dark:bg-slate-800 border-2 border-slate-200 dark:border-slate-600 text-slate-600 dark:text-slate-300 font-black rounded-xl hover:bg-slate-50 dark:hover:bg-slate-700 transition-all disabled:opacity-40 disabled:hover:bg-white dark:disabled:hover:bg-slate-800 text-xs flex items-center justify-center gap-1">
+                                    <Icons.ChevronLeft /> <span className="hidden sm:inline">ANTERIOR</span>
                                 </button>
-                                <button onClick={() => { if(idx < quizConfig.questions.length - 1) setIdx(i=>i+1); else setScreen('dashboard'); }} className="flex-1 py-3 md:py-4 bg-slate-900 dark:bg-slate-100 text-white dark:text-slate-900 font-black rounded-xl shadow-lg hover:scale-[1.02] transition-transform text-xs md:text-sm">
-                                    {idx < quizConfig.questions.length - 1 ? 'PRÓXIMA →' : 'FINALIZAR'}
+                                
+                                <button 
+                                    onClick={() => handleAnswerSubmit(currentQ.id, selectedOption)} 
+                                    disabled={!!sessionAns || !selectedOption}
+                                    className={`flex-[1.5] py-3 md:py-4 font-black rounded-xl shadow-md transition-all text-xs flex items-center justify-center ${
+                                        !!sessionAns ? 'bg-slate-200 text-slate-400 dark:bg-slate-700 dark:text-slate-500 hidden md:flex' : 
+                                        !selectedOption ? 'bg-slate-300 text-slate-500 dark:bg-slate-600 dark:text-slate-400' : 
+                                        'bg-blue-600 text-white hover:bg-blue-700 hover:scale-[1.02]'
+                                    }`}
+                                >
+                                    {!!sessionAns ? 'RESPONDIDA' : 'RESPONDER'}
+                                </button>
+
+                                <button onClick={() => { if(idx < quizConfig.questions.length - 1) setIdx(i=>i+1); else setScreen('dashboard'); }} disabled={!sessionAns} className={`flex-1 py-3 md:py-4 font-black rounded-xl transition-all text-xs flex items-center justify-center gap-1 ${
+                                    !sessionAns ? 'bg-white dark:bg-slate-800 border-2 border-slate-200 dark:border-slate-600 text-slate-400 dark:text-slate-500' : 'bg-slate-900 dark:bg-slate-100 text-white dark:text-slate-900 shadow-md hover:scale-[1.02]'
+                                }`}>
+                                    <span className="hidden sm:inline">{idx < quizConfig.questions.length - 1 ? 'PRÓXIMA' : 'FINALIZAR'}</span> <Icons.ChevronRight />
                                 </button>
                             </div>
                         </div>
@@ -725,9 +820,16 @@
                         <div className="space-y-6 md:space-y-8">
                             {Object.entries(difficultyStats.byArea).map(([area, diffs]) => {
                                 const theme = getTheme(area);
+                                
+                                const totalAreaQs = Object.values(diffs).reduce((a, b) => a + b.total, 0);
+                                const totalAreaAttempted = Object.values(diffs).reduce((a, b) => a + b.attempted, 0);
+
                                 return (
                                     <div key={area} className={`p-5 md:p-6 rounded-[2rem] ${theme.bg} border ${theme.border}`}>
-                                        <h4 className={`text-lg md:text-base font-black ${theme.text} mb-4 md:mb-6 uppercase tracking-tight`}>{area}</h4>
+                                        <div className="mb-4 md:mb-6">
+                                            <h4 className={`text-lg md:text-base font-black ${theme.text} uppercase tracking-tight`}>{area}</h4>
+                                            <p className={`text-xs font-bold ${theme.text} opacity-70 mt-1`}>{totalAreaAttempted} de {totalAreaQs} questões totais resolvidas</p>
+                                        </div>
                                         
                                         <div className="grid grid-cols-1 md:grid-cols-3 gap-3 md:gap-4">
                                             {['fácil', 'médio', 'difícil'].map(diff => {
