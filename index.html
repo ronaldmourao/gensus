@@ -3,48 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Genoma SUS - Cloud Sync</title>
+    <title>Genoma SUS - Premium Sync</title>
+    
     <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
     <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    keyframes: {
+                        shimmer: {
+                            '100%': { transform: 'translateX(100%)' }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet">
     <script src="banco.js"></script>
-    <style>body { font-family: 'Inter', sans-serif; } .hide-scrollbar::-webkit-scrollbar { display: none; }</style>
+    
+    <style>
+        body { font-family: 'Inter', sans-serif; } 
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .diff-facil { @apply bg-emerald-100 text-emerald-700 border-emerald-200; }
+        .diff-media { @apply bg-amber-100 text-amber-700 border-amber-200; }
+        .diff-dificil { @apply bg-rose-100 text-rose-700 border-rose-200; }
+        body { -webkit-tap-highlight-color: transparent; }
+    </style>
 </head>
-<body class="bg-[#f8fafc] text-slate-900">
+<body class="bg-slate-50 text-slate-900 dark:bg-slate-900 dark:text-slate-100 transition-colors duration-300">
     <div id="root"></div>
 
     <script type="text/babel">
         const { useState, useMemo, useEffect } = React;
 
-        // --- CONEXÃO COM SUA PLANILHA ---
         const CSV_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vSunO3dVP4m3_zA1WIBxLQCMDvwPD2gqJTX0DbyYCvR21DnDO2kNeJSLKgmOaIfRXWKFo5asfzR6SM5/pub?output=csv";
 
         const Icons = {
-            Trophy: () => <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/></svg>,
-            User: () => <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>,
-            LogOut: () => <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" cy="12" x2="9" y2="12"></line></svg>,
+            Trophy: () => <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17"/><path d="M14 14.66V17"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/></svg>,
+            User: () => <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>,
+            LogOut: () => <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>,
+            Play: () => <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>,
+            BarChart: () => <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><line x1="12" y1="20" x2="12" y2="10"/><line x1="18" y1="20" x2="18" y2="4"/><line x1="6" y1="20" x2="6" y2="16"/></svg>,
+            BookX: () => <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/><line x1="9" y1="8" x2="15" y2="14"/><line x1="15" y1="8" x2="9" y2="14"/></svg>,
             Plus: () => <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>,
-            Play: () => <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polygon points="5 3 19 12 5 21 5 3"/></svg>,
-            BarChart: () => <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="12" y1="20" x2="12" y2="10"/><line x1="18" y1="20" x2="18" y2="4"/><line x1="6" y1="20" x2="6" y2="16"/></svg>,
-            BookX: () => <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/><line x1="9" y1="8" x2="15" y2="14"/><line x1="15" y1="8" x2="9" y2="14"/></svg>,
             Zap: () => <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>,
-            Target: () => <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>,
-            Brain: () => <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96.44 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1-.34-5.58 2.5 2.5 0 0 1 1.32-4.24 2.5 2.5 0 0 1 1.98-3A2.5 2.5 0 0 1 9.5 2Z"/><path d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96.44 2.5 2.5 0 0 0 2.96-3.08 3 3 0 0 0 .34-5.58 2.5 2.5 0 0 0-1.32-4.24 2.5 2.5 0 0 0-1.98-3A2.5 2.5 0 0 0 14.5 2Z"/></svg>
+            Target: () => <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>,
+            Brain: () => <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96.44 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1-.34-5.58 2.5 2.5 0 0 1 1.32-4.24 2.5 2.5 0 0 1 1.98-3A2.5 2.5 0 0 1 9.5 2Z"/><path d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96.44 2.5 2.5 0 0 0 2.96-3.08 3 3 0 0 0 .34-5.58 2.5 2.5 0 0 0-1.32-4.24 2.5 2.5 0 0 0-1.98-3A2.5 2.5 0 0 0 14.5 2Z"/></svg>,
+            Moon: () => <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>,
+            Sun: () => <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>,
+            Check: () => <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3"><polyline points="20 6 9 17 4 12"/></svg>,
+            AlertCircle: () => <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>,
+            Loader: () => <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3"><path d="M21 12a9 9 0 1 1-6.219-8.56" style={{animation: 'spin 1s linear infinite'}}/></svg>,
+            Star: ({filled}) => <svg width="18" height="18" viewBox="0 0 24 24" fill={filled ? "currentColor" : "none"} stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
         };
 
         const themeColors = {
-            "Laboratório": { bg: "bg-emerald-50", text: "text-emerald-700", border: "border-emerald-200", bar: "bg-emerald-500", highlight: "bg-emerald-600" },
-            "Bioinformática": { bg: "bg-blue-50", text: "text-blue-700", border: "border-blue-200", bar: "bg-blue-500", highlight: "bg-blue-600" }
+            "Laboratório": { bg: "dark:bg-emerald-900/30 bg-gradient-to-br from-emerald-50 to-emerald-100 dark:from-emerald-900/40 dark:to-emerald-800/20", text: "dark:text-emerald-300 text-emerald-800", border: "dark:border-emerald-700 border-emerald-200", bar: "bg-emerald-500", highlight: "dark:bg-emerald-700 bg-emerald-600" },
+            "Bioinformática": { bg: "dark:bg-blue-900/30 bg-gradient-to-br from-blue-50 to-blue-100 dark:from-blue-900/40 dark:to-blue-800/20", text: "dark:text-blue-300 text-blue-800", border: "dark:border-blue-700 border-blue-200", bar: "bg-blue-500", highlight: "dark:bg-blue-700 bg-blue-600" }
         };
-        const getTheme = (area) => themeColors[area] || { bg: "bg-slate-50", text: "text-slate-700", border: "border-slate-200", bar: "bg-slate-500", highlight: "bg-slate-600" };
+        const getTheme = (area) => themeColors[area] || { bg: "dark:bg-slate-800 bg-slate-50", text: "dark:text-slate-300 text-slate-700", border: "dark:border-slate-700 border-slate-200", bar: "bg-slate-500", highlight: "dark:bg-slate-700 bg-slate-600" };
 
-        // Estilos de dificuldade
         const difficultyStyles = {
-            "fácil": { bg: "bg-green-100", text: "text-green-700", icon: Icons.Zap, label: "Fácil" },
-            "médio": { bg: "bg-yellow-100", text: "text-yellow-700", icon: Icons.Target, label: "Médio" },
-            "difícil": { bg: "bg-red-100", text: "text-red-700", icon: Icons.Brain, label: "Difícil" }
+            "fácil": { bg: "dark:bg-emerald-900/30 bg-emerald-100", text: "dark:text-emerald-400 text-emerald-700", icon: Icons.Zap, label: "Fácil" },
+            "médio": { bg: "dark:bg-amber-900/30 bg-amber-100", text: "dark:text-amber-400 text-amber-700", icon: Icons.Target, label: "Médio" },
+            "difícil": { bg: "dark:bg-rose-900/30 bg-rose-100", text: "dark:text-rose-400 text-rose-700", icon: Icons.Brain, label: "Difícil" }
         };
         const getDifficultyStyle = (diff) => difficultyStyles[diff] || difficultyStyles["fácil"];
 
@@ -63,7 +92,7 @@
                 "Princípios de saúde pública e epidemiologia genética",
                 "Segurança de dados",
                 "Genética de populações",
-                "Vocabulários controlados, ontologias e técnicas de extração, transformation e carga de dados (ETL)"
+                "Vocabulários controlados, ontologias e técnicas de extração, transformação e carga de dados (ETL)"
             ]
         };
 
@@ -75,57 +104,143 @@
             const [screen, setScreen] = useState('dashboard');
             const [quizConfig, setQuizConfig] = useState({ questions: [], title: "", mode: "study" });
             const [idx, setIdx] = useState(0);
+            
             const [history, setHistory] = useState({});
+            const [favorites, setFavorites] = useState(() => JSON.parse(localStorage.getItem(`genomasus_fav_${currentUser}`) || "[]"));
             const [sessionAnswers, setSessionAnswers] = useState({});
-            const [isLoadingCloud, setIsLoadingCloud] = useState(false);
+            
+            const [darkMode, setDarkMode] = useState(() => localStorage.getItem('genomasus_dark_mode') === 'true');
+            const [syncStatus, setSyncStatus] = useState('idle'); 
+            const [syncMessage, setSyncMessage] = useState('');
             const [showDifficultySelector, setShowDifficultySelector] = useState(false);
             const [pendingQuizData, setPendingQuizData] = useState(null);
+            const [lastSyncTime, setLastSyncTime] = useState(null);
+            const [isLoadingGlobalUsers, setIsLoadingGlobalUsers] = useState(false);
 
             const activeBank = useMemo(() => window.questionBank || [], []);
 
-            const syncFromCloud = async (userName) => {
+            useEffect(() => {
+                if (darkMode) document.documentElement.classList.add('dark');
+                else document.documentElement.classList.remove('dark');
+                localStorage.setItem('genomasus_dark_mode', darkMode);
+            }, [darkMode]);
+
+            useEffect(() => {
+                if (currentUser) localStorage.setItem(`genomasus_fav_${currentUser}`, JSON.stringify(favorites));
+            }, [favorites, currentUser]);
+
+            useEffect(() => {
+                const fetchGlobalUsers = async () => {
+                    if (!CSV_URL || currentUser) return;
+                    setIsLoadingGlobalUsers(true);
+                    try {
+                        const response = await fetch(CSV_URL + "&t=" + new Date().getTime());
+                        const text = await response.text();
+                        const rows = text.split('\n').map(row => row.split(','));
+                        
+                        const cloudUsers = new Set();
+                        rows.slice(1).forEach(row => {
+                            const rowUser = row[1]?.replace(/"/g, '').trim().toLowerCase();
+                            if (rowUser) cloudUsers.add(rowUser);
+                        });
+
+                        setUserList(prev => {
+                            const mergedList = Array.from(new Set([...prev, ...cloudUsers]));
+                            localStorage.setItem('genomasus_user_list', JSON.stringify(mergedList));
+                            return mergedList;
+                        });
+                    } catch (e) {
+                        console.log("Offline: Usando apenas usuários salvos localmente.");
+                    } finally {
+                        setIsLoadingGlobalUsers(false);
+                    }
+                };
+                fetchGlobalUsers();
+            }, [currentUser]);
+
+            const syncFromCloud = async (userName, showMessage = true) => {
                 if (!CSV_URL) return;
-                setIsLoadingCloud(true);
+                setSyncStatus('syncing');
+                if (showMessage) setSyncMessage('Sincronizando...');
+                
                 try {
                     const response = await fetch(CSV_URL + "&t=" + new Date().getTime());
                     const text = await response.text();
                     const rows = text.split('\n').map(row => row.split(','));
                     
                     const newHistory = {};
+                    const newFavorites = new Set();
+
                     rows.slice(1).forEach(row => {
                         const rowUser = row[1]?.replace(/"/g, '').trim().toLowerCase();
-                        const rowId = parseInt(row[2]?.replace(/"/g, ''));
+                        const rawId = parseInt(row[2]?.replace(/"/g, ''));
                         const rowStatus = row[3]?.replace(/"/g, '').trim();
 
-                        if (rowUser === userName.toLowerCase() && !isNaN(rowId)) {
-                            if (!newHistory[rowId]) newHistory[rowId] = [];
-                            newHistory[rowId].push({ ans: "?", isCorrect: rowStatus === "ACERTO", date: row[0] });
+                        if (rowUser === userName.toLowerCase() && !isNaN(rawId)) {
+                            // SE ID > 0: É histórico de estudo normal
+                            if (rawId > 0 && (rowStatus === "ACERTO" || rowStatus === "ERRO")) {
+                                if (!newHistory[rawId]) newHistory[rawId] = [];
+                                newHistory[rawId].push({ ans: "?", isCorrect: rowStatus === "ACERTO", date: row[0] });
+                            } 
+                            // SE ID < 0: É ação da estrela (Arquitetura blindada)
+                            else if (rawId < 0) {
+                                const targetId = Math.abs(rawId);
+                                if (rowStatus === "FAVORITOU") newFavorites.add(targetId);
+                                else if (rowStatus === "DESFAVORITOU") newFavorites.delete(targetId);
+                            }
                         }
                     });
+                    
                     setHistory(newHistory);
+                    setFavorites(Array.from(newFavorites));
+                    setSyncStatus('success');
+                    if (showMessage) setSyncMessage('Sincronizado');
+                    setLastSyncTime(new Date().toLocaleTimeString('pt-BR', { hour: '2-digit', minute: '2-digit' }));
+                    setTimeout(() => setSyncStatus('idle'), 3000);
                 } catch (e) {
-                    console.error("Erro de sincronização", e);
-                } finally {
-                    setIsLoadingCloud(false);
+                    setSyncStatus('error');
+                    setSyncMessage('Offline');
+                    setTimeout(() => setSyncStatus('idle'), 5000);
                 }
             };
 
             useEffect(() => {
-                if (currentUser) {
-                    syncFromCloud(currentUser);
-                    if (!userList.includes(currentUser)) {
-                        const newList = [...userList, currentUser];
-                        setUserList(newList);
-                        localStorage.setItem('genomasus_user_list', JSON.stringify(newList));
-                    }
-                }
+                if (!currentUser) return;
+                syncFromCloud(currentUser, false);
+                const interval = setInterval(() => syncFromCloud(currentUser, false), 30000);
+                return () => clearInterval(interval);
             }, [currentUser]);
+
+            const syncCommandToCloud = async (userName, qId, statusText) => {
+                try {
+                    setSyncStatus('syncing');
+                    const formID = "1FAIpQLSdLep-1NlhMCXeeGEVjZPXh-unPvuSkwqkNvfAuYwyCPDKzSw";
+                    const formData = new URLSearchParams();
+                    formData.append("entry.369347060", userName);
+                    formData.append("entry.455774683", qId);
+                    formData.append("entry.1700459455", statusText);
+
+                    await fetch(`https://docs.google.com/forms/d/e/${formID}/formResponse`, {
+                        method: 'POST',
+                        mode: 'no-cors',
+                        body: formData
+                    });
+                    
+                    setSyncStatus('success');
+                    setLastSyncTime(new Date().toLocaleTimeString('pt-BR', { hour: '2-digit', minute: '2-digit' }));
+                    setTimeout(() => setSyncStatus('idle'), 2000);
+                } catch (e) {
+                    setSyncStatus('error');
+                    setTimeout(() => setSyncStatus('idle'), 3000);
+                }
+            };
 
             const handleLogin = (name) => {
                 const formatted = name.trim().toLowerCase();
                 if (formatted) {
                     localStorage.setItem('genomasus_active_user', formatted);
                     setCurrentUser(formatted);
+                    setFavorites(JSON.parse(localStorage.getItem(`genomasus_fav_${formatted}`) || "[]"));
                 }
             };
 
@@ -147,18 +262,27 @@
                     return { ...prev, [qId]: [...qHist, { ans: option, isCorrect, date: new Date().toISOString() }] };
                 });
 
-                const formID = "1FAIpQLSdLep-1NlhMCXeeGEVjZPXh-unPvuSkwqkNvfAuYwyCPDKzSw";
-                const formData = new URLSearchParams();
-                formData.append("entry.369347060", currentUser);
-                formData.append("entry.455774683", qId);
-                formData.append("entry.1700459455", statusText);
+                // Envia ID Positivo para Histórico
+                syncCommandToCloud(currentUser, qId, statusText);
+            };
 
-                fetch(`https://docs.google.com/forms/d/e/${formID}/formResponse`, { method: 'POST', mode: 'no-cors', body: formData });
+            const toggleFavorite = (qId) => {
+                const isFav = favorites.includes(qId);
+                const newStatus = isFav ? "DESFAVORITOU" : "FAVORITOU";
+                
+                setFavorites(prev => {
+                    if (isFav) return prev.filter(id => id !== qId);
+                    return [...prev, qId];
+                });
+
+                // Envia ID Negativo para proteger o formulário de estatísticas
+                syncCommandToCloud(currentUser, -qId, newStatus);
             };
 
             const startQuiz = (questions, title, mode) => {
                 if(questions.length === 0) return alert("Nenhuma questão disponível para este filtro.");
-                setQuizConfig({ questions: [...questions].sort(() => 0.5 - Math.random()), title, mode });
+                const shuffled = [...questions].sort(() => 0.5 - Math.random());
+                setQuizConfig({ questions: shuffled, title, mode });
                 setSessionAnswers({});
                 setIdx(0);
                 setScreen('quiz');
@@ -167,22 +291,27 @@
             };
 
             const openDifficultySelector = (questions, title, mode) => {
-                if(questions.length === 0) return alert("Nenhuma questão disponível para este filtro.");
+                if(questions.length === 0) return alert("Nenhuma questão disponível.");
                 setPendingQuizData({ questions, title, mode });
                 setShowDifficultySelector(true);
             };
 
             const startQuizWithDifficulty = (difficulty) => {
                 if (!pendingQuizData) return;
-                const filteredQuestions = difficulty === 'all' 
-                    ? pendingQuizData.questions 
-                    : pendingQuizData.questions.filter(q => q.difficulty === difficulty);
                 
-                if (filteredQuestions.length === 0) {
-                    alert(`Nenhuma questão ${difficulty === 'all' ? '' : difficulty} disponível para este filtro.`);
-                    return;
+                let filteredQuestions = [];
+                if (difficulty === 'all') {
+                    filteredQuestions = pendingQuizData.questions;
+                } else if (difficulty === 'ineditas') {
+                    filteredQuestions = pendingQuizData.questions.filter(q => !history[q.id]);
+                } else {
+                    filteredQuestions = pendingQuizData.questions.filter(q => (q.difficulty || 'fácil').toLowerCase() === difficulty);
                 }
                 
+                if (filteredQuestions.length === 0) {
+                    alert(`Nenhuma questão disponível neste nível.`);
+                    return;
+                }
                 startQuiz(filteredQuestions, pendingQuizData.title, pendingQuizData.mode);
             };
 
@@ -202,7 +331,6 @@
 
             const errorQuestions = activeBank.filter(q => cadernoStatus[q.id] === 'red' || cadernoStatus[q.id] === 'yellow');
 
-            // --- LÓGICA DO DIAGNÓSTICO POR ASSUNTO ---
             const subjectsData = useMemo(() => {
                 const map = {};
                 activeBank.forEach(q => {
@@ -218,7 +346,6 @@
                 return map;
             }, [history, activeBank]);
 
-            // ESTATÍSTICAS POR DIFICULDADE E ÁREA
             const difficultyStats = useMemo(() => {
                 const stats = {
                     global: { fácil: {total: 0, attempted: 0, correct: 0}, médio: {total: 0, attempted: 0, correct: 0}, difícil: {total: 0, attempted: 0, correct: 0} },
@@ -226,14 +353,12 @@
                 };
 
                 activeBank.forEach(q => {
-                    const diff = q.difficulty || 'fácil';
+                    const diff = (q.difficulty || 'fácil').toLowerCase();
                     const area = q.area;
                     
-                    // Global
                     if (!stats.global[diff]) stats.global[diff] = {total: 0, attempted: 0, correct: 0};
                     stats.global[diff].total++;
                     
-                    // Por área
                     if (!stats.byArea[area]) {
                         stats.byArea[area] = { fácil: {total: 0, attempted: 0, correct: 0}, médio: {total: 0, attempted: 0, correct: 0}, difícil: {total: 0, attempted: 0, correct: 0} };
                     }
@@ -244,182 +369,224 @@
                     if (h && h.length > 0) {
                         stats.global[diff].attempted++;
                         stats.byArea[area][diff].attempted++;
-                        
                         if (h[h.length - 1].isCorrect) {
                             stats.global[diff].correct++;
                             stats.byArea[area][diff].correct++;
                         }
                     }
                 });
-
                 return stats;
             }, [history, activeBank]);
 
+            const SyncIndicator = () => {
+                return (
+                    <div className={`fixed bottom-4 right-4 md:bottom-6 md:right-6 px-4 py-3 rounded-full border backdrop-blur-sm text-xs font-bold transition-all z-40 ${
+                        syncStatus === 'idle' ? 'opacity-0 pointer-events-none translate-y-4' :
+                        syncStatus === 'syncing' ? 'bg-blue-500/90 dark:bg-blue-600/90 border-blue-400 text-white translate-y-0' :
+                        syncStatus === 'success' ? 'bg-emerald-500/90 dark:bg-emerald-600/90 border-emerald-400 text-white translate-y-0' :
+                        'bg-rose-500/90 dark:bg-rose-600/90 border-rose-400 text-white translate-y-0'
+                    }`}>
+                        <div className="flex items-center gap-2">
+                            {syncStatus === 'syncing' && <Icons.Loader />}
+                            {syncStatus === 'success' && <Icons.Check />}
+                            {syncStatus === 'error' && <Icons.AlertCircle />}
+                            <span>{syncMessage}</span>
+                        </div>
+                    </div>
+                );
+            };
+
             if (!currentUser) {
                 return (
-                    <div className="min-h-screen flex items-center justify-center bg-slate-100 p-6">
-                        <div className="bg-white p-10 rounded-[3rem] shadow-2xl w-full max-w-md border border-slate-200">
-                            <div className="bg-blue-600 w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-6 text-white shadow-lg"><Icons.Trophy /></div>
-                            <h1 className="text-3xl font-black text-center text-slate-800 mb-8 tracking-tighter">Genoma SUS</h1>
-                            <div className="space-y-3 mb-8 max-h-60 overflow-y-auto pr-2 hide-scrollbar">
+                    <div className="min-h-screen flex items-center justify-center p-6 bg-slate-100 dark:bg-slate-900 transition-colors">
+                        <div className="bg-white dark:bg-slate-800 p-8 md:p-10 rounded-[2rem] shadow-2xl w-full max-w-md border dark:border-slate-700 border-slate-200">
+                            <div className="bg-blue-600 dark:bg-blue-700 w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-6 text-white shadow-lg"><Icons.Trophy /></div>
+                            <h1 className="text-3xl font-black text-center text-slate-800 dark:text-white mb-2 tracking-tighter uppercase">Genoma SUS</h1>
+                            
+                            <div className="flex items-center justify-center gap-2 mb-8">
+                                <p className="text-center text-slate-500 dark:text-slate-400 text-sm font-medium">Treinamento de Elite</p>
+                                {isLoadingGlobalUsers && <span className="text-[10px] bg-slate-100 dark:bg-slate-700 text-slate-500 dark:text-slate-300 px-2 py-0.5 rounded font-bold animate-pulse">Buscando na Nuvem...</span>}
+                            </div>
+                            
+                            <div className="space-y-2 mb-8 max-h-60 overflow-y-auto pr-2 hide-scrollbar">
+                                {userList.length === 0 && !isLoadingGlobalUsers && (
+                                    <p className="text-center text-sm text-slate-400 dark:text-slate-500 italic py-4">Nenhum aluno encontrado localmente.</p>
+                                )}
                                 {userList.map(user => (
-                                    <button key={user} onClick={() => handleLogin(user)} className="w-full flex items-center gap-4 p-4 rounded-2xl bg-slate-50 hover:bg-blue-50 border-2 border-transparent hover:border-blue-200 transition-all group">
-                                        <div className="p-2 bg-white rounded-xl text-slate-400 group-hover:text-blue-500 shadow-sm"><Icons.User /></div>
-                                        <span className="font-bold text-slate-700 capitalize text-lg">{user}</span>
+                                    <button key={user} onClick={() => handleLogin(user)} className="w-full flex items-center gap-3 p-3 rounded-xl bg-slate-50 dark:bg-slate-900 hover:bg-blue-50 dark:hover:bg-slate-700 border-2 border-transparent hover:border-blue-200 dark:hover:border-blue-600 transition-all group shadow-sm">
+                                        <div className="p-2 bg-white dark:bg-slate-800 rounded-lg text-slate-400 dark:text-slate-300 group-hover:text-blue-500 dark:group-hover:text-blue-400 shadow-sm"><Icons.User /></div>
+                                        <span className="font-bold text-slate-700 dark:text-white capitalize text-sm">{user}</span>
                                     </button>
                                 ))}
                             </div>
+                            
                             {!showNewUserForm ? (
-                                <button onClick={() => setShowNewUserForm(true)} className="w-full py-4 rounded-2xl border-2 border-dashed border-slate-300 text-slate-500 font-bold hover:bg-slate-50 flex items-center justify-center gap-2 transition-all">
+                                <button onClick={() => setShowNewUserForm(true)} className="w-full py-3 rounded-xl border-2 border-dashed border-slate-300 dark:border-slate-600 text-slate-500 dark:text-slate-400 font-bold hover:bg-slate-50 dark:hover:bg-slate-700 flex items-center justify-center gap-2 transition-all text-sm">
                                     <Icons.Plus /> Novo Aluno
                                 </button>
                             ) : (
                                 <form onSubmit={(e) => { e.preventDefault(); handleLogin(loginInput); }} className="animate-in slide-in-from-bottom-2">
-                                    <input autoFocus className="w-full p-4 rounded-2xl bg-slate-50 border-2 border-blue-500 outline-none font-bold text-lg mb-3" placeholder="Seu nome..." value={loginInput} onChange={e => setLoginInput(e.target.value)} />
+                                    <input autoFocus className="w-full p-3 rounded-xl bg-slate-50 dark:bg-slate-900 border-2 border-blue-500 dark:border-blue-600 outline-none font-bold text-sm mb-3 dark:text-white shadow-sm" placeholder="Seu nome..." value={loginInput} onChange={e => setLoginInput(e.target.value)} />
                                     <div className="flex gap-2">
-                                        <button type="submit" className="flex-1 bg-blue-600 text-white font-black py-4 rounded-2xl shadow-lg">Criar</button>
-                                        <button type="button" onClick={() => setShowNewUserForm(false)} className="px-6 bg-slate-200 text-slate-600 font-bold rounded-2xl">X</button>
+                                        <button type="submit" className="flex-1 bg-blue-600 dark:bg-blue-700 text-white font-black py-3 rounded-xl shadow-lg hover:bg-blue-700 dark:hover:bg-blue-600 text-sm">Criar</button>
+                                        <button type="button" onClick={() => setShowNewUserForm(false)} className="px-4 bg-slate-200 dark:bg-slate-700 text-slate-600 dark:text-slate-300 font-bold rounded-xl text-sm">X</button>
                                     </div>
                                 </form>
                             )}
+
+                            <button onClick={() => setDarkMode(!darkMode)} className="mt-6 w-full flex items-center justify-center gap-2 py-2 px-4 rounded-lg bg-slate-100 dark:bg-slate-700/50 text-slate-600 dark:text-slate-400 text-xs font-bold hover:bg-slate-200 dark:hover:bg-slate-600 transition-all">
+                                {darkMode ? <Icons.Sun /> : <Icons.Moon />}
+                                {darkMode ? 'Mudar para Modo Claro' : 'Mudar para Modo Escuro'}
+                            </button>
                         </div>
                     </div>
                 );
             }
 
-            // MODAL DE SELEÇÃO DE DIFICULDADE
             const DifficultySelector = () => {
                 if (!showDifficultySelector || !pendingQuizData) return null;
-                
                 const countByDiff = {
                     all: pendingQuizData.questions.length,
-                    fácil: pendingQuizData.questions.filter(q => q.difficulty === 'fácil').length,
-                    médio: pendingQuizData.questions.filter(q => q.difficulty === 'médio').length,
-                    difícil: pendingQuizData.questions.filter(q => q.difficulty === 'difícil').length
+                    ineditas: pendingQuizData.questions.filter(q => !history[q.id]).length,
+                    fácil: pendingQuizData.questions.filter(q => (q.difficulty||'fácil').toLowerCase() === 'fácil').length,
+                    médio: pendingQuizData.questions.filter(q => (q.difficulty||'fácil').toLowerCase() === 'médio').length,
+                    difícil: pendingQuizData.questions.filter(q => (q.difficulty||'fácil').toLowerCase() === 'difícil').length
                 };
 
                 return (
-                    <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4 animate-in fade-in" onClick={() => setShowDifficultySelector(false)}>
-                        <div className="bg-white rounded-[3rem] p-8 md:p-12 max-w-2xl w-full shadow-2xl animate-in zoom-in" onClick={e => e.stopPropagation()}>
-                            <h2 className="text-3xl font-black text-slate-800 mb-2 text-center">Escolha a Dificuldade</h2>
-                            <p className="text-slate-500 text-center mb-8 font-medium">{pendingQuizData.title}</p>
+                    <div className="fixed inset-0 bg-slate-900/60 backdrop-blur-sm flex items-center justify-center z-50 p-4 animate-in fade-in" onClick={() => setShowDifficultySelector(false)}>
+                        <div className="bg-white dark:bg-slate-800 rounded-[2rem] p-6 max-w-xl w-full shadow-2xl border dark:border-slate-700" onClick={e => e.stopPropagation()}>
+                            <h2 className="text-2xl font-black text-slate-800 dark:text-white mb-2 text-center">Nível de Treinamento</h2>
+                            <p className="text-slate-500 dark:text-slate-400 text-center mb-6 font-medium text-sm">{pendingQuizData.title}</p>
                             
-                            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                <button 
-                                    onClick={() => startQuizWithDifficulty('all')}
-                                    className="p-6 rounded-2xl border-2 border-slate-200 hover:border-blue-500 hover:bg-blue-50 transition-all group"
-                                >
-                                    <div className="flex items-center justify-between mb-3">
-                                        <span className="text-2xl font-black text-slate-800 group-hover:text-blue-600">Todas</span>
-                                        <div className="bg-slate-100 group-hover:bg-blue-100 p-2 rounded-lg">
-                                            <Icons.Play />
-                                        </div>
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                                <button onClick={() => startQuizWithDifficulty('all')} className="p-4 rounded-xl border-2 dark:border-slate-600 border-slate-200 hover:shadow-lg hover:border-blue-500 dark:hover:border-blue-500 hover:-translate-y-1 bg-slate-50 dark:bg-slate-900/50 transition-all group">
+                                    <div className="flex items-center justify-between mb-2">
+                                        <span className="text-xl font-black text-slate-800 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 uppercase">Geral</span>
+                                        <Icons.Play />
                                     </div>
-                                    <span className="text-sm font-bold text-slate-500">{countByDiff.all} questões</span>
+                                    <span className="text-xs font-bold text-slate-500 dark:text-slate-400">{countByDiff.all} questões mistas</span>
+                                </button>
+
+                                <button onClick={() => startQuizWithDifficulty('ineditas')} disabled={countByDiff.ineditas === 0} className={`p-4 rounded-xl border-2 transition-all ${countByDiff.ineditas === 0 ? 'opacity-40 grayscale cursor-not-allowed' : 'hover:shadow-lg hover:-translate-y-1 bg-indigo-50 dark:bg-indigo-900/30 border-transparent hover:border-indigo-300 dark:hover:border-indigo-700/50 group'}`}>
+                                    <div className="flex items-center justify-between mb-2">
+                                        <span className="text-xl font-black text-indigo-700 dark:text-indigo-400 group-hover:text-indigo-800 dark:group-hover:text-indigo-300 uppercase">Só Inéditas</span>
+                                        <div className="text-indigo-700 dark:text-indigo-400"><Icons.Play /></div>
+                                    </div>
+                                    <span className="text-xs font-bold text-indigo-600 dark:text-indigo-400">{countByDiff.ineditas} não resolvidas</span>
                                 </button>
 
                                 {['fácil', 'médio', 'difícil'].map(diff => {
                                     const style = getDifficultyStyle(diff);
                                     const Icon = style.icon;
                                     return (
-                                        <button 
-                                            key={diff}
-                                            onClick={() => startQuizWithDifficulty(diff)}
-                                            disabled={countByDiff[diff] === 0}
-                                            className={`p-6 rounded-2xl border-2 transition-all ${countByDiff[diff] === 0 ? 'opacity-40 cursor-not-allowed' : 'hover:shadow-lg'} ${style.bg} border-transparent hover:border-opacity-50`}
-                                        >
-                                            <div className="flex items-center justify-between mb-3">
-                                                <span className={`text-2xl font-black ${style.text}`}>{style.label}</span>
-                                                <div className={`${style.bg} p-2 rounded-lg ${style.text}`}>
-                                                    <Icon />
-                                                </div>
+                                        <button key={diff} onClick={() => startQuizWithDifficulty(diff)} disabled={countByDiff[diff] === 0} className={`p-4 rounded-xl border-2 transition-all ${countByDiff[diff] === 0 ? 'opacity-40 grayscale cursor-not-allowed' : `hover:shadow-lg hover:-translate-y-1 ${style.bg} border-transparent hover:border-opacity-50`}`}>
+                                            <div className="flex items-center justify-between mb-2">
+                                                <span className={`text-xl font-black ${style.text} uppercase`}>{style.label}</span>
+                                                <div className={`${style.text}`}><Icon /></div>
                                             </div>
-                                            <span className={`text-sm font-bold ${style.text}`}>{countByDiff[diff]} questões</span>
+                                            <span className={`text-xs font-bold ${style.text}`}>{countByDiff[diff]} exclusivas</span>
                                         </button>
                                     );
                                 })}
                             </div>
-
-                            <button 
-                                onClick={() => setShowDifficultySelector(false)}
-                                className="w-full mt-6 py-3 rounded-2xl bg-slate-100 text-slate-600 font-bold hover:bg-slate-200 transition-all"
-                            >
-                                Cancelar
-                            </button>
                         </div>
                     </div>
                 );
             };
 
             const Dashboard = () => (
-                <div className="max-w-7xl mx-auto p-4 md:p-8 animate-in fade-in">
-                    <div className="flex justify-between items-center mb-8">
-                        <div className="flex items-center gap-3">
-                            <div className="bg-slate-900 p-2.5 rounded-xl text-white shadow-lg"><Icons.Trophy /></div>
-                            <h1 className="text-2xl font-black text-slate-900 tracking-tight">GENOMA SUS</h1>
-                            {isLoadingCloud && <span className="animate-pulse text-blue-600 text-[10px] font-black uppercase tracking-widest">Cloud Sync...</span>}
-                        </div>
-                        <div className="flex items-center gap-3 bg-white px-4 py-2 rounded-full border border-slate-200 shadow-sm">
-                            <span className="text-sm font-bold text-slate-600 capitalize">Aluno: <span className="text-blue-600">{currentUser}</span></span>
-                            <button onClick={handleLogout} className="text-slate-300 hover:text-red-500 transition-colors"><Icons.LogOut /></button>
-                        </div>
-                    </div>
-
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
-                        <button onClick={() => setScreen('caderno')} className="bg-white hover:bg-red-50 border border-slate-200 hover:border-red-200 rounded-[2rem] p-6 transition-all flex justify-between items-center shadow-sm group">
-                            <div className="flex items-center gap-4">
-                                <div className="p-3 bg-red-500 text-white rounded-xl shadow-lg"><Icons.BookX /></div>
-                                <div className="text-left">
-                                    <h2 className="text-xl font-black text-slate-800 group-hover:text-red-900">Caderno de Erros</h2>
-                                    <p className="text-slate-500 font-medium group-hover:text-red-700">{errorQuestions.length} revisões pendentes</p>
+                <div className="min-h-screen pb-10 px-4 md:px-8 pt-6">
+                    <div className="max-w-7xl mx-auto">
+                        <div className="flex justify-between items-center mb-8 flex-wrap gap-4">
+                            <div className="flex items-center gap-3">
+                                <div className="bg-slate-900 dark:bg-white p-2.5 rounded-xl text-white dark:text-slate-900 shadow-lg"><Icons.Trophy /></div>
+                                <div>
+                                    <h1 className="text-2xl font-black text-slate-900 dark:text-white tracking-tight">GENOMA SUS</h1>
+                                    <div className="flex items-center gap-2">
+                                        {syncStatus === 'syncing' ? (
+                                            <span className="flex items-center gap-1 text-[10px] font-black text-blue-600 dark:text-blue-400 bg-blue-100 dark:bg-blue-900/30 px-2 py-0.5 rounded-md uppercase tracking-widest"><Icons.Loader /> Sync...</span>
+                                        ) : (
+                                            <span className="flex items-center gap-1 text-[10px] font-bold text-slate-500 dark:text-slate-400 uppercase tracking-widest"><Icons.Check /> Nuvem OK</span>
+                                        )}
+                                    </div>
                                 </div>
                             </div>
-                        </button>
-                        <button onClick={() => setScreen('estatisticas')} className="bg-white hover:bg-blue-50 border border-slate-200 hover:border-blue-200 rounded-[2rem] p-6 transition-all flex justify-between items-center shadow-sm group">
-                            <div className="flex items-center gap-4">
-                                <div className="p-3 bg-blue-500 text-white rounded-xl shadow-lg"><Icons.BarChart /></div>
-                                <div className="text-left">
-                                    <h2 className="text-xl font-black text-slate-800 group-hover:text-blue-900">Estatísticas</h2>
-                                    <p className="text-slate-500 font-medium group-hover:text-blue-700">Diagnóstico e Filtros</p>
-                                </div>
+                            <div className="flex items-center gap-3 bg-white dark:bg-slate-800 px-4 py-2 rounded-full border dark:border-slate-700 border-slate-200 shadow-sm">
+                                <span className="text-sm font-bold text-slate-600 dark:text-slate-300 capitalize">Aluno: <span className="text-blue-600 dark:text-blue-400">{currentUser}</span></span>
+                                <div className="h-4 w-px bg-slate-300 dark:bg-slate-600 mx-1"></div>
+                                <button onClick={() => setDarkMode(!darkMode)} className="text-slate-400 dark:text-slate-500 hover:text-slate-800 dark:hover:text-white transition-colors">{darkMode ? <Icons.Sun /> : <Icons.Moon />}</button>
+                                <button onClick={handleLogout} className="text-slate-400 hover:text-red-500 transition-colors ml-2"><Icons.LogOut /></button>
                             </div>
-                        </button>
-                    </div>
+                        </div>
 
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                        {Object.entries(editalSyllabus).map(([area, subjects]) => {
-                            const theme = getTheme(area);
-                            const areaQs = activeBank.filter(q => q.area === area);
-                            const ansCount = areaQs.filter(q => history[q.id]?.length > 0).length;
-                            return (
-                                <div key={area} className="bg-white rounded-[2rem] border border-slate-200 shadow-sm overflow-hidden flex flex-col">
-                                    <div className={`${theme.bg} p-6 border-b ${theme.border}`}>
-                                        <div className="flex justify-between items-center mb-4">
-                                            <h2 className={`text-xl font-black ${theme.text} uppercase tracking-tighter`}>{area}</h2>
-                                            <span className="bg-white px-3 py-1 rounded-full text-xs font-bold shadow-sm">{ansCount}/{areaQs.length}</span>
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 mb-10">
+                            <button onClick={() => setScreen('caderno')} className="bg-white dark:bg-slate-800 hover:bg-red-50 dark:hover:bg-red-900/10 border dark:border-slate-700 border-slate-200 rounded-[2rem] p-6 transition-all duration-300 shadow-lg hover:shadow-2xl hover:-translate-y-1 flex justify-between items-center group">
+                                <div className="flex items-center gap-4">
+                                    <div className="p-3 bg-red-500 text-white rounded-xl shadow-md"><Icons.BookX /></div>
+                                    <div className="text-left">
+                                        <h2 className="text-xl font-black text-slate-800 dark:text-white group-hover:text-red-600 dark:group-hover:text-red-400 transition-colors">Caderno</h2>
+                                        <p className="text-sm text-slate-500 dark:text-slate-400 font-medium">{errorQuestions.length} erros</p>
+                                    </div>
+                                </div>
+                            </button>
+                            
+                            <button onClick={() => startQuiz(activeBank.filter(q => favorites.includes(q.id)), "Questões Favoritas", "study")} className="bg-white dark:bg-slate-800 hover:bg-amber-50 dark:hover:bg-amber-900/10 border dark:border-slate-700 border-slate-200 hover:border-amber-200 dark:hover:border-amber-700 rounded-[2rem] p-6 transition-all duration-300 shadow-lg hover:shadow-2xl hover:-translate-y-1 flex justify-between items-center group">
+                                <div className="flex items-center gap-4">
+                                    <div className="p-3 bg-amber-500 text-white rounded-xl shadow-md"><Icons.Star filled={true} /></div>
+                                    <div className="text-left">
+                                        <h2 className="text-xl font-black text-slate-800 dark:text-white group-hover:text-amber-600 dark:group-hover:text-amber-400 transition-colors">Favoritas</h2>
+                                        <p className="text-sm text-slate-500 dark:text-slate-400 font-medium">{favorites.length} salvas</p>
+                                    </div>
+                                </div>
+                            </button>
+
+                            <button onClick={() => setScreen('estatisticas')} className="bg-white dark:bg-slate-800 hover:bg-blue-50 dark:hover:bg-blue-900/10 border dark:border-slate-700 border-slate-200 rounded-[2rem] p-6 transition-all duration-300 shadow-lg hover:shadow-2xl hover:-translate-y-1 flex justify-between items-center group">
+                                <div className="flex items-center gap-4">
+                                    <div className="p-3 bg-blue-600 text-white rounded-xl shadow-md"><Icons.BarChart /></div>
+                                    <div className="text-left">
+                                        <h2 className="text-xl font-black text-slate-800 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">Estatísticas</h2>
+                                        <p className="text-sm text-slate-500 dark:text-slate-400 font-medium">Diagnóstico</p>
+                                    </div>
+                                </div>
+                            </button>
+                        </div>
+
+                        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                            {Object.entries(editalSyllabus).map(([area, subjects]) => {
+                                const theme = getTheme(area);
+                                const areaQs = activeBank.filter(q => q.area === area);
+                                const ansCount = areaQs.filter(q => history[q.id]?.length > 0).length;
+                                return (
+                                    <div key={area} className="bg-white dark:bg-slate-800 rounded-[2rem] border dark:border-slate-700 border-slate-200 shadow-lg hover:shadow-2xl transition-shadow duration-300 overflow-hidden flex flex-col">
+                                        <div className={`${theme.bg} p-6 border-b ${theme.border}`}>
+                                            <div className="flex justify-between items-center mb-4">
+                                                <h2 className={`text-xl font-black ${theme.text} uppercase tracking-tighter`}>{area}</h2>
+                                                <span className="bg-white dark:bg-slate-900 px-3 py-1 rounded-full text-xs font-bold shadow-sm dark:text-slate-300">{ansCount}/{areaQs.length}</span>
+                                            </div>
+                                            <button onClick={() => openDifficultySelector(areaQs, area, 'study')} className={`w-full py-3 ${theme.highlight} text-white font-black rounded-xl shadow-md flex items-center justify-center gap-2 hover:opacity-90 hover:scale-[1.02] transition-all`}>
+                                                <Icons.Play /> SIMULADO GERAL
+                                            </button>
                                         </div>
-                                        <button onClick={() => openDifficultySelector(areaQs, area, 'study')} className={`w-full py-3 ${theme.highlight} text-white font-bold rounded-xl shadow-md flex items-center justify-center gap-2 hover:opacity-90 transition-all`}>
-                                            <Icons.Play /> Iniciar Categoria
-                                        </button>
-                                    </div>
-                                    <div className="p-2">
-                                        {subjects.map(subj => {
-                                            const subQs = activeBank.filter(q => q.subject === subj && q.area === area);
-                                            const subAns = subQs.filter(q => history[q.id]?.length > 0).length;
-                                            return (
-                                                <div key={subj} className="flex items-center justify-between p-4 hover:bg-slate-50 rounded-2xl transition group">
-                                                    <div className="flex-1 pr-4">
-                                                        <h4 className="text-sm font-bold text-slate-700 leading-tight mb-1">{subj}</h4>
-                                                        <span className="text-[10px] font-black text-slate-400 uppercase">{subAns}/{subQs.length} resolvidos</span>
+                                        <div className="p-3">
+                                            {subjects.map(subj => {
+                                                const subQs = activeBank.filter(q => q.subject === subj && q.area === area);
+                                                const subAns = subQs.filter(q => history[q.id]?.length > 0).length;
+                                                return (
+                                                    <div key={subj} className="flex items-center justify-between p-4 hover:bg-slate-50 dark:hover:bg-slate-700/50 rounded-xl transition-colors group">
+                                                        <div className="flex-1 pr-4">
+                                                            <h4 className="text-sm font-bold text-slate-700 dark:text-slate-300 leading-tight mb-1">{subj}</h4>
+                                                            <span className="text-[10px] font-black text-slate-400 dark:text-slate-500 uppercase">{subAns}/{subQs.length} resolvidos</span>
+                                                        </div>
+                                                        <button onClick={() => startQuiz(subQs, subj, 'study')} className="shrink-0 bg-slate-900 dark:bg-slate-600 text-white px-4 py-2 rounded-lg text-xs font-bold opacity-0 group-hover:opacity-100 transition-all hover:scale-105 shadow-sm">Estudar</button>
                                                     </div>
-                                                    <button onClick={() => startQuiz(subQs, subj, 'study')} className="shrink-0 bg-slate-900 text-white px-4 py-2 rounded-xl text-xs font-bold opacity-0 group-hover:opacity-100 transition-opacity">Estudar</button>
-                                                </div>
-                                            );
-                                        })}
+                                                );
+                                            })}
+                                        </div>
                                     </div>
-                                </div>
-                            );
-                        })}
+                                );
+                            })}
+                        </div>
                     </div>
                 </div>
             );
@@ -428,60 +595,74 @@
                 const currentQ = quizConfig.questions[idx];
                 const theme = getTheme(currentQ?.area);
                 const sessionAns = sessionAnswers[currentQ?.id];
-                const diffStyle = getDifficultyStyle(currentQ?.difficulty || 'fácil');
+                const diffStyle = getDifficultyStyle((currentQ?.difficulty || 'fácil').toLowerCase());
                 const DiffIcon = diffStyle.icon;
+                const isFav = currentQ ? favorites.includes(currentQ.id) : false;
                 
                 if (!currentQ) return null;
                 
                 return (
-                    <div className="max-w-4xl mx-auto p-4 md:p-10 animate-in slide-in-from-right">
+                    <div className="max-w-4xl mx-auto p-4 md:p-10 animate-in slide-in-from-right min-h-screen">
                         <header className="flex justify-between items-center mb-8">
-                            <button onClick={() => setScreen('dashboard')} className="text-slate-400 font-bold hover:text-slate-800">← Parar</button>
-                            <div className="bg-white px-4 py-1 rounded-full border shadow-sm font-mono font-bold text-slate-500">{idx + 1}/{quizConfig.questions.length}</div>
+                            <button onClick={() => setScreen('dashboard')} className="text-slate-400 dark:text-slate-500 font-bold hover:text-slate-800 dark:hover:text-slate-300 text-sm md:text-base">← Pausar Treino</button>
+                            <div className="bg-white dark:bg-slate-800 px-4 py-1.5 rounded-full border dark:border-slate-700 shadow-sm font-mono font-bold text-slate-500 dark:text-slate-400 text-sm">{idx + 1}/{quizConfig.questions.length}</div>
                         </header>
-                        <div className="bg-white rounded-[3rem] border border-slate-200 shadow-xl overflow-hidden">
-                            <div className="h-2 w-full bg-slate-100"><div className={`h-full ${theme.bar} transition-all duration-500`} style={{width:`${((idx+1)/quizConfig.questions.length)*100}%`}}></div></div>
-                            <div className="p-8 md:p-12">
-                                <div className="flex items-center gap-2 mb-6">
-                                    <span className={`text-[10px] font-black uppercase tracking-widest px-3 py-1 rounded-lg ${theme.bg} ${theme.text}`}>{currentQ.subject}</span>
-                                    <div className={`flex items-center gap-1.5 px-3 py-1 rounded-lg ${diffStyle.bg} ${diffStyle.text}`}>
-                                        <DiffIcon />
-                                        <span className="text-[10px] font-black uppercase tracking-widest">{diffStyle.label}</span>
-                                    </div>
+                        <div className="bg-white dark:bg-slate-800 rounded-[2rem] border dark:border-slate-700 border-slate-200 shadow-2xl overflow-hidden relative flex flex-col">
+                            <div className="h-2 w-full bg-slate-100 dark:bg-slate-900">
+                                <div className={`h-full ${theme.bar} transition-all duration-500 relative overflow-hidden`} style={{width:`${((idx+1)/quizConfig.questions.length)*100}%`}}>
+                                    <div className="absolute inset-0 w-full h-full animate-[shimmer_1.5s_infinite] -translate-x-full bg-gradient-to-r from-transparent via-white/40 to-transparent"></div>
                                 </div>
-                                <h2 className="text-xl md:text-2xl font-bold text-slate-800 mb-10 leading-relaxed">{currentQ.text}</h2>
-                                <div className="space-y-4">
+                            </div>
+
+                            <div className="p-6 md:p-10 flex-1">
+                                <div className="flex items-center justify-between gap-2 mb-6 flex-wrap">
+                                    <div className="flex items-center gap-2 flex-wrap">
+                                        <span className={`text-[10px] font-black uppercase tracking-widest px-3 py-1 rounded-lg ${theme.bg} ${theme.text}`}>{currentQ.subject}</span>
+                                        <div className={`flex items-center gap-1.5 px-3 py-1 rounded-lg ${diffStyle.bg} ${diffStyle.text}`}>
+                                            <DiffIcon />
+                                            <span className="text-[10px] font-black uppercase tracking-widest">{diffStyle.label}</span>
+                                        </div>
+                                        <span className="bg-slate-200 dark:bg-slate-700 text-slate-600 dark:text-slate-300 px-3 py-1 rounded-lg text-[10px] font-black uppercase tracking-widest shadow-sm">
+                                            ID: {currentQ.id}
+                                        </span>
+                                    </div>
+                                    
+                                    <button onClick={() => toggleFavorite(currentQ.id)} className={`flex items-center gap-1.5 px-3 py-1 rounded-lg border-2 transition-all hover:-translate-y-0.5 ${isFav ? 'bg-amber-100 border-amber-300 text-amber-600 dark:bg-amber-900/40 dark:border-amber-700/50 dark:text-amber-400' : 'bg-slate-50 border-slate-200 text-slate-400 dark:bg-slate-800 dark:border-slate-700 hover:border-amber-300 hover:text-amber-500'}`}>
+                                        <Icons.Star filled={isFav} />
+                                        <span className="text-[10px] font-black uppercase tracking-widest hidden sm:inline">{isFav ? 'Salva' : 'Salvar'}</span>
+                                    </button>
+                                </div>
+                                <h2 className="text-xl md:text-2xl font-bold text-slate-800 dark:text-white mb-8 leading-relaxed">{currentQ.text}</h2>
+                                <div className="space-y-3">
                                     {Object.entries(currentQ.options).map(([k, v]) => {
                                         const isSel = sessionAns === k;
                                         const isRight = currentQ.correct === k;
-                                        let bClass = "w-full text-left p-5 rounded-2xl border-2 transition-all flex gap-4 ";
-                                        if (!sessionAns) bClass += "border-slate-100 hover:border-blue-200 hover:bg-blue-50";
-                                        else if (isRight) bClass += "border-green-500 bg-green-50";
-                                        else if (isSel) bClass += "border-red-500 bg-red-50";
-                                        else bClass += "border-slate-50 opacity-40";
-                                        return <button key={k} onClick={() => handleAnswer(currentQ.id, k)} className={bClass}><span className="font-black text-blue-600">{k}</span><span className="font-medium text-slate-700">{v}</span></button>;
+                                        let bClass = "w-full text-left p-4 md:p-5 rounded-2xl border-2 transition-all duration-200 flex gap-4 text-sm md:text-base font-medium ";
+                                        if (!sessionAns) bClass += "border-slate-100 dark:border-slate-700 hover:border-blue-300 dark:hover:border-blue-500 hover:bg-blue-50 dark:hover:bg-blue-900/20 hover:-translate-y-1 shadow-sm hover:shadow-md";
+                                        else if (isRight) bClass += "border-emerald-500 bg-emerald-50 dark:bg-emerald-900/20 text-emerald-800 dark:text-emerald-200";
+                                        else if (isSel) bClass += "border-rose-500 bg-rose-50 dark:bg-rose-900/20 text-rose-800 dark:text-rose-200";
+                                        else bClass += "border-slate-50 dark:border-slate-800 opacity-40 grayscale";
+                                        return <button key={k} onClick={() => handleAnswer(currentQ.id, k)} disabled={!!sessionAns} className={bClass}><span className="font-black text-blue-600 dark:text-blue-400 shrink-0 mt-0.5">{k}</span><span className="">{v}</span></button>;
                                     })}
                                 </div>
                             </div>
+                            
                             {sessionAns && (
-                                <div className={`p-8 md:p-12 border-t-2 ${sessionAns === currentQ.correct ? 'bg-green-50/50' : 'bg-red-50/50'}`}>
-                                    <div className="bg-white p-6 rounded-3xl shadow-sm border border-slate-100 mb-8"><p className="text-slate-600 leading-relaxed font-medium">{currentQ.explanation}</p></div>
+                                <div className={`p-6 md:p-10 border-t-2 ${sessionAns === currentQ.correct ? 'bg-emerald-50/50 dark:bg-emerald-900/10 border-emerald-100 dark:border-emerald-900/30' : 'bg-rose-50/50 dark:bg-rose-900/10 border-rose-100 dark:border-rose-900/30'} animate-in fade-in`}>
+                                    <div className="bg-white dark:bg-slate-800 p-5 md:p-6 rounded-2xl shadow-md border dark:border-slate-700 border-slate-100">
+                                        <div className="font-black text-[10px] text-slate-400 uppercase tracking-widest mb-2">Comentário Técnico</div>
+                                        <p className="text-slate-700 dark:text-slate-300 leading-relaxed text-sm md:text-base">{currentQ.explanation}</p>
+                                    </div>
                                 </div>
                             )}
-                            <div className="border-t-2 border-slate-200 p-6 md:p-8 flex gap-3">
-                                <button 
-                                    onClick={() => setIdx(i => i - 1)}
-                                    disabled={idx === 0}
-                                    className={`flex-1 py-3 md:py-4 rounded-xl font-black transition-all ${idx === 0 ? 'bg-slate-100 text-slate-400 opacity-50 cursor-not-allowed' : 'bg-slate-200 text-slate-700 hover:bg-slate-300 hover:-translate-y-1 shadow-md'}`}
-                                >
-                                    ◄ ANTERIOR
+
+                            {/* Nova Barra de Navegação Inferior Fixa */}
+                            <div className="p-4 md:p-6 border-t-2 border-slate-100 dark:border-slate-700 bg-slate-50 dark:bg-slate-800/30 flex gap-3 md:gap-4 mt-auto">
+                                <button onClick={() => setIdx(i => i - 1)} disabled={idx === 0} className="flex-1 py-3 md:py-4 bg-white dark:bg-slate-800 border-2 border-slate-200 dark:border-slate-600 text-slate-600 dark:text-slate-300 font-black rounded-xl hover:bg-slate-50 dark:hover:bg-slate-700 transition-all disabled:opacity-40 disabled:hover:bg-white dark:disabled:hover:bg-slate-800 text-xs md:text-sm">
+                                    ← ANTERIOR
                                 </button>
-                                
-                                <button 
-                                    onClick={() => { if(idx < quizConfig.questions.length - 1) setIdx(i=>i+1); else setScreen('dashboard'); }}
-                                    className="flex-1 py-3 md:py-4 bg-slate-900 text-white font-black rounded-xl shadow-lg hover:scale-[1.02] transition-transform text-sm md:text-base"
-                                >
-                                    {idx === quizConfig.questions.length - 1 ? 'FINALIZAR' : 'PRÓXIMA ►'}
+                                <button onClick={() => { if(idx < quizConfig.questions.length - 1) setIdx(i=>i+1); else setScreen('dashboard'); }} className="flex-1 py-3 md:py-4 bg-slate-900 dark:bg-slate-100 text-white dark:text-slate-900 font-black rounded-xl shadow-lg hover:scale-[1.02] transition-transform text-xs md:text-sm">
+                                    {idx < quizConfig.questions.length - 1 ? 'PRÓXIMA →' : 'FINALIZAR'}
                                 </button>
                             </div>
                         </div>
@@ -490,58 +671,46 @@
             };
 
             const Estatisticas = () => (
-                <div className="max-w-6xl mx-auto p-4 md:p-8 animate-in slide-in-from-bottom-4">
-                    <button onClick={() => setScreen('dashboard')} className="mb-8 font-bold text-slate-400 hover:text-slate-900">← Voltar ao Início</button>
+                <div className="max-w-6xl mx-auto p-3 md:p-8 animate-in slide-in-from-bottom-4">
+                    <button onClick={() => setScreen('dashboard')} className="mb-6 md:mb-8 font-bold text-slate-400 dark:text-slate-500 hover:text-slate-900 dark:hover:text-white text-sm md:text-base">← Voltar ao Dashboard</button>
                     
-                    <div className="bg-white p-10 rounded-[3rem] shadow-xl border border-slate-200 mb-10 text-center">
-                        <h2 className="text-3xl font-black text-slate-800 mb-6">Desempenho de <span className="capitalize text-blue-600">{currentUser}</span></h2>
-                        <div className="bg-blue-50 p-8 rounded-[2rem] border border-blue-100 inline-block min-w-[250px]">
-                            <div className="text-6xl font-black text-blue-600 mb-2">{Object.keys(history).length}</div>
-                            <div className="text-sm font-bold text-blue-800 uppercase tracking-widest">Questões na Nuvem</div>
+                    <div className="bg-white dark:bg-slate-800 p-8 md:p-10 rounded-[2rem] shadow-xl border dark:border-slate-700 border-slate-200 mb-8 text-center relative overflow-hidden">
+                        <h2 className="text-2xl md:text-3xl font-black text-slate-800 dark:text-white mb-6 uppercase tracking-tighter">Big Data do Concurseiro</h2>
+                        <div className="bg-blue-50 dark:bg-blue-900/20 p-6 md:p-8 rounded-[2rem] border dark:border-blue-700 border-blue-100 inline-block min-w-[200px] md:min-w-[250px]">
+                            <div className="text-5xl md:text-6xl font-black text-blue-600 dark:text-blue-400 mb-2">{Object.keys(history).length}</div>
+                            <div className="text-xs md:text-sm font-bold text-blue-800 dark:text-blue-300 uppercase tracking-widest">Questões na Nuvem</div>
                         </div>
                     </div>
 
-                    {/* GRÁFICOS DE DIFICULDADE GLOBAL */}
-                    <div className="bg-white p-8 md:p-12 rounded-[3rem] shadow-xl border border-slate-200 mb-10">
-                        <h3 className="text-2xl font-black text-slate-800 mb-2">Desempenho por Dificuldade</h3>
-                        <p className="text-slate-500 mb-8 font-medium">Taxa de acerto global em cada nível</p>
+                    <div className="bg-white dark:bg-slate-800 p-6 md:p-12 rounded-[3rem] shadow-xl border dark:border-slate-700 border-slate-200 mb-8">
+                        <h3 className="text-xl md:text-2xl font-black text-slate-800 dark:text-white mb-2">Diagnóstico de Guerra (Por Assunto)</h3>
+                        <p className="text-slate-500 dark:text-slate-400 mb-6 md:mb-10 font-medium text-sm md:text-base">Bata as metas do edital atacando o que você nunca viu ou o que errou.</p>
                         
-                        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                            {['fácil', 'médio', 'difícil'].map(diff => {
-                                const data = difficultyStats.global[diff];
-                                const accuracy = data.attempted > 0 ? Math.round((data.correct / data.attempted) * 100) : 0;
+                        <div className="space-y-4 md:space-y-6">
+                            {Object.entries(subjectsData).map(([name, data]) => {
                                 const coverage = Math.round((data.attempted / data.total) * 100);
-                                const style = getDifficultyStyle(diff);
-                                const Icon = style.icon;
-
+                                const accuracy = data.attempted > 0 ? Math.round((data.correct / data.attempted) * 100) : 0;
+                                
                                 return (
-                                    <div key={diff} className={`p-6 rounded-[2rem] ${style.bg} border-2 border-opacity-50 ${style.text}`}>
-                                        <div className="flex items-center justify-between mb-4">
-                                            <div className="flex items-center gap-2">
-                                                <Icon />
-                                                <span className="font-black uppercase text-sm">{style.label}</span>
-                                            </div>
-                                            <span className="text-xs font-bold opacity-70">{data.attempted}/{data.total}</span>
-                                        </div>
-                                        
-                                        <div className="mb-3">
-                                            <div className="flex justify-between mb-1">
-                                                <span className="text-xs font-bold opacity-70">Taxa de Acerto</span>
-                                                <span className="text-xs font-black">{accuracy}%</span>
-                                            </div>
-                                            <div className="w-full bg-white/50 rounded-full h-3 overflow-hidden">
-                                                <div className={`h-full ${style.text} bg-current transition-all`} style={{width: `${accuracy}%`}}></div>
+                                    <div key={name} className="p-4 md:p-6 border-2 dark:border-slate-700 border-slate-50 rounded-[2rem] bg-slate-50/30 dark:bg-slate-700/20 flex flex-col md:flex-row md:items-center gap-4 md:gap-6 group hover:bg-white dark:hover:bg-slate-700 hover:border-blue-100 dark:hover:border-blue-600 transition-all">
+                                        <div className="flex-1 min-w-0">
+                                            <span className="text-[10px] font-black uppercase text-slate-400 dark:text-slate-500 tracking-[0.2em] block mb-1">{data.area}</span>
+                                            <h4 className="font-bold text-slate-800 dark:text-white leading-tight mb-3 text-sm md:text-base line-clamp-2">{name}</h4>
+                                            <div className="flex gap-4 md:gap-6">
+                                                <div>
+                                                    <span className="text-[10px] font-bold text-slate-400 dark:text-slate-500 uppercase block">Cobertura</span>
+                                                    <span className={`text-lg md:text-lg font-black ${coverage > 80 ? 'text-green-500' : 'text-orange-500'}`}>{coverage}%</span>
+                                                </div>
+                                                <div>
+                                                    <span className="text-[10px] font-bold text-slate-400 dark:text-slate-500 uppercase block">Acerto</span>
+                                                    <span className={`text-lg md:text-lg font-black ${accuracy > 70 ? 'text-blue-600 dark:text-blue-400' : 'text-red-500'}`}>{accuracy}%</span>
+                                                </div>
                                             </div>
                                         </div>
                                         
-                                        <div>
-                                            <div className="flex justify-between mb-1">
-                                                <span className="text-xs font-bold opacity-70">Cobertura</span>
-                                                <span className="text-xs font-black">{coverage}%</span>
-                                            </div>
-                                            <div className="w-full bg-white/50 rounded-full h-3 overflow-hidden">
-                                                <div className={`h-full ${style.text} bg-current transition-all`} style={{width: `${coverage}%`}}></div>
-                                            </div>
+                                        <div className="flex gap-2 flex-shrink-0">
+                                            <button onClick={() => startQuiz(data.questions.filter(q => !history[q.id]), "Inéditas: " + name, "study")} className="flex-1 md:flex-none px-4 md:px-6 py-2 md:py-3 bg-slate-900 dark:bg-slate-700 text-white text-[10px] md:text-xs font-black rounded-2xl hover:bg-slate-700 dark:hover:bg-slate-600 shadow-md whitespace-nowrap transition-all">SÓ INÉDITAS</button>
+                                            <button onClick={() => startQuiz(data.questions.filter(q => history[q.id] && !history[q.id][history[q.id].length-1].isCorrect), "Revisar Erros: " + name, "study")} className="flex-1 md:flex-none px-4 md:px-6 py-2 md:py-3 bg-red-100 dark:bg-red-900/30 text-red-600 dark:text-red-400 text-[10px] md:text-xs font-black rounded-2xl hover:bg-red-200 dark:hover:bg-red-900/50 transition-all">SÓ ERROS</button>
                                         </div>
                                     </div>
                                 );
@@ -549,19 +718,18 @@
                         </div>
                     </div>
 
-                    {/* GRÁFICOS POR ÁREA */}
-                    <div className="bg-white p-8 md:p-12 rounded-[3rem] shadow-xl border border-slate-200 mb-10">
-                        <h3 className="text-2xl font-black text-slate-800 mb-2">Desempenho por Área e Dificuldade</h3>
-                        <p className="text-slate-500 mb-8 font-medium">Compare seu rendimento em cada categoria</p>
+                    <div className="bg-white dark:bg-slate-800 p-6 md:p-12 rounded-[3rem] shadow-xl border dark:border-slate-700 border-slate-200">
+                        <h3 className="text-xl md:text-2xl font-black text-slate-800 dark:text-white mb-2">Micro-Análise de Dificuldade</h3>
+                        <p className="text-slate-500 dark:text-slate-400 mb-6 md:mb-8 font-medium text-sm md:text-base">Compare seu rendimento por nível de complexidade em cada área.</p>
                         
-                        <div className="space-y-8">
+                        <div className="space-y-6 md:space-y-8">
                             {Object.entries(difficultyStats.byArea).map(([area, diffs]) => {
                                 const theme = getTheme(area);
                                 return (
-                                    <div key={area} className={`p-6 rounded-[2rem] ${theme.bg} border ${theme.border}`}>
-                                        <h4 className={`text-lg font-black ${theme.text} mb-6 uppercase tracking-tight`}>{area}</h4>
+                                    <div key={area} className={`p-5 md:p-6 rounded-[2rem] ${theme.bg} border ${theme.border}`}>
+                                        <h4 className={`text-lg md:text-base font-black ${theme.text} mb-4 md:mb-6 uppercase tracking-tight`}>{area}</h4>
                                         
-                                        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                                        <div className="grid grid-cols-1 md:grid-cols-3 gap-3 md:gap-4">
                                             {['fácil', 'médio', 'difícil'].map(diff => {
                                                 const data = diffs[diff];
                                                 const accuracy = data.attempted > 0 ? Math.round((data.correct / data.attempted) * 100) : 0;
@@ -569,22 +737,22 @@
                                                 const Icon = style.icon;
 
                                                 return (
-                                                    <div key={diff} className="bg-white p-4 rounded-xl">
+                                                    <div key={diff} className="bg-white dark:bg-slate-700 p-3 md:p-4 rounded-xl shadow-sm">
                                                         <div className="flex items-center gap-2 mb-3">
                                                             <div className={`p-1.5 rounded ${style.bg} ${style.text}`}>
                                                                 <Icon />
                                                             </div>
-                                                            <span className="text-xs font-bold text-slate-600">{style.label}</span>
-                                                            <span className="ml-auto text-xs text-slate-400">{data.attempted}/{data.total}</span>
+                                                            <span className="text-xs font-bold text-slate-600 dark:text-slate-300 uppercase">{style.label}</span>
+                                                            <span className="ml-auto text-xs font-bold text-slate-400 dark:text-slate-500">{data.attempted}/{data.total}</span>
                                                         </div>
                                                         
                                                         <div className="flex items-end gap-2">
-                                                            <span className={`text-3xl font-black ${style.text}`}>{accuracy}%</span>
-                                                            <span className="text-xs text-slate-400 mb-1">acerto</span>
+                                                            <span className={`text-2xl md:text-3xl font-black ${style.text}`}>{accuracy}%</span>
+                                                            <span className="text-[10px] text-slate-400 dark:text-slate-500 mb-1 uppercase font-bold">acerto</span>
                                                         </div>
                                                         
-                                                        <div className="w-full bg-slate-100 rounded-full h-2 mt-2 overflow-hidden">
-                                                            <div className={`h-full ${style.bg} transition-all`} style={{width: `${accuracy}%`}}></div>
+                                                        <div className="w-full bg-slate-100 dark:bg-slate-600 rounded-full h-1.5 mt-2 overflow-hidden">
+                                                            <div className={`h-full ${style.bg} transition-all duration-1000`} style={{width: `${accuracy}%`}}></div>
                                                         </div>
                                                     </div>
                                                 );
@@ -595,57 +763,25 @@
                             })}
                         </div>
                     </div>
-
-                    <div className="bg-white p-8 md:p-12 rounded-[3rem] shadow-xl border border-slate-200">
-                        <h3 className="text-2xl font-black text-slate-800 mb-2">Diagnóstico de Guerra</h3>
-                        <p className="text-slate-500 mb-10 font-medium">Bata os tópicos do edital de forma estratégica.</p>
-                        
-                        <div className="space-y-6">
-                            {Object.entries(subjectsData).map(([name, data]) => {
-                                const coverage = Math.round((data.attempted / data.total) * 100);
-                                const accuracy = data.attempted > 0 ? Math.round((data.correct / data.attempted) * 100) : 0;
-                                
-                                return (
-                                    <div key={name} className="p-6 border-2 border-slate-50 rounded-[2rem] bg-slate-50/30 flex flex-col md:flex-row md:items-center gap-6 group hover:bg-white hover:border-blue-100 transition-all">
-                                        <div className="flex-1">
-                                            <span className="text-[10px] font-black uppercase text-slate-400 tracking-[0.2em] block mb-1">{data.area}</span>
-                                            <h4 className="font-bold text-slate-800 leading-tight mb-3 text-lg">{name}</h4>
-                                            <div className="flex gap-6">
-                                                <div>
-                                                    <span className="text-[10px] font-bold text-slate-400 uppercase block">Cobertura</span>
-                                                    <span className={`text-lg font-black ${coverage > 80 ? 'text-green-500' : 'text-orange-500'}`}>{coverage}%</span>
-                                                </div>
-                                                <div>
-                                                    <span className="text-[10px] font-bold text-slate-400 uppercase block">Acerto</span>
-                                                    <span className={`text-lg font-black ${accuracy > 70 ? 'text-blue-600' : 'text-red-500'}`}>{accuracy}%</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        
-                                        <div className="flex gap-2">
-                                            <button onClick={() => startQuiz(data.questions.filter(q => !history[q.id]), "Inéditas: " + name, "study")} className="flex-1 md:flex-none px-6 py-3 bg-slate-900 text-white text-xs font-black rounded-2xl hover:bg-slate-700 shadow-md">SÓ INÉDITAS</button>
-                                            <button onClick={() => startQuiz(data.questions.filter(q => history[q.id] && !history[q.id][history[q.id].length-1].isCorrect), "Revisar Erros: " + name, "study")} className="flex-1 md:flex-none px-6 py-3 bg-red-100 text-red-600 text-xs font-black rounded-2xl hover:bg-red-200">SÓ ERROS</button>
-                                        </div>
-                                    </div>
-                                );
-                            })}
-                        </div>
-                    </div>
                 </div>
             );
 
             return (
-                <div className="min-h-screen pb-10">
+                <div className="min-h-screen transition-colors duration-300">
                     <DifficultySelector />
+                    <SyncIndicator />
                     {screen === 'dashboard' && <Dashboard />}
                     {screen === 'quiz' && <Quiz />}
                     {screen === 'estatisticas' && <Estatisticas />}
                     {screen === 'caderno' && (
-                        <div className="max-w-4xl mx-auto p-8 animate-in slide-in-from-bottom-4">
-                            <button onClick={() => setScreen('dashboard')} className="mb-8 font-bold text-slate-400 hover:text-slate-900">← Voltar</button>
-                            <div className="bg-white p-10 rounded-[3rem] shadow-xl border border-slate-200">
-                                <h2 className="text-3xl font-black text-slate-800 mb-8 uppercase tracking-tighter">Revisão na Nuvem</h2>
-                                <button disabled={errorQuestions.length === 0} onClick={() => startQuiz(errorQuestions, "Revisão", "study")} className="w-full py-5 bg-red-600 text-white font-black rounded-2xl shadow-xl hover:bg-red-700 transition-all">REVISAR ERROS ({errorQuestions.length})</button>
+                        <div className="max-w-4xl mx-auto p-4 md:p-8 animate-in slide-in-from-bottom-4">
+                            <button onClick={() => setScreen('dashboard')} className="mb-6 md:mb-8 font-bold text-slate-400 dark:text-slate-500 hover:text-slate-900 dark:hover:text-white">← Voltar</button>
+                            <div className="bg-white dark:bg-slate-800 p-8 md:p-12 rounded-[2rem] shadow-xl border dark:border-slate-700 text-center">
+                                <h2 className="text-3xl font-black text-slate-800 dark:text-white mb-8 uppercase tracking-tighter">O Funil da Aprovação</h2>
+                                <p className="text-slate-500 dark:text-slate-400 mb-8 font-medium">Refaça as {errorQuestions.length} questões que você errou até dominá-las completamente.</p>
+                                <button disabled={errorQuestions.length === 0} onClick={() => startQuiz(errorQuestions, "Revisão Suprema", "study")} className="w-full py-5 bg-red-600 text-white font-black rounded-xl shadow-lg hover:bg-red-700 hover:-translate-y-1 transition-all disabled:opacity-50 disabled:grayscale disabled:hover:translate-y-0">
+                                    INICIAR REVISÃO ({errorQuestions.length})
+                                </button>
                             </div>
                         </div>
                     )}
