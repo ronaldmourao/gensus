@@ -323,5 +323,306 @@ window.questionBank = [
     { id: 965, area: "Bioinformática", subject: "Estatística aplicada à genômica", 
       text: "A heritabilidade (h²) de um traço quantitativo representa:", 
       options: { A: "Porcentagem de DNA herdado dos pais", B: "Proporção da variância fenotípica atribuível a fatores genéticos aditivos", C: "Número de genes envolvidos", D: "Correlação entre gêmeos", E: "Idade de manifestação do traço" }, 
-      correct: "B", explanation: "Heritabilidade é a proporção da variância fenotípica total que pode ser atribuída a variância genética aditiva em uma população específica." }
+      correct: "B", explanation: "Heritabilidade é a proporção da variância fenotípica total que pode ser atribuída a variância genética aditiva em uma população específica." },
+    
+  {
+    id: 1020, area: "Laboratório", subject: "Tecnologias laboratoriais em genômica (sequenciamento de nova geração - NGS, extração de DNA genômico, controle de qualidade, preparo de amostras)", 
+    text: "A principal razão para utilizar tubo com EDTA-K₂ na coleta de sangue para extração de DNA é que o EDTA:", 
+    options: { A: "Estabiliza o DNA contra radiação UV", B: "Quela íons Ca²⁺ (impedindo coagulação) e Mg²⁺ (inibindo DNases), preservando a integridade do DNA", C: "Aumenta o rendimento de DNA por ativação de nucleases", D: "Substitui a necessidade de proteinase K na extração", E: "Impede a hemólise por estabilização osmótica dos eritrócitos" }, 
+    correct: "B", explanation: "Gabarito: Letra B. O EDTA atua como um 'quelante' que sequestra o Magnésio, paralisando as DNases (que destruiriam o DNA) e impedindo a cascata de coagulação."
+  },
+  {
+    id: 1021, area: "Laboratório", subject: "Boas Práticas de Laboratório (BPL), biossegurança e controle de qualidade", 
+    text: "Na automação laboratorial com robôs de pipetagem, o principal risco de carry-over entre amostras é mitigado por:", 
+    options: { A: "Uso de ponteiras fixas reutilizáveis lavadas entre amostras", B: "Uso de ponteiras descartáveis com filtro, trocadas a cada aspiração, combinado com verificação de volume e detecção de coágulos", C: "Redução da velocidade de pipetagem", D: "Aumento do volume de reagentes", E: "Processamento de apenas uma amostra por vez no robô" }, 
+    correct: "B", explanation: "Gabarito: Letra B. Em protocolos NGS altamente sensíveis, a troca de filter tips a cada poço é obrigatória para evitar a contaminação cruzada (carry-over)."
+  },
+  {
+    id: 1022, area: "Laboratório", subject: "Boas Práticas de Laboratório (BPL), biossegurança e controle de qualidade", 
+    text: "Em um gel de agarose 0,8%, uma amostra de DNA genômico íntegro apresenta apenas smear difuso em região de baixo peso molecular (<1 kb). Isso indica:", 
+    options: { A: "DNA de excelente qualidade, pronto para uso", B: "DNA severamente degradado, provavelmente por exposição a DNases, armazenamento inadequado ou processamento tardio", C: "Contaminação com RNA ribossômico", D: "Excesso de DNA aplicado no gel", E: "Erro na preparação do gel de agarose" }, 
+    correct: "B", explanation: "Gabarito: Letra B. O 'smear' (rastro) no fundo do gel significa que as longas fitas de DNA foram picotadas em pedaços muito pequenos, indicando degradação severa."
+  },
+  {
+    id: 1023, area: "Laboratório", subject: "Tecnologias laboratoriais em genômica (sequenciamento de nova geração - NGS, extração de DNA genômico, controle de qualidade, preparo de amostras)", 
+    text: "A razão pela qual bibliotecas PCR-free são preferidas para WGS de alta qualidade é:", 
+    options: { A: "São mais baratas de preparar", B: "Eliminam o viés de amplificação por PCR (sub-representação de regiões ricas em GC/AT, duplicados), produzindo cobertura mais uniforme", C: "Requerem menor quantidade de DNA de input", D: "Não necessitam de fragmentação do DNA", E: "Dispensam a etapa de ligação de adaptadores" }, 
+    correct: "B", explanation: "Gabarito: Letra B. A PCR introduz viés porque amplifica melhor algumas regiões do que outras (especialmente regiões extremas em GC). Pular a PCR elimina esse viés."
+  },
+  {
+    id: 1024, area: "Laboratório", subject: "Ética em pesquisa e noções de estudos multicêntricos", 
+    text: "Sobre a Declaração de Helsinki, é CORRETO afirmar:", 
+    options: { A: "Aplica-se exclusivamente a pesquisas farmacêuticas", B: "Estabelece que o bem-estar do participante prevalece sobre interesses da ciência e da sociedade, sendo o documento mais influente em ética de pesquisa biomédica", C: "Foi elaborada pelo governo dos Estados Unidos", D: "Proíbe qualquer pesquisa com seres humanos", E: "Refere-se exclusivamente à ética em pesquisa animal" }, 
+    correct: "B", explanation: "Gabarito: Letra B. É o pilar da bioética moderna. O bem-estar do indivíduo sempre supera a necessidade de descoberta científica."
+  },
+  {
+    id: 1025, area: "Laboratório", subject: "Tecnologias laboratoriais em genômica (sequenciamento de nova geração - NGS, extração de DNA genômico, controle de qualidade, preparo de amostras)", 
+    text: "A seleção de tamanho por double-sided SPRI cleanup consiste em:", 
+    options: { A: "Duas etapas de captura magnética com diferentes ratios bead:amostra — a primeira (ratio baixo) remove fragmentos grandes; a segunda (ratio alto no sobrenadante) captura fragmentos no range desejado", B: "Uso de duas marcas diferentes de beads magnéticas", C: "Duas rodadas de eletroforese em gel de agarose", D: "Centrifugação seguida de precipitação com etanol", E: "Filtração em duas membranas com poros de tamanhos diferentes" }, 
+    correct: "A", explanation: "Gabarito: Letra A. Na primeira etapa, as beads capturam os fragmentos indesejados muito grandes (que vão para o lixo). Na segunda etapa, novas beads capturam os fragmentos ideais que haviam ficado no líquido."
+  },
+  {
+    id: 1026, area: "Laboratório", subject: "Noções de saúde pública e ética em pesquisa", 
+    text: "No conceito de 'saúde pública genômica' (public health genomics), o principal objetivo é:", 
+    options: { A: "Oferecer terapia gênica a toda população", B: "Integrar conhecimentos genômicos na prática de saúde pública para melhorar prevenção, diagnóstico e tratamento em nível populacional", C: "Substituir todas as vacinas por terapias personalizadas", D: "Privatizar os serviços de genômica do SUS", E: "Restringir o acesso a dados genômicos para fins acadêmicos" }, 
+    correct: "B", explanation: "Gabarito: Letra B. Refere-se à translação do conhecimento dos sequenciadores diretamente para o benefício coletivo no SUS."
+  },
+  {
+    id: 1027, area: "Laboratório", subject: "Boas Práticas de Laboratório (BPL), biossegurança e controle de qualidade", 
+    text: "A expressão 'walk-away time' em automação laboratorial refere-se ao:", 
+    options: { A: "Tempo que o operador leva para ir até o laboratório", B: "Período durante o qual o equipamento automatizado opera sem necessidade de intervenção humana, permitindo que o operador realize outras tarefas", C: "Tempo de inatividade do equipamento por falha", D: "Duração da pausa para descanso do operador", E: "Tempo de espera entre a entrega do resultado e o início do próximo processamento" }, 
+    correct: "B", explanation: "Gabarito: Letra B. Essa é a grande métrica de eficiência dos robôs NGS; o tempo que a máquina trabalha sozinha enquanto você avança outros projetos."
+  },
+  {
+    id: 1028, area: "Laboratório", subject: "Noções de saúde pública e ética em pesquisa", 
+    text: "A doença de Chagas, prevalente na região amazônica, é relevante para o Genomas SUS porque:", 
+    options: { A: "A doença não tem componente genético", B: "Variantes genéticas do hospedeiro podem influenciar a progressão para cardiomiopatia chagásica, e o estudo genômico de populações expostas pode revelar marcadores de suscetibilidade e gravidade", C: "O sequenciamento do genoma humano pode substituir o diagnóstico sorológico", D: "A genômica pode prevenir completamente a infecção por Trypanosoma cruzi", E: "A doença ocorre apenas em populações não miscigenadas" }, 
+    correct: "B", explanation: "Gabarito: Letra B. Algumas pessoas infectadas desenvolvem cardiopatia severa enquanto outras ficam assintomáticas a vida toda. A genômica busca encontrar o porquê genético disso."
+  },
+  {
+    id: 1029, area: "Laboratório", subject: "Boas Práticas de Laboratório (BPL), biossegurança e controle de qualidade", 
+    text: "A etapa de 'QC final de biblioteca' antes do sequenciamento deve incluir MINIMAMENTE:", 
+    options: { A: "Apenas inspeção visual do tubo", B: "Quantificação por Qubit (ou qPCR), perfil de tamanho por TapeStation/Bioanalyzer, e verificação de ausência de dímeros de adaptador", C: "Apenas a quantificação por NanoDrop", D: "Sequenciamento completo da biblioteca como pré-teste", E: "Corrida de gel de agarose 3%" }, 
+    correct: "B", explanation: "Gabarito: Letra B. O trio Qubit + TapeStation + Verificação Visual de Adapter-Dimers é a trindade do QC antes de mandar para a Flow Cell."
+  },
+  {
+    id: 1030, area: "Laboratório", subject: "Biologia, biologia molecular e genética", 
+    text: "Sobre a relação entre alelo, gene e locus, é CORRETO afirmar:", 
+    options: { A: "Alelo e gene são sinônimos", B: "Um locus é a posição específica no cromossomo; um gene é a unidade funcional de herança localizada em um locus; alelos são as diferentes variantes de sequência que podem ocupar o mesmo locus", C: "Locus se refere exclusivamente a regiões não codificantes", D: "Cada gene possui apenas um alelo possível", E: "Alelo se refere a proteínas" }, 
+    correct: "B", explanation: "Gabarito: Letra B. Locus é o 'endereço'. Gene é a 'casa'. Alelo é 'quem mora lá' (as variações)."
+  },
+  {
+    id: 1031, area: "Laboratório", subject: "Biologia, biologia molecular e genética", 
+    text: "Em relação aos SNPs (Single Nucleotide Polymorphisms):", 
+    options: { A: "São exclusivamente patogênicos", B: "São variações de uma única base presentes em >1% da população, sendo o tipo mais comum de variação genética humana (~4-5 milhões por genoma)", C: "Ocorrem apenas em éxons codificantes", D: "Não podem ser detectados por NGS", E: "São encontrados apenas na Europa" }, 
+    correct: "B", explanation: "Gabarito: Letra B. Os SNPs representam a base da diversidade genética humana e da medicina genômica populacional."
+  },
+  {
+    id: 1032, area: "Laboratório", subject: "Boas Práticas de Laboratório (BPL), biossegurança e controle de qualidade", 
+    text: "A contaminação de reagentes de extração de DNA com DNA exógeno (ex.: DNA humano do operador) é detectada por:", 
+    options: { A: "Controle positivo de extração", B: "Controle negativo de extração (NTC) — se amplificação é observada no NTC, indica contaminação de reagentes ou do ambiente", C: "Aumento na concentração de Qubit", D: "Perfil de TapeStation", E: "Mudança de cor dos reagentes" }, 
+    correct: "B", explanation: "Gabarito: Letra B. O NTC vai com água no lugar da amostra. Se surgir DNA ali no final, o kit está contaminado."
+  },
+  {
+    id: 1033, area: "Bioinformática", subject: "Bioinformática e análise genômica", 
+    text: "A 'phased assembly' em genômica refere-se à:", 
+    options: { A: "Montagem de equipamentos em fases", B: "Determinação da configuração de alelos nos cromossomos homólogos (fase/haplótipo), permitindo distinguir qual alelo está em cada cópia cromossômica", C: "Divisão do sequenciamento em fases", D: "Separação de DNA mitocondrial", E: "Classificação das amostras" }, 
+    correct: "B", explanation: "Gabarito: Letra B. Phasing é separar as variantes herdadas do pai daquelas herdadas da mãe, recriando o cromossomo exato que você herdou."
+  },
+  {
+    id: 1034, area: "Laboratório", subject: "Tecnologias laboratoriais em genômica (sequenciamento de nova geração - NGS, extração de DNA genômico, controle de qualidade, preparo de amostras)", 
+    text: "A hemólise acentuada em amostra de sangue coletado é problemática para extração de DNA porque:", 
+    options: { A: "Aumenta a concentração de DNA", B: "A hemoglobina liberada dos eritrócitos lisados é um inibidor de PCR e de enzimas usadas no preparo de biblioteca, além de dificultar a separação do buffy coat", C: "A hemólise destrói completamente o DNA dos leucócitos", D: "Causa aumento do volume plasmático", E: "Transforma o DNA em RNA" }, 
+    correct: "B", explanation: "Gabarito: Letra B. A hemoglobina é rica em ferro, que atua como inibidor de enzimas dependentes de magnésio (como as polimerases)."
+  },
+  {
+    id: 1035, area: "Laboratório", subject: "Boas Práticas de Laboratório (BPL), biossegurança e controle de qualidade", 
+    text: "Sobre controle externo de qualidade (proficiency testing) em laboratório de genômica:", 
+    options: { A: "É opcional e não afeta a acreditação", B: "Consiste na análise de amostras cegas fornecidas por programa externo, com comparação dos resultados do laboratório com o consenso de participantes ou valores de referência", C: "É realizado apenas por privados", D: "Consiste na calibração mecânica", E: "Substitui controle interno" }, 
+    correct: "B", explanation: "Gabarito: Letra B. É o momento de provar que os seus laudos NGS encontram as mesmas variantes que os laboratórios do mundo inteiro encontram na mesma amostra."
+  },
+  {
+    id: 1036, area: "Laboratório", subject: "Tecnologias laboratoriais em genômica (sequenciamento de nova geração - NGS, extração de DNA genômico, controle de qualidade, preparo de amostras)", 
+    text: "Na separação do buffy coat, a temperatura de centrifugação deve ser à temperatura ambiente (20-25°C) e não refrigerada porque:", 
+    options: { A: "A refrigeração aumenta o rendimento de DNA", B: "A centrifugação refrigerada pode causar agregação plaquetária e dificultar a separação limpa das camadas", C: "A temperatura não influencia a separação", D: "A refrigeração consome mais energia", E: "A temperatura ambiente esteriliza a amostra" }, 
+    correct: "B", explanation: "Gabarito: Letra B. O frio ativa as plaquetas, que grudam nos leucócitos, embolando as camadas do plasma e do buffy coat."
+  },
+  {
+    id: 1037, area: "Bioinformática", subject: "Bioinformática e análise genômica", 
+    text: "Sobre o conceito de 'cobertura' em sequenciamento WGS:", 
+    options: { A: "Cobertura 30× significa 30 cromossomos diferentes", B: "Cobertura 30× significa que, em média, cada base do genoma foi lida 30 vezes, fornecendo redundância para chamada confiável de variantes", C: "Cobertura 30× significa 30% sequenciado", D: "Cobertura é sinônimo de cluster density", E: "30× é insuficiente para genômica" }, 
+    correct: "B", explanation: "Gabarito: Letra B. Para ter certeza de que uma variante detectada não é erro da máquina, precisamos ver a mesma letra lida cerca de 30 vezes em diferentes reads empilhados."
+  },
+  {
+    id: 1038, area: "Laboratório", subject: "Ética em pesquisa e noções de estudos multicêntricos", 
+    text: "O patrimônio genético brasileiro é regulado pela Lei nº 13.123/2015. No contexto do Genomas SUS:", 
+    options: { A: "A lei não tem relevância", B: "A lei pode ser aplicável quando o acesso a patrimônio genético envolve populações indígenas ou comunidades tradicionais, com implicações sobre consentimento e repartição de benefícios", C: "A lei proíbe qualquer genômica", D: "Aplica-se apenas a plantas e animais", E: "Dispensa consentimento" }, 
+    correct: "B", explanation: "Gabarito: Letra B. Ao sequenciar populações originárias/tradicionais, a pesquisa se submete às leis de repartição de benefícios pelo acesso ao conhecimento e material genético nativo."
+  },
+  {
+    id: 1039, area: "Laboratório", subject: "Ética em pesquisa e noções de estudos multicêntricos", 
+    text: "A diferença fundamental entre 'dados pseudonimizados' e 'dados anonimizados' é:", 
+    options: { A: "São termos sinônimos", B: "Dados pseudonimizados têm identificadores substituídos por código, mas podem ser re-identificados com a chave de correspondência; dados anonimizados não permitem re-identificação por nenhum meio razoável", C: "Pseudonimizados são mais seguros", D: "Apenas anonimizados têm LGPD", E: "Pseudonimizados não usam criptografia" }, 
+    correct: "B", explanation: "Gabarito: Letra B. A pseudonimização é reversível para a equipe de pesquisa que guarda o 'dicionário' de chaves. O dado anonimizado quebra essa chave para sempre."
+  },
+  {
+    id: 1040, area: "Bioinformática", subject: "Estatística aplicada à genômica", 
+    text: "O erro tipo I (α) em testes de hipótese em genômica corresponde a:", 
+    options: { A: "Deixar de detectar uma variante", B: "Rejeitar a hipótese nula quando ela é verdadeira — falso positivo", C: "Aceitar a alternativa corretamente", D: "Poder estatístico do teste", E: "Probabilidade de acerto" }, 
+    correct: "B", explanation: "Gabarito: Letra B. É o famoso falso positivo: afirmar que um gene causa a doença quando, na verdade, não há associação real (rejeitou o H0 incorretamente)."
+  },
+  {
+    id: 1041, area: "Laboratório", subject: "Biologia, biologia molecular e genética", 
+    text: "Sobre a replicação do DNA, a enzima helicase tem como função:", 
+    options: { A: "Sintetizar nucleotídeos", B: "Desenrolar a dupla hélice do DNA, separando as duas fitas na forquilha de replicação para que sirvam como molde", C: "Ligar os fragmentos de Okazaki", D: "Adicionar cap 5' ao mRNA", E: "Transportar aminoácidos" }, 
+    correct: "B", explanation: "Gabarito: Letra B. A helicase é o 'zíper' que abre a fita dupla para a polimerase entrar e trabalhar."
+  },
+  {
+    id: 1042, area: "Laboratório", subject: "Biologia, biologia molecular e genética", 
+    text: "A mutação frameshift (mudança de quadro de leitura) é causada por:", 
+    options: { A: "Substituição de base (transição)", B: "Inserção ou deleção de bases em número NÃO múltiplo de 3, alterando todo o quadro de leitura a partir do ponto da mutação", C: "Duplicação inteira de gene", D: "Inversão cromossômica", E: "Metilação" }, 
+    correct: "B", explanation: "Gabarito: Letra B. Como o ribossomo lê o RNA de 3 em 3 bases (códons), deletar 1 ou 2 bases 'desliza' a janela de leitura, arruinando a proteína inteira a partir daquele ponto."
+  },
+  {
+    id: 1043, area: "Laboratório", subject: "Biologia, biologia molecular e genética", 
+    text: "Na tradução, o códon AUG codifica metionina e funciona como códon de iniciação. A sequência contextual que facilita o reconhecimento do AUG em eucariotos é denominada:", 
+    options: { A: "TATA box", B: "Sequência Kozak", C: "Shine-Dalgarno", D: "Poly-A", E: "Cap 5'" }, 
+    correct: "B", explanation: "Gabarito: Letra B. A sequência de Kozak ajuda o ribossomo eucariótico a ancorar e identificar o AUG correto para começar a tradução."
+  },
+  {
+    id: 1044, area: "Laboratório", subject: "Biologia, biologia molecular e genética", 
+    text: "As histonas são proteínas fundamentais para a organização da cromatina. A acetilação de histonas está geralmente associada a:", 
+    options: { A: "Compactação da cromatina", B: "Relaxamento da cromatina e ativação transcricional, pois a acetilação neutraliza a carga positiva das lisinas, reduzindo a afinidade pela carga negativa do DNA", C: "Replicação do DNA", D: "Reparo de danos no DNA", E: "Translocação cromossômica" }, 
+    correct: "B", explanation: "Gabarito: Letra B. Histonas muito carregadas positivamente abraçam fortemente o DNA. A acetilação neutraliza isso, soltando o DNA para os fatores de transcrição entrarem."
+  },
+  {
+    id: 1045, area: "Laboratório", subject: "Biologia, biologia molecular e genética", 
+    text: "O processo pelo qual um gene pode gerar múltiplas proteínas diferentes é denominado:", 
+    options: { A: "Replicação alternativa", B: "Splicing alternativo, onde combinações diferentes de éxons são incluídas no mRNA maduro, gerando isoformas proteicas distintas a partir do mesmo gene", C: "Tradução inversa", D: "Retrotransposição", E: "Crossing-over" }, 
+    correct: "B", explanation: "Gabarito: Letra B. Cerca de 95% dos genes humanos sofrem splicing alternativo, sendo a chave da complexidade biológica humana comparada a outros animais."
+  },
+  {
+    id: 1046, area: "Laboratório", subject: "Biologia, biologia molecular e genética", 
+    text: "Sobre mutações somáticas vs germinativas:", 
+    options: { A: "Ambas são herdáveis", B: "Mutações germinativas estão presentes em todas as células e são herdáveis; mutações somáticas ocorrem em tecidos específicos e NÃO são transmitidas à descendência", C: "Mutações somáticas são sempre benignas", D: "Mutações germinativas ocorrem no músculo", E: "Não há diferença funcional" }, 
+    correct: "B", explanation: "Gabarito: Letra B. Mutações em células do corpo (somáticas, como num tumor de pele) não passam para o filho. Apenas as que afetam óvulo/espermatozoide (germinativas) são herdadas."
+  },
+  {
+    id: 1047, area: "Laboratório", subject: "Biologia, biologia molecular e genética", 
+    text: "O Mismatch Repair (MMR) é um sistema de reparo de DNA que:", 
+    options: { A: "Corrige dímeros de pirimidina", B: "Corrige erros de pareamento (mismatches) que escaparam à atividade de proofreading da DNA polimerase, sendo fundamental para a fidelidade replicativa", C: "Repara exclusivamente quebras de fita dupla", D: "Remove bases metiladas", E: "Corrige erros de splicing" }, 
+    correct: "B", explanation: "Gabarito: Letra B. Ele atua consertando A pareado erroneamente com C, por exemplo, logo após o avanço da polimerase."
+  },
+  {
+    id: 1048, area: "Laboratório", subject: "Biologia, biologia molecular e genética", 
+    text: "A herança mitocondrial difere da herança mendeliana porque:", 
+    options: { A: "Segue segregação 3:1", B: "É transmitida exclusivamente pela linhagem materna, pois as mitocôndrias do espermatozoide não contribuem para o zigoto", C: "É ligada ao cromossomo Y", D: "Afeta DNA nuclear", E: "Segue padrão autossômico" }, 
+    correct: "B", explanation: "Gabarito: Letra B. Todo o nosso DNA mitocondrial foi herdado exclusivamente das nossas mães, seguindo uma linhagem matrilinear ininterrupta."
+  },
+  {
+    id: 1049, area: "Laboratório", subject: "Biologia, biologia molecular e genética", 
+    text: "Sobre a telomerase:", 
+    options: { A: "Replica telômeros convencionalmente", B: "É uma transcriptase reversa que utiliza seu componente RNA como molde para adicionar repetições teloméricas (TTAGGG) às extremidades 3' dos cromossomos", C: "Ativa em somáticas adultas", D: "Inibição causa câncer", E: "Remove sequências" }, 
+    correct: "B", explanation: "Gabarito: Letra B. É a enzima da 'imortalidade celular' e atua fortemente em tumores para garantir que o cromossomo não encurte durante sucessivas divisões descontroladas."
+  },
+  {
+    id: 1050, area: "Laboratório", subject: "Boas Práticas de Laboratório (BPL), biossegurança e controle de qualidade", 
+    text: "O brometo de etídio, utilizado classicamente como corante de DNA em gel de agarose, está sendo substituído por corantes como SYBR Safe porque:", 
+    options: { A: "SYBR Safe é mais barato", B: "Brometo de etídio é um agente intercalante mutagênico com potencial carcinogênico, exigindo manuseio e descarte especiais como resíduo químico perigoso", C: "SYBR Safe produz bandas mais brilhantes", D: "Brometo não cora DNA genômico", E: "SYBR Safe descarta na pia" }, 
+    correct: "B", explanation: "Gabarito: Letra B. Por se intercalar entre as bases do DNA para emitir brilho, ele faz a mesma coisa no DNA humano caso entre em contato com a pele, causando mutações."
+  },
+  {
+    id: 1051, area: "Laboratório", subject: "Biologia, biologia molecular e genética", 
+    text: "A RNA polimerase II em eucariotos é responsável pela transcrição de:", 
+    options: { A: "Apenas rRNA", B: "mRNA, e também a maioria dos snRNAs, miRNAs e lncRNAs", C: "Apenas tRNA", D: "DNA", E: "Apenas RNA mitocondrial" }, 
+    correct: "B", explanation: "Gabarito: Letra B. É o motor primário da transcrição proteica e de RNAs regulatórios cruciais (como os miRNAs que bloqueiam tradução)."
+  },
+  {
+    id: 1052, area: "Laboratório", subject: "Biologia, biologia molecular e genética", 
+    text: "Na eletroforese, DNA migra em direção ao:", 
+    options: { A: "Cátodo (negativo)", B: "Ânodo (polo positivo), pois os grupos fosfato conferem carga negativa ao DNA", C: "Não migra", D: "Lateralmente", E: "Ambos polos" }, 
+    correct: "B", explanation: "Gabarito: Letra B. O 'Açúcar-Fosfato' carrega o DNA negativamente. Como opostos se atraem na física, ele viaja na direção da ponta positiva da cuba de eletroforese."
+  },
+  {
+    id: 1053, area: "Laboratório", subject: "Biologia, biologia molecular e genética", 
+    text: "Sobre o código genético, é CORRETO afirmar que é 'degenerado' porque:", 
+    options: { A: "Cada aminoácido tem 1 códon", B: "Múltiplos códons podem codificar o mesmo aminoácido, sendo a degeneração maior na terceira posição do códon (wobble position)", C: "Cada códon codifica vários aminoácidos", D: "Varia entre espécies", E: "Faltam códons" }, 
+    correct: "B", explanation: "Gabarito: Letra B. A 'teoria da oscilação' (Wobble) faz com que mutações na 3ª posição de um códon de DNA frequentemente gerem o exato mesmo aminoácido (Mutação Sinônima), atuando como um escudo natural contra erros."
+  },
+  {
+    id: 1054, area: "Laboratório", subject: "Biologia, biologia molecular e genética", 
+    text: "O Nonsense-Mediated Decay (NMD) é um mecanismo de vigilância que:", 
+    options: { A: "Degrada mRNAs que contêm códons de parada prematuros (nonsense mutations), impedindo a produção de proteínas truncadas potencialmente tóxicas", B: "Repara mutações nonsense no DNA", C: "Degrada todas proteínas", D: "Elimina RNAs ribossômicos", E: "Ativa mRNAs mutados" }, 
+    correct: "A", explanation: "Gabarito: Letra A. (Opção A é correta neste simulado, repare no gabarito oficial). Proteínas truncadas podem virar 'príons tóxicos' e agregar na célula. O NMD destrói o mRNA defectivo antes que ele seja traduzido a fundo."
+  },
+  {
+    id: 1055, area: "Bioinformática", subject: "Genética de populações", 
+    text: "Em genética de populações, o equilíbrio de Hardy-Weinberg:", 
+    options: { A: "Aplica-se apenas a pequenas populações", B: "Descreve as frequências genotípicas esperadas (p², 2pq, q²) em uma população grande com cruzamento aleatório, sem mutação, migração ou seleção", C: "Prevê aumento constante de homozigotos", D: "Requer alelos dominantes", E: "Só haplóides" }, 
+    correct: "B", explanation: "Gabarito: Letra B. Se não há força evolutiva puxando, a proporção de um gene se mantém constante pelas leis estatísticas de HW."
+  },
+  {
+    id: 1056, area: "Laboratório", subject: "Biologia, biologia molecular e genética", 
+    text: "A deficiência no gene BRCA1 compromete qual mecanismo de reparo de DNA?", 
+    options: { A: "BER", B: "Recombinação homóloga (HR) de quebras de fita dupla", C: "MMR", D: "NER", E: "Fotorreativação" }, 
+    correct: "B", explanation: "Gabarito: Letra B. Quebrar ambas as fitas do DNA é letal. Sem BRCA1 (que recruta as ferramentas de conserto), a célula acumula cortes irreparáveis, gerando forte instabilidade e tumorigênese (Câncer de Mama/Ovário)."
+  },
+  {
+    id: 1057, area: "Laboratório", subject: "Biologia, biologia molecular e genética", 
+    text: "O imprinting genômico é um fenômeno epigenético em que:", 
+    options: { A: "Ambos os alelos são expressos", B: "A expressão de certos genes depende da origem parental (materno ou paterno), regulada por metilação diferencial do DNA", C: "Os genes duplicam", D: "Expressão apenas embrionária", E: "Depende só do ambiente" }, 
+    correct: "B", explanation: "Gabarito: Letra B. É um selo que diz: 'Silencie essa cópia porque ela veio do pai'. Doenças como Prader-Willi e Angelman são falhas clássicas do Imprinting."
+  },
+  {
+    id: 1058, area: "Bioinformática", subject: "Genética de populações", 
+    text: "A variante HbS (hemoglobina S), responsável pela anemia falciforme, é mais frequente em populações com ancestralidade africana porque:", 
+    options: { A: "Ocorre apenas em africanos", B: "Heterozigotos (HbAS) apresentam resistência aumentada à malária por P. falciparum, conferindo vantagem seletiva em regiões endêmicas — exemplo clássico de seleção balanceadora", C: "Vantajosa sempre", D: "Falta de reparo", E: "Surgiu recentemente" }, 
+    correct: "B", explanation: "Gabarito: Letra B. É o melhor caso mundial de 'Vantagem do Heterozigoto'. Carregar uma cópia ruim te defende do plasmódio na África."
+  },
+  {
+    id: 1059, area: "Laboratório", subject: "Biologia, biologia molecular e genética", 
+    text: "A inativação do cromossomo X em fêmeas mamíferas é mediada pelo:", 
+    options: { A: "Gene SRY", B: "RNA não codificante XIST (X-inactive specific transcript), que reveste o cromossomo X a ser inativado", C: "DNA mitocondrial", D: "Telomerase", E: "p53" }, 
+    correct: "B", explanation: "Gabarito: Letra B. Para evitar dose dupla de carga genética fatal, o RNA XIST abraça e 'desliga' fisicamente todo um cromossomo X nas células femininas (corpúsculo de Barr)."
+  },
+  {
+    id: 1060, area: "Laboratório", subject: "Tecnologias laboratoriais em genômica (sequenciamento de nova geração - NGS, extração de DNA genômico, controle de qualidade, preparo de amostras)", 
+    text: "Sobre a PCR (Reação em Cadeia da Polimerase), a etapa de annealing (anelamento) ocorre em temperatura:", 
+    options: { A: "95°C", B: "55-65°C, para permitir a hibridização dos primers com o DNA molde", C: "72°C", D: "4°C", E: "100°C" }, 
+    correct: "B", explanation: "Gabarito: Letra B. É a temperatura morna exata onde os primers conseguem se encaixar estaticamente às fitas únicas e começar a síntese."
+  },
+  {
+    id: 1061, area: "Laboratório", subject: "Biologia, biologia molecular e genética", 
+    text: "A transcrição reversa, processo pelo qual RNA é convertido em DNA complementar (cDNA), é catalisada por:", 
+    options: { A: "RNA pol II", B: "Transcriptase reversa (reverse transcriptase), enzima originalmente descrita em retrovírus", C: "DNA pol III", D: "Ribonuclease H", E: "Topoisomerase" }, 
+    correct: "B", explanation: "Gabarito: Letra B. É a base da RT-qPCR para análise de RNA e detecção viral (como na testagem do HIV e do SARS-CoV-2)."
+  },
+  {
+    id: 1062, area: "Laboratório", subject: "Biologia, biologia molecular e genética", 
+    text: "Um SNP classificado como 'missense' significa que:", 
+    options: { A: "Não altera", B: "A substituição de nucleotídeo resulta na troca de um aminoácido por outro diferente na proteína codificada", C: "Códon de parada prematuro", D: "Deleção de éxon", E: "Não tem efeito" }, 
+    correct: "B", explanation: "Gabarito: Letra B. O sentido (sense) falhou. É a clássica mutação de troca de bloco (ex: Trocou Ácido Glutâmico por Valina na HbS)."
+  },
+  {
+    id: 1063, area: "Laboratório", subject: "Biologia, biologia molecular e genética", 
+    text: "O splicing do pré-mRNA é realizado pelo:", 
+    options: { A: "Ribossomo", B: "Spliceossomo, um complexo ribonucleoprotéico composto por snRNPs (U1, U2, U4, U5, U6) e proteínas associadas", C: "DNA pol", D: "Proteassomo", E: "Poro nuclear" }, 
+    correct: "B", explanation: "Gabarito: Letra B. Eles cortam forçosamente o RNA não codificante (íntron) e costuram as bordas."
+  },
+  {
+    id: 1064, area: "Laboratório", subject: "Biologia, biologia molecular e genética", 
+    text: "A energia para a tradução (síntese proteica) no ribossomo é fornecida pela hidrólise de:", 
+    options: { A: "ATP apenas", B: "GTP, hidrolisado pelos fatores de elongação (EF-Tu/eEF1A na decodificação e EF-G/eEF2 na translocação), e ATP na aminoacilação do tRNA", C: "UDP", D: "Glicose", E: "NADPH" }, 
+    correct: "B", explanation: "Gabarito: Letra B. O Ribossomo queima pesado GTP para atuar fisicamente como uma esteira mecânica que puxa e solta a proteína."
+  },
+  {
+    id: 1065, area: "Laboratório", subject: "Biologia, biologia molecular e genética", 
+    text: "O conceito de 'penetrância' em genética refere-se a:", 
+    options: { A: "Capacidade de penetrar a célula", B: "A proporção de indivíduos com determinado genótipo que efetivamente manifestam o fenótipo esperado", C: "Gravidade da doença", D: "Taxa de mutação", E: "Velocidade" }, 
+    correct: "B", explanation: "Gabarito: Letra B. Algumas pessoas têm a mutação dominante, mas a doença misteriosamente nunca 'penetra' no fenótipo (elas ficam saudáveis)."
+  },
+  {
+    id: 1066, area: "Laboratório", subject: "Biologia, biologia molecular e genética", 
+    text: "Sobre variantes de número de cópias (CNVs):", 
+    options: { A: "São SNVs", B: "São segmentos de DNA de >1 kb com número variável de cópias entre indivíduos, podendo incluir deleções e duplicações de genes inteiros, com impacto em dosagem gênica e fenótipo", C: "Apenas DNA mitocondrial", D: "Só detectadas por cariótipo", E: "Sem relevância clínica" }, 
+    correct: "B", explanation: "Gabarito: Letra B. São grandes apagões ou Ctrl+C gigantes no genoma, fortíssimas causadoras de Autismo sindrômico e atrasos intelectuais severos."
+  },
+  {
+    id: 1067, area: "Laboratório", subject: "Tecnologias laboratoriais em genômica (sequenciamento de nova geração - NGS, extração de DNA genômico, controle de qualidade, preparo de amostras)", 
+    text: "A técnica de FISH (Fluorescence In Situ Hybridization) permite:", 
+    options: { A: "Sequenciar genes", B: "Detectar sequências específicas de DNA em cromossomos ou tecidos usando sondas marcadas com fluorocromos, permitindo localizar genes, detectar aneuploidias e rearranjos cromossômicos", C: "Amplificar in vitro", D: "Extrair DNA", E: "Medir qPCR" }, 
+    correct: "B", explanation: "Gabarito: Letra B. Um farol que 'pinta' o DNA em cores diferentes para ser observado em microscópios avançados em citogenética."
+  },
+  {
+    id: 1068, area: "Laboratório", subject: "Biologia, biologia molecular e genética", 
+    text: "No contexto do reparo de DNA, a via NER (Nucleotide Excision Repair) é particularmente importante para:", 
+    options: { A: "Corrigir mismatches", B: "Reparar lesões volumosas que distorcem a hélice do DNA, como dímeros de pirimidina causados por radiação UV e adutos de agentes químicos", C: "Quebras dupla-fita", D: "Erros traducionais", E: "Remover uracila" }, 
+    correct: "B", explanation: "Gabarito: Letra B. Falha no NER causa a grave doença Xeroderma Pigmentoso (alergia letal solar e mutagênese de pele)."
+  },
+  {
+    id: 1069, area: "Laboratório", subject: "Biologia, biologia molecular e genética", 
+    text: "A propriedade do código genético de ser 'universal' significa que:", 
+    options: { A: "Cada organismo tem o seu próprio", B: "O mesmo conjunto de códons codifica os mesmos aminoácidos na grande maioria dos organismos, com algumas exceções notáveis em mitocôndrias", C: "Só eucariotos usam códons", D: "DNA = RNA", E: "Mesma proteína no mundo todo" }, 
+    correct: "B", explanation: "Gabarito: Letra B. Um códon ATG num humano e num besouro produzirão rigorosamente o mesmo aminoácido metionina. A linguagem é literalmente universal."
+  }
 ];
