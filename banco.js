@@ -1,7 +1,6 @@
 // ====================================================================
-// BANCO COMPLETO DE QUESTÕES - GENOMA SUS (FILTRADO)
-// Questões Originais: 745 | Questões Mantidas: 715
-// Removidos spans e fuga de tema com base em relevância técnica.
+// BANCO COMPLETO DE QUESTÕES - GENOMA SUS (TEXTOS REFINADOS)
+// Textos longos reduzidos e redação otimizada pedagógicamente.
 // ====================================================================
 
 window.questionBank = [
