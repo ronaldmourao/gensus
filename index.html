@@ -154,8 +154,14 @@
                                 <div className="flex items-center gap-3 mb-2">
                                     <div className="bg-slate-900 p-2.5 rounded-xl text-white"><Icons.Trophy /></div>
                                     <h1 className="text-2xl md:text-3xl font-black tracking-tighter text-slate-900">GENOMA SUS <span className="text-blue-600">Edital Exato</span></h1>
+                                    <span className="hidden sm:flex items-center bg-blue-100 text-blue-800 text-xs font-black px-3 py-1.5 rounded-lg border border-blue-200">
+                                        {activeBank.length} QUESTÕES
+                                    </span>
                                 </div>
                                 <p className="text-slate-500 font-medium">Estruturado rigorosamente nas duas categorias do certame.</p>
+                                <span className="sm:hidden mt-2 inline-flex items-center bg-blue-100 text-blue-800 text-xs font-black px-3 py-1.5 rounded-lg border border-blue-200">
+                                    {activeBank.length} QUESTÕES NO BANCO
+                                </span>
                             </div>
                             
                             <div className="bg-white p-4 rounded-2xl border border-slate-200 shadow-sm flex items-center gap-3">
