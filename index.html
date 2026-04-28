@@ -251,7 +251,6 @@
                 setScreen('dashboard');
             };
 
-            // Nova função de responder separada da seleção
             const handleAnswerSubmit = (qId, option) => {
                 if (!option || sessionAnswers[qId]) return;
                 const question = activeBank.find(q => q.id === qId);
@@ -321,7 +320,6 @@
                     const att = history[qId];
                     if (!att || att.length === 0) return;
                     const last = att[att.length - 1];
-                    // Só entra no caderno se a ÚLTIMA for erro.
                     if (!last.isCorrect) status[qId] = "red";
                     else status[qId] = "green";
                 });
@@ -525,7 +523,7 @@
                                     <div className="p-3 bg-red-500 text-white rounded-xl shadow-md"><Icons.BookX /></div>
                                     <div className="text-left">
                                         <h2 className="text-xl font-black text-slate-800 dark:text-white group-hover:text-red-600 dark:group-hover:text-red-400 transition-colors">Caderno</h2>
-                                        <p className="text-sm text-slate-500 dark:text-slate-400 font-medium">{errorQuestions.length} erros pendentes</p>
+                                        <p className="text-sm text-slate-500 dark:text-slate-400 font-medium">{errorQuestions.length} erros</p>
                                     </div>
                                 </div>
                             </button>
@@ -545,7 +543,7 @@
                                     <div className="p-3 bg-blue-600 text-white rounded-xl shadow-md"><Icons.BarChart /></div>
                                     <div className="text-left">
                                         <h2 className="text-xl font-black text-slate-800 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">Estatísticas</h2>
-                                        <p className="text-sm text-slate-500 dark:text-slate-400 font-medium">Diagnóstico de Guerra</p>
+                                        <p className="text-sm text-slate-500 dark:text-slate-400 font-medium">Diagnóstico</p>
                                     </div>
                                 </div>
                             </button>
@@ -598,15 +596,12 @@
                 const DiffIcon = diffStyle.icon;
                 const isFav = currentQ ? favorites.includes(currentQ.id) : false;
                 
-                // Estados para Eliminação e Seleção (Duas Etapas)
                 const [eliminated, setEliminated] = useState({});
                 const [selectedOption, setSelectedOption] = useState(null);
                 
-                // Estados para o Swipe Mobile
                 const touchStartX = useRef(null);
                 const isSwiping = useRef(false);
 
-                // Limpa configurações sempre que a questão mudar
                 useEffect(() => {
                     setEliminated({});
                     setSelectedOption(null);
@@ -634,7 +629,6 @@
                     const touchEndX = e.changedTouches[0].clientX;
                     const diff = touchStartX.current - touchEndX;
                     
-                    // Se deslizou mais de 40px, ativa a eliminação
                     if (Math.abs(diff) > 40) {
                         isSwiping.current = true;
                         toggleEliminate(k);
@@ -706,7 +700,6 @@
                                                 onTouchStart={handleTouchStart}
                                                 onTouchEnd={(e) => handleTouchEnd(e, k)}
                                             >
-                                                {/* Tesoura: visível só no PC ao passar o mouse ou se estiver eliminada. No mobile desliza para ativar */}
                                                 <button
                                                     onClick={() => toggleEliminate(k)}
                                                     disabled={!!sessionAns}
@@ -726,7 +719,6 @@
                                 </div>
                             </div>
 
-                            {/* FeedBack de Resposta */}
                             {sessionAns && (
                                 <div className={`p-6 md:p-10 border-t-2 ${sessionAns === currentQ.correct ? 'bg-emerald-50/50 dark:bg-emerald-900/10 border-emerald-100 dark:border-emerald-900/30' : 'bg-rose-50/50 dark:bg-rose-900/10 border-rose-100 dark:border-rose-900/30'} animate-in fade-in`}>
                                     <div className="bg-white dark:bg-slate-800 p-5 md:p-6 rounded-2xl shadow-md border dark:border-slate-700 border-slate-100">
@@ -736,7 +728,6 @@
                                 </div>
                             )}
 
-                            {/* NOVA BARRA TRIPLA DE NAVEGAÇÃO */}
                             <div className="p-3 md:p-6 border-t-2 border-slate-100 dark:border-slate-700 bg-slate-50 dark:bg-slate-800/30 flex gap-2 md:gap-4 mt-auto">
                                 <button onClick={() => setIdx(i => i - 1)} disabled={idx === 0} className="flex-1 py-3 md:py-4 bg-white dark:bg-slate-800 border-2 border-slate-200 dark:border-slate-600 text-slate-600 dark:text-slate-300 font-black rounded-xl hover:bg-slate-50 dark:hover:bg-slate-700 transition-all disabled:opacity-40 disabled:hover:bg-white dark:disabled:hover:bg-slate-800 text-xs flex items-center justify-center gap-1">
                                     <Icons.ChevronLeft /> <span className="hidden sm:inline">ANTERIOR</span>
@@ -754,10 +745,11 @@
                                     {!!sessionAns ? 'RESPONDIDA' : 'RESPONDER'}
                                 </button>
 
-                                <button onClick={() => { if(idx < quizConfig.questions.length - 1) setIdx(i=>i+1); else setScreen('dashboard'); }} disabled={!sessionAns} className={`flex-1 py-3 md:py-4 font-black rounded-xl transition-all text-xs flex items-center justify-center gap-1 ${
-                                    !sessionAns ? 'bg-white dark:bg-slate-800 border-2 border-slate-200 dark:border-slate-600 text-slate-400 dark:text-slate-500' : 'bg-slate-900 dark:bg-slate-100 text-white dark:text-slate-900 shadow-md hover:scale-[1.02]'
+                                <button onClick={() => { if(idx < quizConfig.questions.length - 1) setIdx(i=>i+1); else setScreen('dashboard'); }} 
+                                    className={`flex-1 py-3 md:py-4 font-black rounded-xl transition-all text-xs flex items-center justify-center gap-1 ${
+                                    !sessionAns ? 'bg-white dark:bg-slate-800 border-2 border-slate-200 dark:border-slate-600 text-slate-600 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-700' : 'bg-slate-900 dark:bg-slate-100 text-white dark:text-slate-900 shadow-md hover:scale-[1.02]'
                                 }`}>
-                                    <span className="hidden sm:inline">{idx < quizConfig.questions.length - 1 ? 'PRÓXIMA' : 'FINALIZAR'}</span> <Icons.ChevronRight />
+                                    <span className="hidden sm:inline">{idx < quizConfig.questions.length - 1 ? (sessionAns ? 'PRÓXIMA' : 'PULAR') : 'FINALIZAR'}</span> <Icons.ChevronRight />
                                 </button>
                             </div>
                         </div>
