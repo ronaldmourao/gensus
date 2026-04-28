@@ -10517,22 +10517,6 @@ window.questionBank = [
         "difficulty": "médio"
     },
     {
-        "id": 1746,
-        "area": "Laboratório",
-        "subject": "Boas Práticas de Laboratório (BPL), biossegurança e controle de qualidade",
-        "text": "Qual das seguintes práticas é recomendada em laboratório?",
-        "options": {
-            "A": "Não documentar procedimentos realizados.",
-            "B": "Ignorar protocolos estabelecidos em lei.",
-            "C": "Trabalhar sem proteção individual (EPI).",
-            "D": "Armazenar amostras sem identificação.",
-            "E": "Seguir boas práticas e diretrizes atuais."
-        },
-        "correct": "E",
-        "explanation": "A correta é a E porque a aderência a padrões técnicos assegura qualidade e segurança laboratorial. As outras falham pois: A impede rastreio, B infringe legalidade, C arrisca saúde e D compromete identificação.",
-        "difficulty": "médio"
-    },
-    {
         "id": 1748,
         "area": "Bioinformática",
         "subject": "Segurança de dados",
@@ -10581,22 +10565,6 @@ window.questionBank = [
         "difficulty": "fácil"
     },
     {
-        "id": 1754,
-        "area": "Laboratório",
-        "subject": "Boas Práticas de Laboratório (BPL), biossegurança e controle de qualidade",
-        "text": "Qual das seguintes práticas é recomendada em laboratório?",
-        "options": {
-            "A": "Armazenar amostras sem identificação.",
-            "B": "Ignorar os protocolos estabelecidos.",
-            "C": "Não documentar os procedimentos feitos.",
-            "D": "Seguir boas práticas e diretrizes atuais.",
-            "E": "Trabalhar sem proteção individual (EPI)."
-        },
-        "correct": "D",
-        "explanation": "A correta é a D pois boas práticas asseguram resultados confiáveis. As outras falham pois: A causa extravios, B quebra padrões, C inviabiliza revisão e E ignora segurança.",
-        "difficulty": "médio"
-    },
-    {
         "id": 1760,
         "area": "Bioinformática",
         "subject": "Segurança de dados",
@@ -10611,22 +10579,6 @@ window.questionBank = [
         "correct": "E",
         "explanation": "A correta é a E pois diretrizes promovem ética e eficiência. As outras falham pois: A descumpre normas, B oculta atos, C desorganiza dados e D arrisca acidentes.",
         "difficulty": "fácil"
-    },
-    {
-        "id": 1786,
-        "area": "Laboratório",
-        "subject": "Boas Práticas de Laboratório (BPL), biossegurança e controle de qualidade",
-        "text": "Qual das seguintes práticas é recomendada em laboratório?",
-        "options": {
-            "A": "Armazenar amostras sem identificação adequada.",
-            "B": "Ignorar protocolos e padrões estabelecidos.",
-            "C": "Não documentar os procedimentos realizados.",
-            "D": "Trabalhar sem equipamentos de proteção.",
-            "E": "Seguir boas práticas e diretrizes atualizadas."
-        },
-        "correct": "E",
-        "explanation": "A correta é a E pois práticas atualizadas garantem segurança laboratorial. As outras falham pois: A dificulta rastreio, B fere legislação, C apaga evidências e D expõe riscos.",
-        "difficulty": "médio"
     },
     {
         "id": 1788,
