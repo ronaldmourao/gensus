@@ -1,6 +1,6 @@
 // ====================================================================
-// BANCO COMPLETO DE QUESTÕES - GENOMA SUS (GABARITOS REVISTOS)
-// Gabaritos validados e justificativas aprofundadas sobre todas as opções.
+// BANCO COMPLETO DE QUESTÕES - FÁBRICA IA
+// Total no Banco: 836 questões.
 // ====================================================================
 
 window.questionBank = [
@@ -10517,6 +10517,22 @@ window.questionBank = [
         "difficulty": "médio"
     },
     {
+        "id": 1746,
+        "area": "Laboratório",
+        "subject": "Boas Práticas de Laboratório (BPL), biossegurança e controle de qualidade",
+        "text": "Qual das seguintes práticas é recomendada em laboratório?",
+        "options": {
+            "A": "Não documentar procedimentos realizados.",
+            "B": "Ignorar protocolos estabelecidos em lei.",
+            "C": "Trabalhar sem proteção individual (EPI).",
+            "D": "Armazenar amostras sem identificação.",
+            "E": "Seguir boas práticas e diretrizes atuais."
+        },
+        "correct": "E",
+        "explanation": "A correta é a E porque a aderência a padrões técnicos assegura qualidade e segurança laboratorial. As outras falham pois: A impede rastreio, B infringe legalidade, C arrisca saúde e D compromete identificação.",
+        "difficulty": "médio"
+    },
+    {
         "id": 1748,
         "area": "Bioinformática",
         "subject": "Segurança de dados",
@@ -10565,6 +10581,22 @@ window.questionBank = [
         "difficulty": "fácil"
     },
     {
+        "id": 1754,
+        "area": "Laboratório",
+        "subject": "Boas Práticas de Laboratório (BPL), biossegurança e controle de qualidade",
+        "text": "Qual das seguintes práticas é recomendada em laboratório?",
+        "options": {
+            "A": "Armazenar amostras sem identificação.",
+            "B": "Ignorar os protocolos estabelecidos.",
+            "C": "Não documentar os procedimentos feitos.",
+            "D": "Seguir boas práticas e diretrizes atuais.",
+            "E": "Trabalhar sem proteção individual (EPI)."
+        },
+        "correct": "D",
+        "explanation": "A correta é a D pois boas práticas asseguram resultados confiáveis. As outras falham pois: A causa extravios, B quebra padrões, C inviabiliza revisão e E ignora segurança.",
+        "difficulty": "médio"
+    },
+    {
         "id": 1760,
         "area": "Bioinformática",
         "subject": "Segurança de dados",
@@ -10579,6 +10611,22 @@ window.questionBank = [
         "correct": "E",
         "explanation": "A correta é a E pois diretrizes promovem ética e eficiência. As outras falham pois: A descumpre normas, B oculta atos, C desorganiza dados e D arrisca acidentes.",
         "difficulty": "fácil"
+    },
+    {
+        "id": 1786,
+        "area": "Laboratório",
+        "subject": "Boas Práticas de Laboratório (BPL), biossegurança e controle de qualidade",
+        "text": "Qual das seguintes práticas é recomendada em laboratório?",
+        "options": {
+            "A": "Armazenar amostras sem identificação adequada.",
+            "B": "Ignorar protocolos e padrões estabelecidos.",
+            "C": "Não documentar os procedimentos realizados.",
+            "D": "Trabalhar sem equipamentos de proteção.",
+            "E": "Seguir boas práticas e diretrizes atualizadas."
+        },
+        "correct": "E",
+        "explanation": "A correta é a E pois práticas atualizadas garantem segurança laboratorial. As outras falham pois: A dificulta rastreio, B fere legislação, C apaga evidências e D expõe riscos.",
+        "difficulty": "médio"
     },
     {
         "id": 1788,
@@ -10691,5 +10739,2645 @@ window.questionBank = [
         "correct": "E",
         "explanation": "Boas práticas garantem qualidade, segurança e conformidade regulatória em todos os processos.",
         "difficulty": "médio"
+    },
+    {
+        "text": "Em estudos de associação genômica ampla (GWAS), qual métrica estatística é comumente utilizada para determinar se a associação observada entre um SNP e um fenótipo é estatisticamente significativa?",
+        "options": {
+            "A": "O valor-p (p-value)",
+            "B": "O desvio padrão fixo",
+            "C": "O coeficiente angular",
+            "D": "A variância amostral",
+            "E": "A mediana dos valores"
+        },
+        "correct": "A",
+        "explanation": "O valor-p (A) é a métrica padrão para testar a significância estatística e rejeitar a hipótese nula em estudos genômicos. As demais alternativas estão incorretas pois: B mede a dispersão, C indica inclinação de reta, D avalia variabilidade estatística e E identifica o ponto central da distribuição.",
+        "area": "Bioinformática",
+        "difficulty": "fácil",
+        "subject": "Estatística aplicada à genômica",
+        "id": 1877
+    },
+    {
+        "text": "Em estudos genômicos multicêntricos nacionais vinculados ao Genoma SUS, qual é o requisito ético fundamental para que um centro participante inicie legalmente a coleta de amostras biológicas?",
+        "options": {
+            "A": "Aprovação do CEP do centro coordenador e do CEP local.",
+            "B": "Autorização direta da CONEP sem análise do CEP local.",
+            "C": "Consentimento verbal para casos de dados anonimizados.",
+            "D": "Dispensa de análise ética para centros vinculados ao SUS.",
+            "E": "Homologação exclusiva pelo Ministério da Saúde federal."
+        },
+        "correct": "A",
+        "explanation": "A alternativa A está correta pois estudos multicêntricos exigem a aprovação do Comitê de Ética em Pesquisa (CEP) do centro coordenador e de cada centro participante para garantir a segurança dos voluntários. As demais estão incorretas porque: B ignora a necessidade do parecer do CEP local, C exige termo escrito e não apenas verbal, D o SUS não isenta da avaliação ética obrigatória e E o Ministério não substitui o sistema CEP/CONEP.",
+        "area": "Laboratório",
+        "difficulty": "médio",
+        "subject": "Ética em pesquisa e noções de estudos multicêntricos",
+        "id": 1878
+    },
+    {
+        "text": "No contexto do projeto Genoma SUS, ao realizar o chamado de variantes de linhagem germinativa em um pequeno grupo de amostras (N < 30) onde o VQSR não é recomendado, qual a abordagem técnica mais robusta para reduzir falsos-positivos mantendo a integridade dos dados brutos?",
+        "options": {
+            "A": "Aplicar Hard Filtering com parâmetros fixos de QD, FS e SOR.",
+            "B": "Utilizar o Base Quality Score Recalibration com machine learning.",
+            "C": "Implementar o Variant Quality Score Recalibration via GMM local.",
+            "D": "Ajustar o mapeamento reduzindo o 'mismatch penalty' no BWA-MEM.",
+            "E": "Realizar a exclusão de variantes com profundidade inferior a 2x."
+        },
+        "correct": "A",
+        "explanation": "A alternativa A está correta pois, em coortes pequenas, o modelo estatístico do VQSR não converge, tornando o Hard Filtering com métricas como Quality-by-Depth (QD) e FisherStrand (FS) o padrão recomendado. As demais erram porque: B foca no erro do sequenciador, não no filtro; C exige grandes volumes de dados para treinar modelos; D aumenta falsos-positivos ao aceitar muitos desalinhamentos; E utiliza um limiar de profundidade insuficiente para variantes confiáveis.",
+        "area": "Bioinformática",
+        "difficulty": "difícil",
+        "subject": "Bioinformática e análise genômica",
+        "id": 1879
+    },
+    {
+        "text": "No preparo de bibliotecas para NGS via tagmentação enzimática, qual o efeito direto da utilização de uma concentração de DNA de entrada significativamente superior à recomendada?",
+        "options": {
+            "A": "Formação de fragmentos excessivamente curtos e perda de insertos.",
+            "B": "Redução da eficiência de hibridização nos clusters da flowcell.",
+            "C": "Geração de fragmentos longos e diminuição da diversidade da biblioteca.",
+            "D": "Aumento desproporcional de dímeros de adaptadores na amostra final.",
+            "E": "Inibição completa da DNA polimerase durante a etapa de PCR subsequente."
+        },
+        "correct": "C",
+        "explanation": "A alternativa C está correta porque a estequiometria entre transposase e DNA é crucial; o excesso de DNA impede a clivagem adequada, gerando insertos longos e bibliotecas pouco diversas. As demais erram porque: A ocorre por excesso de enzima, B é efeito do sequenciamento, D resulta de baixa concentração de DNA e E depende de contaminantes.",
+        "area": "Laboratório",
+        "difficulty": "difícil",
+        "subject": "Biologia, biologia molecular e genética",
+        "id": 1880
+    },
+    {
+        "text": "No contexto das Boas Práticas de Laboratório (BPL) em sequenciamento genômico, qual medida é indispensável para mitigar a contaminação cruzada?",
+        "options": {
+            "A": "Implementação de fluxo unidirecional entre pré-PCR e pós-PCR.",
+            "B": "Utilização de luvas de procedimento para todas as áreas técnicas.",
+            "C": "Higienização semanal das bancadas apenas com álcool etílico 70%.",
+            "D": "Armazenamento de DNA extraído em freezers de acesso público geral.",
+            "E": "Calibração de termocicladores apenas em casos de falha técnica."
+        },
+        "correct": "A",
+        "explanation": "A alternativa A está correta pois o fluxo unidirecional impede que amplicons contaminem amostras virgens, pilar básico da biossegurança molecular. As demais erram porque: B ignora troca obrigatória de EPI entre áreas, C exige descontaminação química mais rigorosa, D compromete a integridade e sigilo das amostras e E negligencia manutenção preventiva periódica obrigatória.",
+        "area": "Laboratório",
+        "difficulty": "médio",
+        "subject": "Boas Práticas de Laboratório (BPL), biossegurança e controle de qualidade",
+        "id": 1881
+    },
+    {
+        "text": "No âmbito do projeto Genoma SUS, o controle de qualidade do DNA genômico (gDNA) é uma etapa crítica antes da construção de bibliotecas. Considerando a necessidade de obter bibliotecas de alta complexidade para sequenciamento de genoma completo (WGS), qual dos parâmetros abaixo é o indicador mais robusto da integridade física da amostra?",
+        "options": {
+            "A": "Razão A260/280 medida exclusivamente por espectrofotometria de UV.",
+            "B": "Visualização de rastro (smear) intenso abaixo de 500 pares de bases.",
+            "C": "Valor de DIN (DNA Integrity Number) elevado em eletroforese capilar.",
+            "D": "Quantificação absoluta via fluorometria ignorando o tamanho do gDNA.",
+            "E": "Ausência de contaminantes fenólicos medida pela absorbância em 230nm."
+        },
+        "correct": "C",
+        "explanation": "C é a correta pois o DIN avalia a fragmentação do gDNA via microfluídica, garantindo amostras íntegras. As demais erram porque: A não mede integridade física, B indica DNA degradado, D ignora o tamanho molecular e E avalia apenas pureza química.",
+        "area": "Laboratório",
+        "difficulty": "difícil",
+        "subject": "Biologia, biologia molecular e genética",
+        "id": 1882
+    },
+    {
+        "text": "No fluxo de trabalho para Sequenciamento de Nova Geração (NGS) pela tecnologia Illumina, a presença de 'adapter dimers' (dímeros de adaptadores) é monitorada rigorosamente durante o controle de qualidade das bibliotecas. Qual é a principal consequência técnica dessa contaminação para o processo de sequenciamento?",
+        "options": {
+            "A": "Redução sistemática do Q-score médio por erros de incorporação.",
+            "B": "Consumo excessivo de clusters por sequências curtas sem inserto.",
+            "C": "Perda de diversidade de bases nos primeiros ciclos de leitura.",
+            "D": "Inibição química da DNA polimerase por adaptadores não ligados.",
+            "E": "Fragmentação inespecífica do DNA genômico durante a bridge PCR."
+        },
+        "correct": "B",
+        "explanation": "A alternativa B é a correta pois os dímeros de adaptadores, por serem moléculas menores, hibridizam e amplificam com maior eficiência na célula de fluxo, ocupando o espaço de leitura que seria destinado aos fragmentos de DNA genômico. As demais estão incorretas porque: A não altera a precisão química da enzima, C depende da complexidade das sequências iniciais, D não causa inibição da polimerase e E descreve processo cronologicamente impossível no fluxo.",
+        "area": "Laboratório",
+        "difficulty": "difícil",
+        "subject": "Biologia, biologia molecular e genética",
+        "id": 1883
+    },
+    {
+        "text": "No fluxo de trabalho de sequenciamento de nova geração (NGS), a etapa de controle de qualidade das bibliotecas finais é determinante para o sucesso do agrupamento (clustering) em plataformas Illumina. Qual combinação de dados permite o cálculo exato da molaridade da biblioteca para a normalização?",
+        "options": {
+            "A": "Absorbância em 260nm e a pureza avaliada pela razão 260/230.",
+            "B": "Concentração por fluorimetria e o tamanho médio de fragmentos.",
+            "C": "Valor de RIN acima de 8.0 e a concentração via espectrofotometria.",
+            "D": "Volume final recuperado e a presença de dímeros de adaptadores.",
+            "E": "Quantificação de DNA total e a concentração de sais residuais."
+        },
+        "correct": "B",
+        "explanation": "A B é a correta pois o cálculo da molaridade exige a concentração específica de DNA de fita dupla e a extensão média dos fragmentos para a normalização do pool. As demais erram porque: A é imprecisa por detectar contaminantes e DNA simples, C avalia integridade de RNA e não de bibliotecas, D não fornece a densidade de moléculas na amostra e E ignora o peso molecular médio dos fragmentos.",
+        "area": "Laboratório",
+        "difficulty": "difícil",
+        "subject": "Tecnologias laboratoriais em genômica (sequenciamento de nova geração - NGS, extração de DNA genômico, controle de qualidade, preparo de amostras)",
+        "id": 1884
+    },
+    {
+        "text": "Na preparação de bibliotecas de DNA para sequenciamento de nova geração (NGS) pela plataforma Illumina, após a fragmentação, o DNA passa pelos processos de reparo de extremidades (End Repair) e adição de uma base 'A' (A-tailing). Qual a finalidade técnica essencial da etapa de A-tailing?",
+        "options": {
+            "A": "Permitir a ligação de adaptadores com extremidade T-overhang.",
+            "B": "Evitar que os adaptadores sofram degradação por exonucleases 3'.",
+            "C": "Garantir que apenas fragmentos de DNA fita simples se liguem.",
+            "D": "Facilitar a hibridização do DNA com os primers de amplificação.",
+            "E": "Promover a circularização de fragmentos antes de gerar clusters."
+        },
+        "correct": "A",
+        "explanation": "A alternativa A é a correta pois a adição de 'A' em 3' permite o pareamento estável com o 'T' protuberante dos adaptadores comerciais, garantindo a ligação direcionada. As demais erram porque: B não confere proteção enzimática, C ignora a natureza dupla-fita, D precede a etapa de ponte e E aplica-se a outras tecnologias.",
+        "area": "Laboratório",
+        "difficulty": "difícil",
+        "subject": "Tecnologias laboratoriais em genômica (sequenciamento de nova geração - NGS, extração de DNA genômico, controle de qualidade, preparo de amostras)",
+        "id": 1885
+    },
+    {
+        "text": "No processo de preparação de bibliotecas para sequenciamento de nova geração (NGS), a etapa de purificação e seleção de tamanho utilizando esferas magnéticas (SPRI beads) é crítica. Considerando a relação entre a concentração de PEG/NaCl e o tamanho dos fragmentos de DNA capturados, qual afirmação descreve corretamente o princípio aplicado para otimizar o rendimento da biblioteca?",
+        "options": {
+            "A": "Menores razões de esferas/DNA favorecem a ligação de fragmentos curtos.",
+            "B": "Maiores razões de esferas/DNA excluem fragmentos de DNA de alto peso.",
+            "C": "Reduzir a concentração de PEG promove a precipitação de DNA genômico.",
+            "D": "Maiores razões de esferas/DNA permitem a captura de fragmentos menores.",
+            "E": "Aumentar o volume de etanol na lavagem inibe a ação das DNA ligases."
+        },
+        "correct": "D",
+        "explanation": "A alternativa D é correta pois o aumento da razão esferas/amostra eleva a concentração de PEG, permitindo que fragmentos menores percam solubilidade e se liguem às esferas. As demais erram porque: A e B invertem a lógica de exclusão por tamanho, C impede a precipitação por falta de agente aglomerante e E foca em inibição enzimática irrelevante à purificação.",
+        "area": "Laboratório",
+        "difficulty": "difícil",
+        "subject": "Tecnologias laboratoriais em genômica (sequenciamento de nova geração - NGS, extração de DNA genômico, controle de qualidade, preparo de amostras)",
+        "id": 1886
+    },
+    {
+        "text": "No preparo de bibliotecas para Sequenciamento de Nova Geração (NGS), o aumento indesejado na taxa de duplicatas de PCR (PCR duplication) está diretamente relacionado a qual fator técnico?",
+        "options": {
+            "A": "Uso excessivo de ciclos térmicos na etapa de enriquecimento.",
+            "B": "Armazenamento prolongado do DNA extraído a -20 graus Celsius.",
+            "C": "Aplicação de buffers de lavagem com baixa concentração salina.",
+            "D": "Escolha de adaptadores de sequenciamento com índices curtos.",
+            "E": "Realização da etapa de fragmentação em temperaturas elevadas."
+        },
+        "correct": "A",
+        "explanation": "A alternativa A está correta pois o excesso de ciclos de PCR satura a reação e gera cópias idênticas dos mesmos fragmentos, reduzindo a complexidade da biblioteca. As demais falham porque: B afeta apenas a integridade química, C prejudica a purificação das pérolas, D impacta apenas a demultiplexação e E altera o tamanho dos fragmentos.",
+        "area": "Laboratório",
+        "difficulty": "difícil",
+        "subject": "Biologia, biologia molecular e genética",
+        "id": 1887
+    },
+    {
+        "text": "No contexto do preparo de bibliotecas genômicas por tagmentação (baseada em transposases), a etapa de quantificação inicial do DNA é crucial. Qual procedimento assegura a acurácia necessária para o sucesso desse protocolo?",
+        "options": {
+            "A": "A aplicação da espectrofotometria UV para detectar contaminantes.",
+            "B": "A quantificação por fluorometria para determinar a massa de dsDNA real.",
+            "C": "A seleção de fragmentos menores que 100pb para otimizar os índices.",
+            "D": "A obtenção de um RIN superior a 8.0 para garantir a estabilidade.",
+            "E": "A incubação a 65°C para acelerar a ligação física dos adaptadores."
+        },
+        "correct": "B",
+        "explanation": "A resposta B é a correta pois a tagmentação exige proporção estequiométrica exata entre transposase e dsDNA, o que demanda a especificidade da fluorometria. As demais erram porque: A não diferencia os tipos de ácidos nucleicos; C indica degradação excessiva do DNA genômico; D é um parâmetro exclusivo para análise de RNA e E inativa a enzima antes da fragmentação adequada.",
+        "area": "Laboratório",
+        "difficulty": "difícil",
+        "subject": "Tecnologias laboratoriais em genômica (sequenciamento de nova geração - NGS, extração de DNA genômico, controle de qualidade, preparo de amostras)",
+        "id": 1888
+    },
+    {
+        "text": "Em pesquisas genômicas multicêntricas conduzidas no Brasil, como deve ser processada a aprovação ética para garantir a conformidade com as normas do Conselho Nacional de Saúde?",
+        "options": {
+            "A": "Aprovação prévia pelo sistema CEP/CONEP em todos os centros.",
+            "B": "Validação exclusiva pelo comitê de ética do centro coordenador.",
+            "C": "Utilização de Termo de Consentimento único sem adaptação local.",
+            "D": "Armazenamento de DNA em biobancos sem autorização do doador.",
+            "E": "Isenção de registro na CONEP para estudos de genômica humana."
+        },
+        "correct": "A",
+        "explanation": "A alternativa A está correta pois estudos multicêntricos exigem aprovação do sistema CEP/CONEP em todas as instituições participantes para zelar pela integridade dos sujeitos. As demais estão incorretas porque: B fere a autonomia dos comitês locais; C ignora particularidades regionais do consentimento; D viola regras de armazenamento de material genético; E desconsidera a obrigatoriedade de registro em pesquisas humanas.",
+        "area": "Laboratório",
+        "difficulty": "médio",
+        "subject": "Ética em pesquisa e noções de estudos multicêntricos",
+        "id": 1889
+    },
+    {
+        "text": "No contexto da análise de dados de sequenciamento de nova geração (NGS), qual software é amplamente reconhecido como o padrão para a identificação de variantes (variant calling) em genomas humanos?",
+        "options": {
+            "A": "O software GATK (Genome Analysis Toolkit)",
+            "B": "O algoritmo BLAST (Local Alignment Tool)",
+            "C": "O sistema PyMOL (Molecular Viewer Tool)",
+            "D": "O pacote Cytoscape (Network Visualizer)",
+            "E": "O programa MEGA (Evolutionary Genetics)"
+        },
+        "correct": "A",
+        "explanation": "A alternativa A está correta pois o GATK é o padrão ouro para identificação de variantes genômicas em larga escala. As demais erram porque: B foca em alinhamento local de sequências, C visualiza estruturas moleculares tridimensionais, D analisa redes de interações biológicas e E foca em análises evolutivas filogenéticas.",
+        "area": "Bioinformática",
+        "difficulty": "fácil",
+        "subject": "Bioinformática e análise genômica",
+        "id": 1890
+    },
+    {
+        "text": "No contexto do processamento de amostras para o Genoma SUS, a manutenção da integridade dos dados genômicos e a segurança da equipe dependem da adesão rigorosa a protocolos de qualidade e biossegurança. Qual das seguintes práticas é essencial para evitar a contaminação cruzada e garantir a validade dos resultados em um laboratório de biologia molecular?",
+        "options": {
+            "A": "Calibração de micropipetas e segregação de áreas pré e pós-PCR.",
+            "B": "Mistura de reagentes e amostras de DNA no mesmo fluxo laminar.",
+            "C": "Uso de jalecos de algodão na área de extração sem proteção extra.",
+            "D": "Higienização de bancadas apenas com água destilada e detergente.",
+            "E": "Descarte de ponteiras contaminadas em sacos plásticos não selados."
+        },
+        "correct": "A",
+        "explanation": "A alternativa A é a correta pois a calibração garante precisão e a segregação de áreas previne contaminação por amplicons. As demais erram porque: B mistura reagentes e amostras gerando contaminação; C oferece proteção biológica insuficiente contra aerossóis; D não elimina ácidos nucleicos das bancadas; E exige selagem e descarte em recipientes específicos.",
+        "area": "Laboratório",
+        "difficulty": "médio",
+        "subject": "Boas Práticas de Laboratório (BPL), biossegurança e controle de qualidade",
+        "id": 1891
+    },
+    {
+        "text": "No preparo de bibliotecas para Sequenciamento de Nova Geração (NGS) no contexto de projetos genômicos populacionais, a etapa de fragmentação é crítica. Sobre a técnica de tagmentação (fragmentação enzimática via transposases) em comparação à fragmentação mecânica por ultrassom, assinale a afirmação correta:",
+        "options": {
+            "A": "A tagmentação exige maiores concentrações iniciais de DNA genômico.",
+            "B": "A fragmentação mecânica é mais sensível a resíduos químicos de extração.",
+            "C": "A tagmentação integra simultaneamente fragmentação e ligação de adaptadores.",
+            "D": "O ultrassom dispensa a etapa de reparo de extremidades no protocolo.",
+            "E": "A tagmentação garante cobertura uniforme em regiões de alto conteúdo GC."
+        },
+        "correct": "C",
+        "explanation": "A alternativa C está correta pois a tagmentação utiliza transposases para clivar o DNA e inserir adaptadores simultaneamente, agilizando o preparo da biblioteca. As demais erram porque: A demanda pouco material de entrada, B é resiliente a contaminantes químicos, D necessita de reparo enzimático posterior e E exibe forte viés em regiões GC.",
+        "area": "Laboratório",
+        "difficulty": "difícil",
+        "subject": "Biologia, biologia molecular e genética",
+        "id": 1892
+    },
+    {
+        "text": "No contexto de um laboratório de genômica que realiza Sequenciamento de Nova Geração (NGS), a prevenção de contaminação cruzada é vital para a integridade dos dados e segurança dos analistas. Qual medida de Boas Práticas de Laboratório (BPL) é indispensável para mitigar o risco de contaminação por amplicons em áreas de pré-amplificação?",
+        "options": {
+            "A": "Implementar fluxo unidirecional de trabalho da área limpa para a suja.",
+            "B": "Utilizar autoclaves de grande porte dentro das salas de extração de DNA.",
+            "C": "Compartilhar conjuntos de pipetas entre salas de pré-PCR e de pós-PCR.",
+            "D": "Armazenar todos os reagentes e amostras em um único freezer de -80°C.",
+            "E": "Processar as amostras em bancadas abertas sem o uso de filtros HEPA."
+        },
+        "correct": "A",
+        "explanation": "A alternativa A está correta pois o fluxo unidirecional impede que amplicons contaminem amostras virgens, mantendo a integridade analítica conforme as BPL. As demais erram porque: B gera calor excessivo e aerossóis, C causa contaminação cruzada severa, D ignora riscos de degradação cruzada e E desconsidera barreiras físicas obrigatórias.",
+        "area": "Laboratório",
+        "difficulty": "médio",
+        "subject": "Boas Práticas de Laboratório (BPL), biossegurança e controle de qualidade",
+        "id": 1893
+    },
+    {
+        "text": "No fluxo de análise de variantes germinativas seguindo as práticas recomendadas do GATK, qual etapa é essencial após o alinhamento das leituras e antes da chamada de variantes?",
+        "options": {
+            "A": "Marcação de duplicatas e recalibração de bases (BQSR).",
+            "B": "Indexação de genoma e criação do dicionário de contigs.",
+            "C": "Filtragem de variantes por profundidade e qualidade.",
+            "D": "Conversão de arquivos FASTQ para o formato binário CRAM.",
+            "E": "Montagem de novo para reconstrução de novos haplótipos."
+        },
+        "correct": "A",
+        "explanation": "A alternativa A é a correta pois a marcação de duplicatas e o BQSR preparam o BAM minimizando artefatos técnicos antes do variant calling. As demais erram porque: B ocorre antes do alinhamento, C ocorre após o calling, D é etapa de armazenamento e E foca em montagens genômicas completas.",
+        "area": "Bioinformática",
+        "difficulty": "médio",
+        "subject": "Bioinformática e análise genômica",
+        "id": 1894
+    },
+    {
+        "text": "No contexto de um laboratório de sequenciamento de nova geração (NGS) integrado ao projeto Genoma SUS, a manutenção da qualidade e a prevenção de contaminantes são pilares das Boas Práticas de Laboratório (BPL). Qual medida operacional é indispensável para evitar a contaminação cruzada de amostras?",
+        "options": {
+            "A": "Implementação de fluxo unidirecional entre áreas pré e pós-PCR.",
+            "B": "Armazenamento conjunto de reagentes puros e amostras de DNA.",
+            "C": "Calibração de equipamentos sem a necessidade de rastreabilidade.",
+            "D": "Descarte de resíduos biológicos infectantes em lixo comum selado.",
+            "E": "Uso facultativo de Equipamentos de Proteção Individual em BPL."
+        },
+        "correct": "A",
+        "explanation": "A alternativa A é a correta pois o fluxo unidirecional impede a contaminação cruzada por amplicons em ambientes de NGS. As demais erram porque: B favorece contaminação de insumos limpos, C viola requisitos de rastreabilidade metrológica, D descumpre normas de biossegurança para descartes e E negligencia segurança obrigatória do analista.",
+        "area": "Laboratório",
+        "difficulty": "médio",
+        "subject": "Boas Práticas de Laboratório (BPL), biossegurança e controle de qualidade",
+        "id": 1895
+    },
+    {
+        "text": "No âmbito de estudos multicêntricos do Genoma SUS, o processo de aprovação ética e a gestão de biobancos devem seguir as normas do sistema CEP/CONEP. Considerando a regulamentação brasileira vigente para pesquisas genômicas e a segurança de dados, assinale a alternativa correta:",
+        "options": {
+            "A": "O centro coordenador centraliza a aprovação, dispensando os locais.",
+            "B": "O TCLE para biobancos deve ter validade indeterminada e genérica.",
+            "C": "Cada instituição participante requer aprovação ética do seu CEP local.",
+            "D": "A CONEP avalia apenas estudos com financiamento externo ao governo.",
+            "E": "Dados genômicos são considerados não sensíveis após a criptografia."
+        },
+        "correct": "C",
+        "explanation": "A alternativa C está correta pois a norma brasileira exige aprovação individual de cada centro participante para garantir a responsabilidade ética local. As demais erram porque: A fere a autonomia de análise dos centros locais, B veda o uso de consentimento genérico indeterminado, D obriga análise da CONEP em áreas temáticas especiais e E classifica material genético como dado pessoal sensível.",
+        "area": "Laboratório",
+        "difficulty": "difícil",
+        "subject": "Ética em pesquisa e noções de estudos multicêntricos",
+        "id": 1896
+    },
+    {
+        "text": "No contexto do pipeline GATK Best Practices para análise de variantes germinativas, qual etapa é especificamente projetada para corrigir erros sistemáticos nos scores de qualidade atribuídos pelo sequenciador?",
+        "options": {
+            "A": "MarkDuplicates para remover redundância de PCR.",
+            "B": "Base Quality Score Recalibration (BQSR).",
+            "C": "HaplotypeCaller para a detecção de variantes.",
+            "D": "Variant Quality Score Recalibration (VQSR).",
+            "E": "Indexação de referência usando o algoritmo BWA."
+        },
+        "correct": "B",
+        "explanation": "A alternativa B é a correta, pois o BQSR utiliza modelos estatísticos para ajustar os scores de qualidade baseados em erros sistemáticos do sequenciador. As demais estão incorretas porque: A foca em artefatos de amplificação; C realiza a identificação de polimorfismos; D filtra variantes em nível de conjunto de dados; E prepara o genoma para o alinhamento.",
+        "area": "Bioinformática",
+        "difficulty": "médio",
+        "subject": "Bioinformática e análise genômica",
+        "id": 1897
+    },
+    {
+        "text": "No fluxo de bioinformática do Genoma SUS, qual ferramenta é fundamental para a manipulação, indexação e conversão de arquivos de alinhamento de sequências nos formatos SAM e BAM?",
+        "options": {
+            "A": "O programa Bowtie2",
+            "B": "O programa FastQC",
+            "C": "O programa SAMtools",
+            "D": "O programa BWA-MEM",
+            "E": "O programa BLASTn"
+        },
+        "correct": "C",
+        "explanation": "O software SAMtools é a resposta correta por ser o padrão para pós-processamento de alinhamentos SAM/BAM. As demais erram porque: A realiza apenas o alinhamento inicial, B foca no controle de qualidade das sequências, D é um alinhador de sequências curtas e E compara sequências contra bancos de dados.",
+        "area": "Bioinformática",
+        "difficulty": "fácil",
+        "subject": "Programação e ferramentas computacionais",
+        "id": 1898
+    },
+    {
+        "text": "No contexto do processamento de amostras genômicas para o projeto Genoma SUS, qual conduta reflete a aplicação conjunta de princípios de Biossegurança e Boas Práticas Laboratoriais (BPL)?",
+        "options": {
+            "A": "Segregação de áreas de pré e pós-PCR com fluxo unidirecional.",
+            "B": "Uso de cabines de segurança biológica apenas para amostras de RNA.",
+            "C": "Registro de desvios técnicos apenas em casos de perda da amostra.",
+            "D": "Higienização de bancadas com álcool 70% apenas ao final do turno.",
+            "E": "Descarte de ponteiras contaminadas em sacos plásticos sem vedação."
+        },
+        "correct": "A",
+        "explanation": "A alternativa A é a correta pois o estabelecimento de fluxo unidirecional e a separação de áreas previnem a contaminação cruzada por amplicons em ensaios moleculares de alta sensibilidade. As demais erram porque: B restringe proteção necessária a todos biológicos, C ignora registro mandatório de qualquer inconformidade técnica, D negligencia limpeza antisséptica antes e durante o processo e E viola normas de manejo seguro de resíduos perfurocortantes.",
+        "area": "Laboratório",
+        "difficulty": "médio",
+        "subject": "Boas Práticas de Laboratório (BPL), biossegurança e controle de qualidade",
+        "id": 1899
+    },
+    {
+        "text": "No fluxo de análise de dados genômicos do Genoma SUS, qual ferramenta é fundamental para a manipulação, ordenação e indexação de arquivos de alinhamento nos formatos SAM e BAM?",
+        "options": {
+            "A": "BWA: software focado no alinhamento de leituras contra genomas de referência.",
+            "B": "FastQC: ferramenta para análise do controle de qualidade de arquivos FASTQ.",
+            "C": "SAMtools: conjunto de programas para manipular arquivos nos formatos SAM e BAM.",
+            "D": "GATK: plataforma robusta para a identificação de variantes em dados genômicos.",
+            "E": "BLAST: sistema para busca de similaridades entre sequências em bancos de dados."
+        },
+        "correct": "C",
+        "explanation": "A alternativa C está correta pois o SAMtools é o pacote essencial para gerenciar formatos de alinhamento binários. As demais erram porque: A foca no alinhamento, B verifica qualidade básica, D detecta variantes genômicas e E compara sequências primárias.",
+        "area": "Bioinformática",
+        "difficulty": "fácil",
+        "subject": "Programação e ferramentas computacionais",
+        "id": 1900
+    },
+    {
+        "text": "Em laboratórios de genômica integrados ao Genoma SUS, a conformidade com as Boas Práticas de Laboratório (BPL) e biossegurança é crucial. Qual medida é fundamental para evitar a contaminação cruzada e garantir a validade dos resultados?",
+        "options": {
+            "A": "Descartar resíduos biológicos em recipientes de lixo comum não sinalizado.",
+            "B": "Autoclavar todos os reagentes químicos e kits de sequenciamento antes do uso.",
+            "C": "Segregar o fluxo de trabalho entre áreas pré e pós-amplificação de ácidos.",
+            "D": "Armazenar reagentes e amostras clínicas no mesmo equipamento de refrigeração.",
+            "E": "Dispensar o uso de proteção individual ao manipular bibliotecas purificadas."
+        },
+        "correct": "C",
+        "explanation": "C é a correta pois a segregação física e de fluxo evita a contaminação cruzada por amplicons, essencial na garantia da qualidade e biossegurança. As demais erram porque: A viola normas de descarte biológico, B degrada componentes enzimáticos sensíveis, D permite contaminação cruzada química e E desrespeita protocolos de biossegurança.",
+        "area": "Laboratório",
+        "difficulty": "médio",
+        "subject": "Boas Práticas de Laboratório (BPL), biossegurança e controle de qualidade",
+        "id": 1901
+    },
+    {
+        "text": "No processamento de dados de sequenciamento de nova geração (NGS), qual ferramenta é essencial para manipular e converter arquivos nos formatos SAM e BAM?",
+        "options": {
+            "A": "SAMtools: manipulação e processamento de alinhamentos.",
+            "B": "BLAST: busca por similaridade local entre sequências.",
+            "C": "Bowtie2: alinhamento ultrarrápido para leituras curtas.",
+            "D": "FastQC: controle de qualidade de leituras brutas FASTQ.",
+            "E": "BWA: mapeador de sequências contra genomas referência."
+        },
+        "correct": "A",
+        "explanation": "A alternativa A está correta pois o SAMtools é o conjunto de ferramentas padrão para ler, filtrar e indexar alinhamentos de DNA em formatos SAM/BAM. As demais erram porque: B foca em busca de similaridade, C realiza apenas o alinhamento, D avalia qualidade de leituras brutas e E mapeia sequências no genoma.",
+        "area": "Bioinformática",
+        "difficulty": "fácil",
+        "subject": "Programação e ferramentas computacionais",
+        "id": 1902
+    },
+    {
+        "text": "No contexto de análise genômica para detecção de variantes germinativas via GATK Best Practices, qual procedimento técnico é crucial para aumentar a precisão na chamada de variantes em regiões caracterizadas por indels e micro-repetições?",
+        "options": {
+            "A": "Realinhamento local via montagem de grafos de De Bruijn.",
+            "B": "Calibração de escores de qualidade via machine learning.",
+            "C": "Indexação do genoma de referência via Burrows-Wheeler.",
+            "D": "Normalização de variantes para representação canônica.",
+            "E": "Filtragem de artefatos em regiões com alto conteúdo GC."
+        },
+        "correct": "A",
+        "explanation": "A alternativa A está correta pois o GATK HaplotypeCaller realiza a montagem de novo local para identificar haplótipos reais em vez de confiar apenas em alinhamentos globais. As demais erram porque: B calibra qualidade de bases, C indexa o genoma, D padroniza o arquivo VCF e E trata vieses de composição.",
+        "area": "Bioinformática",
+        "difficulty": "difícil",
+        "subject": "Bioinformática e análise genômica",
+        "id": 1903
+    },
+    {
+        "text": "No contexto do projeto Genoma SUS, o processamento de dados de sequenciamento de nova geração (NGS) segue fluxos padronizados. Qual ferramenta e formato de arquivo são utilizados para a etapa de identificação de variantes (variant calling) seguindo as boas práticas do GATK?",
+        "options": {
+            "A": "SAMtools para a conversão de FASTQ em arquivos BAM indexados.",
+            "B": "BCFtools para a indexação de genomas de referência tipo FASTA.",
+            "C": "HaplotypeCaller para a geração de arquivos VCF a partir de BAM.",
+            "D": "Picard Tools para a visualização de variantes em tempo real.",
+            "E": "Bowtie2 para a filtragem de variantes em arquivos CRAM brutos."
+        },
+        "correct": "C",
+        "explanation": "C é a correta pois o HaplotypeCaller do GATK identifica variantes produzindo arquivos VCF. As demais erram porque: A foca em manipulação de alinhamentos, B manipula VCFs/BCFs, D gerencia metadados/arquivos e E realiza apenas alinhamento inicial.",
+        "area": "Bioinformática",
+        "difficulty": "médio",
+        "subject": "Bioinformática e análise genômica",
+        "id": 1904
+    },
+    {
+        "text": "No fluxo de análise de bioinformática para o Genoma SUS, qual é a principal utilidade da ferramenta SAMtools?",
+        "options": {
+            "A": "Manipular e converter formatos de alinhamento como SAM e BAM.",
+            "B": "Realizar a extração física de DNA de amostras de sangue total.",
+            "C": "Analisar dados de expressão proteica via Western Blotting.",
+            "D": "Executar a montagem de novo de genomas bacterianos complexos.",
+            "E": "Visualizar estruturas terciárias de proteínas em alta resolução."
+        },
+        "correct": "A",
+        "explanation": "A alternativa A está correta porque o SAMtools é essencial para processar, ordenar e converter arquivos resultantes do alinhamento de sequências de DNA. As demais estão incorretas pois: B é um procedimento laboratorial, C foca em proteômica, D realiza montagem e E modela proteínas.",
+        "area": "Bioinformática",
+        "difficulty": "fácil",
+        "subject": "Bioinformática e análise genômica",
+        "id": 1905
+    },
+    {
+        "text": "No contexto do processamento de dados de sequenciamento de nova geração (NGS), qual é a principal função da ferramenta SAMtools na rotina de bioinformática?",
+        "options": {
+            "A": "Realizar a anotação funcional de variantes genéticas raras.",
+            "B": "Manipular e converter arquivos de alinhamento SAM e BAM.",
+            "C": "Executar a montagem de novo de genomas bacterianos curtos.",
+            "D": "Visualizar redes de interação proteína-proteína complexas.",
+            "E": "Prever a estrutura terciária de proteínas via inteligência."
+        },
+        "correct": "B",
+        "explanation": "A alternativa B é a correta pois o SAMtools é fundamental para indexar, visualizar e processar alinhamentos em formatos binários eficientes. As demais erram porque: a anotação funcional requer ferramentas como VEP ou SnpEff; montagem de novo utiliza softwares específicos como SPAdes ou Velvet; redes de proteínas são analisadas no Cytoscape ou STRING; predição estrutural é tarefa de ferramentas como AlphaFold.",
+        "area": "Bioinformática",
+        "difficulty": "fácil",
+        "subject": "Programação e ferramentas computacionais",
+        "id": 1906
+    },
+    {
+        "text": "Ao implementar o pipeline GATK Best Practices para o processamento de centenas de exomas no Genoma SUS, qual estratégia é recomendada para solucionar o problema do 'N+1' e assegurar a detecção robusta de variantes raras em larga escala?",
+        "options": {
+            "A": "Chamada individual com posterior união simples de arquivos VCF.",
+            "B": "Uso de HaplotypeCaller em modo GVCF seguido de Joint Genotyping.",
+            "C": "Alinhamento múltiplo simultâneo via Burrows-Wheeler Transform.",
+            "D": "Filtragem por Hard Filtering antes da consolidação de amostras gVCF.",
+            "E": "Re-calibração de bases aplicada apenas após o Variant Recalibrator."
+        },
+        "correct": "B",
+        "explanation": "A alternativa B é a correta pois o modo GVCF permite adicionar novas amostras sem reprocessar as antigas, preservando informações de cobertura em locais não-variantes essenciais para o Joint Genotyping. As demais erram porque: A ignora sítios de referência; C foca exclusivamente em alinhamento; D inverte a ordem lógica da filtragem; E atrasa erroneamente o pré-processamento das bases.",
+        "area": "Bioinformática",
+        "difficulty": "difícil",
+        "subject": "Bioinformática e análise genômica",
+        "id": 1907
+    },
+    {
+        "text": "Em estudos genômicos multicêntricos, como os realizados pelo Genoma SUS, qual diretriz é fundamental para conciliar a eficiência operacional com o rigor ético exigido pela legislação brasileira?",
+        "options": {
+            "A": "Obter aprovação ética apenas no centro coordenador do projeto.",
+            "B": "Dispensar o TCLE em amostras vindas de bancos de dados públicos.",
+            "C": "Padronizar protocolos e submeter ao sistema de ética CEP/CONEP.",
+            "D": "Compartilhar dados identificados para agilizar o diagnóstico.",
+            "E": "Priorizar o sigilo das instituições sobre a autonomia do sujeito."
+        },
+        "correct": "C",
+        "explanation": "A alternativa C está correta pois a padronização técnica aliada à aprovação pelo sistema CEP/CONEP garante a validade científica e o respeito aos direitos dos participantes. As demais erram porque: A omite a responsabilidade ética de cada centro, B ignora exigências de consentimento para dados genéticos, D compromete a privacidade com dados identificados e E fere o princípio da autonomia individual.",
+        "area": "Laboratório",
+        "difficulty": "médio",
+        "subject": "Ética em pesquisa e noções de estudos multicêntricos",
+        "id": 1908
+    },
+    {
+        "text": "Em pipelines de bioinformática, qual ferramenta é amplamente utilizada para a manipulação, ordenação e indexação de arquivos de alinhamento em formato BAM?",
+        "options": {
+            "A": "FastQC para controle de qualidade bruto",
+            "B": "BWA para o mapeamento das leituras",
+            "C": "SAMtools para processamento de BAM",
+            "D": "GATK para identificação de variantes",
+            "E": "MultiQC para relatórios agregados"
+        },
+        "correct": "C",
+        "explanation": "O SAMtools é a biblioteca fundamental para manipulação de arquivos SAM/BAM, permitindo operações essenciais como ordenação e indexação de alinhamentos. As outras opções estão incorretas pois: A foca em qualidade de leituras brutas, B realiza o alinhamento inicial contra a referência, D é voltado para a detecção de polimorfismos e E consolida métricas de múltiplas ferramentas.",
+        "area": "Bioinformática",
+        "difficulty": "fácil",
+        "subject": "Programação e ferramentas computacionais",
+        "id": 1909
+    },
+    {
+        "text": "No preparo de bibliotecas para sequenciamento de nova geração (NGS), a seleção de tamanho com esferas magnéticas (SPRI) é essencial. Qual o efeito direto de reduzir a proporção volume de esferas/volume de DNA de 1.8x para 0.5x?",
+        "options": {
+            "A": "Promove a recuperação seletiva de fragmentos de DNA pequenos e curtos.",
+            "B": "Aumenta a taxa de sucesso da ligação de adaptadores em DNA longo.",
+            "C": "Favorece a ligação e purificação de fragmentos de DNA de maior tamanho.",
+            "D": "Garante a eliminação absoluta de dímeros de adaptadores da amostra.",
+            "E": "Promove a inibição da DNA polimerase em ciclos de PCR posteriores."
+        },
+        "correct": "C",
+        "explanation": "A alternativa C está correta pois a redução da concentração de PEG e sais ao diminuir a proporção de esferas impede a precipitação de fragmentos pequenos, mantendo apenas os de maior peso molecular. As demais erram porque: A recupera fragmentos grandes, B não altera cinética de ligação, D não remove resíduos completamente e E não tem efeito inibitório enzimático.",
+        "area": "Laboratório",
+        "difficulty": "difícil",
+        "subject": "Biologia, biologia molecular e genética",
+        "id": 1910
+    },
+    {
+        "text": "No fluxo de análise de bioinformática para processamento de sequenciamento de nova geração, qual ferramenta é amplamente utilizada para filtrar e manipular arquivos de alinhamento no formato BAM?",
+        "options": {
+            "A": "BCFtools para realizar a chamada de variantes genômicas.",
+            "B": "GATK para o controle de qualidade inicial das leituras.",
+            "C": "SAMtools para processar arquivos de alinhamento tipo BAM.",
+            "D": "FastQC para o alinhamento das leituras contra o genoma.",
+            "E": "MultiQC para indexar arquivos de referência tipo FASTA."
+        },
+        "correct": "C",
+        "explanation": "A alternativa C está correta pois o SAMtools é a ferramenta essencial para manipulação e filtragem de arquivos de alinhamento. As demais erram porque: A identifica variantes, B realiza pré-processamento genômico, D avalia qualidade técnica e E agrupa múltiplos relatórios.",
+        "area": "Bioinformática",
+        "difficulty": "fácil",
+        "subject": "Bioinformática e análise genômica",
+        "id": 1911
+    },
+    {
+        "text": "No fluxo de análise de bioinformática para sequenciamento de nova geração (NGS), qual formato de arquivo é utilizado especificamente para registrar as variações genéticas identificadas em relação a uma referência?",
+        "options": {
+            "A": "O arquivo FASTQ, que armazena leituras brutas e qualidades.",
+            "B": "O arquivo BAM, que armazena os dados de alinhamento binário.",
+            "C": "O arquivo VCF, que registra posições de variantes e genótipos.",
+            "D": "O arquivo FASTA, que representa sequências de referência puras.",
+            "E": "O arquivo SAM, que contém mapeamentos em formato de texto."
+        },
+        "correct": "C",
+        "explanation": "A alternativa C está correta pois o VCF é o formato padrão para representar variantes genéticas e genótipos em bioinformática. As demais estão incorretas porque: A armazena apenas leituras brutas e qualidades; B é o formato binário para alinhamentos mapeados; D foca em sequências puras de nucleotídeos; e E é a versão texto do mapeamento.",
+        "area": "Bioinformática",
+        "difficulty": "fácil",
+        "subject": "Bioinformática e análise genômica",
+        "id": 1912
+    },
+    {
+        "text": "No processamento de dados de sequenciamento em larga escala, o pacote SAMtools é fundamental para a manipulação de alinhamentos. Qual comando dessa ferramenta é especificamente utilizado para converter um arquivo BAM (binário) em um formato SAM (texto) legível para o usuário?",
+        "options": {
+            "A": "samtools view",
+            "B": "samtools sort",
+            "C": "samtools index",
+            "D": "samtools flagstat",
+            "E": "samtools merge"
+        },
+        "correct": "A",
+        "explanation": "O comando view é a função padrão do SAMtools para visualizar, filtrar e converter alinhamentos entre formatos binários e texto. As demais alternativas estão incorretas pois: B apenas ordena alinhamentos, C gera índices de acesso, D extrai estatísticas das flags e E unifica múltiplos arquivos.",
+        "area": "Bioinformática",
+        "difficulty": "fácil",
+        "subject": "Programação e ferramentas computacionais",
+        "id": 1913
+    },
+    {
+        "text": "No contexto do projeto Genoma SUS, ao realizar o processamento de centenas de genomas completos (WGS) seguindo as recomendações do GATK, qual abordagem de controle de qualidade é mais robusta para distinguir variantes biológicas reais de artefatos técnicos de sequenciamento?",
+        "options": {
+            "A": "VQSR por modelagem de mistura gaussiana sobre scores de anotação.",
+            "B": "Hard filtering baseado exclusivamente em thresholds fixos de DP e QD.",
+            "C": "Filtro bayesiano aplicado apenas em regiões de baixa complexidade.",
+            "D": "Alinhamento local via Smith-Waterman para remoção de erros de base.",
+            "E": "Mapeamento de leituras contra referência via BWA-MEM sem indels."
+        },
+        "correct": "A",
+        "explanation": "A alternativa A é correta pois o VQSR utiliza aprendizado de máquina para modelar a distribuição de variantes em grandes coortes. B erra pois thresholds fixos ignoram a covariância das anotações. C falha pois limita o filtro a regiões específicas do genoma. D é incorreta pois Smith-Waterman é algoritmo de alinhamento, não filtro. E está errada pois o alinhamento não substitui a filtragem estatística.",
+        "area": "Bioinformática",
+        "difficulty": "difícil",
+        "subject": "Bioinformática e análise genômica",
+        "id": 1914
+    },
+    {
+        "text": "No processamento de dados de sequenciamento genômico, qual ferramenta é essencial para a manipulação, ordenação e indexação de arquivos nos formatos SAM e BAM?",
+        "options": {
+            "A": "BLAST+ para buscas de similaridade local.",
+            "B": "SAMtools para processar os alinhamentos.",
+            "C": "FastQC para verificar qualidade das reads.",
+            "D": "Trimmomatic para filtrar as sequências.",
+            "E": "MultiQC para a consolidação de métricas."
+        },
+        "correct": "B",
+        "explanation": "A alternativa B está correta pois o SAMtools permite manipular e indexar arquivos de mapeamento SAM e BAM. As demais erram porque: A foca em similaridade local, C checa qualidade inicial, D limpa dados brutos e E agrupa estatísticas.",
+        "area": "Bioinformática",
+        "difficulty": "fácil",
+        "subject": "Programação e ferramentas computacionais",
+        "id": 1915
+    },
+    {
+        "text": "Durante o preparo de bibliotecas para sequenciamento em larga escala (NGS) utilizando células de fluxo padronizadas, qual estratégia é fundamental para mitigar o fenômeno de 'index hopping' e assegurar a acurácia da demultiplexação?",
+        "options": {
+            "A": "Uso de unique dual-indexes e remoção de adaptadores livres.",
+            "B": "Quantificação por espectrofotometria para pooling equimolar.",
+            "C": "Adição de excesso de PhiX para aumentar diversidade de bases.",
+            "D": "Aumento de ciclos de PCR para garantir maior massa de DNA.",
+            "E": "Desnaturação com NaOH em altas temperaturas para estabilidade."
+        },
+        "correct": "A",
+        "explanation": "A alternativa A está correta pois UDIs mitigam o impacto do index hopping e a limpeza de adaptadores remove substratos para recombinação em células de fluxo padronizadas. As demais erram porque: B carece de sensibilidade e especificidade molecular, C não atua na prevenção de troca de índices, D favorece a formação de duplicatas e quimeras e E descreve apenas a desnaturação convencional das bibliotecas.",
+        "area": "Laboratório",
+        "difficulty": "difícil",
+        "subject": "Tecnologias laboratoriais em genômica (sequenciamento de nova geração - NGS, extração de DNA genômico, controle de qualidade, preparo de amostras)",
+        "id": 1916
+    },
+    {
+        "text": "No contexto de um laboratório de genômica voltado ao sequenciamento de nova geração (NGS), qual prática é fundamental para garantir a biossegurança e prevenir a contaminação cruzada entre as etapas do processo?",
+        "options": {
+            "A": "Utilizar fluxo unidirecional das áreas pré-PCR para áreas pós-PCR.",
+            "B": "Descartar ponteiras com filtro diretamente em recipientes de lixo comum.",
+            "C": "Compartilhar pipetas automáticas entre salas de extração e amplificação.",
+            "D": "Armazenar reagentes químicos inflamáveis em geladeiras sem ventilação.",
+            "E": "Manipular amostras biológicas sem luvas dentro de cabines de segurança."
+        },
+        "correct": "A",
+        "explanation": "A alternativa A está correta pois o fluxo unidirecional evita a contaminação por amplicons em áreas limpas. As demais erram porque: B exige descarte biológico, C causa contaminação cruzada, D oferece risco de explosão e E viola normas de biossegurança.",
+        "area": "Laboratório",
+        "difficulty": "médio",
+        "subject": "Boas Práticas de Laboratório (BPL), biossegurança e controle de qualidade",
+        "id": 1917
+    },
+    {
+        "text": "No processamento de dados genômicos via GATK, o filtro FisherStrand (FS) é utilizado para identificar o viés de fita (Strand Bias). Qual a interpretação correta de um valor elevado de FS em um sítio de variante?",
+        "options": {
+            "A": "Indica maior probabilidade de ser um erro sistemático de sequenciamento.",
+            "B": "Sugere alta fidelidade da polimerase durante a síntese da fita complementar.",
+            "C": "Reflete a eficiência superior do mapeamento de leituras curtas no genoma.",
+            "D": "Representa a uniformidade de cobertura entre os alelos paterno e materno.",
+            "E": "Melhora a precisão na detecção de variantes estruturais em regiões repetitivas."
+        },
+        "correct": "A",
+        "explanation": "A alternativa A está correta pois valores elevados de FS indicam que a variante aparece desproporcionalmente em apenas uma das fitas de DNA, sinalizando prováveis artefatos técnicos de sequenciamento. As demais estão incorretas pois: B avalia a performance enzimática; C aborda a qualidade do mapeamento; D refere-se à proporção alélica; E trata de rearranjos estruturais complexos.",
+        "area": "Bioinformática",
+        "difficulty": "difícil",
+        "subject": "Bioinformática e análise genômica",
+        "id": 1918
+    },
+    {
+        "text": "No processamento de dados de Sequenciamento de Nova Geração (NGS), qual formato de arquivo é projetado especificamente para tabular variantes genômicas e suas respectivas anotações de qualidade?",
+        "options": {
+            "A": "FASTQ, usado para armazenar leituras brutas e scores de qualidade.",
+            "B": "SAM, formato de texto que descreve o alinhamento das sequências.",
+            "C": "BAM, versão binária comprimida para armazenamento de alinhamentos.",
+            "D": "VCF, padrão utilizado para listar polimorfismos e genótipos finais.",
+            "E": "FASTA, arquivo de texto simples para representar sequências base."
+        },
+        "correct": "D",
+        "explanation": "A alternativa D está correta, pois o VCF (Variant Call Format) é o padrão essencial para registrar SNPs e indels após a etapa de variant calling. As demais erram porque: A foca em dados brutos, B armazena alinhamentos, C é binário de alinhamento e E contém sequências genômicas.",
+        "area": "Bioinformática",
+        "difficulty": "fácil",
+        "subject": "Bioinformática e análise genômica",
+        "id": 1919
+    },
+    {
+        "text": "No contexto das Boas Práticas de Laboratório (BPL) e biossegurança aplicadas ao sequenciamento genômico, qual conduta é essencial para assegurar a integridade analítica e a segurança do operador?",
+        "options": {
+            "A": "Utilizar fluxo de trabalho unidirecional entre áreas pré e pós-PCR.",
+            "B": "Reutilizar luvas descartáveis após higienização com solução alcoólica.",
+            "C": "Realizar o pipetamento de soluções biológicas mediante sucção oral.",
+            "D": "Descartar resíduos químicos inflamáveis em pias de aço inox comuns.",
+            "E": "Calibrar instrumentos de precisão somente se houver falhas técnicas."
+        },
+        "correct": "A",
+        "explanation": "A alternativa A é a correta pois o fluxo unidirecional previne a contaminação cruzada por amplicons em genômica. As demais erram porque: B compromete a barreira de proteção, C é prática estritamente proibida, D gera graves riscos ambientais e E fere normas de calibração periódica.",
+        "area": "Laboratório",
+        "difficulty": "médio",
+        "subject": "Boas Práticas de Laboratório (BPL), biossegurança e controle de qualidade",
+        "id": 1920
+    },
+    {
+        "text": "No contexto da análise genômica, qual ferramenta é amplamente utilizada para gerenciar e converter arquivos de alinhamento nos formatos SAM e BAM?",
+        "options": {
+            "A": "BLAST, voltado para busca de similaridade em sequências.",
+            "B": "GATK, focado na chamada de variantes em genomas humanos.",
+            "C": "SAMtools, usado para manipular alinhamentos de sequências.",
+            "D": "FastQC, destinado ao controle de qualidade de dados NGS.",
+            "E": "Bowtie, aplicado no mapeamento de leituras contra o alvo."
+        },
+        "correct": "C",
+        "explanation": "C é a correta pois o SAMtools é a suíte essencial para processar formatos de alinhamento como SAM/BAM. As demais erram porque: A busca similaridade, B identifica variantes, D avalia qualidade e E realiza mapeamento.",
+        "area": "Bioinformática",
+        "difficulty": "fácil",
+        "subject": "Programação e ferramentas computacionais",
+        "id": 1921
+    },
+    {
+        "text": "No âmbito de estudos genômicos multicêntricos do projeto Genoma SUS, a condução ética e administrativa deve seguir rigorosamente as normativas nacionais para garantir a validade dos dados e a proteção dos participantes. Sobre a tramitação ética e responsabilidades institucionais em projetos multicêntricos envolvendo seres humanos no Brasil, assinale a alternativa correta:",
+        "options": {
+            "A": "O CEP do centro coordenador deve aprovar o projeto antes dos coparticipantes.",
+            "B": "Cada centro participante possui autonomia para alterar o desenho do estudo.",
+            "C": "O armazenamento de amostras genômicas dispensa autorização para uso futuro.",
+            "D": "A aprovação do centro coordenador torna facultativa a revisão pelos outros.",
+            "E": "O pesquisador de cada centro é o detentor legal exclusivo de todos os dados."
+        },
+        "correct": "A",
+        "explanation": "A alternativa A é a correta, pois a tramitação ética de estudos multicêntricos deve ocorrer primeiramente no centro coordenador, conforme a Resolução CNS 466/12. As demais erram porque: B fere a padronização metodológica, C ignora regras de biobancos, D negligencia a análise ética local e E contraria o compartilhamento institucional.",
+        "area": "Laboratório",
+        "difficulty": "difícil",
+        "subject": "Ética em pesquisa e noções de estudos multicêntricos",
+        "id": 1922
+    },
+    {
+        "text": "No fluxo de trabalho de sequenciamento de nova geração (NGS), a quantificação precisa da biblioteca final é crucial para evitar problemas de sub ou sobre-agrupamento de clusters. Considerando a tecnologia Illumina, qual método é o mais indicado para garantir que apenas as moléculas funcionalmente aptas ao sequenciamento sejam quantificadas?",
+        "options": {
+            "A": "qPCR, pois quantifica apenas as moléculas ligadas aos adaptadores.",
+            "B": "Qubit, pois permite medir a massa total de DNA de fita dupla na amostra.",
+            "C": "NanoDrop, pois detecta contaminantes orgânicos via razão de absorbância.",
+            "D": "Bioanalyzer, pois avalia a distribuição de tamanho médio dos insertos.",
+            "E": "Digital PCR, por ser método absoluto que dispensa uso de curvas padrão."
+        },
+        "correct": "A",
+        "explanation": "A qPCR é o método padrão para normalização pois utiliza primers específicos para os adaptadores, garantindo que apenas moléculas capazes de formar clusters sejam contabilizadas. As demais estão incorretas porque: B não distingue fragmentos sem adaptadores hibridizáveis, C carece de sensibilidade e especificidade funcional, D foca na integridade física e não na quantificação molar e E é economicamente inviável para a rotina laboratorial de larga escala.",
+        "area": "Laboratório",
+        "difficulty": "difícil",
+        "subject": "Tecnologias laboratoriais em genômica (sequenciamento de nova geração - NGS, extração de DNA genômico, controle de qualidade, preparo de amostras)",
+        "id": 1923
+    },
+    {
+        "text": "No preparo de bibliotecas para sequenciamento de nova geração (NGS), a seleção de tamanho por esferas magnéticas (SPRI) é etapa crítica. Qual fenômeno ocorre ao se reduzir a razão volumétrica entre as esferas e a amostra de DNA?",
+        "options": {
+            "A": "Apenas fragmentos de DNA menores permanecem ligados às esferas.",
+            "B": "Fragmentos de DNA maiores são preferencialmente descartados no fluxo.",
+            "C": "Fragmentos de DNA maiores ligam-se às esferas, excluindo os menores.",
+            "D": "A eficiência da ligação enzimática dos adaptadores aumenta na etapa.",
+            "E": "Ocorre a precipitação inespecífica de dímeros de adaptadores e sais."
+        },
+        "correct": "C",
+        "explanation": "A alternativa C está correta pois a redução da razão esferas/DNA diminui a concentração de polímeros que induzem a ligação, favorecendo fragmentos de maior peso molecular por exclusão entrópica. As demais erram porque: A exige maior concentração de reagentes, B retém os maiores no suporte magnético, D descreve processo físico não enzimático e E remove dímeros em vez de precipitá-los.",
+        "area": "Laboratório",
+        "difficulty": "difícil",
+        "subject": "Biologia, biologia molecular e genética",
+        "id": 1924
+    },
+    {
+        "text": "No workflow de análise genômica do GATK, qual é a principal finalidade da etapa de marcação de duplicatas (MarkDuplicates) após o alinhamento?",
+        "options": {
+            "A": "Corrigir erros sistemáticos de sequenciamento em bases específicas.",
+            "B": "Identificar artefatos de PCR que podem gerar variantes falso-positivas.",
+            "C": "Normalizar a profundidade de cobertura entre as amostras do projeto.",
+            "D": "Converter arquivos de alinhamento SAM para o formato binário BAM.",
+            "E": "Realizar a recalibragem dos escores de qualidade das bases (BQSR)."
+        },
+        "correct": "B",
+        "explanation": "B é a correta pois o MarkDuplicates identifica leituras originadas do mesmo fragmento inicial de DNA para evitar erros estatísticos no Variant Calling. As demais erram pois: A descreve correção sistemática, C busca normalizar cobertura, D faz conversão de formatos e E realiza recalibragem de bases.",
+        "area": "Bioinformática",
+        "difficulty": "médio",
+        "subject": "Bioinformática e análise genômica",
+        "id": 1925
+    },
+    {
+        "text": "No pipeline GATK para análise de variantes em larga escala, a etapa de Variant Quality Score Recalibration (VQSR) é essencial para o refinamento do conjunto de dados. Qual é a principal característica que diferencia o VQSR de uma filtragem manual por limiares (Hard Filtering)?",
+        "options": {
+            "A": "Usa modelos de aprendizado de máquina para distinguir variantes de erros.",
+            "B": "Filtra variantes baseando-se apenas na profundidade de leitura média.",
+            "C": "Aumenta a frequência de variantes raras em detrimento das comuns.",
+            "D": "Define limiares fixos e globais para parâmetros de qualidade do VCF.",
+            "E": "Acelera o processamento ao eliminar etapas de calibração das bases."
+        },
+        "correct": "A",
+        "explanation": "A correta é a A pois o VQSR utiliza Gaussian Mixture Models para avaliar a qualidade probabilística das variantes de forma adaptativa. As demais erram porque: B ignora outros parâmetros estatísticos, C foca em descoberta biológica, D caracteriza o método Hard Filtering e E exige maior poder computacional.",
+        "area": "Bioinformática",
+        "difficulty": "difícil",
+        "subject": "Bioinformática e análise genômica",
+        "id": 1926
+    },
+    {
+        "text": "No fluxo de análise de sequenciamento de nova geração (NGS), a ferramenta SAMtools desempenha um papel fundamental. Qual é a principal função desse software?",
+        "options": {
+            "A": "Realizar a anotação funcional de variantes genômicas.",
+            "B": "Manipular e processar arquivos de alinhamento SAM/BAM.",
+            "C": "Executar montagem de novo para genomas desconhecidos.",
+            "D": "Prever estruturas secundárias em fitas simples de RNA.",
+            "E": "Desenhar iniciadores para amplificação via PCR clássico."
+        },
+        "correct": "B",
+        "explanation": "A alternativa B está correta pois o SAMtools é essencial para manipular, converter e indexar arquivos resultantes do alinhamento de sequências. As demais alternativas estão incorretas porque: A refere-se à anotação de variantes, C trata de montagem genômica, D foca em predição estrutural e E descreve o desenho de iniciadores.",
+        "area": "Bioinformática",
+        "difficulty": "fácil",
+        "subject": "Bioinformática e análise genômica",
+        "id": 1927
+    },
+    {
+        "text": "No contexto do processamento de dados genômicos para o projeto Genoma SUS, a escolha de ferramentas de bioinformática é fundamental. Qual alternativa apresenta a aplicação correta de uma ferramenta mencionada nos requisitos do cargo?",
+        "options": {
+            "A": "O SAMtools serve exclusivamente para a visualização de proteínas em 3D.",
+            "B": "O GATK é um software amplamente usado para detecção de variantes de DNA.",
+            "C": "O Python é um sistema de arquivos para o armazenamento de sequências.",
+            "D": "O BCFtools é a principal ferramenta para montagem de genomas de novo.",
+            "E": "O software R é a única plataforma capaz de alinhar leituras de NGS."
+        },
+        "correct": "B",
+        "explanation": "A alternativa B é a correta pois o GATK é amplamente reconhecido por suas ferramentas de 'variant calling' em genomas humanos. As demais erram porque: A manipula arquivos de alinhamento, C é linguagem de programação, D processa arquivos VCF e E foca em análise estatística.",
+        "area": "Bioinformática",
+        "difficulty": "fácil",
+        "subject": "Bioinformática e análise genômica",
+        "id": 1928
+    },
+    {
+        "text": "No contexto de estudos de associação genômica ampla (GWAS), qual é a principal finalidade da aplicação de métodos de correção para testes múltiplos, como o ajuste de Bonferroni?",
+        "options": {
+            "A": "Reduzir a ocorrência de resultados falso-positivos (Erro Tipo I).",
+            "B": "Aumentar a sensibilidade na detecção de variantes muito raras.",
+            "C": "Normalizar a distribuição da profundidade de leitura do genoma.",
+            "D": "Eliminar variantes que apresentam desequilíbrio de ligação alto.",
+            "E": "Garantir que o tamanho da amostra seja estatisticamente ideal."
+        },
+        "correct": "A",
+        "explanation": "A alternativa A é a correta pois a correção de múltiplos testes visa mitigar o acúmulo de erros do Tipo I ao realizar milhares de comparações simultâneas. As demais erram porque: B foca em detecção, não no controle de erros globais; C trata de processamento de sinal biotecnológico em sequenciamento; D refere-se à correlação entre alelos próximos no genoma; E é definido previamente no desenho experimental do estudo.",
+        "area": "Bioinformática",
+        "difficulty": "fácil",
+        "subject": "Estatística aplicada à genômica",
+        "id": 1929
+    },
+    {
+        "text": "No contexto do sequenciamento de nova geração (NGS) para o projeto Genoma Brasil, a formação de subprodutos indesejados pode comprometer a acurácia dos dados. Qual processo bioquímico é o principal responsável pela geração de leituras quiméricas durante a etapa de amplificação por PCR na construção de bibliotecas genômicas?",
+        "options": {
+            "A": "Hibridização cruzada de amplicons incompletos em ciclos subsequentes.",
+            "B": "Concentração elevada de polimerase reduzindo a especificidade total.",
+            "C": "Fragmentação por cisalhamento gerando extremidades cegas no DNA.",
+            "D": "Concentração elevada de adaptadores formando dímeros competitivos.",
+            "E": "Degradação térmica de iniciadores impedindo o anelamento correto."
+        },
+        "correct": "A",
+        "explanation": "A alternativa A é a correta pois a formação de quimeras ocorre quando amplicons incompletos de um ciclo hibridizam em moldes diferentes no ciclo subsequente. As demais estão incorretas porque: B reduz especificidade sem criar quimeras, C refere-se à preparação física do DNA, D gera dímeros de adaptadores e E impede a reação de ocorrer.",
+        "area": "Laboratório",
+        "difficulty": "difícil",
+        "subject": "Biologia, biologia molecular e genética",
+        "id": 1930
+    },
+    {
+        "text": "No processamento de dados de sequenciamento de nova geração (NGS), qual ferramenta é responsável pela implementação do algoritmo HaplotypeCaller para a identificação precisa de variantes genéticas?",
+        "options": {
+            "A": "O software Bowtie2 focado em alinhamento de leituras curtas.",
+            "B": "O indexador BWA-MEM utilizado para mapeamento de sequências.",
+            "C": "O conjunto GATK que integra a ferramenta HaplotypeCaller.",
+            "D": "O pacote SAMtools utilizado para manipulação de arquivos SAM.",
+            "E": "O utilitário FastQC para controle de qualidade dos dados."
+        },
+        "correct": "C",
+        "explanation": "A alternativa C está correta pois o GATK utiliza o HaplotypeCaller para realizar a remontagem local e identificar variantes genômicas. As demais estão incorretas porque: A realiza apenas o alinhamento de sequências, B foca no mapeamento inicial de leituras, D manipula arquivos sem identificar variantes e E avalia somente a qualidade amostral.",
+        "area": "Bioinformática",
+        "difficulty": "médio",
+        "subject": "Bioinformática e análise genômica",
+        "id": 1931
+    },
+    {
+        "text": "No contexto do processamento de dados de sequenciamento de nova geração (NGS), qual ferramenta é a mais indicada para realizar a conversão de arquivos de alinhamento do formato SAM para o formato binário BAM?",
+        "options": {
+            "A": "O software GATK",
+            "B": "O software BCFtools",
+            "C": "O software SAMtools",
+            "D": "O software FastQC",
+            "E": "O software MultiQC"
+        },
+        "correct": "C",
+        "explanation": "O software SAMtools é a biblioteca fundamental utilizada para converter, ordenar e indexar arquivos de alinhamento genômico em formatos SAM e BAM. As demais opções estão incorretas porque: o GATK foca na chamada de variantes genéticas, o BCFtools manipula apenas arquivos VCF, o FastQC avalia a qualidade das sequências e o MultiQC agrega relatórios de análise.",
+        "area": "Bioinformática",
+        "difficulty": "fácil",
+        "subject": "Bioinformática e análise genômica",
+        "id": 1932
+    },
+    {
+        "text": "No processamento de dados de sequenciamento de nova geração (NGS), qual ferramenta é amplamente utilizada para a identificação de variantes genéticas (variant calling)?",
+        "options": {
+            "A": "O software GATK (Genome Analysis Toolkit).",
+            "B": "O utilitário BLAST (Basic Local Alignment).",
+            "C": "O programa ClustalW para múltiplos alinhamentos.",
+            "D": "O servidor STRING para redes de proteínas.",
+            "E": "O banco de dados PDB para estruturas 3D."
+        },
+        "correct": "A",
+        "explanation": "O GATK é a ferramenta padrão ouro para identificar SNPs e indels em genomas. As demais erram porque: BLAST faz buscas locais de sequências, ClustalW realiza alinhamentos múltiplos, STRING analisa interações proteicas e PDB foca em estruturas tridimensionais.",
+        "area": "Bioinformática",
+        "difficulty": "fácil",
+        "subject": "Bioinformática e análise genômica",
+        "id": 1933
+    },
+    {
+        "text": "No processamento de dados de sequenciamento de nova geração (NGS), o toolkit SAMtools é essencial para manipular alinhamentos. Qual comando é utilizado especificamente para converter um arquivo no formato SAM (Sequence Alignment Map) para o seu equivalente binário comprimido BAM?",
+        "options": {
+            "A": "samtools view -bS",
+            "B": "samtools sort -o",
+            "C": "samtools index -a",
+            "D": "samtools flagstat",
+            "E": "samtools depth -r"
+        },
+        "correct": "A",
+        "explanation": "A alternativa A está correta pois o comando view com a flag -b transforma a entrada SAM em saída binária BAM. As demais erram porque: B serve apenas para ordenação, C gera índices de busca, D produz estatísticas de flags e E computa profundidade de leitura.",
+        "area": "Bioinformática",
+        "difficulty": "fácil",
+        "subject": "Programação e ferramentas computacionais",
+        "id": 1934
+    },
+    {
+        "text": "No contexto de processamento de dados genômicos de larga escala pelo GATK, qual técnica é considerada o padrão-ouro para a distinção entre variantes biológicas reais e artefatos de sequenciamento através de modelagem estatística multivariada?",
+        "options": {
+            "A": "Aplicação de recalibração de escore de variante (VQSR) no GATK.",
+            "B": "Uso de alinhamento local Smith-Waterman para filtragem de indels.",
+            "C": "Implementação de filtros manuais baseados apenas em profundidade.",
+            "D": "Utilização de normalização de variantes via BCFtools em trios.",
+            "E": "Adoção exclusiva de algoritmos de mapeamento baseados em k-mers."
+        },
+        "correct": "A",
+        "explanation": "A alternativa A está correta pois o VQSR utiliza aprendizado de máquina para modelar erros e filtrar variantes de forma adaptativa. As demais erram porque: B foca em alinhamento local sem modelar erros; C ignora a complexidade estatística multivariada dos dados; D apenas padroniza a notação sem filtrar ruídos; E falha em regiões repetitivas e erros de plataforma.",
+        "area": "Bioinformática",
+        "difficulty": "difícil",
+        "subject": "Bioinformática e análise genômica",
+        "id": 1935
+    },
+    {
+        "text": "No contexto do processamento de dados genômicos em larga escala (WGS) para o projeto Genoma SUS, qual abordagem técnica é considerada o padrão-ouro para a filtragem de variantes visando reduzir a taxa de falsos positivos decorrentes de artefatos de sequenciamento, sem comprometer a sensibilidade em sítios polimórficos?",
+        "options": {
+            "A": "Aplicar Hard Filtering baseado apenas em parâmetros fixos de QUAL e FS.",
+            "B": "Implementar o VQSR utilizando bases de dados como HapMap e 1000G.",
+            "C": "Executar o alinhamento Smith-Waterman local em todos os reads da amostra.",
+            "D": "Filtrar variantes utilizando exclusivamente a métrica de profundidade (DP).",
+            "E": "Ignorar a recalibração de bases (BQSR) para otimizar o processamento."
+        },
+        "correct": "B",
+        "explanation": "A alternativa B é a correta pois o VQSR utiliza modelos probabilísticos para identificar variantes reais em grandes bancos de dados. As demais erram porque: A desconsidera a covariância entre múltiplos parâmetros estatísticos, C é computacionalmente inviável para processamento massivo, D ignora métricas cruciais de qualidade e E aumenta artefatos por erros sistemáticos.",
+        "area": "Bioinformática",
+        "difficulty": "difícil",
+        "subject": "Bioinformática e análise genômica",
+        "id": 1936
+    },
+    {
+        "text": "No contexto das Boas Práticas Laboratoriais (BPL) aplicadas ao sequenciamento genômico, qual procedimento é indispensável para assegurar a integridade analítica e evitar a contaminação cruzada?",
+        "options": {
+            "A": "Implementar o fluxo unidirecional entre áreas de pré e pós-PCR.",
+            "B": "Armazenar reagentes e produtos amplificados em uma mesma bancada.",
+            "C": "Reaproveitar luvas descartáveis após higienização com álcool 70%.",
+            "D": "Manter estoque de DNA e primers em freezers de uso compartilhado.",
+            "E": "Executar extração de DNA e amplificação em um ambiente comum."
+        },
+        "correct": "A",
+        "explanation": "A alternativa A está correta pois o fluxo unidirecional previne que amplicons contaminem amostras virgens no preparo de bibliotecas. As demais erram porque: B induz contaminação cruzada grave, C compromete a esterilidade biológica, D mistura reagentes limpos com moldes e E ignora a segregação física necessária.",
+        "area": "Laboratório",
+        "difficulty": "médio",
+        "subject": "Boas Práticas de Laboratório (BPL), biossegurança e controle de qualidade",
+        "id": 1937
+    },
+    {
+        "text": "No processo de preparação de bibliotecas para sequenciamento de nova geração (NGS), a etapa de normalização e pool de amostras é crítica para garantir uma cobertura equitativa entre os pacientes. Qual conjunto de parâmetros é fundamental para o cálculo preciso da molaridade das bibliotecas visando o equilíbrio estocástico no sequenciamento?",
+        "options": {
+            "A": "Concentração via fluorometria e tamanho médio dos fragmentos.",
+            "B": "Absorbância 260/280 e volume total final da biblioteca purificada.",
+            "C": "Massa de DNA inicial e nível de pureza da extração de ácidos nucleicos.",
+            "D": "Detecção de dímeros de adaptadores via eletroforese capilar isolada.",
+            "E": "Valor de Cq do qPCR ignorando o tamanho médio do inserto da biblioteca."
+        },
+        "correct": "A",
+        "explanation": "A resposta A é correta porque a molaridade depende da concentração de massa específica de DNA e do peso molecular derivado do comprimento médio para o pooling equitativo. As demais erram porque: B usa absorbância imprecisa para quantificar bibliotecas, C foca no input inicial e não no produto final, D ignora a concentração necessária para o cálculo e E despreza a influência do tamanho na eficiência molar.",
+        "area": "Laboratório",
+        "difficulty": "difícil",
+        "subject": "Biologia, biologia molecular e genética",
+        "id": 1938
+    },
+    {
+        "text": "No âmbito de iniciativas como o Genoma SUS, a governança ética de amostras biológicas distingue biobancos de biorrepositórios. De acordo com a Resolução 466/2012 do Conselho Nacional de Saúde, qual requisito é obrigatório para a existência de um biobanco institucional?",
+        "options": {
+            "A": "O consentimento livre autoriza o uso das amostras sem novas aprovações.",
+            "B": "Biorrepositórios são coleções de longo prazo sob guarda da instituição.",
+            "C": "Biobancos demandam aprovação da CONEP e consentimento do participante.",
+            "D": "O compartilhamento de dados anonimizados dispensa toda supervisão ética.",
+            "E": "Achados incidentais clínicos devem ser omitidos para evitar danos morais."
+        },
+        "correct": "C",
+        "explanation": "A alternativa C está correta pois biobancos são coleções institucionais permanentes que exigem rigoroso controle da CONEP e concordância explícita do doador. As demais erram porque: A fere a especificidade do consentimento, B inverte a definição técnica de biorrepositório, D ignora riscos de reidentificação genética e E viola o princípio da beneficência.",
+        "area": "Laboratório",
+        "difficulty": "difícil",
+        "subject": "Noções de saúde pública e ética em pesquisa",
+        "id": 1939
+    },
+    {
+        "text": "Em estudos de associação genômica ampla (GWAS), nos quais milhares de variantes são testadas simultaneamente, a aplicação de métodos de correção para múltiplos testes, como o de Bonferroni, tem como objetivo principal minimizar a ocorrência de qual problema estatístico?",
+        "options": {
+            "A": "O erro do tipo I (falso positivo).",
+            "B": "O erro do tipo II (falso negativo).",
+            "C": "O erro de amostragem aleatória.",
+            "D": "O erro sistemático por viés.",
+            "E": "O erro de variância residual."
+        },
+        "correct": "A",
+        "explanation": "A resposta A é a correta pois a correção para múltiplos testes visa mitigar a ocorrência de falsos positivos decorrentes do acaso em grandes volumes de dados. As demais erram porque: B refere-se a não detectar associações reais existentes; C diz respeito à representatividade da amostra na população; D envolve falhas metodológicas ou instrumentais não aleatórias e E trata da variabilidade não explicada pelo modelo estatístico.",
+        "area": "Bioinformática",
+        "difficulty": "fácil",
+        "subject": "Estatística aplicada à genômica",
+        "id": 1940
+    },
+    {
+        "text": "No fluxo de análise de bioinformática para o Genoma SUS, qual ferramenta é essencial para a manipulação, ordenação e indexação de arquivos de alinhamento de sequências?",
+        "options": {
+            "A": "O GATK foca prioritariamente na montagem de genomas de novo.",
+            "B": "O BCFtools realiza o controle de qualidade de reads brutos.",
+            "C": "O SAMtools manipula arquivos de alinhamento nos formatos SAM/BAM.",
+            "D": "O FastQC é utilizado para alinhar sequências ao genoma humano.",
+            "E": "O Bowtie2 é a ferramenta padrão para a etapa de variant calling."
+        },
+        "correct": "C",
+        "explanation": "A alternativa C está correta pois o SAMtools é a ferramenta padrão para processar e converter alinhamentos de sequências genômicas. As demais erram porque: A foca em variantes, não montagem; B manipula arquivos VCF; D avalia qualidade das leituras; E realiza o alinhamento, não a chamada.",
+        "area": "Bioinformática",
+        "difficulty": "fácil",
+        "subject": "Programação e ferramentas computacionais",
+        "id": 1941
+    },
+    {
+        "text": "No processamento de amostras para o Genoma SUS, a manutenção da integridade dos ensaios depende de rigorosos controles. Qual prática de biossegurança é essencial para evitar a contaminação cruzada por amplicons em áreas de pré-amplificação?",
+        "options": {
+            "A": "Implementação de fluxo unidirecional e separação física de salas.",
+            "B": "Uso de autoclave de alto vácuo apenas na área de pré-amplificação.",
+            "C": "Higienização de bancadas utilizando exclusivamente álcool 70 por cento.",
+            "D": "Armazenamento conjunto de primers e amostras de DNA no mesmo freezer.",
+            "E": "Esterilização de ponteiras com filtro via radiação gama após o uso."
+        },
+        "correct": "A",
+        "explanation": "A alternativa A está correta pois o fluxo unidirecional e a separação física impedem que o material amplificado retorne às áreas limpas. As demais erram porque: B não degrada amplicons, C não elimina DNA eficientemente, D permite contaminação de insumos e E descreve procedimento inviável e caro.",
+        "area": "Laboratório",
+        "difficulty": "médio",
+        "subject": "Boas Práticas de Laboratório (BPL), biossegurança e controle de qualidade",
+        "id": 1942
+    },
+    {
+        "text": "Em estudos genômicos multicêntricos realizados no Brasil, qual procedimento ético é mandatório conforme as resoluções vigentes do Conselho Nacional de Saúde?",
+        "options": {
+            "A": "Aprovação prévia pelo CEP coordenador e centros participantes.",
+            "B": "Consentimento verbal exclusivo substituindo o termo assinado.",
+            "C": "Envio obrigatório de todas as amostras para centros externos.",
+            "D": "Dispensa de TCLE para pacientes com quadros genéticos raros.",
+            "E": "Cobrança de taxas dos voluntários para custear os insumos."
+        },
+        "correct": "A",
+        "explanation": "A alternativa A está correta pois protocolos multicêntricos exigem aprovação ética em todas as instâncias participantes sob coordenação inicial. As demais erram porque: B exige documento escrito assinado, C fere a soberania genética nacional, D o TCLE é sempre obrigatório e E pesquisas clínicas devem ser gratuitas.",
+        "area": "Laboratório",
+        "difficulty": "médio",
+        "subject": "Ética em pesquisa e noções de estudos multicêntricos",
+        "id": 1943
+    },
+    {
+        "text": "No âmbito do projeto Genoma SUS, qual diretriz de Boas Práticas de Laboratório (BPL) é essencial para mitigar riscos de contaminação por amplicons em ensaios de sequenciamento em larga escala?",
+        "options": {
+            "A": "Uso de detergente comum na limpeza de bancadas de manipulação de DNA.",
+            "B": "Manutenção de fluxo unidirecional rigoroso entre áreas pré e pós-PCR.",
+            "C": "Descarte de ponteiras com filtro em lixo comum após descontaminação.",
+            "D": "Armazenamento conjunto de reagentes de PCR e DNA extraído no freezer.",
+            "E": "Realização de calibração de equipamentos apenas em caso de falha técnica."
+        },
+        "correct": "B",
+        "explanation": "A alternativa B é a correta pois o fluxo unidirecional impede o transporte de material amplificado para áreas limpas. As demais erram porque: A ignora agentes descontaminantes específicos; C viola normas de descarte infectante; D permite contaminação cruzada de insumos; E negligencia cronogramas de manutenção preventiva.",
+        "area": "Laboratório",
+        "difficulty": "médio",
+        "subject": "Boas Práticas de Laboratório (BPL), biossegurança e controle de qualidade",
+        "id": 1944
+    },
+    {
+        "text": "No preparo de bibliotecas para sequenciamento de nova geração (NGS), o controle rigoroso do número de ciclos de amplificação por PCR é vital para a integridade dos dados genômicos. Qual consequência negativa é diretamente potencializada pelo excesso de ciclos em regiões de composição nucleotídica heterogênea?",
+        "options": {
+            "A": "Formação excessiva de dímeros de adaptadores e perda de sinal.",
+            "B": "Introdução de variantes estocásticas por erros de polimerização.",
+            "C": "Aumento de duplicatas moleculares e viés de cobertura regional.",
+            "D": "Redução da sensibilidade analítica para variantes somáticas raras.",
+            "E": "Desnaturação incompleta do DNA por fadiga térmica do equipamento."
+        },
+        "correct": "C",
+        "explanation": "A alternativa C está correta pois o excesso de ciclos amplia preferencialmente certas sequências, gerando duplicatas redundantes e sub-representação de áreas com GC extremo. As demais erram porque: A decorre de proporção incorreta de adaptadores, B relaciona-se à fidelidade da enzima, D depende da profundidade total de leitura e E é falha física de hardware.",
+        "area": "Laboratório",
+        "difficulty": "difícil",
+        "subject": "Biologia, biologia molecular e genética",
+        "id": 1945
+    },
+    {
+        "text": "No âmbito de estudos genômicos multicêntricos do Genoma SUS, o processo de revisão ética segue ritos específicos para garantir a proteção dos participantes. Considerando a Resolução CNS 466/12, qual a regra para a aprovação ética?",
+        "options": {
+            "A": "O CEP do centro coordenador é o único que analisa o mérito científico.",
+            "B": "Cada centro participante requer aprovação ética do seu respectivo CEP.",
+            "C": "Projetos multicêntricos de genética humana dispensam anuência da CONEP.",
+            "D": "O pesquisador principal do centro coordenador assina por todos os locais.",
+            "E": "A guarda de amostras em biobancos é de uso exclusivo do centro mentor."
+        },
+        "correct": "B",
+        "explanation": "A alternativa B está correta pois a regulamentação exige que centros participantes obtenham aprovação de seus CEPs locais após o centro coordenador. As demais erram porque: A centraliza indevidamente o mérito, C descarta competência da CONEP, D exclui corresponsabilidade local e E viola compartilhamento institucional.",
+        "area": "Laboratório",
+        "difficulty": "difícil",
+        "subject": "Ética em pesquisa e noções de estudos multicêntricos",
+        "id": 1946
+    },
+    {
+        "text": "Em estudos genômicos de larga escala, como GWAS, qual é o principal objetivo da aplicação de métodos de correção para múltiplos testes, como o ajuste de Bonferroni?",
+        "options": {
+            "A": "Reduzir a ocorrência de falsos positivos ou erros do tipo I.",
+            "B": "Aumentar o poder estatístico para detectar variantes raras.",
+            "C": "Eliminar o viés técnico gerado pela baixa cobertura de leitura.",
+            "D": "Normalizar a expressão gênica entre diferentes bibliotecas.",
+            "E": "Garantir que os dados sigam uma distribuição normal perfeita."
+        },
+        "correct": "A",
+        "explanation": "O ajuste de Bonferroni é fundamental para controlar a probabilidade de encontrar resultados significativos puramente ao acaso devido ao volume de testes simultâneos. As demais alternativas estão incorretas porque: B diminui o poder estatístico, C aborda qualidade técnica, D refere-se à normalização e E foca em pressupostos paramétricos.",
+        "area": "Bioinformática",
+        "difficulty": "fácil",
+        "subject": "Estatística aplicada à genômica",
+        "id": 1947
+    },
+    {
+        "text": "No contexto de análise genômica do projeto Genoma SUS, qual é a principal finalidade da ferramenta computacional SAMtools?",
+        "options": {
+            "A": "Visualizar estruturas de proteínas em modelos tridimensionais.",
+            "B": "Manipular e processar alinhamentos nos formatos SAM ou BAM.",
+            "C": "Executar o sequenciamento de DNA por síntese em tempo real.",
+            "D": "Armazenar fisicamente amostras biológicas em criopreservação.",
+            "E": "Predizer sítios de ligação para fatores de transcrição gênica."
+        },
+        "correct": "B",
+        "explanation": "A alternativa B está correta pois o SAMtools é uma suíte de ferramentas essencial para processar, filtrar e visualizar alinhamentos gerados por mapeadores genômicos. As demais erram porque: A foca em proteômica estrutural, C refere-se à etapa laboratorial de sequenciamento, D trata de preservação física de amostras e E foca em regulação da expressão gênica.",
+        "area": "Bioinformática",
+        "difficulty": "fácil",
+        "subject": "Programação e ferramentas computacionais",
+        "id": 1948
+    },
+    {
+        "text": "No contexto de um laboratório de genômica do Genoma SUS, qual procedimento é fundamental para conciliar a integridade dos dados (BPL) e a segurança do analista?",
+        "options": {
+            "A": "Descarte de ponteiras usadas em lixo comum após a autoclavagem.",
+            "B": "Uso de jalecos de manga curta em áreas de manipulação biológica.",
+            "C": "Calibração de equipamentos e uso de cabines de biossegurança.",
+            "D": "Armazenamento de reagentes voláteis com amostras em freezers.",
+            "E": "Reutilização de luvas descartáveis após desinfecção com álcool."
+        },
+        "correct": "C",
+        "explanation": "A alternativa C é a correta, pois a manutenção de equipamentos e o uso de barreiras físicas são pilares da qualidade e proteção do operador. As demais estão incorretas porque: A ignora a classificação de resíduo infectante; B descumpre a proteção dérmica necessária; D promove contaminação cruzada e riscos químicos; E viola normas de uso único de EPIs.",
+        "area": "Laboratório",
+        "difficulty": "médio",
+        "subject": "Boas Práticas de Laboratório (BPL), biossegurança e controle de qualidade",
+        "id": 1949
+    },
+    {
+        "text": "Qual formato de arquivo é amplamente utilizado em bioinformática para armazenar de forma eficiente as leituras de sequenciamento após o processo de alinhamento ao genoma de referência?",
+        "options": {
+            "A": "Formato FASTQ, que armazena leituras brutas e qualidades.",
+            "B": "Formato BAM, a versão binária das leituras já alinhadas.",
+            "C": "Formato VCF, focado no registro das variantes detectadas.",
+            "D": "Formato FASTA, contendo sequências de referência genômica.",
+            "E": "Formato BED, usado para definir regiões de interesse no DNA."
+        },
+        "correct": "B",
+        "explanation": "A alternativa B é correta pois o BAM é o padrão binário para alinhamentos. As demais erram porque: A foca em dados brutos pré-alinhamento, C registra as variantes genéticas encontradas, D provê sequências de referência puras e E delimita coordenadas genômicas específicas.",
+        "area": "Bioinformática",
+        "difficulty": "fácil",
+        "subject": "Bioinformática e análise genômica",
+        "id": 1950
+    },
+    {
+        "text": "No âmbito do projeto Genoma SUS, a proteção de informações sensíveis é primordial. Qual prática é essencial para garantir a segurança e a privacidade dos dados genômicos e clínicos dos participantes?",
+        "options": {
+            "A": "Armazenar dados em servidores públicos sem criptografia.",
+            "B": "Compartilhar sequências brutas com identificação total.",
+            "C": "Implementar pseudonimização rigorosa nos dados clínicos.",
+            "D": "Manter senhas de acesso anotadas em locais de uso comum.",
+            "E": "Enviar resultados sem criptografia por e-mails externos."
+        },
+        "correct": "C",
+        "explanation": "A opção C está correta pois a pseudonimização desvincula dados sensíveis de identificadores diretos, protegendo a privacidade sem impedir a análise científica. As demais erram porque: A expõe dados em ambientes públicos vulneráveis, B viola o anonimato ético do participante, D facilita o acesso físico não autorizado e E permite a interceptação de informações sensíveis.",
+        "area": "Bioinformática",
+        "difficulty": "fácil",
+        "subject": "Segurança de dados",
+        "id": 1951
+    },
+    {
+        "text": "No contexto da bioinformática e processamento de dados de sequenciamento, qual ferramenta é essencial para a manipulação, indexação e conversão de arquivos de alinhamento nos formatos SAM e BAM?",
+        "options": {
+            "A": "A ferramenta SAMtools",
+            "B": "A ferramenta FastQC",
+            "C": "A ferramenta BLASTn",
+            "D": "A ferramenta TopHat",
+            "E": "A ferramenta Bowtie"
+        },
+        "correct": "A",
+        "explanation": "O SAMtools é a biblioteca padrão para manipulação, ordenação e indexação de arquivos de mapeamento nos formatos SAM/BAM. As demais erram porque: B avalia qualidade de leituras brutas, C realiza buscas de similaridade local, D é um alinhador de RNA-seq e E realiza o alinhamento de leituras curtas.",
+        "area": "Bioinformática",
+        "difficulty": "fácil",
+        "subject": "Programação e ferramentas computacionais",
+        "id": 1952
+    },
+    {
+        "text": "No pipeline de Melhores Práticas do GATK para identificação de variantes germinativas em dados de NGS, qual é o objetivo principal da etapa de Mark Duplicates?",
+        "options": {
+            "A": "Identificar duplicatas de PCR para evitar falsa confiança alélica.",
+            "B": "Remover adaptadores de sequenciamento para melhorar o alinhamento.",
+            "C": "Recalibrar scores de qualidade com base em erros sistemáticos.",
+            "D": "Normalizar a cobertura genômica para detectar variantes estruturais.",
+            "E": "Filtrar variantes de baixa qualidade usando métodos de VQSR ou hard."
+        },
+        "correct": "A",
+        "explanation": "A alternativa A está correta pois a marcação de duplicatas impede que artefatos de amplificação enviesem estatisticamente a chamada de variantes. As demais erram porque: B ocorre no pré-processamento, C descreve o processo BQSR, D foca em CNVs e E trata do pós-processamento de chamadas.",
+        "area": "Bioinformática",
+        "difficulty": "médio",
+        "subject": "Bioinformática e análise genômica",
+        "id": 1953
+    },
+    {
+        "text": "No âmbito da ética em pesquisa com seres humanos, qual o principal documento utilizado para garantir a autonomia e a anuência do participante após ser informado sobre os riscos e benefícios do estudo?",
+        "options": {
+            "A": "Termo de Consentimento Livre e Esclarecido (TCLE)",
+            "B": "Manual de Boas Práticas de Laboratório Clínico",
+            "C": "Registro de Qualidade de Extração de DNA Genômico",
+            "D": "Relatório de Biossegurança e Manejo de Amostras",
+            "E": "Guia de Procedimentos Operacionais Padrão (POP)"
+        },
+        "correct": "A",
+        "explanation": "A alternativa A é a correta pois o TCLE formaliza a decisão voluntária e informada do sujeito de pesquisa conforme a Resolução 466/2012. As demais erram porque: B foca em qualidade técnica laboratorial, C registra apenas processos de bancada, D trata de segurança física e biológica e E descreve rotinas operacionais fixas.",
+        "area": "Laboratório",
+        "difficulty": "fácil",
+        "subject": "Ética em pesquisa e noções de estudos multicêntricos",
+        "id": 1954
+    },
+    {
+        "text": "Em pesquisas genômicas vinculadas à saúde pública, o Termo de Consentimento Livre e Esclarecido (TCLE) é um documento essencial que materializa qual diretriz bioética?",
+        "options": {
+            "A": "O princípio da utilidade, priorizando o interesse do Estado.",
+            "B": "O princípio da autonomia, respeitando a decisão do participante.",
+            "C": "O princípio da justiça, garantindo o acesso igualitário aos bens.",
+            "D": "O princípio da beneficência, buscando o máximo de bem ao sujeito.",
+            "E": "O princípio da legalidade, focando apenas em normas burocráticas."
+        },
+        "correct": "B",
+        "explanation": "A alternativa B é a correta, pois a autonomia assegura que o indivíduo tenha o direito de decidir sobre sua participação após ser devidamente informado. As demais erram porque: A prioriza o Estado ignorando a vontade individual do participante, C foca na distribuição equitativa de encargos e benefícios sociais, D foca no dever de promover o bem do participante e E reduz a ética a meras formalidades administrativas e legais.",
+        "area": "Laboratório",
+        "difficulty": "médio",
+        "subject": "Noções de saúde pública e ética em pesquisa",
+        "id": 1955
+    },
+    {
+        "text": "No contexto das melhores práticas para análise de variantes germinativas (GATK Best Practices), qual é a função primordial da etapa de marcação de duplicatas (Mark Duplicates) após o alinhamento?",
+        "options": {
+            "A": "Remover artefatos de PCR que podem gerar falso-positivos em variantes.",
+            "B": "Realizar o alinhamento das sequências brutas contra um genoma referência.",
+            "C": "Ajustar erros sistemáticos nos escores de qualidade das bases sequenciadas.",
+            "D": "Converter arquivos de sequenciamento FASTQ para o formato binário BAM.",
+            "E": "Identificar polimorfismos de nucleotídeo único em regiões codificantes."
+        },
+        "correct": "A",
+        "explanation": "A marcação de duplicatas identifica leituras redundantes da amplificação por PCR, evitando que erros replicados sejam interpretados como variantes reais e enviesem a estatística. As demais erram porque: B descreve o alinhamento inicial via BWA; C define a etapa de recalibração (BQSR); D indica conversão de formatos pelo SAMtools; E refere-se ao processo final de variant calling.",
+        "area": "Bioinformática",
+        "difficulty": "médio",
+        "subject": "Bioinformática e análise genômica",
+        "id": 1956
+    },
+    {
+        "text": "No contexto de estudos genômicos multicêntricos no Brasil, qual documento é essencial para garantir a autonomia do participante e a transparência sobre os riscos e benefícios da pesquisa?",
+        "options": {
+            "A": "O Termo de Consentimento Livre e Esclarecido (TCLE).",
+            "B": "O Protocolo de Envio de Amostras para Bioinformática.",
+            "C": "O Certificado de Proficiência em Boas Práticas Clínicas.",
+            "D": "O Relatório de Controle de Qualidade das Amostras de DNA.",
+            "E": "O Guia de Biossegurança e Manejo de Material Biológico."
+        },
+        "correct": "A",
+        "explanation": "O TCLE é o documento que formaliza a proteção dos direitos e a autonomia do voluntário em pesquisas com humanos. As demais erram porque: B foca no processamento de dados, C é qualificação técnica profissional, D refere-se à pureza laboratorial e E aborda segurança do ambiente.",
+        "area": "Laboratório",
+        "difficulty": "fácil",
+        "subject": "Ética em pesquisa e noções de estudos multicêntricos",
+        "id": 1957
+    },
+    {
+        "text": "Em estudos genômicos multicêntricos no Brasil, especialmente envolvendo populações indígenas ou grupos vulneráveis, o fluxo de aprovação ética segue normas específicas da Resolução CNS nº 466/2012. Diante dessa complexidade regulatória, qual procedimento é obrigatoriamente exigido?",
+        "options": {
+            "A": "O centro coordenador aprova o mérito, isentando os centros colaboradores.",
+            "B": "Protocolos genômicos com indígenas requerem aval prévio e único da CONEP.",
+            "C": "Cada instituição participante dispensa a análise do CEP local via resolução.",
+            "D": "O protocolo exige análise do CEP coordenador e aprovação final da CONEP.",
+            "E": "O uso de biorrepositórios dispensa a renovação do TCLE em estudos novos."
+        },
+        "correct": "D",
+        "explanation": "A alternativa D está correta pois pesquisas em áreas temáticas especiais, como genética humana e populações indígenas, exigem aprovação da CONEP após parecer do CEP coordenador. As demais falham porque: A ignora registro de centros colaboradores; B suprime a análise inicial do CEP; C obriga análise ética em cada coparticipante; E exige autorização para novos usos de amostras.",
+        "area": "Laboratório",
+        "difficulty": "difícil",
+        "subject": "Ética em pesquisa e noções de estudos multicêntricos",
+        "id": 1958
+    },
+    {
+        "text": "Dentro do fluxo de trabalho GATK Best Practices para análise de DNA-Seq, qual processo visa ajustar as pontuações de confiança de cada nucleotídeo baseando-se em erros sistemáticos da plataforma?",
+        "options": {
+            "A": "Identificação de duplicatas para remoção de viés de PCR.",
+            "B": "Recalibração de qualidade de bases para correção de erro.",
+            "C": "Re-alinhamento de indels para ajuste de gaps de sequência.",
+            "D": "Pontuação de variantes via aprendizado estatístico VQSR.",
+            "E": "Padronização de alelos em arquivos de formato VCF final."
+        },
+        "correct": "B",
+        "explanation": "A alternativa B está correta pois o processo de Base Quality Score Recalibration (BQSR) ajusta as probabilidades de erro informadas pelo sequenciador usando modelos de aprendizado. As demais erram pois: A remove cópias idênticas, C corrige mapeamentos insercionais, D atua na filtragem de variantes e E organiza a notação genômica.",
+        "area": "Bioinformática",
+        "difficulty": "médio",
+        "subject": "Bioinformática e análise genômica",
+        "id": 1959
+    },
+    {
+        "text": "No fluxo de trabalho do GATK para descoberta de variantes germinativas, qual etapa é especificamente voltada para mitigar erros sistemáticos de sequenciamento através da recalibração de probabilidades de erro das bases?",
+        "options": {
+            "A": "Aplicação da Recalibração de Escores de Qualidade (BQSR).",
+            "B": "Alinhamento das leituras com o algoritmo BWA-MEM.",
+            "C": "Marcação de duplicatas de PCR em arquivos de mapeamento.",
+            "D": "Conversão de arquivos SAM para formatos binários BAM.",
+            "E": "Filtragem hard-filter baseada na profundidade de leitura."
+        },
+        "correct": "A",
+        "explanation": "A etapa de BQSR utiliza modelos estatísticos para corrigir vieses técnicos nas pontuações de qualidade, permitindo que o variant caller opere com dados mais confiáveis. As demais erram porque: B realiza o mapeamento, C identifica fragmentos redundantes, D altera o formato binário e E remove variantes suspeitas.",
+        "area": "Bioinformática",
+        "difficulty": "médio",
+        "subject": "Bioinformática e análise genômica",
+        "id": 1960
+    },
+    {
+        "text": "Nos termos das Boas Práticas Laboratoriais (BPL) aplicadas ao processamento de amostras para o Genoma SUS, qual conduta assegura tanto a qualidade analítica quanto a biossegurança laboratorial?",
+        "options": {
+            "A": "Realizar calibrações anuais sem manter registros de uso.",
+            "B": "Descartar insumos com resíduo biológico em lixo comum.",
+            "C": "Registrar sistematicamente a temperatura de freezers e kits.",
+            "D": "Armazenar reagentes críticos junto a alimentos e bebidas.",
+            "E": "Reutilizar luvas de proteção entre o preparo de bibliotecas."
+        },
+        "correct": "C",
+        "explanation": "A alternativa C é a correta pois a rastreabilidade térmica garante a estabilidade de biomoléculas e insumos sensíveis conforme exigido pelas BPL. As demais erram porque: A negligencia registros operacionais obrigatórios, B ignora riscos biológicos e ambientais, D viola normas básicas de higiene ocupacional e E propicia contaminação cruzada entre as amostras.",
+        "area": "Laboratório",
+        "difficulty": "médio",
+        "subject": "Boas Práticas de Laboratório (BPL), biossegurança e controle de qualidade",
+        "id": 1961
+    },
+    {
+        "text": "Em genética de populações, o equilíbrio de Hardy-Weinberg descreve uma população teórica ideal que não evolui ao longo das gerações. Para que esse estado seja mantido, qual das seguintes condições deve ser obrigatoriamente atendida?",
+        "options": {
+            "A": "Ausência de pressões evolutivas como mutação e seleção.",
+            "B": "Ocorrência constante de deriva genética e fluxo gênico.",
+            "C": "Existência de acasalamento preferencial entre indivíduos.",
+            "D": "Tamanho populacional reduzido para favorecer a deriva.",
+            "E": "Taxas elevadas de mutação para geração de novos alelos."
+        },
+        "correct": "A",
+        "explanation": "A resposta correta é a A, pois o equilíbrio de Hardy-Weinberg pressupõe que as frequências alélicas permanecem constantes na ausência de fatores evolutivos. As demais erram porque: B altera frequências aleatoriamente, C viola o pressuposto de panmixia, D causa flutuações por erro de amostragem e E introduz novos alelos no pool.",
+        "area": "Bioinformática",
+        "difficulty": "fácil",
+        "subject": "Genética de populações",
+        "id": 1962
+    },
+    {
+        "text": "No preparo de bibliotecas para Sequenciamento de Nova Geração (NGS), a quantificação exata das moléculas aptas ao sequenciamento é crítica. Qual método permite mensurar especificamente a concentração de fragmentos que possuem os adaptadores funcionais em ambas as extremidades?",
+        "options": {
+            "A": "Espectrofotometria de absorvância em 260nm (ex: Nanodrop).",
+            "B": "Fluorometria por corantes intercalantes (ex: Qubit dsDNA).",
+            "C": "Eletroforese capilar automatizada (ex: Bioanalyzer).",
+            "D": "PCR quantitativa (qPCR) visando as sequências adaptadoras.",
+            "E": "Quantificação por densitometria de bandas em gel de agarose."
+        },
+        "correct": "D",
+        "explanation": "A qPCR é o padrão-ouro pois quantifica exclusivamente moléculas com adaptadores em ambas as extremidades, garantindo hibridização eficiente na célula de fluxo. As demais erram porque: A detecta contaminantes e nucleotídeos livres, B mede DNA total sem distinguir adaptadores, C avalia apenas perfil de tamanho e integridade e E possui baixa precisão para baixas concentrações.",
+        "area": "Laboratório",
+        "difficulty": "difícil",
+        "subject": "Biologia, biologia molecular e genética",
+        "id": 1963
+    },
+    {
+        "text": "No contexto da ética em pesquisa com seres humanos e projetos de sequenciamento genômico, qual documento é indispensável para garantir a autonomia e o esclarecimento do voluntário?",
+        "options": {
+            "A": "Termo de Consentimento Livre e Esclarecido",
+            "B": "Relatório de Impacto à Proteção de Dados",
+            "C": "Registro de Boas Práticas de Laboratório",
+            "D": "Certificado de Ética e Pesquisa Clínica",
+            "E": "Manual de Biossegurança em Saúde Pública"
+        },
+        "correct": "A",
+        "explanation": "A alternativa A é a correta pois o TCLE garante a autonomia e o esclarecimento prévio do participante em pesquisas. As demais erram porque: B foca em proteção digital, C refere-se a processos técnicos, D é uma certificação profissional e E aborda segurança física.",
+        "area": "Laboratório",
+        "difficulty": "fácil",
+        "subject": "Noções de saúde pública e ética em pesquisa",
+        "id": 1964
+    },
+    {
+        "text": "No processamento de amostras para o sequenciamento de nova geração (NGS) em larga escala, a etapa de controle de qualidade (QC) do DNA genômico extraído é fundamental. Para garantir o sucesso da construção de bibliotecas de Genoma Completo (WGS), qual procedimento é considerado o padrão-ouro para a qualificação inicial do material?",
+        "options": {
+            "A": "Verificação da razão 260/280 via espectrofotometria UV/Visível.",
+            "B": "Uso de DNA degradado com índice de integridade inferior a 3.0.",
+            "C": "Quantificação por fluorometria e análise da integridade do DNA.",
+            "D": "Normalização da concentração baseada no volume total coletado.",
+            "E": "Aplicação de PCR quantitativo sem purificação prévia das beads."
+        },
+        "correct": "C",
+        "explanation": "A alternativa C está correta pois a fluorometria garante precisão quantitativa e a integridade assegura a viabilidade da biblioteca. As demais erram porque: A detecta contaminantes como proteínas, B compromete a cobertura genômica, D ignora a concentração real da amostra e E aplica-se apenas a bibliotecas finais.",
+        "area": "Laboratório",
+        "difficulty": "difícil",
+        "subject": "Tecnologias laboratoriais em genômica (sequenciamento de nova geração - NGS, extração de DNA genômico, controle de qualidade, preparo de amostras)",
+        "id": 1965
+    },
+    {
+        "text": "No preparo de bibliotecas para Sequenciamento de Nova Geração (NGS) via tagmentação, qual o impacto crítico do uso de DNA genômico com baixo índice de integridade (DIN)?",
+        "options": {
+            "A": "Resulta em bibliotecas com insertos excessivamente curtos.",
+            "B": "Impede a indexação por falha na ligação dos adaptadores.",
+            "C": "Provoca o enviesamento sistemático da cobertura genômica.",
+            "D": "Reduz a eficiência da polimerase durante a etapa de PCR.",
+            "E": "Exige o aumento do tempo de incubação para compensação."
+        },
+        "correct": "A",
+        "explanation": "A alternativa A é correta pois o DNA degradado oferece menos integridade, resultando em fragmentos enzimáticos abaixo do tamanho funcional para o sequenciamento. As demais erram porque: B relaciona-se a contaminantes químicos, C advém de vieses de bioinformática, D decorre de inibidores da polimerização e E causaria sobrefragmentação ainda mais severa.",
+        "area": "Laboratório",
+        "difficulty": "difícil",
+        "subject": "Tecnologias laboratoriais em genômica (sequenciamento de nova geração - NGS, extração de DNA genômico, controle de qualidade, preparo de amostras)",
+        "id": 1966
+    },
+    {
+        "text": "No contexto do processamento de dados de Sequenciamento de Nova Geração (NGS), qual ferramenta é fundamental para a manipulação, ordenação e indexação de arquivos de alinhamento no formato BAM?",
+        "options": {
+            "A": "O pacote SAMtools para manipulação e indexação de arquivos BAM",
+            "B": "O software FastQC para avaliar a qualidade das leituras brutas",
+            "C": "O algoritmo BLAST para identificar similaridade entre sequências",
+            "D": "O alinhador BWA para mapear leituras contra o genoma referência",
+            "E": "O conjunto GATK focado na anotação de variantes e efeitos funcionais"
+        },
+        "correct": "A",
+        "explanation": "A alternativa A está correta pois o SAMtools é a ferramenta padrão para manipulação, indexação e extração de informações de arquivos BAM. As demais erram porque: B analisa qualidade inicial, C identifica homologia, D realiza alinhamento e E foca em genotipagem.",
+        "area": "Bioinformática",
+        "difficulty": "fácil",
+        "subject": "Programação e ferramentas computacionais",
+        "id": 1967
+    },
+    {
+        "text": "No processo de integração de dados genômicos e clínicos, o uso de ontologias é fundamental para o Genoma SUS. Em qual etapa do fluxo de ETL (Extract, Transform, Load) a padronização dos termos através de vocabulários controlados é prioritariamente realizada?",
+        "options": {
+            "A": "Na etapa de Extração, durante a coleta dos dados brutos iniciais.",
+            "B": "Na etapa de Transformação, visando a padronização e interoperabilidade.",
+            "C": "Na etapa de Carga, durante o armazenamento definitivo no banco de dados.",
+            "D": "Na etapa de Pré-Extração, antes do contato com as fontes de dados.",
+            "E": "Na etapa de Visualização, após o processamento completo dos registros."
+        },
+        "correct": "B",
+        "explanation": "A alternativa B está correta pois a etapa de Transformação é onde os dados brutos são mapeados para ontologias visando a interoperabilidade semântica. As demais erram porque: A foca na captura, não na padronização semântica dos dados; C foca no envio dos dados já tratados ao destino; D ocorre antes do acesso efetivo aos dados para ETL; E é o consumo dos dados após todo o processo.",
+        "area": "Bioinformática",
+        "difficulty": "fácil",
+        "subject": "Vocabulários controlados, ontologias e técnicas de extração, transformação e carga de dados (ETL)",
+        "id": 1968
+    },
+    {
+        "text": "No preparo de bibliotecas para Sequenciamento de Nova Geração (NGS), a utilização de Identificadores Moleculares Únicos (UMIs) antes da fase de amplificação é fundamental para a acurácia dos dados. Qual é o objetivo principal dessa técnica?",
+        "options": {
+            "A": "Reduzir o tempo total de processamento enzimático da amostra.",
+            "B": "Eliminar a necessidade de quantificação via fluorometria (Qubit).",
+            "C": "Distinguir duplicatas de PCR de moléculas originais do template.",
+            "D": "Substituir o uso de reagentes de bloqueio de sequências repetitivas.",
+            "E": "Aumentar a estabilidade térmica das pontes de hidrogênio no DNA."
+        },
+        "correct": "C",
+        "explanation": "A alternativa C está correta pois os UMIs rotulam moléculas individuais permitindo identificar bioinformaticamente artefatos de amplificação e colapsar duplicatas. As demais erram porque: A prolonga o tempo laboratorial, B exige quantificação fluorométrica obrigatória, D não atua em sequências repetitivas e E não altera a termodinâmica estrutural do DNA.",
+        "area": "Laboratório",
+        "difficulty": "difícil",
+        "subject": "Biologia, biologia molecular e genética",
+        "id": 1969
+    },
+    {
+        "text": "No contexto de estudos genômicos multicêntricos integrados ao Genoma SUS, qual norma ética é mandatória para o manejo e o compartilhamento internacional de amostras biológicas?",
+        "options": {
+            "A": "O TCLE deve autorizar o uso exclusivo em um único projeto de pesquisa.",
+            "B": "A aprovação do centro coordenador invalida a necessidade de CEPs locais.",
+            "C": "O envio de material ao exterior exige anuência institucional e da CONEP.",
+            "D": "O descarte de amostras genéticas é obrigatório após cinco anos de estudo.",
+            "E": "A assinatura do TCLE pelo pesquisador substitui a do participante local."
+        },
+        "correct": "C",
+        "explanation": "A alternativa C está correta pois a remessa de material biológico humano ao exterior exige aprovação ética da CONEP e anuência institucional conforme Resolução 466/12. As demais erram porque: A restringe o uso futuro em biobanks, B ignora a soberania dos CEPs locais, D confunde prazos de guarda documental com amostras e E viola o princípio da autonomia individual.",
+        "area": "Laboratório",
+        "difficulty": "difícil",
+        "subject": "Ética em pesquisa e noções de estudos multicêntricos",
+        "id": 1970
+    },
+    {
+        "text": "Em estudos de associação genômica ampla (GWAS), qual métrica estatística é primordialmente utilizada para determinar se a associação observada entre uma variante genética e um fenótipo é estatisticamente significativa?",
+        "options": {
+            "A": "O valor-p, para testar a significância estatística.",
+            "B": "O desvio padrão, para medir a dispersão dos dados.",
+            "C": "A média simples, para avaliar a tendência central.",
+            "D": "A correlação, para verificar a relação entre SNPs.",
+            "E": "A variância, para quantificar a oscilação amostral."
+        },
+        "correct": "A",
+        "explanation": "A alternativa A está correta pois o valor-p avalia a probabilidade de os resultados ocorrerem ao acaso sob a hipótese nula. As demais erram porque: B apenas quantifica dispersão, C descreve tendência central, D mede força linear e E detalha variabilidade global.",
+        "area": "Bioinformática",
+        "difficulty": "fácil",
+        "subject": "Estatística aplicada à genômica",
+        "id": 1971
+    },
+    {
+        "text": "No contexto do projeto Genoma SUS, qual medida é fundamental para proteger a identidade dos voluntários ao compartilhar dados genômicos, seguindo as diretrizes da LGPD?",
+        "options": {
+            "A": "Uso exclusivo de criptografia simétrica local",
+            "B": "Anonimização ou pseudonimização dos dados",
+            "C": "Armazenamento em mídias físicas removíveis",
+            "D": "Compactação de arquivos para transferência",
+            "E": "Divulgação pública de metadados sensíveis"
+        },
+        "correct": "B",
+        "explanation": "A alternativa B está correta pois a anonimização e pseudonimização garantem a privacidade ao impedir a identificação direta do indivíduo. As demais erram porque: A foca apenas em cifragem técnica, C eleva riscos de extravio físico, D serve apenas para redução de volume e E fere o sigilo dos participantes.",
+        "area": "Bioinformática",
+        "difficulty": "fácil",
+        "subject": "Segurança de dados",
+        "id": 1972
+    },
+    {
+        "text": "No contexto do processamento de amostras para o Genoma SUS, qual prática é indispensável para garantir a conformidade com os princípios de Boas Práticas Laboratoriais (BPL)?",
+        "options": {
+            "A": "Calibração periódica de equipamentos e registros de uso.",
+            "B": "Descarte de ponteiras usadas em recipientes de lixo comum.",
+            "C": "Uso de jalecos de algodão fora das áreas de manipulação.",
+            "D": "Armazenamento de amostras e reagentes no mesmo ambiente.",
+            "E": "Execução de tarefas baseada em instruções apenas verbais."
+        },
+        "correct": "A",
+        "explanation": "A alternativa A é a correta pois a calibração e o registro garantem a rastreabilidade e precisão exigidas pela BPL. As demais erram porque: B ignora normas de descarte infectante, C viola biossegurança ao circular paramentado, D permite contaminação cruzada entre materiais e E descumpre a obrigatoriedade de POPs documentados.",
+        "area": "Laboratório",
+        "difficulty": "médio",
+        "subject": "Boas Práticas de Laboratório (BPL), biossegurança e controle de qualidade",
+        "id": 1973
+    },
+    {
+        "text": "No preparo de bibliotecas para Sequenciamento de Nova Geração (NGS), a quantificação final é crítica. Qual método é considerado o padrão-ouro para garantir a densidade ideal de clusters em sequenciamento por síntese e por qual motivo técnico?",
+        "options": {
+            "A": "Fluorometria (Qubit), pois mede apenas DNA de fita dupla íntegro.",
+            "B": "Espectrofotometria (NanoDrop), pela rapidez e detecção de pureza.",
+            "C": "qPCR, pois quantifica apenas moléculas com adaptadores funcionais.",
+            "D": "Eletroforese capilar (Bioanalyzer), pelo foco no tamanho do fragmento.",
+            "E": "Digital PCR, por ser o método absoluto independente de padrões externos."
+        },
+        "correct": "C",
+        "explanation": "A qPCR é o padrão-ouro porque utiliza primers complementares aos adaptadores, garantindo que apenas moléculas passíveis de formar clusters sejam contadas, otimizando a ocupação da célula de fluxo. As demais erram porque: A não distingue moléculas com ou sem adaptadores; B sofre interferência de contaminantes e nucleotídeos livres; D foca na distribuição de tamanho e não concentração molar; E apesar de absoluta, não é a prática rotineira recomendada.",
+        "area": "Laboratório",
+        "difficulty": "difícil",
+        "subject": "Biologia, biologia molecular e genética",
+        "id": 1974
+    },
+    {
+        "text": "Durante o preparo de bibliotecas para sequenciamento (NGS), a presença proeminente de 'adapter dimers' (pico em ~120-140 bp) compromete a eficiência da corrida. Qual a causa provável e a solução técnica para esse artefato?",
+        "options": {
+            "A": "Alta razão adaptador-inserto; limpar com esferas magnéticas.",
+            "B": "DNA genômico degradado; aumentar ciclos de amplificação final.",
+            "C": "Excesso de fragmentação; reduzir o tempo de sonicação térmica.",
+            "D": "Presença de RNA residual; realizar tratamento prévio com RNase.",
+            "E": "Falha no anelamento; elevar a temperatura de 'melting' dos primers."
+        },
+        "correct": "A",
+        "explanation": "A alternativa A está correta pois dímeros surgem do excesso de adaptadores em relação ao inserto, exigindo limpeza seletiva com esferas para evitar desperdício de clusters; as demais erram porque: B amplia erros sequenciais, C foca em fragmentação física, D remove RNA irrelevante e E altera apenas especificidade térmica.",
+        "area": "Laboratório",
+        "difficulty": "difícil",
+        "subject": "Biologia, biologia molecular e genética",
+        "id": 1975
+    },
+    {
+        "text": "No processamento de dados de sequenciamento de larga escala seguindo as melhores práticas do GATK, qual é a função primordial da etapa de Base Quality Score Recalibration (BQSR)?",
+        "options": {
+            "A": "Remove sequências duplicadas originadas durante a fase de PCR.",
+            "B": "Realinha leituras mapeadas em regiões com indels problemáticos.",
+            "C": "Corrige vieses sistemáticos nos escores de qualidade das bases.",
+            "D": "Atribui escores de confiança estatística para as variantes VCF.",
+            "E": "Filtra variantes falso-positivas usando modelos de aprendizado."
+        },
+        "correct": "C",
+        "explanation": "C é a correta pois o BQSR utiliza modelos estatísticos para ajustar os escores de qualidade originais, mitigando erros sistemáticos da plataforma. As demais erram porque: A remove duplicatas de PCR, B executa realinhamento local, D calcula qualidade da variante e E aplica filtragem por VQSR.",
+        "area": "Bioinformática",
+        "difficulty": "médio",
+        "subject": "Bioinformática e análise genômica",
+        "id": 1976
+    },
+    {
+        "text": "No contexto do pipeline GATK Best Practices para a descoberta de variantes em larga escala, qual é a principal função da etapa de Variant Quality Score Recalibration (VQSR)?",
+        "options": {
+            "A": "Construir um modelo estatístico para filtrar variantes falso-positivas.",
+            "B": "Realizar o alinhamento local de leituras para detectar indels complexos.",
+            "C": "Estimar a cobertura média de profundidade em regiões de exoma clínico.",
+            "D": "Detectar variantes estruturais baseadas em leituras do tipo split-reads.",
+            "E": "Normalizar as contagens de leituras para análise de variação de cópia."
+        },
+        "correct": "A",
+        "explanation": "O VQSR utiliza aprendizado de máquina e conjuntos de variantes confiáveis para modelar as propriedades de variantes verdadeiras e filtrar artefatos de sequenciamento. As demais erram porque: B refere-se ao alinhamento inicial de sequências, C foca em métricas de profundidade de cobertura, D busca variantes estruturais via split-reads e E descreve a normalização para variação de cópia.",
+        "area": "Bioinformática",
+        "difficulty": "difícil",
+        "subject": "Bioinformática e análise genômica",
+        "id": 1977
+    },
+    {
+        "text": "No preparo de bibliotecas para Sequenciamento de Nova Geração (NGS) em larga escala, a etapa de quantificação e avaliação da integridade do DNA genômico é crítica para o sucesso do ensaio. Considerando as boas práticas laboratoriais e as tecnologias de controle de qualidade, assinale a alternativa correta:",
+        "options": {
+            "A": "Espectrofotometria UV é o padrão ouro para quantificação pré-sequenciamento.",
+            "B": "O uso de fluorimetria oferece maior especificidade e precisão que absorbância.",
+            "C": "Fragmentação enzimática por transposase independe da concentração de EDTA.",
+            "D": "Amostras com DIN abaixo de 3.0 produzem bibliotecas WGS de alta cobertura.",
+            "E": "O controle de qualidade final por eletroforese capilar é opcional no NGS."
+        },
+        "correct": "B",
+        "explanation": "A alternativa B está correta pois a fluorimetria utiliza corantes específicos que evitam a superestimação por contaminantes comum na absorbância. As demais erram porque: A detecta impurezas como RNA e proteínas; C sofre inibição por agentes quelantes; D utiliza DNA degradado e inadequado; E é indispensável para validação do tamanho da biblioteca.",
+        "area": "Laboratório",
+        "difficulty": "difícil",
+        "subject": "Tecnologias laboratoriais em genômica (sequenciamento de nova geração - NGS, extração de DNA genômico, controle de qualidade, preparo de amostras)",
+        "id": 1978
+    },
+    {
+        "text": "No contexto de projetos genômicos populacionais como o Genoma SUS, a técnica de 'Joint Genotyping' é preferida ao 'Single Sample Calling'. Qual a principal vantagem técnica dessa abordagem para a detecção de variantes?",
+        "options": {
+            "A": "Aumento do poder estatístico em locais com baixa cobertura.",
+            "B": "Redução da complexidade computacional em grandes cohorts.",
+            "C": "Eliminação total de falso-positivos em regiões de repetição.",
+            "D": "Independência de referências genômicas durante o alinhamento.",
+            "E": "Padronização exclusiva para sequenciadores de leitura longa."
+        },
+        "correct": "A",
+        "explanation": "A opção A está correta pois o Joint Genotyping utiliza informações de múltiplos indivíduos para distinguir locais de referência de dados ausentes, aumentando a sensibilidade em áreas de baixa profundidade. As demais erram porque: B eleva significativamente a carga computacional, C não resolve problemas de mapeamento em repetições, D exige alinhamento prévio contra referência genômica e E foca em dados de Short-Reads.",
+        "area": "Bioinformática",
+        "difficulty": "difícil",
+        "subject": "Bioinformática e análise genômica",
+        "id": 1979
+    },
+    {
+        "text": "Em conformidade com as Boas Práticas de Laboratório (BPL) e normas de biossegurança no sequenciamento genômico, qual conduta é indispensável para o controle de qualidade analítico?",
+        "options": {
+            "A": "Calibrar equipamentos anualmente sem manter os logs de uso diário.",
+            "B": "Descartar o brometo de etídio diretamente em pia de uso comum.",
+            "C": "Registrar a calibração de micropipetas e monitorar o uso diário.",
+            "D": "Reutilizar as luvas descartáveis após a assepsia com álcool 70%.",
+            "E": "Acondicionar reagentes sensíveis à luz em recipientes incolores."
+        },
+        "correct": "C",
+        "explanation": "A resposta C é a correta pois as BPL exigem rastreabilidade total de equipamentos para validar resultados. As demais erram porque: A exige registros diários obrigatórios, B proíbe descarte inadequado de tóxicos, D veda reuso de EPI descartável e E requer proteção contra fotodegradação.",
+        "area": "Laboratório",
+        "difficulty": "médio",
+        "subject": "Boas Práticas de Laboratório (BPL), biossegurança e controle de qualidade",
+        "id": 1980
+    },
+    {
+        "text": "No contexto de integração de dados genômicos para o Genoma SUS, qual é o objetivo principal da etapa de Transformação em um fluxo ETL (Extract, Transform, Load)?",
+        "options": {
+            "A": "Padronizar e limpar dados para garantir a interoperabilidade.",
+            "B": "Coletar os dados brutos diretamente de sequenciadores de DNA.",
+            "C": "Armazenar permanentemente os dados em bancos de dados finais.",
+            "D": "Deletar metadados redundantes para economizar o espaço em disco.",
+            "E": "Realizar a anotação funcional automática de todas as variantes."
+        },
+        "correct": "A",
+        "explanation": "A etapa de Transformação ajusta os dados extraídos a padrões e vocabulários controlados para análise posterior, garantindo consistência técnica. As demais erram porque: B descreve a etapa de Extração, C refere-se ao Carregamento (Load), D foca em compressão de arquivos e E é uma análise funcional específica.",
+        "area": "Bioinformática",
+        "difficulty": "fácil",
+        "subject": "Vocabulários controlados, ontologias e técnicas de extração, transformação e carga de dados (ETL)",
+        "id": 1981
+    },
+    {
+        "text": "No contexto de pesquisas genômicas e estudos multicêntricos envolvendo seres humanos no Brasil, qual documento normativo estabelece as diretrizes éticas fundamentais e a organização do sistema CEP/CONEP?",
+        "options": {
+            "A": "Resolução CNS nº 466 de 2012",
+            "B": "Lei Geral de Proteção de Dados",
+            "C": "Declaração de Salamanca (1994)",
+            "D": "Resolução RDC nº 20 do ano 2014",
+            "E": "Norma Técnica ISO 9001 de 2015"
+        },
+        "correct": "A",
+        "explanation": "A alternativa A é a correta pois a Resolução CNS 466/2012 é a norma base da ética em pesquisa brasileira. As demais erram porque: B regula apenas privacidade de dados pessoais, C foca em educação especial inclusiva, D trata exclusivamente de transporte biológico e E padroniza sistemas de gestão.",
+        "area": "Laboratório",
+        "difficulty": "fácil",
+        "subject": "Ética em pesquisa e noções de estudos multicêntricos",
+        "id": 1982
+    },
+    {
+        "text": "Em estudos multicêntricos de genômica humana, qual procedimento é essencial para garantir a conformidade ética e a proteção dos participantes conforme as normas brasileiras?",
+        "options": {
+            "A": "Aprovação do protocolo pelo sistema CEP/CONEP e assinatura do TCLE.",
+            "B": "Registro apenas no comitê de ética da instituição coordenadora.",
+            "C": "Dispensa do consentimento para análises de amostras anonimizadas.",
+            "D": "Divulgação antecipada de dados brutos em repositório estrangeiro.",
+            "E": "Coleta biológica compulsória baseada no critério de saúde pública."
+        },
+        "correct": "A",
+        "explanation": "A alternativa A é a correta pois estudos genômicos multicêntricos exigem rigorosa avaliação pelo sistema CEP/CONEP e a obtenção de consentimento livre para assegurar a ética na pesquisa. As demais erram porque: B exclui a responsabilidade ética dos centros associados, C desrespeita normas específicas para material genético humano, D compromete o sigilo antes do aval institucional e E desconsidera a autonomia e integridade do voluntário.",
+        "area": "Laboratório",
+        "difficulty": "médio",
+        "subject": "Ética em pesquisa e noções de estudos multicêntricos",
+        "id": 1983
+    },
+    {
+        "text": "No contexto do processamento de dados genômicos no Genoma SUS, qual é o principal objetivo da utilização de vocabulários controlados e ontologias, como o Gene Ontology (GO)?",
+        "options": {
+            "A": "Padronizar a descrição de funções gênicas e processos biológicos.",
+            "B": "Aumentar a velocidade física de sequenciamento de DNA em larga escala.",
+            "C": "Reduzir a necessidade de armazenamento de arquivos FASTQ e BAM.",
+            "D": "Eliminar a necessidade de etapas de controle de qualidade das amostras.",
+            "E": "Substituir o uso de linguagens de programação no processamento de dados."
+        },
+        "correct": "A",
+        "explanation": "A alternativa A está correta pois as ontologias fornecem um vocabulário comum para descrever funções gênicas e processos biológicos de forma estruturada. As demais erram porque: B foca na velocidade do hardware, C refere-se à compressão de arquivos, D negligencia o controle de qualidade e E ignora a necessidade de programação.",
+        "area": "Bioinformática",
+        "difficulty": "fácil",
+        "subject": "Vocabulários controlados, ontologias e técnicas de extração, transformação e carga de dados (ETL)",
+        "id": 1984
+    },
+    {
+        "text": "No processamento de bibliotecas para Sequenciamento de Nova Geração (NGS) via tagmentação, o controle rigoroso da concentração inicial de DNA genômico é fundamental. Caso a relação entre a enzima transposase e a quantidade de DNA de entrada esteja incorreta (excesso de enzima para pouco DNA), qual será o impacto direto no perfil da biblioteca final?",
+        "options": {
+            "A": "Fragmentos excessivamente curtos dificultando o alinhamento.",
+            "B": "Formação de dímeros de adaptadores que impedem o sequenciamento.",
+            "C": "Redução da complexidade por baixa eficiência de ligação enzimática.",
+            "D": "Presença de contaminantes proteicos que inibem a DNA polimerase.",
+            "E": "Aumento da taxa de duplicatas por excesso de ciclos na PCR final."
+        },
+        "correct": "A",
+        "explanation": "No método de tagmentação, a proporção enzima/DNA determina o tamanho dos fragmentos; pouco DNA gera fragmentos muito curtos que prejudicam a bioinformática. As demais erram porque: B relaciona-se a adaptadores livres, C envolve protocolos de ligação clássica, D refere-se à pureza e E foca na amplificação excessiva.",
+        "area": "Laboratório",
+        "difficulty": "difícil",
+        "subject": "Tecnologias laboratoriais em genômica (sequenciamento de nova geração - NGS, extração de DNA genômico, controle de qualidade, preparo de amostras)",
+        "id": 1985
+    },
+    {
+        "text": "No contexto do compartilhamento de dados genômicos no projeto Genoma SUS, qual medida é fundamental para garantir a privacidade dos participantes conforme a LGPD?",
+        "options": {
+            "A": "Uso de senhas simples para facilitar o acesso externo.",
+            "B": "Armazenamento em nuvem pública sem o uso de criptografia.",
+            "C": "Anonimização ou pseudonimização dos identificadores pessoais.",
+            "D": "Publicação irrestrita do genoma completo com o nome do doador.",
+            "E": "Manutenção de cópias físicas sem controle de acesso restrito."
+        },
+        "correct": "C",
+        "explanation": "A alternativa C é a correta pois a desvinculação de dados pessoais da sequência genômica protege a privacidade conforme exigido por leis de proteção de dados. As demais estão incorretas porque: A compromete a segurança com senhas fracas, B expõe dados sem camadas de proteção, D viola diretamente o sigilo do participante e E facilita acessos físicos indevidos.",
+        "area": "Bioinformática",
+        "difficulty": "fácil",
+        "subject": "Segurança de dados",
+        "id": 1986
+    },
+    {
+        "text": "No processo de preparação de bibliotecas para sequenciamento de nova geração (NGS), a etapa de seleção de tamanho (size selection) com esferas magnéticas (SPRI beads) é crítica. Qual fenômeno ocorre se a razão de volume esferas/DNA for excessivamente alta na purificação pós-ligação?",
+        "options": {
+            "A": "Favorece a retenção de fragmentos curtos e dímeros de adaptadores.",
+            "B": "Causa a desnaturação térmica irreversível da dupla fita de DNA.",
+            "C": "Inibe a polimerase na etapa de amplificação por saturação iônica.",
+            "D": "Promove a hibridização cruzada entre insertos de diferentes fontes.",
+            "E": "Induz o cisalhamento físico do DNA por estresse hidrodinâmico."
+        },
+        "correct": "A",
+        "explanation": "A alternativa A está correta pois razões elevadas de esferas reduzem o ponto de corte, retendo fragmentos curtos e dímeros de adaptadores que prejudicam o sequenciamento. As demais erram porque: B independe da proporção de beads utilizada, C envolve resíduos químicos como etanol ou sais, D decorre de hibridização cruzada ou excesso de ciclos e E resulta de métodos físicos como ultrassom.",
+        "area": "Laboratório",
+        "difficulty": "difícil",
+        "subject": "Tecnologias laboratoriais em genômica (sequenciamento de nova geração - NGS, extração de DNA genômico, controle de qualidade, preparo de amostras)",
+        "id": 1987
+    },
+    {
+        "text": "No processamento de dados de sequenciamento de nova geração (NGS), qual ferramenta é amplamente utilizada para manipular e processar arquivos de alinhamento nos formatos SAM e BAM?",
+        "options": {
+            "A": "O software SAMtools.",
+            "B": "O software BLAST.",
+            "C": "O software PyMOL.",
+            "D": "O software ClustalW.",
+            "E": "O software FastQC."
+        },
+        "correct": "A",
+        "explanation": "O SAMtools é a ferramenta fundamental para filtrar, converter e processar alinhamentos de NGS nos formatos SAM/BAM. As demais erram porque: B foca em busca de similaridade de sequências, C visualiza modelos de estruturas de proteínas, D executa alinhamentos múltiplos de sequências globais e E realiza controle de qualidade de dados brutos.",
+        "area": "Bioinformática",
+        "difficulty": "fácil",
+        "subject": "Programação e ferramentas computacionais",
+        "id": 1988
+    },
+    {
+        "text": "Na preparação de bibliotecas de DNA para sequenciamento em larga escala (NGS) utilizando células de fluxo padronizadas (patterned flow cells), qual estratégia é fundamental para mitigar o fenômeno de 'index hopping' e garantir a integridade da multiplexação?",
+        "options": {
+            "A": "Uso de adaptadores com índices duplos únicos (UDIs).",
+            "B": "Fragmentação mecânica via ultrassom de alta energia.",
+            "C": "Purificação final com esferas magnéticas na razão 1.0x.",
+            "D": "Quantificação absoluta por PCR digital em gotas (ddPCR).",
+            "E": "Desnaturação química com NaOH em concentração elevada."
+        },
+        "correct": "A",
+        "explanation": "A alternativa A está correta pois os UDIs permitem identificar e descartar leituras com combinações incorretas de índices geradas pelo index hopping. As demais incorrem em erro pois: B foca na integridade física, C seleciona tamanhos de fragmentos, D garante apenas precisão molar e E atua na desnaturação de fitas.",
+        "area": "Laboratório",
+        "difficulty": "difícil",
+        "subject": "Tecnologias laboratoriais em genômica (sequenciamento de nova geração - NGS, extração de DNA genômico, controle de qualidade, preparo de amostras)",
+        "id": 1989
+    },
+    {
+        "text": "No fluxo de trabalho do Genoma SUS para sequenciamento de nova geração (NGS), a preparação de bibliotecas via tagmentação por transposases oferece vantagens e limitações específicas em comparação ao cisalhamento mecânico. Assinale a alternativa que descreve corretamente uma característica técnica desse processo.",
+        "options": {
+            "A": "A transposição exige menor massa de DNA de entrada para a reação.",
+            "B": "O cisalhamento mecânico realiza a inserção direta de adaptadores.",
+            "C": "A tagmentação é menos sensível a inibidores químicos e quelantes.",
+            "D": "O método mecânico dispensa o reparo enzimático das extremidades.",
+            "E": "A transposição assegura quebra totalmente aleatória das sequências."
+        },
+        "correct": "A",
+        "explanation": "A tagmentação combina fragmentação e adição de adaptadores em etapa única, permitindo o uso de quantidades reduzidas de DNA inicial em comparação aos métodos físicos tradicionais. As demais erram porque: B exige etapa de ligadura posterior, C é altamente sensível ao EDTA, D requer reparo das pontas e E apresenta viés de inserção em sítios específicos.",
+        "area": "Laboratório",
+        "difficulty": "difícil",
+        "subject": "Biologia, biologia molecular e genética",
+        "id": 1990
+    },
+    {
+        "text": "No preparo de bibliotecas para Sequenciamento de Nova Geração (NGS), qual método é mais eficaz para quantificar a integridade do DNA genômico, visando minimizar o viés de cobertura causado pela degradação da amostra?",
+        "options": {
+            "A": "Eletroforese capilar para determinação do DIN (DNA Integrity Number).",
+            "B": "Espectrofotometria de microvolume para cálculo da razão A260/A280.",
+            "C": "Fluorometria de canal duplo para detecção de dímeros de primer.",
+            "D": "Ensaio de PCR quantitativo (qPCR) focado em genes de cópia única.",
+            "E": "Sequenciamento Sanger em fragmentos curtos para verificação de SNPs."
+        },
+        "correct": "A",
+        "explanation": "A eletroforese capilar permite calcular o DIN, fornecendo uma métrica objetiva da fragmentação do DNA genômico indispensável para o sucesso do NGS. As demais erram porque: B mede pureza química e não integridade estrutural; C foca em subprodutos e não no DNA inicial; D avalia amplificabilidade mas ignora a fragmentação global; E serve para validar sequências e não integridade.",
+        "area": "Laboratório",
+        "difficulty": "difícil",
+        "subject": "Biologia, biologia molecular e genética",
+        "id": 1991
+    },
+    {
+        "text": "Em estudos de genética de populações e bioinformática, qual teste estatístico é comumente empregado para verificar se as frequências genotípicas observadas em uma amostra divergem significativamente do esperado sob acasalamento aleatório?",
+        "options": {
+            "A": "Teste de Mantel para análise de correlação espacial.",
+            "B": "Teste de Qui-quadrado para o Equilíbrio de Hardy-Weinberg.",
+            "C": "Teste t de Student para comparação de médias de alelos.",
+            "D": "Teste de Wilcoxon para análise de postos de variantes.",
+            "E": "Teste de Log-rank para comparação de sobrevida gênica."
+        },
+        "correct": "B",
+        "explanation": "A alternativa B está correta pois o Qui-quadrado permite comparar frequências observadas e esperadas sob as premissas do modelo de Hardy-Weinberg. As demais erram porque: A foca em correlação espacial, C compara médias de grupos, D utiliza postos não-paramétricos e E avalia o tempo de ocorrência.",
+        "area": "Bioinformática",
+        "difficulty": "fácil",
+        "subject": "Estatística aplicada à genômica",
+        "id": 1992
+    },
+    {
+        "text": "No contexto da integração de dados genômicos para o projeto Genoma SUS, qual é o papel fundamental da etapa de 'Transformação' dentro de um fluxo de ETL?",
+        "options": {
+            "A": "Normalizar e converter dados para assegurar a consistência.",
+            "B": "Coletar sequências brutas diretamente de bancos públicos.",
+            "C": "Carregar os resultados finais em um repositório central.",
+            "D": "Excluir metadados obsoletos sem modificar a estrutura.",
+            "E": "Gerar novas variantes genéticas por meio de simulação."
+        },
+        "correct": "A",
+        "explanation": "A etapa de Transformação é essencial para converter formatos heterogêneos e normalizar termos usando ontologias, garantindo a integridade dos dados genômicos. As demais erram porque: B descreve a etapa de Extração, C refere-se à etapa de Carga, D foca apenas em limpeza e E sugere simulação indevida.",
+        "area": "Bioinformática",
+        "difficulty": "fácil",
+        "subject": "Vocabulários controlados, ontologias e técnicas de extração, transformação e carga de dados (ETL)",
+        "id": 1993
+    },
+    {
+        "text": "No processo de ETL (Extração, Transformação e Carga) em Bioinformática, qual o objetivo principal do uso de ontologias e vocabulários controlados durante a etapa de transformação?",
+        "options": {
+            "A": "Garantir a padronização e interoperabilidade semântica dos dados.",
+            "B": "Otimizar a velocidade de transferência física entre os servidores.",
+            "C": "Reduzir o espaço de armazenamento dos arquivos FASTQ comprimidos.",
+            "D": "Eliminar a etapa de controle de qualidade das sequências brutas.",
+            "E": "Realizar a extração física das amostras de DNA no laboratório."
+        },
+        "correct": "A",
+        "explanation": "A alternativa A é correta pois ontologias organizam o conhecimento permitindo a integração de dados entre diferentes sistemas. As demais erram porque: B foca em rede, C em compressão, D em qualidade técnica e E em bancada biológica.",
+        "area": "Bioinformática",
+        "difficulty": "fácil",
+        "subject": "Vocabulários controlados, ontologias e técnicas de extração, transformação e carga de dados (ETL)",
+        "id": 1994
+    },
+    {
+        "text": "Durante a preparação de bibliotecas de DNA para sequenciamento em larga escala (NGS), o excesso de ciclos de PCR pode levar à 'sobre-amplificação'. Esse fenômeno resulta em um perfil eletroforético anômalo caracterizado por um 'smear' de alto peso molecular. Qual processo molecular explica esse artefato?",
+        "options": {
+            "A": "Esgotamento de primers e hibridização de fitas via regiões adaptadoras.",
+            "B": "Fragmentação excessiva do DNA genômico por métodos físicos ou químicos.",
+            "C": "Erro na proporção de esferas magnéticas durante a limpeza da biblioteca.",
+            "D": "Inibição da polimerase por resíduos de solventes durante a lavagem final.",
+            "E": "Ligação inespecífica de adaptadores devido ao excesso de ligase na reação."
+        },
+        "correct": "A",
+        "explanation": "A alternativa A está correta pois, com o esgotamento de primers, fitas de DNA desnaturadas se anelam via adaptadores complementares em vez de amplificarem. As demais erram porque: B gera fragmentos curtos, C altera o rendimento, D impede a amplificação e E cria picos de 120pb.",
+        "area": "Laboratório",
+        "difficulty": "difícil",
+        "subject": "Biologia, biologia molecular e genética",
+        "id": 1995
+    },
+    {
+        "text": "Em estudos de bioinformática aplicados à genética de populações, qual modelo matemático é utilizado para prever frequências genotípicas a partir das alélicas em uma população ideal?",
+        "options": {
+            "A": "O modelo de Equilíbrio de Hardy-Weinberg",
+            "B": "O cálculo de Probabilidade Bayesiana",
+            "C": "A Lei da Segregação Independente",
+            "D": "O processo de Deriva Genética Aleatória",
+            "E": "A Teoria da Seleção Natural Direcional"
+        },
+        "correct": "A",
+        "explanation": "A alternativa A está correta pois o modelo de Hardy-Weinberg estabelece a relação matemática entre frequências alélicas e genotípicas sob condições ideais. As demais estão incorretas porque: B foca em estatística de inferência, C trata da herança de genes individuais, D altera frequências por acaso e E descreve mudanças adaptativas fenotípicas.",
+        "area": "Bioinformática",
+        "difficulty": "fácil",
+        "subject": "Genética de populações",
+        "id": 1996
+    },
+    {
+        "text": "No fluxo de análise de bioinformática do Genoma SUS, qual ferramenta é a principal referência para a manipulação, conversão e visualização de arquivos de alinhamento nos formatos SAM e BAM?",
+        "options": {
+            "A": "O software BCFtools",
+            "B": "O software SAMtools",
+            "C": "O software FastQC",
+            "D": "O software Bowtie2",
+            "E": "O software Picard"
+        },
+        "correct": "B",
+        "explanation": "A alternativa B é a correta pois o SAMtools é a ferramenta padrão para manipulação de arquivos de alinhamento SAM e BAM. As demais alternativas erram porque: A processa arquivos VCF, C checa qualidade de leituras, D é um software alinhador e E gerencia metadados Java.",
+        "area": "Bioinformática",
+        "difficulty": "fácil",
+        "subject": "Programação e ferramentas computacionais",
+        "id": 1997
+    },
+    {
+        "text": "No âmbito de pesquisas genômicas multicêntricas envolvendo seres humanos, qual requisito ético é fundamental para assegurar a autonomia do voluntário e a transparência do estudo?",
+        "options": {
+            "A": "O Termo de Consentimento Livre e Esclarecido (TCLE) assinado.",
+            "B": "O Protocolo de Biossegurança Nível 3 para o manejo de amostras.",
+            "C": "O Certificado de Calibração de Sequenciadores de Nova Geração.",
+            "D": "O Relatório de Gastos Operacionais e Logística de Transporte.",
+            "E": "O Manual de Procedimentos Operacionais Padrão de Laboratório."
+        },
+        "correct": "A",
+        "explanation": "A alternativa A está correta pois o TCLE formaliza a aceitação voluntária e esclarecida do participante conforme as normas éticas nacionais. As demais erram porque: B foca em riscos biológicos, C trata de manutenção técnica, D refere-se a custos logísticos e E foca em rotinas laboratoriais.",
+        "area": "Laboratório",
+        "difficulty": "fácil",
+        "subject": "Ética em pesquisa e noções de estudos multicêntricos",
+        "id": 1998
+    },
+    {
+        "text": "No contexto de integração de dados genômicos e bioinformática, qual é o principal objetivo da etapa de 'Transformação' (Transform) em um fluxo de ETL?",
+        "options": {
+            "A": "Padronizar dados brutos usando ontologias e formatos compatíveis.",
+            "B": "Transferir as sequências brutas para os servidores de armazenamento.",
+            "C": "Coletar amostras de DNA diretamente de pacientes em unidades de saúde.",
+            "D": "Remover registros obsoletos para otimizar o espaço no disco rígido.",
+            "E": "Executar o sequenciamento de nova geração (NGS) de modo automatizado."
+        },
+        "correct": "A",
+        "explanation": "A etapa de Transformação no processo ETL foca na limpeza, padronização e estruturação dos dados biológicos para garantir interoperabilidade entre sistemas. As demais erram porque: B refere-se à carga ou backup físico; C é coleta laboratorial pré-análise; D trata de manutenção de armazenamento; E descreve o processo biotecnológico laboratorial.",
+        "area": "Bioinformática",
+        "difficulty": "fácil",
+        "subject": "Vocabulários controlados, ontologias e técnicas de extração, transformação e carga de dados (ETL)",
+        "id": 1999
+    },
+    {
+        "text": "No contexto de estudos genômicos multicêntricos coordenados pelo Genoma SUS, qual elemento é indispensável para assegurar o respeito à autonomia e aos direitos do participante de pesquisa antes da coleta de amostras?",
+        "options": {
+            "A": "O Termo de Consentimento Livre e Esclarecido (TCLE) assinado.",
+            "B": "O ofício de autorização emitido pela diretoria do hospital.",
+            "C": "A cópia do currículo Lattes do investigador principal local.",
+            "D": "O comprovante de treinamento em boas práticas laboratoriais.",
+            "E": "A declaração de transporte de amostras biológicas perigosas."
+        },
+        "correct": "A",
+        "explanation": "A alternativa A é a correta pois o TCLE formaliza a autonomia e o consentimento do participante em pesquisas. As demais erram porque: B é documento administrativo, C foca em currículo, D aborda qualidade técnica e E trata de biossegurança logística.",
+        "area": "Laboratório",
+        "difficulty": "fácil",
+        "subject": "Ética em pesquisa e noções de estudos multicêntricos",
+        "id": 2000
+    },
+    {
+        "text": "Em estudos de associação genômica em larga escala (GWAS), o aumento do número de testes de hipóteses simultâneos eleva a chance de resultados falso-positivos. Qual método é comumente empregado para mitigar esse problema?",
+        "options": {
+            "A": "Correção de Bonferroni para múltiplos testes.",
+            "B": "Cálculo do desvio padrão da amostra total.",
+            "C": "Aplicação do teste t de Student bicaudal.",
+            "D": "Uso de regressão linear simples na análise.",
+            "E": "Ajuste de normalidade pelo teste de Shapiro."
+        },
+        "correct": "A",
+        "explanation": "A Correção de Bonferroni é a correta pois ajusta o p-valor dividindo o limite de significância pelo número total de testes realizados. As demais erram porque: B avalia variabilidade, C compara médias, D estima relações e E verifica normalidade.",
+        "area": "Bioinformática",
+        "difficulty": "fácil",
+        "subject": "Estatística aplicada à genômica",
+        "id": 2001
+    },
+    {
+        "text": "No contexto de grandes projetos genômicos vinculados à saúde pública, a condução ética de pesquisas com seres humanos exige rigor na aplicação do Termo de Consentimento Livre e Esclarecido (TCLE). De acordo com as normas vigentes, é correto afirmar que o TCLE:",
+        "options": {
+            "A": "Deve prever o direito de retirada do consentimento a qualquer momento.",
+            "B": "Deve garantir sigilo total, proibindo o recontato futuro com o doador.",
+            "C": "Permite o uso futuro de amostras sem nova aprovação do sistema CEP/CONEP.",
+            "D": "Pode estabelecer renúncia prévia a direitos de indenização por danos.",
+            "E": "Exige que o participante arque com os custos laboratoriais da pesquisa."
+        },
+        "correct": "A",
+        "explanation": "A alternativa A está correta pois a autonomia assegura a interrupção da participação sem quaisquer penalidades ao voluntário. As demais erram porque: B impede vedação de recontato clínico, C exige nova validação ética, D veda renúncia a indenizações e E proíbe cobrança ao participante.",
+        "area": "Laboratório",
+        "difficulty": "médio",
+        "subject": "Noções de saúde pública e ética em pesquisa",
+        "id": 2002
+    },
+    {
+        "text": "No processo de ETL (Extração, Transformação e Carga) para bancos de dados genômicos, qual o papel fundamental de uma ontologia como a Gene Ontology (GO) na fase de transformação?",
+        "options": {
+            "A": "Converter sinais elétricos em bases nitrogenadas durante o processo.",
+            "B": "Padronizar termos para descrever funções de genes e seus produtos.",
+            "C": "Compactar arquivos grandes para reduzir o espaço de armazenamento.",
+            "D": "Limpar contaminantes físicos das amostras biológicas antes da análise.",
+            "E": "Acelerar a velocidade de transferência de dados entre servidores locais."
+        },
+        "correct": "B",
+        "explanation": "A opção B é a correta pois ontologias organizam o conhecimento biológico em vocabulários estruturados essenciais para a integração de metadados. As demais erram porque: A descreve o basecalling em sequenciadores; C é uma técnica de compressão de dados; D refere-se ao preparo laboratorial da amostra; E trata de otimização de largura de banda de rede.",
+        "area": "Bioinformática",
+        "difficulty": "fácil",
+        "subject": "Vocabulários controlados, ontologias e técnicas de extração, transformação e carga de dados (ETL)",
+        "id": 2003
+    },
+    {
+        "text": "No âmbito do projeto Genoma SUS, qual medida é fundamental para proteger a identidade dos participantes ao compartilhar grandes volumes de dados genômicos para fins de pesquisa científica?",
+        "options": {
+            "A": "Uso de senhas compartilhadas entre pesquisadores da rede.",
+            "B": "Armazenamento de dados em nuvem pública sem criptografia.",
+            "C": "Aplicação de técnicas de pseudonimização nos identificadores.",
+            "D": "Divulgação de nomes e CPFs em bancos de dados científicos.",
+            "E": "Manutenção de registros físicos sem controle de acesso local."
+        },
+        "correct": "C",
+        "explanation": "A alternativa C é a correta pois a pseudonimização substitui identificadores diretos por códigos, garantindo a privacidade e permitindo o uso científico seguro. As demais erram porque: A compromete a responsabilidade individual, B expõe dados a interceptações, D viola leis de proteção de dados e E facilita o acesso físico indevido.",
+        "area": "Bioinformática",
+        "difficulty": "fácil",
+        "subject": "Segurança de dados",
+        "id": 2004
+    },
+    {
+        "text": "Durante o preparo de bibliotecas para sequenciamento de nova geração (NGS) no projeto Genoma SUS, a fragmentação do DNA genômico e o controle de qualidade (QC) são etapas críticas para a representatividade dos dados. Assinale a alternativa correta sobre esses processos:",
+        "options": {
+            "A": "A fragmentação por sonicação gera maior viés de sequência que a enzimática.",
+            "B": "O índice de integridade do DNA (DIN) é irrelevante para o sucesso do NGS.",
+            "C": "A tagmentação acopla a fragmentação e a inserção de adaptadores em uma etapa.",
+            "D": "O método de nebulização utiliza ondas sonoras para cisalhar o DNA genômico.",
+            "E": "A quantificação por absorbância (260nm) é o padrão-ouro para bibliotecas."
+        },
+        "correct": "C",
+        "explanation": "A alternativa C está correta pois a tagmentação utiliza transposases para clivar o DNA e inserir adaptadores simultaneamente, otimizando o tempo laboratorial. As demais erram porque: A apresenta maior viés na fragmentação enzimática, B ignora que integridade evita perdas de cobertura, D confunde nebulização com o uso de sonicação e E desconsidera a maior especificidade da fluorimetria no QC.",
+        "area": "Laboratório",
+        "difficulty": "difícil",
+        "subject": "Tecnologias laboratoriais em genômica (sequenciamento de nova geração - NGS, extração de DNA genômico, controle de qualidade, preparo de amostras)",
+        "id": 2005
+    },
+    {
+        "text": "No contexto de integração de dados genômicos e processos de ETL (Extração, Transformação e Carga), qual é a principal finalidade do uso de vocabulários controlados e ontologias como a Gene Ontology (GO)?",
+        "options": {
+            "A": "Padronizar a descrição funcional de produtos gênicos entre espécies.",
+            "B": "Realizar o alinhamento de sequências brutas contra o genoma humano.",
+            "C": "Armazenar exclusivamente os dados brutos de sequenciadores NGS.",
+            "D": "Converter arquivos FASTQ em formatos binários como BAM e CRAM.",
+            "E": "Definir os protocolos físicos de extração de DNA em laboratório."
+        },
+        "correct": "A",
+        "explanation": "A alternativa A é a correta pois as ontologias fornecem um vocabulário estruturado para anotação funcional consistente de genes e proteínas. As demais estão incorretas porque: B refere-se ao mapeamento de sequências, C trata de armazenamento de dados brutos, D descreve conversão de formatos de arquivos e E foca em procedimentos de bancada laboratorial.",
+        "area": "Bioinformática",
+        "difficulty": "fácil",
+        "subject": "Vocabulários controlados, ontologias e técnicas de extração, transformação e carga de dados (ETL)",
+        "id": 2006
+    },
+    {
+        "text": "No âmbito das Boas Práticas Laboratoriais (BPL) e biossegurança aplicadas ao Genoma SUS, qual conduta é essencial para assegurar a integridade dos resultados e a proteção da equipe?",
+        "options": {
+            "A": "Calibração periódica de equipamentos e uso de EPIs adequados.",
+            "B": "Utilização de jalecos de algodão fora da área laboratorial.",
+            "C": "Manuseio de amostras biológicas sem o uso de luvas de proteção.",
+            "D": "Armazenamento de reagentes voláteis em geladeiras domésticas.",
+            "E": "Descarte de resíduos químicos diretamente na rede de esgoto."
+        },
+        "correct": "A",
+        "explanation": "A alternativa A está correta pois as BPL exigem manutenção preventiva e proteção individual para garantir dados confiáveis e segurança ocupacional. As demais erram porque: B expõe o ambiente externo a possíveis contaminantes biológicos, C viola normas fundamentais de proteção individual e biossegurança, D oferece sérios riscos de explosão e contaminação cruzada e E causa danos ambientais e infringe graves legislações sanitárias.",
+        "area": "Laboratório",
+        "difficulty": "médio",
+        "subject": "Boas Práticas de Laboratório (BPL), biossegurança e controle de qualidade",
+        "id": 2007
+    },
+    {
+        "text": "Em estudos genômicos multicêntricos coordenados pelo Genoma SUS, qual requisito ético é indispensável para garantir a proteção dos participantes e a conformidade regulatória nacional no Brasil?",
+        "options": {
+            "A": "Aprovação do protocolo apenas pelo comitê da instituição coordenadora.",
+            "B": "Coleta de consentimento apenas verbal sem o devido termo assinado.",
+            "C": "Submissão e aprovação prévia do projeto pelo sistema CEP/CONEP nacional.",
+            "D": "Envio de dados brutos identificados entre as instituições participantes.",
+            "E": "Uso de amostras clínicas de rotina sem autorização do comitê de ética."
+        },
+        "correct": "C",
+        "explanation": "A alternativa C está correta pois pesquisas multicêntricas no Brasil exigem aprovação no sistema CEP/CONEP para cada centro envolvido. As demais erram porque: A exclui a análise dos comitês participantes, B omite a obrigatoriedade do termo assinado, D viola a privacidade por dados identificados e E ignora a supervisão ética laboratorial.",
+        "area": "Laboratório",
+        "difficulty": "médio",
+        "subject": "Ética em pesquisa e noções de estudos multicêntricos",
+        "id": 2008
+    },
+    {
+        "text": "No preparo de bibliotecas para Sequenciamento de Nova Geração (NGS) no projeto Genoma SUS, a purificação e seleção de tamanho com esferas paramagnéticas (SPRI) são fundamentais. Qual o mecanismo biofísico principal que permite a precipitação seletiva do DNA sobre as esferas em função da concentração de PEG/NaCl?",
+        "options": {
+            "A": "Crowding molecular pelo PEG reduzindo a hidratação e solubilidade.",
+            "B": "Desnaturação térmica das fitas permitindo a adsorção na superfície.",
+            "C": "Formação de pontes de hidrogênio entre as bases e os grupos amina.",
+            "D": "Ligação covalente irreversível mediada por íons magnéticos livres.",
+            "E": "Interação hidrofóbica específica em regiões genômicas ricas em GC."
+        },
+        "correct": "A",
+        "explanation": "A alternativa A está correta pois o PEG atua como agente de crowding molecular, desidratando o DNA e promovendo sua precipitação reversível nas esferas por exclusão de volume. As demais erram porque: B não utiliza calor para desnaturação, C ignora a repulsão eletrostática do fosfato, D a ligação é iônica e reversível e E a técnica independe da sequência de bases.",
+        "area": "Laboratório",
+        "difficulty": "difícil",
+        "subject": "Biologia, biologia molecular e genética",
+        "id": 2009
+    },
+    {
+        "text": "No contexto da Bioinformática e da integração de dados genômicos (ETL), qual é a principal finalidade da utilização de ontologias como a Gene Ontology (GO)?",
+        "options": {
+            "A": "Padronizar a anotação funcional de genes em diferentes espécies.",
+            "B": "Realizar o sequenciamento físico das bases nitrogenadas do DNA.",
+            "C": "Armazenar exclusivamente imagens de alta resolução de proteínas.",
+            "D": "Substituir a necessidade de linguagens de programação como R.",
+            "E": "Gerenciar o resfriamento de supercomputadores de alto desempenho."
+        },
+        "correct": "A",
+        "explanation": "A alternativa A está correta pois ontologias como a GO fornecem vocabulários estruturados para descrever funções gênicas de forma uniforme. As demais erram porque: B refere-se a processos físicos laboratoriais; C descreve armazenamento de dados de imagem; D alega substituição de ferramentas de código; E aborda infraestrutura física de hardware.",
+        "area": "Bioinformática",
+        "difficulty": "fácil",
+        "subject": "Vocabulários controlados, ontologias e técnicas de extração, transformação e carga de dados (ETL)",
+        "id": 2010
+    },
+    {
+        "text": "Em análises estatísticas aplicadas à genômica, como em estudos de associação genômica ampla (GWAS), o 'valor-p' é uma métrica fundamental. Qual é a principal finalidade dessa medida?",
+        "options": {
+            "A": "Estimar a chance de o resultado observado ser fruto do acaso.",
+            "B": "Medir a pureza química do DNA extraído de amostras biológicas.",
+            "C": "Determinar o comprimento total em pares de bases do genoma.",
+            "D": "Prever a estrutura tridimensional final de uma proteína ativa.",
+            "E": "Calcular a velocidade de processamento de um sequenciador NGS."
+        },
+        "correct": "A",
+        "explanation": "A alternativa A está correta porque o valor-p quantifica a evidência estatística contra a hipótese nula em testes de hipótese genômicos. As demais erram porque: B avalia integridade química da amostra, C define o tamanho físico do genoma, D refere-se ao enovelamento proteico estrutural e E mede a performance do hardware de sequenciamento.",
+        "area": "Bioinformática",
+        "difficulty": "fácil",
+        "subject": "Estatística aplicada à genômica",
+        "id": 2011
+    },
+    {
+        "text": "No contexto de curadoria e integração de dados genômicos para o Genoma SUS, o uso de ontologias como o Gene Ontology (GO) desempenha um papel central. Qual é a finalidade primária desses vocabulários controlados no processamento de dados biológicos?",
+        "options": {
+            "A": "Padronizar a descrição funcional de produtos gênicos entre espécies.",
+            "B": "Otimizar a velocidade de processamento de hardware dos sequenciadores.",
+            "C": "Substituir a etapa de filtragem de qualidade das leituras brutas.",
+            "D": "Automatizar o alinhamento de sequências contra genomas de referência.",
+            "E": "Comprimir o tamanho dos arquivos gerados para economizar armazenamento."
+        },
+        "correct": "A",
+        "explanation": "A alternativa A está correta pois as ontologias garantem a padronização e interoperabilidade da anotação funcional de genes em bases de dados. As demais estão incorretas porque: B trata de desempenho físico de hardware, C descarta a validação obrigatória de dados, D confunde anotação semântica com alinhamento e E foca em compressão de arquivos brutos.",
+        "area": "Bioinformática",
+        "difficulty": "fácil",
+        "subject": "Vocabulários controlados, ontologias e técnicas de extração, transformação e carga de dados (ETL)",
+        "id": 2012
+    },
+    {
+        "text": "No processo de preparo de bibliotecas para sequenciamento de nova geração (NGS) utilizando a tecnologia de sequenciamento por síntese, a etapa de carregamento da flow cell é crucial. Qual parâmetro técnico deve ser rigorosamente controlado para evitar falhas de processamento por overclustering, garantindo a qualidade dos dados gerados?",
+        "options": {
+            "A": "A calibração precisa da molaridade da biblioteca para a flow cell.",
+            "B": "A temperatura de incubação na etapa de reparo das extremidades 3'.",
+            "C": "O tempo de exposição à luz UV durante a quantificação em gel.",
+            "D": "A seleção de fragmentos estritamente acima de mil pares de base.",
+            "E": "O uso de detergentes aniônicos durante a lavagem da flow cell."
+        },
+        "correct": "A",
+        "explanation": "A alternativa A está correta pois a densidade de clusters na flow cell depende da calibração exata da molaridade do DNA carregado para otimizar a separação de sinais. As outras estão incorretas pois: B foca na ligadura e não na densidade, C apenas quantifica sem definir o carregamento, D prejudica a eficiência da PCR de ponte e E não afeta a formação inicial dos clusters.",
+        "area": "Laboratório",
+        "difficulty": "difícil",
+        "subject": "Tecnologias laboratoriais em genômica (sequenciamento de nova geração - NGS, extração de DNA genômico, controle de qualidade, preparo de amostras)",
+        "id": 2013
+    },
+    {
+        "text": "No processamento de dados de sequenciamento de nova geração (NGS), a conversão de arquivos SAM (Sequence Alignment Map) para o formato binário BAM é essencial para otimizar o armazenamento. Qual comando do pacote SAMtools realiza essa tarefa?",
+        "options": {
+            "A": "samtools view -b input.sam > output.bam",
+            "B": "samtools sort input.sam > output.bam",
+            "C": "samtools index input.sam output.bam",
+            "D": "samtools merge output.bam input.sam",
+            "E": "samtools stats input.sam > output.bam"
+        },
+        "correct": "A",
+        "explanation": "A alternativa A está correta pois o subcomando view com a flag -b realiza a conversão para o formato binário compactado. As demais erram porque: B apenas ordena os alinhamentos existentes, C gera índices de busca rápida, D une diferentes arquivos mapeados e E produz relatórios estatísticos de alinhamento.",
+        "area": "Bioinformática",
+        "difficulty": "fácil",
+        "subject": "Programação e ferramentas computacionais",
+        "id": 2014
+    },
+    {
+        "text": "No processamento de amostras para o sequenciamento de nova geração (NGS), a quantificação precisa do DNA genômico é crucial. Considerando os critérios de controle de qualidade laboratorial, qual método é o mais indicado para quantificar especificamente o DNA de fita dupla (dsDNA), minimizando interferências de contaminantes como RNA e nucleotídeos livres?",
+        "options": {
+            "A": "Fluorimetria com corantes intercalantes específicos para DNA de fita dupla.",
+            "B": "Espectrofotometria de absorbância em 260 nm para quantificar nucleotídeos.",
+            "C": "Eletroforese em gel de agarose com brometo de etídio para análise visual.",
+            "D": "PCR quantitativo em tempo real focado apenas em sequências repetitivas.",
+            "E": "Microfluídica por eletroforese capilar para medir o tamanho de fragmentos."
+        },
+        "correct": "A",
+        "explanation": "A alternativa A está correta pois a fluorimetria utiliza corantes que se ligam apenas ao dsDNA, garantindo a precisão necessária para o sequenciamento NGS. As demais incorrem em erro pois: B superestima valores por absorver RNA e contaminantes, C é subjetiva e pouco sensível para quantificação, D é onerosa e restrita a alvos genômicos específicos e E prioriza a integridade estrutural em vez da concentração.",
+        "area": "Laboratório",
+        "difficulty": "difícil",
+        "subject": "Biologia, biologia molecular e genética",
+        "id": 2015
+    },
+    {
+        "text": "No preparo de bibliotecas para sequenciamento genômico em larga escala (WGS), qual prática é fundamental para assegurar a diversidade molecular e a acurácia da cobertura?",
+        "options": {
+            "A": "Quantificar bibliotecas finais apenas por métodos de absorbância UV.",
+            "B": "Substituir a fragmentação mecânica pela enzimática em todas escalas.",
+            "C": "Empregar protocolos PCR-free para minimizar vieses e duplicatas.",
+            "D": "Utilizar índices curtos de 4pb para aumentar a multiplexação total.",
+            "E": "Realizar a etapa de clean-up com esferas em proporção de 2.0x fixo."
+        },
+        "correct": "C",
+        "explanation": "A alternativa C está correta pois protocolos PCR-free eliminam a amplificação, reduzindo vieses de GC e duplicatas sintéticas. As demais erram porque: A apresenta baixa sensibilidade e falta de especificidade, B pode introduzir preferências de clivagem não aleatórias, D aumenta chances de erros na desmultiplexação das amostras, e E promove a co-purificação de dímeros de adaptadores indesejados.",
+        "area": "Laboratório",
+        "difficulty": "difícil",
+        "subject": "Tecnologias laboratoriais em genômica (sequenciamento de nova geração - NGS, extração de DNA genômico, controle de qualidade, preparo de amostras)",
+        "id": 2016
+    },
+    {
+        "text": "No fluxo de análise genômica do Genoma SUS, após o mapeamento das leituras, qual ferramenta é essencial para realizar a ordenação, indexação e conversão de arquivos de alinhamento nos formatos SAM e BAM?",
+        "options": {
+            "A": "O BCFtools foca na manipulação de variantes em arquivos VCF.",
+            "B": "O SAMtools realiza a manipulação de arquivos no formato BAM.",
+            "C": "O FastQC executa o controle de qualidade das leituras brutas.",
+            "D": "O STAR é um alinhador específico para sequenciamento de RNA.",
+            "E": "O BWA é um algoritmo para o mapeamento de leituras de DNA."
+        },
+        "correct": "B",
+        "explanation": "B é a correta pois o SAMtools é a biblioteca padrão para manipular e converter alinhamentos nos formatos SAM/BAM. As demais erram porque: A manipula variantes genômicas, C analisa qualidade, D alinha transcritos e E mapeia leituras.",
+        "area": "Bioinformática",
+        "difficulty": "fácil",
+        "subject": "Programação e ferramentas computacionais",
+        "id": 2017
+    },
+    {
+        "text": "De acordo com as diretrizes éticas para pesquisas envolvendo seres humanos no Brasil, qual documento é obrigatório para garantir a autonomia e a manifestação voluntária do participante?",
+        "options": {
+            "A": "Termo de Consentimento Livre e Esclarecido (TCLE)",
+            "B": "Protocolo de Biossegurança e Boas Práticas Laborais",
+            "C": "Certificado de Proficiência Técnica e Ética Médica",
+            "D": "Relatório de Gestão de Riscos e Biossegurança Local",
+            "E": "Alvará de Funcionamento emitido pela Vigilância Sanitária"
+        },
+        "correct": "A",
+        "explanation": "A alternativa A é a correta pois o TCLE é o documento que formaliza a anuência informada do voluntário. As demais erram porque: B foca em segurança técnica, C foca em competência profissional, D foca em riscos operacionais e E foca em regularização administrativa.",
+        "area": "Laboratório",
+        "difficulty": "fácil",
+        "subject": "Ética em pesquisa e noções de estudos multicêntricos",
+        "id": 2018
+    },
+    {
+        "text": "Na análise de estudos de associação genômica ampla (GWAS), qual é a interpretação estatística correta para o valor-p (p-value) obtido?",
+        "options": {
+            "A": "Probabilidade de observar os dados sob a hipótese nula.",
+            "B": "Chance de a hipótese alternativa ser verdadeira no teste.",
+            "C": "Medida do tamanho do efeito biológico de uma mutação rara.",
+            "D": "Estimativa do número de variantes em desequilíbrio total.",
+            "E": "Percentual da variância fenotípica explicada pelo marcador."
+        },
+        "correct": "A",
+        "explanation": "A alternativa A é a correta pois o valor-p indica a probabilidade de obter resultados tão extremos quanto os observados assumindo que a hipótese nula seja verdadeira. As demais erram porque: B inverte a probabilidade condicional, C confunde significância com magnitude, D refere-se ao desequilíbrio de ligação e E descreve o coeficiente de determinação.",
+        "area": "Bioinformática",
+        "difficulty": "fácil",
+        "subject": "Estatística aplicada à genômica",
+        "id": 2019
+    },
+    {
+        "text": "Durante o processamento de amostras para sequenciamento de nova geração (NGS), a conformidade com as Boas Práticas Laboratoriais (BPL) e biossegurança exige rigor técnico. Qual conduta é indispensável para prevenir a contaminação cruzada e garantir a integridade dos processos?",
+        "options": {
+            "A": "Descarte de ponteiras com filtro em lixo comum após autoclave.",
+            "B": "Manipulação de bibliotecas e extração em áreas físicas isoladas.",
+            "C": "Armazenamento de reagentes e amostras biológicas no mesmo freezer.",
+            "D": "Reutilização de luvas de procedimento após higienização com álcool.",
+            "E": "Pipetagem manual de reagentes tóxicos fora de capelas de exaustão."
+        },
+        "correct": "B",
+        "explanation": "A alternativa B é a correta pois a segregação de fluxos pré e pós-PCR é vital para evitar a contaminação cruzada por amplicons. As demais erram porque: A exige descarte como resíduo infectante, C permite contaminação cruzada de amostras, D compromete a integridade do EPI e E ignora riscos de inalação química.",
+        "area": "Laboratório",
+        "difficulty": "médio",
+        "subject": "Boas Práticas de Laboratório (BPL), biossegurança e controle de qualidade",
+        "id": 2020
+    },
+    {
+        "text": "Qual modelo matemático é utilizado como nulo para descrever a estabilidade das frequências alélicas em uma população ideal sem pressões evolutivas?",
+        "options": {
+            "A": "Equilíbrio de Hardy-Weinberg",
+            "B": "Deriva genética aleatória",
+            "C": "Princípio da Seleção Natural",
+            "D": "Fluxo gênico populacional",
+            "E": "Taxa de mutação recorrente"
+        },
+        "correct": "A",
+        "explanation": "O Equilíbrio de Hardy-Weinberg estabelece a estabilidade das frequências alélicas na ausência de forças evolutivas. As demais erram porque: B causa oscilações aleatórias em populações pequenas; C seleciona alelos vantajosos alterando a frequência; D introduz alelos via migração entre populações; E gera novos alelos alterando a composição original.",
+        "area": "Bioinformática",
+        "difficulty": "fácil",
+        "subject": "Genética de populações",
+        "id": 2021
+    },
+    {
+        "text": "Na preparação de bibliotecas para Sequenciamento de Nova Geração (NGS) utilizando a técnica de tagmentação (fragmentação enzimática), qual fator é o mais crítico para garantir a distribuição adequada do tamanho dos insertos e o sucesso da biblioteca?",
+        "options": {
+            "A": "A manutenção da razão A260/A230 em níveis estritamente acima de 2.5.",
+            "B": "A normalização rigorosa da concentração inicial de DNA na reação.",
+            "C": "O emprego de altas concentrações de EDTA para estabilizar a amostra.",
+            "D": "A utilização exclusiva de fluorimetria para detectar fita simples.",
+            "E": "O incremento do tempo de incubação para gerar fragmentos uniformes."
+        },
+        "correct": "B",
+        "explanation": "B é a correta pois a tagmentação exige estequiometria rigorosa entre DNA e enzima para controlar o tamanho dos fragmentos. As demais erram porque: A foca em pureza extrema desnecessária, C usa EDTA que inibe a reação, D negligencia o foco em dupla-fita e E causa fragmentação excessiva dos insertos.",
+        "area": "Laboratório",
+        "difficulty": "difícil",
+        "subject": "Tecnologias laboratoriais em genômica (sequenciamento de nova geração - NGS, extração de DNA genômico, controle de qualidade, preparo de amostras)",
+        "id": 2022
+    },
+    {
+        "text": "No modelo de Hardy-Weinberg, qual fator é essencial para manter a estabilidade das frequências alélicas ao longo das gerações em uma população?",
+        "options": {
+            "A": "A existência de uma população grande para evitar a deriva.",
+            "B": "A ocorrência frequente de mutações para gerar novos alelos.",
+            "C": "A seleção natural agindo sobre fenótipos menos adaptados.",
+            "D": "O acasalamento preferencial entre os indivíduos do grupo.",
+            "E": "O fluxo gênico constante através de processos migratórios."
+        },
+        "correct": "A",
+        "explanation": "A alternativa A está correta pois o tamanho populacional elevado anula o efeito da deriva genética aleatória sobre o pool gênico. As demais erram porque: B altera frequências, C seleciona fenótipos, D exige panmixia e E requer isolamento.",
+        "area": "Bioinformática",
+        "difficulty": "fácil",
+        "subject": "Genética de populações",
+        "id": 2023
+    },
+    {
+        "text": "No fluxo de trabalho da bioinformática para o Genoma SUS, qual ferramenta é essencial para a manipulação, ordenação e conversão de arquivos de alinhamento nos formatos SAM e BAM?",
+        "options": {
+            "A": "SAMtools: manipulação e processamento de alinhamentos SAM/BAM.",
+            "B": "FastQC: avaliação da qualidade de sequências brutas do NGS.",
+            "C": "BLAST: alinhamento local de sequências em bancos de dados.",
+            "D": "Bowtie2: ferramenta para o alinhamento de leituras curtas.",
+            "E": "Bedtools: manipulação de intervalos genômicos em arquivos BED."
+        },
+        "correct": "A",
+        "explanation": "A alternativa A está correta porque o SAMtools é a biblioteca padrão para converter, ordenar e indexar arquivos de mapeamento SAM/BAM. As demais erram porque: B avalia qualidade bruta, C busca similaridade local, D realiza alinhamento inicial e E compara intervalos genômicos.",
+        "area": "Bioinformática",
+        "difficulty": "fácil",
+        "subject": "Programação e ferramentas computacionais",
+        "id": 2024
+    },
+    {
+        "text": "No preparo de bibliotecas para Sequenciamento de Nova Geração (NGS), qual procedimento laboratorial é essencial para mitigar o erro de carregamento e garantir a densidade ideal de clusters?",
+        "options": {
+            "A": "Utilização de fluorometria para quantificar o DNA de fita dupla.",
+            "B": "Emprego de espectrofotometria para análise de pureza da amostra.",
+            "C": "Precipitação com acetato de sódio para selecionar fragmentos.",
+            "D": "Realização de PCR de enriquecimento com ciclos indeterminados.",
+            "E": "Aquecimento a 95 graus Celsius para remoção de adaptadores."
+        },
+        "correct": "A",
+        "explanation": "A é a correta pois a fluorometria é específica para o DNA alvo, permitindo o cálculo molar exato para o flow cell. As demais erram porque: B superestima concentração por contaminantes, C não realiza seleção precisa, D gera artefatos e duplicatas e E desnatura o DNA final.",
+        "area": "Laboratório",
+        "difficulty": "difícil",
+        "subject": "Tecnologias laboratoriais em genômica (sequenciamento de nova geração - NGS, extração de DNA genômico, controle de qualidade, preparo de amostras)",
+        "id": 2025
+    },
+    {
+        "text": "Em estudos genômicos de larga escala, como GWAS, a realização de múltiplos testes estatísticos simultâneos exige ajustes para mitigar a ocorrência de falso-positivos. Qual abordagem é amplamente utilizada para controlar a taxa de erro do Tipo I dividindo o nível de significância pelo número total de testes?",
+        "options": {
+            "A": "A correção de Bonferroni",
+            "B": "O teste t de Student",
+            "C": "O coeficiente de Gini",
+            "D": "O desvio padrão relativo",
+            "E": "A regressão linear simples"
+        },
+        "correct": "A",
+        "explanation": "A correção de Bonferroni é um método clássico para controlar a taxa de erro familiar ao ajustar o limiar de significância proporcionalmente ao volume de testes realizados. As demais erram porque: B apenas compara médias de dois grupos, C avalia desigualdade ou dispersão estatística, D quantifica a dispersão em torno da média e E descreve relações lineares entre variáveis.",
+        "area": "Bioinformática",
+        "difficulty": "fácil",
+        "subject": "Estatística aplicada à genômica",
+        "id": 2026
+    },
+    {
+        "text": "Em um estudo multicêntrico de larga escala do projeto Genoma SUS, qual é o procedimento ético normatizado para a obtenção da aprovação inicial da pesquisa no Brasil?",
+        "options": {
+            "A": "Aprovação pelo CEP do Centro Coordenador e posterior registro na CONEP.",
+            "B": "Aprovação simultânea em todos os CEPs locais sem um centro coordenador.",
+            "C": "Autorização exclusiva do Ministério da Saúde sem passar pelo sistema CEP.",
+            "D": "Coleta imediata baseada apenas na assinatura do termo pelos pacientes.",
+            "E": "Dispensa de avaliação ética para projetos de sequenciamento populacional."
+        },
+        "correct": "A",
+        "explanation": "A alternativa A está correta pois estudos multicêntricos exigem aprovação do CEP coordenador e, em áreas como genética, crivo da CONEP. As demais erram porque: B ignora o fluxo hierárquico obrigatório, C descumpre a autonomia do sistema CEP/CONEP, D fere a necessidade de aprovação ética prévia e E viola resoluções nacionais sobre ética genômica.",
+        "area": "Laboratório",
+        "difficulty": "médio",
+        "subject": "Ética em pesquisa e noções de estudos multicêntricos",
+        "id": 2027
+    },
+    {
+        "text": "Em estudos multicêntricos de genômica, qual o papel fundamental do Termo de Consentimento Livre e Esclarecido (TCLE) na proteção do participante?",
+        "options": {
+            "A": "Garantir que o participante compreenda riscos e benefícios.",
+            "B": "Isentar o pesquisador de responsabilidade civil ou legal.",
+            "C": "Autorizar o uso comercial irrestrito de dados genéticos.",
+            "D": "Substituir a aprovação prévia do comitê de ética local.",
+            "E": "Impedir a retirada do voluntário após o início do estudo."
+        },
+        "correct": "A",
+        "explanation": "A alternativa A está correta pois o TCLE garante a autonomia e o conhecimento sobre riscos e benefícios pelo voluntário. As demais erram porque: B não isenta responsabilidade legal, C proíbe exploração comercial indevida, D mantém obrigatoriedade de comitês e E desrespeita direito de desistência.",
+        "area": "Laboratório",
+        "difficulty": "fácil",
+        "subject": "Ética em pesquisa e noções de estudos multicêntricos",
+        "id": 2028
+    },
+    {
+        "text": "De acordo com as boas práticas de segurança de dados e a Lei Geral de Proteção de Dados (LGPD), qual medida é essencial para preservar a privacidade dos participantes em projetos de sequenciamento genômico em larga escala?",
+        "options": {
+            "A": "Anonimização de dados sensíveis antes do compartilhamento.",
+            "B": "Divulgação pública de nomes e CPFs vinculados às amostras.",
+            "C": "Armazenamento de senhas de acesso em arquivos de texto puro.",
+            "D": "Permissão de acesso administrativo a todos os funcionários.",
+            "E": "Envio de sequências brutas por e-mails pessoais sem cifragem."
+        },
+        "correct": "A",
+        "explanation": "A alternativa A é a correta pois a anonimização protege a identidade do paciente em conformidade com as leis de proteção de dados. As demais erram porque: B viola a privacidade expondo identidades, C permite fácil captura de senhas, D ignora o controle de acesso restrito e E expõe dados em canais inseguros.",
+        "area": "Bioinformática",
+        "difficulty": "fácil",
+        "subject": "Segurança de dados",
+        "id": 2029
+    },
+    {
+        "text": "No contexto de um laboratório de genômica que segue as Boas Práticas de Laboratório (BPL) para o processamento de amostras do Genoma SUS, qual medida é fundamental para assegurar o controle de qualidade e a biossegurança?",
+        "options": {
+            "A": "Calibrar micropipetas anualmente sem manter registros de rastreabilidade.",
+            "B": "Armazenar reagentes de PCR e produtos amplificados no mesmo equipamento.",
+            "C": "Implementar fluxo unidirecional rígido entre áreas de pré e pós-amplificação.",
+            "D": "Realizar o descarte de materiais perfurocortantes em sacos plásticos brancos.",
+            "E": "Substituir a validação de métodos pela utilização de protocolos de terceiros."
+        },
+        "correct": "C",
+        "explanation": "A alternativa C é a correta pois o fluxo unidirecional mitiga riscos de contaminação por amplicons, garantindo a integridade dos resultados de NGS. As demais erram porque: A negligencia a rastreabilidade documental exigida pelas normas de BPL; B permite contaminação cruzada por misturar reagentes e produtos amplificados; D descreve o descarte inadequado de resíduos perfurocortantes em sacos; E ignora a obrigatoriedade de validação interna de metodologias laboratoriais.",
+        "area": "Laboratório",
+        "difficulty": "médio",
+        "subject": "Boas Práticas de Laboratório (BPL), biossegurança e controle de qualidade",
+        "id": 2030
+    },
+    {
+        "text": "No contexto da ética em pesquisa envolvendo seres humanos em projetos genômicos, qual documento é fundamental para garantir o respeito à autonomia e a proteção dos dados dos participantes?",
+        "options": {
+            "A": "O Termo de Consentimento Livre e Esclarecido (TCLE).",
+            "B": "O Certificado de Proficiência em Boas Práticas Clínicas.",
+            "C": "O Laudo Técnico de Sequenciamento de Nova Geração.",
+            "D": "O Protocolo de Biossegurança e Manejo de Amostras.",
+            "E": "O Formulário de Controle de Qualidade da Extração."
+        },
+        "correct": "A",
+        "explanation": "A alternativa A está correta pois o TCLE assegura a autonomia e os direitos do participante conforme as normas éticas. As demais erram porque: B refere-se a treinamento profissional, C é um relatório de dados, D visa a proteção física e E controla processos técnicos.",
+        "area": "Laboratório",
+        "difficulty": "fácil",
+        "subject": "Noções de saúde pública e ética em pesquisa",
+        "id": 2031
+    },
+    {
+        "text": "No contexto de bioinformática e análise genômica, qual ferramenta é fundamental para a manipulação, indexação e extração de estatísticas de arquivos de alinhamento nos formatos SAM e BAM?",
+        "options": {
+            "A": "GATK, focada principalmente na descoberta de variantes.",
+            "B": "SAMtools, específica para o processamento de alinhamentos.",
+            "C": "BCFtools, utilizada no manejo de arquivos VCF e BCF.",
+            "D": "BEDTools, voltada para comparação de intervalos genômicos.",
+            "E": "FastQC, empregada na avaliação inicial das reads brutas."
+        },
+        "correct": "B",
+        "explanation": "B é a correta pois o SAMtools é a ferramenta padrão para gerenciar alinhamentos SAM/BAM. As demais erram porque: A foca na detecção de variantes genéticas, C manipula apenas arquivos VCF/BCF, D realiza aritmética de intervalos genômicos e E avalia qualidade de sequências brutas.",
+        "area": "Bioinformática",
+        "difficulty": "fácil",
+        "subject": "Programação e ferramentas computacionais",
+        "id": 2032
+    },
+    {
+        "text": "No contexto da genética de populações, qual princípio matemático descreve a manutenção das frequências alélicas e genotípicas em uma população ideal, na ausência de forças evolutivas?",
+        "options": {
+            "A": "O Equilíbrio de Hardy-Weinberg.",
+            "B": "O Teorema Central do Limite.",
+            "C": "A Seleção Natural Direcional.",
+            "D": "O Princípio da Deriva Genética.",
+            "E": "O Efeito Fundador Populacional."
+        },
+        "correct": "A",
+        "explanation": "O Equilíbrio de Hardy-Weinberg é o modelo nulo que prevê a estabilidade genética populacional sob condições ideais. As demais erram porque: B aborda convergência de variáveis aleatórias, C promove mudança adaptativa unidirecional, D descreve flutuações estocásticas em grupos reduzidos e E ocorre quando poucos indivíduos iniciam nova população.",
+        "area": "Bioinformática",
+        "difficulty": "fácil",
+        "subject": "Genética de populações",
+        "id": 2033
+    },
+    {
+        "text": "No fluxo de análise de bioinformática para o Genoma SUS, qual comando da ferramenta SAMtools é utilizado para converter um arquivo de alinhamento do formato SAM (Sequence Alignment Map) para o formato binário BAM?",
+        "options": {
+            "A": "samtools view -b input.sam > output.bam",
+            "B": "samtools sort input.sam > output.bam",
+            "C": "samtools index input.sam > output.bam",
+            "D": "samtools depth input.sam > output.bam",
+            "E": "samtools merge input.sam > output.bam"
+        },
+        "correct": "A",
+        "explanation": "A opção A é a correta pois o subcomando 'view' com o parâmetro '-b' converte o formato de texto SAM para o binário BAM. As demais erram porque: B realiza a ordenação das sequências, C gera índices de busca rápida, D calcula a cobertura de profundidade e E une diversos arquivos alinhados.",
+        "area": "Bioinformática",
+        "difficulty": "fácil",
+        "subject": "Programação e ferramentas computacionais",
+        "id": 2034
+    },
+    {
+        "text": "No contexto do sequenciamento de nova geração (NGS), após a construção da biblioteca e antes do carregamento na flow cell, a quantificação precisa e a análise do tamanho dos fragmentos são cruciais. Qual parâmetro de controle de qualidade é determinante para evitar a saturação de clusters ou a baixa densidade de dados, garantindo a representatividade equitativa das amostras no multiplexing?",
+        "options": {
+            "A": "Concentração molar baseada em espectrofotometria de UV-Visível (Abs 260/280).",
+            "B": "Proporção de bases GC calculada após o alinhamento primário das leituras.",
+            "C": "Quantificação por qPCR e perfil de tamanho via eletroforese capilar.",
+            "D": "Volume final de eluato obtido após a purificação com esferas magnéticas.",
+            "E": "Integridade do DNA genômico inicial medida pelo índice DIN em gel de agarose."
+        },
+        "correct": "C",
+        "explanation": "A alternativa C é a correta pois o qPCR quantifica apenas moléculas funcionalmente adaptadas e a eletroforese define o tamanho médio para o cálculo da molaridade necessária ao pooling equimolar. As demais erram porque: A sofre interferência de contaminantes, B ocorre apenas após o sequenciamento, D não mede a concentração funcional e E avalia apenas a amostra bruta inicial.",
+        "area": "Laboratório",
+        "difficulty": "difícil",
+        "subject": "Tecnologias laboratoriais em genômica (sequenciamento de nova geração - NGS, extração de DNA genômico, controle de qualidade, preparo de amostras)",
+        "id": 2035
+    },
+    {
+        "text": "No preparo de bibliotecas para Sequenciamento de Nova Geração (NGS) em larga escala, a escolha do enriquecimento de alvo impacta a acurácia diagnóstica. Qual técnica é mais indicada para a detecção de variações no número de cópias (CNVs) e rearranjos estruturais em painéis genômicos amplos?",
+        "options": {
+            "A": "A hibridização por sondas captura fragmentos maiores e mais uniformes.",
+            "B": "O PCR múltiplo é ideal para detectar grandes rearranjos estruturais.",
+            "C": "A transposase insere adaptadores sem viés em sequências ricas em GC.",
+            "D": "Beacons moleculares garantem a captura de variantes de cópia única.",
+            "E": "O método Sanger é o padrão-ouro para análise de painéis genômicos."
+        },
+        "correct": "A",
+        "explanation": "A alternativa A está correta pois a captura por hibridização permite maior flexibilidade no mapeamento de fragmentos sobrepostos, essencial para detectar CNVs e quebras estruturais. As demais erram porque: B falha em detectar rearranjos fora dos primers, C possui viés de inserção em regiões GC, D é usada em qPCR e não preparo NGS e E carece de escalabilidade genômica.",
+        "area": "Laboratório",
+        "difficulty": "difícil",
+        "subject": "Biologia, biologia molecular e genética",
+        "id": 2036
+    },
+    {
+        "text": "No fluxo de trabalho de Sequenciamento de Nova Geração (NGS), o controle de qualidade do DNA genômico antes do preparo da biblioteca é crítico. Considerando a quantificação e integridade das amostras, qual afirmação reflete uma prática técnica correta e fundamentada?",
+        "options": {
+            "A": "O NanoDrop superestima a amostra por detectar contaminantes e RNA.",
+            "B": "A eletroforese capilar dispensa a quantificação por fluorescência.",
+            "C": "O Qubit quantifica apenas fragmentos de DNA com mais de 10kb.",
+            "D": "Bibliotecas degradadas geram clusters densos de baixa qualidade.",
+            "E": "O índice de integridade (DIN) é ignorado no preparo de bibliotecas."
+        },
+        "correct": "A",
+        "explanation": "A alternativa A está correta pois a espectrofotometria em 260nm não distingue DNA de RNA ou contaminantes orgânicos, gerando medidas imprecisas para o input do NGS. As demais erram porque: B não substitui a quantificação molar, C quantifica diversos tamanhos via fluoróforo, D gera clusters de baixa densidade e E o DIN define o sucesso da reação.",
+        "area": "Laboratório",
+        "difficulty": "difícil",
+        "subject": "Tecnologias laboratoriais em genômica (sequenciamento de nova geração - NGS, extração de DNA genômico, controle de qualidade, preparo de amostras)",
+        "id": 2037
+    },
+    {
+        "text": "No processamento de amostras para o Genoma SUS, a normalização de bibliotecas genômicas antes do pooling é fundamental para a eficiência do sequenciamento. Qual método assegura a melhor precisão na distribuição de reads em corridas multiplexadas de NGS?",
+        "options": {
+            "A": "Calibragem por espectrofotometria visando a concentração de 10ng/uL.",
+            "B": "Quantificação via qPCR e ajuste para molaridade equimolar no pool.",
+            "C": "Uso de eletroforese capilar para medir apenas o tamanho dos fragmentos.",
+            "D": "Agrupamento de amostras baseado na densidade óptica após a extração.",
+            "E": "Redução do ciclo de PCR para evitar a formação de dímeros de adaptadores."
+        },
+        "correct": "B",
+        "explanation": "A alternativa B é a correta pois o qPCR quantifica especificamente moléculas com adaptadores funcionais, garantindo pooling equimolar preciso. As demais erram porque: A usa espectrofotometria que não diferencia DNA de contaminantes; C foca no tamanho e não na concentração molar total; D ignora variações de eficiência durante o preparo da biblioteca; E foca em artefatos e não na normalização entre amostras.",
+        "area": "Laboratório",
+        "difficulty": "difícil",
+        "subject": "Tecnologias laboratoriais em genômica (sequenciamento de nova geração - NGS, extração de DNA genômico, controle de qualidade, preparo de amostras)",
+        "id": 2038
+    },
+    {
+        "text": "No âmbito de estudos multicêntricos do Genoma SUS envolvendo genética humana, qual o fluxo correto de tramitação ética conforme as normas do Conselho Nacional de Saúde?",
+        "options": {
+            "A": "Submissão inicial ao CEP Coordenador e posterior análise pela CONEP.",
+            "B": "Aprovação ética independente em cada centro sem o CEP Coordenador.",
+            "C": "Dispensabilidade de análise da CONEP para dados genômicos anônimos.",
+            "D": "Validação exclusiva pelo Comitê de Ética do Ministério da Saúde.",
+            "E": "Consentimento verbal coletivo dispensando o TCLE individual físico."
+        },
+        "correct": "A",
+        "explanation": "A resposta A está correta pois estudos genéticos em redes multicêntricas exigem tramitação pelo sistema CEP/CONEP obrigatoriamente. As demais erram porque: B ignora o trâmite coordenador central, C exclui a CONEP indevidamente, D inventa competência administrativa inexistente e E descumpre a obrigatoriedade do consentimento documentado.",
+        "area": "Laboratório",
+        "difficulty": "difícil",
+        "subject": "Ética em pesquisa e noções de estudos multicêntricos",
+        "id": 2039
+    },
+    {
+        "text": "No contexto das Boas Práticas de Laboratório (BPL) e controle de qualidade para o sequenciamento de nova geração (NGS), qual procedimento é fundamental para assegurar a precisão dos volumes manipulados e a rastreabilidade do processo?",
+        "options": {
+            "A": "Calibração periódica e verificação diária de micropipetas.",
+            "B": "Uso exclusivo de ponteiras sem filtro para evitar adsorção.",
+            "C": "Armazenamento de buffers críticos em prateleiras abertas.",
+            "D": "Descarte de resíduos químicos junto ao material biológico.",
+            "E": "Lavagem de luvas de látex com álcool para reduzir custos."
+        },
+        "correct": "A",
+        "explanation": "A alternativa A está correta pois a manutenção rigorosa dos instrumentos assegura a precisão volumétrica necessária em ensaios genômicos. As demais erram porque: B permite contaminação por aerossóis, C compromete a estabilidade térmica, D ignora a segregação de resíduos e E aumenta risco de exposição.",
+        "area": "Laboratório",
+        "difficulty": "médio",
+        "subject": "Boas Práticas de Laboratório (BPL), biossegurança e controle de qualidade",
+        "id": 2040
+    },
+    {
+        "text": "No contexto de um laboratório de genômica do projeto Genoma SUS, a mitigação de riscos de contaminação e a observância às normas de biossegurança são pilares das Boas Práticas Laboratoriais (BPL). Qual das diretrizes abaixo deve ser rigorosamente seguida para garantir a integridade dos resultados de sequenciamento de nova geração (NGS)?",
+        "options": {
+            "A": "Executar extração e preparo de bibliotecas no mesmo espaço físico.",
+            "B": "Manter o fluxo unidirecional da pré-PCR para as áreas de pós-PCR.",
+            "C": "Utilizar ponteiras sem filtro para reduzir custos em extrações de DNA.",
+            "D": "Manipular agentes biológicos do grupo 2 sem o uso de cabine de segurança.",
+            "E": "Armazenar reagentes críticos em geladeiras de uso comum com alimentos."
+        },
+        "correct": "B",
+        "explanation": "A alternativa B é correta pois o fluxo unidirecional previne a contaminação de amostras virgens por amplicons da pós-PCR. As demais erram porque: A causa contaminação cruzada entre etapas, C permite entrada de aerossóis indesejados, D infringe normas de segurança coletiva e E compromete a integridade química dos reagentes.",
+        "area": "Laboratório",
+        "difficulty": "médio",
+        "subject": "Boas Práticas de Laboratório (BPL), biossegurança e controle de qualidade",
+        "id": 2041
     }
 ];
