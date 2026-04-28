@@ -1,6 +1,5 @@
 // ====================================================================
-// BANCO COMPLETO DE QUESTÕES - GENOMA SUS (CORRIGIDO)
-// Vieses de tamanho de alternativa e posição da resposta certa removidos.
+// BANCO COMPLETO DE QUESTÕES - REVISADO E AUDITADO
 // ====================================================================
 
 window.questionBank = [
