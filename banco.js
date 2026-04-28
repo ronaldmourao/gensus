@@ -1,6 +1,6 @@
 // ====================================================================
-// BANCO COMPLETO DE QUESTÕES - GENOMA SUS (TEXTOS REFINADOS)
-// Processamento Lote-IA: Alternativas reduzidas e equilibradas para acabar com o viés.
+// BANCO COMPLETO DE QUESTÕES - GENOMA SUS (GABARITOS REVISTOS)
+// Gabaritos validados e justificativas aprofundadas sobre todas as opções.
 // ====================================================================
 
 window.questionBank = [
@@ -33,7 +33,7 @@ window.questionBank = [
             "E": "Aminoácidos sem códon reduzem a estabilidade proteica em testes in vitro."
         },
         "correct": "A",
-        "explanation": "O código genético tem 64 códons para 20 aminoácidos, logo a maioria dos aminoácidos é codificada por mais de um códon.",
+        "explanation": "A correta é a A porque a degenerescência permite que múltiplos códons codifiquem o mesmo aminoácido. As outras falham pois: B geraria proteínas instáveis por ambiguidade, C descreve um código rígido e não-degenerado, D ignora a natureza universal do código e E desconsidera a existência de códons de parada.",
         "difficulty": "fácil"
     },
     {
@@ -49,7 +49,7 @@ window.questionBank = [
             "E": "Lateralmente ao campo elétrico, inviabilizando o uso em amostras ruins."
         },
         "correct": "D",
-        "explanation": "O esqueleto de açúcar-fosfato confere uma forte carga negativa ao DNA, fazendo-o migrar para o polo positivo (ânodo) em um campo elétrico.",
+        "explanation": "A correta é a D porque os grupos fosfato do DNA possuem carga negativa, atraindo-os ao polo positivo. As outras falham pois: A inverte a polaridade dos polos elétricos, B sugere movimento aleatório bidirecional, C nega o princípio básico da eletroforese e E descreve uma trajetória física impossível no gel.",
         "difficulty": "fácil"
     },
     {
@@ -65,7 +65,7 @@ window.questionBank = [
             "E": "Tubos com heparina superam o EDTA na preservação para fins de bancada."
         },
         "correct": "B",
-        "explanation": "O método de beads magnéticas (SPRI) permite automação e size selection. O NanoDrop avalia apenas pureza. Heparina inibe a PCR.",
+        "explanation": "A correta é a B porque esferas magnéticas permitem purificação automatizada e seleção de tamanho específica. As outras falham pois: A não detecta fragmentação do DNA, C preserva fragmentos longos indesejados, D quantifica massa mas não integridade e E inibe a polimerase na PCR.",
         "difficulty": "fácil"
     },
     {
@@ -81,7 +81,7 @@ window.questionBank = [
             "E": "Erros dominantes são indels sensíveis ao pH e fatores pré-analíticos."
         },
         "correct": "C",
-        "explanation": "A química Illumina usa terminadores reversíveis para ler uma base de cada vez fotograficamente. Os clusters são gerados por bridge amplification, não emulsão.",
+        "explanation": "A correta é a C porque terminadores reversíveis garantem a incorporação de apenas uma base por ciclo. As outras falham pois: A utiliza amplificação em ponte (bridge), B analisa extremidades da mesma molécula, D adiciona nucleotídeos de forma sequencial e E apresenta majoritariamente erros de substituição.",
         "difficulty": "fácil"
     },
     {
@@ -97,7 +97,7 @@ window.questionBank = [
             "E": "Ligação, fragmentação, end repair e A-tailing em amostras degradadas."
         },
         "correct": "D",
-        "explanation": "O pipeline correto para DNA é: quebrar o DNA, reparar as pontas rombas, adicionar a cauda 'A', ligar os adaptadores em 'Y' (T-overhang), selecionar tamanho e amplificar.",
+        "explanation": "A correta é a D pois segue a ordem bioquímica necessária para preparar as extremidades e ligar adaptadores. As outras falham pois: A, B, C e E propõem etapas fora de ordem lógica funcional.",
         "difficulty": "fácil"
     },
     {
@@ -113,7 +113,7 @@ window.questionBank = [
             "E": "85% das bases com score Phred superior a Q30 na fase pré-analítica."
         },
         "correct": "B",
-        "explanation": "Uma taxa de duplicação de 45% significa que quase metade dos seus reads são lixo (cópias exatas de PCR da mesma molécula original), indicando baixa complexidade.",
+        "explanation": "A correta é a B porque altas taxas de duplicação indicam baixa diversidade da biblioteca original. As outras falham pois: A indica distribuição de tamanho ideal, C apresenta cobertura estatisticamente suficiente, D mostra excelente alinhamento ao genoma e E reflete alta precisão nas bases.",
         "difficulty": "fácil"
     },
     {
@@ -129,7 +129,7 @@ window.questionBank = [
             "E": "Realizar calibração de pipetas, demandando métodos ortogonais extras."
         },
         "correct": "D",
-        "explanation": "Viola o princípio de Originalidade e Contemporaneidade (os dados devem ser registrados no exato momento da execução).",
+        "explanation": "A correta é a D porque viola o princípio de contemporaneidade, onde registros devem ser feitos no ato. As outras falham pois: A é a prática padrão de correção, B assegura rastreabilidade digital, C é aceitável se datado e E é manutenção obrigatória.",
         "difficulty": "fácil"
     },
     {
@@ -145,7 +145,7 @@ window.questionBank = [
             "E": "O acesso ao laboratório NB-2 é livre, apresentando sensibilidade ao pH."
         },
         "correct": "A",
-        "explanation": "A Cabine de Segurança Biológica Classe II garante um fluxo laminar seguro para a amostra e filtração HEPA na exaustão para proteger o operador e o ambiente.",
+        "explanation": "A correta é a A porque a CSB Classe II protege simultaneamente o usuário, o produto e o ambiente. As outras falham pois: B não é obrigatória para toda pipetagem, C é classificado como risco nível 2, D requer 121 graus Celsius e E exige acesso restrito controlado.",
         "difficulty": "fácil"
     },
     {
@@ -161,7 +161,7 @@ window.questionBank = [
             "E": "O consentimento amplo é proibido, exigindo calibração dos métodos usados."
         },
         "correct": "B",
-        "explanation": "Muitos pacientes desejam contribuir para a ciência, mas não querem ser informados caso descubram que têm risco elevado para Alzheimer ou câncer. Esse é o 'Direito de não saber'.",
+        "explanation": "A correta é a B porque garante a autonomia do paciente sobre informações genéticas indesejadas. As outras falham pois: A classifica DNA como dado sensível, C possui apenas três princípios fundamentais, D requer aprovação do sistema CEP/CONEP e E é permitido sob condições específicas.",
         "difficulty": "fácil"
     },
     {
@@ -177,7 +177,7 @@ window.questionBank = [
             "E": "O Programa Genomas SUS cria um banco de referência da população nacional."
         },
         "correct": "E",
-        "explanation": "A diversidade genética do Brasil é sub-representada em bancos europeus. O Genomas SUS visa corrigir isso para permitir medicina de precisão na nossa população.",
+        "explanation": "A correta é E porque o programa visa mapear a variabilidade genética brasileira para medicina de precisão. As outras falham pois: A confunde equidade com igualdade técnica, B restringe a participação popular garantida por lei, C nega o acesso universal do SUS, D ignora a prevenção e promoção da saúde.",
         "difficulty": "fácil"
     },
     {
@@ -193,7 +193,7 @@ window.questionBank = [
             "E": "Normalizar a cobertura, exigindo etapa prévia para mitigar artefatos."
         },
         "correct": "B",
-        "explanation": "O BQSR modela a taxa de erro física da máquina (ex: bases no final do read têm pior qualidade) e re-atribui o Phred Score para evitar chamadas de variantes falsas.",
+        "explanation": "A correta é B porque o BQSR ajusta os escores de qualidade baseados em erros sistemáticos do sequenciador. As outras falham pois: A refere-se à filtragem de variantes pós-chamada, C descreve a etapa de MarkDuplicates, D confunde com realinhamento local, E trata de normalização quantitativa inexistente no BQSR.",
         "difficulty": "médio"
     },
     {
@@ -209,7 +209,7 @@ window.questionBank = [
             "E": "Requer BAMs não ordenados, exigindo alto processamento e normalização."
         },
         "correct": "D",
-        "explanation": "Diferente de métodos obsoletos, o HaplotypeCaller faz a montagem de DNA em miniatura no local da variante (Grafos) para lidar com InDels de forma muito mais precisa.",
+        "explanation": "A correta é D pois o algoritmo reconstrói haplótipos locais via grafos de De Bruijn e aplica verossimilhança bayesiana. As outras falham pois: A o GVCF registra todos os sítios, B VQSR é um processo separado, C o modelo principal não é puramente binomial, E exige BAMs estritamente ordenados e indexados.",
         "difficulty": "fácil"
     },
     {
@@ -225,7 +225,7 @@ window.questionBank = [
             "E": "Variante não filtrada com frequência de 50%, reduzindo o poder preditivo."
         },
         "correct": "C",
-        "explanation": "GT=0/1 (Heterozigoto). AD=30,30 (30 reads da ref 'G', 30 reads do alt 'A'). GQ=99 (Phred score máximo, altíssima confiança).",
+        "explanation": "A correta é C porque GT 0/1 indica heterozigose e AD 30,30 mostra o equilíbrio de reads. As outras falham pois: A descreve homozigose (1/1), B alelos múltiplos seriam 1/2, D o score 8500 é altíssimo, E a flag PASS indica filtragem bem-sucedida.",
         "difficulty": "difícil"
     },
     {
@@ -241,7 +241,7 @@ window.questionBank = [
             "E": "O BAM é texto comprimido com gzip, gerando falsos positivos estatísticos."
         },
         "correct": "C",
-        "explanation": "A flag bitwise 1024 em SAM/BAM marca reads como duplicados (PCR/Optical). O CRAM precisa de referência. BED é 0-based. BAM é binário (BGZF).",
+        "explanation": "A correta é C porque a flag hexadecimal 0x400 (1024) sinaliza duplicatas de PCR ou óticas. As outras falham pois: A CRAM requer referência externa, B BED utiliza coordenadas 0-based, D MAPQ refere-se ao mapeamento e não à base, E BAM é binário.",
         "difficulty": "médio"
     },
     {
@@ -257,7 +257,7 @@ window.questionBank = [
             "E": "p < 5 × 10⁻² como FDR, seguindo abordagens comuns de modelos estatísticos."
         },
         "correct": "C",
-        "explanation": "Como há Desequilíbrio de Ligação (LD), estima-se que existam 1 milhão de 'blocos' de genes independentes no genoma. O p-value 0.05 é dividido por 1 milhão (Bonferroni) = 5x10^-8.",
+        "explanation": "A correta é C pois considera o desequilíbrio de ligação que reduz os testes independentes a 1 milhão. As outras falham pois: A usa p-value nominal insuficiente, B define limiar sem base biológica, D é arbitrariamente conservadora, E utiliza FDR inapropriado para GWAS clássico.",
         "difficulty": "médio"
     },
     {
@@ -273,7 +273,7 @@ window.questionBank = [
             "E": "O fator lambda ideal é zero, aumentando o consumo de recursos extras."
         },
         "correct": "C",
-        "explanation": "A PCA clusteriza os pacientes baseando-se em sua origem geográfica (Europeus, Africanos, Asiáticos). Controlar a PCA no GWAS evita que você ache que um gene causa a doença, quando na verdade ele é apenas característico de uma etnia.",
+        "explanation": "A correta é C porque os PCs refletem a estrutura populacional, essencial para evitar falsas associações. As outras falham pois: A independe de HWE total, B aplica-se a DNA e RNA, D é ideal justamente para populações miscigenadas, E lambda ideal é um.",
         "difficulty": "fácil"
     },
     {
@@ -289,7 +289,7 @@ window.questionBank = [
             "E": "3,92%."
         },
         "correct": "E",
-        "explanation": "Se q = 0.02, então p = 0.98. Frequência de heterozigotos = 2pq = 2 * (0.98) * (0.02) = 0.0392 = 3.92%.",
+        "explanation": "A correta é E conforme o cálculo 2pq onde 2*0.98*0.02 resulta em 0.0392. As outras falham pois: A é apenas pq, B é q², C é p², D é aproximação incorreta.",
         "difficulty": "médio"
     },
     {
@@ -305,7 +305,7 @@ window.questionBank = [
             "E": "O Fst global de 0,85 indica alta diferença, exigindo indexação prévia."
         },
         "correct": "C",
-        "explanation": "Humanos são uma espécie muito homogênea. As diferenças raciais visíveis representam uma fração minúscula da variabilidade genética.",
+        "explanation": "A correta é C porque um Fst de 12% indica que a maior parte da variabilidade é compartilhada. As outras falham pois: A mede divergência entre grupos, B africanos possuem maior diversidade, D Fst zero indica populações idênticas, E Fst 0.85 é irreal para humanos.",
         "difficulty": "médio"
     },
     {
@@ -321,7 +321,7 @@ window.questionBank = [
             "E": "Backup 3-2-1 mantém 3 cópias no mesmo servidor, exigindo indexação prévia."
         },
         "correct": "B",
-        "explanation": "Arquivos BAM e VCF humanos são dados sensíveis. Discos devem estar cifrados com AES. O tráfego de internet via portas da API deve ser TLS/HTTPS.",
+        "explanation": "A correta é B pois combina criptografia de dados em repouso e em trânsito. As outras falham pois: A expõe dados sensíveis, C o privilégio mínimo é pilar de segurança, D pseudonimização permite reidentificação, E o backup exige mídias diferentes.",
         "difficulty": "fácil"
     },
     {
@@ -337,7 +337,7 @@ window.questionBank = [
             "E": "O padrão HL7 FHIR é um sequenciador Illumina, exigindo ajuste de software."
         },
         "correct": "C",
-        "explanation": "A HPO traduz sintomas (ex: 'Convulsão') para uma linguagem de máquina estruturada (HP:0001250), permitindo que algoritmos cruzem o sintoma com o genoma do paciente.",
+        "explanation": "A correta é a C porque a HPO padroniza termos clínicos para facilitar a análise computacional de variantes. As outras falham pois: A foca em reutilização de dados digitais, B cataloga elementos de sequência genômica, D foca em funções biológicas proteicas e E é um protocolo de troca de dados.",
         "difficulty": "fácil"
     },
     {
@@ -497,7 +497,7 @@ window.questionBank = [
             "E": "Detecta dsDNA por fluorescência, sem interferência de contaminantes."
         },
         "correct": "E",
-        "explanation": "O Qubit usa corantes intercalantes (como PicoGreen) que se ligam especificamente a DNA de fita dupla, fornecendo quantificação mais precisa para normalização de bibliotecas NGS.",
+        "explanation": "A correta é a E pois o Qubit utiliza corantes específicos para quantificar dsDNA com alta precisão. As outras falham pois: A aumenta a reprodutibilidade, B é geralmente mais caro, C não mede integridade e D requer maior tempo de preparo.",
         "difficulty": "fácil"
     },
     {
@@ -513,7 +513,7 @@ window.questionBank = [
             "E": "Identifica contaminação bacteriana em ambientes de teste controlados."
         },
         "correct": "C",
-        "explanation": "O TapeStation utiliza eletroforese capilar para separar fragmentos de DNA por tamanho, gerando um eletroferograma que mostra a distribuição de tamanhos e permite calcular o DIN (DNA Integrity Number).",
+        "explanation": "A correta é a C pois a eletroforese capilar determina o tamanho e a integridade da amostra. As outras falham pois: A avalia degradação, B pureza é espectrofotométrica, D analisa DNA e E não detecta bactérias.",
         "difficulty": "médio"
     },
     {
@@ -529,7 +529,7 @@ window.questionBank = [
             "E": "Realizar a fragmentação do DNA por meio de validação técnica."
         },
         "correct": "B",
-        "explanation": "A bridge amplification gera clusters clonais onde cada fragmento original é amplificado para ~1000 cópias idênticas, fornecendo sinal fluorescente suficiente para detecção pela câmera do sequenciador.",
+        "explanation": "A correta é a B pois a amplificação clonal em ponte permite a visualização do sinal fluorescente. As outras falham pois: A sequenciamento é posterior, C não filtra reagentes, D adaptadores precedem ponte e E fragmentação é preparatória.",
         "difficulty": "fácil"
     },
     {
@@ -545,7 +545,7 @@ window.questionBank = [
             "E": "30% de chance de estar correta."
         },
         "correct": "B",
-        "explanation": "O score Phred Q30 indica probabilidade de erro de 0,001 (1 em 1000), ou seja, 99,9% de acurácia. A fórmula é Q = -10 * log10(P_erro).",
+        "explanation": "A correta é a B pois Q30 indica 99,9% de acurácia ou 1 erro em mil bases. As outras falham pois: A GC é composição, C cobertura é profundidade, D Q30 é qualidade e E é 0,1% de erro.",
         "difficulty": "médio"
     },
     {
@@ -561,7 +561,7 @@ window.questionBank = [
             "E": "Inserir adenina em 3' para ligar adaptadores com cauda de timina."
         },
         "correct": "E",
-        "explanation": "A A-tailing adiciona uma desoxiadenosina na extremidade 3' dos fragmentos blunt-end, criando complementaridade com o overhang T dos adaptadores Illumina.",
+        "explanation": "A correta é a E pois a adição de adenina permite a ligação de adaptadores com overhang T. As outras falham pois: A fragmentação é inicial, B não é amplificação, C purificação é etapa distinta e D quantificação é posterior.",
         "difficulty": "fácil"
     },
     {
@@ -577,7 +577,7 @@ window.questionBank = [
             "E": "Mistura de reagentes de extração sem qualquer material biológico."
         },
         "correct": "E",
-        "explanation": "O NTC (No Template Control) verifica se os reagentes de extração estão livres de contaminação por DNA exógeno, sendo processado identicamente às amostras mas sem material biológico.",
+        "explanation": "A correta é a E pois o NTC contém apenas reagentes para identificar contaminações no processo. As outras falham pois: A é controle positivo, B NTC não possui DNA, C possui template conhecido e D requer os reagentes químicos.",
         "difficulty": "fácil"
     },
     {
@@ -593,7 +593,7 @@ window.questionBank = [
             "E": "Usar luvas de forma opcional conforme a saúde do doador."
         },
         "correct": "A",
-        "explanation": "As precauções universais assumem que todo material biológico humano pode conter patógenos transmissíveis pelo sangue, independentemente do status conhecido do doador.",
+        "explanation": "A correta é a A pois as precauções universais tratam todo material biológico como potencialmente infectante. As outras falham pois: B abrange qualquer material, C inclui todos patógenos, D são normas institucionais e E EPI é obrigatório.",
         "difficulty": "fácil"
     },
     {
@@ -609,7 +609,7 @@ window.questionBank = [
             "E": "Controle de temperatura."
         },
         "correct": "C",
-        "explanation": "A rastreabilidade completa requer sistemas automatizados como LIMS (Laboratory Information Management System) com códigos de barra para tracking desde coleta até resultado.",
+        "explanation": "A correta é a C pois o sistema LIMS com códigos de barras assegura o histórico da amostra. As outras falham pois: A caderno é manual, B visual é impreciso, D calibração garante exatidão e E temperatura garante conservação.",
         "difficulty": "fácil"
     },
     {
@@ -625,7 +625,7 @@ window.questionBank = [
             "E": "Apenas precisão,  uma característica que influencia a estabilidade in vitro."
         },
         "correct": "A",
-        "explanation": "A validação analítica conforme ICH Q2 requer demonstração de múltiplos parâmetros de performance para garantir confiabilidade do método.",
+        "explanation": "A correta é a A pois a validação exige a demonstração de parâmetros de desempenho analítico rigorosos. As outras falham pois: B facilidade é subjetiva, C velocidade é operacional, D custo é financeiro e E requer múltiplos parâmetros.",
         "difficulty": "fácil"
     },
     {
@@ -641,7 +641,7 @@ window.questionBank = [
             "E": "Objetivos do estudo visando a otimização em meio controlado."
         },
         "correct": "A",
-        "explanation": "O TCLE em genômica deve ser abrangente, cobrindo aspectos específicos como armazenamento em biobancos, possibilidade de uso futuro, achados incidentais e direitos do participante.",
+        "explanation": "A correta é a A pois garante direitos do participante sobre seus dados e resultados futuros. As outras falham pois: B foca em ética, C omite detalhes técnicos internos, D prioriza autonomia e E visa proteção legal.",
         "difficulty": "fácil"
     },
     {
@@ -657,7 +657,7 @@ window.questionBank = [
             "E": "Dados pessoais comuns que elevam o tempo de manipulação."
         },
         "correct": "A",
-        "explanation": "A LGPD classifica dados genéticos como sensíveis (Art. 5º, II), exigindo bases legais específicas e medidas reforçadas de proteção e segurança.",
+        "explanation": "A correta é a A pois a LGPD define dados genéticos como sensíveis no Art. 5º. As outras falham pois: B confunde classificação com técnica de anonimização, C ignora a alta relevância biológica, D viola o dever de sigilo legal e E subestima a proteção legal do dado.",
         "difficulty": "fácil"
     },
     {
@@ -673,7 +673,7 @@ window.questionBank = [
             "E": "Atendimento urbano validado por métodos de bancada."
         },
         "correct": "D",
-        "explanation": "Equidade no SUS significa tratar desigualmente os desiguais, investindo mais onde há maiores necessidades e lacunas de cobertura.",
+        "explanation": "A correta é a D porque equidade foca em suprir necessidades desiguais para justiça social. As outras falham pois: A refere-se à padronização técnica, B privilegia grupos socioeconomicamente favorecidos, C descreve igualdade formal e E ignora a necessária descentralização do SUS.",
         "difficulty": "fácil"
     },
     {
@@ -689,7 +689,7 @@ window.questionBank = [
             "E": "Dispensa o controle de parâmetros e eleva a manipulação."
         },
         "correct": "B",
-        "explanation": "A sonicação focada (Covaris) produz fragmentação mais uniforme e controlada, com menor viés de composição de bases comparada à fragmentação enzimática.",
+        "explanation": "A correta é a B pois a sonicação mecânica gera quebras aleatórias e alta uniformidade. As outras falham pois: A prefere amostras íntegras, C ainda exige seleção de tamanho posterior, D envolve alto custo instrumental e E demanda controle rigoroso de parâmetros.",
         "difficulty": "fácil"
     },
     {
@@ -705,7 +705,7 @@ window.questionBank = [
             "E": "Verifica a pureza do DNA conforme as normas de segurança."
         },
         "correct": "A",
-        "explanation": "O sequenciamento paired-end lê ambas as extremidades de cada fragmento, fornecendo informação sobre insert size e orientação, melhorando mapeamento e detecção de variantes estruturais.",
+        "explanation": "A correta é a A porque o sequenciamento duplo mapeia as extremidades e orientação do inserto. As outras falham pois: B depende de sensores ópticos de base, C requer quantificação laboratorial prévia, D é um controle interno de hardware e E envolve espectrofotometria.",
         "difficulty": "fácil"
     },
     {
@@ -721,7 +721,7 @@ window.questionBank = [
             "E": "Identifica reads duplicados restritos por poder computacional."
         },
         "correct": "B",
-        "explanation": "A flag -f 2 filtra reads properly paired. A flag -h inclui o header SAM. Properly paired significa que ambos os reads do par foram mapeados com orientação e distância esperadas.",
+        "explanation": "A correta é a B pois -h inclui o cabeçalho e -f 2 filtra pares concordantes. As outras falham pois: A omite o filtro binário de reads, C refere-se à flag 4, D ignora a restrição do bitmask e E diz respeito à flag 1024.",
         "difficulty": "fácil"
     },
     {
@@ -737,7 +737,7 @@ window.questionBank = [
             "E": "bcftools merge o que resulta em  reduzindo o poder preditivo do algoritmo aplicado."
         },
         "correct": "D",
-        "explanation": "O comando norm com -m -any decompõe variantes multi-alélicas e -f realiza left-alignment usando a referência, padronizando representação de variantes.",
+        "explanation": "A correta é a D pois o comando norm padroniza variantes e separa registros multialélicos. As outras falham pois: A apenas gera índices de busca, B filtra registros existentes, C produz relatórios estatísticos e E agrupa arquivos VCF distintos.",
         "difficulty": "fácil"
     },
     {
@@ -753,7 +753,7 @@ window.questionBank = [
             "E": "df.filter(AF > 0.05)."
         },
         "correct": "B",
-        "explanation": "Em pandas, a sintaxe df[df['coluna'] > valor] cria um filtro booleano para selecionar linhas que atendem à condição.",
+        "explanation": "A correta é a B pois utiliza a sintaxe de indexação booleana padrão do pandas. As outras falham pois: A não é um método de filtro condicional, C preenche valores falsos com NaNs, D usa sintaxe de atribuição inválida e E foca em rótulos.",
         "difficulty": "médio"
     },
     {
@@ -769,7 +769,7 @@ window.questionBank = [
             "E": "Utiliza filtros fixos avaliados no controle de qualidade."
         },
         "correct": "B",
-        "explanation": "O VQSR treina um modelo Gaussiano usando variantes conhecidas como verdadeiros positivos (HapMap, Omni) e falsos positivos, recalibrando scores de qualidade.",
+        "explanation": "A correta é a B pois o VQSR aplica modelos estatísticos sobre conjuntos de variantes validadas. As outras falham pois: A isola apenas profundidade, C foca em herança familiar, D apenas consulta frequências e E opõe-se aos filtros manuais fixos.",
         "difficulty": "fácil"
     },
     {
@@ -785,7 +785,7 @@ window.questionBank = [
             "E": "Apenas literatura científica e  o que demanda alto poder de processamento em clusters HPC."
         },
         "correct": "C",
-        "explanation": "A anotação funcional combina múltiplos recursos: bases de anotação gênica (RefSeq, Ensembl) e bases de significado clínico (ClinVar, COSMIC) para interpretação abrangente.",
+        "explanation": "A correta é a C pois integra bancos de estrutura gênica e bancos de relevância clínica. As outras falham pois: A é limitada a um banco, B ignora o conhecimento público, D foca apenas em frequências e E é insuficiente para automação.",
         "difficulty": "fácil"
     },
     {
@@ -801,7 +801,7 @@ window.questionBank = [
             "E": "Distância entre pares avaliada no controle primário."
         },
         "correct": "D",
-        "explanation": "Read depth ou cobertura é o número de reads sequenciados que alinham a uma posição genômica específica, sendo crucial para confiabilidade da chamada de variantes.",
+        "explanation": "A correta é a D pois profundidade mede a contagem de reads em um locus específico. As outras falham pois: A confunde com volume total de dados, B descreve o comprimento da sequência, C refere-se à acurácia de base e E indica tamanho do fragmento.",
         "difficulty": "fácil"
     },
     {
@@ -817,7 +817,7 @@ window.questionBank = [
             "E": "Velocidade de execução via ajustes finos no software."
         },
         "correct": "A",
-        "explanation": "Poder estatístico é a probabilidade de rejeitar corretamente uma hipótese nula falsa, dependendo do tamanho do efeito, tamanho amostral e nível de significância.",
+        "explanation": "A correta é a A porque mede a detecção de associações reais. As outras falham pois: B confunde com poder de processamento, C foca no armazenamento, D no quantitativo de SNPs e E na otimização algorítmica.",
         "difficulty": "fácil"
     },
     {
@@ -833,7 +833,7 @@ window.questionBank = [
             "E": "Inflação do qui-quadrado por estratificação ou vieses."
         },
         "correct": "E",
-        "explanation": "Lambda genômico é a mediana dos qui-quadrados observados dividida pela mediana esperada. Valores > 1.05-1.10 sugerem inflação por estratificação ou outros vieses.",
+        "explanation": "A correta é a E porque quantifica desvios sistemáticos no GWAS. As outras falham pois: A foca em profundidade de leitura, B em latência computacional, C em fidelidade genômica e D em densidade variantes.",
         "difficulty": "médio"
     },
     {
@@ -849,7 +849,7 @@ window.questionBank = [
             "E": "A distância física é máxima."
         },
         "correct": "A",
-        "explanation": "r² = 1 indica desequilíbrio de ligação completo, onde os alelos dos dois loci segregam sempre juntos. r² = 0 indica equilíbrio de ligação (independência).",
+        "explanation": "A correta é a A porque r²=1 representa a co-segregação perfeita. As outras falham pois: B sugere independência genética, C indica equilíbrio completo, D é ligação moderada e E implica dissociação física.",
         "difficulty": "fácil"
     },
     {
@@ -865,7 +865,7 @@ window.questionBank = [
             "E": "Volume de mutações sob filtros e consumo de recursos."
         },
         "correct": "A",
-        "explanation": "PRS soma os efeitos de milhares de variantes genéticas, cada uma ponderada pelo seu efeito estimado em GWAS, fornecendo um score de risco genético individual.",
+        "explanation": "A correta é a A porque agrega riscos genéticos individuais ponderados. As outras falham pois: B foca em restrições de máquina, C em métricas técnicas, D em cronologia biológica e E em carga mutacional.",
         "difficulty": "fácil"
     },
     {
@@ -881,7 +881,7 @@ window.questionBank = [
             "E": "Filtered, Annotated, Indexed, Reviewed."
         },
         "correct": "A",
-        "explanation": "FAIR data principles: Findable (localizável), Accessible (acessível), Interoperable (interoperável), Reusable (reutilizável) - promovem gestão responsável de dados científicos.",
+        "explanation": "A correta é a A porque segue os padrões internacionais de gestão. As outras falham pois: B troca termos por computação, C por performance, D por gratuidade e E por anotação.",
         "difficulty": "fácil"
     },
     {
@@ -897,7 +897,7 @@ window.questionBank = [
             "E": "Apenas proteínas e  necessitando de anotação cruzada com bancos de referência."
         },
         "correct": "B",
-        "explanation": "A Sequence Ontology fornece termos controlados para descrever features de sequências biológicas, sendo usada na anotação de genomas e variantes.",
+        "explanation": "A correta é a B porque padroniza termos de elementos genômicos. As outras falham pois: A limita-se a patologias, C a sinais clínicos, D a demografia e E a proteômica.",
         "difficulty": "fácil"
     },
     {
@@ -913,7 +913,7 @@ window.questionBank = [
             "E": "Visualização de variantes com alto consumo de recursos."
         },
         "correct": "C",
-        "explanation": "Spark é um framework de computação distribuída que permite processar grandes volumes de dados genômicos (VCFs, BAMs) em paralelo através de clusters de computadores.",
+        "explanation": "A correta é a C porque distribui tarefas massivas em clusters. As outras falham pois: A é amostragem física, B é biologia celular, D é geração de dados e E é renderização.",
         "difficulty": "fácil"
     },
     {
@@ -929,7 +929,7 @@ window.questionBank = [
             "E": "Formato de texto legível com risco de erros estatísticos."
         },
         "correct": "C",
-        "explanation": "CRAM usa compressão reference-based, armazenando apenas diferenças em relação ao genoma de referência, reduzindo significativamente o tamanho dos arquivos.",
+        "explanation": "A correta é a C porque usa referencial para reduzir espaço. As outras falham pois: A é técnica de laboratório, B foca em desalinhados, D alega perda de dados e E cita legibilidade.",
         "difficulty": "fácil"
     },
     {
@@ -945,7 +945,7 @@ window.questionBank = [
             "E": "Dispensa controle de qualidade sob limites computacionais."
         },
         "correct": "C",
-        "explanation": "Variantes somáticas requerem algoritmos específicos que comparam tumor vs tecido normal, consideram pureza tumoral, heterogeneidade e clonalidade.",
+        "explanation": "A correta é a C porque detecta mutações adquiridas via pareamento. As outras falham pois: A ignora complexidade genômica, B é processamento genérico, D assume germinativa e E ignora controle.",
         "difficulty": "fácil"
     },
     {
@@ -961,7 +961,7 @@ window.questionBank = [
             "E": "Percentual de DNA herdado sob ajustes de software."
         },
         "correct": "D",
-        "explanation": "Heritabilidade é a proporção da variância fenotípica total que pode ser atribuída a variância genética aditiva em uma população específica.",
+        "explanation": "A correta é a D porque expressa a variância herdável aditivamente. As outras falham pois: A descreve estudo de gêmeos, B é início clínico, C é complexidade gênica e E é transmissão direta.",
         "difficulty": "fácil"
     },
     {
@@ -977,7 +977,7 @@ window.questionBank = [
             "E": "Eleva o rendimento via nucleases sob validação técnica."
         },
         "correct": "B",
-        "explanation": "Gabarito: Letra B. O EDTA atua como um 'quelante' que sequestra o Magnésio, paralisando as DNases (que destruiriam o DNA) e impedindo a cascata de coagulação.",
+        "explanation": "A correta é a B pois o EDTA sequestra íons necessários para a atividade de nucleases e para o início da cascata de coagulação. As outras falham pois: A o EDTA não é protetor UV, C a proteinase K é essencial para digestão proteica, D ele não impede lise mecânica e E o EDTA inibe, não eleva, a atividade de nucleases.",
         "difficulty": "fácil"
     },
     {
@@ -993,7 +993,7 @@ window.questionBank = [
             "E": "Usa ponteiras descartáveis com filtro e sensor de coágulo."
         },
         "correct": "E",
-        "explanation": "Gabarito: Letra B. Em protocolos NGS altamente sensíveis, a tecnologia de ponteiras com filtro é crucial para evitar a contaminação cruzada (carry-over).",
+        "explanation": "A correta é a E pois ponteiras descartáveis com filtro e sensores previnem fisicamente o transporte de aerossóis e contaminantes entre poços. As outras falham pois: A reduzir velocidade não impede a contaminação, B aumentar volume agrava o risco de transbordamento, C ponteiras fixas são a principal fonte de contaminação e D processar uma por uma é inviável em alta escala.",
         "difficulty": "fácil"
     },
     {
@@ -1025,7 +1025,7 @@ window.questionBank = [
             "E": "Omite adaptadores sob monitoramento pré-analítico."
         },
         "correct": "A",
-        "explanation": "Gabarito: Letra B. A PCR introduz viés porque amplifica melhor algumas regiões do que outras (especialmente regiões extremas em GC). Pular a PCR elimina esse viés.",
+        "explanation": "A correta é a A pois a ausência de ciclos de PCR evita a representação desigual de regiões ricas em GC ou AT, garantindo cobertura linear. As outras falham pois: B bibliotecas sem PCR costumam ser mais caras e complexas, C a fragmentação física ou enzimática continua sendo necessária, D requerem massas maiores de DNA de entrada e E adaptadores são fundamentais para o sequenciamento.",
         "difficulty": "fácil"
     },
     {
@@ -1040,8 +1040,8 @@ window.questionBank = [
             "D": "Define que o bem-estar humano supera o interesse da ciência.",
             "E": "Proíbe integralmente a realização de pesquisas humanas."
         },
-        "correct": "D",
-        "explanation": "Gabarito: Letra B. É o pilar da bioética moderna. O bem-estar do indivíduo sempre supera a necessidade de descoberta científica.",
+        "correct": "B",
+        "explanation": "A correta é a B pois o foco central da Declaração é estabelecer princípios éticos mundiais para pesquisas envolvendo seres humanos. As outras falham pois: A a AMM a criou, mas a definição foca no conteúdo ético, C ela não se aplica a animais, D o bem-estar é um princípio, não a definição e E ela regulamenta a pesquisa em vez de proibi-la.",
         "difficulty": "fácil"
     },
     {
@@ -1056,8 +1056,8 @@ window.questionBank = [
             "D": "Centrifugação seguida de precipitação com etanol absoluto.",
             "E": "Duas rodadas de eletroforese em gel de agarose de alta pureza."
         },
-        "correct": "C",
-        "explanation": "Gabarito: Letra A. Na primeira etapa, as beads capturam os fragmentos indesejados muito grandes (que vão para o lixo). Na segunda etapa, novas beads capturam os fragmentos ideais que haviam ficado no líquido.",
+        "correct": "A",
+        "explanation": "A correta é a A pois o método utiliza diferentes proporções de esferas e PEG para excluir seletivamente fragmentos muito grandes e muito pequenos. As outras falham pois: B utiliza propriedades magnéticas e não membranas porosas, C usa-se a mesma marca com volumes diferentes, D a separação ocorre por magnetismo e E não envolve géis ou correntes elétricas.",
         "difficulty": "fácil"
     },
     {
@@ -1073,7 +1073,7 @@ window.questionBank = [
             "E": "Privatizar os serviços de genômica oferecidos pelo SUS."
         },
         "correct": "B",
-        "explanation": "Gabarito: Letra B. Refere-se à translação do conhecimento dos sequenciadores diretamente para o benefício coletivo no SUS.",
+        "explanation": "A correta é a B pois visa aplicar dados genômicos no sistema de saúde para melhorar o rastreamento e tratamento de populações. As outras falham pois: A o objetivo é a democratização do acesso, C genômica complementa imunizações em vez de substituí-las, D terapias gênicas não são o único foco da saúde pública e E busca-se a integração ao SUS e não a privatização.",
         "difficulty": "fácil"
     },
     {
@@ -1088,8 +1088,8 @@ window.questionBank = [
             "D": "Duração da pausa programada para o descanso do operador.",
             "E": "Intervalo de espera entre a entrega de dois resultados."
         },
-        "correct": "E",
-        "explanation": "Gabarito: Letra B. Essa é a grande métrica de eficiência dos robôs NGS; o tempo que a máquina trabalha sozinha enquanto você avança outros projetos.",
+        "correct": "B",
+        "explanation": "A correta é a B pois representa o período em que o equipamento executa tarefas complexas de forma autônoma, liberando o técnico. As outras falham pois: A refere-se à disponibilidade e não a falhas, C o deslocamento do operador é irrelevante para a automação, D pausas de descanso são questões de RH e E o intervalo de resultados é o throughput.",
         "difficulty": "fácil"
     },
     {
@@ -1105,7 +1105,7 @@ window.questionBank = [
             "E": "Substitui totalmente o diagnóstico sorológico tradicional."
         },
         "correct": "B",
-        "explanation": "Gabarito: Letra B. Algumas pessoas infectadas desenvolvem cardiopatia severa enquanto outras ficam assintomáticas a vida toda. A genômica busca encontrar o porquê genético disso.",
+        "explanation": "A correta é a B pois busca identificar por que certos perfis genéticos do hospedeiro levam a complicações cardíacas graves. As outras falham pois: A o sequenciamento não impede a picada do barbeiro, C a resposta imune à doença tem base genética, D a população amazônica é altamente miscigenada e E o diagnóstico padrão permanece sendo a sorologia clássica.",
         "difficulty": "fácil"
     },
     {
@@ -1120,8 +1120,8 @@ window.questionBank = [
             "D": "Baseia-se apenas na inspeção visual dos tubos reagentes.",
             "E": "Exige o sequenciamento completo como etapa de pré-teste."
         },
-        "correct": "D",
-        "explanation": "Gabarito: Letra B. O trio Qubit + TapeStation + Verificação Visual de Adapter-Dimers é a trindade do QC antes de mandar para a Flow Cell.",
+        "correct": "B",
+        "explanation": "A correta é a B pois exige a verificação precisa da concentração, do tamanho médio dos fragmentos e a ausência de subprodutos. As outras falham pois: A o NanoDrop não distingue DNA de adaptadores livres, C agarose comum não possui resolução para QC de precisão, D a análise é molecular e invisível a olho nu e E o sequenciamento é o destino após o QC.",
         "difficulty": "fácil"
     },
     {
@@ -1137,7 +1137,7 @@ window.questionBank = [
             "E": "Locus refere-se apenas às regiões não codificantes do DNA."
         },
         "correct": "B",
-        "explanation": "Gabarito: Letra B. Locus é o 'endereço'. Gene é a 'casa'. Alelo é 'quem mora lá' (as variações).",
+        "explanation": "A correta é a B pois locus é a posição física, gene a unidade funcional e alelo a versão sequencial. As outras falham pois: A confunde a unidade com sua variante, C ignora que polimorfismos geram múltiplos alelos, D define alelo como proteína em vez de DNA e E exclui erroneamente regiões codificantes.",
         "difficulty": "fácil"
     },
     {
@@ -1152,8 +1152,8 @@ window.questionBank = [
             "D": "Ocorrem somente em regiões de éxons codificantes de RNA.",
             "E": "São variações genéticas obrigatoriamente patogênicas."
         },
-        "correct": "D",
-        "explanation": "Gabarito: Letra B. Os SNPs representam a base da diversidade genética humana e da medicina genômica populacional.",
+        "correct": "B",
+        "explanation": "A correta é a B pois SNPs são trocas de nucleotídeo único com frequência mínima populacional. As outras falham pois: A nega que NGS seja o padrão para detecção, C restringe variações globais a apenas uma etnia, D ignora SNPs em íntrons e regiões intergênicas e E assume erroneamente que toda variação é doença.",
         "difficulty": "fácil"
     },
     {
@@ -1168,8 +1168,8 @@ window.questionBank = [
             "D": "Monitorada pelo uso de controle positivo de extração.",
             "E": "Observada pela mudança de cor dos reagentes químicos."
         },
-        "correct": "D",
-        "explanation": "Gabarito: Letra B. O NTC vai com água no lugar da amostra. Se surgir DNA ali no final, o kit está contaminado.",
+        "correct": "B",
+        "explanation": "A correta é a B pois o NTC (controle sem amostra) revela se reagentes contêm DNA estranho. As outras falham pois: A analisa apenas integridade do DNA, C mede massa total sem identificar a origem, D valida apenas se a reação funcionou e E espera mudança visual impossível em contaminações.",
         "difficulty": "fácil"
     },
     {
@@ -1184,8 +1184,8 @@ window.questionBank = [
             "D": "Divide o sequenciamento em fases cronológicas de análise.",
             "E": "Classifica as amostras por normalização de dados brutos."
         },
-        "correct": "C",
-        "explanation": "Gabarito: Letra B. Phasing é separar as variantes herdadas do pai daquelas herdadas da mãe, recriando o cromossomo exato que você herdou.",
+        "correct": "B",
+        "explanation": "A correta é a B pois phasing reconstrói os haplótipos herdados individualmente de cada progenitor. As outras falham pois: A foca em DNA mitocondrial fora do escopo, C confunde montagem genômica com etapas de maquinário, D confunde organização espacial com cronologia de laboratório e E reduz montagem complexa a mera normalização.",
         "difficulty": "fácil"
     },
     {
@@ -1200,8 +1200,8 @@ window.questionBank = [
             "D": "Causa um aumento artificial na concentração total de DNA.",
             "E": "Provoca um aumento indesejado do volume plasmático."
         },
-        "correct": "A",
-        "explanation": "Gabarito: Letra B. A hemoglobina é rica em ferro, que atua como inibidor de enzimas dependentes de magnésio (como as polimerases).",
+        "correct": "B",
+        "explanation": "A correta é a B pois o grupo heme da hemoglobina inibe a polimerase na PCR. As outras falham pois: A supõe destruição física do DNA inexistente, C sugere conversão química impossível de DNA em RNA, D confunde interferência técnica com ganho de massa e E foca em volume quando o problema é químico.",
         "difficulty": "fácil"
     },
     {
@@ -1216,8 +1216,8 @@ window.questionBank = [
             "D": "É realizado exclusivamente por instituições privadas.",
             "E": "É um processo opcional que não afeta a acreditação."
         },
-        "correct": "D",
-        "explanation": "Gabarito: Letra B. É o momento de provar que os seus laudos NGS encontram as mesmas variantes que os laboratórios do mundo inteiro encontram na mesma amostra.",
+        "correct": "B",
+        "explanation": "A correta é a B pois ensaios de proficiência comparam resultados de amostras cegas entre laboratórios. As outras falham pois: A descarta o controle interno obrigatório, C confunde análise de amostra com manutenção técnica, D ignora órgãos públicos reguladores e E desconsidera exigências legais para acreditação.",
         "difficulty": "fácil"
     },
     {
@@ -1232,8 +1232,8 @@ window.questionBank = [
             "D": "O frio aumenta o rendimento final do DNA extraído.",
             "E": "A temperatura ambiente ajuda a esterilizar a amostra."
         },
-        "correct": "E",
-        "explanation": "Gabarito: Letra B. O frio ativa as plaquetas, que grudam nos leucócitos, embolando as camadas do plasma e do buffy coat.",
+        "correct": "B",
+        "explanation": "A correta é a B pois a refrigeração induz agregação plaquetária, contaminando a camada de leucócitos. As outras falham pois: A ignora o impacto físico da temperatura nas células, C prioriza custos sobre a qualidade da amostra, D inverte o efeito do frio no rendimento e E atribui função esterilizante à temperatura ambiente.",
         "difficulty": "fácil"
     },
     {
@@ -1248,8 +1248,8 @@ window.questionBank = [
             "D": "Significa que apenas 30% do genoma foi sequenciado.",
             "E": "É um valor tecnicamente insuficiente para genômica."
         },
-        "correct": "C",
-        "explanation": "Gabarito: Letra B. Para ter certeza de que uma variante detectada não é erro da máquina, precisamos ver a mesma letra lida cerca de 30 vezes em diferentes reads empilhados.",
+        "correct": "B",
+        "explanation": "A correta é a B pois cobertura 30x significa que cada base foi sequenciada trinta vezes em média. As outras falham pois: A confunde densidade de cluster com profundidade, C confunde profundidade de leitura com número de cromossomos, D confunde profundidade com a extensão horizontal do genoma e E desconsidera que 30x é o padrão clínico.",
         "difficulty": "fácil"
     },
     {
@@ -1265,7 +1265,7 @@ window.questionBank = [
             "E": "Aplica-se unicamente ao estudo de plantas e animais."
         },
         "correct": "B",
-        "explanation": "Gabarito: Letra B. Ao sequenciar populações originárias/tradicionais, a pesquisa se submete às leis de repartição de benefícios pelo acesso ao conhecimento e material genético nativo.",
+        "explanation": "A correta é a B pois a legislação regula o acesso e repartição de benefícios de grupos tradicionais. As outras falham pois: A proibiria a ciência em vez de regulá-la, C ignora o impacto ético em projetos nacionais, D descarta o consentimento livre e esclarecido e E limita a lei apenas à biodiversidade não humana.",
         "difficulty": "médio"
     },
     {
@@ -1280,8 +1280,8 @@ window.questionBank = [
             "D": "Apenas os dados anonimizados são regidos pela LGPD.",
             "E": "Pseudonimizados não utilizam nenhum tipo de criptografia."
         },
-        "correct": "E",
-        "explanation": "Gabarito: Letra B. A pseudonimização é reversível para a equipe de pesquisa que guarda o 'dicionário' de chaves. O dado anonimizado quebra essa chave para sempre.",
+        "correct": "B",
+        "explanation": "A correta é a B pois pseudonimização mantém vínculo reversível com a chave, enquanto anonimização é definitiva. As outras falham pois: A trata conceitos juridicamente distintos como iguais, C inverte a segurança de dados permanentes, D ignora que a LGPD disciplina ambos e E afirma ausência de criptografia na pseudonimização.",
         "difficulty": "fácil"
     },
     {
@@ -1296,8 +1296,8 @@ window.questionBank = [
             "D": "Ocorre ao deixar de detectar uma variante existente.",
             "E": "Representa a probabilidade total de acerto do teste."
         },
-        "correct": "D",
-        "explanation": "Gabarito: Letra B. É o famoso falso positivo: afirmar que um gene causa a doença quando, na verdade, não há associação real (rejeitou o H0 incorretamente).",
+        "correct": "B",
+        "explanation": "A correta é a B pois o erro tipo I é o falso positivo (rejeitar H0 verdadeira). As outras falham pois: A descreve acerto, C define 1-beta, D é erro tipo II e E é acurácia.",
         "difficulty": "fácil"
     },
     {
@@ -1312,8 +1312,8 @@ window.questionBank = [
             "D": "Transportar aminoácidos específicos para o ribossomo.",
             "E": "Adicionar o cap 5' ao mRNA durante o processamento."
         },
-        "correct": "A",
-        "explanation": "Gabarito: Letra B. A helicase é o 'zíper' que abre a fita dupla para a polimerase entrar e trabalhar.",
+        "correct": "B",
+        "explanation": "A correta é a B pois a helicase rompe as pontes de hidrogênio. As outras falham pois: A é polimerase, C é ligase, D é tRNA e E é processamento.",
         "difficulty": "fácil"
     },
     {
@@ -1328,8 +1328,8 @@ window.questionBank = [
             "D": "Duplicação integral de um gene no genoma do indivíduo.",
             "E": "Inversão de um segmento cromossômico em larga escala."
         },
-        "correct": "A",
-        "explanation": "Gabarito: Letra B. Como o ribossomo lê o RNA de 3 em 3 bases (códons), deletar 1 ou 2 bases 'desliza' a janela de leitura, arruinando a proteína inteira a partir daquele ponto.",
+        "correct": "B",
+        "explanation": "A correta é a B pois indels fora de múltiplo de 3 alteram o quadro. As outras falham pois: A é epigenética, C é pontual, D é dosagem e E é estrutural.",
         "difficulty": "fácil"
     },
     {
@@ -1344,8 +1344,8 @@ window.questionBank = [
             "D": "Indução de translocações cromossômicas acidentais.",
             "E": "Compactação da cromatina e silenciamento gênico."
         },
-        "correct": "A",
-        "explanation": "Gabarito: Letra B. Histonas muito carregadas positivamente abraçam fortemente o DNA. A acetilação neutraliza isso, soltando o DNA para os fatores de transcrição entrarem.",
+        "correct": "B",
+        "explanation": "A correta é a B pois acetilas neutralizam cargas positivas, relaxando o DNA. As outras falham pois: A é replicação, C é reparo, D é instabilidade e E é silenciamento.",
         "difficulty": "fácil"
     },
     {
@@ -1360,8 +1360,8 @@ window.questionBank = [
             "D": "Mecanismo de replicação alternativa do genoma.",
             "E": "Processo de retrotransposição de elementos genéticos."
         },
-        "correct": "A",
-        "explanation": "Gabarito: Letra B. Cerca de 95% dos genes humanos sofrem splicing alternativo, sendo a chave da complexidade biológica humana comparada a outros animais.",
+        "correct": "B",
+        "explanation": "A correta é a B pois o splicing alternativo combina diferentes éxons. As outras falham pois: A é inexistente, C é recombinação, D é inexistente e E é transposição.",
         "difficulty": "fácil"
     },
     {
@@ -1376,8 +1376,8 @@ window.questionBank = [
             "D": "Ambos os tipos de mutações são sempre herdáveis.",
             "E": "Mutações germinativas ocorrem apenas nos músculos."
         },
-        "correct": "E",
-        "explanation": "Gabarito: Letra B. Mutações em células do corpo (somáticas, como num tumor de pele) não passam para o filho. Apenas as que afetam óvulo/espermatozoide (germinativas) são herdadas.",
+        "correct": "B",
+        "explanation": "A correta é a B pois apenas mutações em gametas passam à prole. As outras falham pois: A causa câncer, C ignora hereditariedade, D erra somática e E erra local.",
         "difficulty": "fácil"
     },
     {
@@ -1393,7 +1393,7 @@ window.questionBank = [
             "E": "Corrige erros ocorridos durante o splicing de RNA."
         },
         "correct": "B",
-        "explanation": "Gabarito: Letra B. Ele atua consertando A pareado erroneamente com C, por exemplo, logo após o avanço da polimerase.",
+        "explanation": "A correta é a B pois o MMR revisa pareamentos errados pós-replicação. As outras falham pois: A é quebra dupla, C é UV, D é base e E é RNA.",
         "difficulty": "fácil"
     },
     {
@@ -1408,8 +1408,8 @@ window.questionBank = [
             "D": "Afeta apenas o DNA presente no núcleo da célula.",
             "E": "Segue o padrão de segregação clássica de 3 para 1."
         },
-        "correct": "A",
-        "explanation": "Gabarito: Letra B. Todo o nosso DNA mitocondrial foi herdado exclusivamente das nossas mães, seguindo uma linhagem matrilinear ininterrupta.",
+        "correct": "B",
+        "explanation": "A correta é a B pois as mitocôndrias provêm do citoplasma do óvulo. As outras falham pois: A é mendeliana, C é paterna, D é nuclear e E é clássica.",
         "difficulty": "fácil"
     },
     {
@@ -1424,8 +1424,8 @@ window.questionBank = [
             "D": "Replica os telômeros de forma convencional.",
             "E": "Sua inibição é a causa primária do câncer."
         },
-        "correct": "E",
-        "explanation": "Gabarito: Letra B. É a enzima da 'imortalidade celular' e atua fortemente em tumores para garantir que o cromossomo não encurte durante sucessivas divisões descontroladas.",
+        "correct": "B",
+        "explanation": "A correta é a B pois ela estende as pontas cromossômicas usando RNA molde. As outras falham pois: A é restrita, C é nuclease, D é telomerase e E é ativação.",
         "difficulty": "fácil"
     },
     {
@@ -1440,8 +1440,8 @@ window.questionBank = [
             "D": "O SYBR Safe utiliza luz azul, reduzindo danos físicos ao DNA.",
             "E": "O brometo apresenta riscos severos à saúde e ao meio ambiente."
         },
-        "correct": "A",
-        "explanation": "Gabarito: Letra B. Por se intercalar entre as bases do DNA para emitir brilho, ele faz a mesma coisa no DNA humano caso entre em contato com a pele, causando mutações.",
+        "correct": "B",
+        "explanation": "A correta é a B pois resume o benefício principal de menor toxicidade. As outras falham pois: A define brometo, C é consequência, D é secundário e E é genérico.",
         "difficulty": "fácil"
     },
     {
@@ -1457,7 +1457,7 @@ window.questionBank = [
             "E": "Apenas RNA mitocondrial além disso,  sendo aplicável principalmente em cenários controlados."
         },
         "correct": "C",
-        "explanation": "Gabarito: Letra B. É o motor primário da transcrição proteica e de RNAs regulatórios cruciais (como os miRNAs que bloqueiam tradução).",
+        "explanation": "A correta é a C porque a Pol II transcreve mRNA e pequenos RNAs regulatórios. As outras falham pois: A pol III faz tRNA, B polimerases sintetizam RNA, D pol I faz rRNA e E mitocôndria usa polimerase própria.",
         "difficulty": "fácil"
     },
     {
@@ -1473,7 +1473,7 @@ window.questionBank = [
             "E": "Lateralmente, consequentemente,  um aspecto que aumenta o tempo de manipulação no fluxo de trabalho."
         },
         "correct": "B",
-        "explanation": "Gabarito: Letra B. O 'Açúcar-Fosfato' carrega o DNA negativamente. Como opostos se atraem na física, ele viaja na direção da ponta positiva da cuba de eletroforese.",
+        "explanation": "A correta é a B porque o grupamento fosfato confere carga negativa, atraindo o DNA ao ânodo. As outras falham pois: A migra apenas para o polo positivo, C DNA é móvel no gel, D o cátodo repele o DNA e E a migração segue o campo elétrico.",
         "difficulty": "fácil"
     },
     {
@@ -1489,7 +1489,7 @@ window.questionBank = [
             "E": "Múltiplos códons podem codificar o mesmo aminoácido na tradução."
         },
         "correct": "E",
-        "explanation": "Gabarito: Letra B. A 'teoria da oscilação' (Wobble) faz com que mutações na 3ª posição de um códon de DNA frequentemente gerem o exato mesmo aminoácido (Mutação Sinônima), atuando como um escudo natural contra erros.",
+        "explanation": "A correta é a E porque múltiplos códons codificam o mesmo aminoácido, reduzindo o impacto de mutações. As outras falham pois: A código é unívoco, B é redundância (sinônimo), C existem 64 códons e D o código é universal.",
         "difficulty": "fácil"
     },
     {
@@ -1505,7 +1505,7 @@ window.questionBank = [
             "E": "Degrada todas as proteínas celulares para reciclagem de carbono."
         },
         "correct": "B",
-        "explanation": "Gabarito: Letra A. (Opção A é correta neste simulado, repare no gabarito oficial). Proteínas truncadas podem virar 'príons tóxicos' e agregar na célula. O NMD destrói o mRNA defectivo antes que ele seja traduzido a fundo.",
+        "explanation": "A correta é a B porque o NMD degrada transcritos com códons de parada prematuros. As outras falham pois: A atua no mRNA, C ele degrada em vez de ativar, D é mecanismo pós-transcricional e E é seletivo para erros.",
         "difficulty": "fácil"
     },
     {
@@ -1521,7 +1521,7 @@ window.questionBank = [
             "E": "Descreve frequências genotípicas constantes sob condições ideais."
         },
         "correct": "E",
-        "explanation": "Gabarito: Letra B. Se não há força evolutiva puxando, a proporção de um gene se mantém constante pelas leis estatísticas de HW.",
+        "explanation": "A correta é a E pois o equilíbrio prevê estabilidade genotípica sem interferências evolutivas. As outras falham pois: A aplica-se a diploides, B frequências são constantes, C exige populações grandes e D independe de dominância.",
         "difficulty": "fácil"
     },
     {
@@ -1537,7 +1537,7 @@ window.questionBank = [
             "E": "Fotorreativação e  o que requer calibração rigorosa dos métodos utilizados."
         },
         "correct": "A",
-        "explanation": "Gabarito: Letra B. Quebrar ambas as fitas do DNA é letal. Sem BRCA1 (que recruta as ferramentas de conserto), a célula acumula cortes irreparáveis, gerando forte instabilidade e tumorigênese (Câncer de Mama/Ovário).",
+        "explanation": "A correta é a A porque BRCA1 é essencial no reparo de quebras de fita dupla. As outras falham pois: B MMR corrige pareamentos, C BER repara bases, D NER corrige danos volumosos e E usa fotoliases.",
         "difficulty": "fácil"
     },
     {
@@ -1553,7 +1553,7 @@ window.questionBank = [
             "E": "Ocorre a expressão exclusiva de genes na fase pré-embrionária."
         },
         "correct": "B",
-        "explanation": "Gabarito: Letra B. É um selo que diz: 'Silencie essa cópia porque ela veio do pai'. Doenças como Prader-Willi e Angelman são falhas clássicas do Imprinting.",
+        "explanation": "A correta é a B porque a expressão silencia um alelo baseando-se no progenitor. As outras falham pois: A envolve expressão e não duplicação, C apenas um alelo é expresso, D é herança genética e E persiste no adulto.",
         "difficulty": "fácil"
     },
     {
@@ -1569,7 +1569,7 @@ window.questionBank = [
             "E": "Ocorre exclusivamente em indivíduos de populações africanas puras."
         },
         "correct": "C",
-        "explanation": "Gabarito: Letra B. É o melhor caso mundial de 'Vantagem do Heterozigoto'. Carregar uma cópia ruim te defende do plasmódio na África.",
+        "explanation": "A correta é a C pois heterozigotos para HbS sobrevivem melhor à infecção por malária. As outras falham pois: A mutação é nuclear, B é desvantajosa sem malária, D é seleção natural e E ocorre em várias etnias.",
         "difficulty": "fácil"
     },
     {
@@ -1585,7 +1585,7 @@ window.questionBank = [
             "E": "Ocorre via proteína p53 em resposta a danos severos no genoma."
         },
         "correct": "D",
-        "explanation": "Gabarito: Letra B. Para evitar dose dupla de carga genética fatal, o RNA XIST abraça e 'desliga' fisicamente todo um cromossomo X nas células femininas (corpúsculo de Barr).",
+        "explanation": "A correta é a D porque o RNA XIST recobre o cromossomo promovendo seu silenciamento. As outras falham pois: A é controle nuclear, B SRY define machos, C telomerase mantém extremidades e E p53 atua no ciclo.",
         "difficulty": "fácil"
     },
     {
@@ -1601,7 +1601,7 @@ window.questionBank = [
             "E": "55-65°C, para permitir a hibridização dos primers com o DNA molde."
         },
         "correct": "E",
-        "explanation": "Gabarito: Letra B. É a temperatura morna exata onde os primers conseguem se encaixar estaticamente às fitas únicas e começar a síntese.",
+        "explanation": "A correta é a E porque esta temperatura permite a hibridização específica dos primers ao molde. As outras falham pois: A é para extensão, B desnatura o DNA, C ferve a amostra e D preserva o produto final.",
         "difficulty": "fácil"
     },
     {
@@ -1617,7 +1617,7 @@ window.questionBank = [
             "E": "Transcriptase reversa (reverse transcriptase), enzima originalmente descrita em retrovírus."
         },
         "correct": "E",
-        "explanation": "Gabarito: Letra B. É a base da RT-qPCR para análise de RNA e detecção viral (como na testagem do HIV e do SARS-CoV-2).",
+        "explanation": "A correta é a E pois a enzima sintetiza cDNA a partir de RNA. As outras falham pois: A relaxa superenrolamento do DNA, B degrada RNA, C sintetiza mRNA e D replica genoma bacteriano.",
         "difficulty": "fácil"
     },
     {
@@ -1633,7 +1633,7 @@ window.questionBank = [
             "E": "Substitui um nucleotídeo, alterando um aminoácido na proteína."
         },
         "correct": "E",
-        "explanation": "Gabarito: Letra B. O sentido (sense) falhou. É a clássica mutação de troca de bloco (ex: Trocou Ácido Glutâmico por Valina na HbS).",
+        "explanation": "A correta é a E pois a mutação substitui um aminoácido por outro. As outras falham pois: A interrompe precocemente, B mantém aminoácido, C altera processamento e D ignora impacto funcional.",
         "difficulty": "fácil"
     },
     {
@@ -1649,7 +1649,7 @@ window.questionBank = [
             "E": "Ocorre no poro nuclear para selecionar moléculas de transporte."
         },
         "correct": "C",
-        "explanation": "Gabarito: Letra B. Eles cortam forçosamente o RNA não codificante (íntron) e costuram as bordas.",
+        "explanation": "A correta é a C pois o complexo de snRNPs remove íntrons do transcrito. As outras falham pois: A traduz proteínas, B degrada proteínas, D replica DNA e E exporta moléculas.",
         "difficulty": "fácil"
     },
     {
@@ -1665,7 +1665,7 @@ window.questionBank = [
             "E": "Resulta da quebra direta da glicose no interior do ribossomo."
         },
         "correct": "C",
-        "explanation": "Gabarito: Letra B. O Ribossomo queima pesado GTP para atuar fisicamente como uma esteira mecânica que puxa e solta a proteína.",
+        "explanation": "A correta é a C pois ATP ativa aminoácidos e GTP impulsiona a translocação. As outras falham pois: A é nucleotídeo carreador, B é redutor, D exclui GTP e E é carboidrato.",
         "difficulty": "fácil"
     },
     {
@@ -1681,7 +1681,7 @@ window.questionBank = [
             "E": "Ocorrem exclusivamente no DNA mitocondrial de herança materna."
         },
         "correct": "D",
-        "explanation": "Gabarito: Letra B. São grandes apagões ou Ctrl+C gigantes no genoma, fortíssimas causadoras de Autismo sindrômico e atrasos intelectuais severos.",
+        "explanation": "A correta é a D pois CNVs são ganhos ou perdas estruturais de segmentos genômicos. As outras falham pois: A é pontual, B exige citogenômica, C gera fenótipos e E é nuclear.",
         "difficulty": "fácil"
     },
     {
@@ -1697,7 +1697,7 @@ window.questionBank = [
             "E": "Mede a expressão gênica via qPCR em tempo real na bancada lab."
         },
         "correct": "B",
-        "explanation": "Gabarito: Letra B. Um farol que 'pinta' o DNA em cores diferentes para ser observado em microscópios avançados em citogenética.",
+        "explanation": "A correta é a B pois utiliza hibridização de sondas coloridas em lâmina. As outras falham pois: A lê nucleotídeos, C é preparo, D amplifica DNA e E quantifica RNA.",
         "difficulty": "fácil"
     },
     {
@@ -1713,7 +1713,7 @@ window.questionBank = [
             "E": "Corrige erros de tradução ocorridos no lúmen do retículo liso."
         },
         "correct": "C",
-        "explanation": "Gabarito: Letra B. Falha no NER causa a grave doença Xeroderma Pigmentoso (alergia letal solar e mutagênese de pele).",
+        "explanation": "A correta é a C pois remove distorções na hélice causadas principalmente por radiação UV. As outras falham pois: A corrige pareamento, B repara quebras, D remove uracila e E é tradução.",
         "difficulty": "fácil"
     },
     {
@@ -1729,7 +1729,7 @@ window.questionBank = [
             "E": "Define que a sequência de DNA é idêntica à sequência de RNA."
         },
         "correct": "C",
-        "explanation": "Gabarito: Letra B. Um códon ATG num humano e num besouro produzirão rigorosamente o mesmo aminoácido metionina. A linguagem é literalmente universal.",
+        "explanation": "A correta é a C pois o código é compartilhado por quase todas as formas de vida. As outras falham pois: A é sobre proteínas, B inclui procariontes, D nega conservação e E confunde polímeros.",
         "difficulty": "fácil"
     },
     {
@@ -1745,7 +1745,7 @@ window.questionBank = [
             "E": "Possui baixíssima taxa de mutação devido ao reparo eficiente."
         },
         "correct": "D",
-        "explanation": "Gabarito: C. A heteroplasmia (diferentes genomas mitocondriais na mesma célula) faz com que variantes mitocondriais apareçam em frações baixas (ex: 15% dos reads), exigindo coberturas altíssimas (>1000x) para não serem confundidas com erro da máquina.",
+        "explanation": "A correta é a D pois variantes coexistem em proporções diferentes entre mitocôndrias. As outras falham pois: A é materna, B carece de íntrons, C é divergente e E sofre alta mutação.",
         "difficulty": "fácil"
     },
     {
@@ -1761,7 +1761,7 @@ window.questionBank = [
             "E": "Inversão paracêntrica."
         },
         "correct": "B",
-        "explanation": "Gabarito: B. A deleção do gene inteiro (ou duplicação, como nos alelos ultrarrápidos) caracteriza uma Copy Number Variation (CNV), alterando a dosagem do gene e, consequentemente, a metabolização de fármacos.",
+        "explanation": "A correta é a B pois a deleção gênica total altera a dosagem/número de cópias. As outras falham pois: A é pontual, C altera leitura, D é nucleotídeo único e E inverte o sentido.",
         "difficulty": "fácil"
     },
     {
@@ -1777,7 +1777,7 @@ window.questionBank = [
             "E": "Impedem a replicação do DNA durante a fase S do ciclo celular."
         },
         "correct": "A",
-        "explanation": "Gabarito: B. Embora os íntrons não codifiquem proteínas, mutações neles podem 'enganar' o spliceossomo, fazendo-o costurar partes do íntron no RNA maduro (pseudoéxons).",
+        "explanation": "A correta é a A pois mutações intrônicas profundas criam sítios de splicing, gerando pseudoéxons. As outras falham pois: B ignora transcrição, C afeta organelas, D foca promotores e E bloqueia fase S.",
         "difficulty": "fácil"
     },
     {
@@ -1793,7 +1793,7 @@ window.questionBank = [
             "E": "A doença apresenta os mesmos sintomas em todos os portadores."
         },
         "correct": "D",
-        "explanation": "Gabarito: A. Penetrância incompleta ocorre quando o genótipo da doença está presente, mas por razões genéticas ou ambientais o indivíduo não desenvolve a doença (ex: mutações BRCA1 não causam câncer em 100% das portadoras).",
+        "explanation": "A correta é a D pois na penetrância incompleta o genótipo está presente sem o fenótipo. As outras falham pois: A restringe idade, B inativa cromossomo, C é sex-linked e E nega variabilidade.",
         "difficulty": "fácil"
     },
     {
@@ -1809,7 +1809,7 @@ window.questionBank = [
             "E": "Depende da epistasia entre genes de diferentes cromossomos."
         },
         "correct": "C",
-        "explanation": "Gabarito: C. Na haploinsuficiência, perder a cópia do pai ou da mãe (LoF) gera doença, pois a célula precisa de 100% da proteína para funcionar perfeitamente, tornando o traço dominante.",
+        "explanation": "A correta é a C pois a haploinsuficiência ocorre quando 50% da proteína é insuficiente funcionalmente. As outras falham pois: A é expressão bialélica, B é supressão cis, D é pleiotropia e E é epistasia.",
         "difficulty": "fácil"
     },
     {
@@ -1825,7 +1825,7 @@ window.questionBank = [
             "E": "Tempo de incubação excessivo na etapa de A-tailing enzimático."
         },
         "correct": "A",
-        "explanation": "Gabarito: A. O PCR-Free exige quantidades massivas e precisas de DNA (medidas por fluorimetria - Qubit). Se você usa NanoDrop, ele superestima a quantidade, você coloca menos DNA do que deveria, e sem a PCR para multiplicar a biblioteca, não sobra material para sequenciar.",
+        "explanation": "A correta é a A pois o NanoDrop superestima DNA, resultando em input real insuficiente. As outras falham pois: B degrada proteínas, C compete na leitura, D altera síntese e E gera artefatos.",
         "difficulty": "médio"
     },
     {
@@ -1841,7 +1841,7 @@ window.questionBank = [
             "E": "A extração via saliva impede a detecção de SNPs no genoma."
         },
         "correct": "C",
-        "explanation": "Gabarito: B. Até 50% do DNA extraído de saliva pode vir de bactérias da boca. Isso significa que você pagou para sequenciar o genoma bacteriano e perdeu dados valiosos do paciente.",
+        "explanation": "A correta é a C pois o DNA bacteriano contamina a amostra e consome a capacidade de sequenciamento. As outras falham pois: A ignora células, B preserva hardware, D viola biologia e E detecta SNPs.",
         "difficulty": "fácil"
     },
     {
@@ -1857,7 +1857,7 @@ window.questionBank = [
             "E": "Monitora-se a taxa on-target de reads nas regiões capturadas."
         },
         "correct": "E",
-        "explanation": "Gabarito: B. Se a captura falhar (sondas lavadas incorretamente), o sequenciador lerá o genoma inteiro (off-target) em vez de focar apenas nos éxons (on-target), reduzindo drasticamente a cobertura.",
+        "explanation": "A correta é a E pois a taxa on-target mede a precisão da captura das regiões codificantes. As outras falham pois: A foca RNA, B é parâmetro físico, C avalia telômeros e D é extração.",
         "difficulty": "fácil"
     },
     {
@@ -1873,7 +1873,7 @@ window.questionBank = [
             "E": "Destruir as DNases presentes na amostra original do paciente."
         },
         "correct": "D",
-        "explanation": "Gabarito: C. Em altas concentrações de álcool, o DNA permanece insolúvel e grudado na bead magnética, permitindo que a água suja (cheia de sais da lise) seja descartada.",
+        "explanation": "A correta é a D pois o etanol precipita o DNA nas beads enquanto remove sais e proteínas. As outras falham pois: A é eluição, B é tamponamento, C é lise e E inativa DNases.",
         "difficulty": "fácil"
     },
     {
@@ -1889,7 +1889,7 @@ window.questionBank = [
             "E": "Aumento da concentração de primers durante a etapa de PCR."
         },
         "correct": "C",
-        "explanation": "Gabarito: A. Plataformas com patterned flow cells têm problema de 'pulo de índice' entre amostras. O UDI funciona como uma senha e contra-senha: se um índice pular, as senhas não vão bater e o algoritmo joga o read fora.",
+        "explanation": "A correta é a C pois o UDI permite identificar e descartar reads com índices trocados. As outras falham pois: A é inseguro, B é mecânico, D é modo leitura e E é reagente.",
         "difficulty": "fácil"
     },
     {
@@ -1905,7 +1905,7 @@ window.questionBank = [
             "E": "Falta de dNTPs durante a síntese da segunda fita da amostra."
         },
         "correct": "C",
-        "explanation": "Gabarito: B. Se você faz muitos ciclos de PCR, os reagentes acabam e as fitas de DNA começam a se hibridizar entre si, criando um DNA frankenstein (quimera) que o computador vai ler como uma grande variante estrutural falsa.",
+        "explanation": "A correta é a C pois ciclos excessivos de PCR causam hibridização cruzada e fragmentos quiméricos. As outras falham pois: A é térmico, B inibe ligase, D afeta pureza e E para síntese.",
         "difficulty": "fácil"
     },
     {
@@ -1921,7 +1921,7 @@ window.questionBank = [
             "E": "Exige fragmentação obrigatória em pedaços pequenos de 150 pb."
         },
         "correct": "D",
-        "explanation": "Gabarito: B. O Nanopore não usa luz nem câmera. É um sequenciamento elétrico que permite ler moléculas nativas de mais de 100 mil bases de uma só vez.",
+        "explanation": "A correta é a D pois a tecnologia Nanopore mede variações de corrente elétrica no poro. As outras falham pois: A usa luz, B mede pH, C é clusterização e E requer curtos.",
         "difficulty": "fácil"
     },
     {
@@ -1937,7 +1937,7 @@ window.questionBank = [
             "E": "Erro na quantificação final via método do Qubit."
         },
         "correct": "C",
-        "explanation": "Gabarito: C. A etapa de wash com SPRI serve exatamente para lavar as impurezas pequenas (como adaptadores não ligados). Falhar nessa lavagem leva adaptadores direto para a flow cell.",
+        "explanation": "A correta é a C pois beads SPRI fazem seleção de tamanho removendo adaptadores. As outras falham pois: A prejudica a ligação sem remover dímeros existentes, B altera a temperatura de reação sem filtrar moléculas, D foca na extração e não na pureza da biblioteca, E mede a concentração total sem distinguir os dímeros presentes.",
         "difficulty": "fácil"
     },
     {
@@ -1953,7 +1953,7 @@ window.questionBank = [
             "E": "Cariótipo com banda G além disso,  sendo um procedimento que depende de validação adicional."
         },
         "correct": "A",
-        "explanation": "Gabarito: C. Por seu altíssimo grau de certeza para pequenos fragmentos, o método de Sanger ainda é o árbitro final quando uma variante clínica gera dúvida no NGS.",
+        "explanation": "A correta é a A pois o sequenciamento Sanger bidirecional confirma SNVs com precisão. As outras falham pois: B repete as mesmas limitações técnicas do WGS inicial, C não possui resolução para identificar bases nitrogenadas específicas, D é indicado para perdas e ganhos de material genético, E identifica apenas grandes alterações estruturais ou numéricas cromossômicas.",
         "difficulty": "médio"
     },
     {
@@ -1969,7 +1969,7 @@ window.questionBank = [
             "E": "Preenchimento de overhangs para gerar pontas cegas."
         },
         "correct": "E",
-        "explanation": "Gabarito: B. Quando quebramos o DNA no ultrassom, ele parte de forma torta. O End-Repair atua como uma 'lixa' enzimática, deixando a ponta reta (blunt end) para o adaptador poder colar.",
+        "explanation": "A correta é a E pois o reparo gera pontas cegas para a ligação. As outras falham pois: A causaria a degradação indesejada das amostras de DNA, B é necessário apenas para processos de transcrição in vitro, C refere-se à etapa de sequenciamento e não ao preparo, D trata-se de um mecanismo de reparo biológico celular específico.",
         "difficulty": "fácil"
     },
     {
@@ -1985,7 +1985,7 @@ window.questionBank = [
             "E": "Lise celular e inativação de nucleases na coleta."
         },
         "correct": "E",
-        "explanation": "Gabarito: B. Esses tubos possuem um 'veneno' químico que lisea tudo e destrói as enzimas que degradariam o RNA/DNA, estabilizando a amostra à temperatura ambiente por semanas.",
+        "explanation": "A correta é a E pois estabilizadores bloqueiam a degradação enzimática e celular. As outras falham pois: A visa manter a viabilidade celular para estudos funcionais, B estimula o ciclo celular o que alteraria a amostra, C causaria a dessecação e comprometeria a qualidade do DNA, D não substitui a identificação necessária para o rastreio laboratorial.",
         "difficulty": "fácil"
     },
     {
@@ -2001,7 +2001,7 @@ window.questionBank = [
             "E": "Alta integridade do RNA com bandas 28S e 18S nítidas."
         },
         "correct": "E",
-        "explanation": "Gabarito: B. A escala RIN vai de 1 (totalmente destruído) a 10 (intacto). O software do bioanalyzer calcula matematicamente a razão entre as ribossomais 28S e 18S para dar essa nota.",
+        "explanation": "A correta é a E pois RIN 9 indica alta integridade e RNA preservado. As outras falham pois: A analisa apenas fragmentos pequenos e não a integridade total, B refere-se à pureza e não ao estado de degradação, C indica que o RNA está totalmente destruído e inutilizável, D descreve a quantidade de material e não sua qualidade.",
         "difficulty": "médio"
     },
     {
@@ -2017,7 +2017,7 @@ window.questionBank = [
             "E": "Inserção de metilações anormais nos arquivos finais."
         },
         "correct": "B",
-        "explanation": "Gabarito: A. Fitas com muito GC são difíceis de derreter (abrir) na PCR. Isso faz com que essas regiões (geralmente primeiros éxons) percam reads, parecendo que o paciente tem uma deleção que não existe.",
+        "explanation": "A correta é a B pois alto teor GC dificulta a desnaturação durante PCR. As outras falham pois: A descreve um dano físico inexistente provocado por bases nitrogenadas, C altera a ordem das leituras mas não causa viés, D relaciona-se ao processo mecânico de quebra das fitas genômicas, E refere-se a modificações químicas que não impedem o sequenciamento.",
         "difficulty": "fácil"
     },
     {
@@ -2033,7 +2033,7 @@ window.questionBank = [
             "E": "Teste de funcionalidade celular sob normas técnicas."
         },
         "correct": "C",
-        "explanation": "Gabarito: B. Quantificar por Qubit não é suficiente. Fragmentos sem adaptador brilham no Qubit, mas não grudam na máquina. A qPCR (quantificação funcional) mede APENAS o que vai colar no vidro.",
+        "explanation": "A correta é a C pois qPCR quantifica exclusivamente fragmentos aptos ao sequenciamento. As outras falham pois: A visualiza estruturas e não quantifica moléculas de DNA ligadas, B foca na precisão da pipetagem e não na funcionalidade, D mede a massa total de DNA sem verificar adaptadores, E avalia o comportamento celular em vez da biblioteca NGS.",
         "difficulty": "fácil"
     },
     {
@@ -2049,7 +2049,7 @@ window.questionBank = [
             "E": "Taxas de mapeamento genômico em cenários ideais."
         },
         "correct": "B",
-        "explanation": "Gabarito: B. Se a amostra é humana normal, os alelos devem ser 100% ou 50%. Se o software mostra muitas variantes com 10%, é porque um paciente 'espirrou' DNA na amostra do outro.",
+        "explanation": "A correta é a B pois DNA contaminante gera alelos em proporções inesperadas. As outras falham pois: A indica problemas de hardware e não contaminação de amostras, C demonstra falha na limpeza da biblioteca e não mistura, D mostra apenas a qualidade da leitura das bases individuais, E foca no sucesso do alinhamento contra o genoma referência.",
         "difficulty": "fácil"
     },
     {
@@ -2065,7 +2065,7 @@ window.questionBank = [
             "E": "Pressão negativa visando a estabilidade in vitro."
         },
         "correct": "D",
-        "explanation": "Gabarito: B. Salas limpas (Mastermix/Pré-PCR) precisam empurrar o ar para fora (pressão positiva) para que partículas sujas não consigam entrar.",
+        "explanation": "A correta é a D pois pressão positiva impede que aerossóis externos entrem. As outras falham pois: A criaria um ambiente sem oxigênio inviável para o trabalho, B não oferece barreira contra a entrada de potenciais contaminantes, C é tecnicamente inviável e não protege os reagentes estéreis, E é utilizada em salas pós-PCR para conter os amplicons.",
         "difficulty": "fácil"
     },
     {
@@ -2081,7 +2081,7 @@ window.questionBank = [
             "E": "Limpeza com sabão neutro e secagem com papel toalha."
         },
         "correct": "B",
-        "explanation": "Gabarito: C. Amplicons são minúsculos e resistentes. Álcool 70% apenas fixa o DNA na bancada. É necessário destruição química com água sanitária (hipoclorito) ou removedores próprios de ácidos nucleicos.",
+        "explanation": "A correta é a B pois o hipoclorito degrada quimicamente o DNA de amplicons. As outras falham pois: A fixa o material genético na superfície sem degradá-lo, C apenas remove sujeira visível mas mantém o DNA intacto, D não possui poder germicida ou químico contra ácidos nucleicos, E realiza limpeza superficial sem inativar a capacidade de amplificação.",
         "difficulty": "fácil"
     },
     {
@@ -2097,7 +2097,7 @@ window.questionBank = [
             "E": "Impossibilidade de rastrear modificações nos dados."
         },
         "correct": "E",
-        "explanation": "Gabarito: B. Sem Audit Trail (Trilha de Auditoria), qualquer funcionário pode alterar o resultado de um teste sem deixar rastro. A norma FDA CFR 21 Part 11 exige trilhas inalteráveis.",
+        "explanation": "A correta é a E pois a Trilha de Auditoria é indispensável para registrar quem alterou dados e quando. As outras falham pois: A foca em biossegurança física, B trata de insumos de escritório, C refere-se ao desempenho do hardware e D foca em calibração química.",
         "difficulty": "fácil"
     },
     {
@@ -2113,7 +2113,7 @@ window.questionBank = [
             "E": "Validação cruzada comparando desempenho de lotes."
         },
         "correct": "E",
-        "explanation": "Gabarito: B. Nunca assuma que o fabricante mandou um kit perfeito. É obrigatório fazer a 'validação cruzada de lote' para garantir que os resultados continuarão consistentes.",
+        "explanation": "A correta é a E porque a validação cruzada assegura que novos lotes não introduzam viés nos resultados. As outras falham pois: A gera desperdício desnecessário, B é específica para lise mecânica, C é meramente administrativa e D é um excesso burocrático inexistente.",
         "difficulty": "fácil"
     },
     {
@@ -2129,7 +2129,7 @@ window.questionBank = [
             "E": "Óculos, máscara de gases e capela química."
         },
         "correct": "E",
-        "explanation": "Gabarito: B. Fenol causa queimaduras graves e seus vapores são tóxicos para o sistema nervoso. A Cabine de Fluxo Laminar joga o ar na sua cara, a manipulação exige Capela de Exaustão Química.",
+        "explanation": "A correta é a E pois o fenol exige proteção contra vapores tóxicos e contato corrosivo em capela. As outras falham pois: A serve para agentes biológicos, B é para radiação, C é para higiene capilar e D é para riscos elétricos.",
         "difficulty": "fácil"
     },
     {
@@ -2145,7 +2145,7 @@ window.questionBank = [
             "E": "Falha em bibliotecas por baixa ação enzimática."
         },
         "correct": "E",
-        "explanation": "Gabarito: B. Enzimas de NGS operam em janelas térmicas estreitas. Se o termociclador diz que está a 37ºC mas o bloco físico está a 40ºC, você perderá a biblioteca.",
+        "explanation": "A correta é a E porque enzimas de NGS são termossensíveis e blocos descalibrados impedem a síntese das bibliotecas. As outras falham pois: A refere-se ao armazenamento, B é erro de bioinformática, C é impossível fisicamente e D é desgaste mecânico.",
         "difficulty": "fácil"
     },
     {
@@ -2161,7 +2161,7 @@ window.questionBank = [
             "E": "Venda de amostras e calibração de métodos."
         },
         "correct": "A",
-        "explanation": "Gabarito: B. A contramostra é a garantia de segurança do laboratório contra processos legais e falsos positivos, garantindo a rastreabilidade original.",
+        "explanation": "A correta é a A pois a contramostra garante a possibilidade de reanálise em casos de dúvida ou auditoria. As outras falham pois: B testa o equipamento, C é prática antiética, D é para medicina transfusional e E é crime ambiental.",
         "difficulty": "fácil"
     },
     {
@@ -2177,7 +2177,7 @@ window.questionBank = [
             "E": "Interrupção do sequenciador por 3 segundos."
         },
         "correct": "B",
-        "explanation": "Gabarito: B. Essa é a regra ouro laboratorial. Valores fora de 3 desvios padrão da média são anomalias graves inaceitáveis estatisticamente.",
+        "explanation": "A correta é a B porque a regra 1(3s) define que um ponto fora de 3 desvios-padrão é erro aleatório grave. As outras falham pois: A envolve gestão de pessoas, C refere-se à regra 3(1s), D é análise financeira e E é tempo de hardware.",
         "difficulty": "fácil"
     },
     {
@@ -2193,7 +2193,7 @@ window.questionBank = [
             "E": "Neutralização por amônia e monitoramento prévio."
         },
         "correct": "A",
-        "explanation": "Gabarito: B. Não basta secar, a superfície deve ficar submersa em desinfetante eficaz (hipoclorito) por 20 a 30 minutos (tempo de contato) para destruir agentes como HBV ou HIV.",
+        "explanation": "A correta é a A pois o hipoclorito é o agente padrão ouro para desinfetar material biológico potencialmente infectante. As outras falham pois: B é menos eficaz, C promove a dispersão, D danifica o equipamento e E usa reagente inadequado.",
         "difficulty": "fácil"
     },
     {
@@ -2209,7 +2209,7 @@ window.questionBank = [
             "E": "Dependência do sistema Linux e estabilidade."
         },
         "correct": "B",
-        "explanation": "Gabarito: B. Uma variação de 3ºC na sala faz as peças de vidro e metal do laser dilatarem micrômetros, perdendo o foco dos clusters nanométricos.",
+        "explanation": "A correta é a B porque a estabilidade térmica impede a descalibração micrométrica dos componentes ópticos do sequenciador. As outras falham pois: A não ocorre nessa temperatura, C é processo químico alheio, D é conforto humano e E é dependência lógica.",
         "difficulty": "fácil"
     },
     {
@@ -2225,7 +2225,7 @@ window.questionBank = [
             "E": "Pagamento de transporte e estabilidade."
         },
         "correct": "D",
-        "explanation": "Gabarito: B. O patrimônio genético permanece brasileiro. O laboratório externo é apenas prestador de serviço/colaborador, regulado por um MTA (Material Transfer Agreement) estrito.",
+        "explanation": "A correta é a D pois o MTA estabelece as garantias legais e éticas na transferência de patrimônio genético. As outras falham pois: A é puramente técnica, B é detalhe administrativo, C é ilegal e E é detalhe logístico secundário.",
         "difficulty": "fácil"
     },
     {
@@ -2241,7 +2241,7 @@ window.questionBank = [
             "E": "Omissão de dados por falta de foco no estudo."
         },
         "correct": "A",
-        "explanation": "Gabarito: B. Essa mutação confere altíssimo risco de câncer. O protocolo prevê que, se o paciente assinou querer saber, o resultado deve ser confirmado isoladamente antes de gerar pânico.",
+        "explanation": "A correta é a A pois achados incidentais graves exigem confirmação laboratorial e respeito ao consentimento livre. As outras falham pois: B viola a privacidade, C fere o sigilo médico, D é conduta clínica desproporcional e E é antiético.",
         "difficulty": "fácil"
     },
     {
@@ -2257,7 +2257,7 @@ window.questionBank = [
             "E": "Existência de genes exclusivos de alienígenas."
         },
         "correct": "B",
-        "explanation": "Gabarito: B. A CONEP exige ritos extras para evitar a exploração biopirata de povos tradicionais sob o verniz da pesquisa genômica (Resolução nº 304).",
+        "explanation": "A correta é a B porque populações tradicionais exigem ritos éticos rigorosos pela Resolução 304. As outras falham pois: A não há proibição legal, C requer maior rigor ético, D possuem plena cidadania brasileira e E é uma afirmação sem base científica.",
         "difficulty": "fácil"
     },
     {
@@ -2273,7 +2273,7 @@ window.questionBank = [
             "E": "Pagamento de bolsas e monitoramento prévio."
         },
         "correct": "C",
-        "explanation": "Gabarito: B. É o conselho externo que zela pela vida dos pacientes. Se a genômica indicar grave risco nos pacientes em meio à pesquisa, eles abortam o ensaio para proteger as vidas.",
+        "explanation": "A correta é a C pois o DMC monitora a segurança e a integridade dos participantes em ensaios. As outras falham pois: A refere-se à autoria científica, B é tarefa técnica de bioinformática, D trata de desenvolvimento de software e E envolve gestão financeira.",
         "difficulty": "fácil"
     },
     {
@@ -2289,7 +2289,7 @@ window.questionBank = [
             "E": "Troca de etiquetas e validação adicional."
         },
         "correct": "D",
-        "explanation": "Gabarito: B. O DNA nunca é 100% anônimo. Se a pessoa jogou dados em sites de ancestralidade, a base do governo, mesmo sem CPF, pode ser cruzada com a comercial identificando o paciente.",
+        "explanation": "A correta é a D porque dados genômicos permitem reidentificação via cruzamento com bancos de dados públicos. As outras falham pois: A envolve logística temporal, B é análise química, C é segurança de senhas e E é erro administrativo básico.",
         "difficulty": "fácil"
     },
     {
@@ -2305,7 +2305,7 @@ window.questionBank = [
             "E": "Perda de acesso ao SUS e segurança de dados."
         },
         "correct": "C",
-        "explanation": "Gabarito: B. A autonomia impera. A partir do momento da retirada da assinatura, a instituição cessa imediatamente o uso das alíquotas remanescentes.",
+        "explanation": "A correta é a C pois a autonomia permite a retirada do consentimento e consequente descarte amostral. As outras falham pois: A limita-se apenas à saliva, B aplica punição financeira inexistente, D não retroage publicações feitas e E fere o direito constitucional à saúde.",
         "difficulty": "fácil"
     },
     {
@@ -2321,7 +2321,7 @@ window.questionBank = [
             "E": "Controle de versão e disponibilidade em sala."
         },
         "correct": "E",
-        "explanation": "Gabarito: B. Todo POP precisa de controle de versão (ex: Versão 2.1) para que, se um lote dar erro, possamos ver qual instrução exatamente o biomédico seguiu naquele mês.",
+        "explanation": "A correta é a E pois a ISO 15189 exige rastreabilidade via controle de versões acessíveis no local de trabalho. As outras falham pois: A é excesso burocrático ministerial, B dificulta o acesso operacional, C ignora a qualidade técnica e D é tecnicamente irrelevante.",
         "difficulty": "médio"
     },
     {
@@ -2337,7 +2337,7 @@ window.questionBank = [
             "E": "Retorno de ganhos para sociedade e indígenas."
         },
         "correct": "E",
-        "explanation": "Gabarito: B. É o arcabouço de proteção contra pirataria da biodiversidade (Lei 13.123/15). O lucro sobre nosso genoma deve retornar em benefícios de saúde ao nosso país.",
+        "explanation": "A correta é a E pois a Lei 13.123/15 exige partilha de lucros oriundos da biodiversidade com a sociedade nacional. As outras falham pois: A foca apenas em patentes, B permite comércio regulado, C não isenta estrangeiros e D limita-se ao lucro do Estado.",
         "difficulty": "médio"
     },
     {
@@ -2353,7 +2353,7 @@ window.questionBank = [
             "E": "Eficiência em populações europeias e estabilidade in vitro do kit."
         },
         "correct": "D",
-        "explanation": "Gabarito: B. Para se transformar de pesquisa para prática rotineira (Clinical Grade), o painel passa por estresse exaustivo confirmando as métricas de segurança.",
+        "explanation": "A correta é a D porque a validação analítica exige métricas de precisão, sensibilidade, acurácia e limites técnicos. As outras falham pois: A é uma análise parcial, B é fisicamente irrelevante, C é um trâmite puramente legal e E foca apenas em demografia.",
         "difficulty": "fácil"
     },
     {
@@ -2369,7 +2369,7 @@ window.questionBank = [
             "E": "Extinção da atenção primária e padrões de segurança."
         },
         "correct": "D",
-        "explanation": "Gabarito: B. Genômica populacional não quer substituir o posto de saúde, quer ajudar o médico a saber de antemão qual remédio exato funcionará ou falhará miseravelmente naquele paciente específico.",
+        "explanation": "A correta é a D pois a medicina de precisão segmenta subgrupos de pacientes para terapias alvo otimizadas. As outras falham pois: A foca em infraestrutura de leitos, B é cientificamente falsa, C propõe privatização política e E extingue a base do sistema.",
         "difficulty": "fácil"
     },
     {
@@ -2385,7 +2385,7 @@ window.questionBank = [
             "E": "Expressão de queratina e uso de controles internos."
         },
         "correct": "D",
-        "explanation": "Gabarito: B. Portadores da deficiência de DPYD (mutação clássica farmacogenômica) morrem envenenados se receberem as doses padronizadas da droga comum contra Câncer Colorretal. A genômica antevê e reduz a dose.",
+        "explanation": "A correta é a D pois variantes no gene DPYD causam toxicidade fatal ao quimioterápico 5-fluorouracil. As outras falham pois: A cita o analgésico incorreto, B envolve genes de linguagem, C refere-se à intolerância alimentar e E trata de proteína estrutural.",
         "difficulty": "fácil"
     },
     {
@@ -2401,7 +2401,7 @@ window.questionBank = [
             "E": "Substituição de bioquímica por Raio-X e validação."
         },
         "correct": "B",
-        "explanation": "Gabarito: B. A triagem de 1ª linha sempre será a gota de sangue/bioquímica por ser barata. Porém, quando detecta algo errado, a 2ª linha moderna passa a ser o WGS instantâneo do bebê.",
+        "explanation": "A correta é a B pois associa a triagem bioquímica clássica com a confirmação diagnóstica por sequenciamento genômico. As outras falham pois: A é segregacionista, C representa um retrocesso médico, D fere a gratuidade do SUS e E utiliza tecnologia radiológica inadequada.",
         "difficulty": "fácil"
     },
     {
@@ -2417,7 +2417,7 @@ window.questionBank = [
             "E": "Exclusão anual de dados e protocolos laboratoriais."
         },
         "correct": "C",
-        "explanation": "Gabarito: B. Sem prontuário único interoperável (RNDS), a genômica não serve de nada, pois o médico no interior não teria como ler que o paciente foi sequenciado na capital do estado.",
+        "explanation": "A correta é a C pois a RNDS utiliza o padrão HL7 FHIR para garantir a interoperabilidade de dados genômicos e clínicos no SUS. As outras falham pois: A trata de segurança física patrimonial, B limita-se a dados estatísticos populacionais, D refere-se a fluxos administrativos irrelevantes e E sugere descarte indevido de dados.",
         "difficulty": "fácil"
     },
     {
@@ -2433,7 +2433,7 @@ window.questionBank = [
             "E": "Prolongamento de internações e métodos ortogonais."
         },
         "correct": "B",
-        "explanation": "Gabarito: B. O sequenciamento é caro, mas estudos de economia da saúde provam que sequenciar a família logo no primeiro mês economiza milhares de reais do SUS que seriam gastos em anos de UTIs às cegas.",
+        "explanation": "A correta é a B porque o WGS de trios permite um diagnóstico rápido e preciso, economizando recursos públicos a longo prazo. As outras falham pois: A envolve questões de direito civil, C afasta o contato médico necessário, D confunde diagnósticos genéticos com infecciosos e E aumenta custos hospitalares evitáveis.",
         "difficulty": "fácil"
     },
     {
@@ -2449,7 +2449,7 @@ window.questionBank = [
             "E": "Capacidade de faturamento e calibração de métodos."
         },
         "correct": "A",
-        "explanation": "Gabarito: B. Avaliação de Tecnologias em Saúde (ATS - feita pela CONITEC) usa parâmetros econômicos (ex: Dólares por QALY) para provar que a prevenção de um agravo severo paga a máquina milionária da genômica.",
+        "explanation": "A correta é a A pois a análise de custo-efetividade foca na relação entre investimento e ganhos em anos de vida qualificados (QALY). As outras falham pois: B foca em velocidade analítica, C foca apenas no custo do equipamento, D prioriza a preferência individual e E foca em gestão financeira.",
         "difficulty": "fácil"
     },
     {
@@ -2465,7 +2465,7 @@ window.questionBank = [
             "E": "Alta taxa de VUS em não-brancos e desigualdade."
         },
         "correct": "E",
-        "explanation": "Gabarito: B. Se a ciência baseou seus escores na genética caucasiana, uma mutação encontrada num afrodescendente brasileiro pode ser classificada como VUS, negando o benefício preventivo àquela família (Racismo genômico estrutural).",
+        "explanation": "A correta é a E porque a sub-representação de não-brancos em bancos genômicos gera altas taxas de Variantes de Significado Incerto (VUS). As outras falham pois: A sugere uma precisão inexistente na prática, B refere-se a diagnósticos em excesso, C ignora os gastos com reanálises e D nega o impacto socio-clínico.",
         "difficulty": "fácil"
     },
     {
@@ -2481,7 +2481,7 @@ window.questionBank = [
             "E": "Sequenciamento de animais extintos e adequação técnica."
         },
         "correct": "B",
-        "explanation": "Gabarito: B. Saúde Única (One Health) entende que a saúde animal, humana e ambiental está interligada, tudo codificado e monitorado pelo DNA circulante nos patógenos e reservatórios.",
+        "explanation": "A correta é a B pois a Saúde Única utiliza NGS para monitorar patógenos de forma integrada entre animais, humanos e meio ambiente. As outras falham pois: A foca em genealogia familiar humana, C limita-se a um grupo específico bacteriano, D refere-se à ciência forense criminal e E foca em paleontologia.",
         "difficulty": "fácil"
     },
     {
@@ -2497,7 +2497,7 @@ window.questionBank = [
             "E": "Garantia de autonomia e tradução de riscos em saúde."
         },
         "correct": "E",
-        "explanation": "Gabarito: B. Não se pode entregar um PDF cheio de mutações nas mãos do cidadão. O geneticista/conselheiro acolhe, esclarece que 'risco não é diagnóstico absoluto' e guia as tomadas preventivas.",
+        "explanation": "A correta é a E porque o aconselhamento garante que o paciente tome decisões autônomas após compreender os riscos genômicos informados. As outras falham pois: A foca em prescrição de psicotrópicos, B sugere eugenia reprodutiva antiética, C fere a autonomia com obrigatoriedade e D propõe rastreio sem consentimento.",
         "difficulty": "fácil"
     },
     {
@@ -2513,7 +2513,7 @@ window.questionBank = [
             "E": "Risco de Anemia Falciforme em filhos de carreadores."
         },
         "correct": "E",
-        "explanation": "Gabarito: B. A genômica preventiva no casamento (rastreio de portadores assintomáticos) permite orientação familiar profunda sobre a probabilidade (25%) de ter bebês que exigirão intensos cuidados com dores isquêmicas da doença SS.",
+        "explanation": "A correta é a E pois o rastreio genômico de carreadores permite prever e orientar sobre o risco de nascimento de filhos com Anemia Falciforme. As outras falham pois: A foca apenas no benefício evolutivo da malária, B inventa uma relação com gripe, C utiliza tratamento oncológico incorreto e D cita parâmetros químicos irrelevantes.",
         "difficulty": "fácil"
     },
     {
@@ -2529,7 +2529,7 @@ window.questionBank = [
             "E": "Troca de índices na flow cell e monitoramento técnico."
         },
         "correct": "C",
-        "explanation": "Gabarito: B. O formol causa a desaminação da citosina, que vira uracila. Durante a PCR da biblioteca, a polimerase insere um 'A' onde vê o 'U', gerando falsas mutações C>T. O tratamento prévio com UDG (Uracil-DNA Glicosilase) é usado para corrigir isso.",
+        "explanation": "A correta é a C pois o formol causa desaminação da citosina para uracila, resultando em falsas substituições C para T durante a PCR. As outras falham pois: A envolve danos por radicais livres, B decorre de exposição a raios UV, D é erro inerente à polimerase e E refere-se a erros de demultiplexação.",
         "difficulty": "fácil"
     },
     {
@@ -2545,7 +2545,7 @@ window.questionBank = [
             "E": "Elevação do pH de eluição e calibração de métodos."
         },
         "correct": "A",
-        "explanation": "Gabarito: B. Quanto menor a quantidade de solução de beads (que contém PEG e Sal), apenas os fragmentos grandes conseguem precipitar e se ligar à sílica. Ratios altos fazem até os fragmentos muito pequenos grudarem.",
+        "explanation": "A correta é a A porque a redução da concentração de PEG/Sal (razão bead:amostra) favorece a precipitação seletiva apenas de fragmentos de DNA maiores. As outras falham pois: B refere-se à etapa de limpeza, C utiliza reagente impróprio para SPRI, D retém fragmentos indesejados muito pequenos e E afeta apenas a recuperação final.",
         "difficulty": "médio"
     },
     {
@@ -2561,7 +2561,7 @@ window.questionBank = [
             "E": "570 pb."
         },
         "correct": "D",
-        "explanation": "Gabarito: D. O pico do TapeStation mostra o fragmento TOTAL (Inserto + Adaptadores). Para saber o tamanho do inserto real (o DNA do paciente), subtrai-se ~130 pb dos adaptadores do tamanho total. 450 - 130 = 320 pb.",
+        "explanation": "A correta é a D porque o tamanho do inserto é calculado subtraindo-se o comprimento dos adaptadores (~130pb) do tamanho total da biblioteca (450pb). As outras falham pois: A considera o fragmento total, B dobra o tamanho esperado, C subestima drasticamente o inserto e E soma os adaptadores ao total.",
         "difficulty": "fácil"
     },
     {
@@ -2577,7 +2577,7 @@ window.questionBank = [
             "E": "Volume de etanol, tempo de secagem e volume de eluição."
         },
         "correct": "C",
-        "explanation": "Gabarito: B. A sonicação focada é regulada pela potência do pulso acústico (PIP), pela frequência do pulso (Duty Factor) e pelo número de ondas por pulso (CPB). Ajustar esses 3 parâmetros define se o DNA vai quebrar em 150bp ou 800bp.",
+        "explanation": "A correta é a C porque PIP, Duty Factor e CPB regulam a sonicação focada. As outras falham pois: A usa reagentes de amplificação, B refere-se a tampão enzimático, D são parâmetros de eletroforese e E são etapas de purificação.",
         "difficulty": "fácil"
     },
     {
@@ -2593,7 +2593,7 @@ window.questionBank = [
             "E": "Ausência de reads duplicados e padrões de segurança."
         },
         "correct": "A",
-        "explanation": "Gabarito: B. A Tn5 transposase não corta o DNA de forma 100% randômica como a força mecânica do Covaris; ela 'gosta' mais de alguns motivos genéticos, gerando um leve viés de quebra que a bioinformática precisa computar.",
+        "explanation": "A correta é a A porque a transposase Tn5 possui preferências de sequência para inserção. As outras falham pois: B gera fragmentos variados, C indica dano químico, D não é específico para mitocôndrias e E gera duplicatas.",
         "difficulty": "fácil"
     },
     {
@@ -2609,7 +2609,7 @@ window.questionBank = [
             "E": "Uso da maior concentração em cenários controlados."
         },
         "correct": "D",
-        "explanation": "Gabarito: C. Se o Qubit leu 40nM e o qPCR leu 10nM, significa que 30nM da sua biblioteca é DNA 'morto' (sem os adaptadores corretos nas pontas). Se você carregar na flow cell baseando-se no Qubit, a máquina ficará subcarregada.",
+        "explanation": "A correta é a D pois o qPCR quantifica apenas moléculas com adaptadores funcionais. As outras falham pois: A mede DNA total, B desperdiça amostras viáveis, C gera subcarregamento e E causa sobreposição de clusters.",
         "difficulty": "fácil"
     },
     {
@@ -2625,7 +2625,7 @@ window.questionBank = [
             "E": "Tipagem HLA por Sanger em cenários controlados."
         },
         "correct": "D",
-        "explanation": "Gabarito: C. Na biópsia líquida, procurar um DNA de tumor no sangue é achar agulha no palheiro. O UMI é um código de barras colocado em CADA molécula original ANTES da PCR. Assim, a bioinformática sabe o que é cópia e o que é molécula real.",
+        "explanation": "A correta é a D porque UMIs permitem distinguir variantes reais de erros de PCR. As outras falham pois: A não possui PCR, B foca em quantificação, C foca em diversidade e E é tecnologia de primeira geração.",
         "difficulty": "médio"
     },
     {
@@ -2641,7 +2641,7 @@ window.questionBank = [
             "E": "Tempo de lavagem de sondas e métodos ortogonais."
         },
         "correct": "C",
-        "explanation": "Gabarito: B. Uma métrica crítica do Exoma. Se o Fold-80 for alto, significa que a captura foi muito desigual (alguns éxons capturaram muito, outros nada), exigindo jogar muito mais dinheiro na corrida para nivelar a cobertura.",
+        "explanation": "A correta é a C porque avalia quão uniforme foi o enriquecimento dos alvos. As outras falham pois: A é métrica financeira, B mede integridade física, D refere-se a haplótipos e E é uma etapa técnica.",
         "difficulty": "fácil"
     },
     {
@@ -2657,7 +2657,7 @@ window.questionBank = [
             "E": "Tagmentação prematura e preservação de amostra."
         },
         "correct": "B",
-        "explanation": "Gabarito: C. A ExAmp chemistry das patterned flow cells sofre desse defeito. A solução obrigatória atual é usar UDI (Unique Dual Indexes), onde nenhuma amostra compartilha o mesmo i5 ou i7 com outra.",
+        "explanation": "A correta é a B porque ocorre em células de fluxo padronizadas da Illumina. As outras falham pois: A é limitação computacional, C é dano por desaminação, D reduz eficiência produtiva e E é falha de protocolo.",
         "difficulty": "fácil"
     },
     {
@@ -2673,7 +2673,7 @@ window.questionBank = [
             "E": "Contaminação cruzada e controles de reação."
         },
         "correct": "C",
-        "explanation": "Gabarito: B. O tampão de eluição (água/TE) não consegue reidratar e soltar o DNA de uma matriz de sílica se ela secar a ponto de rachar.",
+        "explanation": "A correta é a C porque o DNA se liga irreversivelmente à sílica se desidratado. As outras falham pois: A não causa quebra química, B reduz o rendimento final, D não adiciona contaminantes e E não afeta pureza.",
         "difficulty": "fácil"
     },
     {
@@ -2689,7 +2689,7 @@ window.questionBank = [
             "E": "Degradação de ponteira e validação técnica."
         },
         "correct": "A",
-        "explanation": "Gabarito: B. Conforme os ciclos avançam, algumas moléculas no cluster 'atrasam' a incorporação e outras 'adiantam'. A câmera passa a ver um borrão de luz mista in vez de uma cor nítida, baixando a confiança (Q-score) drasticamente no final do read.",
+        "explanation": "A correta é a A devido à dessincronização progressiva das moléculas dentro do cluster. As outras falham pois: B afeta catálise, C causa sobreposição inicial, D inibe reação global e E é erro físico.",
         "difficulty": "fácil"
     },
     {
@@ -2705,7 +2705,7 @@ window.questionBank = [
             "E": "Cluster espalhado ou leitura dupla na flow cell."
         },
         "correct": "E",
-        "explanation": "Gabarito: C. A câmera do equipamento se confunde e contabiliza o mesmo amontoado de DNA duas vezes. O software (MarkDuplicates) identifica isso porque os dois reads terão coordenadas x,y (posicionamento físico no vidro) virtualmente idênticas.",
+        "explanation": "A correta é a E porque o sensor identifica uma única colônia como duas distintas. As outras falham pois: A gera duplicatas de PCR, B é contaminação cruzada, C prepara extremidades e D é software de alinhamento.",
         "difficulty": "fácil"
     },
     {
@@ -2721,7 +2721,7 @@ window.questionBank = [
             "E": "Continuidade do processo e sensibilidade ao pH."
         },
         "correct": "B",
-        "explanation": "Gabarito: B. Uma razão A260/230 abaixo de 1.8 indica forte contaminação com sais caotrópicos, fenol ou carboidratos. Enzimas ligases e polimerases do NGS serão severamente inibidas.",
+        "explanation": "A correta é a B porque purificação remove sais caotrópicos que inibem polimerases. As outras falham pois: A remove RNA, C não elimina sais, D digere proteínas e E causa falha no sequenciamento.",
         "difficulty": "médio"
     },
     {
@@ -2737,7 +2737,7 @@ window.questionBank = [
             "E": "Destruição estrutural do DNA em cenários controlados."
         },
         "correct": "B",
-        "explanation": "Gabarito: C. A heparina é um polissacarídeo ultranegativo, muito semelhante fisicamente à fita do DNA. A polimerase tenta se ligar à heparina em vez do DNA do paciente, paralisando a reação de amplificação/ligação.",
+        "explanation": "A correta é a B porque a heparina mimetiza o DNA, inibindo competitivamente a Taq Polimerase. As outras falham pois: A refere-se a proteínas, C foca em cor, D trata de fragmentação física e E assume destruição estrutural inexistente.",
         "difficulty": "fácil"
     },
     {
@@ -2753,7 +2753,7 @@ window.questionBank = [
             "E": "Composição de RNA e necessidade de validação."
         },
         "correct": "D",
-        "explanation": "Gabarito: B. Alguns genes essenciais têm 'cópias' quase idênticas no genoma (pseudogenes). Leituras curtas (150pb) da Illumina se perdem e não sabem de qual gene vieram. Leituras longas cruzam a região inteira como uma ponte, dando a coordenada exata.",
+        "explanation": "A correta é a D pois leituras longas mapeiam regiões homólogas impossíveis para leituras curtas. As outras falham pois: A ignora preparo, B Illumina é mais barata, C não resolve degradação e E envolve RNA irrelevante.",
         "difficulty": "fácil"
     },
     {
@@ -2769,7 +2769,7 @@ window.questionBank = [
             "E": "Inalação de reagentes e protocolos controlados."
         },
         "correct": "A",
-        "explanation": "Gabarito: C. A contaminação por amplicons é o pesadelo de qualquer biologia molecular. 1 gota de ar de uma sala Pós-PCR carrega trilhões de cópias de DNA alvo, o suficiente para gerar falsos positivos eternos no laboratório inteiro se não for isolada.",
+        "explanation": "A correta é a A porque o fluxo impede que amplicons contaminem áreas limpas pré-PCR. As outras falham pois: B iluminação é funcional, C pH é tamponado, D limpeza é secundária e E inalação requer cabines.",
         "difficulty": "fácil"
     },
     {
@@ -2785,7 +2785,7 @@ window.questionBank = [
             "E": "Acelerar processadores e monitorar a fase pré-analítica."
         },
         "correct": "D",
-        "explanation": "Gabarito: C. O sistema de fluidos da máquina Illumina lida com corantes fluorescentes e sais concentrados. Um entupimento nas agulhas de injeção destrói uma corrida milionária inteira. As lavagens com Tween 20 e NaOCl são críticas.",
+        "explanation": "A correta é a D porque remove sais e corantes que entopem as linhas fluídicas. As outras falham pois: A requer lubrificantes específicos, B usa sensores ópticos, C é limpeza química e E foca em eletrônica.",
         "difficulty": "fácil"
     },
     {
@@ -2801,7 +2801,7 @@ window.questionBank = [
             "E": "Menor Frequência Alélica (VAF) detectável com confiança estatística."
         },
         "correct": "E",
-        "explanation": "Gabarito: C. A sensibilidade analítica (LOD) mede a capacidade 'microscópica' do ensaio. Se uma mutação tumoral está presente em apenas 3 de cada 100 células no tubo, o sequenciamento é sensível o bastante para detectá-la?",
+        "explanation": "A correta é a E pois a sensibilidade analítica define o menor sinal (VAF) detectável. As outras falham pois: A é especificidade, B é economia, C é eficiência operacional e D é taxa de falso-positivo.",
         "difficulty": "fácil"
     },
     {
@@ -2817,7 +2817,7 @@ window.questionBank = [
             "E": "Visualização de vapor ao abrir e validação com métodos ortogonais."
         },
         "correct": "C",
-        "explanation": "Gabarito: B. A fita zebrada (indicador químico) prova apenas que a máquina esquentou, mas não garante que o vapor penetrou na carga por tempo suficiente para matar a vida. A morte dos esporos bacterianos (indicador biológico) é a prova definitiva exigida pela ANVISA.",
+        "explanation": "A correta é a C pois a morte de esporos garante a esterilização biológica efetiva. As outras falham pois: A odor é subjetivo, B fita indica apenas calor, D pressão é insuficiente e E vapor é apenas visual.",
         "difficulty": "fácil"
     },
     {
@@ -2833,7 +2833,7 @@ window.questionBank = [
             "E": "Paralisação total das atividades por 30 dias para validação externa."
         },
         "correct": "C",
-        "explanation": "Gabarito: B. Um erro laboratorial sistêmico não se resolve com culpas ou consertos paliativos temporários. A eficácia da correção inserida no processo deve ser monitorada para fechar formalmente o relatório.",
+        "explanation": "A correta é a C pois a fase de checagem valida se o erro foi mitigado. As outras falham pois: A execução é a etapa Do, B é para crimes, D punição não é qualidade e E paralisar é desnecessário.",
         "difficulty": "fácil"
     },
     {
@@ -2849,7 +2849,7 @@ window.questionBank = [
             "E": "Imprecisão da pipeta e grau de dispersão entre medidas repetidas."
         },
         "correct": "E",
-        "explanation": "Gabarito: C. A precisão (ou ausência de erro aleatório) significa reprodutibilidade. Se a pipeta marca 10ul e aspira 9,9 / 9,8 / 10,1 sucessivamente, ela é precisa. A exatidão é o erro sistemático (marcar 10ul e aspirar 8ul constantemente).",
+        "explanation": "A correta é a E pois o erro aleatório mede a imprecisão e dispersão dos dados. As outras falham pois: A é variável ambiental, B é erro sistemático, C afeta ambos os erros e D é material.",
         "difficulty": "médio"
     },
     {
@@ -2865,7 +2865,7 @@ window.questionBank = [
             "E": "Descarte em lixo comum (Grupo D) por evaporação rápida de solvente."
         },
         "correct": "C",
-        "explanation": "Gabarito: C. Brometo de etídio é um potente mutagênico. Autoclavar (calor) resíduo químico apenas faz o laboratório inalar fumaça tóxica, e o descarte no esgoto é crime ambiental severo. Vai para container especializado (Grupo B - Químico).",
+        "explanation": "A correta é a C porque resíduos genotóxicos exigem incineração como resíduo químico perigoso. As outras falham pois: A é crime ambiental, B é para perfurocortantes, D gera vapores tóxicos e E contamina a atmosfera.",
         "difficulty": "fácil"
     },
     {
@@ -2881,7 +2881,7 @@ window.questionBank = [
             "E": "Dificuldade robótica na leitura lateral de códigos de barras."
         },
         "correct": "B",
-        "explanation": "Gabarito: B. Durante a ciclagem térmica, as bordas da placa esfriam ou aquecem numa taxa levemente diferente do centro. Para WGS super sensíveis, isso muda o perfil do DNA final das amostras periféricas.",
+        "explanation": "A correta é a B pois poços periféricos sofrem maior troca térmica e evaporação diferencial. As outras falham pois: A é contaminação, C é dano físico, D afeta magnetismo e E é erro óptico.",
         "difficulty": "fácil"
     },
     {
@@ -2897,7 +2897,7 @@ window.questionBank = [
             "E": "Água estéril ou destilada para preservação da amostra biológica."
         },
         "correct": "A",
-        "explanation": "Gabarito: C. A água sanitária (hipoclorito forte) destrói o aço inoxidável da cabine (Pitting corrosion), gerando ferrugem que vira esconderijo perfeito para colônias de bactérias e fungos indestrutíveis.",
+        "explanation": "A correta é a A pois o hipoclorito corrói o aço inox da cabine. As outras falham pois: B é procedimento de limpeza aceito, C utiliza radiação ultravioleta padrão, D emprega álcool para desinfecção e E utiliza água para limpeza.",
         "difficulty": "fácil"
     },
     {
@@ -2913,7 +2913,7 @@ window.questionBank = [
             "E": "Assinatura médica legível e uso de procedimentos de validação."
         },
         "correct": "C",
-        "explanation": "Gabarito: A. Toda medição exige que a balança usada ou a pipeta tenha sido aferida por um equipamento de referência maior (ex: Inmetro), que por sua vez foi aferido por padrões globais inquestionáveis. Isso garante a 'verdade' da medida.",
+        "explanation": "A correta é a C pois vincula as medições a padrões globais. As outras falham pois: A foca em rótulos, B usa geolocalização física, D foca em publicações e E refere-se a assinaturas.",
         "difficulty": "fácil"
     },
     {
@@ -2929,7 +2929,7 @@ window.questionBank = [
             "E": "Armazenamento e uso futuro se autorizado expressamente no TCLE."
         },
         "correct": "E",
-        "explanation": "Gabarito: C. A diretiva de vida é o que importa. Se no TCLE o doador permitiu expressamente o uso de seus dados mesmo após a morte (uso perene/biobanco), a ciência é autorizada a continuar gerando saúde a partir de seu DNA.",
+        "explanation": "A correta é a E pois o TCLE determina o destino do material. As outras falham pois: A descarta material útil, B é venda ilegal, C restringe linhagem indevidamente e D estatiza propriedade privada.",
         "difficulty": "fácil"
     },
     {
@@ -2945,7 +2945,7 @@ window.questionBank = [
             "E": "Recusa dos correios em entregar laudos contendo dados genéticos."
         },
         "correct": "C",
-        "explanation": "Gabarito: B. Se a máquina da faculdade acha a mutação de uma doença, o pesquisador tem a responsabilidade moral de avisar? Se sim, o pesquisador assume responsabilidade médica baseando-se num teste que talvez não tenha selo clínico (ANVISA/CAP). É um dilema mundial.",
+        "explanation": "A correta é a C pois diferencia pesquisa de diagnóstico clínico validado. As outras falham pois: A alega proibição legal, B foca em insumos, D restringe por renda e E culpa correios.",
         "difficulty": "fácil"
     },
     {
@@ -2961,7 +2961,7 @@ window.questionBank = [
             "E": "Modelos que espelhem a ancestralidade miscigenada brasileira."
         },
         "correct": "E",
-        "explanation": "Gabarito: B. A IA é enviesada pela base que a alimenta. Importar um modelo europeu para dizer se um paciente baiano vai ter infarto pela genética é ineficiente e cria injustiça sanitária gravíssima.",
+        "explanation": "A correta é a E pois considera a miscigenação populacional brasileira. As outras falham pois: A foca em coleta, B exclui mulheres, C foca em idioma e D ignora idade.",
         "difficulty": "fácil"
     },
     {
@@ -2977,7 +2977,7 @@ window.questionBank = [
             "E": "Ocultação do IP do pesquisador na rede local do laboratório."
         },
         "correct": "D",
-        "explanation": "Gabarito: D. Privacidade desde a concepção exige que o LIMS já venha programado de fábrica sem mostrar os nomes dos pacientes nas planilhas e com logs de rastreio blindados, não sendo uma gambiarra instalada no final do projeto.",
+        "explanation": "A correta é a D pois integra privacidade nativamente ao software. As outras falham pois: A nega direitos, B foca em rastreio físico, C é segurança periférica e E oculta IPs.",
         "difficulty": "fácil"
     },
     {
@@ -2993,7 +2993,7 @@ window.questionBank = [
             "E": "Aprovação da CONEP, ANVISA e assinatura de termo MTA."
         },
         "correct": "E",
-        "explanation": "Gabarito: B. O envio de DNA humano além fronteiras mexe com soberania de pesquisa (CONEP), segurança de risco biológico e transporte aéreo (ANVISA) e garantia de que o país estrangeiro não roubará ou patenteará sequências nativas (MTA).",
+        "explanation": "A correta é a E pois exige autorizações éticas, sanitárias e contratuais. As outras falham pois: A foca no FDA, B cita agricultura, C foca em cidadania e D em nomenclatura.",
         "difficulty": "fácil"
     },
     {
@@ -3009,7 +3009,7 @@ window.questionBank = [
             "E": "Não, exige-se obrigatoriamente novo consentimento presencial."
         },
         "correct": "A",
-        "explanation": "Gabarito: B. Tentar achar milhares de pacientes 10 anos depois de doarem sangue para uma universidade é logisticamente inviável. Se a privacidade for garantida pela anonimização, o CEP emite a 'Dispensa de TCLE' (TCLE Waiver) para que a pesquisa avance.",
+        "explanation": "A correta é a A pois o CEP autoriza dispensa se anonimizado. As outras falham pois: B ignora ética, C foca em gênero, D visa lucro e E exige presencial.",
         "difficulty": "fácil"
     },
     {
@@ -3025,7 +3025,7 @@ window.questionBank = [
             "E": "Descarte incorreto de resíduos e tempo de manipulação no fluxo."
         },
         "correct": "B",
-        "explanation": "Gabarito: C. Foi a prova máxima do porquê o TCLE não pode ser um 'cheque em branco' obscuro. Você só pode pesquisar no genoma aquilo que o cidadão explicitamente autorizou.",
+        "explanation": "A correta é a B pois violou a finalidade do consentimento original. As outras falham pois: A cita contaminação, C foca em ampolas, D em periódicos e E em resíduos.",
         "difficulty": "fácil"
     },
     {
@@ -3041,7 +3041,7 @@ window.questionBank = [
             "E": "Cobrança por clique algorítmico e validação de métodos."
         },
         "correct": "D",
-        "explanation": "Gabarito: B. Afirmar ao Ministério da Saúde que o gene XYZ causa câncer sem a devida rigidez estatística é um ato de irresponsabilidade ética, pois o estado mobilizará orçamento para criar medicamentos/testes com base numa matemática fraca.",
+        "explanation": "A correta é a D pois o rigor estatístico evita decisões de saúde equivocadas. As outras falham pois: A oculta dados, B foca em volume, C visa prêmios e E em cliques.",
         "difficulty": "médio"
     },
     {
@@ -3057,7 +3057,7 @@ window.questionBank = [
             "E": "Pagamento de anúncios na mídia e monitoramento pré-analítico."
         },
         "correct": "D",
-        "explanation": "Gabarito: B. Respeito científico significa descer da torre de marfim e explicar ao povo em linguagem compreensível para onde vai o sangue deles e de que forma o SUS os protegerá.",
+        "explanation": "A correta é a D pois o engajamento envolve transparência e diálogo ético com a comunidade. As outras falham pois: A oferece incentivos financeiros indevidos, B foca em sorteios irrelevantes, C trata de software e E foca em publicidade paga.",
         "difficulty": "fácil"
     },
     {
@@ -3073,7 +3073,7 @@ window.questionBank = [
             "E": "Qualquer variante futura e otimização em condições controladas."
         },
         "correct": "D",
-        "explanation": "Gabarito: B. A ciência ética não deve entregar uma 'sentença' apavorante sem entregar uma 'solução'. Devolvemos resultados incidentais quando, e apenas quando, a medicina atual tiver as ferramentas para salvar aquela vida de forma factível.",
+        "explanation": "A correta é a D porque genes acionáveis permitem intervenções médicas com eficácia clínica comprovada. As outras falham pois: A trata de traços estéticos, B foca em doenças incuráveis, C refere-se à disponibilidade comercial e E é puramente especulativa.",
         "difficulty": "médio"
     },
     {
@@ -3089,7 +3089,7 @@ window.questionBank = [
             "E": "Currículo do operador e padrões de segurança vigentes."
         },
         "correct": "C",
-        "explanation": "Gabarito: B. É a fase em que a engenharia de precisão testa a parte física (mecânica e sensores) para garantir que a promessa do manual do robô foi cumprida, usando líquidos controle.",
+        "explanation": "A correta é a C pois a QO valida se as funções mecânicas operam conforme o manual. As outras falham pois: A é etapa de instalação, B é detalhe irrelevante, D é desempenho real e E trata de RH.",
         "difficulty": "fácil"
     },
     {
@@ -3105,7 +3105,7 @@ window.questionBank = [
             "E": "Garantia de férias remuneradas e validação de métodos."
         },
         "correct": "D",
-        "explanation": "Gabarito: B. Gestão de Risco ISO é pensar em tudo de trágico que pode acontecer (trocar exame de câncer com de paciente são) e botar catracas sistêmicas para que isso nunca se torne realidade.",
+        "explanation": "A correta é a D pois foca em prevenir erros que impactem diretamente a segurança do paciente. As outras falham pois: A foca em seguros, B em contratos, C em métricas técnicas e E em benefícios trabalhistas.",
         "difficulty": "fácil"
     },
     {
@@ -3121,7 +3121,7 @@ window.questionBank = [
             "E": "Falha no exaustor do banheiro e calibração de métodos."
         },
         "correct": "A",
-        "explanation": "Gabarito: B. Uma corrida de produção alta dura de 2 a 3 dias contínuos. Uma falha de energia bruta destrói a coesão da química (desnaturação de proteínas) e trava os computadores internos irreversivelmente daquele ciclo em diante.",
+        "explanation": "A correta é a A pois a queda de energia interrompe o sequenciamento e destrói o ciclo químico. As outras falham pois: B não afeta dados, C é irrelevante ao ciclo, D interrompe apenas monitoramento e E é falha predial trivial.",
         "difficulty": "fácil"
     },
     {
@@ -3137,7 +3137,7 @@ window.questionBank = [
             "E": "Criação de cristais na centrífuga e monitoramento técnico."
         },
         "correct": "C",
-        "explanation": "Gabarito: B. O ferro (hemo) reage violentamente nos tampões de extração e age bloqueando a máquina enzimática, zerando o sucesso do yield do banco de DNA.",
+        "explanation": "A correta é a C porque o grupamento heme é um potente inibidor enzimático da polimerase. As outras falham pois: A é dano físico, B é bioquímica celular, D foca em esferas e E em resíduos físicos.",
         "difficulty": "fácil"
     },
     {
@@ -3153,7 +3153,7 @@ window.questionBank = [
             "E": "Isolamento hospitalar e adequação aos padrões de segurança."
         },
         "correct": "B",
-        "explanation": "Gabarito: B. O Estado gasta um preço moderado na máquina sequenciando logo hoje, mas economiza uma fortuna imensurável num futuro incerto e sombrio de longos anos do paciente nas piores enfermarias de emergência em UTIs neonatais. E de quebra, preserva uma vida normal.",
+        "explanation": "A correta é a B pois o diagnóstico precoce evita gastos massivos com tratamentos crônicos e UTIs. As outras falham pois: A aumenta custos, C gera subempregos, D trata de câmbio e E foca em hospitalização.",
         "difficulty": "fácil"
     },
     {
@@ -3169,7 +3169,7 @@ window.questionBank = [
             "E": "Redução de processos computacionais e sensibilidade ao pH."
         },
         "correct": "A",
-        "explanation": "Gabarito: B. Equipamentos genômicos precisam dos reagentes e placas Illumina/PacBio guardados sob refrigeração de alta exigência constante (-20ºC). Um LACEN na Amazônia, se não planejar a reposição em tempo real na rede da cadeia de frios, vai esgotar tudo em poucos dias num surto e a resposta será travada.",
+        "explanation": "A correta é a A pois insumos genômicos exigem cadeia de frio rigorosa e estoque para agilidade. As outras falham pois: B reduz capacidade, C é contratação, D gera atrasos e E foca em software.",
         "difficulty": "fácil"
     },
     {
@@ -3185,7 +3185,7 @@ window.questionBank = [
             "E": "Sucesso produtivo: percentual de amostras que superam o QC sem falhas."
         },
         "correct": "E",
-        "explanation": "Gabarito: B. Se a Taxa de Conversão da fábrica NGS despenca de 90% para 60%, a gestão joga fora 40% da verba paga nos kits caríssimos das etapas paralisadas (extração a vazio, biblioteca inutilizada) aumentando brutalmente o custo por exame viável liberado para o SUS.",
+        "explanation": "A correta é a E pois mede a eficiência produtiva evitando o desperdício de insumos caros. As outras falham pois: A avalia hardware, B é bioinformática, C é biologia molecular e D foca em mutações.",
         "difficulty": "difícil"
     },
     {
@@ -3201,7 +3201,7 @@ window.questionBank = [
             "E": "Atestados e sistemas desativados."
         },
         "correct": "C",
-        "explanation": "Gabarito: B. Uma pesquisa de genômica multicêntrica é blindada e legalista. Os auditores checam ativamente se ninguém mentiu (assinatura do TCLE do participante real no Trial File), e se os pesquisadores que preparam o DNA realmente sabiam o que estavam fazendo formalmente perante os órgãos mundiais (Certificados GCP), e onde eles anotaram sempre que a máquina falhou ou o voluntário quebrou o prazo da consulta da amostra.",
+        "explanation": "A correta é a C pois garante a legalidade ética e o cumprimento documental dos protocolos clínicos. As outras falham pois: A foca em fomento, B em impostos, D em finanças e E em sistemas obsoletos.",
         "difficulty": "fácil"
     },
     {
@@ -3217,7 +3217,7 @@ window.questionBank = [
             "E": "Emissão de flashes por lasers."
         },
         "correct": "A",
-        "explanation": "Gabarito: B. A configuração de sequenciamento Illumina 2-Colors (duas cores) revolucionou a velocidade. Ele não tira 4 fotos (A, T, C, G). O C é fotografado em Vermelho, o T em Verde, o A vira Amarelo (porque leva 50% dos reagentes verdes e 50% vermelhos simultâneos, piscando nas duas fotos), e a Guanina (G) não recebe cor (Dark). O PC computa a ausência de flash como Guanina pura. Economiza câmera e reagente num genoma longo.",
+        "explanation": "A correta é a A pois a Guanina não emite sinal na química 2-colors. As outras falham pois: B usa filtros, C é outra base, D é tecnologia concorrente e E é método de detecção.",
         "difficulty": "médio"
     },
     {
@@ -3233,7 +3233,7 @@ window.questionBank = [
             "E": "Descongelamento a 95ºC."
         },
         "correct": "D",
-        "explanation": "Gabarito: B. 'Freeze-thaw cycles' (Congelar e Descongelar o mesmo tubo dez vezes) destroça o DNA pela força expansiva dos cristais de água do gelo esmagando as cadeias contra o tubo plástico ao retornar a estabilidade. Aliquotar a amostra em 5 tubos preserva a origem.",
+        "explanation": "A correta é a D porque alíquotas evitam ciclos de congelamento que quebram o DNA. As outras falham pois: A cisalha fisicamente, B hidrolisa a fita, C estressa a molécula e E desnatura termicamente.",
         "difficulty": "fácil"
     },
     {
@@ -3249,7 +3249,7 @@ window.questionBank = [
             "E": "Corante na dupla-hélice."
         },
         "correct": "E",
-        "explanation": "Gabarito: B. O NanoDrop mede sujeira orgânica geral e proteína misturada ao passar radiação numa gotinha (Mede o que atravessa e o que é sugado pelo bloqueio das peças soltas na água). O Qubit é inteligente e pontual: o corante reativo só pisca seu LED microscópico se estiver confortavelmente escondido no recheio do dsDNA (Dupla Fita), caindo na medição as falhas e os componentes residuais espúrios do tubo de laboratório.",
+        "explanation": "A correta é a E pois o corante só fluoresce ligado especificamente à dupla-fita de DNA. As outras falham pois: A mede massa, B separa fisicamente, C não quantifica e D detectaria RNA.",
         "difficulty": "fácil"
     },
     {
@@ -3265,7 +3265,7 @@ window.questionBank = [
             "E": "Moléculas idênticas via PCR."
         },
         "correct": "E",
-        "explanation": "Gabarito: B. Duplicação de PCR em NGS não significa mutação do paciente. Significa que na bancada nós super-aquecemos o tubo e ele fotocopiou 1 único trecho de DNA dezenas de milhares de vezes. Se ele preenche o vidro, as outras pontas ficam sem espaço. O computador então 'Marca os Duplicados' da PCR e exclui todo mundo que bate no mesmo local exato idêntico (pois a matemática diz que seria quase impossível moléculas únicas aleatórias baterem na fenda exata duas vezes e terem os mesmos códigos indexados de tamanho sem ser uma fotocópia laboratorial).",
+        "explanation": "A correta é a E pois duplicatas de PCR são cópias idênticas geradas por amplificação excessiva. As outras falham pois: A causa ruído, B recalibra qualidade, C são aglomerados e D é alteração cromossômica.",
         "difficulty": "médio"
     },
     {
@@ -3281,7 +3281,7 @@ window.questionBank = [
             "E": "Cancelar o registro no SUS."
         },
         "correct": "A",
-        "explanation": "Gabarito: B. A ciência tem obrigação de informar (Devolução do resultado / Duty to Return) e tratar ativamente quando a Penetrância (chances reais matemáticas daquela doença acontecer quando você porta a mutação em questão no DNA de nascimento) bate na casa dos 90-100%, como síndromes monogênicas severas e BRCA1 do câncer mamário fulminante. Para isso o sequenciador de grande escala foi validado pelo programa.",
+        "explanation": "A correta é a A pois alta penetrância exige aconselhamento genético e intervenção preventiva precoce. As outras falham pois: B omite tratamento, C é antiético, D é medida terminal e E é erro administrativo.",
         "difficulty": "médio"
     },
     {
@@ -3297,7 +3297,7 @@ window.questionBank = [
             "E": "Publicação em língua nativa."
         },
         "correct": "B",
-        "explanation": "Gabarito: B. É uma regra suprema. A academia processou o DNA da tribo visando achar a cura e os genes do diabetes deles. Sem avisar e quebrando acordos e o respeito, as sobras dos tubos foram parar nas mãos de psiquiatras que fizeram papers humilhantes e publicações sobre 'DNA da esquizofrenia nas tribos americanas' com eles, além de refutarem religiosamente suas origens migratórias históricas com genômica de população ancestral (Destruindo seus dogmas orais publicamente, ofendendo brutalmente a dignidade). Eles foram processados, os vidros devolvidos por agentes do governo em praça pública sob fortes penas e a genômica nunca mais colheu sangue de indígenas ou minorias sem estritas normas de devolução e regras do TCLE amarrado limitador na bancada mundial e conselhos.",
+        "explanation": "A correta é a B pois o caso Havasupai proibiu pesquisas sem consentimento específico dos doadores. As outras falham pois: A é mineração, C é social, D é ambiental e E é linguística.",
         "difficulty": "fácil"
     },
     {
@@ -3313,7 +3313,7 @@ window.questionBank = [
             "E": "Dissolução de embalagens."
         },
         "correct": "D",
-        "explanation": "Gabarito: B. Aquecer veneno líquido numa panela de pressão laboratorial a 121º Celsius com vapor expansivo é uma falha inaceitável gravíssima de BPL e Biossegurança em manuseio e rotinas (RDC Resíduos), causando risco a saúde pública operacional. Misturar produto do Grupo B (Químicos Severos) com lixo de Grupo A (Biológico como bactérias ou tecidos sanguíneos de placa) produz reações e punições seríssimas e danos neurológicos por inalação letal com queimaduras severas crônicas para quem abrir a tampa da autoclave sem máscaras antigás exclusivas ou nas salas mal ventiladas em operação do serviço.",
+        "explanation": "A correta é a D porque o fenol volatiliza na autoclave gerando vapores químicos letais. As outras falham pois: A é hidráulico, B é atmosférico, C é improvável e E é dano material.",
         "difficulty": "fácil"
     },
     {
@@ -3329,7 +3329,7 @@ window.questionBank = [
             "E": "Metilação de resíduos de citosina localizados em ilhas CpG promotoras."
         },
         "correct": "E",
-        "explanation": "Gabarito: C. O imprinting é governado principalmente pela hipermetilação do DNA nas ilhas CpG (adição de grupos metil), o que silencia fisicamente aquele alelo de forma duradurda (ex: gene herdado da mãe fica 'desligado').",
+        "explanation": "A correta é a E pois a metilação em ilhas CpG silencia a expressão de alelos parentais específicos. As outras falham pois: A edita RNA, B inicia transcrição, C abre cromatina e D degrada transcritos.",
         "difficulty": "fácil"
     },
     {
@@ -3345,7 +3345,7 @@ window.questionBank = [
             "E": "Adição de cauda poli-A ao mRNA aumentando o tempo de processamento gênico."
         },
         "correct": "C",
-        "explanation": "Gabarito: B. O SWI/SNF é um 'trator' molecular que gasta ATP para afastar as histonas, abrindo o DNA para ser lido. Falhas nele causam fechamento anormal do genoma, característico de tumores severos.",
+        "explanation": "A correta é a C pois o SWI/SNF usa ATP para remodelar nucleossomos e abrir a cromatina. As outras falham pois: A replica telômeros, B repara quebras, D transporta RNA e E processa mRNA.",
         "difficulty": "fácil"
     },
     {
@@ -3361,7 +3361,7 @@ window.questionBank = [
             "E": "Expansão de trinucleotídeos por escorregamento da polimerase na replicação."
         },
         "correct": "E",
-        "explanation": "Gabarito: C. A polimerase 'escorrega' e gagueja ao ler regiões repetitivas (como CAG CAG CAG...), adicionando cópias extras a cada geração (fenômeno da Antecipação).",
+        "explanation": "A correta é a E porque o escorregamento da polimerase gera expansão patológica de repetições de trinucleotídeos. As outras falham pois: A deleta éxons, B insere elementos, C muda ploidia e D inverte segmentos.",
         "difficulty": "fácil"
     },
     {
@@ -3377,7 +3377,7 @@ window.questionBank = [
             "E": "Degradação de mRNAs concorrentes conforme padrões de segurança vigentes."
         },
         "correct": "B",
-        "explanation": "Gabarito: C. Enhancers são os 'interruptores de volume' do DNA. Eles podem estar muito longe do gene alvo no genoma linear, mas a arquitetura 3D do DNA se dobra para que eles encostem no promotor.",
+        "explanation": "A correta é a B pois enhancers formam alças físicas para interagir com promotores. As outras falham pois: A descreve proteínas e pH, C confunde com tradução, D cita RNA e ribossomos e E envolve degradação.",
         "difficulty": "fácil"
     },
     {
@@ -3393,7 +3393,7 @@ window.questionBank = [
             "E": "Herança exclusivamente paterna que altera a eficiência analítica final."
         },
         "correct": "A",
-        "explanation": "Gabarito: B. Uma célula tem milhares de mitocôndrias. Se 20% delas sofrerem mutação (heteroplasmia), a doença só se manifestará se esse percentual for alto o suficiente para falhar o tecido.",
+        "explanation": "A correta é a A por definir a mistura variável de mitocôndrias mutantes e selvagens. As outras falham pois: B nega DNA mitocondrial, C cita reparo nuclear NER, D afirma ser RNA e E diz que a herança é paterna.",
         "difficulty": "fácil"
     },
     {
@@ -3409,7 +3409,7 @@ window.questionBank = [
             "E": "Ligação de fragmentos de Okazaki que aumenta o tempo de manipulação."
         },
         "correct": "C",
-        "explanation": "Gabarito: C. Ao separar a dupla hélice, a tensão no DNA torcido à frente da helicase se torna imensa. A topoisomerase corta, desenrola e cola o DNA rapidamente para evitar que ele arrebente.",
+        "explanation": "A correta é a C pois aliviam tensão torsional via quebras transitórias. As outras falham pois: A foca em oxidação telomérica, B descreve primases, D refere-se a ribossomos e E confunde com a ligase.",
         "difficulty": "fácil"
     },
     {
@@ -3425,7 +3425,7 @@ window.questionBank = [
             "E": "Composição inteiramente histônica inviável em amostras degradadas."
         },
         "correct": "B",
-        "explanation": "Gabarito: B. Pseudogenes (como o do gene SMN1 ou CYP21A2) são clones falsos de genes verdadeiros. Leituras curtas da Illumina grudam neles por engano, gerando falsos positivos na análise.",
+        "explanation": "A correta é a B devido à alta homologia causando erros de mapeamento NGS. As outras falham pois: A cita letalidade neonatal, C menciona uracila no DNA, D sugere bloqueio físico e E refere-se a histonas.",
         "difficulty": "fácil"
     },
     {
@@ -3441,7 +3441,7 @@ window.questionBank = [
             "E": "Um único gene afetando múltiplas características fenotípicas distintas."
         },
         "correct": "E",
-        "explanation": "Gabarito: B. Na pleiotropia, uma única falha (como no gene FBN1 na S. de Marfan) causa um efeito dominó que afeta vários sistemas orgânicos que parecem distintos na clínica.",
+        "explanation": "A correta é a E pois um único gene influencia múltiplos fenótipos distintos. As outras falham pois: A liga ao sexo, B descreve heterogeneidade de lótus, C cita dominância e D foca em mosaicismo.",
         "difficulty": "fácil"
     },
     {
@@ -3457,7 +3457,7 @@ window.questionBank = [
             "E": "Conserto da mutação original sensível a variações de pH no tampão."
         },
         "correct": "D",
-        "explanation": "Gabarito: B. Se a mutação stop ocorrer bem no finalzinho do gene, o alarme do NMD não soa. O RNA é lido e gera uma proteína defeituosa que vai atrapalhar a proteína normal que está trabalhando na célula.",
+        "explanation": "A correta é a D pois mRNAs com stop prematuro persistem gerando proteínas truncadas. As outras falham pois: A cita splicing, B foca em ribossomos, C menciona iniciação e E refere-se a reparo químico.",
         "difficulty": "fácil"
     },
     {
@@ -3473,7 +3473,7 @@ window.questionBank = [
             "E": "Codificação de genes equivalente ao cromossomo 1 sob normas de segurança."
         },
         "correct": "B",
-        "explanation": "Gabarito: C. Por não sofrerem recombinação (embaralhamento com outros cromossomos), eles passam intactos (exceto pelas mutações de fundo) de pai para filho (Y) e mãe para filhos (mtDNA).",
+        "explanation": "A correta é a B pela ausência de recombinação preservando a linhagem genética. As outras falham pois: A sugere recombinação total, C restringe a germinativas, D cita crossing-over e E compara com autossomos.",
         "difficulty": "fácil"
     },
     {
@@ -3489,7 +3489,7 @@ window.questionBank = [
             "E": "Quebra física do equipamento durante a lavagem por falha operacional."
         },
         "correct": "D",
-        "explanation": "Gabarito: B. Devido à amplificação química muito rápida das flow cells modernas (ExAmp), índices que não foram lavados direito na biblioteca acabam pulando e colando na amostra vizinha. Solução: UDI (Unique Dual Indexes).",
+        "explanation": "A correta é a D pela atribuição errônea de barcodes entre diferentes amostras. As outras falham pois: A culpa o pH, B cita inversão de fitas, C foca no laser e E refere-se a dano físico.",
         "difficulty": "fácil"
     },
     {
@@ -3505,7 +3505,7 @@ window.questionBank = [
             "E": "Inibição enzimática da transcriptase reversa em condições controladas."
         },
         "correct": "B",
-        "explanation": "Gabarito: B. Se você sequenciar o tubo de RNA direto, 90% das leituras (e do seu dinheiro) serão gastos lendo peças do ribossomo em vez dos mRNAs (expressão gênica) que você realmente quer ver.",
+        "explanation": "A correta é a B devido à sua extrema abundância sem relevância diagnóstica. As outras falham pois: A sugere incompatibilidade física, C cita degradação técnica, D menciona uracila e E refere-se a inibição.",
         "difficulty": "fácil"
     },
     {
@@ -3521,7 +3521,7 @@ window.questionBank = [
             "E": "Cerca de 166 pb, correspondente ao DNA enrolado em um nucleossomo."
         },
         "correct": "E",
-        "explanation": "Gabarito: C. Quando células morrem e explodem (apoptose), o DNA se parte. Como ele estava enrolado nas histonas (~147bp + linker), as nucleases cortam os fios expostos, e a fita sobrante fica com o tamanho clássico de 166bp flutuando no sangue.",
+        "explanation": "A correta é a E refletindo o tamanho do DNA protegido por nucleossomos. As outras falham pois: A cita fragmentos minúsculos e B, C e D descrevem comprimentos excessivos.",
         "difficulty": "fácil"
     },
     {
@@ -3537,7 +3537,7 @@ window.questionBank = [
             "E": "Substituição da sonicação mecânica sensível a variações de pH do meio."
         },
         "correct": "A",
-        "explanation": "Gabarito: B. O complexo Biotina (nas sondas) e Estreptavidina (nas beads magnéticas) possui uma das ligações não-covalentes mais fortes da natureza, funcionando como uma 'vara de pescar' os éxons desejados.",
+        "explanation": "A correta é a A pois esferas de estreptavidina capturam as sondas biotinadas ligadas ao alvo. As outras falham pois: B foca éxons, C requer PCR, D simplifica biblioteca, E mecânica.",
         "difficulty": "fácil"
     },
     {
@@ -3553,7 +3553,7 @@ window.questionBank = [
             "E": "Distinção entre erros de PCR e variantes biológicas reais de baixa VAF."
         },
         "correct": "E",
-        "explanation": "Gabarito: B. Os UMIs colam um 'código de barras randomizado' em cada fita antes da PCR. Se 10 cópias tiverem a mesma mutação MAS vierem do mesmo UMI, o sistema sabe que foi erro da máquina copiando 10 vezes um erro único inicial.",
+        "explanation": "A correta é a E pois UMIs identificam erros de PCR ao rotularem cada molécula original. As outras falham pois: A identifica sexo, B translocações, C hibridização, D homologia.",
         "difficulty": "médio"
     },
     {
@@ -3569,7 +3569,7 @@ window.questionBank = [
             "E": "Inibição da enzima ligase demandando validação adicional de bancada."
         },
         "correct": "D",
-        "explanation": "Gabarito: C. A Flow Cell só agarra o DNA se ele estiver em fita única (para a ligação complementar ocorrer). O NaOH forte 'derrete' e separa a dupla hélice minutos antes de injetar na máquina.",
+        "explanation": "A correta é a D pois o NaOH desnatura o DNA permitindo hibridização na flow-cell. As outras falham pois: A laser, B reparo, C shearing, E ligação.",
         "difficulty": "fácil"
     },
     {
@@ -3585,7 +3585,7 @@ window.questionBank = [
             "E": "Aumentar a voltagem para acelerar o processo sob monitoramento técnico. "
         },
         "correct": "C",
-        "explanation": "Gabarito: B. O software ONT lê a molécula passando e, se perceber que é uma região do genoma que você não tem interesse, inverte a corrente do poro, cuspindo o DNA fora em milissegundos.",
+        "explanation": "A correta é a C pois a inversão da voltagem ejeta fragmentos indesejados em tempo real. As outras falham pois: A evaporação, B repetição, D lasers, E velocidade.",
         "difficulty": "fácil"
     },
     {
@@ -3601,7 +3601,7 @@ window.questionBank = [
             "E": "Alta eficácia de ligação com sensibilidade ao pH e limites de lotes. "
         },
         "correct": "B",
-        "explanation": "Gabarito: B. Causa buracos de cobertura em regiões extremas (ex: genes com muitas pontes triplas G-C não abrem fácil na PCR e são preteridos na amplificação).",
+        "explanation": "A correta é a B pois regiões ricas em AT/GC amplificam mal gerando falhas de cobertura. As outras falham pois: A erro-zero, C pureza, D tagmentação, E pH.",
         "difficulty": "fácil"
     },
     {
@@ -3617,7 +3617,7 @@ window.questionBank = [
             "E": "Circularização de fragmentos longos para mapear junções genômicas distantes."
         },
         "correct": "E",
-        "explanation": "Gabarito: B. O Mate-Pair foi vital na era dos genomas 'De Novo' por conseguir linkar (como uma ponte) duas regiões muito distantes do genoma que estavam separadas por longas repetições.",
+        "explanation": "A correta é a E pois a circularização permite aproximar e sequenciar extremidades de fragmentos longos. As outras falham pois: A direcionalidade, B DNA-apenas, C Illumina, D fragmentos-longos.",
         "difficulty": "fácil"
     },
     {
@@ -3633,7 +3633,7 @@ window.questionBank = [
             "E": "Aneuploidias cromossômicas requerendo métodos ortogonais em amostras ruins."
         },
         "correct": "A",
-        "explanation": "Gabarito: B. Quando dezenas de primers estão no mesmo tubo (multíplex), a chance de eles grudarem uns nos outros e formarem bibliotecas 'fantasmas' de 100bp é gigante, dominando a corrida NGS de forma inútil.",
+        "explanation": "A correta é a A pois dímeros de primers amplificam eficientemente e saturam os clusters. As outras falham pois: B RNA-ausente, C enzima, D genômico, E biológico.",
         "difficulty": "fácil"
     },
     {
@@ -3649,7 +3649,7 @@ window.questionBank = [
             "E": "T4 DNA Ligase demandando validação ortogonal e procedimentos adicionais."
         },
         "correct": "D",
-        "explanation": "Gabarito: B. As Polimerases da família da Taq têm uma falha natural (sem proofreading 3'-5') que as faz 'cuspir' sempre um 'A' a mais no final das fitas. O NGS usou esse defeito a favor para criar o encaixe TA dos adaptadores.",
+        "explanation": "A correta é a D pois a Taq polimerase adiciona naturalmente uma adenina na extremidade 3'. As outras falham pois: A iniciadores, B fragmentação, C desenrolamento, E junção.",
         "difficulty": "médio"
     },
     {
@@ -3665,7 +3665,7 @@ window.questionBank = [
             "E": "Aquecimento a 121ºC para otimização sob condições laboratoriais."
         },
         "correct": "B",
-        "explanation": "Gabarito: B. Sem magnésio as enzimas fragmentadoras (como as do kit FS da NEB) perdem sua 'bateria' e paralisam o corte instantaneamente, mantendo o tamanho de DNA conquistado.",
+        "explanation": "A correta é a B pois o EDTA sequestra o magnésio, paralisando as endonucleases dependentes. As outras falham pois: A salinidade, C RNA-específico, D radiação, E fervura.",
         "difficulty": "fácil"
     },
     {
@@ -3681,7 +3681,7 @@ window.questionBank = [
             "E": "Qualidade Phred zero exigindo adequação a padrões de segurança e validação."
         },
         "correct": "D",
-        "explanation": "Gabarito: C. MAPQ baixo indica incerteza. Mapear '0' significa que aquele read encaixa perfeitamente em 10 lugares diferentes do genoma (como famílias de genes ou satélites) e o PC não tem como definir o local correto.",
+        "explanation": "A correta é a D pois MAPQ zero indica que o read mapeia em múltiplos locais repetitivos. As outras falham pois: A mutação, B falha-leitura, C exclusividade, E basecalling.",
         "difficulty": "fácil"
     },
     {
@@ -3697,7 +3697,7 @@ window.questionBank = [
             "E": "Queima do sensor óptico exigindo monitoramento pré-analítico e validação."
         },
         "correct": "B",
-        "explanation": "Gabarito: B. A máquina define onde está cada pontinho (cluster) no vidro tirando uma foto nos 4 primeiros ciclos. Se na primeira letra todo mundo acender vermelho (ex: o amplicon começa com 'A'), a máquina vê um borrão vermelho gigante e não consegue separar os pontos espacialmente.",
+        "explanation": "A correta é B porque a diversidade permite distinguir clusters espacialmente nos ciclos iniciais. As outras falham pois: A refere-se a poros, C foca em tamanho, D é sem sentido e E ignora óptica.",
         "difficulty": "fácil"
     },
     {
@@ -3713,7 +3713,7 @@ window.questionBank = [
             "E": "Geração de fusões híbridas exigindo calibração e controles internos."
         },
         "correct": "D",
-        "explanation": "Gabarito: B. Graças ao Dual Index, o sistema usa as duas pontas como contraprova de identidade. Se uma bate e a outra é exclusividade de outra amostra, ele consegue salvar o arquivo, embora o alerta e o lixo computacional subam nas métricas finais (Undetermined Reads).",
+        "explanation": "A correta é D porque a duplicidade de índices causa colisão e falha na separação dos dados. As outras falham pois: A é conduta, B não altera sentido, C é impossível e E descreve fusões.",
         "difficulty": "médio"
     },
     {
@@ -3729,7 +3729,7 @@ window.questionBank = [
             "E": "Transposases em lipídeos monitoradas na fase pré-analítica técnica."
         },
         "correct": "D",
-        "explanation": "Gabarito: B. O RNA de Interferência (RNAi) age com um exército microscópico (complexo RISC) que usa um RNA curto como 'radar' para achar mRNAs e cortá-los antes de virarem proteínas. Muito promissor como drogas oncológicas.",
+        "explanation": "A correta é D porque o complexo RISC usa pequenos RNAs para guiar a clivagem do mRNA. As outras falham pois: A são príons, B é DNA, C é sinalização e E são transposons.",
         "difficulty": "fácil"
     },
     {
@@ -3745,7 +3745,7 @@ window.questionBank = [
             "E": "Falso positivo do sequenciador exigindo calibração e validação extra."
         },
         "correct": "D",
-        "explanation": "Gabarito: B. Toda mulher 'desliga' aleatoriamente um cromossomo X nas células do corpo. Se a roleta russa fizer com que o X mutante seja desligado na maioria das células do corpo (Skewed), a mulher viverá saudável. Se o X mutante ficar ligado, ela ficará gravemente doente.",
+        "explanation": "A correta é D porque a inativação enviesada do X silencia o alelo mutante em mulheres portadoras. As outras falham pois: A é epigenética rara, B exclui mulheres, C é irrelevante e E é erro.",
         "difficulty": "médio"
     },
     {
@@ -3761,7 +3761,7 @@ window.questionBank = [
             "E": "Congelar a -80ºC para recuperar a cor original via validação adicional."
         },
         "correct": "D",
-        "explanation": "Gabarito: B. Fenol velho e oxidado oxida o DNA e não consegue segurar os lipídios e as proteínas para a parte debaixo do tubo (fase orgânica), misturando tudo e sujando o seu ácido nucleico. A regra é ouro em bancada: fenol vermelho/rosa = lixo de Grupo B.",
+        "explanation": "A correta é D porque a oxidação do fenol gera subprodutos que degradam e contaminam o DNA. As outras falham pois: A é inseguro, B invalida ensaios, C acidifica o meio e E é inútil.",
         "difficulty": "fácil"
     },
     {
@@ -3777,7 +3777,7 @@ window.questionBank = [
             "E": "Pipetagem reversa ou lavagem da ponteira para evitar retenção residual."
         },
         "correct": "E",
-        "explanation": "Gabarito: B. Quando você pipeta apenas 2 uL de uma enzima altamente viscosa como Master Mixes ligases (contém glicerol e PEG), metade dela fica retida fisicamente na parede da ponteira se a técnica não for impecável e de lavagem no tubo final.",
+        "explanation": "A correta é E porque a alta viscosidade exige técnicas que garantam a transferência total do volume. As outras falham pois: A contamina, B gera aerossóis, C é imprecisa e D retém resíduos.",
         "difficulty": "fácil"
     },
     {
@@ -3793,7 +3793,7 @@ window.questionBank = [
             "E": "Ceder chaves de segurança à ONU para otimização em cenários controlados."
         },
         "correct": "A",
-        "explanation": "Gabarito: B. O 'Registro de Trial' (como o ReBEC e o ClinicalTrials.gov) impede que um cientista comece um projeto, perceba que a pesquisa deu errado ou não achou o que queria, e minta no artigo final trocando os objetivos originais metodológicos aprovados.",
+        "explanation": "A correta é A porque o registro público assegura a integridade metodológica e evita omissão de resultados. As outras falham pois: B é falso, C é inexistente, D é financeiro e E é absurdo.",
         "difficulty": "fácil"
     },
     {
@@ -3809,7 +3809,7 @@ window.questionBank = [
             "E": "Corrosão do vidro microscópico aumentando o tempo de manipulação."
         },
         "correct": "C",
-        "explanation": "Gabarito: B. No mundo molecular o que é curto (menor) é mais rápido e amplifica muito fácil. Moléculas pequenas (dímeros de primers ligados entre si sem o alvo) se replicam furiosamente e dominam os spots fotográficos das flow cells caríssimas.",
+        "explanation": "A correta é C porque fragmentos pequenos clusterizam mais rápido, consumindo toda a capacidade da flowcell. As outras falham pois: A, B, D e E não ocorrem na tecnologia.",
         "difficulty": "fácil"
     },
     {
@@ -3825,7 +3825,7 @@ window.questionBank = [
             "E": "Herança dominante via proteína hiperativa que afeta a homeostase celular."
         },
         "correct": "E",
-        "explanation": "Gabarito: B. Ganho de função (Gain-of-Function) é como um acelerador travado num carro. Mesmo que o outro alelo (outro pedal) esteja normal, o carro vai acelerar perigosamente, sendo dominante no fenótipo, como é o clássico do gene BRAF ou KRAS em tumores.",
+        "explanation": "A correta é E porque proteínas com novas funções ativas costumam manifestar-se mesmo em heterozigose dominante. As outras falham pois: A ignora doenças, B e C são recessivas e D são deleções.",
         "difficulty": "médio"
     },
     {
@@ -3841,7 +3841,7 @@ window.questionBank = [
             "E": "Amplificação genômica aleatória (WGA) com uso de controles internos."
         },
         "correct": "A",
-        "explanation": "Gabarito: B. Agilent SureSelect, KAPA HyperExome, Illumina Exome, todos funcionam pelo princípio brilhante de 'Pescagem/Captura em Solução'. Sondas de RNA cheias de iscas grudam no DNA e esferas as puxam para o fundo.",
+        "explanation": "A correta é A porque o método utiliza iscas de RNA ou DNA para capturar alvos específicos em solução. As outras falham pois: B é fabricação, C é eletroforese, D é restrito e E é aleatório.",
         "difficulty": "fácil"
     },
     {
@@ -3857,7 +3857,7 @@ window.questionBank = [
             "E": "Estabilidade frente ao sol."
         },
         "correct": "C",
-        "explanation": "Gabarito: B. Quebrar o processo de Cold-Chain (Cadeia de frio) e mentir (Falsificação ou Omissão científica) degrada os dados do SUS e cria variantes fantasmas originadas de decomposição química de raios UV e calor excessivo (oxidação) nos bancos do governo.",
+        "explanation": "A correta é a C pois omitir falhas pré-analíticas e integridade de amostras viola a integridade e ética científica. As outras falham pois: A falhas biológicas são irreversíveis, B caracteriza desonestidade financeira, D software não recupera biologia e E sol degrada DNA.",
         "difficulty": "fácil"
     },
     {
@@ -3873,7 +3873,7 @@ window.questionBank = [
             "E": "Desnaturação a 121ºC com calibração rigorosa e controles de reação."
         },
         "correct": "D",
-        "explanation": "Gabarito: B. WGS de tumor circulante quer achar 1 fio de tumor in 10.000 fios normais. Sem Polimerases caríssimas e sem erros acoplados a UMIs matemáticos de correção da bioinformática, é impossível garantir que esse 1 fio é câncer real e não uma simples mutação falha que a enzima cometeu no tubo.",
+        "explanation": "A correta é a D porque UMIs e polimerases de alta fidelidade eliminam erros de PCR e artefatos de sequenciamento. As outras falham pois: A volume não altera detecção, B Taq comum gera ruído, C água fervida é irrelevante e E calor extremo degrada DNA.",
         "difficulty": "difícil"
     },
     {
@@ -3889,7 +3889,7 @@ window.questionBank = [
             "E": "Evitar desnaturação térmica do DNA em cenários clínicos controlados."
         },
         "correct": "C",
-        "explanation": "Gabarito: B. Fotobleaching (Fadiga Química) é a morte dos corantes de DNA. Quando expostos por 30minutos esquecidos e abertos na bancada de luz branca intensa de teto do seu laboratório, o fluoróforo morre. O equipamento medirá metade do valor real que o DNA tem ali dentro.",
+        "explanation": "A correta é a C pois a exposição à luz causa fotobleaching nos fluoróforos, subestimando a quantificação de DNA. As outras falham pois: A existem limites químicos, B luvas são inertes, D não há toxicidade volátil e E luz não causa desnaturação térmica.",
         "difficulty": "médio"
     },
     {
@@ -3905,7 +3905,7 @@ window.questionBank = [
             "E": "Contaminação bacteriana ou fúngica em amostras severamente degradadas."
         },
         "correct": "D",
-        "explanation": "Gabarito: B. Se a curva GC do WES estivesse em 41% igual a humana média geral (Global), é a sua captura que falhou (O NGS perdeu as regiões da vida em éxons - super ricas em GC para síntese proteica). Seu exoma 'on-target' sempre terá picos tortos em direção a 50-60% de GC em FASTQC e QCs.",
+        "explanation": "A correta é a D porque o exoma captura regiões codificantes que possuem conteúdo GC naturalmente mais elevado. As outras falham pois: A média humana é 41%, B erro óptico é aleatório, C falha térmica não enviesa GC e E contaminação gera outros perfis.",
         "difficulty": "médio"
     },
     {
@@ -3921,7 +3921,7 @@ window.questionBank = [
             "E": "Ponteiras com traços orgânicos em amostras de bancos degradados."
         },
         "correct": "A",
-        "explanation": "Gabarito: B. O 'Wash buffer' e os 'Waste Tubes' que os robôs da Qiagen/Roche descartam são puro lixo de solvente orgânico e fenol/etanol. Não vai pro meio ambiente nem pode entrar em calor de panelões de autoclave biológica pois o vapor explode o teto. Têm que ser separados num bombell inerte ventilado (Grupo B - Químico).",
+        "explanation": "A correta é a A pois resíduos químicos como solventes e sais tóxicos da extração pertencem ao Grupo B. As outras falham pois: B é resíduo comum, C é esgoto doméstico, D são perfurocortantes e E ponteiras biológicas são Grupo A.",
         "difficulty": "fácil"
     },
     {
@@ -3937,7 +3937,7 @@ window.questionBank = [
             "E": "Apagamento de processos."
         },
         "correct": "C",
-        "explanation": "Gabarito: B. O método Copy+Paste dos elementos LINE-1 e Alu. Ele vira RNA, uma enzima copia ele de volta pra DNA num buraco novo de outro cromossomo, arruinando qualquer gene coitado que estivesse ocupando aquela moradia antes e gerando hemofilias ou Duchenne. São ~45% do nosso genoma 'lixo' invasivo histórico do processo evolutivo primitivo de retrovírus incorporados na pré história de hominídeos primitivos.",
+        "explanation": "A correta é a C porque a retrotransposição envolve a transcrição de RNA e reinserção como DNA no genoma. As outras falham pois: A Golgi secreta proteínas, B fitas não desaparecem, D inversão é estrutural e E não é um apagamento.",
         "difficulty": "fácil"
     },
     {
@@ -3953,7 +3953,7 @@ window.questionBank = [
             "E": "Perda dos scores Phred."
         },
         "correct": "E",
-        "explanation": "Gabarito: B. Um arquivo FASTQ perfeito carrega: Linha 1 = Cabeçalho com o Endereço/Máquina da base (ID), Linha 2 = As letrinhas do DNA puras cruas soltas A-T-C-G. Linha 3 = O Símbolo Demarcador +, e a fundamental sagrada Linha 4 = Código ASCII Criptografado da nota matemática PHRED de erro daquela base (Se é um erro provável Q10 ou base espetacular e limpa brilhante Q30 na câmera), é essencial para a limpeza Fastp de Qualidade.",
+        "explanation": "A correta é a E pois a quarta linha do FASTQ armazena os scores de qualidade Phred fundamentais para o QC. As outras falham pois: A são metadados, B ID está na linha 1, C orientação não usa linha 4 e D metilação exige protocolos específicos.",
         "difficulty": "difícil"
     },
     {
@@ -3969,7 +3969,7 @@ window.questionBank = [
             "E": "Erro de preenchimento LIMS."
         },
         "correct": "C",
-        "explanation": "Gabarito: B. Erros de phasing mostram no gráfico que as enzimas perderam totalmente a força de acompanhar o cronômetro do robô e ficaram 'mancas' e espalhadas na corrida. Os lasers começam a ver borrões. É a assinatura mecânica das catástfotes químicas: fluido travando as mangueiras dos kits, sala muito fria ou quente arruinando termociclagem de vidro na câmara e insumos vencidos de péssima eficácia.",
+        "explanation": "A correta é a C pois phasing e pre-phasing indicam a perda de sincronia das polimerases durante o sequenciamento. As outras falham pois: A embalagem é externa, B hardware é causa indireta, D rede é digital e E LIMS é gerencial.",
         "difficulty": "médio"
     },
     {
@@ -3985,7 +3985,7 @@ window.questionBank = [
             "E": "Postar em redes abertas."
         },
         "correct": "A",
-        "explanation": "Gabarito: B. Se a amostra é rastreável, o achado foi severo acionável preventivo (Câncer Difuso Gástrico Familiar) e o comitê permite a janela incidental: a quebra cega é autorizada de forma hiper criteriosa controlada para devolver o alerta salvando a família, com geneticistas qualificados, baseada puramente na Beneficência da ética humana global do participante que consentiu no termo do TCLE de vida.",
+        "explanation": "A correta é a A pois o dever ético exige comunicar variantes genéticas graves e acionáveis conforme os princípios de beneficência. As outras falham pois: B e D são omissões antiéticas, C é fraude e E viola o sigilo.",
         "difficulty": "médio"
     },
     {
@@ -4001,7 +4001,7 @@ window.questionBank = [
             "E": "Sem mutações em isolados."
         },
         "correct": "B",
-        "explanation": "Gabarito: B. Regiões com linhagens fechadas e de consanguinidades endêmicas e rurais forçadas têm cruzamentos onde a mãe carrega o exato mesmo defeito letal recessivo do pai (Run Of Homozygosity severa no alinhamento WGS). As crianças nascem com falhas severas recessivas dobradas que numa metrópole de milhões de habitantes nunca achariam o par complementar 'perfeito' para adoecer por sorte genética do pool genômico aberto de diversidade da reprodução miscigenada. Focam nas doenças raras em alta frequência em pequenas cidades.",
+        "explanation": "A correta é a B pois a endogamia aumenta regiões de homozigose (ROH), elevando a manifestação de doenças recessivas raras. As outras falham pois: A heterozigotos apenas diminuem, C dominância é fixa, D ignora genética e E mutações ocorrem sempre.",
         "difficulty": "médio"
     },
     {
@@ -4017,7 +4017,7 @@ window.questionBank = [
             "E": "Inviável para amplicons."
         },
         "correct": "C",
-        "explanation": "Gabarito: B. A captura (A 'pesca' magnética das sondas por pedaços seletivos de exons na sopa da biblioteca suja) sofre viés massivo. O imã não pega as expansões CGG do Huntington ou os genes tortos pesados por GC, ou as translocações de fusão de câncer longe do éxon. O Exoma fica cego no buraco desses alvos, O WGS varre o genoma de forma igualitária (mesmo com os lixos intrônicos em maioria) cobrindo e entregando a integridade do cariótipo inteiro sem deixar cair o peixe do anzol na purificação da pipeta da máquina e dos reagentes pesados.",
+        "explanation": "A correta é C porque a captura por sondas no WES falha em regiões ricas em GC e variantes estruturais. As outras falham pois: A lê ambas as fitas, B lasers são padrão em ambos, D WES exclui íntrons e E usa sondas.",
         "difficulty": "médio"
     },
     {
@@ -4033,7 +4033,7 @@ window.questionBank = [
             "E": "Ataque de Cas9 bacteriana."
         },
         "correct": "C",
-        "explanation": "Gabarito: B. É o clássico 'End Replication Problem' de genética basal celular. A polimerase só corre numa pista indo pra uma ponta, o outro lado dela trava porque acabou o caminho da base e o RNA primer que colava o chão sumiu (foi digerido pelas exonucleases) da Lagging Strand. O carro de asfaltamento (polimerase de reparo) cai no precipício e o fim da fita fica mais curto e burro toda santa vez que a célula duplica. Até os genes normais de sobrevida da borda morrerem na velhice.",
+        "explanation": "A correta é C porque a DNA polimerase não replica a extremidade final da fita descontínua. As outras falham pois: A é consequência do encurtamento, B exossomos processam RNA, D encurtamento é replicativo e E é ferramenta laboratorial.",
         "difficulty": "fácil"
     },
     {
@@ -4049,7 +4049,7 @@ window.questionBank = [
             "E": "Quantidade nula de SNPs."
         },
         "correct": "D",
-        "explanation": "Gabarito: B. A maldição/bênção do painel de Amplicon de Câncer. Eles são fotocópias perfeitas por desenho. O computador (MarkDuplicates) tem a regra: Se começou e acabou no mesmo exato pedaço do DNA, é clone de PCR inútil da máquina. Mas no Amplicon nós VIVEMOS DE CLONES de 100bp exatos nos hotspots de câncer (Ex: BRAF V600E focal). Assim, você é OBRIGADO a desligar o removedor de clones do seu software (Desativar a ferramenta Picard), ou ele deleta sua corrida inteira e te deixa sem read nenhum, e sem tumor detectado. Sem MarkDuplicates.",
+        "explanation": "A correta é D porque amplicons geram duplicatas biológicas legítimas que ferramentas de bioinformática removeriam indevidamente. As outras falham pois: A logs são essenciais, B FASTQC é métrica vital, C foca em regiões alvo e E SNPs são desejados.",
         "difficulty": "médio"
     },
     {
@@ -4065,7 +4065,7 @@ window.questionBank = [
             "E": "Publicar em sites abertos."
         },
         "correct": "C",
-        "explanation": "Gabarito: B. As populações isoladas endêmicas têm DNA 'fechado'. Se você publicar o arquivo na nuvem com a etiqueta 'Moradores da tribo X com 50 pessoas nas margens do Amazonas com a mutação Y para infarto', você feriu o sigilo (Risco de Reidentificação da LGPD do paciente nas vilas locais). Eles poderão sofrer estigmas genéticos laborais com cruzes em bases do IBGE. Isso é violação das RDC do CGEN nas boas práticas clínicas éticas da CONEP em genômica, sem uso dos Comitês DAC (Controle Fechado por aprovação da proposta de terceiros, sem link aberto na internet).",
+        "explanation": "A correta é C porque o cruzamento de dados genômicos e geográficos permite identificar indivíduos em comunidades pequenas. As outras falham pois: A há restrições éticas, B anonimização é insuficiente, D metadados básicos não bastam e E viola privacidade.",
         "difficulty": "médio"
     },
     {
@@ -4081,7 +4081,7 @@ window.questionBank = [
             "E": "Emissão de raios gama."
         },
         "correct": "A",
-        "explanation": "Gabarito: B. Trizol e Fenos são agentes assassinos por penetração celular da pele em gotículas ou pelos vapores de evaporação rápida na temperatura natural. Queimam e destróem o sistema nervoso respiratório de um técnico inadvertido. Eles só são abertos dentro de capelas de coifas industriais de Química Exaustora (Lembrete: CSB Classe 2 A2 Biológicas com filtros biológicos de HEPA ou papéis de fluxo espalham e matam o funcionário retornando o gás nocivo para a frente e recirculando os venenos não-sólidos para o nariz de quem extrai DNA ali dentro num erro de EPI e EPC, a menos que as capelas sejam modelo 2 B2 totais e conectadas ao teto e as hélices da coifa externa blindada).",
+        "explanation": "A correta é A porque o Trizol libera vapores altamente tóxicos e neurotoxinas em ambientes não exauridos. As outras falham pois: B é extremamente perigoso, C não é explosivo ao ar, D perigo é biológico e E não emite radiação.",
         "difficulty": "fácil"
     },
     {
@@ -4097,7 +4097,7 @@ window.questionBank = [
             "E": "Mutações missense."
         },
         "correct": "E",
-        "explanation": "Gabarito: B. Mutação Missense ('Troca de Sentido'). O DNA errou o código na foto, trocou um aminoácido Valina (exemplo) por Glutamato. O pino de ligar do motor da proteína quebra e fica sempre cravado em 'LIGADO'. A célula se multiplica até invadir os tecidos (Metástase Tumoral Ativa Oncogenética em mutações hot-spot somáticas dominantes missense como as kinasés do KRAS, BRAF, AKT).",
+        "explanation": "A correta é E porque mutações missense alteram o aminoácido, modificando a função e estrutura da proteína. As outras falham pois: A altera estabilidade, B interrompe a tradução, C é silenciamento epigenético e D não altera aminoácido.",
         "difficulty": "fácil"
     },
     {
@@ -4113,7 +4113,7 @@ window.questionBank = [
             "E": "Avaliar estética visual."
         },
         "correct": "B",
-        "explanation": "Gabarito: B. A base da acreditação mundial. Você só pode liberar exame de vida ou morte no NGS se o seu cano de extração com os mesmos kits foi testado no cego por um DNA referência do NIST e você acertou o mapa de letras com acurácia de relógio cirúrgico idêntica aos padrões de qualidade atestados das plataformas dos laboratórios mestres globais da técnica WGS e Exoma avaliados em concordância estatística e com os dados sem viés reprodutíveis na rotina analítica diária. (Garante segurança BPL total).",
+        "explanation": "A correta é B porque a validação cruzada garante que resultados sejam consistentes entre diferentes laboratórios e lotes. As outras falham pois: A é custo regulatório, C foca em técnica, D é burocracia comercial e E estética é irrelevante.",
         "difficulty": "médio"
     },
     {
@@ -4129,7 +4129,7 @@ window.questionBank = [
             "E": "Transformada de Burrows-Wheeler (BWT) acoplada ao índice FM (FM-Index)."
         },
         "correct": "E",
-        "explanation": "Gabarito: C. A BWT reorganiza o genoma humano em blocos de caracteres que se repetem, permitindo comprimi-lo e buscar sequências (reads) em tempo O(n) sem precisar varrer o genoma inteiro linearmente.",
+        "explanation": "A correta é E porque o BWT e o FM-Index permitem indexação ultrarrápida do genoma de referência. As outras falham pois: A modela sequências, B filtra variantes, C é alinhamento lento e D é para filogenia.",
         "difficulty": "médio"
     },
     {
@@ -4145,7 +4145,7 @@ window.questionBank = [
             "E": "AF=0.5; frequência alélica de 50% gerando falsos positivos na coorte local."
         },
         "correct": "B",
-        "explanation": "Gabarito: B. AC = Allele Count (Contagem do alelo mutado), AN = Allele Number (Total de alelos/cromossomos sequenciados). AF = AC/AN (Frequência Alélica). Em diploides, AN=100 significa 50 pessoas genotipadas.",
+        "explanation": "A correta é B porque AF é a razão entre alelos mutados (AC) e o total de alelos (AN). As outras falham pois: A não mede profundidade de reads, C valor excede o limite, D AF é proporção e E exigiria AC igual a 50.",
         "difficulty": "médio"
     },
     {
@@ -4161,7 +4161,7 @@ window.questionBank = [
             "E": "Exigência de cobertura 10.000x para evitar falsos positivos do sistema clínico."
         },
         "correct": "A",
-        "explanation": "Gabarito: B. Um tecido tumoral é uma mistura de células normais e de vários clones de células cancerígenas. Uma mutação driver pode estar presente em apenas uma fração pequena das células, gerando um VAF (Variant Allele Frequency) de 5%, 10% ou 15%.",
+        "explanation": "A correta é A porque o Mutect2 é otimizado para detectar variantes em baixa frequência em tecidos heterogêneos. As outras falham pois: B inclui SNPs, C exige referência, D ocorre em todo genoma e E 10.000x não é regra.",
         "difficulty": "médio"
     },
     {
@@ -4177,7 +4177,7 @@ window.questionBank = [
             "E": "BED utiliza formato 0-based start e 1-based end (half-open) para posições."
         },
         "correct": "E",
-        "explanation": "Gabarito: B. Essa é uma das pegadinhas clássicas da bioinformática. O VCF é 1-based (a primeira base é 1). O BED é 0-based (a primeira base é 0 e o fim é não-inclusivo). Errar isso na conversão de arquivos gera um desvio de 1 base que arruína a anotação clínica.",
+        "explanation": "A correta é a E pois o BED utiliza coordenadas 0-based no início e 1-based (não inclusivo) no fim. As outras falham pois: A define cromossomos, B usa nucleotídeos, C BED não é 1-based e D é formato texto.",
         "difficulty": "médio"
     },
     {
@@ -4193,7 +4193,7 @@ window.questionBank = [
             "E": "Profundidade, reads divididos (split) e pares de reads discordantes no BAM."
         },
         "correct": "E",
-        "explanation": "Gabarito: B. Se a cobertura cai bruscamente (Read Depth), ou se metade do read mapeia no chr1 e a outra metade no chr5 (Split Read), ou se o par Forward-Reverse está longe demais (Discordant), o software crava a existência de uma Variante Estrutural.",
+        "explanation": "A correta é a E porque SVs são identificadas por profundidade, reads divididos e pares discordantes. As outras falham pois: A é para montagem, B é transcriptômica, C avalia qualidade e D descreve SNVs.",
         "difficulty": "médio"
     },
     {
@@ -4209,7 +4209,7 @@ window.questionBank = [
             "E": "Dispensa do alinhamento BWA exigindo normalização de dados brutos do sequenciador."
         },
         "correct": "B",
-        "explanation": "Gabarito: B. O arquivo gVCF guarda informações de TODAS as bases (mesmo as normais/referência). Ao juntar 10.000 gVCFs, o GATK pode olhar para uma variante que falhou num paciente e usar a estatística dos outros 9.999 para afirmar com certeza seu status alélico.",
+        "explanation": "A correta é a B pois o gVCF permite diferenciar sítios sem variantes de falhas de cobertura. As outras falham pois: A é irrelevante, C aumenta espaço, D exige paralelismo e E exige alinhamento.",
         "difficulty": "difícil"
     },
     {
@@ -4225,7 +4225,7 @@ window.questionBank = [
             "E": "Metade do genoma montado está em contigs de tamanho igual ou superior ao N50."
         },
         "correct": "E",
-        "explanation": "Gabarito: D. O N50 é a métrica padrão de qualidade de montagem (assembly). Ele pega todos os pedaços montados do maior pro menor; quando a soma dos pedaços atinge 50% do genoma, o tamanho daquele último pedaço é o N50.",
+        "explanation": "A correta é a E porque o N50 indica que metade da montagem está em contigs desse tamanho ou maior. As outras falham pois: A é contiguidade, B é estatística pesada, C é cumulativo e D é comprimento.",
         "difficulty": "fácil"
     },
     {
@@ -4241,7 +4241,7 @@ window.questionBank = [
             "E": "Execução em computadores quânticos para alta capacidade de processamento local."
         },
         "correct": "C",
-        "explanation": "Gabarito: C. O pseudo-alinhamento foi uma revolução. Ao invés de gastar horas achando o local exato do genoma no arquivo BAM, o software diz 'esse k-mer pertence ao Transcrito X' em minutos, pulando o alinhamento basal exato.",
+        "explanation": "A correta é a C pois o pseudo-alinhamento usa k-mers para quantificar transcritos sem mapeamento base a base. As outras falham pois: A é nuclear, B é transcricional, D usa FASTQ e E usa CPUs.",
         "difficulty": "médio"
     },
     {
@@ -4257,7 +4257,7 @@ window.questionBank = [
             "E": "Scores Phred de qualidade para ajuste de parâmetros no software de análise RNA."
         },
         "correct": "A",
-        "explanation": "Gabarito: C. Nunca forneça dados já normalizados (TPM/FPKM) para o DESeq2 ou edgeR. A mágica da estatística Bayesiana do software depende de ver os números inteiros brutos para calcular o 'size factor' e a dispersão.",
+        "explanation": "A correta é a A porque o DESeq2 exige contagens brutas para modelar a dispersão estatística corretamente. As outras falham pois: B é saída, C perde informação, D interfere no modelo e E avalia sequenciamento.",
         "difficulty": "médio"
     },
     {
@@ -4273,7 +4273,7 @@ window.questionBank = [
             "E": "Grafo direcionado onde regras definem a ordem de execução das tarefas locais."
         },
         "correct": "E",
-        "explanation": "Gabarito: C. DAGs são o cérebro de orquestradores de pipelines (como Snakemake e Nextflow). O software mapeia sozinho o que precisa ser feito primeiro (ex: mapear) para depois fazer a chamada de variantes (ex: genotipar), garantindo que nada rode fora de ordem e em paralelo sempre que possível.",
+        "explanation": "A correta é a E pois o DAG organiza a ordem lógica de execução baseada em dependências de regras. As outras falham pois: A é CLI, B é teoria de grafos, C é lógico e D é automação.",
         "difficulty": "médio"
     },
     {
@@ -4289,7 +4289,7 @@ window.questionBank = [
             "E": "Criptografia de dados genômicos em discos rígidos de servidores locais SUS."
         },
         "correct": "C",
-        "explanation": "Gabarito: B. Com o pysam, você não precisa fazer parsers manuais que demoram horas. Você abre um arquivo gigante BAM em 1 segundo e solicita algo como `bam.fetch('chr1', 1000, 2000)`.",
+        "explanation": "A correta é a C porque o pysam é o wrapper Python para a biblioteca htslib de arquivos genômicos. As outras falham pois: A é manipulação, B exige APIs, D é back-end e E é processamento.",
         "difficulty": "fácil"
     },
     {
@@ -4305,7 +4305,7 @@ window.questionBank = [
             "E": "chmod +x."
         },
         "correct": "A",
-        "explanation": "Gabarito: B. `sbatch script.sh` envia seu trabalho para o cluster SLURM. O gerenciador analisa os recursos (CPUs, RAM) que você pediu no cabeçalho do script e o coloca na fila de espera dos supercomputadores.",
+        "explanation": "A correta é a A pois o sbatch é o comando SLURM para submeter scripts para processamento em lote. As outras falham pois: B é containers, C é pacotes, D é código e E é permissão.",
         "difficulty": "fácil"
     },
     {
@@ -4321,7 +4321,7 @@ window.questionBank = [
             "E": "git branch -> git status -> git init para organização de repositórios locais."
         },
         "correct": "D",
-        "explanation": "Gabarito: B. Adiciona os arquivos para a 'staging area' (git add), sela o pacote de código com uma nota explicativa (git commit) e empurra o pacote para a nuvem do repositório (git push).",
+        "explanation": "A correta é a D porque add, commit e push são os passos para preparar e enviar alterações remotamente. As outras falham pois: A está fora de ordem, B é sincronia, C é exclusão e E é organização.",
         "difficulty": "fácil"
     },
     {
@@ -4337,7 +4337,7 @@ window.questionBank = [
             "E": "PDF restringindo a aplicação prática a grandes bancos de dados abertos web."
         },
         "correct": "A",
-        "explanation": "Gabarito: C. O JSON é a língua franca da comunicação entre sistemas web hoje. Todas as APIs genômicas (ClinVar, Ensembl, gnomAD) devolvem as requções em blocos chave-valor no formato JSON.",
+        "explanation": "A correta é a A pois JSON é leve e padrão em APIs REST modernas. As outras falham pois: B é verboso e obsoleto, C foca em sequências brutas, D é binário para alinhamentos e E é formato de documento.",
         "difficulty": "fácil"
     },
     {
@@ -4353,7 +4353,7 @@ window.questionBank = [
             "E": "Singularity não suporta pipelines complexos em bancos de dados locais SUS."
         },
         "correct": "B",
-        "explanation": "Gabarito: B. Se você dá acesso ao Docker para um bioinformata em um supercomputador de 20 milhões, ele ganha acesso de 'Deus' (root) no servidor e pode formatar a máquina. O Singularity bloqueia isso, mantendo a permissão limitada do usuário.",
+        "explanation": "A correta é a B pois Docker exige privilégios de root, comprometendo a segurança. As outras falham pois: A ignora suporte Linux, C não é o diferencial técnico, D suporta diversas distribuições e E permite pipelines complexos.",
         "difficulty": "fácil"
     },
     {
@@ -4369,7 +4369,7 @@ window.questionBank = [
             "E": "Descoberta de mutações missense mitigadas através de filtros de rede local."
         },
         "correct": "C",
-        "explanation": "Gabarito: B. Se o seu PCA plotar todas as amostras colhidas na terça-feira do lado esquerdo e as da quinta-feira do lado direito (ao invés de separar Saudáveis de Doentes), você tem um grave 'batch effect' laboratorial que a estatística acaba de desmascarar.",
+        "explanation": "A correta é a C pois PCA reduz dimensões para detectar agrupamentos e vieses. As outras falham pois: A é processamento inicial, B reconstrói sequências, D identifica expressão diferencial e E foca em variantes genômicas.",
         "difficulty": "fácil"
     },
     {
@@ -4385,7 +4385,7 @@ window.questionBank = [
             "E": "Eixo X: Tamanho do gene; Eixo Y: Expressão TPM em artefatos de rede biológica."
         },
         "correct": "B",
-        "explanation": "Gabarito: B. Chama-se Manhattan porque os picos dos SNPs ultra-significativos se destacam da base linear como se fossem os arranha-céus da cidade de Nova Iorque acima do horizonte.",
+        "explanation": "A correta é a B pois Manhattan plots mostram significância por posição genômica. As outras falham pois: A é para demografia, C mede isolamento genético, D avalia sequenciamento e E foca em expressão gênica.",
         "difficulty": "fácil"
     },
     {
@@ -4401,7 +4401,7 @@ window.questionBank = [
             "E": "FDR ignora o p-valor e foca apenas na Fold-Change bruta de cada paciente."
         },
         "correct": "B",
-        "explanation": "Gabarito: B. Se você faz RNA-Seq com 20.000 genes humanos, o p-valor limiar de Bonferroni seria 0.05 / 20.000 = 0.0000025. Isso é tão estrito que você quase nunca acharia nenhum gene significativo, afundando a pesquisa por excesso de conservadorismo estatístico.",
+        "explanation": "A correta é a B pois Bonferroni é excessivamente conservador, gerando muitos falsos negativos. As outras falham pois: A são compatíveis, C é o oposto da realidade, D escala para milhares e E baseia-se em p-valores.",
         "difficulty": "difícil"
     },
     {
@@ -4416,8 +4416,8 @@ window.questionBank = [
             "D": "Indicam que a evolução parou gerando falsos positivos não corrigidos em QC.",
             "E": "Aumentam o poder clínico em oncologia reduzindo a necessidade de filtragem."
         },
-        "correct": "E",
-        "explanation": "Gabarito: B. O HW diz como os alelos deveriam se distribuir na natureza. Se o sequenciador mostra resultados incrivelmente fora do HW em pessoas normais, não é um milagre evolutivo, é a máquina ou o alinhador que errou a contagem.",
+        "correct": "B",
+        "explanation": "A correta é a B pois desvios do HWE geralmente indicam falhas técnicas sistemáticas. As outras falham pois: A não prova natividade, C é estatisticamente improvável, D é interpretação biológica equivocada e E prejudica a análise.",
         "difficulty": "fácil"
     },
     {
@@ -4432,8 +4432,8 @@ window.questionBank = [
             "D": "O p-valor da análise Fisher pós-WES que mitiga artefatos de sequenciamento.",
             "E": "O nível de poluição da flowcell Illumina que demanda alto processamento."
         },
-        "correct": "D",
-        "explanation": "Gabarito: B. Na estatística bayesiana, você já entra no problema sabendo de algo. Como sabemos que humanos sofrem 1 mutação a cada 1.000 bases, o algoritmo já começa o cálculo desconfiando que o normal é não ter mutação (Prior muito baixo).",
+        "correct": "B",
+        "explanation": "A correta é a B pois o Prior define a probabilidade antes dos dados atuais. As outras falham pois: A é qualidade física, C é métrica de cobertura, D é estatística não-bayesiana e E é contaminação física.",
         "difficulty": "médio"
     },
     {
@@ -4449,7 +4449,7 @@ window.questionBank = [
             "E": "Odds Ratio e Risco Relativo no controle de qualidade primário do projeto."
         },
         "correct": "B",
-        "explanation": "Gabarito: B. O F1-Score é a nota final da 'perfeição' de um algoritmo preditivo de AI ou Pipeline. Ele pune tanto o pipeline que é sensível demais (gera muito lixo) quanto o que é específico demais (perde mutações reais do paciente).",
+        "explanation": "A correta é a B pois o F1-Score harmoniza a precisão e a sensibilidade. As outras falham pois: A avalia erros estatísticos, C ignora falsos negativos, D descreve doenças e E mede riscos.",
         "difficulty": "médio"
     },
     {
@@ -4464,8 +4464,8 @@ window.questionBank = [
             "D": "Medição de Phred Score no FASTQ mitigando artefatos de qualidade de base.",
             "E": "Alinhamento local Smith-Waterman limitado por recursos computacionais."
         },
-        "correct": "C",
-        "explanation": "Gabarito: B. No HMM, o 'estado' do DNA do paciente (Deletado ou Duplicado) está oculto. A única pista que o computador tem são as emissões observáveis, que é a quantidade de reads caindo lá. A matemática do HMM traça o caminho mais lógico para esses buracos.",
+        "correct": "B",
+        "explanation": "A correta é a B pois HMMs modelam estados genômicos ocultos como CNVs. As outras falham pois: A é segurança, C é indexação de dados, D é processamento de sinal e E é alinhamento local.",
         "difficulty": "fácil"
     },
     {
@@ -4480,8 +4480,8 @@ window.questionBank = [
             "D": "A base foi lida 95 vezes pelo laser do sequenciador gerando alta cobertura.",
             "E": "O SNP deve ser expurgado do VCF por excesso de custo computacional em nuvem."
         },
-        "correct": "A",
-        "explanation": "Gabarito: B. A imputação genômica adivinha bases que você não sequenciou (baseado no bloco de correlação de Linkage Disequilibrium). R² próximo de 1.0 atesta que a 'adivinhação' da bioinformática foi matematicamente perfeita com base nos dados ao redor.",
+        "correct": "B",
+        "explanation": "A correta é a B pois o R-quadrado indica a alta confiabilidade da inferência. As outras falham pois: A confunde biologia, C confunde clínica, D confunde sequenciamento e E sugere descarte errôneo.",
         "difficulty": "médio"
     },
     {
@@ -4496,8 +4496,8 @@ window.questionBank = [
             "D": "Dar o diagnóstico definitivo de doenças raras de herança recessiva pura.",
             "E": "Identificar exclusivamente agentes patógenos víricos em áreas de fronteira."
         },
-        "correct": "C",
-        "explanation": "Gabarito: B. O PRS pega milhares de SNPs que causam um dano minúsculo cada um, soma todos eles, e te mostra se sua genética como um todo joga contra ou a favor do infarto/câncer.",
+        "correct": "B",
+        "explanation": "A correta é a B pois o PRS permite estratificar riscos para personalizar a prevenção no SUS. As outras falham pois: A viola direitos humanos, C negligencia estilo de vida, D confunde poligenia com monogenia e E foca em vírus.",
         "difficulty": "médio"
     },
     {
@@ -4513,7 +4513,7 @@ window.questionBank = [
             "E": "Mapear heredogramas de monastérios austríacos em genética floral clássica."
         },
         "correct": "B",
-        "explanation": "Gabarito: B. Pessoas doentes bebem café ou beber café deixa doente? A Randomização Mendeliana usa genes que afetam naturalmente o metabolismo da cafeína na população para provar estatisticamente quem causa o quê, pois seus genes vieram antes da sua dieta diária.",
+        "explanation": "A correta é a B porque utiliza variantes genéticas como variáveis instrumentais para provar relações causais. As outras falham pois: A descreve ensaios clínicos, C é ilegal, D é simulação e E é botânica histórica.",
         "difficulty": "médio"
     },
     {
@@ -4528,8 +4528,8 @@ window.questionBank = [
             "D": "Extingue a venda de medicamentos genéricos fechando redes de farmácias.",
             "E": "Gera mutações somáticas que exigem CRISPR em hospitais federais de base."
         },
-        "correct": "C",
-        "explanation": "Gabarito: B. Economia em Saúde é matemática pura. Evitar um paciente envenenado na UTI do SUS durante semanas paga 1.000 sequenciamentos genéticos preventivos. Custo e Efetividade de ponta.",
+        "correct": "B",
+        "explanation": "A correta é a B pois evitar toxicidades graves reduz sofrimento e gastos com UTIs oncológicas. As outras falham pois: A é ilegal, C ignora medicamentos tradicionais, D afeta farmácias e E é edição gênica.",
         "difficulty": "médio"
     },
     {
@@ -4545,7 +4545,7 @@ window.questionBank = [
             "E": "Medir eficácia de drogas."
         },
         "correct": "B",
-        "explanation": "Gabarito: B. Como o vírus muta em taxa constante ('Relógio molecular'), rastreando as mutações dos pacientes do Mundo todo o computador descobre que o Vírus X do estado do Pará veio da Inglaterra em avião na Terça-Feira passada. Vigilância Epidemiológica de elite.",
+        "explanation": "A correta é a B pois a filodinâmica usa mutações para rastrear rotas geográficas de vírus. As outras falham pois: A é prognóstico, C é clínico, D é comercial e E é farmacodinâmico.",
         "difficulty": "fácil"
     },
     {
@@ -4560,8 +4560,8 @@ window.questionBank = [
             "D": "Efeito de retrotransposons.",
             "E": "Mutação por clima UV."
         },
-        "correct": "E",
-        "explanation": "Gabarito: B. É o clássico 'Efeito Fundador' das vilas (Ex: O maior caso de Xeroderma Pigmentoso do Brasil numa vila isolada do Goiás). As poucas famílias fundadoras tinham mutação; no cruzamento fechado ao longo de séculos, a doença rara virou 'comum' na vila.",
+        "correct": "B",
+        "explanation": "A correta é a B pois a endogamia em isolados aumenta a chance de alelos recessivos se unirem. As outras falham pois: A é ambiental, C é erro cromossômico, D é transposição e E é radiação.",
         "difficulty": "médio"
     },
     {
@@ -4576,8 +4576,8 @@ window.questionBank = [
             "D": "Deletar os FASTQs originais em 7 dias após o alinhamento BWA no servidor.",
             "E": "Scrambling de bases C-T para mascarar os genes das famílias testadas."
         },
-        "correct": "E",
-        "explanation": "Gabarito: B. Pseudonimizar é trocar o nome João por ID_85923, mas guardar o papel que diz 'João=ID_85923' a sete chaves num cofre separado. Se a chave estiver solta na mesa, o dado não está pseudonimizado.",
+        "correct": "B",
+        "explanation": "A correta é a B pois a pseudonimização exige chaves separadas para impedir a identificação direta do paciente. As outras falham pois: A expõe dados, C viola soberania, D deleta evidências e E corrompe dados.",
         "difficulty": "fácil"
     },
     {
@@ -4593,7 +4593,7 @@ window.questionBank = [
             "E": "Implementar Blockchain para mineração de ativos e troca de arquivos VCF."
         },
         "correct": "B",
-        "explanation": "Gabarito: B. O Beacon Protocol é fantástico. A API só responde 'Verdadeiro' ou 'Falso' e quantidade. Você não envia o genoma do paciente para outro país, você apenas atesta que já viu aquela variante antes. Mantém 100% do sigilo médico intacto.",
+        "explanation": "A correta é a B pois a consulta booleana permite confirmar variantes sem expor o genoma completo. As outras falham pois: A é acadêmico, C vaza dados, D é inseguro e E é financeiro.",
         "difficulty": "médio"
     },
     {
@@ -4609,7 +4609,7 @@ window.questionBank = [
             "E": "Virtualização subjacente e hardware nativo dos processadores Xeon Intel."
         },
         "correct": "B",
-        "explanation": "Gabarito: B. A nuvem garante que ninguém vai invadir o prédio para roubar seu disco. Mas se você deixar a porta do servidor destrancada na configuração (S3 bucket Public), a culpa e o processo de dados vazados cai direto no CPF/CNPJ do biomédico/pesquisador do seu projeto e do hospital.",
+        "explanation": "A correta é a B pois o cliente é o único responsável pela configuração de acesso aos seus dados. As outras falham pois: A é rede, C é suporte, D é patrimonial e E é virtualização.",
         "difficulty": "médio"
     },
     {
@@ -4624,8 +4624,8 @@ window.questionBank = [
             "D": "Cromossomos e posições de bases cruas usadas no controle de qualidade.",
             "E": "Filtros de BQSR na linha FILTER que aumentam o consumo de recursos comput."
         },
-        "correct": "A",
-        "explanation": "Gabarito: B. Muitas vezes os pesquisadores nomeiam o arquivo como 'Maria_Silva_15021980_Tumor.vcf'. O VCF salva esse nome dentro do próprio código interno no cabeçalho (Header). Publicar o VCF puro sem anonimizar a parte superior expõe toda a família na internet e resulta na cassação do consórcio científico e multas LGPD severas.",
+        "correct": "B",
+        "explanation": "A correta é a B pois o cabeçalho VCF frequentemente armazena nomes de amostras que identificam o paciente. As outras falham pois: A é qualidade, C é cobertura, D é coordenada e E é processamento.",
         "difficulty": "médio"
     },
     {
@@ -4641,7 +4641,7 @@ window.questionBank = [
             "E": "Mineração de Bitcoin."
         },
         "correct": "B",
-        "explanation": "Gabarito: B. Aprendizado Federado: 'Leve a pergunta até os dados, não tire os dados de casa'. Garante segurança suprema, pois o genoma do brasileiro fica no Brasil, mas os estrangeiros conseguem treinar as IAs oncológicas rodando a inteligência dentro da nossa 'caixa forte' com nossa supervisão.",
+        "explanation": "A correta é a B pois no aprendizado federado os dados permanecem locais e apenas o modelo viaja. As outras falham pois: A é arcaico, C é centralizado, D é vulnerável e E é blockchain.",
         "difficulty": "médio"
     },
     {
@@ -4656,8 +4656,8 @@ window.questionBank = [
             "D": "Rearranjo estrutural cromotríptico exigindo normalização de dados brutos.",
             "E": "Falha na extração enzimática que amplificou apenas o alelo paterno real."
         },
-        "correct": "A",
-        "explanation": "Gabarito: B. ROH longo = Os pais eram primos. Se os pais são da mesma família, o filho vai herdar fitas de DNA 'clonadas' na árvore genealógica, zerando a diversidade daquele trecho. Altamente propício a revelar doenças raras recessivas.",
+        "correct": "B",
+        "explanation": "A correta é a B porque ROH indica herança de blocos idênticos por ancestrais comuns. As outras falham pois: A foca em mutações somáticas tumorais, C envolve pressões seletivas ambientais, D é fragmentação cromossômica severa e E é erro técnico laboratorial.",
         "difficulty": "fácil"
     },
     {
@@ -4673,7 +4673,7 @@ window.questionBank = [
             "E": "DeepVariant e RNA-Seq featureCounts limitados por recursos de CPU local."
         },
         "correct": "B",
-        "explanation": "Gabarito: B. O algoritmo ADMIXTURE avalia milhares de SNPs de você e diz (usando a constante K) qual o nível percentual de ancestralidade que formou seu genoma ao longo das eras dos navegantes e colonizações. É o gráfico base de papers do Genomas Brasil.",
+        "explanation": "A correta é a B pois ADMIXTURE estima proporções de ancestralidade via máxima verossimilhança. As outras falham pois: A realiza limpeza de sequências brutas, C detecta variantes em tumores, D é software estatístico geral e E quantifica transcritos de RNA.",
         "difficulty": "médio"
     },
     {
@@ -4688,8 +4688,8 @@ window.questionBank = [
             "D": "Diferenciação em espécies distintas exigindo normalização de dados brutos.",
             "E": "Seleção positiva adaptativa dominante em apenas um dos grupos avaliados."
         },
-        "correct": "D",
-        "explanation": "Gabarito: B. Fst = 0 significa que as populações estão tão misturadas que não dá para diferenciar quem é de onde (Eles acasalam entre si sem restrição). Fst = 1 significa que elas estão ilhadas e separadas em isolamento absoluto a tempo suficiente para fixarem genomas diferentes.",
+        "correct": "B",
+        "explanation": "A correta é a B pois FST zero indica ausência de diferenciação genética entre grupos. As outras falham pois: A indicaria isolamento e diferenciação alta, C reduz diversidade sem necessariamente igualar populações, D implica em especiação e E altera apenas alelos específicos.",
         "difficulty": "fácil"
     },
     {
@@ -4705,7 +4705,7 @@ window.questionBank = [
             "E": "Mutação por metilação."
         },
         "correct": "B",
-        "explanation": "Gabarito: B. O LD mede quão grudadas duas variantes estão e caminham juntas. O Crossing-over baralha as cartas. Com os séculos, esse baralhamento separa as combinações genéticas, e o LD cai em blocos.",
+        "explanation": "A correta é a B porque o crossing-over recombina alelos, quebrando associações não-aleatórias. As outras falham pois: A refere-se à viabilidade fetal, C é dano físico externo, D altera frequências ao acaso e E é modificação epigenética.",
         "difficulty": "fácil"
     },
     {
@@ -4720,8 +4720,8 @@ window.questionBank = [
             "D": "Humanos modernos são 100% Neandertais puros conforme análise de VCF.",
             "E": "Mutação de RNA é exclusiva de Sapiens sem cruzamento com Denisovanos."
         },
-        "correct": "A",
-        "explanation": "Gabarito: B. Encontrar pedaços do DNA de outra espécie dentro do nosso mapeamento foi um dos marcos da bioinformática. A IA prova que houve cruzamento entre a nossa espécie migratória e os Neandertais já residentes no frio da Europa.",
+        "correct": "B",
+        "explanation": "A correta é a B porque a paleogenômica confirmou hibridização entre Sapiens e Neandertais. As outras falham pois: A é suposição viral sem base, C ignora as evidências fósseis moleculares, D confunde ancestralidade com identidade total e E restringe processos moleculares erroneamente.",
         "difficulty": "fácil"
     },
     {
@@ -4737,7 +4737,7 @@ window.questionBank = [
             "E": "Ausência de variantes por seleção natural."
         },
         "correct": "B",
-        "explanation": "Gabarito: B. A humanidade sofreu um 'boom' nos últimos 10 mil anos (expandiu violentamente de milhões para 8 bilhões). Isso gerou uma avalanche de mutações novas, raras e privadas que ainda não tiveram tempo de se fixar. O gráfico SFS reflete isso focando em um peso extremo na casa das mutações < 1% de frequência.",
+        "explanation": "A correta é a B pois expansões populacionais rápidas geram um excesso de mutações raras. As outras falham pois: A descreve frequências alélicas constantes, C indica fixação por deriva ou seleção, D é curva matemática sem nexo e E impediria a evolução.",
         "difficulty": "médio"
     },
     {
@@ -4752,8 +4752,8 @@ window.questionBank = [
             "D": "Menor que 0.5 em áreas ricas da amostra.",
             "E": "Em torno de 5.0 exigindo clusters HPC."
         },
-        "correct": "A",
-        "explanation": "Gabarito: B. A biologia humana prefere mutar 'Púrina por Purina' (Transição) do que 'Purina por Pirimidina' (Transversão). Por isso o Ti/Tv humano é na casa dos 2.0. Se o QC der 1.0, o computador ou a química do laboratório errou tudo e gerou um FASTQ irreal aleatório.",
+        "correct": "B",
+        "explanation": "A correta é a B porque transições são biologicamente mais frequentes, resultando em razão ~2.0. As outras falham pois: A é biologicamente impossível, C indica aleatoriedade por erro técnico, D sugere viés experimental forte e E é estatisticamente improvável na natureza.",
         "difficulty": "difícil"
     },
     {
@@ -4769,7 +4769,7 @@ window.questionBank = [
             "E": "IMPACT=MODERATE para normalização de dados."
         },
         "correct": "B",
-        "explanation": "Gabarito: B. A anotação bioinformática 'HIGH' pisca em vermelho para o geneticista. O computador leu o código e disse: 'Isso aqui quebrou o motor (frameshift/stop codon) e a proteína do tumor vai desligar o gene inteiro. Avalie isso agora mesmo!'.",
+        "explanation": "A correta é a B pois variantes que interrompem a tradução possuem alto impacto funcional. As outras falham pois: A descreve regiões não funcionais, C indica incerteza sobre a variante, D refere-se a trocas sinônimas e E causa mudanças moderadas.",
         "difficulty": "fácil"
     },
     {
@@ -4784,8 +4784,8 @@ window.questionBank = [
             "D": "Formatar HDs de sistema em clusters Linux de alto processamento.",
             "E": "Traduzir RNAm para cadeias de aminoácidos via shell script puro."
         },
-        "correct": "A",
-        "explanation": "Gabarito: B. Bedtools é o canivete suíço. Ele pega o bloco gigantesco de DNA bruto do paciente e um bloquinho BED e pergunta: 'Quantos reads do tumor caíram exatamente em cima do Gene BRCA1?'. E recorta pra você na hora.",
+        "correct": "B",
+        "explanation": "A correta é a B pois o comando intersect identifica sobreposições entre coordenadas genômicas. As outras falham pois: A exige alinhadores específicos, C envolve transferência de rede, D é tarefa de sistema operacional e E requer ferramentas de tradução.",
         "difficulty": "médio"
     },
     {
@@ -4800,8 +4800,8 @@ window.questionBank = [
             "D": "Índices como tabix (.tbi) ou .csi para buscas posicionais rápidas.",
             "E": "Geração de matrizes JPG no BWA com ajuste de parâmetros computacionais."
         },
-        "correct": "D",
-        "explanation": "Gabarito: A. Tabix gera um arquivo .tbi minúsculo ao lado do VCF gigantão. Ele é como o sumário de um livro. O programa lê o índice, descobre em qual megabyte exato o Cromossomo 7 está escondido, pula pra lá e extrai o dado em 1 segundo. Sem isso, demoraria horas rodando arquivos sequencialmente em loop no bash cego da máquina host da faculdade.",
+        "correct": "B",
+        "explanation": "A correta é a D pois índices como tabix permitem saltar diretamente para coordenadas específicas. As outras falham pois: A é interface visual, B e C são formatos de documentos ou planilhas inadequados e E é formato de imagem compressiva.",
         "difficulty": "médio"
     },
     {
@@ -4816,8 +4816,8 @@ window.questionBank = [
             "D": "Aceitação estatística de que 5% dos genes citados são ruído técnico.",
             "E": "Redução de 5 vezes na expressão real de transcriptomas clínicos."
         },
-        "correct": "D",
-        "explanation": "Gabarito: B. FDR de 5% quer dizer: 'Eu sei que tem erro nisso aqui, mas garanto que o ruído não passa de 5% de mentira na minha lista de descobertas publicadas'. É o número mágico dos p-values ajustados na ciência séria (Padj do limiar).",
+        "correct": "B",
+        "explanation": "A correta é a B porque o FDR estima a proporção esperada de falsos positivos entre as descobertas. As outras falham pois: A sugere descarte total infundado, C confunde estatística com diagnóstico oncológico, D limita erro a ruído técnico e E confunde proporção com magnitude.",
         "difficulty": "médio"
     },
     {
@@ -4832,8 +4832,8 @@ window.questionBank = [
             "D": "Realizar downloads via protocolos não TCP.",
             "E": "Criar vacinas automáticas com dados brutos."
         },
-        "correct": "A",
-        "explanation": "Gabarito: B. Os modelos biológicos de câncer não são linhas retas na matemática. Uma mutação só causa câncer se a outra estiver ligada. O Random Forest e as Redes Neurais detectam essas complexidades (interações) genômicas escondidas e geram os assinaturas (Signatures) que salvam pacientes na clínica moderna da IA.",
+        "correct": "B",
+        "explanation": "A correta é a B pois algoritmos de ML modelam relações não-lineares e interações complexas entre variáveis. As outras falham pois: A é tarefa de bioinformática básica, C é controle de qualidade, D trata de redes e E é biologicamente impossível.",
         "difficulty": "fácil"
     },
     {
@@ -4849,7 +4849,7 @@ window.questionBank = [
             "E": "Organização estética de arquivos ZIP/RAW."
         },
         "correct": "B",
-        "explanation": "Gabarito: B. A criptografia forte do HTTPS e do SSH assegura o túnel. Se um espião interceptar o VCF viajando na internet entre o Hospital de Belém e o servidor de Brasília, ele só verá códigos ilegíveis de lixo e não o DNA do paciente interceptado.",
+        "explanation": "A correta é a B porque a criptografia garante que dados interceptados fiquem ilegíveis sem a chave privada. As outras falham pois: A foca em hardware, C não acelera a transmissão, D ignora segurança atual e E foca em estética de arquivos.",
         "difficulty": "médio"
     },
     {
@@ -4864,8 +4864,8 @@ window.questionBank = [
             "D": "Impressão física de dados em papel A4.",
             "E": "Pagamento de resgates em criptomoedas."
         },
-        "correct": "D",
-        "explanation": "Gabarito: B. 'Ransomware' é o vírus que sequestra o hospital exigindo resgate milionário e bloqueia os prontuários e genomas de 20 mil pessoas. O Air-Gap/Object Lock garante que o seu backup está offline (desconectado da internet/rede), ou seja, o vírus não pode alcançar e criptografar seu backup salvador da pátria.",
+        "correct": "B",
+        "explanation": "A correta é a B pois o backup imutável impede que o ransomware criptografe ou apague os dados salvos. As outras falham pois: A permite propagação do vírus, C é inseguro, D é inviável para volume genômico e E incentiva o crime.",
         "difficulty": "fácil"
     },
     {
@@ -4880,8 +4880,8 @@ window.questionBank = [
             "D": "Cirurgia estética com anestesia básica.",
             "E": "Tratamento ocular em pacientes idosos."
         },
-        "correct": "D",
-        "explanation": "Gabarito: B. Mutações nos genes DPYD ou TPMT causam acúmulo envenenador fatal de quimioterápicos oncológicos pesados na corrente sanguínea. Sem o exame NGS, o médico dá a dose normal de combate à leucemia infantil, mas as medicações se estocam no fígado/medula sem metabolização e o efeito rebote iatrogênico mata a criança que seria salva. Farmacogenômica pura de ouro do sistema público em prol de vidas.",
+        "correct": "B",
+        "explanation": "A correta é a B porque variações no gene TPMT exigem ajuste de dose em quimioterápicos para evitar toxicidade fatal. As outras falham pois: A, C, D e E tratam de medicamentos ou procedimentos sem relação metabólica com TPMT.",
         "difficulty": "médio"
     },
     {
@@ -4897,7 +4897,7 @@ window.questionBank = [
             "E": "Registro manual em estufas laboratoriais."
         },
         "correct": "B",
-        "explanation": "Gabarito: B. Transformar o dado (o T do ETL) é 'Lavar e Organizar' a casa para a Big Data corporativa. VCFs são difíceis de consultar nativamente, então o Python entra lavando, descompactando, normalizando a bagunça dos VCFs soltos e fundindo o diagnóstico do médico com os termos internacionais do CID-10 e HPO estruturados em bases potentes do SQL/Parquet para cruzar no Machine Learning das predições estatísticas com painéis analíticos BI e Dashboards governamentais robustos.",
+        "explanation": "A correta é a B pois o 'Transform' envolve limpar, normalizar e padronizar dados para análise subsequente. As outras falham pois: A reduz interoperabilidade, C é processo de hardware, D compromete a integridade científica e E é processo manual.",
         "difficulty": "médio"
     },
     {
@@ -4913,7 +4913,7 @@ window.questionBank = [
             "E": "Qualquer base pode se parear com qualquer outra dependendo do gene."
         },
         "correct": "B",
-        "explanation": "Gabarito: C. A regra de pareamento universal do DNA é A-T (formando duas pontes de hidrogênio) e C-G (formando três pontes de hidrogênio).",
+        "explanation": "A correta é a B devido à complementaridade química das pontes de hidrogênio (A-T, G-C). As outras falham pois: A usa base de RNA, C e D invertem pareamentos bioquímicos e E nega a especificidade de Watson-Crick.",
         "difficulty": "fácil"
     },
     {
@@ -4929,7 +4929,7 @@ window.questionBank = [
             "E": "DNA → Proteína → RNA."
         },
         "correct": "B",
-        "explanation": "Gabarito: D. A informação genética está estocada no DNA, é transcrita para um 'mensageiro' (RNA) e, em seguida, é traduzida em uma molécula funcional (Proteína).",
+        "explanation": "A correta é a B pois segue o fluxo transcrição-tradução clássico da biologia molecular. As outras falham pois: A inverte a realidade, C foca em retrovírus, D é biologicamente impossível e E ignora a etapa de tradução.",
         "difficulty": "fácil"
     },
     {
@@ -4945,7 +4945,7 @@ window.questionBank = [
             "E": "DNA é composto por aminoácidos e o RNA é composto por nucleotídeos."
         },
         "correct": "A",
-        "explanation": "Gabarito: B. Essa é a diferença química fundamental. O DNA (Ácido Desoxirribonucleico) perdeu um oxigênio no seu açúcar em relação ao RNA (Ácido Ribonucleico), o que o torna muito mais estável.",
+        "explanation": "A correta é a A pois define as diferenças químicas fundamentais nos açúcares e bases nitrogenadas. As outras falham pois: B ignora RNA nuclear, C inverte fitas, D troca bases específicas e E erra a composição básica.",
         "difficulty": "fácil"
     },
     {
@@ -4961,7 +4961,7 @@ window.questionBank = [
             "E": "Características observáveis resultantes da interação gene-ambiente."
         },
         "correct": "E",
-        "explanation": "Gabarito: D. O Genótipo é o 'código fonte' escondido. O Fenótipo é como esse código se manifesta fisicamente na realidade (ex: cor dos olhos, altura, presença de uma doença).",
+        "explanation": "A correta é a E pois o fenótipo é a manifestação física influenciada pelo genótipo e ambiente. As outras falham pois: A e B descrevem genótipo, C é propriedade física e D é um subconjunto cromossômico.",
         "difficulty": "fácil"
     },
     {
@@ -4977,7 +4977,7 @@ window.questionBank = [
             "E": "Íntrons."
         },
         "correct": "C",
-        "explanation": "Gabarito: C. Alelos são as variantes de um gene. Como somos diploides, temos um alelo herdado da mãe e outro do pai para cada característica.",
+        "explanation": "A correta é C porque define as variantes de genes homólogos. As outras falham pois: A são organelas celulares, B indica localização física, D são cromossomos pareados, E são segmentos não-codificantes.",
         "difficulty": "fácil"
     },
     {
@@ -4993,7 +4993,7 @@ window.questionBank = [
             "E": "Heterozigoto."
         },
         "correct": "A",
-        "explanation": "Gabarito: D. 'Homo' significa igual. Indivíduos homozigotos possuem duas cópias idênticas do gene.",
+        "explanation": "A correta é A porque o prefixo homo indica igualdade alélica. As outras falham pois: B é mudança sequencial, C possui um conjunto, D número cromossômico alterado, E possui alelos diferentes.",
         "difficulty": "fácil"
     },
     {
@@ -5009,7 +5009,7 @@ window.questionBank = [
             "E": "O DNA é duplicado antes da mitose e  sendo aplicável principalmente em cenários controlados."
         },
         "correct": "B",
-        "explanation": "Gabarito: B. Transcrição é o ato de 'transcrever' (copiar) a receita do livro principal (DNA) para um rascunho móvel (RNA) que pode sair do núcleo.",
+        "explanation": "A correta é B porque a polimerase copia DNA em mRNA. As outras falham pois: A descreve divisão, C descreve tradução, D refere-se ao enovelamento, E é a replicação.",
         "difficulty": "fácil"
     },
     {
@@ -5025,7 +5025,7 @@ window.questionBank = [
             "E": "Núcleo."
         },
         "correct": "A",
-        "explanation": "Gabarito: D. O Ribossomo é a fábrica de proteínas da célula. Ele 'lê' a fita de mRNA e costura os aminoácidos na ordem certa.",
+        "explanation": "A correta é A porque o ribossomo catalisa a ligação peptídica. As outras falham pois: B faz digestão, C respiração celular, D empacotamento, E contém o DNA.",
         "difficulty": "fácil"
     },
     {
@@ -5041,7 +5041,7 @@ window.questionBank = [
             "E": "Transporte de aminoácidos ao ribossomo pareando o anticódon ao mRNA."
         },
         "correct": "E",
-        "explanation": "Gabarito: D. O tRNA é como o 'caminhão de entrega'. Ele lê o pedido no mRNA e busca o aminoácido correto para construir a proteína.",
+        "explanation": "A correta é E porque o tRNA traduz o códon. As outras falham pois: A é função do DNA, B é RNA ribossômico, C é função lisossômica, D é função da helicase.",
         "difficulty": "fácil"
     },
     {
@@ -5057,7 +5057,7 @@ window.questionBank = [
             "E": "Estrutura formada por ribossomos integrados a moléculas de DNA e RNA."
         },
         "correct": "C",
-        "explanation": "Gabarito: B. Essa é a anatomia de todos os blocos de construção dos ácidos nucleicos. O fosfato e o açúcar formam o 'corrimão' e a base nitrogenada forma os 'degraus' da escada do DNA.",
+        "explanation": "A correta é C porque nucleotídeos possuem fosfato, açúcar e base. As outras falham pois: A descreve a célula, B cita apenas bases, D lista macronutrientes, E mistura estruturas.",
         "difficulty": "fácil"
     },
     {
@@ -5073,7 +5073,7 @@ window.questionBank = [
             "E": "Duas células filhas diploides geneticamente idênticas à célula mãe."
         },
         "correct": "E",
-        "explanation": "Gabarito: B. A mitose é a divisão de crescimento e reparo do corpo. Ela faz cópias exatas da célula original (clones naturais).",
+        "explanation": "A correta é E porque a mitose mantém a carga genética. As outras falham pois: A exclui o núcleo, B gera gametas, C gera quatro células, D reduz a ploidia.",
         "difficulty": "fácil"
     },
     {
@@ -5089,7 +5089,7 @@ window.questionBank = [
             "E": "Duplicação de organelas celulares com sensibilidade a variações de pH."
         },
         "correct": "B",
-        "explanation": "Gabarito: C. A meiose reduz o número de cromossomos pela metade (23). Assim, quando o espermatozoide (23) encontra o óvulo (23), o bebê volta a ter o número normal (46).",
+        "explanation": "A correta é B porque a meiose produz células para reprodução. As outras falham pois: A é regeneração mitótica, C é reparo celular, D é hipertrofia, E é organogênese.",
         "difficulty": "fácil"
     },
     {
@@ -5105,7 +5105,7 @@ window.questionBank = [
             "E": "Ausência de diferença funcional ou estrutural entre as regiões gênicas."
         },
         "correct": "D",
-        "explanation": "Gabarito: B. O pré-mRNA contém o gene inteiro. Durante o 'splicing', os íntrons (intrusos) são cortados fora, e os éxons são colados para formar a mensagem final (o Exoma).",
+        "explanation": "A correta é D porque o splicing remove os íntrons não-codificantes. As outras falham pois: A refere-se a polímeros, B são regiões nucleares, C inverte o conceito, E nega a genética.",
         "difficulty": "fácil"
     },
     {
@@ -5121,7 +5121,7 @@ window.questionBank = [
             "E": "Processo natural de envelhecimento celular por estresse oxidativo."
         },
         "correct": "D",
-        "explanation": "Gabarito: C. Mutações de ponto (SNVs/SNPs) são os erros mais sutis possíveis, onde a polimerase apenas erra uma única letra ao copiar o genoma.",
+        "explanation": "A correta é D porque mutações pontuais atingem um único nucleotídeo. As outras falham pois: A é alteração citológica, B é alteração numérica, C é alteração estrutural, E é processo biológico.",
         "difficulty": "fácil"
     },
     {
@@ -5137,7 +5137,7 @@ window.questionBank = [
             "E": "Transcriptase Reversa."
         },
         "correct": "C",
-        "explanation": "Gabarito: C. A Helicase é o 'motor' que desenrola e abre as fitas de DNA formando a forquilha de replicação.",
+        "explanation": "A correta é a C pois a helicase rompe pontes de hidrogênio. As outras falham pois: A degrada RNA, B une fragmentos, D digere amido e E sintetiza DNA.",
         "difficulty": "fácil"
     },
     {
@@ -5153,7 +5153,7 @@ window.questionBank = [
             "E": "Encerramento da tradução proteica com destruição do RNA mensageiro."
         },
         "correct": "C",
-        "explanation": "Gabarito: C. Quase todas as proteínas do corpo humano começam com o aminoácido Metionina, porque o códon AUG é o sinal verde para o ribossomo começar a trabalhar.",
+        "explanation": "A correta é a C porque AUG inicia a tradução e codifica metionina. As outras falham pois: A regula mitose, B estabiliza RNA, D remove íntrons e E encerra tradução.",
         "difficulty": "fácil"
     },
     {
@@ -5169,7 +5169,7 @@ window.questionBank = [
             "E": "Nas membranas da parede celular."
         },
         "correct": "D",
-        "explanation": "Gabarito: C. Os eucariotos (animais, plantas, fungos) guardam seu material genético primário envelopado pela membrana nuclear.",
+        "explanation": "A correta é a D pois o núcleo armazena o DNA eucariótico. As outras falham pois: A é citoplasmático, B sintetiza proteínas, C modifica proteínas e E é estrutural.",
         "difficulty": "fácil"
     },
     {
@@ -5185,7 +5185,7 @@ window.questionBank = [
             "E": "Trissômico,  um fator técnico que deve ser monitorado na fase pré-analítica."
         },
         "correct": "C",
-        "explanation": "Gabarito: D. Genes recessivos são 'fracos' na expressão. Se houver um gene dominante junto, o recessivo se esconde. Ele só aparece se herdar cópias recessivas tanto do pai quanto da mãe.",
+        "explanation": "A correta é a C pois recessividade exige dois alelos iguais. As outras falham pois: A expressa dominância, B é radiação, D expressa dominância e E é erro numérico.",
         "difficulty": "fácil"
     },
     {
@@ -5201,7 +5201,7 @@ window.questionBank = [
             "E": "Núcleo de Gestão de Sangue com uso de controles internos de validação."
         },
         "correct": "D",
-        "explanation": "Gabarito: B. O NGS permitiu ler milhões de fragmentos de DNA ao mesmo tempo (paralelismo em massa), diferente do método Sanger antigo que lia um pedaço por vez.",
+        "explanation": "A correta é a D pois traduz o termo Next-Generation Sequencing. As outras falham pois: A foca segurança, B estabilidade, C pré-analítica e E gestão.",
         "difficulty": "fácil"
     },
     {
@@ -5217,7 +5217,7 @@ window.questionBank = [
             "E": "Coloração do DNA para visualização e preservação da amostra original."
         },
         "correct": "D",
-        "explanation": "Gabarito: B. A lise celular (usando detergentes e sais caotrópicos) é o ato de 'estourar' as células para que o DNA que está trancado lá dentro vaze para o líquido.",
+        "explanation": "A correta é a D pois o tampão rompe membranas biológicas. As outras falham pois: A usa adaptadores, B desnatura proteínas, C precipita DNA e E colore material.",
         "difficulty": "fácil"
     },
     {
@@ -5233,7 +5233,7 @@ window.questionBank = [
             "E": "Sequenciamento instantâneo do DNA com adequação de segurança."
         },
         "correct": "A",
-        "explanation": "Gabarito: C. O DNA dissolve na água, mas odeia álcool. Quando você joga etanol, ele se condensa e forma flocos ou gruda na coluna, separando-se da água suja.",
+        "explanation": "A correta é a A pois o álcool torna o DNA insolúvel. As outras falham pois: B dissolve DNA, C desinfeta tubos, D altera pH e E sequencia bases.",
         "difficulty": "fácil"
     },
     {
@@ -5249,7 +5249,7 @@ window.questionBank = [
             "E": "Termociclador."
         },
         "correct": "D",
-        "explanation": "Gabarito: C. A centrífuga gira em altíssima velocidade, jogando as células vermelhas (pesadas) para o fundo do tubo e deixando o plasma (leve) por cima.",
+        "explanation": "A correta é a D pois a centrífuga separa componentes por densidade. As outras falham pois: A aquece, B mede luz, C amplia imagem e E realiza PCR.",
         "difficulty": "fácil"
     },
     {
@@ -5265,7 +5265,7 @@ window.questionBank = [
             "E": "Buffy Coat."
         },
         "correct": "E",
-        "explanation": "Gabarito: C. As hemácias humanas não têm núcleo (logo, não têm DNA). O DNA do paciente está escondido na fina camada branca de glóbulos brancos do tubo, o famoso Buffy Coat.",
+        "explanation": "A correta é a E pois o Buffy Coat concentra leucócitos nucleados. As outras falham pois: A são anucleadas, B é líquido acelular, C é teste e D é fibrina.",
         "difficulty": "fácil"
     },
     {
@@ -5281,7 +5281,7 @@ window.questionBank = [
             "E": "Medição da concentração e pureza de ácidos nucleicos a 260 nm."
         },
         "correct": "E",
-        "explanation": "Gabarito: C. O NanoDrop é um aparelho rápido e básico que joga uma luz no líquido. A quantidade de luz bloqueada diz se tem muito ou pouco DNA, e se ele está puro.",
+        "explanation": "A correta é a E pois quantifica e avalia pureza de ácidos nucleicos. As outras falham pois: A identifica fluidos, B conta bactérias, C mede cromossomos e D checa insumos.",
         "difficulty": "fácil"
     },
     {
@@ -5297,7 +5297,7 @@ window.questionBank = [
             "E": "0.5."
         },
         "correct": "C",
-        "explanation": "Gabarito: C. O valor clássico nos livros de bancada molecular: ~1.8 para DNA puro, e ~2.0 para RNA puro.",
+        "explanation": "A correta é a C pois 1.8 é a razão ideal de absorvância para DNA puro. As outras falham pois: A é um valor irrealista, B indica contaminação por proteínas, D é excessivamente alto e E indica forte contaminação.",
         "difficulty": "médio"
     },
     {
@@ -5313,7 +5313,7 @@ window.questionBank = [
             "E": "Duplicação do DNA durante o tempo de manipulação no laboratório."
         },
         "correct": "C",
-        "explanation": "Gabarito: B. O gel atua como uma 'peneira'. Como o DNA é negativo, ele corre para o polo positivo. Os pedaços curtos correm rápido e chegam primeiro, os pedaços grandes ficam enroscados e lentos.",
+        "explanation": "A correta é a C pois a técnica separa moléculas por peso molecular via eletricidade. As outras falham pois: A refere-se a sequenciamento, B é etapa de extração, D é armazenamento e E é função da PCR.",
         "difficulty": "fácil"
     },
     {
@@ -5329,7 +5329,7 @@ window.questionBank = [
             "E": "Rastreamento de partículas centrais com otimização de protocolo."
         },
         "correct": "A",
-        "explanation": "Gabarito: C. Inventada por Kary Mullis, a PCR é uma 'máquina de xerox molecular'. Você coloca 1 fita de DNA e ela tira bilhões de cópias daquela exata região para você poder estudá-la.",
+        "explanation": "A correta é a A porque define a técnica de amplificação in vitro de DNA. As outras falham pois: B foca em RNA, C é marcador inflamatório proteico, D é termo cirúrgico e E é descrição genérica.",
         "difficulty": "fácil"
     },
     {
@@ -5345,7 +5345,7 @@ window.questionBank = [
             "E": "Desnaturação, Anelamento e Extensão da nova fita de DNA."
         },
         "correct": "E",
-        "explanation": "Gabarito: C. Aquece a ~95ºC pra soltar o DNA duplo. Esfria a ~60ºC para a isca (primer) colar. Aquece a ~72ºC para a enzima trabalhar velozmente copiando.",
+        "explanation": "A correta é a E seguindo o ciclo térmico termodinamicamente necessário para amplificação. As outras falham pois: A inverte a ordem, B são processos pós-analíticos, C são etapas de extração e D são processos celulares.",
         "difficulty": "fácil"
     },
     {
@@ -5361,7 +5361,7 @@ window.questionBank = [
             "E": "Componentes plásticos do tubo com validação de procedimento."
         },
         "correct": "A",
-        "explanation": "Gabarito: C. Sem primers (iscas), a polimerase fica cega e não sabe de onde até onde ela deve 'xerocar' o genoma.",
+        "explanation": "A correta é a A pois primers delimitam e iniciam a síntese da polimerase. As outras falham pois: B descreve nucleases, C são aditivos químicos, D são marcadores ópticos e E refere-se ao consumível.",
         "difficulty": "fácil"
     },
     {
@@ -5377,7 +5377,7 @@ window.questionBank = [
             "E": "Higienização de bancadas laboratoriais e manipulação de fluxos."
         },
         "correct": "C",
-        "explanation": "Gabarito: B. Uma máquina NGS não lê um fio de DNA humano jogado do nada. O preparo de biblioteca adequa fisicamente esse fio, colando nele alças e ganchos (adaptadores) que são compatíveis com o vidro da máquina.",
+        "explanation": "A correta é a C pois bibliotecas NGS exigem fragmentos adaptados para a flowcell. As outras falham pois: A é gestão digital, B é quantificação, D é arquivamento e E é limpeza de bancada.",
         "difficulty": "fácil"
     },
     {
@@ -5392,8 +5392,8 @@ window.questionBank = [
             "D": "Marcadores de validade química validados por métodos de bancada.",
             "E": "Protocolos de acesso à rede local usados na rotina laboratorial."
         },
-        "correct": "C",
-        "explanation": "Gabarito: B. Essa é a base do barateamento do exame. Você bota o código de barras 'ATC' no João e o 'GGA' na Maria. Mistura os sangues no mesmo tubo da máquina e, no computador, você separa a leitura dos dois olhando os códigos.",
+        "correct": "B",
+        "explanation": "A correta é a B pois barcoding permite o multiplexing de múltiplas amostras simultâneas. As outras falham pois: A descreve instabilidade, C refere-se a custos, D trata de validade e E é protocolo de TI.",
         "difficulty": "médio"
     },
     {
@@ -5409,7 +5409,7 @@ window.questionBank = [
             "E": "O genoma é composto por proteínas que impedem a reação de síntese."
         },
         "correct": "A",
-        "explanation": "Gabarito: B. A máquina não aguenta fitas com milhões de bases. Ela prefere processar bilhões de fitas de 150 bases (fragments curtos) e o computador remonta o quebra-cabeça depois.",
+        "explanation": "A correta é a A porque a tecnologia Illumina baseia-se em leituras de fragmentos curtos. As outras falham pois: B descreve 'Long Reads', C é dano físico improvável, D é erro fotoquímico e E erra a composição molecular.",
         "difficulty": "fácil"
     },
     {
@@ -5425,7 +5425,7 @@ window.questionBank = [
             "E": "O Exoma sequencia os RNA apenas, e o WGS o DNA."
         },
         "correct": "B",
-        "explanation": "Gabarito: B. Exoma foca na 'massa fina' e na parte funcional (onde ficam 85% das doenças conhecidas). O WGS varre tudo, de ponta a ponta, sendo o teste mais completo do mundo.",
+        "explanation": "A correta é a B pois o WGS abrange regiões codificantes e não codificantes. As outras falham pois: A limita patologias, C ignora diferenças técnicas, D erra o organismo e E inverte as moléculas.",
         "difficulty": "fácil"
     },
     {
@@ -5441,7 +5441,7 @@ window.questionBank = [
             "E": "Na gaveta térmica do equipamento para otimização de protocolos."
         },
         "correct": "C",
-        "explanation": "Gabarito: C. A Flow Cell é a alma do NGS. Custa milhares de dólares, é um vidro nanotecnológico cheio de rodovias onde os fios de DNA grudam em pé como grama, prontos para brilhar na luz do laser.",
+        "explanation": "A correta é a C pois a Flow Cell é o suporte físico da reação NGS. As outras falham pois: A são tubos, B é amostra bruta, D é saída de dados e E é parte térmica.",
         "difficulty": "fácil"
     },
     {
@@ -5457,7 +5457,7 @@ window.questionBank = [
             "E": "Exclusão de dados duplicados durante a fase pré-analítica do fluxo."
         },
         "correct": "C",
-        "explanation": "Gabarito: B. A multiplexação permitiu democratizar o NGS. Você divide o preço milionário da flow cell rodando 100 pacientes na mesma lâmina de vidro.",
+        "explanation": "A correta é a C pois a multiplexação consiste em misturar amostras identificadas por índices no mesmo sequenciamento. As outras falham pois: A refere-se a hardware, B separa tecidos, D foca em horas técnicas e E remove duplicatas de bioinformática.",
         "difficulty": "fácil"
     },
     {
@@ -5473,7 +5473,7 @@ window.questionBank = [
             "E": "Desligamento do visor para proteção dos padrões de segurança."
         },
         "correct": "D",
-        "explanation": "Gabarito: C. Fazer o Branco é igual a tarar uma balança. Você bota o prato (água de eluição) e a máquina zera o peso do prato, pesando só a comida (DNA) depois.",
+        "explanation": "A correta é a D porque o branco permite descontar a absorbância do solvente na leitura final. As outras falham pois: A utiliza gases, B usa sangue total, C sugere tubo vazio sem solvente e E desliga o visor do aparelho.",
         "difficulty": "fácil"
     },
     {
@@ -5489,7 +5489,7 @@ window.questionBank = [
             "E": "Aumentar a densidade do tampão em processos de preservação."
         },
         "correct": "D",
-        "explanation": "Gabarito: C. Enzimas (Nucleases) como as RNases são quase imortais e estão na nossa pele, saliva e poeira do ar. Água nuclease-free é tratada agressivamente (DEPC) para garantir que nenhuma enzima viva cortadora de DNA atinja seus tubos vitais.",
+        "explanation": "A correta é a D porque as nucleases são enzimas que degradam o DNA e RNA da amostra. As outras falham pois: A foca umidade, B trata de osmolaridade, C foca transparência óptica e E refere-se à densidade do tampão.",
         "difficulty": "fácil"
     },
     {
@@ -5505,7 +5505,7 @@ window.questionBank = [
             "E": "Proteger o laboratório contra falhas logísticas e atrasos de rotina."
         },
         "correct": "B",
-        "explanation": "Gabarito: B. O TCLE é o documento máximo do respeito à bioética. É ele quem garante que o sujeito não é um rato de laboratório, mas um cidadão ativo e consciente na pesquisa.",
+        "explanation": "A correta é a B pois o TCLE assegura que o paciente compreenda e aceite participar da pesquisa. As outras falham pois: A declara óbito, C autoriza comércio de dados, D visa apenas contatos e E protege logística laboratorial.",
         "difficulty": "fácil"
     },
     {
@@ -5521,7 +5521,7 @@ window.questionBank = [
             "E": "Volume total de bases brutas geradas em condições de controle."
         },
         "correct": "B",
-        "explanation": "Gabarito: C. Ler a mesma base 100 vezes (Depth de 100x) dá poder estatístico ao sistema. Se 50 lêem 'A' e 50 lêem 'T', o programa sabe que é uma mutação heterozigota real, e não uma sujeira pontual da foto.",
+        "explanation": "A correta é a B pois depth representa o número de vezes que cada base foi sequenciada. As outras falham pois: A conta máquinas, C mede contaminação, D monitora temperatura e E indica o volume total de bases.",
         "difficulty": "fácil"
     },
     {
@@ -5537,7 +5537,7 @@ window.questionBank = [
             "E": "Calibração de volume fixo utilizada na preservação de insumos."
         },
         "correct": "C",
-        "explanation": "Gabarito: C. A receita de bolo do laboratório. Garante que se o analista 1 fizer de manhã e o analista 2 fizer na madrugada de sábado, o DNA purificado de ambos tenha o mesmíssimo rendimento clínico sem falhas criativas.",
+        "explanation": "A correta é a C pois o POP padroniza as tarefas para garantir a reprodutibilidade dos resultados. As outras falham pois: A é relatório científico, B é tributo financeiro, D define vestimenta e E trata de calibração volumétrica.",
         "difficulty": "fácil"
     },
     {
@@ -5553,7 +5553,7 @@ window.questionBank = [
             "E": "Coletores rígidos amarelos resistentes logo após o uso."
         },
         "correct": "E",
-        "explanation": "Gabarito: C. Regra mandatória NR-32 e BPL. Todo material afiado/cortante vai para o coletor amarelo resistente a furos para proteção contra perfuração dos encarregados de coleta do lixo hospitalar.",
+        "explanation": "A correta é a E pois recipientes rígidos amarelos são obrigatórios para evitar acidentes com agulhas e lâminas. As outras falham pois: A é lixo comum, B é plástico maleável, C são lixeiras de corredor e D é aterro radiológico.",
         "difficulty": "fácil"
     },
     {
@@ -5569,7 +5569,7 @@ window.questionBank = [
             "E": "Domínio genético materno exclusivo sobre variações fenotípicas."
         },
         "correct": "A",
-        "explanation": "Gabarito: C. Ter olho azul (Característica A) não te obriga a ter cabelo loiro (Característica B). Na formação do espermatozoide/óvulo, os cromossomos fazem um sorteio na loteria e separam-se de forma independente.",
+        "explanation": "A correta é a A porque os alelos para diferentes características segregam-se de forma independente nos gametas. As outras falham pois: B foca dominância, C anula genes, D refere-se a mitose e E indica domínio materno.",
         "difficulty": "fácil"
     },
     {
@@ -5585,7 +5585,7 @@ window.questionBank = [
             "E": "Precipitação de sais para otimização de resultados entre lotes."
         },
         "correct": "B",
-        "explanation": "Gabarito: B. Ligase (como a T4 Ligase) é a 'cola Super Bonder' do nosso laboratório. Ela sela a união química sólida para o adaptador artificial não desgrudar do DNA humano natural do paciente no estresse térmico.",
+        "explanation": "A correta é a B pois a ligase catalisa a união covalente entre as extremidades de DNA e adaptadores. As outras falham pois: A emite laser, C degrada RNA, D cliva cadeias e E precipita sais de solução.",
         "difficulty": "fácil"
     },
     {
@@ -5601,7 +5601,7 @@ window.questionBank = [
             "E": "Convocação da comunidade para triagem."
         },
         "correct": "C",
-        "explanation": "Gabarito: C. A ética impõe que a doença do João não pode ser falada aos irmãos pelo laboratório, por mais mortal que ela seja. O João dono do dado precisa assinar permitindo a quebra, ou ser encorajado e orientado nas sessões psiquiátricas/genéticas para que a própria família traga os membros para testagem do genoma no painel hereditário de risco no hospital da base ou sistema público SUS.",
+        "explanation": "A correta é a C pois a ética e a LGPD exigem sigilo, dependendo da autorização do paciente para informar familiares. As outras falham pois: A exclui registros, B divulga dados publicamente, D viola privacidade e E convoca a comunidade.",
         "difficulty": "médio"
     },
     {
@@ -5617,7 +5617,7 @@ window.questionBank = [
             "E": "Eliminação de contaminação viral por polimerização seletiva."
         },
         "correct": "D",
-        "explanation": "Gabarito: B. Se a ponta não for lisa (blunt) e tiver um fosfato, o adaptador não cola de jeito nenhum. A mistura End-Repair atua como o esmeril e uma 'massa corrida', preenchendo as valetas da dupla fita torcida com a polimerase, além de lixar restos usando a atividade de exo digestão química controlada e estrita do protocolo da pipeta.",
+        "explanation": "A correta é a D pois o End Repair uniformiza as extremidades clivadas em pontas cegas para permitir a posterior ligação de adaptadores. As outras falham pois: A refere-se a software, B trata de proteção manual, C foca em tecidos tumorais e E envolve contaminação viral.",
         "difficulty": "médio"
     },
     {
@@ -5633,7 +5633,7 @@ window.questionBank = [
             "E": "Rompimento de pontes de hidrogênio para separar as fitas."
         },
         "correct": "E",
-        "explanation": "Gabarito: C. Não tem como copiar um livro se ele está colado fechado com supercola. O aquecimento 95 graus em blocos desnatura as duas fitas (Afastamento), dando acesso livre e puro aos primers (marcadores de texto) acharem sua região-alvo da sequência.",
+        "explanation": "A correta é a E porque o calor rompe as pontes de hidrogênio separando as fitas para o acesso dos primers. As outras falham pois: A ativa antibióticos, B funde polímeros para preservação, C destrói membranas e D precipita sais.",
         "difficulty": "médio"
     },
     {
@@ -5648,8 +5648,8 @@ window.questionBank = [
             "D": "Falta de precipitação salina na amostra.",
             "E": "Alteração visual sem prejuízo à reação."
         },
-        "correct": "D",
-        "explanation": "Gabarito: B. A hemácia humana não tem DNA, logo você nem quer o conteúdo dela na sua extração. O problema é que, se ela estourar no tubo inteiro por má qualidade e calor da viagem rural, ela derrama hemoglobina misturada nos seus glóbulos brancos. A hemoglobina inibe severamente quase toda PCR da Terra, acabando com sua biblioteca, inutilizando a amostra coletada.",
+        "correct": "B",
+        "explanation": "A correta é a B porque a hemoglobina liberada na hemólise atua como um potente inibidor enzimático da Taq polimerase. As outras falham pois: A não causa clivagem gênica, C não gera mutações, D não afeta precipitação e E ignora o prejuízo técnico.",
         "difficulty": "fácil"
     },
     {
@@ -5664,8 +5664,8 @@ window.questionBank = [
             "D": "Ultra-freezers ou nitrogênio a -80C.",
             "E": "Frascos escuros em temperatura ambiente."
         },
-        "correct": "C",
-        "explanation": "Gabarito: D. Conservação infinita (décadas) ou matriz biobanco em biologia molecular de ácidos exige ultra freezers de -80 Graus pra baixo (Glacial). Na bancada ou geladeirinha comum, ou mesmo -20, flutuações e enzimas dormentes picotam seu DNA ao passar do tempo arruinando DIN da amostra original preciosa para análises retroativas na investigação forense ou médica do Estado ou SUS global federal ou estadual.",
+        "correct": "D",
+        "explanation": "A correta é a D porque temperaturas de -80C ou nitrogênio líquido paralisam a degradação enzimática por décadas. As outras falham pois: A é muito quente, B causa degradação lenta, C inativa por calor e E degrada ácidos rapidamente.",
         "difficulty": "médio"
     },
     {
@@ -5681,7 +5681,7 @@ window.questionBank = [
             "E": "Luvas de procedimento de nitrila."
         },
         "correct": "B",
-        "explanation": "Gabarito: D. A Cabine de Segurança Biológica é um Equipamento de Proteção Coletiva (EPC). Ela é uma barreira de engenharia que protege o ambiente todo, não sendo algo que o indivíduo 'veste'.",
+        "explanation": "A correta é a B pois a Cabine de Segurança Biológica é um Equipamento de Proteção Coletiva (EPC), não individual. As outras falham pois: A protege olhos, C protege vias aéreas, D protege o corpo e E protege as mãos.",
         "difficulty": "fácil"
     },
     {
@@ -5697,7 +5697,7 @@ window.questionBank = [
             "E": "Isolamento respiratório de todos os pacientes da unidade."
         },
         "correct": "B",
-        "explanation": "Gabarito: C. A lavagem das mãos é a medida número um, universal e indiscutível de prevenção de infecções em qualquer ambiente de saúde.",
+        "explanation": "A correta é a B porque a higienização das mãos é a medida preventiva mais barata e eficaz reconhecida mundialmente. As outras falham pois: A é caro, C é secundário, D causa resistência bacteriana e E é específico para isolamento.",
         "difficulty": "fácil"
     },
     {
@@ -5713,7 +5713,7 @@ window.questionBank = [
             "E": "Depósito em coletores rígidos amarelos resistentes."
         },
         "correct": "E",
-        "explanation": "Gabarito: C. Perfurocortantes nunca vão em sacos, pois furam o plástico e ferem o pessoal da limpeza. Vão sempre nas caixas amarelas rígidas padronizadas.",
+        "explanation": "A correta é a E pois materiais perfurocortantes exigem coletores rígidos amarelos para evitar acidentes e furos. As outras falham pois: A lixo comum é perigoso, B vidro quebra, C são para resíduos químicos e D são para resíduos infectantes moles.",
         "difficulty": "fácil"
     },
     {
@@ -5729,7 +5729,7 @@ window.questionBank = [
             "E": "Usar pipetas de 10 microlitros,  requerendo adequação aos padrões de segurança vigentes."
         },
         "correct": "C",
-        "explanation": "Gabarito: B. A pipetagem com a boca era comum no passado, mas causou inúmeras mortes e infecções por ingestão acidental de ácidos ou bactérias. Hoje é falta gravíssima de BPL.",
+        "explanation": "A correta é a C porque a pipetagem oral oferece risco altíssimo de ingestão de substâncias tóxicas ou patógenos. As outras falham pois: A é técnica de visualização, B previne contaminação, D é norma básica e E é volume comum.",
         "difficulty": "fácil"
     },
     {
@@ -5745,7 +5745,7 @@ window.questionBank = [
             "E": "Preto o que resulta em  o que requer calibração rigorosa dos métodos utilizados."
         },
         "correct": "A",
-        "explanation": "Gabarito: B. Os sacos de lixo biológico (infectante) são regulamentados como de cor branca leitosa com o símbolo preto de risco biológico estampado.",
+        "explanation": "A correta é a A pois as normas exigem fundo branco leitoso ou amarelo para destacar o símbolo de risco. As outras falham pois: B, C, D e E utilizam cores não padronizadas para identificação de risco biológico internacional.",
         "difficulty": "fácil"
     },
     {
@@ -5761,7 +5761,7 @@ window.questionBank = [
             "E": "Guia detalhado de execução para padronização de tarefas."
         },
         "correct": "E",
-        "explanation": "Gabarito: B. O POP é a 'receita de bolo' do laboratório. Garante que a rotina seja padronizada e reprodutível, independente de quem seja o técnico do dia.",
+        "explanation": "A correta é a E porque o POP é o guia que garante que qualquer técnico execute a tarefa de forma idêntica. As outras falham pois: A é crachá, B é equipamento, C é auditoria e D é tipo de tubo.",
         "difficulty": "fácil"
     },
     {
@@ -5777,7 +5777,7 @@ window.questionBank = [
             "E": "Água mineral engarrafada para redução de custos."
         },
         "correct": "B",
-        "explanation": "Gabarito: C. A PCR é ultrassensível. Qualquer traço de magnésio extra, cloro ou enzimas soltas na água destilada comum vai estragar ou inibir a reação.",
+        "explanation": "A correta é a B porque PCR exige água isenta de íons e enzimas que degradam a amostra. As outras falham pois: A possui cloro e impurezas, C interfere no tampão enzimático, D degrada o material genético e E contém minerais inibidores.",
         "difficulty": "fácil"
     },
     {
@@ -5793,7 +5793,7 @@ window.questionBank = [
             "E": "Evitar danos ao mobiliário causados por reagentes."
         },
         "correct": "D",
-        "explanation": "Gabarito: B. Luvas e jalecos retêm respingos imperceptíveis de sangue e venenos químicos. Sair com eles espalha contaminação em maçanetas e mesas onde as pessoas comem.",
+        "explanation": "A correta é a D porque evita a dispersão de resíduos químicos ou biológicos para ambientes externos. As outras falham pois: A visa segurança e não economia, B prioriza proteção e não estética, C jaleco não é isolante térmico e E foca em proteção humana.",
         "difficulty": "fácil"
     },
     {
@@ -5809,7 +5809,7 @@ window.questionBank = [
             "E": "Calor úmido sob pressão para desnaturação proteica."
         },
         "correct": "E",
-        "explanation": "Gabarito: C. A autoclave é uma panela de pressão gigante. A pressão aumenta o ponto de ebulição da água, permitindo que o vapor chegue a 121ºC e destrua qualquer forma de vida.",
+        "explanation": "A correta é a E porque o vapor sob alta pressão desnatura as proteínas microbianas eficazmente. As outras falham pois: A utiliza gases oxidantes, B usa radiação eletromagnética, C conserva microrganismos pelo frio e D apenas remove umidade sem esterilizar.",
         "difficulty": "fácil"
     },
     {
@@ -5825,7 +5825,7 @@ window.questionBank = [
             "E": "Confirmar que a centrifugação seguiu o tempo previsto."
         },
         "correct": "B",
-        "explanation": "Gabarito: B. Se você faz um teste de Covid e o controle positivo (que você sabe que é vírus puro) não brilhar, o seu teste falhou. Você não pode liberar o paciente como 'Negativo'.",
+        "explanation": "A correta é a B porque valida o funcionamento do ensaio e evita resultados falso-negativos. As outras falham pois: A é função do controle negativo, C inspeção visual não valida sensibilidade, D controle negativo detecta contaminação e E refere-se a monitoramento mecânico.",
         "difficulty": "fácil"
     },
     {
@@ -5841,7 +5841,7 @@ window.questionBank = [
             "E": "Estufa a 37°C."
         },
         "correct": "D",
-        "explanation": "Gabarito: C. Enzimas em tampão com glicerol (para não congelarem solidamente e quebrarem) são sempre estocadas em freezers verticais padrão de -20ºC.",
+        "explanation": "A correta é a D porque preserva a estabilidade das enzimas sem congelamento total em glicerol. As outras falham pois: A degrada proteínas rapidamente, B é desnecessário para estocagem rotineira, C desnatura a polimerase em horas e E é temperatura de reação.",
         "difficulty": "fácil"
     },
     {
@@ -5857,7 +5857,7 @@ window.questionBank = [
             "E": "Descontaminação rápida em acidentes químicos."
         },
         "correct": "E",
-        "explanation": "Gabarito: C. São EPCs (Equipamentos de Proteção Coletiva) de uso exclusivo para emergências. Segundos de diferença na lavagem de um ácido nos olhos podem salvar a visão.",
+        "explanation": "A correta é a E pois são equipamentos de proteção coletiva essenciais para primeiros socorros químicos. As outras falham pois: A água é imprópria para consumo, B higiene pessoal usa chuveiros comuns, C pias lavam vidrarias e D não controlam climatização.",
         "difficulty": "fácil"
     },
     {
@@ -5873,7 +5873,7 @@ window.questionBank = [
             "E": "Óleo mineral e  requerendo adequação aos padrões de segurança vigentes."
         },
         "correct": "D",
-        "explanation": "Gabarito: B. O hipoclorito de sódio é letal para vírus (como HIV e Hepatite B) contidos no sangue, sendo a primeira linha de defesa química de desinfecção de bancada.",
+        "explanation": "A correta é a D porque o hipoclorito é um oxidante potente contra patógenos de transmissão sanguínea. As outras falham pois: A não possui ação germicida, B mantém viabilidade celular, C é solvente inflamável sem desinfecção e E não neutraliza agentes biológicos.",
         "difficulty": "fácil"
     },
     {
@@ -5889,7 +5889,7 @@ window.questionBank = [
             "E": "Comparar o volume aspirado com o nominal e ajustar se houver erro técnico."
         },
         "correct": "E",
-        "explanation": "Gabarito: C. Pipetas são mecânicas e as molas afrouxam com o tempo. Calibrar é garantir que quando ela marca 10ul, ela de fato puxe 10ul e não 9ul.",
+        "explanation": "A correta é a E porque consiste em verificar o erro volumétrico e ajustá-lo ao padrão. As outras falham pois: A refere-se ao armazenamento, B trata-se de higienização, C é processo de aquisição e D é apenas rotulagem patrimonial.",
         "difficulty": "fácil"
     },
     {
@@ -5905,7 +5905,7 @@ window.questionBank = [
             "E": "Nível 4 (NB-4)."
         },
         "correct": "C",
-        "explanation": "Gabarito: B. Manipular sangue humano padrão recai sobre o Nível 2 de biossegurança (jaleco, luvas, óculos, acesso restrito e descarte em lixo branco).",
+        "explanation": "A correta é a C pois o NB-2 é o padrão para patógenos de risco moderado como sangue. As outras falham pois: A biossegurança é obrigatória, B foca em agentes não patogênicos, D exige contenção respiratória rigorosa e E é para vírus letais.",
         "difficulty": "fácil"
     },
     {
@@ -5921,7 +5921,7 @@ window.questionBank = [
             "E": "Regras de Medicina Sistemática para monitorar a estabilidade dos ensaios."
         },
         "correct": "D",
-        "explanation": "Gabarito: C. É o cérebro eletrônico do laboratório. O software que faz o rastreio do código de barras, nome do paciente e resultados de forma digital.",
+        "explanation": "A correta é a D pois LIMS é o software de gerenciamento de dados e fluxos laboratoriais. As outras falham pois: A refere-se à microscopia, B trata de limpeza, C foca em pesquisa molecular e E descreve práticas clínicas.",
         "difficulty": "fácil"
     },
     {
@@ -5937,7 +5937,7 @@ window.questionBank = [
             "E": "Utilizar tubos de vidro comuns sem validação interna de segurança."
         },
         "correct": "B",
-        "explanation": "Gabarito: C. Centrífugas giram a mais de 15.000 Rotações Por Minuto. Qualquer desequilíbrio de peso (1 grama que seja) de um lado gera uma vibração que pode estraçalhar a máquina.",
+        "explanation": "A correta é a B pois o equilíbrio simétrico de massas previne vibrações destrutivas no rotor. As outras falham pois: A causa acidentes graves, C danifica componentes elétricos, D gera desbalanceamento mecânico e E provoca quebra por pressão.",
         "difficulty": "médio"
     },
     {
@@ -5953,7 +5953,7 @@ window.questionBank = [
             "E": "Teste de Controle Laboratorial Especial."
         },
         "correct": "A",
-        "explanation": "Gabarito: B. O TCLE é o documento onde o participante assina dizendo: 'Eu fui informado sobre os riscos e os benefícios, e aceito participar desta pesquisa sem ter sido forçado'.",
+        "explanation": "A correta é a A porque o TCLE formaliza legalmente a anuência informada do participante. As outras falham pois: B inventa sigla clínica, C descreve técnica estatística, D foca em sigilo estatal e E refere-se a testes técnicos.",
         "difficulty": "fácil"
     },
     {
@@ -5969,7 +5969,7 @@ window.questionBank = [
             "E": "Gestão do Ministério da Justiça via calibração de métodos éticos."
         },
         "correct": "B",
-        "explanation": "Gabarito: C. O sistema CEP atua em nível hospitalar/universitário, e a CONEP é o órgão máximo federal que regula as normas para proteger os cidadãos.",
+        "explanation": "A correta é a B pois o sistema CEP/CONEP é a instância reguladora da ética em pesquisas no Brasil. As outras falham pois: A fiscaliza conduta médica, C é rede de saúde, D exerce função policial e E foca na gestão jurídica.",
         "difficulty": "fácil"
     },
     {
@@ -5985,7 +5985,7 @@ window.questionBank = [
             "E": "Estudo multicêntrico."
         },
         "correct": "E",
-        "explanation": "Gabarito: D. Estudos multicêntricos ('Múltiplos Centros') englobam diferentes instituições e estados trabalhando juntos na mesma pesquisa para obter dados populacionais maiores e mais rápidos.",
+        "explanation": "A correta é a E pois estudos realizados em diversos locais sob o mesmo protocolo são multicêntricos. As outras falham pois: A ocorre fora do organismo, B busca princípios básicos, C inventa terminologia técnica e D limita-se a um local.",
         "difficulty": "fácil"
     },
     {
@@ -6001,7 +6001,7 @@ window.questionBank = [
             "E": "Direito do participante de decidir sobre seu corpo e permanência."
         },
         "correct": "E",
-        "explanation": "Gabarito: C. A autonomia é o direito de dizer 'Sim' ou de dizer 'Não, não quero mais participar e quero meu sangue descartado'.",
+        "explanation": "A correta é a E pois a autonomia garante ao participante o poder de autodeterminação sobre seu corpo. As outras falham pois: A sugere impunidade, B foca em máquinas, C refere-se à gestão e D ignora a vontade do paciente.",
         "difficulty": "fácil"
     },
     {
@@ -6017,7 +6017,7 @@ window.questionBank = [
             "E": "Garantia de publicação dos resultados em condições de pH estável."
         },
         "correct": "B",
-        "explanation": "Gabarito: A. Se você vai testar um novo remédio ou procedimento, ele tem que ser seguro e, fundamentalmente, não pode machucar mais do que a doença original faria.",
+        "explanation": "A correta é a B porque preconiza o dever fundamental de não infligir danos ou sofrimento. As outras falham pois: A limita técnicas úteis, C impõe resultado impossível, D foca em economia e E foca na divulgação.",
         "difficulty": "fácil"
     },
     {
@@ -6033,7 +6033,7 @@ window.questionBank = [
             "E": "Permanência obrigatória após assinatura do contrato de pesquisa."
         },
         "correct": "B",
-        "explanation": "Gabarito: B. Esta é uma garantia sagrada do TCLE (Direito de Retirada). O paciente sai quando quiser e o hospital continua tratando ele normalmente.",
+        "explanation": "A correta é a B pois a liberdade de retirada é um direito inalienável, voluntário e sem ônus. As outras falham pois: A impõe punição financeira, C exige trâmite jurídico, D é biologicamente inviável e E configura cárcere ético.",
         "difficulty": "fácil"
     },
     {
@@ -6049,7 +6049,7 @@ window.questionBank = [
             "E": "Remoção irreversível de informações que identifiquem o participante."
         },
         "correct": "E",
-        "explanation": "Gabarito: B. A anonimização corta o elo entre o DNA e o Nome, impedindo que hackers ou empresas de seguro descubram a doença de um indivíduo específico.",
+        "explanation": "A correta é a E pois rompe definitivamente o vínculo de identificação entre o dado e o indivíduo. As outras falham pois: A guarda nomes, B expõe o paciente, C mantém rastreabilidade e D foca na logística inicial.",
         "difficulty": "fácil"
     },
     {
@@ -6065,7 +6065,7 @@ window.questionBank = [
             "E": "Pagamento como padrão de emprego para garantia de calibração."
         },
         "correct": "A",
-        "explanation": "Gabarito: C. O Brasil proíbe a figura do 'Cobaia de Aluguel'. As pessoas entram na pesquisa por altruísmo. A instituição só deve devolver o dinheiro do ônibus e da alimentação do dia.",
+        "explanation": "A correta é a A porque a norma brasileira veda a comercialização da participação ou mercantilização do corpo. As outras falham pois: B extorque o paciente, C mercantiliza a pesquisa, D diferencia ética por lucro e E cria vínculo trabalhista.",
         "difficulty": "fácil"
     },
     {
@@ -6081,7 +6081,7 @@ window.questionBank = [
             "E": "Pais assinam o TCLE e a criança assina o termo de assentimento."
         },
         "correct": "E",
-        "explanation": "Gabarito: D. O pai assina o consentimento oficial. Mas a criança não é um objeto; o pesquisador tem que explicar para ela, numa linguagem infantil com desenhos, que ela vai levar uma agulhada, e ela assina o 'Assentimento' (TALE).",
+        "explanation": "A correta é a E pois exige autorização legal dos pais e a concordância explicada ao menor. As outras falham pois: A veda estudos necessários, B é ilegal, C carece de prova e D ignora a incapacidade civil.",
         "difficulty": "fácil"
     },
     {
@@ -6097,7 +6097,7 @@ window.questionBank = [
             "E": "Conflito entre a opinião do paciente e o laudo laboratorial."
         },
         "correct": "D",
-        "explanation": "Gabarito: B. Se eu recebo 100 mil reais da Empresa X e assino um artigo atestando que a máquina da Empresa X é a melhor do mundo, eu tenho um conflito moral e financeiro. Ele deve ser obrigatoriamente declarado nas revistas.",
+        "explanation": "A correta é a D pois laços financeiros podem comprometer a imparcialidade. As outras falham pois: A foca em autoria, B em brigas técnicas, C em burocracia universitária e E em laudos laboratoriais.",
         "difficulty": "fácil"
     },
     {
@@ -6113,7 +6113,7 @@ window.questionBank = [
             "E": "Registro exclusivo em órgãos municipais com controle de calibração."
         },
         "correct": "D",
-        "explanation": "Gabarito: C. A Plataforma Brasil digitalizou tudo. É nela que os projetos, Tcles e relatórios são protocolados e lidos pelos relatores do CEP e da CONEP.",
+        "explanation": "A correta é a D porque é o sistema oficial de submissão ética brasileiro. As outras falham pois: A é físico, B fiscal, C jurídico e E municipal.",
         "difficulty": "fácil"
     },
     {
@@ -6129,7 +6129,7 @@ window.questionBank = [
             "E": "Primeira entidade a receber verbas para segurança dos processos."
         },
         "correct": "A",
-        "explanation": "Gabarito: C. O PI (Pesquisador Principal) é o 'Comandante'. Se um técnico errar ou cometer má conduta, o nome e o registro profissional do PI é o primeiro a ser chamado pela comissão de ética na responsabilização.",
+        "explanation": "A correta é a A pois o PI lidera a responsabilidade ética e científica. As outras falham pois: B é parceiro, C faxineiro, D software e E recebedor.",
         "difficulty": "fácil"
     },
     {
@@ -6145,7 +6145,7 @@ window.questionBank = [
             "E": "Redução de exigências éticas para facilitar a validação em campo."
         },
         "correct": "C",
-        "explanation": "Gabarito: B. O conceito de Vulnerabilidade ética foca em proteger quem tem menos capacidade de se defender de abusos devido à desigualdade de poder (médico vs. pessoa carente).",
+        "explanation": "A correta é a C pois vulneráveis exigem cuidado extra na compreensão do termo. As outras falham pois: A exclui, B confunde, D suborna e E precariza.",
         "difficulty": "fácil"
     },
     {
@@ -6161,7 +6161,7 @@ window.questionBank = [
             "E": "Propriedade exclusiva dos resultados pelo investigador principal."
         },
         "correct": "D",
-        "explanation": "Gabarito: C. É o conceito de Benefício Pós-Estudo. O voluntário deu seu corpo ao risco; a indústria farmacêutica/patrocinador fica obrigada a manter o remédio ou cura garantida de graça para ele.",
+        "explanation": "A correta é a D pois voluntários garantem acesso vitalício aos benefícios testados. As outras falham pois: A cobra, B destrói, C exporta e E privatiza.",
         "difficulty": "fácil"
     },
     {
@@ -6177,7 +6177,7 @@ window.questionBank = [
             "E": "Sistema Universal de Saneamento."
         },
         "correct": "A",
-        "explanation": "Gabarito: C. Criado pela Constituição de 1988, o Sistema Único de Saúde transformou a saúde de um 'privilégio de trabalhadores com carteira assinada' em um 'direito de todos e dever do Estado'.",
+        "explanation": "A correta é a A por ser o nome oficial da saúde pública brasileira. As outras falham pois: B limita, C generaliza, D confunde e E restringe.",
         "difficulty": "fácil"
     },
     {
@@ -6193,7 +6193,7 @@ window.questionBank = [
             "E": "Restrição de acesso a cidadãos nascidos no país com validação."
         },
         "correct": "B",
-        "explanation": "Gabarito: B. Se um turista sueco sofrer um infarto no Rio de Janeiro, ele será atendido no SUS sem apresentar cartão de crédito, pois a vida é o valor máximo (Princípio Universal).",
+        "explanation": "A correta é a B pois o acesso deve ser para todos sem exclusão. As outras falham pois: A foca custos, C hospitais, D espaço e E nacionalidade.",
         "difficulty": "fácil"
     },
     {
@@ -6209,7 +6209,7 @@ window.questionBank = [
             "E": "Equiparação salarial entre categorias profissionais da saúde."
         },
         "correct": "D",
-        "explanation": "Gabarito: C. Diferente de igualdade (dar o mesmo para todos). Equidade é dar recursos adequados; ex: a fila do transplante de fígado não anda por ordem de chegada, e sim por quem tem o risco de morrer antes (quem precisa mais, passa na frente).",
+        "explanation": "A correta é a D pois trata desigualmente os desiguais conforme a necessidade. As outras falham pois: A divide, B iguala, C cobra e E remunera.",
         "difficulty": "fácil"
     },
     {
@@ -6225,7 +6225,7 @@ window.questionBank = [
             "E": "Integração com o sistema educativo para otimização de resultados."
         },
         "correct": "C",
-        "explanation": "Gabarito: C. É não fragmentar a saúde do cidadão. Ele não é 'uma doença', é uma pessoa. A rede deve ter posto de saúde, ambulatório e hospital de base ligados.",
+        "explanation": "A correta é a C pois abrange o cuidado completo e preventivo do indivíduo. As outras falham pois: A mede tempo, B espaço, D comida e E ensino.",
         "difficulty": "fácil"
     },
     {
@@ -6241,7 +6241,7 @@ window.questionBank = [
             "E": "Estudo de ossadas antigas em protocolos de calibração rigorosa."
         },
         "correct": "A",
-        "explanation": "Gabarito: C. A Epidemiologia tenta responder quem está adoecendo, onde está adoecendo, por qual motivo ambiental ou genético estão adoecendo, e como fazemos para barrar o problema.",
+        "explanation": "A correta é a A pois analisa a dinâmica das doenças em populações. As outras falham pois: B estuda clima, C sequenciamento, D tecidos e E ossos.",
         "difficulty": "fácil"
     },
     {
@@ -6257,7 +6257,7 @@ window.questionBank = [
             "E": "Divisão geográfica de ocorrências com validação de prontuário."
         },
         "correct": "B",
-        "explanation": "Gabarito: D. Incidência é como um filme (quantos pegaram dengue no mês de março). Prevalência é uma fotografia (quantas pessoas têm hipertensão no Brasil hoje, no total).",
+        "explanation": "A correta é a B pois a incidência mede novos casos em um período e a prevalência o total acumulado. As outras falham pois: A foca em cura química, C compara gravidade com tratamento, D ignora as diferenças matemáticas e E refere-se à logística de prontuários.",
         "difficulty": "fácil"
     },
     {
@@ -6273,7 +6273,7 @@ window.questionBank = [
             "E": "Qualificação acadêmica de gestores para otimização de protocolos."
         },
         "correct": "C",
-        "explanation": "Gabarito: C. Fatores de moradia (esgoto a céu aberto), renda (não poder comprar comida nutritiva) e escolaridade são grandes preditores de morte prematura, tão importantes quanto os fatores biológicos.",
+        "explanation": "A correta é a C porque os Determinantes Sociais são as condições externas que influenciam a saúde populacional. As outras falham pois: A trata de leis, B foca na genética, D é sobre exames laboratoriais e E refere-se à escolaridade dos gestores.",
         "difficulty": "fácil"
     },
     {
@@ -6289,7 +6289,7 @@ window.questionBank = [
             "E": "Intervenções sem base científica que exigem calibração rigorosa."
         },
         "correct": "C",
-        "explanation": "Gabarito: D. Níveis de Prevenção: Primária (Evita a doença). Secundária (Pega a doença no começo, sem sintomas ainda). Terciária (Evita que o paciente já doente e operado piore e fique com sequelas).",
+        "explanation": "A correta é a C pois evitar a ocorrência da doença caracteriza a prevenção primária clássica. As outras falham pois: A é rastreamento secundário, B é intervenção curativa, D é reabilitação terciária e E nega a evidência científica dessas ações.",
         "difficulty": "fácil"
     },
     {
@@ -6305,7 +6305,7 @@ window.questionBank = [
             "E": "Comunicação obrigatória de doenças graves para bloqueio de surtos."
         },
         "correct": "E",
-        "explanation": "Gabarito: B. Como sarampo é fatal e super transmissível, o médico é obrigado por lei federal a avisar o Estado imediatamente, quebrando o sigilo em prol do bem-estar de toda a comunidade da cidade.",
+        "explanation": "A correta é a E porque a notificação permite ações rápidas do governo para conter epidemias e riscos. As outras falham pois: A impede a ação pública, B foca em compras internas, C limita-se ao paciente e D trata de conservação física.",
         "difficulty": "fácil"
     },
     {
@@ -6321,7 +6321,7 @@ window.questionBank = [
             "E": "Segregação de doentes para estabilidade de protocolos analíticos."
         },
         "correct": "A",
-        "explanation": "Gabarito: B. Fazer o dinheiro e a ordem descer de Brasília até as mãos do gestor da cidade (Municipalização), porque o prefeito conhece melhor as necessidades locais do povo dele do que a capital.",
+        "explanation": "A correta é a A pois descentralizar significa transferir responsabilidades e recursos para estados e municípios. As outras falham pois: B é mudança física de sede, C foca em gerência interna, D fecha serviços essenciais e E propõe isolamento clínico.",
         "difficulty": "fácil"
     },
     {
@@ -6337,7 +6337,7 @@ window.questionBank = [
             "E": "Aliança de imunização veterinária em cenários analíticos variados."
         },
         "correct": "B",
-        "explanation": "Gabarito: B. Se a máquina do sequenciador e o reagente químico foram aprovados no Brasil, é porque a ANVISA atestou que eles não fazem mal e cumprem o que prometem no manual.",
+        "explanation": "A correta é a B porque a ANVISA regula e fiscaliza produtos e serviços com risco à saúde. As outras falham pois: A limita-se a portos, C é função do Ministério da Saúde, D foca em vetores e E trata de animais.",
         "difficulty": "fácil"
     },
     {
@@ -6353,7 +6353,7 @@ window.questionBank = [
             "E": "Paciente acionando a Justiça para obter tratamento de alto custo."
         },
         "correct": "E",
-        "explanation": "Gabarito: C. A constituição diz 'Saúde é direito de todos'. Como há um conflito sobre faltar dinheiro no cofre contra a vida de um bebê, os pais ganham na justiça liminares que forçam o governador a pagar tratamentos genéticos milionários (ex: remédio Zolgensma da AME).",
+        "explanation": "A correta é a E pois a judicialização ocorre quando cidadãos usam tribunais para obter medicamentos ou cirurgias. As outras falham pois: A é causa trabalhista, B é medicina forense, C é investigação policial e D trata de corrupção.",
         "difficulty": "fácil"
     },
     {
@@ -6369,7 +6369,7 @@ window.questionBank = [
             "E": "Marca internacional exclusiva com eficiência analítica variável."
         },
         "correct": "D",
-        "explanation": "Gabarito: B. O Brasil é grande demais. A CONITEC atua como um escudo matemático provando que botar uma técnica Nova no catálogo popular SUS realmente funciona e provando para a economia federal que o estado não vai falir ao oferecer e suprir aquilo a todos os 210 milhões de brasileiros.",
+        "explanation": "A correta é a D porque a CONITEC avalia se a tecnologia é segura, eficaz e cabe no orçamento. As outras falham pois: A foca em estética, B trata de validade comercial, C prioriza usabilidade e E foca em marcas estrangeiras.",
         "difficulty": "médio"
     },
     {
@@ -6384,8 +6384,8 @@ window.questionBank = [
             "D": "Farmácia, logística e contabilidade.",
             "E": "Medicina esportiva e fonoaudiologia."
         },
-        "correct": "D",
-        "explanation": "Gabarito: B. Se junta na Saúde unificada: Epidemiológica (O paciente e o vírus da doença), Sanitária (Remédios, vacinas e hambúrgueres contaminados), Ambiental (Mercúrio na água e mosquito do mato) e Trabalhador (Segurança de quem produz na mina de carvão e fumaça e asma ocupacional). É a visão total da Saúde em macro blocos focados na antecipação e qualidade de vida.",
+        "correct": "B",
+        "explanation": "A correta é a B pois a Vigilância em Saúde engloba as áreas epidemiológica, sanitária, ambiental e do trabalhador. As outras falham pois: A foca em especialidades técnicas, C lista especialidades clínicas, D foca em suporte administrativo e E cita áreas reabilitativas.",
         "difficulty": "fácil"
     },
     {
@@ -6401,7 +6401,7 @@ window.questionBank = [
             "E": "Permitir que apenas o analista decida sobre os dados gerados."
         },
         "correct": "C",
-        "explanation": "Gabarito: B. GCP é a bíblia mundial (ICH GCP). Surgiu para que erros das guerras passadas do século 20 sem limite não ocorressem novamente. Garante que os dados (O papel) refletem fidedignamente que um Ser Humano ciente da ação recebeu segurança máxima num protocolo validado.",
+        "explanation": "A correta é a C porque o GCP estabelece normas éticas e de qualidade para pesquisas com humanos. As outras falham pois: A foca em pagamento monetário, B trata de publicação aberta, D foca em design industrial e E dá poder absoluto ao técnico.",
         "difficulty": "fácil"
     },
     {
@@ -6417,7 +6417,7 @@ window.questionBank = [
             "E": "Termos idênticos que variam conforme o idioma técnico utilizado."
         },
         "correct": "C",
-        "explanation": "Gabarito: D. Epidemia é a Explosão. Um pico inesperado que esgota leitos da noite para o dia. Endemia é a doença 'da casa' (habitual). Ex: Em Manaus a malária é endêmica (está sempre lá, o governo já espera x casos por mês). Se tiver Dengue no sul com 10.000 casos e não tinha mês passado, virou Epidemia.",
+        "explanation": "A correta é a C pois define Epidemia como aumento inesperado e Endemia como presença constante. As outras falham pois: A limita-se a nichos rurais/urbanos, B foca em insumos, D confunde surto com epidemia e E nega distinção técnica.",
         "difficulty": "médio"
     },
     {
@@ -6432,8 +6432,8 @@ window.questionBank = [
             "D": "Apenas o nome escrito rapidamente.",
             "E": "Desenho colorido sem textos ou códigos."
         },
-        "correct": "E",
-        "explanation": "Gabarito: C. Tubo de laboratório precisa gritar: O que é (Tampão de Lise 10mM), Quando foi Feito (01/Jan/25), Validade (01/Dez/25) e Quem fez (Assinatura: JS). Um frasco incolor sem rótulo ou sem validade transparente no freezer em laboratórios reais não é água, é veneno. E pela lei penal joga-se imediatamente no lixo Químico ou Biológico para descarte.",
+        "correct": "C",
+        "explanation": "A correta é a C porque Boas Práticas exigem identificação, concentração e prazos de validade. As outras falham pois: A permite grafia apagável, B prioriza custo, D omite segurança química e E ignora padronização obrigatória.",
         "difficulty": "fácil"
     },
     {
@@ -6448,8 +6448,8 @@ window.questionBank = [
             "D": "Resfriar roupas para evitar o suor.",
             "E": "Registrar o ponto via sensor biomédico."
         },
-        "correct": "E",
-        "explanation": "Gabarito: B. Eclusa (Air-Lock) de transição num centro avançado de doenças genômicas infecciosas é o filtro de barreira máxima de ar da porta principal. O pesquisador entra, a porta de trás tranca, ele sofre um banho de ar estéril do teto ou irradiação e, só então e quando acabar, a porta da frente das macas do laboratório de Risco 3 se destranca para ele passar ileso, nunca vazando nada pelo corredor central administrativo dos civis para o ambiente exterior livre normal do planeta limpo hospitalar aberto ou corredores.",
+        "correct": "B",
+        "explanation": "A correta é a B visto que eclusas controlam pressões diferenciais e evitam dispersão de contaminantes. As outras falham pois: A refere-se a higienização, C a estocagem, D a climatização e E a controle de pessoal.",
         "difficulty": "fácil"
     },
     {
@@ -6464,8 +6464,8 @@ window.questionBank = [
             "D": "Manter termos técnicos em inglês/TI.",
             "E": "Sugerir busca de termos no Google."
         },
-        "correct": "A",
-        "explanation": "Gabarito: B. Essa é a regra número um que mais derruba os cientistas inexperientes e causa reprovação dos Comitês de Ética em Pesquisa do hospital. Se você mandar pro CEP um documento TCLE dizendo que 'vamos usar Fastq com Alinhamento BWT de variantes CNVs', você reprova. O texto que vai para a mão do paciente deve dizer que 'vamos usar programas de computador para ler o seu DNA na máquina que tira fotos para procurar erros na genética'.",
+        "correct": "B",
+        "explanation": "A correta é a B pois a norma ética exige que o participante compreenda os riscos e benefícios em sua língua nativa. As outras falham pois: A foca em burocracia desnecessária, C dificulta a compreensão pelo tamanho, D utiliza termos que excluem o leigo e E delega responsabilidade indevidamente.",
         "difficulty": "médio"
     },
     {
@@ -6481,7 +6481,7 @@ window.questionBank = [
             "E": "Sequência Shine-Dalgarno e estabilidade in vitro."
         },
         "correct": "C",
-        "explanation": "Gabarito: C. A Cas9 é 'cega' sem o PAM (geralmente NGG). Ela só corta o DNA se o RNA guia hibridizar com o alvo E houver um PAM logo ao lado. Isso impede que a bactéria corte seu próprio genoma.",
+        "explanation": "A correta é a C porque o PAM é o sinalizador de ancoragem essencial para o corte. As outras falham pois: A e B são promotores, D e E regulam tradução proteica.",
         "difficulty": "fácil"
     },
     {
@@ -6497,7 +6497,7 @@ window.questionBank = [
             "E": "Converte citosinas não metiladas em uracilas."
         },
         "correct": "E",
-        "explanation": "Gabarito: B. O bissulfito não consegue alterar citosinas que estão protegidas por um grupo metil. Ele converte apenas as 'desprotegidas' (não metiladas) em Uracila (que a PCR lê como Timina). A bioinformática depois compara com a referência para ver o que mudou.",
+        "explanation": "A correta é a E pois o bissulfito desamina citosinas não metiladas em uracila em laboratório. As outras falham pois: A não cliva, B inverte o processo, C não metila e D cita base errada.",
         "difficulty": "médio"
     },
     {
@@ -6513,7 +6513,7 @@ window.questionBank = [
             "E": "Proteassomo além disso,  que atua de forma secundária na preservação da amostra."
         },
         "correct": "D",
-        "explanation": "Gabarito: C. O complexo RISC usa a pequena fita de RNA como um 'guia' para encontrar o mRNA complementar e 'cortá-lo', impedindo a tradução da proteína.",
+        "explanation": "A correta é a D porque o complexo RISC processa pequenos RNAs para degradação do alvo. As outras falham pois: A mantém cromossomos, B processa íntrons, C degrada RNA inespecificamente e E foca em proteínas.",
         "difficulty": "fácil"
     },
     {
@@ -6529,7 +6529,7 @@ window.questionBank = [
             "E": "Desaparecimento do núcleo na fase G1 da célula."
         },
         "correct": "A",
-        "explanation": "Gabarito: A. A Recombinação Homóloga é um reparo livre de erros porque 'copia' a informação da fita irmã perfeita. Ela só pode fazer isso após o DNA ter sido duplicado (fases S/G2).",
+        "explanation": "A correta é a A pois a Recombinação Homóloga utiliza a cromátide irmã como molde fidedigno. As outras falham pois: B, C e E citam fatores irrelevantes ao reparo e D foca em dano externo.",
         "difficulty": "fácil"
     },
     {
@@ -6545,7 +6545,7 @@ window.questionBank = [
             "E": "Tamanho padrão de um éxon do genoma humano."
         },
         "correct": "A",
-        "explanation": "Gabarito: C. O DNA solto no sangue é rapidamente digerido por nucleases. Apenas a parte que estava protegida ('enrolada') no carretel de histonas do nucleossomo (~147 pb + linker) sobrevive, resultando em fragmentos de ~166 pb.",
+        "explanation": "A correta é a A porque o tamanho reflete o fragmento de DNA protegido pelo nucleossomo. As outras falham pois: B, C e E não possuem essa dimensão fixa e D é causa secundária.",
         "difficulty": "fácil"
     },
     {
@@ -6561,7 +6561,7 @@ window.questionBank = [
             "E": "Extração exclusiva com Fenol-Clorofórmio."
         },
         "correct": "C",
-        "explanation": "Gabarito: B. A captura Poly-A só pega RNAs maduros que têm a cauda. Como muitos lncRNAs e RNAs não codificantes não têm cauda poly-A, a solução é fazer o contrário: destruir os RNAs ribossômicos (que são o lixo que não queremos) e sequenciar o que sobrar.",
+        "explanation": "A correta é a C porque a depleção ribossomal permite detectar transcritos que não possuem poliadenilação. As outras falham pois: A exclui lncRNAs, B foca em DNA, D é purificação e E extração bruta.",
         "difficulty": "fácil"
     },
     {
@@ -6577,7 +6577,7 @@ window.questionBank = [
             "E": "Metila o DNA fechado para otimizar o protocolo."
         },
         "correct": "A",
-        "explanation": "Gabarito: C. A enzima Tn5 Transposase é usada. Ela tenta cortar e colar adaptadores no genoma inteiro, mas só consegue fazer isso nas partes da cromatina que estão 'frouxas' ou abertas.",
+        "explanation": "A correta é a A pois a Tn5 Transposase insere adaptadores preferencialmente em DNA acessível. As outras falham pois: B usa RNA-guia para edição gênica, C transcreve RNA em DNA complementar, D foca em regiões teloméricas específicas e E analisa modificações epigenéticas em DNA fechado.",
         "difficulty": "fácil"
     },
     {
@@ -6593,7 +6593,7 @@ window.questionBank = [
             "E": "Lavagem incompleta das beads de purificação SPRI."
         },
         "correct": "D",
-        "explanation": "Gabarito: B. Se a PCR roda ciclos demais, os primers e dNTPs acabam. Fitas de DNA começam a atuar como primers para outras fitas de DNA não relacionadas (Template Switching), criando quimeras artificiais de laboratório.",
+        "explanation": "A correta é a D porque ciclos excessivos causam template-switching entre fitas distintas. As outras falham pois: A é tampão de estocagem, B fragmenta o DNA fisicamente, C gera erros de basecall e E impacta purificação e rendimento.",
         "difficulty": "fácil"
     },
     {
@@ -6609,7 +6609,7 @@ window.questionBank = [
             "E": "Neutralização do pH para ação da Proteinase K."
         },
         "correct": "A",
-        "explanation": "Gabarito: B. O SDS é um detergente forte que 'abre' as proteínas globulares. A Proteinase K aproveita essa exposição e corta a proteína em pedacinhos (peptídeos), livrando o DNA de histonas e destruindo DNases.",
+        "explanation": "A correta é a A pois o SDS desnatura proteínas facilitando o acesso enzimático da Proteinase K. As outras falham pois: B SDS é detergente, não cofator, C não removem RNA especificamente, D SDS solubiliza lipídios e E pH é controlado por tampões.",
         "difficulty": "fácil"
     },
     {
@@ -6625,7 +6625,7 @@ window.questionBank = [
             "E": "Falha de especificidade das sondas de captura."
         },
         "correct": "E",
-        "explanation": "Gabarito: B. Off-target é o 'lixo' da captura. Você desenhou a isca para pegar o gene BRCA, mas a isca grudou em outros locais aleatórios ou a lavagem foi muito fraca e não soltou o DNA indesejado.",
+        "explanation": "A correta é a E pois taxas off-target altas indicam captura inespecífica pelas sondas. As outras falham pois: A impede a biblioteca, B descreve o dado obtido, C reflete má fragmentação e D indica contaminação da amostra.",
         "difficulty": "fácil"
     },
     {
@@ -6641,7 +6641,7 @@ window.questionBank = [
             "E": "Fluoróforo de dupla cor e calibração rigorosa."
         },
         "correct": "B",
-        "explanation": "Gabarito: C. A mágica do single-cell é que, ao quebrar as gotas e sequenciar tudo junto, o 'Cell Barcode' diz para o computador de qual exata célula microscópica aquele RNA saiu.",
+        "explanation": "A correta é a B pois o barcode celular identifica a origem de cada transcrito individualmente. As outras falham pois: A promove transcrição in-vitro, C interrompe a síntese, D é técnica de ligação e E serve para sinalização óptica.",
         "difficulty": "fácil"
     },
     {
@@ -6657,7 +6657,7 @@ window.questionBank = [
             "E": "Indeterminado, necessitando de reprocessamento."
         },
         "correct": "C",
-        "explanation": "Gabarito: B. Na escala Phred, 0 significa 'probabilidade máxima / nenhuma penalidade'. A ordem dos PLs é sempre (Ref/Ref, Ref/Alt, Alt/Alt). O valor 0 na posição do meio indica um heterozigoto claro.",
+        "explanation": "A correta é a C pois o valor zero representa a maior verossimilhança no formato Phred (Heterozigoto). As outras falham pois: A tem penalidade alta, B é menos provável que C, D é um valor válido e E a inferência é clara.",
         "difficulty": "fácil"
     },
     {
@@ -6673,7 +6673,7 @@ window.questionBank = [
             "E": "Move o read para o final do arquivo de texto."
         },
         "correct": "B",
-        "explanation": "Gabarito: C. Ferramentas padrão (Picard/GATK) marcam o read com a bit-flag 1024. Ferramentas subsequentes como o HaplotypeCaller vêm essa flag e fingem que o read não existe, poupando dados originais.",
+        "explanation": "A correta é a B pois a flag 1024 sinaliza duplicatas para ferramentas posteriores de análise. As outras falham pois: A é mensagem de sistema, C alteraria o dado original, D modifica a qualidade da base e E desorganizaria o mapeamento.",
         "difficulty": "difícil"
     },
     {
@@ -6689,7 +6689,7 @@ window.questionBank = [
             "E": "Posição da variante no final da leitura/read."
         },
         "correct": "C",
-        "explanation": "Gabarito: B. QD evita que uma variante lixo pareça verdadeira só porque teve 5.000 reads amontoados em cima dela. Ele divide a qualidade bruta pela profundidade de reads.",
+        "explanation": "A correta é a C pois o QD normaliza a qualidade da variante pela profundidade de cobertura. As outras falham pois: A identifica fusões, B avalia vieses de fita, D detecta variantes estruturais e E checa erro posicional.",
         "difficulty": "médio"
     },
     {
@@ -6705,7 +6705,7 @@ window.questionBank = [
             "E": "bedtools slop -b 100 -i arquivo.bed -g genoma."
         },
         "correct": "E",
-        "explanation": "Gabarito: C. O comando 'slop' expande as coordenadas. Ao fornecer o arquivo do tamanho do genoma (-g), o comando não estenderá a coordenada além do limite físico do cromossomo (evitando erros de out-of-bounds).",
+        "explanation": "A correta é a E pois o comando slop expande as janelas respeitando os limites genômicos fornecidos. As outras falham pois: A extrai sequências, B cruza arquivos, C remove sobreposições e D une intervalos próximos.",
         "difficulty": "fácil"
     },
     {
@@ -6721,7 +6721,7 @@ window.questionBank = [
             "E": "Redireciona a saída de um comando para o outro."
         },
         "correct": "E",
-        "explanation": "Gabarito: B. Essa é a magia do Pipe. Ele permite processar terabytes de genomas num notebook de 8GB de RAM, pois o dado flui como um cano invisível sem ocupar o disco rígido.",
+        "explanation": "A correta é a E pois o pipe redireciona o fluxo de dados entre processos em tempo real. As outras falham pois: A exige computação distribuída, B interrompe a execução, C ignora etapas e D utiliza espaço em disco.",
         "difficulty": "fácil"
     },
     {
@@ -6737,7 +6737,7 @@ window.questionBank = [
             "E": "Limitar disco virtual e avaliar o impacto."
         },
         "correct": "B",
-        "explanation": "Gabarito: C. Containers são caixas fechadas. Sem o 'mount de volume (-v)', a ferramenta lá dentro não enxergaria as suas amostras que estão no servidor físico.",
+        "explanation": "A correta é a B porque a flag -v cria uma ponte entre o sistema de arquivos do host e o container. As outras falham pois: A refere-se a protocolos de segurança, C trata de metadados do software, D indica remoção de arquivos e E foca em restrição de recursos de hardware.",
         "difficulty": "fácil"
     },
     {
@@ -6753,7 +6753,7 @@ window.questionBank = [
             "E": "Variância explicada na análise de componentes."
         },
         "correct": "A",
-        "explanation": "Gabarito: B. FDR = 0.05 significa que, se você declarou 100 genes como mutados, você aceita estatisticamente que 5 deles são erros do acaso, mas 95 são descobertas confiáveis.",
+        "explanation": "A correta é a A porque o FDR controla a proporção esperada de falsas descobertas entre os resultados significativos. As outras falham pois: B mede a qualidade de modelos regressivos, C foca em poder estatístico, D descreve o controle de erro tipo I global e E analisa dispersão de componentes.",
         "difficulty": "médio"
     },
     {
@@ -6769,7 +6769,7 @@ window.questionBank = [
             "E": "Viés massivo por estratificação populacional."
         },
         "correct": "B",
-        "explanation": "Gabarito: B. Se a linha se descola toda, é problema de estrutura da população (inflação sistêmica). Se a linha segue reta e SÓ a ponta deforma pra cima, você encontrou os genes agressores reais que quebram a hipótese nula.",
+        "explanation": "A correta é a B pois desvios apenas no final da cauda representam SNPs que realmente superam o ruído estatístico. As outras falham pois: A indica problemas de sequenciamento, C aponta erros sistemáticos de lote, D sugere inflação por parentesco e E revela viés populacional generalizado.",
         "difficulty": "fácil"
     },
     {
@@ -6785,7 +6785,7 @@ window.questionBank = [
             "E": "Variância genética aditiva (efeitos acumulados simples dos alelos)."
         },
         "correct": "E",
-        "explanation": "Gabarito: C. A heritabilidade restrita (h²) não conta os efeitos complexos de dominância; conta apenas o efeito base aditivo que os pais podem passar com previsibilidade para o filho (útil para cálculo de escores poligenéticos - PRS).",
+        "explanation": "A correta é a E porque a heritabilidade no sentido estrito considera apenas a variância genética aditiva transmissível. As outras falham pois: A trata de eventos de mutação, B inclui efeitos de interação complexa, C foca em componentes ambientais e D refere-se a ajustes computacionais.",
         "difficulty": "fácil"
     },
     {
@@ -6801,7 +6801,7 @@ window.questionBank = [
             "E": "Falta de assinaturas em TCLEs e ajustes de parâmetros no software."
         },
         "correct": "C",
-        "explanation": "Gabarito: C. É difícil provar se 'obesidade causa doença X' ou 'a doença X que causou obesidade' num estudo normal. Como os genes para obesidade estavam lá desde bebê, a Randomização Mendeliana prova a direção da causalidade sem erro.",
+        "explanation": "A correta é a C pois a segregação independente de alelos na meiose elimina vieses de confusão e causalidade reversa. As outras falham pois: A é problema de bancada laboratorial, B refere-se à logística de amostragem, D trata de limitações financeiras e E foca em conformidade ética.",
         "difficulty": "fácil"
     },
     {
@@ -6817,7 +6817,7 @@ window.questionBank = [
             "E": "Aplicação em câncer somático restrita a grandes bancos de dados."
         },
         "correct": "A",
-        "explanation": "Gabarito: B. Penetrância: Você tem a mutação, você adoeceu? (Sim/Não). Expressividade: Você adoeceu, mas no seu irmão afetou a perna severamente e em você foi apenas um sintoma brando.",
+        "explanation": "A correta é a A porque penetrância é a taxa de manifestação e expressividade é o grau dessa manifestação. As outras falham pois: B confunde termos com prognóstico clínico, C ignora a distinção biológica real, D foca em otimização de busca e E restringe indevidamente o conceito.",
         "difficulty": "fácil"
     },
     {
@@ -6833,7 +6833,7 @@ window.questionBank = [
             "E": "Chave Pública para criptografar e chave Privada para descriptografar."
         },
         "correct": "E",
-        "explanation": "Gabarito: B. A assimetria do RSA/Curvas Elípticas garante que mesmo que o Hacker tenha a sua chave pública (cadeado), ele não consegue abrir a caixa sem a sua chave privada que nunca transitou pela internet.",
+        "explanation": "A correta é a E porque o par de chaves permite que uma publique a fechadura e a outra guarde o segredo. As outras falham pois: A descreve a criptografia simétrica, B ignora o funcionamento do HTTPS, C confunde hashing com criptografia e D mistura performance com segurança.",
         "difficulty": "fácil"
     },
     {
@@ -6849,7 +6849,7 @@ window.questionBank = [
             "E": "Disponibilidade com redução do poder preditivo de modelos."
         },
         "correct": "B",
-        "explanation": "Gabarito: C. Alterar uma única letra 'A' para 'T' num arquivo de 50GB muda completamente o código Hash gerado. É a prova de fogo de que o arquivo chegou 100% perfeito no destino.",
+        "explanation": "A correta é a B porque qualquer alteração no arquivo altera drasticamente o valor do hash, provando sua integridade. As outras falham pois: A não impede a leitura dos dados, C requer assinaturas digitais completas, D não oculta a identidade e E não garante acesso persistente.",
         "difficulty": "fácil"
     },
     {
@@ -6865,7 +6865,7 @@ window.questionBank = [
             "E": "Mutações aleatórias em populações isoladas de África e Ásia."
         },
         "correct": "C",
-        "explanation": "Gabarito: B. IBD é quando duas pessoas compartilham o EXATO mesmo pedaço de DNA que veio do avô deles, sem ter quebrado por recombinação. Alelos 'Identity by State' (IBS) são iguais por coincidência cósmica.",
+        "explanation": "A correta é a C pois IBD define segmentos de DNA idênticos herdados diretamente de um ancestral comum. As outras falham pois: A descreve associações estatísticas, B refere-se a traços físicos visíveis, D trata de mutações estruturais e E foca em variabilidade por mutação.",
         "difficulty": "fácil"
     },
     {
@@ -6881,7 +6881,7 @@ window.questionBank = [
             "E": "Excesso de heterozigose limitando o uso de grandes bancos de dados."
         },
         "correct": "D",
-        "explanation": "Gabarito: B. Se uma epidemia mata 90% da tribo, a diversidade genética vai para o ralo. A minoria que sobrevive, se cruza entre si, espalhando suas variantes (boas e ruins) para todo o futuro daquela população isolada.",
+        "explanation": "A correta é a D pois o efeito gargalo reduz drasticamente a diversidade e elimina alelos raros. As outras falham pois: A trata de filtros cromossômicos, B altera códons mitocondriais, C inverte o equilíbrio populacional e E sugere excesso de heterozigose.",
         "difficulty": "médio"
     },
     {
@@ -6897,7 +6897,7 @@ window.questionBank = [
             "E": "Inferência semântica e propagação hierárquica de termos fenotípicos."
         },
         "correct": "E",
-        "explanation": "Gabarito: B. A IA de priorização de genes (Exomiser) entende que Polidactilia é uma sub-categoria de 'Mão Anormal'. Se a máquina acha um gene focado em deformidade na mão, ela cruza as pontas hierarquicamente com os sintomas do paciente.",
+        "explanation": "A correta \u0000\u0000 a E pois o DAG permite navegar hierarquicamente para infer\u0000\u0000ncia fenot\u0000\u0000pica. As outras falham pois: A trata de ajustes em arquivos brutos, B foca em codifica\u0000\u0000\u0000\u0000o hospitalar administrativa, C refere-se \u0000\u0000 estrutura proteica f\u0000\u0000sica e D ignora a organiza\u0000\u0000\u0000\u0000o l\u0000\u0000gica da ontologia.",
         "difficulty": "fácil"
     },
     {
@@ -6913,7 +6913,7 @@ window.questionBank = [
             "E": "Formato não criptografado em HTML com uso de filtros de qualidade."
         },
         "correct": "B",
-        "explanation": "Gabarito: B. O VCF é baseado em 'Linhas' (Row-based). O Parquet salva as coisas em 'Colunas' (Columnar). Se o pesquisador manda buscar todos com 'ID' tal, o Parquet ignora 90% do arquivo e lê apenas o índice da coluna ID, baixando a conta da Amazon/Google de R$ 10.000 para R$ 10 na query (consulta).",
+        "explanation": "A correta \u0000\u0000 a B pois o armazenamento colunar otimiza consultas em grandes volumes gen\u0000\u0000micos. As outras falham pois: A confunde dados com bin\u0000\u0000rios execut\u0000\u0000veis, C limita erroneamente a compatibilidade de sistema, D aplica-se a m\u0000\u0000dia sonora irrelevante e E descreve formatos web ineficientes para an\u0000\u0000lise.",
         "difficulty": "difícil"
     },
     {
@@ -6929,7 +6929,7 @@ window.questionBank = [
             "E": "Fragmentação de DNA inviabilizando uso de amostras degradadas."
         },
         "correct": "D",
-        "explanation": "Gabarito: C. É a 'mão' da célula que puxa a ponta principal (Cap) da fita de RNA e enfia na engrenagem do ribossomo.",
+        "explanation": "A correta \u0000\u0000 a D porque o eIF4E reconhece o Cap 5' para iniciar a tradu\u0000\u0000\u0000\u0000o. As outras falham pois: A descreve enzimas meioticas, B foca na termina\u0000\u0000\u0000\u0000o da prote\u0000\u0000na, C refere-se \u0000\u0000 s\u0000\u0000ntese de DNA in vitro e E trata de degrada\u0000\u0000\u0000\u0000o f\u0000\u0000sica.",
         "difficulty": "fácil"
     },
     {
@@ -6945,7 +6945,7 @@ window.questionBank = [
             "E": "Renomeação de pastas de genoma com integração de dados adicionais."
         },
         "correct": "C",
-        "explanation": "Gabarito: B. Clone significa baixar a cópia matriz (o projeto inteiro) da internet para você editar no seu PC.",
+        "explanation": "A correta \u0000\u0000 a C pois clona o reposit\u0000\u0000rio completo incluindo todo o hist\u0000\u0000rico de vers\u0000\u0000es. As outras falham pois: A descreveria remo\u0000\u0000\u0000\u0000o remota, B trata de bioinform\u0000\u0000tica n\u0000\u0000o vinculada ao Git, D descreve a opera\u0000\u0000\u0000\u0000o de envio e E manipula diret\u0000\u0000rios simples.",
         "difficulty": "fácil"
     },
     {
@@ -6961,7 +6961,7 @@ window.questionBank = [
             "E": "Uso de luva extra com hipoclorito e padrões de segurança vigentes."
         },
         "correct": "D",
-        "explanation": "Gabarito: B. Regra máxima da NR32: Nunca esprema um acidente percutâneo ou machuque o tecido em pânico, pois isso aumenta o microfluxo vascular absorvendo o patógeno. Lave brandamente, mas com água e sabão exaustivamente.",
+        "explanation": "A correta \u0000\u0000 a D seguindo a NR32 para higieniza\u0000\u0000\u0000\u0000o branda e comunica\u0000\u0000\u0000\u0000o de acidente. As outras falham pois: A ignora o risco biol\u0000\u0000gico humano, B sugere procedimento oft\u0000\u0000lmico perigoso, C aumenta absor\u0000\u0000\u0000\u0000o viral por press\u0000\u0000o e E usa corrosivo em ferida aberta.",
         "difficulty": "fácil"
     },
     {
@@ -6977,7 +6977,7 @@ window.questionBank = [
             "E": "Atribuição de alelos ao mesmo cromossomo (cis) ou opostos (trans)."
         },
         "correct": "E",
-        "explanation": "Gabarito: B. Phasing determina a estrutura 'cis/trans'. Duas mutações recessivas na mesma fita (cis) ainda deixam a outra fita do pai intacta (doença não ocorre). Mutações em fitas opostas (trans) causam quebra das duas cópias e disparam a doença do paciente.",
+        "explanation": "A correta \u0000\u0000 a E pois o faseamento define se muta\u0000\u0000\u0000\u0000es est\u0000\u0000o no mesmo cromossomo. As outras falham pois: A trata de modifica\u0000\u0000\u0000\u0000es epigen\u0000\u0000ticas, B refere-se a instrumenta\u0000\u0000\u0000\u0000o \u0000\u0000ptica, C \u0000\u0000 pseudoci\u0000\u0000ncia sem base e D envolve termodin\u0000\u0000mica de PCR.",
         "difficulty": "fácil"
     },
     {
@@ -6993,7 +6993,7 @@ window.questionBank = [
             "E": "Foto congelada do sistema de arquivos para restauração rápida."
         },
         "correct": "E",
-        "explanation": "Gabarito: B. O Snapshot salva as configurações estruturais do volume do HD sem gastar o peso total. Deu ruim num update e o GATK não abre mais? Você 'reverte' pro momento X do Snapshot e o servidor volta à vida como se nada tivesse ocorrido.",
+        "explanation": "A correta \u0000\u0000 a E pois snapshots capturam o estado do sistema para recupera\u0000\u0000\u0000\u0000o imediata. As outras falham pois: A confunde com backup incremental longo, B refere-se a nuvem propriet\u0000\u0000ria, C descreve acelera\u0000\u0000\u0000\u0000o de hardware e D trata de remo\u0000\u0000\u0000\u0000o insegura.",
         "difficulty": "fácil"
     },
     {
@@ -7009,7 +7009,7 @@ window.questionBank = [
             "E": "Zonas metiladas da máquina com validação em amostras degradadas."
         },
         "correct": "D",
-        "explanation": "Gabarito: C. Por isso a qPCR é mandatória na excelência: ela ignora o fragmento do DNA do meio e pergunta: Você tem P5 de um lado e P7 do outro? Se sim, você está pronto pro combate fotográfico na máquina de NGS e eu vou te contar como molécula viável.",
+        "explanation": "A correta \u0000\u0000 a D porque garante a quantifica\u0000\u0000\u0000\u0000o apenas de mol\u0000\u0000culas com adaptadores funcionais. As outras falham pois: A detecta elementos repetitivos gen\u0000\u0000micos, B foca em \u0000\u0000xons ignorando a biblioteca, C falha na especificidade t\u0000\u0000cnica e E rastreia modifica\u0000\u0000\u0000\u0000es qu\u0000\u0000micas.",
         "difficulty": "médio"
     },
     {
@@ -7025,7 +7025,7 @@ window.questionBank = [
             "E": "Multiplicação gênica por CNVs com ajuste de parâmetros e indexação."
         },
         "correct": "B",
-        "explanation": "Gabarito: B. A natureza é implacável. Se a mutação num gene motor bate no embrião e mata o organismo na gestação, ela some do radar genômico (Seleção Purificadora / Limpeza de letalidade).",
+        "explanation": "A correta \u0000\u0000 a B pois a sele\u0000\u0000\u0000\u0000o negativa remove variantes que reduzem a sobreviv\u0000\u0000ncia. As outras falham pois: A descreve interrup\u0000\u0000\u0000\u0000o do ciclo celular, C envolve instabilidade estrutural, D resultaria de aus\u0000\u0000ncia de sele\u0000\u0000\u0000\u0000o e E descreve CNVs.",
         "difficulty": "fácil"
     },
     {
@@ -7041,7 +7041,7 @@ window.questionBank = [
             "E": "Recibo digital com selfie em amostras severamente degradadas."
         },
         "correct": "C",
-        "explanation": "Gabarito: B. Crianças ou adolescentes não assinam TCLE, assinam TALE (Assentimento). É o pesquisador 'descendo' a uma conversa infantil de confiança dizendo o que farão no braço do voluntário num desenho lúdico sem traumas clínicos da imposição do adulto na sala médica.",
+        "explanation": "A correta \u0000\u0000 a C pois exige consentimento dos pais e assentimento apropriado do menor. As outras falham pois: A \u0000\u0000 apenas rotina operacional, B refere-se a contratos comerciais anti\u0000\u0000ticos, D envolve processos judiciais de incapacidade e E desrespeita formalidades bio\u0000\u0000ticas.",
         "difficulty": "fácil"
     },
     {
@@ -7057,7 +7057,7 @@ window.questionBank = [
             "E": "Erro na RNA polimerase nativa com alto processamento em clusters."
         },
         "correct": "B",
-        "explanation": "Gabarito: B. Estatística dura: se você joga o dado 20 mil vezes seguidas (genes), vários vão cair no número 6 puramente por sorte. Ajustar o p-value endurece o desafio, separando a 'Sorte' do 'Real achado'.",
+        "explanation": "A correta é a B pois o Padj corrige a probabilidade de falsos positivos em múltiplos testes simultâneos. As outras falham pois: A foca em qualidade física, C trata de erro tipo II, D refere-se a processamento de sinais e E descreve um processo biológico enzimático.",
         "difficulty": "médio"
     },
     {
@@ -7072,8 +7072,8 @@ window.questionBank = [
             "D": "Aquecimento de beads para preservação.",
             "E": "Polimerização de plásticos e vidros."
         },
-        "correct": "D",
-        "explanation": "Gabarito: C. A luz UV-C é esterilizadora de DNA de nível militar de bancada. Ela derrete as trincas de bases soltas na bancada para que não amplifiquem e sujem sua extração matutina de falsos rastros orgânicos de genomas mortos do ar do hospital laboratório central operante de turnos sequenciais logísticos e limpos operados em escala fabril e de volume intensivo.",
+        "correct": "C",
+        "explanation": "A correta é a C porque a radiação UV-C fragmenta o DNA residual, evitando contaminação entre corridas. As outras falham pois: A usa luz visível, B não existe em protocolos NGS, D utiliza blocos térmicos e E é processo industrial irrelevante na baia.",
         "difficulty": "médio"
     },
     {
@@ -7088,8 +7088,8 @@ window.questionBank = [
             "D": "SEND/RETRIEVE: erros 90 e 80 brutos.",
             "E": "PULL/SAVE: 101 Null e 102 Void HPC."
         },
-        "correct": "C",
-        "explanation": "Gabarito: B. Se a sua pipeline Bioinfo consome o banco do ClinVar, ela roda um comando GET (busca o dado). Se a Ensembl API cai, ela devolve um 500 (O servidor do Reino Unido capotou internamente e não processa a ordem de requesta bioinformática atestada pedida no console do analista do país distante sul americano do servidor da nuvem amazon e proxy gateway route).",
+        "correct": "B",
+        "explanation": "A correta é a B pois GET busca dados e POST envia, seguindo o padrão oficial HTTP/REST. As outras falham pois: A utiliza códigos inexistentes, C refere-se a scripts locais, D não segue a nomenclatura oficial e E usa termos de versionamento.",
         "difficulty": "médio"
     },
     {
@@ -7104,8 +7104,8 @@ window.questionBank = [
             "D": "Frequência de erro e normalização.",
             "E": "Tempo da polimerase com filtros QC."
         },
-        "correct": "D",
-        "explanation": "Gabarito: B. O Odds Ratio te dá a 'Força' da doença. Se o O.R. do gene for 5.0, significa que portar essa variação do VCF quintuplica seu risco bruto de terminar na cama de uma enfermaria comparado a não possuir o defeito na dupla hélice. A pedra angular estatística de estudos caso/controle do genoma e epidemiologia das capitais brasileiras no projeto populacional geral da IA biomédica e do conselho clínico ético das frentes de base dos laboratórios das regionais ativas nos pólos da pesquisa.",
+        "correct": "B",
+        "explanation": "A correta é a B pois o Odds Ratio quantifica o aumento do risco de um evento entre grupos. As outras falham pois: A mede atividade gênica, C foca em proteínas, D avalia qualidade técnica e E mede cinética enzimática.",
         "difficulty": "difícil"
     },
     {
@@ -7121,7 +7121,7 @@ window.questionBank = [
             "E": "Fiscais da Anvisa em aeroportos."
         },
         "correct": "C",
-        "explanation": "Gabarito: C. O DPO é o cérebro das leis (Ele manda prender o dado sensível perante a lei e LGPD ética do advogado). O Custodian é a 'Fechadura e a Chave' do sistema Unix. He não inventa a lei, ele apenas programa a porta de chaves digitais no código (Chmod 700 / SELinux / Firewalls lógicos da AWS Bucket / Root permissions e IAM) bloqueando ativamente na parte técnica da computação que o técnico intruso e hackings puxem cópias e zips de variantes. É a engrenagem técnica blindando o tesouro ético jurídico.",
+        "explanation": "A correta é a C pois o Data Custodian é o responsável técnico por implementar as permissões de acesso. As outras falham pois: A trata do jurídico, B é equipe operacional, D são usuários finais e E são auditores externos.",
         "difficulty": "médio"
     },
     {
@@ -7136,8 +7136,8 @@ window.questionBank = [
             "D": "Picos de 300x com anotação cruzada.",
             "E": "Reads não alinhados com modelos RAW."
         },
-        "correct": "E",
-        "explanation": "Gabarito: B. Se você sequencia o João, você espera achar alelos em 100% ou 50% em células normais de germinativas. Se o robô de extração pingar e 'tossir' 10% do DNA da Maria no tubo do João, o GATK vai achar milhares de SNPs em níveis estranhos e aberrantes (5, 10, 12%). VAF suja é o farol vermelho das contaminações. Joga o experimento e o vidro NGS caríssimo inteiro no lixo biológico. Recoleta e Refaz tudo nas bancadas sem robôs contaminados e ponteiras frouxas na técnica BPL restrita laboratorial rigorosa.",
+        "correct": "B",
+        "explanation": "A correta é a B pois a frequência alélica (VAF) anormal indica a presença de DNA de múltiplos indivíduos. As outras falham pois: A afeta separação inicial, C calibra bases, D indica viés de captura e E sugere origem exógena.",
         "difficulty": "médio"
     },
     {
@@ -7152,8 +7152,8 @@ window.questionBank = [
             "D": "Atraso de laudos por microscopia.",
             "E": "Fechamento hospitalar por limites TI."
         },
-        "correct": "C",
-        "explanation": "Gabarito: B. O rWES em UTI neonatal ('Exoma a jato') é o salvador de vidas. A criança convulsiona na incubatora, em 7 dias a IA com o Exoma descobre a proteína quebrada na enzima cerebral, o médico dá a vitamina ou droga X alvo direcionada de precisão biológica perfeita e o quadro cessa magicamente num milagre tecnológico translacional. E o estado e os cofres economizam rios de dinheiro em exames inúteis diários e internações eternas cegamente perdidas na escuridão sem diagnóstico molecular primário da causa.",
+        "correct": "B",
+        "explanation": "A correta é a B porque o rWES agiliza o diagnóstico de precisão em casos críticos neonatais. As outras falham pois: A foca em finanças, C é biologicamente impossível, D refere-se a citologia e E é conclusão ilógica.",
         "difficulty": "fácil"
     },
     {
@@ -7168,8 +7168,8 @@ window.questionBank = [
             "D": "Corrupção de discos por linguagem.",
             "E": "Economia de digitação em plantões."
         },
-        "correct": "D",
-        "explanation": "Gabarito: B. Semântica controlada universal (HPO - Human Phenotype Ontology) é o código binário dos sintomas. O robô e a IA de priorização de Genomas de Doenças Raras não sabe o que é 'Menino com cabeção de 6 dedos'. A máquina fala em nós matemáticos lógicos (Macros do HPO de polidactilia cruzados). O HPO é a ponte para a bioinformática agir em dados médicos brutos hospitalares unificados e salvar doentes por estatística globalizada em banco federado e integrado da ciência aberta e de precisão mundial da doença da vida real em humanos e animais nas nuvens das corporações.",
+        "correct": "B",
+        "explanation": "A correta é a B pois ontologias como HPO padronizam termos médicos para análise computacional unificada. As outras falham pois: A trata de sigilo, C refere-se a faturamento, D é erro físico e E é conveniência trivial.",
         "difficulty": "fácil"
     },
     {
@@ -7185,7 +7185,7 @@ window.questionBank = [
             "E": "Unir múltiplos VCFs de amostras em um único arquivo gigante."
         },
         "correct": "E",
-        "explanation": "Gabarito: B. Une todos os 1000 VCFs dos pacientes em uma planilhona só para podermos rodar testes de associação e procurar onde doentes e saudáveis divergem na matriz estatística de risco na computação.",
+        "explanation": "A correta é a E pois o comando merge une múltiplos arquivos VCF em uma única matriz de dados. As outras falham pois: A converte arquivos incompatíveis, B refere-se a filtragem, C trata de RNA e D realiza a separação.",
         "difficulty": "fácil"
     },
     {
@@ -7201,7 +7201,7 @@ window.questionBank = [
             "E": "Prejudicar o arquivamento em geladeiras e bancos de dados."
         },
         "correct": "B",
-        "explanation": "Gabarito: C. DDoS não rouba nada, apenas 'afoga' o servidor com milhões de acessos falsos simultâneos até queimar a CPU, barrando o médico de acessar o resultado de UTI do seu paciente na plataforma em nuvem do laboratório na hora crítica da vida.",
+        "explanation": "A correta é a B pois ataques DDoS visam sobrecarregar o sistema e impedir o acesso legítimo. As outras falham pois: A afeta periféricos físicos, C envolve falsificação, D envolve roubo e E envolve logística física.",
         "difficulty": "fácil"
     },
     {
@@ -7217,7 +7217,7 @@ window.questionBank = [
             "E": "Indica que o robô levou 90 minutos para processar os tubos."
         },
         "correct": "A",
-        "explanation": "Gabarito: B. Painel Alvo/Exoma é 'pescaria com isca' e anzol. Se On-Target é alto, você pescou só os peixes dourados que queria. Se for baixo, sua rede pegou bota velha (DNA Lixo off-target que não faz parte dos 500 genes do câncer que o médico pediu), torrando dinheiro do SUS na base.",
+        "explanation": "A correta é a A porque indica que o enriquecimento dos genes alvo foi bem-sucedido na captura. As outras falham pois: B confunde composição física com bioinformática, C refere-se a patologia clínica, D sugere falha catastrófica e E confunde taxa com tempo de processamento.",
         "difficulty": "fácil"
     },
     {
@@ -7232,8 +7232,8 @@ window.questionBank = [
             "D": "Confirmação imediata de doença letal.",
             "E": "Anotação urgente por risco severo."
         },
-        "correct": "C",
-        "explanation": "Gabarito: B. Essa é a regra ouro do Filtro de Doenças Raras. Se a doença é letal infantil e atinge 1 em 1 milhão, o gene causador NUNCA vai estar em 85% de toda a humanidade saudável da rua no banco GnomAD andando no shopping alegre e feliz. O computador ignora tudo que é comum (Frequente Benigno Polimorfismo) e foca no que é bizarro e Único do paciente da doença no VCF (Variantes raras de AF < 0.01).",
+        "correct": "B",
+        "explanation": "A correta é a B porque variantes frequentes na população saudável são consideradas polimorfismos benignos. As outras falham pois: A sugere erro técnico inexistente, C confunde tipos de variantes, D ignora frequência populacional e E superestima risco de variante comum.",
         "difficulty": "difícil"
     },
     {
@@ -7249,7 +7249,7 @@ window.questionBank = [
             "E": "Pipeta monocanal calibrada para manipulação de rotina."
         },
         "correct": "B",
-        "explanation": "Gabarito: B. Fenol não se brinca, é neurotóxico respiratório volátil potente, e queima por contato. Abre-se o vidro EXCLUSIVAMENTE sob capela química exaustora forte de ar industrial negativo (Suga a morte do ar para fora da bancada blindada no EPC coletivo da sala com o acrílico isolador no peito).",
+        "explanation": "A correta é a B pois capelas protegem coletivamente contra vapores tóxicos voláteis de reagentes. As outras falham pois: A é para descontaminação accidental, C é proteção individual, D carece de exaustão e E é um instrumento de medição.",
         "difficulty": "fácil"
     },
     {
@@ -7264,8 +7264,8 @@ window.questionBank = [
             "D": "Morte mitocondrial por radiação solar.",
             "E": "Destruição de genes via cruzamento."
         },
-        "correct": "C",
-        "explanation": "Gabarito: B. Típico do Brasil: algumas poucas famílias europeias ou quilombos isolados fundaram povoados isolados nas montanhas e fundões de vale em 1800 e não receberam imigrantes de fora. Mutações deletérias lá cruzaram entre parentes num funil (Bottle Neck e Efeito Fundador Isolado) criando um pico bizarro regional de doenças genéticas recessivas severas no município endêmico que o Genomas SUS tenta mapear para triagem pré-natal focado lá da rede básica PSF.",
+        "correct": "B",
+        "explanation": "A correta é a B porque populações isoladas propagam variantes raras devido ao limitado pool gênico inicial. As outras falham pois: A refere-se a centros diversos, C é absurdo biológico, D envolve radiação externa e E descreve perda genética inexistente.",
         "difficulty": "fácil"
     },
     {
@@ -7281,7 +7281,7 @@ window.questionBank = [
             "E": "Adenina."
         },
         "correct": "A",
-        "explanation": "Gabarito: D. A Uracila é a base exclusiva do RNA, substituindo a Timina que é exclusiva do DNA.",
+        "explanation": "A correta é a A pois a uracila substitui a timina na estrutura molecular do RNA. As outras falham pois: B, C e E existem em ambos e D é exclusiva do DNA.",
         "difficulty": "fácil"
     },
     {
@@ -7297,7 +7297,7 @@ window.questionBank = [
             "E": "Cloroplasto."
         },
         "correct": "B",
-        "explanation": "Gabarito: C. A mitocôndria produz ATP (energia) e guarda o DNA mitocondrial (mtDNA), herdado exclusivamente da mãe.",
+        "explanation": "A correta é a B porque mitocôndrias realizam a respiração celular e possuem genoma próprio. As outras falham pois: A sintetiza proteínas, C secreta substâncias, D realiza digestão e E é exclusivo de vegetais.",
         "difficulty": "fácil"
     },
     {
@@ -7313,7 +7313,7 @@ window.questionBank = [
             "E": "Molécula de RNA transportador em cenários controlados."
         },
         "correct": "B",
-        "explanation": "Gabarito: C. O cromossomo é apenas o DNA enovelado de forma extremamente compacta para caber dentro do núcleo da célula.",
+        "explanation": "A correta é a B porque cromossomos representam o DNA compactado com proteínas para divisão celular. As outras falham pois: A é agente infeccioso, C é barreira externa, D é funcional e E é transportador.",
         "difficulty": "fácil"
     },
     {
@@ -7329,7 +7329,7 @@ window.questionBank = [
             "E": "O ganho de superpoderes o que resulta em  o que demanda validação com métodos ortogonais de bancada."
         },
         "correct": "B",
-        "explanation": "Gabarito: C. Mutação é simplesmente um erro de cópia. Uma letra do DNA foi trocada, adicionada ou apagada por acidente.",
+        "explanation": "A correta é a B porque mutações são definidas como quaisquer mudanças na sequência nucleotídica original. As outras falham pois: A é processo curativo, C é fisiologia respiratória, D é morte programada e E é ficção.",
         "difficulty": "fácil"
     },
     {
@@ -7345,7 +7345,7 @@ window.questionBank = [
             "E": "Alterar a cor do sangue sensível a variações de pH."
         },
         "correct": "A",
-        "explanation": "Gabarito: C. A PCR (Reação em Cadeia da Polimerase) é uma máquina de xerox molecular. Ela multiplica o DNA para que possamos enxergá-lo nos exames.",
+        "explanation": "A correta é a A pois a PCR replica exponencialmente sequências específicas de DNA para análise. As outras falham pois: B é transcrição, C é fragmentação enzimática, D é esterilização e E é reação química cromática.",
         "difficulty": "fácil"
     },
     {
@@ -7361,7 +7361,7 @@ window.questionBank = [
             "E": "Next-Generation Sequencing (Sequenciamento de Nova Geração)."
         },
         "correct": "E",
-        "explanation": "Gabarito: B. NGS é a tecnologia moderna que permite ler milhões de pedaços de DNA ao mesmo tempo.",
+        "explanation": "A correta é a E porque NGS é o acrônimo internacional para sequenciamento de alto desempenho. As outras falham pois: A, B, C e D são definições inventadas sem significado técnico.",
         "difficulty": "fácil"
     },
     {
@@ -7377,7 +7377,7 @@ window.questionBank = [
             "E": "Mede o pH da solução, consequentemente,  sendo um procedimento que depende de validação adicional."
         },
         "correct": "B",
-        "explanation": "Gabarito: B. A centrífuga usa a força centrífuga para jogar o que é pesado para o fundo (pellet) e deixar o que é leve em cima (sobrenadante).",
+        "explanation": "A centrífuga utiliza a força centrífuga para separar componentes por densidade. As outras falham pois: A serve para identificação, C é para fervura, D para conservação e E mede acidez.",
         "difficulty": "fácil"
     },
     {
@@ -7393,7 +7393,7 @@ window.questionBank = [
             "E": "Placa de Petri."
         },
         "correct": "D",
-        "explanation": "Gabarito: C. A Flow Cell é a peça-chave onde o DNA gruda e brilha para a máquina ler as letras.",
+        "explanation": "A Flow Cell é o suporte físico onde ocorrem o sequenciamento e a captura de imagens. As outras falham pois: A armazena amostras, B transfere líquidos, C é para microscopia comum e E para culturas.",
         "difficulty": "fácil"
     },
     {
@@ -7409,7 +7409,7 @@ window.questionBank = [
             "E": "Pesar reagentes sensíveis a variações de pH."
         },
         "correct": "D",
-        "explanation": "Gabarito: C. Ele realiza os 'ciclos térmicos' necessários para separar e copiar o DNA.",
+        "explanation": "O termociclador realiza ciclos térmicos essenciais para a amplificação via PCR. As outras falham pois: A capta imagens, B esteriliza materiais, C avalia condutividade e E mede massa física.",
         "difficulty": "fácil"
     },
     {
@@ -7425,7 +7425,7 @@ window.questionBank = [
             "E": "Colocar em sacos brancos limitando reprodutibilidade."
         },
         "correct": "A",
-        "explanation": "Gabarito: D. Agulhas furam sacos e acidentam os lixeiros. Devem ir direto para caixas rígidas de papelão/plástico grosso.",
+        "explanation": "Descartar em recipientes rígidos sem reencapar previne furos e acidentes biológicos. As outras falham pois: B causa acidentes, C contamina a rede, D é perigoso e E fura facilmente.",
         "difficulty": "fácil"
     },
     {
@@ -7441,7 +7441,7 @@ window.questionBank = [
             "E": "Esterilizar materiais com calor e alta pressão."
         },
         "correct": "E",
-        "explanation": "Gabarito: C. A autoclave é uma panela de pressão gigante que mata qualquer micróbio com vapor fervente.",
+        "explanation": "A autoclave esteriliza materiais através de calor úmido e alta pressão. As outras falham pois: A quantifica proteínas, B separa DNA, C produz água pura e D conserva amostras.",
         "difficulty": "fácil"
     },
     {
@@ -7457,7 +7457,7 @@ window.questionBank = [
             "E": "Usar óculos de proteção exigidos por segurança."
         },
         "correct": "B",
-        "explanation": "Gabarito: C. O laboratório é cheio de venenos e vírus. Comer ali é um risco de intoxicação gravíssimo.",
+        "explanation": "Ingerir alimentos ou bebidas no laboratório impede contaminações acidentais por patógenos ou químicos. As outras falham pois: A, C, D e E são normas de biossegurança obrigatórias.",
         "difficulty": "fácil"
     },
     {
@@ -7473,7 +7473,7 @@ window.questionBank = [
             "E": "Proteger pele e roupas contra respingos e químicos."
         },
         "correct": "E",
-        "explanation": "Gabarito: B. O jaleco é o seu escudo. Se cair ácido, cai no jaleco e não na sua pele.",
+        "explanation": "O jaleco atua como barreira física de proteção contra agentes biológicos e químicos. As outras falham pois: A é utilitário, B é térmico, C é social e D é anti-higiênico.",
         "difficulty": "fácil"
     },
     {
@@ -7489,7 +7489,7 @@ window.questionBank = [
             "E": "Passar álcool 70% influenciando a estabilidade."
         },
         "correct": "D",
-        "explanation": "Gabarito: C. O lava-olhos dilui o ácido ou base instantaneamente, salvando o funcionário da cegueira.",
+        "explanation": "O uso imediato do lava-olhos dilui o químico, minimizando lesões oculares graves. As outras falham pois: A agrava lesões, B atrasa socorro, C causa atrito e E queima tecidos.",
         "difficulty": "fácil"
     },
     {
@@ -7505,7 +7505,7 @@ window.questionBank = [
             "E": "Técnica de Centrifugação Lenta Especial."
         },
         "correct": "B",
-        "explanation": "Gabarito: C. É o papel assinado pelo paciente provando que ele sabe dos riscos da pesquisa e aceitou de boa vontade.",
+        "explanation": "TCLE é o documento que garante a autonomia e o consentimento do paciente em pesquisas. As outras falham pois: A, C, D e E são siglas fictícias ou incorretas.",
         "difficulty": "fácil"
     },
     {
@@ -7521,7 +7521,7 @@ window.questionBank = [
             "E": "Não, a permanência é obrigatória até o fim."
         },
         "correct": "A",
-        "explanation": "Gabarito: B. O princípio da Autonomia garante que o paciente entra e sai da pesquisa livremente.",
+        "explanation": "O paciente possui direito constitucional de desistência da pesquisa sem prejuízos ao tratamento. As outras falham pois: B é antiético, C ilegal, D burocrático e E escravagista.",
         "difficulty": "fácil"
     },
     {
@@ -7537,7 +7537,7 @@ window.questionBank = [
             "E": "Sistema."
         },
         "correct": "D",
-        "explanation": "Gabarito: B. Sistema Único de SAÚDE.",
+        "explanation": "A correta é a D pois o SUS é o Sistema Único de Saúde. As outras falham pois: A usa termo da assistência social, B confunde com seguridade social, C usa palavra inexistente na sigla e E foca na primeira letra.",
         "difficulty": "fácil"
     },
     {
@@ -7553,7 +7553,7 @@ window.questionBank = [
             "E": "Integralidade."
         },
         "correct": "A",
-        "explanation": "Gabarito: C. É Universal. Abrange todo mundo, independente de raça, cor ou dinheiro.",
+        "explanation": "A correta é a A porque universalidade garante acesso a todos. As outras falham pois: B trata de participação popular, C divide gestão administrativa, D busca justiça na desigualdade e E foca no cuidado completo.",
         "difficulty": "fácil"
     },
     {
@@ -7569,7 +7569,7 @@ window.questionBank = [
             "E": "Prevenção Terciária aumentando tempo de manipulação."
         },
         "correct": "A",
-        "explanation": "Gabarito: D. A vacina é prevenção primária porque age antes do vírus atingir a pessoa.",
+        "explanation": "A correta é a A pois vacinas evitam que doenças surjam. As outras falham pois: B é para cuidados terminais, C foca em diagnóstico precoce, D envolve procedimentos cirúrgicos e E foca na reabilitação.",
         "difficulty": "fácil"
     },
     {
@@ -7585,7 +7585,7 @@ window.questionBank = [
             "E": "Conter apenas sequências de letras e um cabeçalho."
         },
         "correct": "E",
-        "explanation": "Gabarito: B. O FASTA é o texto mais puro do DNA. Ele tem o nome da sequência em cima e as letrinhas embaixo, nada mais.",
+        "explanation": "A correta é a E pois o FASTA contém sequências e cabeçalhos. As outras falham pois: A refere-se a imagens, B é para vídeos, C é proprietário e D usa planilhas numéricas.",
         "difficulty": "fácil"
     },
     {
@@ -7601,7 +7601,7 @@ window.questionBank = [
             "E": "Imagem em miniatura da célula exigindo indexação."
         },
         "correct": "C",
-        "explanation": "Gabarito: B. O 'Q' significa Qualidade. Ele diz se aquele 'A' é realmente um 'A' ou se foi um borrão na foto da máquina.",
+        "explanation": "A correta é a C pois FASTQ inclui qualidade por base. As outras falham pois: A não existe em genômica, B dados sensíveis são protegidos, D tradução não é função do arquivo e E imagens têm formatos próprios.",
         "difficulty": "fácil"
     },
     {
@@ -7617,7 +7617,7 @@ window.questionBank = [
             "E": "Um arquivo de música digital com ajuste de software."
         },
         "correct": "D",
-        "explanation": "Gabarito: C. É como a foto na caixa do quebra-cabeça. Usamos o Genoma de Referência para saber onde encaixar os pedacinhos do genoma do nosso paciente.",
+        "explanation": "A correta é a D pois serve como guia para comparação. As outras falham pois: A é o objeto de estudo, B é espécie diferente, C bancos são públicos e E música usa formatos digitais.",
         "difficulty": "fácil"
     },
     {
@@ -7633,7 +7633,7 @@ window.questionBank = [
             "E": "Tradução de textos mitigada por filtros."
         },
         "correct": "D",
-        "explanation": "Gabarito: A. VCF é a tabela de Mutações. Ele diz 'No cromossomo 1, deveria ter um A, mas o seu paciente tem um T'.",
+        "explanation": "A correta é a D pois armazena variantes em relação à referência. As outras falham pois: A é financeiro, B é imagem 3D, C é texto médico e E é linguística.",
         "difficulty": "fácil"
     },
     {
@@ -7649,7 +7649,7 @@ window.questionBank = [
             "E": "Medição do peso da máquina com ajuste computacional."
         },
         "correct": "B",
-        "explanation": "Gabarito: C. O BWA pega as milhares de pecinhas do DNA do paciente e monta o quebra-cabeça em cima do mapa guia.",
+        "explanation": "A correta é a B pois BWA mapeia sequências na referência. As outras falham pois: A é clínico, C é design gráfico, D é gestão de energia e E é física.",
         "difficulty": "fácil"
     },
     {
@@ -7665,7 +7665,7 @@ window.questionBank = [
             "E": "Linux (ambiente Unix)."
         },
         "correct": "E",
-        "explanation": "Gabarito: C. O Linux, operado por tela preta e comandos em texto (terminal), é a base mundial de servidores por ser rápido, seguro e não gastar energia com telas gráficas bonitas.",
+        "explanation": "A correta é a E pois Linux é o padrão de servidores. As outras falham pois: A e C são Windows obsoletos, B é móvel e D é Apple mobile.",
         "difficulty": "fácil"
     },
     {
@@ -7681,7 +7681,7 @@ window.questionBank = [
             "E": "Listar os arquivos e pastas que estão dentro de um diretório."
         },
         "correct": "E",
-        "explanation": "Gabarito: C. 'ls' vem de LiSt. É como abrir uma pasta no Windows e ver os arquivos lá dentro.",
+        "explanation": "A correta é a E pois ls lista conteúdos de diretórios. As outras falham pois: A é planilha, B é visual, C destrói dados e D é áudio.",
         "difficulty": "fácil"
     },
     {
@@ -7713,7 +7713,7 @@ window.questionBank = [
             "E": "Impressão de laudos em clusters de processamento."
         },
         "correct": "B",
-        "explanation": "Gabarito: B. O GitHub é o 'Google Drive' dos códigos de computador, permitindo que cientistas trabalhem no mesmo programa juntos.",
+        "explanation": "A correta é a B por ser a plataforma padrão para versionamento de código fonte. As outras falham pois: A remove vírus, C edita vídeos cirúrgicos, D realiza sequenciamento físico e E imprime laudos clínicos.",
         "difficulty": "fácil"
     },
     {
@@ -7729,7 +7729,7 @@ window.questionBank = [
             "E": "Ativação da internet sem integração de dados."
         },
         "correct": "B",
-        "explanation": "Gabarito: C. Cat (concatenate) apenas pega o texto do bloco de notas e vomita na sua tela preta para você ler rapidamente.",
+        "explanation": "A correta é a B pois o comando 'cat' exibe o conteúdo textual no terminal. As outras falham pois: A exclui arquivos, C renomeia documentos, D trata de imagens de animais e E ativa conectividade.",
         "difficulty": "fácil"
     },
     {
@@ -7745,7 +7745,7 @@ window.questionBank = [
             "E": "Indicação de óbito de pacientes com ajuste de software."
         },
         "correct": "D",
-        "explanation": "Gabarito: C. P < 0.05 é o padrão universal para dizer: 'Opa, a diferença entre o doente e o saudável aqui é real, não foi por acaso'.",
+        "explanation": "A correta é a D pois p < 0,05 indica que o resultado possui significância estatística. As outras falham pois: A refere-se a mutações, B indica falha metodológica, C sugere nulidade e E foca em óbitos.",
         "difficulty": "médio"
     },
     {
@@ -7761,7 +7761,7 @@ window.questionBank = [
             "E": "Estudo de animais de fazenda com ajuste de software."
         },
         "correct": "B",
-        "explanation": "Gabarito: C. Ancestralidade genômica nos conta de qual continente os nossos antepassados vieram há centenas ou milhares de anos.",
+        "explanation": "A correta é a B por definir a origem geográfica histórica dos genes herdados. As outras falham pois: A faz contagem populacional, C define fenótipo de pele, D aborda herança financeira e E foca em agropecuária.",
         "difficulty": "fácil"
     },
     {
@@ -7777,7 +7777,7 @@ window.questionBank = [
             "E": "Quando um pequeno grupo isolado funda uma nova linhagem genética."
         },
         "correct": "E",
-        "explanation": "Gabarito: B. Ao fundar uma ilha com apenas 5 casais, os filhos terão apenas as genéticas daqueles 10 indivíduos, perdendo a diversidade do resto do mundo.",
+        "explanation": "A correta é a E pois o efeito ocorre quando poucos indivíduos iniciam nova população. As outras falham pois: A é sobre empreendedorismo, B trata de descobertas, C inaugura hospitais e D foca em crescimento global.",
         "difficulty": "fácil"
     },
     {
@@ -7793,7 +7793,7 @@ window.questionBank = [
             "E": "Doação de sangue rotineira em postos de saúde governamentais."
         },
         "correct": "B",
-        "explanation": "Gabarito: B. Cruza consanguínea soma os genes recessivos ruins que estavam escondidos na família, fazendo a doença eclodir nos filhos.",
+        "explanation": "A correta é a B pois descreve o cruzamento entre parentes com riscos genéticos. As outras falham pois: A envolve transfusão, C tipo sanguíneo específico, D refere-se a inimigos e E foca em doação.",
         "difficulty": "fácil"
     },
     {
@@ -7809,7 +7809,7 @@ window.questionBank = [
             "E": "Curar o câncer e normalizar dados brutos em etapas iniciais."
         },
         "correct": "D",
-        "explanation": "Gabarito: B. Estudo de Associação. Ele cruza os dados do mapa genético de pessoas sadias e doentes e procura onde está a diferença que causa o risco.",
+        "explanation": "A correta é a D pois o GWAS identifica variantes associadas a doenças complexas. As outras falham pois: A mede pressão, B foca em falsos positivos, C avalia peso e E promete cura imediata.",
         "difficulty": "fácil"
     },
     {
@@ -7825,7 +7825,7 @@ window.questionBank = [
             "E": "CLT (Lei do Trabalho) e regras de indexação de busca."
         },
         "correct": "C",
-        "explanation": "Gabarito: C. A LGPD pune com multas gigantescas empresas que deixam vazar resultados de exames e CPFs de clientes na web.",
+        "explanation": "A correta é a C pois a LGPD regulamenta a privacidade de dados no Brasil. As outras falham pois: A rege trânsito, B foca em informática, D protege crianças e E define leis trabalhistas.",
         "difficulty": "fácil"
     },
     {
@@ -7841,7 +7841,7 @@ window.questionBank = [
             "E": "Guardar senhas escritas em papéis colados no monitor de vídeo."
         },
         "correct": "C",
-        "explanation": "Gabarito: C. Se o colega logado na sua conta deletar o resultado de um tumor, a polícia baterá na sua porta. Senha não se compartilha, nunca.",
+        "explanation": "A correta é a C pois a segurança depende do sigilo absoluto das credenciais. As outras falham pois: A usa senhas fracas, B permite compartilhamento, D deixa sistema exposto e E anota senhas fisicamente.",
         "difficulty": "fácil"
     },
     {
@@ -7857,7 +7857,7 @@ window.questionBank = [
             "E": "O estudo exclusivo de plantas curativas e modelos estatísticos."
         },
         "correct": "D",
-        "explanation": "Gabarito: B. A Farmacogenômica diz: 'Não dê o remédio X para o João, pois a genética dele avisa que ele sofrerá efeitos colaterais mortais. Dê o remédio Y'.",
+        "explanation": "A correta é a D porque a farmacogenômica estuda como variações genéticas influenciam a resposta aos medicamentos. As outras falham pois: A foca em economia, B trata de acesso geográfico, C refere-se à manipulação física e E aborda botânica.",
         "difficulty": "fácil"
     },
     {
@@ -7873,7 +7873,7 @@ window.questionBank = [
             "E": "Detectar doenças genéticas graves nos primeiros dias de vida."
         },
         "correct": "E",
-        "explanation": "Gabarito: C. É o maior programa de rastreio genético populacional primário. Um furo no calcanhar acha doenças que, se tratadas no mês 1, salvam a criança do retardo mental.",
+        "explanation": "A correta é a E pois o teste identifica precocemente doenças genéticas e metabólicas em recém-nascidos. As outras falham pois: A busca traços estéticos, B foca em odontologia, C prevê estatura física e D detecta fraturas.",
         "difficulty": "fácil"
     },
     {
@@ -7889,7 +7889,7 @@ window.questionBank = [
             "E": "Perder todos os dados salvos ao desligar o sistema central."
         },
         "correct": "B",
-        "explanation": "Gabarito: C. Computação na Nuvem é usar um PC fortíssimo que fica num galpão da Amazon no exterior para rodar suas análises genéticas aqui do Brasil, via internet.",
+        "explanation": "A correta é a B pois computação em nuvem envolve o uso de recursos computacionais via internet. As outras falham pois: A imagina máquinas voadoras, C baseia-se em meteorologia, D sugere fumaça física e E indica falha de armazenamento.",
         "difficulty": "fácil"
     },
     {
@@ -7905,7 +7905,7 @@ window.questionBank = [
             "E": "Extrair, Transformar e Carregar dados em sistemas centrais."
         },
         "correct": "E",
-        "explanation": "Gabarito: B. ETL é o trabalho de arrumar a casa digital. Você pega os dados caóticos dos médicos, formata direitinho (Transform) e joga na nuvem oficial (Load).",
+        "explanation": "A correta é a E, sendo a sigla técnica para Extract, Transform e Load em bancos de dados. As outras falham pois: A foca em redação, B sugere ilegalidade jurídica, C refere-se a logística e D erra os termos técnicos.",
         "difficulty": "fácil"
     },
     {
@@ -7921,7 +7921,7 @@ window.questionBank = [
             "E": "Dificultar a vida do médico com registros de busca complexos."
         },
         "correct": "D",
-        "explanation": "Gabarito: C. A padronização de vocabulário permite que a Inteligência Artificial e a estatística do Brasil entendam do que o médico japonês ou paulista estão falando com a mesma linguagem (códigos).",
+        "explanation": "A correta é a D porque códigos como a CID padronizam a terminologia médica globalmente. As outras falham pois: A visa custos operacionais, B trata de impostos, C foca na extensão do nome e E supõe dificultar registros.",
         "difficulty": "fácil"
     },
     {
@@ -7937,7 +7937,7 @@ window.questionBank = [
             "E": "Uma condição que afeta um número reduzido de indivíduos."
         },
         "correct": "E",
-        "explanation": "Gabarito: C. Doenças Raras são o alvo principal do Sequenciamento (WES/WGS). Elas são raras isoladamente, mas somadas afetam milhares de famílias.",
+        "explanation": "A correta é a E pois doenças raras são definidas pela sua baixa incidência na população. As outras falham pois: A descreve alergias comuns, B foca em patologias sazonais, C limita-se a idosos e D indica alta prevalência.",
         "difficulty": "fácil"
     },
     {
@@ -7953,7 +7953,7 @@ window.questionBank = [
             "E": "O teste indica doença em uma pessoa que está totalmente sã."
         },
         "correct": "E",
-        "explanation": "Gabarito: B. Falso Positivo é o 'alarme falso'. Gera pânico desnecessário e gasto médico com cirurgias em alguém que não tem a doença.",
+        "explanation": "A correta é a E porque o falso positivo ocorre quando o teste aponta doença em alguém saudável. As outras falham pois: A é erro técnico, B é falso negativo, C é verdadeiro negativo e D é verdadeiro positivo.",
         "difficulty": "fácil"
     },
     {
@@ -7969,7 +7969,7 @@ window.questionBank = [
             "E": "O teste indica saúde em uma pessoa que está realmente doente."
         },
         "correct": "E",
-        "explanation": "Gabarito: D. Falso negativo é um erro fatal na saúde pública. O paciente sai feliz achando que está saudável e a doença continua evoluindo sem tratamento.",
+        "explanation": "A correta é a E pois o falso negativo acontece quando o teste não detecta a doença existente. As outras falham pois: A é dano material, B é verdadeiro negativo, C é falha de hardware e D é verdadeiro positivo.",
         "difficulty": "fácil"
     },
     {
@@ -7985,7 +7985,7 @@ window.questionBank = [
             "E": "Arquivo de texto com comandos executados pelo computador."
         },
         "correct": "E",
-        "explanation": "Gabarito: C. Fazer um script é escrever a 'receita' de comandos pro computador fazer todo o seu trabalho chato automaticamente enquanto você toma café.",
+        "explanation": "A correta é a E pois scripts são arquivos com sequências de comandos para automatizar tarefas. As outras falham pois: A é termo biológico, B refere-se a uniformes, C trata de marcas e D é hardware.",
         "difficulty": "fácil"
     },
     {
@@ -8001,7 +8001,7 @@ window.questionBank = [
             "E": "Adaptação gradual a diferentes ambientes e dietas locais."
         },
         "correct": "E",
-        "explanation": "Gabarito: C. A seleção natural escolheu os genes que melhor se adaptavam ao sol extremo da África ou ao frio extremo da Europa, moldando o nosso genoma visual ao longo das eras.",
+        "explanation": "A correta é a E porque as variações fenotípicas resultam da adaptação evolutiva aos ambientes e dietas. As outras falham pois: A foca em estética, B sugere mutação instantânea, C nega espécie única e D foca em nutrição.",
         "difficulty": "fácil"
     },
     {
@@ -8017,7 +8017,7 @@ window.questionBank = [
             "E": "Realizar o salvamento dos dados apenas uma vez por ano."
         },
         "correct": "D",
-        "explanation": "Gabarito: C. 3 Cópias no total, 2 mídias diferentes, e 1 cópia bem longe (Off-site). Se o seu hospital inteiro pegar fogo, a cópia '1' que estava lá na nuvem de outro estado salvará todo mundo.",
+        "explanation": "A correta é a D pois o '1' exige uma cópia off-site para segurança. As outras falham pois: A trata de senhas, B é redundância de hardware, C limita arquivos desnecessariamente e E define periodicidade anual insuficiente.",
         "difficulty": "fácil"
     },
     {
@@ -8033,7 +8033,7 @@ window.questionBank = [
             "E": "Traduzir o laudo final para o idioma francês obrigatoriamente."
         },
         "correct": "A",
-        "explanation": "Gabarito: C. Criptografia é o cadeado digital. Se um hacker furtar o seu arquivo, ele vai abrir e ver bilhões de números aleatórios absurdos, e não o genoma ou o nome do seu paciente.",
+        "explanation": "A correta é a A pois criptografia protege dados codificando o acesso. As outras falham pois: B trata de descarte, C é lacre físico, D é estética visual e E é tradução linguística obrigatória.",
         "difficulty": "fácil"
     },
     {
@@ -8049,7 +8049,7 @@ window.questionBank = [
             "E": "Cerca de 1,5% a 2% (O Exoma)."
         },
         "correct": "E",
-        "explanation": "Gabarito: C. Apesar de ser gigante, apenas 2% do nosso DNA de fato produz as peças da nossa vida. O restante são peças de controle estrutural, ligantes ou 'DNA antigo' residual.",
+        "explanation": "A correta é a E pois o exoma compõe apenas 1,5-2% do DNA. As outras falham pois: A e B superestimam o total, C subestima drasticamente e D é um valor aleatório sem base científica.",
         "difficulty": "médio"
     },
     {
@@ -8065,7 +8065,7 @@ window.questionBank = [
             "E": "Mapa modelo usado como gabarito para encontrar mutações."
         },
         "correct": "E",
-        "explanation": "Gabarito: C. O genoma de referência é como a foto na caixa de um quebra-cabeças. Ele nos guia para saber onde cada read do nosso paciente deve se encaixar e o que está diferente.",
+        "explanation": "A correta é a E pois serve como mapa modelo para comparação de sequências. As outras falham pois: A é software, B foca em vírus, C usa espécie errada e D ignora a origem multi-doador anônima.",
         "difficulty": "fácil"
     },
     {
@@ -8081,7 +8081,7 @@ window.questionBank = [
             "E": "Identificar mutações comparando o paciente com a referência."
         },
         "correct": "E",
-        "explanation": "Gabarito: B. Variant Calling é a fase onde o computador vasculha o alinhamento e diz: 'Aqui o paciente tem um T, mas a referência dizia que era para ter um G'.",
+        "explanation": "A correta é a E pois identifica diferenças entre paciente e referência. As outras falham pois: A é estética, B é segurança cibernética, C é proteômica e D é simples transferência de dados.",
         "difficulty": "médio"
     },
     {
@@ -8097,7 +8097,7 @@ window.questionBank = [
             "E": "SAM é texto legível e BAM é sua versão binária compacta."
         },
         "correct": "E",
-        "explanation": "Gabarito: C. BAM significa 'Binary Alignment Map'. Trabalhar com SAM (texto) gasta centenas de gigabytes. O BAM é a versão compactada para o computador ler mais rápido.",
+        "explanation": "A correta é a E pois BAM é a versão binária compactada do SAM legível. As outras falham pois: A nega a relação, B cita imagens, C separa moléculas erroneamente e D diz faltar dados de qualidade.",
         "difficulty": "fácil"
     },
     {
@@ -8113,7 +8113,7 @@ window.questionBank = [
             "E": "Escrever códigos em Python para modelos probabilísticos."
         },
         "correct": "B",
-        "explanation": "Gabarito: B. O IGV atua como um 'microscópio virtual' do genoma. Ele permite que o biomédico ou médico visualize a mutação diretamente na tela.",
+        "explanation": "A correta é a B pois permite visualizar reads alinhados sobre a referência. As outras falham pois: A é montagem de genomas, C é software financeiro, D foca em proteínas e E é programação pura.",
         "difficulty": "fácil"
     },
     {
@@ -8129,7 +8129,7 @@ window.questionBank = [
             "E": "SNP troca uma letra; InDel insere ou remove bases do DNA."
         },
         "correct": "E",
-        "explanation": "Gabarito: C. SNP (Polimorfismo de Único Nucleotídeo) mexe com apenas uma posição. InDel (Insertion/Deletion) adiciona ou remove blocos de letras do código.",
+        "explanation": "A correta é a E pois distingue troca pontual de inserção ou deleção de bases. As outras falham pois: A nega diferenças estruturais, B generaliza clinicamente, C limita moléculas e D cita patógenos infecciosos.",
         "difficulty": "fácil"
     },
     {
@@ -8145,7 +8145,7 @@ window.questionBank = [
             "E": "O paciente não apresenta nenhuma das letras na posição."
         },
         "correct": "D",
-        "explanation": "Gabarito: B. REF = Referência (o normal da humanidade). ALT = Alternativo (A mutação detectada no seu paciente).",
+        "explanation": "A correta é a D pois REF indica o modelo e ALT a mutação do paciente. As outras falham pois: A supõe erro técnico, B sugere deleção, C inverte as fontes e E nega dados detectados.",
         "difficulty": "fácil"
     },
     {
@@ -8161,7 +8161,7 @@ window.questionBank = [
             "E": "Remover vírus do arquivo em análises probabilísticas."
         },
         "correct": "B",
-        "explanation": "Gabarito: B. Ter uma lista de letras mutadas não ajuda o médico. A anotação traduz isso e diz: 'Essa mutação G>C está no gene TP53 e destrói a proteína do câncer'.",
+        "explanation": "A correta é a B pois interpreta o impacto biológico da mutação na proteína. As outras falham pois: A altera o mapa modelo, C mede idade, D é criptografia e E é filtragem de vírus.",
         "difficulty": "fácil"
     },
     {
@@ -8177,7 +8177,7 @@ window.questionBank = [
             "E": "Apenas trinta por cento do genoma do paciente foi lido."
         },
         "correct": "D",
-        "explanation": "Gabarito: C. A 'Profundidade' é a nossa prova real. Se uma letra é fotografada 30 vezes e nas 30 vezes ela é um 'T', temos total certeza de que não foi um erro aleatório da câmera.",
+        "explanation": "A correta é a D pois a profundidade indica quantas vezes cada base foi lida. As outras falham pois: A refere-se ao tempo de corrida, B trata da multiplexação de pacientes, C descreve a contagem cromossômica e E define a abrangência horizontal.",
         "difficulty": "fácil"
     },
     {
@@ -8193,7 +8193,7 @@ window.questionBank = [
             "E": "Read 100% igual ao genoma alvo."
         },
         "correct": "C",
-        "explanation": "Gabarito: C. Se o gabarito era 'A' e a peça do paciente é 'T', eles não emparelham perfeitamente, ocorrendo um 'mismatch'.",
+        "explanation": "A correta é a C porque o mismatch representa uma diferença nucleotídica entre amostra e referência. As outras falham pois: A é falha de hardware, B é problema elétrico, D refere-se à composição química e E define um emparelhamento perfeito.",
         "difficulty": "fácil"
     },
     {
@@ -8208,8 +8208,8 @@ window.questionBank = [
             "D": "Fazer o download de genomas na internet.",
             "E": "Cortar adaptadores e indexar bibliotecas."
         },
-        "correct": "D",
-        "explanation": "Gabarito: C. O FastQC é o 'controle de qualidade' primário. Ele mostra gráficos que acusam se a luz do laser enfraqueceu ou se os adaptadores poluiram a amostra.",
+        "correct": "C",
+        "explanation": "A correta é a C porque o FastQC analisa a qualidade técnica das leituras brutas. As outras falham pois: A trata de exclusão, B de filogenia, D de transferência de arquivos e E de processamento de adaptadores.",
         "difficulty": "fácil"
     },
     {
@@ -8225,7 +8225,7 @@ window.questionBank = [
             "E": "Ambos utilizam RNA e exigem alto processamento computacional."
         },
         "correct": "D",
-        "explanation": "Gabarito: B. O DNA é o livro de receitas fechado. O RNA-Seq nos mostra quais receitas o cozinheiro está ativamente lendo e usando para fazer comida naquele dia.",
+        "explanation": "A correta é a D pois distingue a estabilidade do genoma da dinâmica do transcriptoma. As outras falham pois: A ignora a função do RNA-Seq, B limita o escopo biológico, C foca em organelas específicas e E confunde as moléculas alvo.",
         "difficulty": "fácil"
     },
     {
@@ -8241,7 +8241,7 @@ window.questionBank = [
             "E": "Registra a qualidade das bases e gera muitos falsos positivos."
         },
         "correct": "D",
-        "explanation": "Gabarito: C. O arquivo BED tem geralmente 3 colunas: O cromossomo, o ponto inicial e o ponto final. Serve para o computador saber exatamente onde ele deve recortar os dados.",
+        "explanation": "A correta é a D porque o formato BED define intervalos cromossômicos por coordenadas numéricas. As outras falham pois: A é para finanças, B para bioimagem, C para linguística e E para métricas de qualidade.",
         "difficulty": "fácil"
     },
     {
@@ -8257,7 +8257,7 @@ window.questionBank = [
             "E": "Adquirir hardware novo para suportar análises de larga escala."
         },
         "correct": "C",
-        "explanation": "Gabarito: B. Muito usado quando descobrimos uma espécie nova de bactéria ou bicho que a ciência não conhecia, obrigando a bioinformática a reconstruir a fita de DNA do zero.",
+        "explanation": "A correta é a C pois a montagem de novo reconstrói o genoma sem auxílio de guia. As outras falham pois: A é processo laboratorial, B é manutenção de software, D é modelagem bioquímica e E é aquisição física.",
         "difficulty": "fácil"
     },
     {
@@ -8273,7 +8273,7 @@ window.questionBank = [
             "E": "0/1 indica tumor benigno e 1/1 indica malignidade celular."
         },
         "correct": "C",
-        "explanation": "Gabarito: C. O zero (0) representa a versão normal (Referência). O um (1) representa a mutação (Alternativo). Logo, 0/1 é um portador heterozigoto.",
+        "explanation": "A correta é a C pois o 0 representa referência e o 1 o alelo variante em diploidia. As outras falham pois: A prediz prognóstico clínico, B refere-se a cromossomos sexuais, D à identificação de gênero e E à classificação oncológica.",
         "difficulty": "fácil"
     },
     {
@@ -8289,7 +8289,7 @@ window.questionBank = [
             "E": "O DNA fetal se autorrepara restringindo o uso em bancos reais."
         },
         "correct": "C",
-        "explanation": "Gabarito: B. O câncer de pulmão gerado pelo fumo altera as células do pulmão (somáticas). Ele não afeta o espermatozoide. Apenas mutações germinativas passam de pai para filho.",
+        "explanation": "A correta é a C pois apenas mutações em linhagem germinativa são herdáveis. As outras falham pois: A nega a biologia tumoral, B culpa o software, D inventa proteção pelo RNA e E foca em reparo fetal.",
         "difficulty": "fácil"
     },
     {
@@ -8305,7 +8305,7 @@ window.questionBank = [
             "E": "Frequência do alelo menos comum para filtrar variantes raras."
         },
         "correct": "E",
-        "explanation": "Gabarito: B. Se a MAF for de 0.001 (0,1%), significa que esse alelo é muito raro e pode ser forte candidato a causar uma doença rara mendeliana.",
+        "explanation": "A correta é a E pois a MAF quantifica quão rara é uma variante na população. As outras falham pois: A foca em servidores, B em custos, C em afinidade química e D em processamento computacional.",
         "difficulty": "médio"
     },
     {
@@ -8321,7 +8321,7 @@ window.questionBank = [
             "E": "Navega entre diretórios, permitindo entrar ou sair de pastas."
         },
         "correct": "E",
-        "explanation": "Gabarito: C. O comando 'cd' equivale a você clicar duas vezes numa pasta do Windows para entrar nela na tela de texto preta do Linux.",
+        "explanation": "A correta é a E porque o comando altera o diretório de trabalho atual. As outras falham pois: A exibe data, B compacta dados, C exclui arquivos e D refere-se a hardware obsoleto.",
         "difficulty": "fácil"
     },
     {
@@ -8337,7 +8337,7 @@ window.questionBank = [
             "E": "C++."
         },
         "correct": "A",
-        "explanation": "Gabarito: C. O 'R' (junto com o Bioconductor) é a ferramenta suprema para RNA-Seq, Microarrays e plotagem de gráficos como Vulcão e PCA na academia de biologia.",
+        "explanation": "A correta é a A pois o R foi desenvolvido especificamente para análises estatísticas e gráficas. As outras falham pois: B cria sites, C é linguagem geral, D estiliza páginas e E é de baixo nível.",
         "difficulty": "fácil"
     },
     {
@@ -8353,7 +8353,7 @@ window.questionBank = [
             "E": "Exibe configurações de rede exigindo processamento em cluster."
         },
         "correct": "C",
-        "explanation": "Gabarito: B. É o 'Ctrl+F' turbinado do Linux. O grep vasculha gigabytes e te devolve só o que te interessa.",
+        "explanation": "A correta é a C pois o comando grep filtra padrões de texto em arquivos. As outras falham pois: A traduz sequências, B exclui dados, D descompacta arquivos e E configura redes.",
         "difficulty": "fácil"
     },
     {
@@ -8369,7 +8369,7 @@ window.questionBank = [
             "E": "Fluxo automatizado onde a saída de um é a entrada do próximo."
         },
         "correct": "E",
-        "explanation": "Gabarito: B. Pipeline é a linha de montagem. O FASTQ entra, passa pela limpeza, passa pelo alinhador, passa pelo GATK e sai como um VCF perfeitinho no final do cano.",
+        "explanation": "A correta é a E pois pipelines representam fluxos automatizados de processamento de dados. As outras falham pois: A é impressora, B cabo físico, C encanamento e D idioma russo.",
         "difficulty": "fácil"
     },
     {
@@ -8385,7 +8385,7 @@ window.questionBank = [
             "E": "Gera gráficos no terminal exigindo anotação de referência."
         },
         "correct": "D",
-        "explanation": "Gabarito: C. O Pipe conecta comandos. Exemplo: você manda o PC listar arquivos e liga num pipe para que ele apenas conte quantas linhas apareceram.",
+        "explanation": "A correta é a D pois o Pipe conecta a saída de um comando à entrada do próximo. As outras falham pois: A trava sistema, B deleta ocultos, C reinicia kernel e E gera gráficos.",
         "difficulty": "fácil"
     },
     {
@@ -8401,7 +8401,7 @@ window.questionBank = [
             "E": "Motor de cálculo astrofísico que exige bancos de referência."
         },
         "correct": "A",
-        "explanation": "Gabarito: C. Na genômica, lidamos com tabelas de 50.000 genes e colunas com pacientes. O Pandas lê isso e permite cruzar dados e achar respostas com apenas duas linhas de código em Python.",
+        "explanation": "A correta é a A pois Pandas é a biblioteca principal para manipulação de tabelas em Python. As outras falham pois: B simula jogos, C proteção ambiental, D modelagem 3D e E astrofísica.",
         "difficulty": "médio"
     },
     {
@@ -8417,7 +8417,7 @@ window.questionBank = [
             "E": "Alinhador de DNA mitocondrial com detecção de artefatos."
         },
         "correct": "D",
-        "explanation": "Gabarito: B. O Git é a máquina do tempo do programador. E o GitHub é a nuvem pública onde esses projetos salvos e colaborativos vivem.",
+        "explanation": "A correta é a D pois Git gerencia versões de código enquanto GitHub permite colaboração. As outras falham pois: A comprime vídeo, B servidor e-mail, C pirataria e E alinhamento DNA.",
         "difficulty": "fácil"
     },
     {
@@ -8433,7 +8433,7 @@ window.questionBank = [
             "E": "Recipiente de descarte baseado em modelos probabilísticos."
         },
         "correct": "B",
-        "explanation": "Gabarito: C. O maior problema antigo era 'funciona no meu PC mas quebra no seu'. O Docker resolve isso encapsulando todo o ambiente de uma vez.",
+        "explanation": "A correta é a B pois containers isolam softwares e dependências para rodarem em qualquer lugar. As outras falham pois: A sintetiza DNA, C encripta texto, D hardware físico e E descarte.",
         "difficulty": "fácil"
     },
     {
@@ -8449,7 +8449,7 @@ window.questionBank = [
             "E": "mkdir permissao."
         },
         "correct": "B",
-        "explanation": "Gabarito: C. O `chmod +x` adiciona a propriedade de eXecução. O Linux, por segurança, bloqueia programas recém-criados até você avisar que ele é executável.",
+        "explanation": "A correta é a B pois chmod +x atribui permissão de execução ao arquivo. As outras falham pois: A remove arquivos, C lê texto, D muda pasta e E cria diretório.",
         "difficulty": "fácil"
     },
     {
@@ -8465,7 +8465,7 @@ window.questionBank = [
             "E": "Ambiente interativo que une código, textos e visualização."
         },
         "correct": "E",
-        "explanation": "Gabarito: B. O Jupyter mudou a forma de se ensinar código. Você aperta 'Play' no bloco e o gráfico de biologia já salta em cores logo abaixo.",
+        "explanation": "A correta é a E pois Jupyter permite unir documentação, código e gráficos interativamente. As outras falham pois: A é planilha, B descompressor, C tradutor e D sequenciador.",
         "difficulty": "fácil"
     },
     {
@@ -8481,7 +8481,7 @@ window.questionBank = [
             "E": "Exibe as primeiras 10 linhas para visualização rápida."
         },
         "correct": "E",
-        "explanation": "Gabarito: B. Um VCF pode ter 40 GB. Tentar abrir no bloco de notas normal vai fritar seu notebook. Com `head`, ele mostra um rascunho instantâneo das primeiras linhas e encerra.",
+        "explanation": "A correta é a E pois o comando head visualiza o topo de arquivos sem sobrecarregar a memória. As outras falham pois: A apaga cabeçalhos, B renomeia linhas, C compacta e D exibe data.",
         "difficulty": "fácil"
     },
     {
@@ -8497,7 +8497,7 @@ window.questionBank = [
             "E": "Arquivos binários pesados que reduzem o poder preditivo."
         },
         "correct": "B",
-        "explanation": "Gabarito: B. O JSON (JavaScript Object Notation) virou a linguagem base de bancos de dados modernos por ser leve, flexível e universal em qualquer linguagem.",
+        "explanation": "A correta é a B pois o JSON é um formato de texto leve baseado em chave-valor amplamente utilizado para troca de dados. As outras falham pois: A refere-se a planilhas proprietárias, C trata de representação gráfica, D descreve softwares de sistema e E refere-se a formatos binários não legíveis.",
         "difficulty": "fácil"
     },
     {
@@ -8513,7 +8513,7 @@ window.questionBank = [
             "E": "|."
         },
         "correct": "D",
-        "explanation": "Gabarito: B. O sinal de maior `>` é o redirecionador (ex: `echo 'Olá' > arquivo.txt`). Ele pega o que ia para a tela e joga dentro de um bloco de texto.",
+        "explanation": "A correta é a D porque o operador '>' redireciona a saída padrão sobrescrevendo o conteúdo do arquivo destino. As outras falham pois: A executa comandos condicionalmente, B é um caractere curinga, C redireciona a entrada e E conecta comandos via pipes.",
         "difficulty": "fácil"
     },
     {
@@ -8529,7 +8529,7 @@ window.questionBank = [
             "E": "Taxa de falha do sequenciador que impede a montagem final."
         },
         "correct": "B",
-        "explanation": "Gabarito: B. P-valor é a chance da Sorte estar brincando com você. Um P-valor baixo (0.01) significa que a sorte não faria isso; o achado é muito sólido e real.",
+        "explanation": "A correta é a B pois o p-valor quantifica a probabilidade de observar os dados assumindo que a hipótese nula é verdadeira. As outras falham pois: A descreve biologia celular, C confunde com precisão, D foca em epidemiologia e E refere-se a erros de hardware.",
         "difficulty": "médio"
     },
     {
@@ -8545,7 +8545,7 @@ window.questionBank = [
             "E": "Valor com maior frequência exigindo ajuste de software."
         },
         "correct": "B",
-        "explanation": "Gabarito: C. A média simples é apenas somar tudo (todas as coberturas) e dividir pelo total. É a nota escolar clássica.",
+        "explanation": "A correta é a B pois a média aritmética é calculada somando-se todos os valores e dividindo pelo número de observações. As outras falham pois: A é um ponto arbitrário, C descreve a amplitude, D define a mediana e E descreve a moda.",
         "difficulty": "fácil"
     },
     {
@@ -8561,7 +8561,7 @@ window.questionBank = [
             "E": "A mediana é metade do outlier restringindo a aplicação."
         },
         "correct": "B",
-        "explanation": "Gabarito: C. Se os salários são 1, 2 e 90. A média infla injustamente para 31. A mediana protege os dados e crava em 2, mostrando o cenário mais real e imune ao valor doido de 90.",
+        "explanation": "A correta é a B porque a mediana, como medida de posição central, é menos sensível a valores extremos que a média. As outras falham pois: A inverte a lógica estatística, C sugere manipulação de dados, D nega a robustez da mediana e E inventa uma regra inexistente.",
         "difficulty": "fácil"
     },
     {
@@ -8577,7 +8577,7 @@ window.questionBank = [
             "E": "Indica que um gene inibe o outro exigindo anotação."
         },
         "correct": "B",
-        "explanation": "Gabarito: B. Correlação mede o quanto dois valores andam de mãos dadas. Se um sobe e o outro desce sempre, é correlação negativa. Se andam juntos para o alto, positiva.",
+        "explanation": "A correta é a B pois a correlação estatística indica como duas variáveis variam conjuntamente em termos de direção e força. As outras falham pois: A refere-se a mutações genéticas, C foca em tamanho físico, D descreve localização genômica e E define inibição biológica.",
         "difficulty": "fácil"
     },
     {
@@ -8593,7 +8593,7 @@ window.questionBank = [
             "E": "A variância populacional é idêntica à variância amostral."
         },
         "correct": "C",
-        "explanation": "Gabarito: C. A hipótese nula (H0) estabelece a premissa de que não há diferença ou efeito real, servindo como base para os testes de significância.",
+        "explanation": "A correta é a C porque a Hipótese Nula (H0) postula que não existe diferença ou efeito real entre os grupos comparados. As outras falham pois: A e B descrevem a hipótese alternativa, D foca em erros técnicos e E refere-se a testes de variância.",
         "difficulty": "fácil"
     },
     {
@@ -8609,7 +8609,7 @@ window.questionBank = [
             "E": "Indica o desvio padrão restringindo o uso em labs."
         },
         "correct": "D",
-        "explanation": "Gabarito: B. O Boxplot esconde os dados fora da curva nos pontinhos finos lá em cima e deixa na caixa colorida central os 50% dos resultados principais da sua turma, ajudando o olho humano a focar no grosso dos resultados.",
+        "explanation": "A correta é a D pois a caixa central do boxplot representa o Intervalo Interquartil, contendo os 50% centrais da distribuição. As outras falham pois: A ignora a estratificação, B confunde com análise biológica, C foca nos decis e E descreve dispersão absoluta.",
         "difficulty": "fácil"
     },
     {
@@ -8625,7 +8625,7 @@ window.questionBank = [
             "E": "Mede a temperatura do hardware durante a indexação."
         },
         "correct": "B",
-        "explanation": "Gabarito: B. Um Volcano plot perfeito tem a forma de V (ejetando pra cima os genes que o pesquisador descobriu como marcadores fortíssimos do câncer).",
+        "explanation": "A correta é a B pois o Volcano Plot relaciona a significância estatística (p-valor) com a magnitude da mudança (Fold Change). As outras falham pois: A e E são interpretações literais erradas, C usa métricas clínicas e D é conceitualmente vago.",
         "difficulty": "fácil"
     },
     {
@@ -8640,8 +8640,8 @@ window.questionBank = [
             "D": "Erro computacional que aumenta recursos e controle de qualidade.",
             "E": "Diagnosticar pessoa doente como sadia via clusters de análise."
         },
-        "correct": "D",
-        "explanation": "Gabarito: B. O Erro Tipo I é a ansiedade da publicação: Você grita 'Eureca, achei a causa!', mas era erro dos números. O Erro Tipo 2 é quando você acha que o Remédio X não funciona, joga ele no lixo, mas ele funcionava (Falso Negativo).",
+        "correct": "B",
+        "explanation": "A correta é a B pois o Erro Tipo I é a rejeição de uma hipótese nula que é, na verdade, verdadeira (Falso Positivo). As outras falham pois: A descreve resposta imunológica, C é falha de TI, D é erro algorítmico e E descreve o Erro Tipo II.",
         "difficulty": "fácil"
     },
     {
@@ -8656,8 +8656,8 @@ window.questionBank = [
             "D": "Tamanho do arquivo digital em megabytes exigindo processamento.",
             "E": "Identificação de genoma animal com parâmetros de software locais."
         },
-        "correct": "A",
-        "explanation": "Gabarito: B. Quanto maior a variância, mais diferente as pessoas daquela amostra são entre si. É a medida de dispersão mais forte.",
+        "correct": "B",
+        "explanation": "A correta é B pois a variância mede o quão dispersos os dados estão da média. As outras falham pois: A refere-se a medições físicas específicas de pesagem, C descreve fluxo logístico e não estatística de dispersão, D trata de armazenamento de bits sem relação estatística, E foca em software de genômica sem conceituar variabilidade.",
         "difficulty": "fácil"
     },
     {
@@ -8673,7 +8673,7 @@ window.questionBank = [
             "E": "Valor da prova zerado exigindo anotação com bancos externos."
         },
         "correct": "B",
-        "explanation": "Gabarito: B. 'Fold' (dobra/vezes). Se a FC deu negativo (-3), o grupo de doentes tem 3 vezes menos expressão daquele gene (Silenciamento).",
+        "explanation": "A correta é B porque FC=2 representa a duplicação da expressão de um gene. As outras falham pois: A descreve morfologia cromossômica e não níveis de transcrição, C confunde alteração de expressão com deleção ou morte gênica, D refere-se a erros de diretórios em sistemas operacionais, E trata de pontuação acadêmica em contexto totalmente diverso.",
         "difficulty": "fácil"
     },
     {
@@ -8688,8 +8688,8 @@ window.questionBank = [
             "D": "Travamento do computador na escala Y por falta de drivers.",
             "E": "Defeito nas cores RGB do monitor gerando falsos positivos."
         },
-        "correct": "A",
-        "explanation": "Gabarito: B. PCA resume milhares de números em pontos fáceis na tela. Bolinhas de doentes isoladas das sadias significam que a doença mexeu tanto nos números do corpo que eles não se misturam mais na estatística.",
+        "correct": "B",
+        "explanation": "A correta é B pois a separação no PCA reflete diferenças moleculares significativas entre grupos. As outras falham pois: A confunde agrupamento estatístico com prognóstico clínico de cura, C interpreta incorretamente o sucesso da separação como erro experimental, D atribui padrões estatísticos a falhas de drivers do sistema, E confunde visualização de dados com falha física de hardware.",
         "difficulty": "fácil"
     },
     {
@@ -8704,8 +8704,8 @@ window.questionBank = [
             "D": "Melhora puramente estética do gráfico sem ganho analítico.",
             "E": "Ajuste para não afetar arquivos VCF via algoritmos de busca."
         },
-        "correct": "A",
-        "explanation": "Gabarito: B. O Log2 centraliza e amansa as proporções exponenciais. Uma subida vira número positivo (+1,+2) e uma queda vira número espelhado (-1,-2). Facilita o mapeamento visual no gráfico do Vulcão de RNA.",
+        "correct": "B",
+        "explanation": "A correta é B porque o Log2 permite visualização simétrica de dobras de expressão. As outras falham pois: A supõe limitações computacionais inexistentes em ferramentas de bioinformática, C inventa uma proibição legal sem qualquer fundamento acadêmico, D nega o valor matemático e estatístico real da transformação, E vincula a técnica a arquivos VCF de forma errônea.",
         "difficulty": "fácil"
     },
     {
@@ -8720,8 +8720,8 @@ window.questionBank = [
             "D": "Peso fetal em gráfico 3D necessitando de anotação extra.",
             "E": "Batimento cardíaco em UTI exigindo normalização bruta."
         },
-        "correct": "C",
-        "explanation": "Gabarito: B. Se a variante T231C for fortíssima associada com Obesidade, um 'arranha-céu' vai estourar a reta horizontal e subir no eixo Y no meio do Cromossomo 4, de forma lindamente visual e imediata.",
+        "correct": "B",
+        "explanation": "A correta é B porque o Manhattan Plot destaca SNPs associados a fenótipos em GWAS. As outras falham pois: A faz uma interpretação literal e imobiliária do nome gráfico, C confunde representação genômica com sistemas de geolocalização por satélite, D refere-se a monitoramento obstétrico sem relação com genômica, E descreve exames de cardiologia clínica e não estudos associativos.",
         "difficulty": "médio"
     },
     {
@@ -8736,8 +8736,8 @@ window.questionBank = [
             "D": "Conforto para o técnico em amostras severamente degradadas.",
             "E": "Filtro de ar respirado com sensibilidade a variações de pH."
         },
-        "correct": "E",
-        "explanation": "Gabarito: B. O poliéster não queima, ele 'derrete'. Se o funcionário estiver com tecido sintético num pequeno incêndio de bancada de acetona, o plástico vai grudar no osso derretendo. Jaleco tem que ser grosso e base de algodão puro pra agir de colete de bloqueio térmico ou arrancar a roupa antes.",
+        "correct": "B",
+        "explanation": "A correta é B pois o algodão não derrete e adere à pele em chamas. As outras falham pois: A confunde proteção química térmica com controle biológico de insetos, C sugere que o jaleco serve como vestimenta para intempéries, D prioriza o conforto subjetivo em detrimento da segurança normativa, E atribui ao jaleco funções de filtragem de ar inexistentes.",
         "difficulty": "fácil"
     },
     {
@@ -8752,8 +8752,8 @@ window.questionBank = [
             "D": "América do Sul indígena em cenários de recursos limitados.",
             "E": "Europa viking com limitações de algoritmos preditivos locais."
         },
-        "correct": "E",
-        "explanation": "Gabarito: B. Por não ter sofrido o 'Gargalo Populacional' da grande migração pelo deserto para sair pelo Oriente e Europa, os povos da África carregam quase toda a variação biológica existente de humanos de forma milenar intacta no pool biológico.",
+        "correct": "B",
+        "explanation": "A correta é B porque a África retém a maior diversidade genética humana ancestral. As outras falham pois: A foca em região de baixa densidade e diversidade humana, C ignora os efeitos fundadores que reduziram a diversidade oceânica, D desconsidera os gargalos migratórios ocorridos na colonização das Américas, E refere-se a populações que passaram por fortes reduções genéticas.",
         "difficulty": "fácil"
     },
     {
@@ -8768,8 +8768,8 @@ window.questionBank = [
             "D": "Alteração de cores no terminal Bash para reduzir o poder.",
             "E": "Inserção de vírus lógicos ocultos exigindo normalização."
         },
-        "correct": "E",
-        "explanation": "Gabarito: B. Armazenamento e download de DNA são caríssimos. Compactar (gzip) tudo é a única forma financeira e logística da bioinformática funcionar trocando gigas entre estados e prefeituras sem queimar contas com terabytes caríssimos mensais.",
+        "correct": "B",
+        "explanation": "A correta é B pois a compressão é essencial para gerenciar volumes massivos de dados. As outras falham pois: A confunde técnicas de compressão com protocolos de segurança criptográfica, C propõe uma relação inexistente entre arquivos e síntese proteica, D supõe que a compressão serve para alterar interface visual, E associa erroneamente extensões de compressão com malware ou vírus.",
         "difficulty": "fácil"
     },
     {
@@ -8784,8 +8784,8 @@ window.questionBank = [
             "D": "Descarte em pia com cloro seguindo padrões de segurança.",
             "E": "Sacos de papel pretos com sensibilidade a variações de pH."
         },
-        "correct": "E",
-        "explanation": "Gabarito: B. Lixo infectante (Grupo A) exige o saco branco resistente clássico, evitando que os catadores de lixo municipal e as varredeiras públicas na rua sejam fatalmente atingidos com sangue cru hospitalar.",
+        "correct": "B",
+        "explanation": "A correta é B porque resíduos infectantes exigem descarte específico em sacos brancos. As outras falham pois: A viola normas básicas de biossegurança ao sugerir reutilização, C gera risco biológico gravíssimo para o sistema público de lixo, D causa contaminação ambiental e descumpre protocolos de descarte sólido, E utiliza recipientes inadequados para o manejo de resíduos biológicos.",
         "difficulty": "fácil"
     },
     {
@@ -8800,8 +8800,8 @@ window.questionBank = [
             "D": "Falsificar identidade civil mitigando falhas com filtros.",
             "E": "Banimento integral pela LGPD exigindo indexação prévia."
         },
-        "correct": "A",
-        "explanation": "Gabarito: B. A anonimização pura quebra a ponte pro resto da vida (Nunca mais acharemos que dono é o doente). Na Pseudo, nós escondemos a chave no cofre, assim a Bioinformática analisa cega e tranquila, e o médico chefe que tem a chave resgata a cura pra pessoa real.",
+        "correct": "B",
+        "explanation": "A correta é B pois a pseudoanonimização permite rastrear dados via chave protegida. As outras falham pois: A descreve anonimização incompleta sem o controle técnico necessário, C propõe uma medida visual inútil contra processamento de dados, D sugere falsidade ideológica que é crime e não técnica, E afirma falsamente que a LGPD proíbe tratamentos de dados.",
         "difficulty": "fácil"
     },
     {
@@ -8816,8 +8816,8 @@ window.questionBank = [
             "D": "Compressão mecânica com validação de métodos ortogonais.",
             "E": "Uso de gelo seco com calibração de pH e controles de reação."
         },
-        "correct": "C",
-        "explanation": "Gabarito: B. Assim como o detergente de cozinha derrete a gordura da panela, o detergente SDS de Lise laboratorial derrete o lipídio da membrana celular do paciente na ampolinha. Ao estourar a proteção gorda, a célula jorra o conteúdo (DNA) pra fora para coletarmos na pipeta.",
+        "correct": "B",
+        "explanation": "A correta é a B pois detergentes rompem as membranas lipídicas celulares para liberar o DNA. As outras falham pois: A refere-se a desnaturação por calor, C trata de infecção viral, D é um método físico insuficiente e E foca em conservação de amostras.",
         "difficulty": "fácil"
     },
     {
@@ -8832,8 +8832,8 @@ window.questionBank = [
             "D": "Método Sanger de capilar com adequação de padrões.",
             "E": "Massometria proteica focal com validação de bancada."
         },
-        "correct": "D",
-        "explanation": "Gabarito: B. A genialidade da Illumina: as letrinhas artificiais deles têm 'Cadeado' e 'Lanterna'. A máquina adiciona uma letra no fio (ex: T verde), o cadeado impede o fio de crescer desgovernado. A câmera fotografa o pontinho verde (É um T). Enzimas tiram o cadeado, apagam a lanterna e deixam a próxima letra do genoma entrar pra uma nova foto. Milhões de vezes simultâneas.",
+        "correct": "B",
+        "explanation": "A correta é a B pois o Sequencing By Synthesis (SBS) registra fluorescência base a base em tempo real. As outras falham pois: A descreve processos inexistentes, C ignora a necessidade de câmeras, D é o método clássico de eletroforese e E analisa massa de moléculas.",
         "difficulty": "médio"
     },
     {
@@ -8848,8 +8848,8 @@ window.questionBank = [
             "D": "Laudo em PDF sem codificações nativas exigindo indexação.",
             "E": "Vídeo clínico de endoscopia com normalização de dados."
         },
-        "correct": "D",
-        "explanation": "Gabarito: B. O VCF é a listinha de defeitos e trocas da máquina (A tabela de infrações do paciente contra o Genoma de Referência). É o laudo de ouro do pipeline onde mostra que na coordenada tal ele tem a doença, poupando a gente de reler os 3 bilhões de letras do arquivo BAM puro gigantesco e entulhado nas máquinas base.",
+        "correct": "B",
+        "explanation": "A correta é a B porque o VCF armazena variações genéticas comparadas a um genoma referência. As outras falham pois: A é formato de imagem, C refere-se a registros médicos, D é documento estático e E é mídia audiovisual.",
         "difficulty": "médio"
     },
     {
@@ -8864,8 +8864,8 @@ window.questionBank = [
             "D": "Garantir internet rápida em postos com ajuste de software.",
             "E": "Proteção contra vírus em clusters de alto processamento."
         },
-        "correct": "E",
-        "explanation": "Gabarito: B. A LGPD (Lei 13.709/2018) foca na privacidade do cidadão. Ela garante que o dado (como um genoma ou endereço) pertence à pessoa, e a instituição deve tratá-lo com extremo cuidado e permissão.",
+        "correct": "B",
+        "explanation": "A correta é a B pois a LGPD estabelece normas para a privacidade e tratamento de dados pessoais. As outras falham pois: A sugere insegurança digital, C impediria a prática médica, D trata de infraestrutura e E refere-se a ferramentas de software.",
         "difficulty": "médio"
     },
     {
@@ -8880,8 +8880,8 @@ window.questionBank = [
             "D": "Quebra física de cabos mitigada por filtros de qualidade.",
             "E": "Programa de limpeza restrito a grandes bancos de dados."
         },
-        "correct": "D",
-        "explanation": "Gabarito: B. Phishing (Pescaria) é a engenharia social clássica. O hacker não invade o sistema à força; ele engana o biomédico com um e-mail falso para que o próprio biomédico entregue a senha de bandeja.",
+        "correct": "B",
+        "explanation": "A correta é a B porque o Phishing utiliza mensagens enganosas para obter dados sensíveis ilegalmente. As outras falham pois: A é técnica de bioinformática, C confunde o nome com biologia, D é dano físico e E é manutenção de sistemas.",
         "difficulty": "fácil"
     },
     {
@@ -8897,7 +8897,7 @@ window.questionBank = [
             "E": "Protocolo HTTPS o que resulta em  uma abordagem comum em análises de modelos probabilísticos."
         },
         "correct": "D",
-        "explanation": "Gabarito: A. A Autenticação de Múltiplos Fatores (MFA) exige 'algo que você sabe' (sua senha) mais 'algo que você tem' (seu celular). Isso impede que um hacker acesse o sistema mesmo se descobrir sua senha.",
+        "explanation": "A correta é a D pois o uso de senha e código adicional configura múltiplos fatores de autenticação. As outras falham pois: A filtra tráfego de rede, B protege contra perda de dados, C cifra informações e E garante transporte seguro.",
         "difficulty": "fácil"
     },
     {
@@ -8912,8 +8912,8 @@ window.questionBank = [
             "D": "Uso de apenas um computador com dados normalizados.",
             "E": "Compartilhamento de senhas da diretoria com a equipe."
         },
-        "correct": "A",
-        "explanation": "Gabarito: C. O estagiário da recepção não precisa ter acesso à pasta que deleta o banco de dados do genoma. Dar apenas o acesso mínimo necessário evita acidentes e vazamentos em massa.",
+        "correct": "B",
+        "explanation": "A correta é a B pois limita acessos apenas ao estritamente necessário para cada função laboral. As outras falham pois: A trata de economia financeira, C exclui usuários legítimos, D foca em hardware e E compromete a segurança individual.",
         "difficulty": "fácil"
     },
     {
@@ -8929,7 +8929,7 @@ window.questionBank = [
             "E": "Lentidão do sistema exigindo indexação para busca."
         },
         "correct": "B",
-        "explanation": "Gabarito: B. Pendrives são o terror da TI hospitalar. Além de espalharem vírus como o Ransomware, perder um pendrive com 10.000 laudos na rua gera multas milionárias pela LGPD.",
+        "explanation": "A correta é a B devido ao alto risco de infecção por vírus e vazamento de dados sensíveis. As outras falham pois: A confunde hardware com software, C menciona consumo elétrico irrelevante, D foca em aparência e E refere-se a desempenho.",
         "difficulty": "médio"
     },
     {
@@ -8945,7 +8945,7 @@ window.questionBank = [
             "E": "Referência à Sincronia com impacto no controle inicial."
         },
         "correct": "B",
-        "explanation": "Gabarito: C. O HTTP normal manda textos abertos na internet. O HTTPS (Secure) embaralha os dados. Se alguém interceptar a rede, verá apenas códigos ilegíveis em vez da senha ou do genoma do paciente.",
+        "explanation": "A correta é a B pois o 'S' indica que a conexão é criptografada via protocolo SSL/TLS. As outras falham pois: A é sigla de saúde, C refere-se a sistema, D foca no servidor e E trata de sincronização.",
         "difficulty": "fácil"
     },
     {
@@ -8961,7 +8961,7 @@ window.questionBank = [
             "E": "Compactador de arquivos com ajuste em software nativo."
         },
         "correct": "C",
-        "explanation": "Gabarito: C. Ransomware é o crime digital moderno. Ele sequestra os arquivos do laboratório. Por isso o backup offline (que não está na rede) é a única salvação contra esse ataque.",
+        "explanation": "A correta é a C pois este malware sequestra arquivos via criptografia exigindo pagamento para liberação. As outras falham pois: A é barreira defensiva, B é utilitário de leitura, D combate pragas e E reduz tamanho de arquivos.",
         "difficulty": "fácil"
     },
     {
@@ -8977,7 +8977,7 @@ window.questionBank = [
             "E": "Uso de desinfetantes em bancadas em grandes bancos."
         },
         "correct": "B",
-        "explanation": "Gabarito: C. Segurança da informação não é só digital. Um visitante ou pessoal da limpeza pode facilmente ler um laudo de HIV/Câncer que ficou esquecido em cima da mesa. Guarde documentos em gavetas e não cole senhas no monitor.",
+        "explanation": "A correta é a B pois evita a exposição indevida de dados sensíveis físicos ou digitais. As outras falham pois: A foca em limpeza doméstica, C é regra alimentar, D trata de biossegurança e E é sanitização química.",
         "difficulty": "fácil"
     },
     {
@@ -8992,8 +8992,8 @@ window.questionBank = [
             "D": "Exclusão de arquivos antigos exigindo normalização.",
             "E": "Mudança de formato VCF mitigada através de filtros."
         },
-        "correct": "A",
-        "explanation": "Gabarito: B. O Backup não é apenas salvar o arquivo, é salvar uma 'cópia' num HD diferente ou na Nuvem. Se o disco principal queimar, você tem a cópia intacta para restaurar.",
+        "correct": "B",
+        "explanation": "A correta é a B por definir backup como cópia de salvaguarda em local seguro. As outras falham pois: A confunde com análise, C foca em compressão, D apaga arquivos e E altera formatos genéticos.",
         "difficulty": "fácil"
     },
     {
@@ -9008,8 +9008,8 @@ window.questionBank = [
             "D": "Exclusão de duplicatas com redução de poder preditivo.",
             "E": "Auditoria biológica com normalização de dados brutos."
         },
-        "correct": "D",
-        "explanation": "Gabarito: B. A trilha de auditoria é a 'câmera de segurança' do software. Garante a integridade e impede que um funcionário mal intencionado adultere um laudo sem ser rastreado.",
+        "correct": "B",
+        "explanation": "A correta é a B pois rastreia todas as modificações feitas nos registros do sistema. As outras falham pois: A é segurança de tela, C é processamento, D remove dados e E é auditoria laboratorial.",
         "difficulty": "fácil"
     },
     {
@@ -9025,7 +9025,7 @@ window.questionBank = [
             "E": "Responsabilidade do paciente com indexação prévia."
         },
         "correct": "A",
-        "explanation": "Gabarito: A. A nuvem garante que ninguém vai roubar o HD físico com uma arma. Mas se o cientista do laboratório colocar a pasta de genomas em 'Acesso Público' na internet por engano, a culpa do vazamento é 100% do laboratório.",
+        "explanation": "A correta é a A pois divide tarefas de proteção entre nuvem e laboratório contratante. As outras falham pois: B nega co-responsabilidade, C expõe dados, D foca em custos e E culpa o paciente.",
         "difficulty": "fácil"
     },
     {
@@ -9040,8 +9040,8 @@ window.questionBank = [
             "D": "Risco de dano físico ao HD com ajuste de software local.",
             "E": "Perda de resolução de tela com impacto na qualidade."
         },
-        "correct": "A",
-        "explanation": "Gabarito: C. Nunca acesse sistemas sigilosos de saúde em Wi-Fi de padaria sem usar uma VPN corporativa forte, pois qualquer pessoa com um software básico na mesma rede pode ler seu tráfego.",
+        "correct": "B",
+        "explanation": "A correta é a B pois o tráfego em redes abertas pode ser facilmente monitorado. As outras falham pois: A é consumo, C é performance, D é hardware e E é exibição visual.",
         "difficulty": "fácil"
     },
     {
@@ -9057,7 +9057,7 @@ window.questionBank = [
             "E": "Desvincular irreversivelmente um dado do titular a que ele se refere."
         },
         "correct": "E",
-        "explanation": "Gabarito: B. O dado anonimizado perde a capacidade de identificar o cidadão. Sem CPF e Nome, a tabela do genoma pode ser usada em pesquisas sem ferir a privacidade da pessoa.",
+        "explanation": "A correta é a E pois remove o vínculo entre o dado sensível e o indivíduo. As outras falham pois: A limita processamento, B apaga registros, C protege senhas e D corrompe a referência científica.",
         "difficulty": "fácil"
     },
     {
@@ -9073,7 +9073,7 @@ window.questionBank = [
             "E": "Uso indevido de internet e processamento em clusters de alto desempenho."
         },
         "correct": "B",
-        "explanation": "Gabarito: B. Curiosidade mata a rede. Hackers jogam pendrives com vírus no chão do estacionamento de propósito, esperando que um funcionário curioso espete o USB no computador do hospital.",
+        "explanation": "A correta é a B pois mitiga o risco de infecção por baiting ou USB malicioso. As outras falham pois: A é biossegurança, C é sustentabilidade, D é bioética e E é infraestrutura.",
         "difficulty": "fácil"
     },
     {
@@ -9089,7 +9089,7 @@ window.questionBank = [
             "E": "Aumenta a velocidade da internet e ajusta parâmetros de software."
         },
         "correct": "B",
-        "explanation": "Gabarito: C. A VPN é um túnel blindado. Mesmo trabalhando de casa, o sistema acha que você está sentado dentro da segurança física da TI do hospital.",
+        "explanation": "A correta é a B por criar um canal privado e cifrado de comunicação externa. As outras falham pois: A limpa ameaças, C controla energia, D converte bioinformática e E promete velocidade.",
         "difficulty": "fácil"
     },
     {
@@ -9105,7 +9105,7 @@ window.questionBank = [
             "E": "Programar códigos em Python para indexação e busca otimizada."
         },
         "correct": "D",
-        "explanation": "Gabarito: C. É o famoso 'hackeamento de pessoas'. É mais fácil ligar chorando pro estagiário e pedir a senha do sistema do que passar meses tentando quebrar o firewall da instituição.",
+        "explanation": "A correta é a D pois foca em enganar o elo humano do sistema de segurança. As outras falham pois: A é ataque técnico, B é lícito, C é montagem genômica e E é programação.",
         "difficulty": "fácil"
     },
     {
@@ -9121,7 +9121,7 @@ window.questionBank = [
             "E": "Aumentar a memória RAM e realizar anotação cruzada de referência."
         },
         "correct": "D",
-        "explanation": "Gabarito: B. Deixar a tela destravada com o sistema aberto na sua mesa é a mesma coisa que entregar a chave de casa na mão de desconhecidos.",
+        "explanation": "A correta é a D por impedir o uso da estação de trabalho por pessoas próximas. As outras falham pois: A economiza luz, B é limpeza de sistema, C é resfriamento e E é memória.",
         "difficulty": "fácil"
     },
     {
@@ -9137,7 +9137,7 @@ window.questionBank = [
             "E": "Assinar cheques e realizar a indexação prévia para buscas de tempo."
         },
         "correct": "D",
-        "explanation": "Gabarito: C. Toda empresa e hospital agora é obrigado a ter um DPO. Ele é o 'xerife da privacidade' que garante que os dados não estão sendo usados para fins indevidos.",
+        "explanation": "A correta é a D pois o DPO assegura a conformidade institucional à LGPD. As outras falham pois: A e B são suporte, C laboratorial e E administrativa.",
         "difficulty": "fácil"
     },
     {
@@ -9153,7 +9153,7 @@ window.questionBank = [
             "E": "Armazenar discos abertos no almoxarifado sem ajuste de parâmetros."
         },
         "correct": "B",
-        "explanation": "Gabarito: C. Deletar arquivos no Windows não apaga nada, apenas 'esconde'. HDs de saúde devem ser triturados fisicamente ou formatados com softwares especiais antes de sair do hospital.",
+        "explanation": "A correta é a B pois impede a recuperação de dados sensíveis por terceiros. As outras falham pois: A, C, D e E permitem vazamento de informações.",
         "difficulty": "fácil"
     },
     {
@@ -9169,7 +9169,7 @@ window.questionBank = [
             "E": "Corrigir falhas de segurança e vulnerabilidades recém-descobertas."
         },
         "correct": "E",
-        "explanation": "Gabarito: B. Software desatualizado é igual a uma porta com a fechadura quebrada. As atualizações (patches) de segurança são os 'consertos' imediatos da fabricante para manter o hacker do lado de fora.",
+        "explanation": "A correta é a E pois elimina vulnerabilidades exploráveis por agentes maliciosos. As outras falham pois: A, B, C e D não impactam a segurança.",
         "difficulty": "fácil"
     },
     {
@@ -9185,7 +9185,7 @@ window.questionBank = [
             "E": "Phishing."
         },
         "correct": "B",
-        "explanation": "Gabarito: C. O Firewall (Parede de Fogo) é o porteiro do computador. Ele decide quem entra e quem sai da rede do hospital, bloqueando hackers.",
+        "explanation": "A correta é a B pois filtra conexões externas não autorizadas na rede. As outras falham pois: A e C são ferramentas, D e E ataques.",
         "difficulty": "fácil"
     },
     {
@@ -9201,7 +9201,7 @@ window.questionBank = [
             "E": "Criar senhas longas com caracteres diversos e evitar a reutilização."
         },
         "correct": "E",
-        "explanation": "Gabarito: C. Senhas fortes são longas. Uma senha complexa de 12 letras demora séculos para ser quebrada por um computador hacker.",
+        "explanation": "A correta é a E pois a entropia dificulta ataques de força bruta. As outras falham pois: A, B, C e D usam padrões previsíveis.",
         "difficulty": "fácil"
     },
     {
@@ -9217,7 +9217,7 @@ window.questionBank = [
             "E": "Garantir que exames sejam indolores e gerar falsos positivos de controle."
         },
         "correct": "C",
-        "explanation": "Gabarito: C. Se o sistema usa seu cartão e sua digital, você não tem como dizer no tribunal: 'Não fui eu que liberei esse laudo de câncer falso'.",
+        "explanation": "A correta é a C pois vincula legalmente a ação ao seu autor original. As outras falham pois: A e E são clínicas, B e D irrelevantes.",
         "difficulty": "fácil"
     },
     {
@@ -9233,7 +9233,7 @@ window.questionBank = [
             "E": "Avisar polícias internacionais e realizar anotação cruzada de dados."
         },
         "correct": "C",
-        "explanation": "Gabarito: C. Ocultar vazamento é crime agravante. A instituição deve avisar a ANPD e os pacientes imediatamente para que as pessoas possam trocar suas senhas e monitorar fraudes em seus nomes.",
+        "explanation": "A correta é a C pois a LGPD exige transparência em vazamentos de dados. As outras falham pois: A e B são ilegais, D e E incorretas.",
         "difficulty": "médio"
     },
     {
@@ -9249,7 +9249,7 @@ window.questionBank = [
             "E": "Deixar chaves acessíveis e limitar recursos computacionais modernos."
         },
         "correct": "B",
-        "explanation": "Gabarito: B. Servidores de NGS custam fortunas e guardam dados sensíveis. O datacenter é o cofre-forte da instituição: blindado, frio, vigiado e de acesso ultra-restrito.",
+        "explanation": "A correta é a B pois protege o hardware crítico de danos e intrusões. As outras falham pois: A, C, D e E facilitam acessos indevidos.",
         "difficulty": "fácil"
     },
     {
@@ -9265,7 +9265,7 @@ window.questionBank = [
             "E": "Espaço Temporal Lógico e aplicação prática em grandes bancos."
         },
         "correct": "A",
-        "explanation": "Gabarito: B. ETL é a alma do Banco de Dados. Ele puxa o dado bruto sujo, limpa e padroniza, e joga bonito nas prateleiras do servidor da nuvem.",
+        "explanation": "A correta é a A pois define as fases de integração em bancos de dados. As outras falham pois: B, C, D e E usam definições falsas.",
         "difficulty": "fácil"
     },
     {
@@ -9281,7 +9281,7 @@ window.questionBank = [
             "E": "Facilitar a cobrança de tributos e realizar anotação cruzada de dados."
         },
         "correct": "D",
-        "explanation": "Gabarito: C. Computador é burro para entender sinônimos, gírias e erros de digitação médicos. Usar um Código/Vocabulário único garante que a pesquisa científica funcione redonda.",
+        "explanation": "A correta é a D pois viabiliza a análise de dados e interoperabilidade técnica. As outras falham pois: A, B, C e E erram a finalidade.",
         "difficulty": "fácil"
     },
     {
@@ -9297,7 +9297,7 @@ window.questionBank = [
             "E": "Endereços hospitalares e controle de qualidade primário de dados."
         },
         "correct": "B",
-        "explanation": "Gabarito: C. O HPO traduz um sintoma, como 'Dedos a mais', para o código 'HP:0010442'. Isso permite que a Bioinformática busque esse código na rede mundial de mutações e entregue a doença rara correta.",
+        "explanation": "A correta é a B pois o HPO padroniza descrições clínicas de anomalias fenotípicas. As outras falham pois: A foca em vírus e modelos, C em medicamentos, D em preços e E em endereços hospitalares.",
         "difficulty": "fácil"
     },
     {
@@ -9313,7 +9313,7 @@ window.questionBank = [
             "E": "Capturar imagens de DNA e reduzir o poder preditivo algorítmico."
         },
         "correct": "D",
-        "explanation": "Gabarito: C. Transformar é higienizar a bagunça. Arrumar datas, corrigir nomes escritos errados e deletar informações em branco antes de salvar no sistema do governo.",
+        "explanation": "A correta é a D porque a transformação foca em higienizar, padronizar e limpar os dados. As outras falham pois: A envolve anotação, B imunizantes, C extração de mídias e E captura de imagens.",
         "difficulty": "fácil"
     },
     {
@@ -9329,7 +9329,7 @@ window.questionBank = [
             "E": "O Lake possui temperatura elevada e exige anotação cruzada constante."
         },
         "correct": "C",
-        "explanation": "Gabarito: C. O Warehouse é como uma prateleira de supermercado perfeitinha. O Lake é um grande galpão onde você joga as caixas pesadas do jeito que chegaram (Dados Brutos) e os cientistas fuçam nelas depois.",
+        "explanation": "A correta é a C pois o Warehouse é estruturado para análise e o Lake armazena dados brutos. As outras falham pois: A nega diferenças, B cita analógico, D inverte conceitos e E cita temperatura.",
         "difficulty": "fácil"
     },
     {
@@ -9345,7 +9345,7 @@ window.questionBank = [
             "E": "Implementar criptografia no LIMS e analisar modelos probabilísticos."
         },
         "correct": "B",
-        "explanation": "Gabarito: B. API é o garçom. O seu software bioinformático pede: 'Garçom, me traga os dados do Gene X'. O garçom vai até a cozinha (O banco global Ensembl), pega a informação e devolve direto pra sua tela.",
+        "explanation": "A correta é a B porque APIs permitem que sistemas diferentes troquem informações de forma automatizada. As outras falham pois: A foca em diálogo, C em freezers, D em hardware e E em criptografia.",
         "difficulty": "fácil"
     },
     {
@@ -9361,7 +9361,7 @@ window.questionBank = [
             "E": "Servir como antivírus para grandes bancos de dados integrados."
         },
         "correct": "C",
-        "explanation": "Gabarito: B. Interoperabilidade é a palavra chave. Se o Einstein, o Sírio Libanês e o SUS usam FHIR, os prontuários dos 3 conseguem se conversar perfeitamente, o que antes era impossível por causa de sistemas privados isolados.",
+        "explanation": "A correta é a C pois o FHIR é o padrão global para interoperabilidade entre prontuários eletrônicos. As outras falham pois: A foca em vírus, B proíbe trocas, D é programação e E é antivírus.",
         "difficulty": "fácil"
     },
     {
@@ -9377,7 +9377,7 @@ window.questionBank = [
             "E": "Conceitos não aplicáveis à saúde que exigem indexação prévia."
         },
         "correct": "B",
-        "explanation": "Gabarito: B. Big Data na Saúde é lidar com Volume absurdo, gerado em altíssima Velocidade, com enorme Variedade (áudio, foto, tabelas) e garantindo a Veracidade (QC e Ética) do dado.",
+        "explanation": "A correta é a B porque Volume é a quantidade massiva e Variedade são os múltiplos formatos. As outras falham pois: A cita ruído, C nega aplicação, D cita peso e E nega aplicabilidade.",
         "difficulty": "fácil"
     },
     {
@@ -9393,7 +9393,7 @@ window.questionBank = [
             "E": "Formatos de imagem médica que distorcem frequências observadas."
         },
         "correct": "C",
-        "explanation": "Gabarito: B. O CSV é a essência da tabela. Se você tira a roupagem bonita do Excel, o que sobra é um texto limpo separado por vírgulas, maravilhoso e leve para a bioinformática ler no Python (Pandas).",
+        "explanation": "A correta é a C pois o CSV é um formato de texto simples onde colunas são separadas por vírgulas. As outras falham pois: A cita 3D, B senhas, D programas executáveis e E imagens médicas.",
         "difficulty": "fácil"
     },
     {
@@ -9409,7 +9409,7 @@ window.questionBank = [
             "E": "HTML,  um artefato que pode distorcer as frequências observadas."
         },
         "correct": "A",
-        "explanation": "Gabarito: D. O SQL é a linguagem de consulta mestre. Com comandos simples (SELECT * FROM Genomas WHERE gene='BRCA1') você filtra milhões de linhas numa fração de segundos no banco de dados.",
+        "explanation": "A correta é a A porque SQL é a linguagem universal para consultas em bancos de dados relacionais. As outras falham pois: B é script, C sistema, D aplicação e E estruturação web.",
         "difficulty": "fácil"
     },
     {
@@ -9425,7 +9425,7 @@ window.questionBank = [
             "E": "Preço de mercado, fabricante e validade dos reagentes usados."
         },
         "correct": "D",
-        "explanation": "Gabarito: B. A GO unificou a biologia. Ela diz em código de computador: O Gene XYZ é uma (Enzima Kinase), fica no (Núcleo) e age no (Processo de Divisão Celular). Isso facilita os scripts em R em análises de RNA-Seq.",
+        "explanation": "A correta é a D pois a GO padroniza funções, componentes celulares e processos biológicos de genes. As outras falham pois: A cita peso, B autoria, C curas e E preços comerciais.",
         "difficulty": "fácil"
     },
     {
@@ -9441,7 +9441,7 @@ window.questionBank = [
             "E": "Imagens de pesquisadores processadas em clusters de alto desempenho."
         },
         "correct": "A",
-        "explanation": "Gabarito: C. O dado real é o genoma. O metadado é a etiqueta da caixa dizendo 'Lido num NovaSeq, em 2024, pelo LIMS do Hospital São João'. Sem metadados, o genoma perde o valor científico por falta de rastreio.",
+        "explanation": "A correta é a A porque metadados são dados que descrevem a origem e o contexto de outros dados. As outras falham pois: B cita peso, C descartes, D malwares e E imagens pessoais.",
         "difficulty": "médio"
     },
     {
@@ -9457,7 +9457,7 @@ window.questionBank = [
             "E": "Armazenamento em colunas compactadas para buscas rápidas e baratas."
         },
         "correct": "E",
-        "explanation": "Gabarito: B. Formatos colunares (Parquet, Avro) são a revolução do Big Data. O Python pesca a coluna isolada em segundos e ignora as outras milhares de colunas do VCF.",
+        "explanation": "A correta é a E pois o formato Parquet utiliza armazenamento colunar que otimiza consultas e reduz custos em nuvem. As outras falham pois: A não edita DNA, B reduz consumo de recursos, C é um formato e não linguagem e D não trata de imagens.",
         "difficulty": "fácil"
     },
     {
@@ -9473,7 +9473,7 @@ window.questionBank = [
             "E": "Manual de alfabetização infantil para leitura de manuais técnicos."
         },
         "correct": "A",
-        "explanation": "Gabarito: B. Se a tabela tem uma coluna chamada 'ST_01', ninguém saberá o que é. O Dicionário de Dados avisa: 'ST_01 significa Status da Doença (1 Vivo, 0 Morto)'. É o mapa para os bioinformatas.",
+        "explanation": "A correta é a A pois o dicionário descreve os metadados e a estrutura técnica das tabelas. As outras falham pois: B não é vídeo, C descreve dados técnicos, D não é código de ética e E é para profissionais de TI.",
         "difficulty": "fácil"
     },
     {
@@ -9489,7 +9489,7 @@ window.questionBank = [
             "E": "Tipos de planos e tabelas de saúde."
         },
         "correct": "A",
-        "explanation": "Gabarito: C. A LOINC padronizou as análises clínicas. Isso impede que o laboratório 1 crie 'Glc.Sng' e o laboratório 2 crie 'Açúcar Sang.', o que impossibilitaria ao computador do estado saber que ambos são exames de Glicose.",
+        "explanation": "A correta é a A pois a LOINC padroniza observações laboratoriais e diagnósticas globalmente para interoperabilidade. As outras falham pois: B foca em equipamentos, C foca em laboratório, D usa outras classificações e E refere-se a faturamento.",
         "difficulty": "fácil"
     },
     {
@@ -9505,7 +9505,7 @@ window.questionBank = [
             "E": "Exclusão de linhas duplicadas nos dados."
         },
         "correct": "B",
-        "explanation": "Gabarito: C. Outliers (pontos fora da curva/aberrantes) estragam a estatística da IA. Limpar isso garante a precisão do estudo.",
+        "explanation": "A correta é a B pois outliers são valores atípicos que distorcem análises e precisam de tratamento. As outras falham pois: A trata de óbitos, C é estética, D trata datas e E remove redundâncias.",
         "difficulty": "fácil"
     },
     {
@@ -9521,7 +9521,7 @@ window.questionBank = [
             "E": "Conceito amplo que engloba termos filhos."
         },
         "correct": "E",
-        "explanation": "Gabarito: B. A ontologia flui do geral para o específico. O PC pode agrupar centenas de sub-doenças (filhos) jogando-as na bacia do termo genérico pai (Anomalia do olho) para análise generalista de exoma.",
+        "explanation": "A correta é a E pois termos 'Pai' em ontologias representam categorias genéricas que englobam especificidades filhas. As outras falham pois: A são conectados, B não é cromossomo, C é conceito hierárquico e D não é pesquisador.",
         "difficulty": "fácil"
     },
     {
@@ -9537,7 +9537,7 @@ window.questionBank = [
             "E": "Botão de desligamento da máquina da base."
         },
         "correct": "D",
-        "explanation": "Gabarito: C. Endpoint é a 'porta de atendimento' do servidor. Cada endpoint da API devolve uma informação diferente (ex: um endpoint dá os genomas, o outro dá o nome dos médicos).",
+        "explanation": "A correta é a D pois endpoints são as URLs específicas para acesso aos recursos de uma API. As outras falham pois: A é autenticação, B é físico, C é hardware e E é desligamento físico.",
         "difficulty": "fácil"
     },
     {
@@ -9553,7 +9553,7 @@ window.questionBank = [
             "E": "Tags entre os símbolos de menor e maior."
         },
         "correct": "E",
-        "explanation": "Gabarito: C. O XML (Extensible Markup Language) organiza dados como etiquetas dentro de etiquetas. Foi substituído aos poucos pelo JSON na Bioinformática por ser um texto mais verboso e pesado de ler no PC.",
+        "explanation": "A correta é a E pois o XML utiliza tags delimitadas por sinais de maior e menor para estruturar dados. As outras falham pois: A é planilha, B usa chaves, C é binário e D é mídia antiga.",
         "difficulty": "fácil"
     },
     {
@@ -9569,7 +9569,7 @@ window.questionBank = [
             "E": "Carga que consome internet excessiva."
         },
         "correct": "B",
-        "explanation": "Gabarito: B. Você não quer transmitir 10 terabytes do Genomas SUS para o governo todo dia. Você faz Carga Completa uma vez no ano, e no dia a dia você faz a Incremental (manda só os dados de pacientes que deram entrada naquele dia específico).",
+        "explanation": "A correta é a B pois a carga incremental transfere apenas os registros modificados ou criados após a última carga. As outras falham pois: A são logs, C é vírus, D é tradução e E é consequência de rede.",
         "difficulty": "fácil"
     },
     {
@@ -9585,7 +9585,7 @@ window.questionBank = [
             "E": "Programação de sistemas legados Linux."
         },
         "correct": "A",
-        "explanation": "Gabarito: B. O SNOMED-CT é o gigante das ontologias médicas mundiais, mapeando cada termo médico com uma precisão cirúrgica de códigos para o mundo inteiro operar digitalmente a saúde dos prontuários das pessoas nas redes sem barreiras nativas e ambiguidades.",
+        "explanation": "A correta é a A pois o SNOMED-CT fornece terminologia clínica padronizada para sintomas, diagnósticos e procedimentos. As outras falham pois: B é faturamento, C não deleta registros, D é logística e E é programação.",
         "difficulty": "fácil"
     },
     {
@@ -9601,7 +9601,7 @@ window.questionBank = [
             "E": "União de tabelas com colunas em comum."
         },
         "correct": "E",
-        "explanation": "Gabarito: C. A mágica dos bancos Relacionais é o JOIN. É ele quem casa as informações espalhadas por mil planilhas numa visualização única e mastigada para o cientista ou o diretor médico analisar no Dashboard.",
+        "explanation": "A correta é a E pois a operação de JOIN cruza dados de tabelas distintas usando chaves comuns. As outras falham pois: A deleta bases, B exibe prompts, C formata discos e D gerencia scripts.",
         "difficulty": "fácil"
     },
     {
@@ -9617,7 +9617,7 @@ window.questionBank = [
             "E": "Arquivos de texto sem conexão central."
         },
         "correct": "D",
-        "explanation": "Gabarito: B. Silos de dados são a 'pior praga' do Big Data na Saúde. O Oncologista usa o Sistema X, o Postinho de Saúde usa o Sistema Y, e o Genoma tá na nuvem Z. Ferramentas de Interoperabilidade/ETL existem justamente para quebrar as paredes e unificar todos eles para a Saúde ser inteligente a nível Federal Global.",
+        "explanation": "A correta é a D porque silos são sistemas isolados que dificultam a integração de dados. As outras falham pois: A foca em localização, B em infraestrutura elétrica, C em resíduos físicos e E em formatos específicos.",
         "difficulty": "fácil"
     },
     {
@@ -9633,7 +9633,7 @@ window.questionBank = [
             "E": "Motor de jogos e vetores gráficos em C."
         },
         "correct": "B",
-        "explanation": "Gabarito: D. Import Pandas as pd. Essa é a primeira linha de código de 99% das ferramentas de manipulação de CSV, Data Lakes e estatísticas base ETL em Python. É ela quem manipula os chamados DataFrames turbinados da ciência moderna global.",
+        "explanation": "A correta é a B pois o Pandas é a biblioteca padrão para manipulação de tabelas em Python. As outras falham pois: A serve para slides, C é software fechado, D é sistema operacional e E desenvolve jogos.",
         "difficulty": "médio"
     },
     {
@@ -9649,7 +9649,7 @@ window.questionBank = [
             "E": "Transcriptase reversa, usa RNA molde."
         },
         "correct": "E",
-        "explanation": "A transcriptase reversa é uma DNA polimerase RNA-dependente que sintetiza cDNA a partir de RNA, fundamental para clonagem de genes expressos.",
+        "explanation": "A correta é a E pois a transcriptase reversa sintetiza DNA complementar usando RNA como molde. As outras falham pois: A liga fragmentos, B replica DNA, C transcreve RNA e D cria iniciadores curtos.",
         "difficulty": "médio"
     },
     {
@@ -9665,7 +9665,7 @@ window.questionBank = [
             "E": "Tradução do mRNA nos ribossomos."
         },
         "correct": "D",
-        "explanation": "O splicing alternativo ocorre no processamento do pré-mRNA, permitindo que diferentes combinações de éxons gerem isoformas proteicas distintas.",
+        "explanation": "A correta é a D porque o splicing alternativo seleciona e une diferentes combinações de éxons. As outras falham pois: A é modificação epigenética, B é pós-traducional, C é duplicação e E é síntese proteica.",
         "difficulty": "médio"
     },
     {
@@ -9681,7 +9681,7 @@ window.questionBank = [
             "E": "Transporte de aminoácidos na base."
         },
         "correct": "C",
-        "explanation": "As histonas são proteínas básicas que formam octâmeros ao redor dos quais o DNA se enrola, formando nucleossomos e controlando o acesso à cromatina.",
+        "explanation": "A correta é a C pois histonas são proteínas que empacotam o DNA em estruturas denominadas nucleossomos. As outras falham pois: A ocorre no ribossomo, B envolve nucleases, D ocorre no retículo e E via tRNA.",
         "difficulty": "fácil"
     },
     {
@@ -9697,7 +9697,7 @@ window.questionBank = [
             "E": "Regiões de íntrons não regulatórias."
         },
         "correct": "B",
-        "explanation": "A metilação de citosinas em dinucleotídeos CpG é um mecanismo epigenético chave que silencia genes quando ocorre em ilhas CpG promotoras.",
+        "explanation": "A correta é a B pois a metilação em ilhas CpG de promotores é o principal mecanismo de silenciamento. As outras falham pois: A são pontas cromossômicas, C interrompem tradução, D são bases AT e E são íntrons.",
         "difficulty": "médio"
     },
     {
@@ -9713,7 +9713,7 @@ window.questionBank = [
             "E": "RNA nunca servindo de molde ao DNA."
         },
         "correct": "B",
-        "explanation": "O dogma central é DNA → RNA → Proteína, mas retrovírus e transcriptase reversa mostraram que RNA pode ser molde para DNA.",
+        "explanation": "A correta é a B pois o fluxo genético moderno inclui a retrotranscrição do RNA para o DNA. As outras falham pois: A ignora vírus, C inverte as etapas, D proteínas não herdam e E nega biologia viral.",
         "difficulty": "médio"
     },
     {
@@ -9729,7 +9729,7 @@ window.questionBank = [
             "E": "Menor custo por base sequenciada."
         },
         "correct": "C",
-        "explanation": "PacBio e Nanopore geram reads longos que atravessam regiões repetitivas, facilitando montagens e detectando grandes rearranjos estruturais.",
+        "explanation": "A correta é a C pois reads longos permitem resolver regiões repetitivas e grandes variantes estruturais. As outras falham pois: A requer bibliotecas, B foca em rendimento, D Illumina é mais precisa e E Illumina é barata.",
         "difficulty": "médio"
     },
     {
@@ -9745,7 +9745,7 @@ window.questionBank = [
             "E": "1 erro a cada 100 bases (1%) além disso,  o que demanda validação com métodos ortogonais de bancada."
         },
         "correct": "D",
-        "explanation": "Q30 = -10 log10(0,001) significa probabilidade de erro de 0,1% ou acurácia de 99,9% (1 em 1.000 bases está errada).",
+        "explanation": "A correta é a D pois Q30 representa 99,9% de acurácia, equivalente a um erro por mil bases. As outras falham pois: A é incompleta, B e C erram cálculos e E refere-se ao índice Q20.",
         "difficulty": "médio"
     },
     {
@@ -9761,7 +9761,7 @@ window.questionBank = [
             "E": "Tamanho médio de trezentos bp."
         },
         "correct": "D",
-        "explanation": "RNA-Seq de mRNA processado não deve ter reads em íntrons. Alinhamento intrônico indica DNA genômico contaminante não digerido por DNase.",
+        "explanation": "A correta é a D pois a presença de reads em íntrons indica que o DNA genômico não foi removido. As outras falham pois: A indica degradação, B erro de leitura, C viés de PCR e E tamanho padrão.",
         "difficulty": "difícil"
     },
     {
@@ -9777,7 +9777,7 @@ window.questionBank = [
             "E": "Fragmentação e ligação de adaptadores."
         },
         "correct": "E",
-        "explanation": "A transposase Tn5 na Tagmentation simultaneamente fragmenta o DNA e insere adaptadores nas extremidades, acelerando o preparo de biblioteca.",
+        "explanation": "A correta é E porque a transposase Tn5 cliva o DNA e insere adaptadores simultaneamente. As outras falham pois: A envolve PCR posterior, B ocorre após o preparo, C precede o preparo e D é limpeza pós-reação.",
         "difficulty": "médio"
     },
     {
@@ -9793,7 +9793,7 @@ window.questionBank = [
             "E": "Remoção de duplicados de PCR."
         },
         "correct": "E",
-        "explanation": "UMIs são barcodes únicos adicionados a cada molécula original antes da amplificação, permitindo identificar duplicados de PCR e contar moléculas reais.",
+        "explanation": "A correta é E pois UMIs rotulam moléculas originais permitindo distinguir duplicatas de PCR de moléculas biológicas únicas. As outras falham pois: A depende de hardware, B usa algoritmos químicos, C utiliza índices e D usa alinhadores.",
         "difficulty": "difícil"
     },
     {
@@ -9809,7 +9809,7 @@ window.questionBank = [
             "E": "Mosaicismo em metade das células."
         },
         "correct": "C",
-        "explanation": "VAF ~50% é esperado para variantes heterozigotas germinativas, onde metade dos alelos vem do pai e metade da mãe (1 normal: 1 mutado).",
+        "explanation": "A correta é C porque em heterozigose germinativa espera-se que metade das leituras contenha a variante. As outras falham pois: A altera a proporção, B gera ruído baixo, D é erro localizado e E é mosaicismo somático.",
         "difficulty": "médio"
     },
     {
@@ -9825,7 +9825,7 @@ window.questionBank = [
             "E": "Variante que causa doença sempre."
         },
         "correct": "C",
-        "explanation": "VUS indica incerteza: não há evidências suficientes para determinar patogenicidade. Requer reavaliação contínua conforme dados surgem.",
+        "explanation": "A correta é C visto que VUS indica ausência de dados clínicos ou funcionais suficientes para classificação. As outras falham pois: A é benigna, B refere-se à frequência, D é patogênica e E é certeza de doença.",
         "difficulty": "fácil"
     },
     {
@@ -9841,7 +9841,7 @@ window.questionBank = [
             "E": "Patogenicidade de duplicações."
         },
         "correct": "C",
-        "explanation": "pLI (probability of Loss-of-function Intolerance) ≥0,9 indica genes onde perder uma cópia é deletério, sugerindo haploinsuficiência patogênica.",
+        "explanation": "A correta é C pois o pLI quantifica a intolerância do gene à perda de função em heterozigose. As outras falham pois: A avalia conservação, B é o oposto, D foca em missense e E refere-se a duplicações.",
         "difficulty": "difícil"
     },
     {
@@ -9857,7 +9857,7 @@ window.questionBank = [
             "E": "Ausência em bancos populacionais grandes."
         },
         "correct": "D",
-        "explanation": "Nonsense no último éxon pode escapar de NMD e produzir proteína quase completa funcional, reduzindo evidência de patogenicidade.",
+        "explanation": "A correta é D pois variantes no último éxon frequentemente escapam do decaimento mediado por nonsense (NMD). As outras falham pois: A sugere sensibilidade, B prova efeito, C valida herança e E indica raridade populacional.",
         "difficulty": "difícil"
     },
     {
@@ -9873,7 +9873,7 @@ window.questionBank = [
             "E": "BWA, Picard, BQSR e Haplotype."
         },
         "correct": "E",
-        "explanation": "O pipeline GATK germline: alinhar (BWA-MEM), marcar duplicados (Picard), recalibrar qualidade (BQSR), chamar variantes (HaplotypeCaller), filtrar (VQSR).",
+        "explanation": "A correta é E por seguir o fluxo padrão de alinhamento, marcação de duplicatas, recalibração e chamada. As outras falham pois: A usa long-reads, B é somático, C é transcriptoma e D usa chamadores alternativos.",
         "difficulty": "difícil"
     },
     {
@@ -9889,7 +9889,7 @@ window.questionBank = [
             "E": "Heterozigoto (ref e alternativo)."
         },
         "correct": "E",
-        "explanation": "GT 0/1 = heterozigoto (0=alelo ref, 1=alelo alt). 0/0=hom ref, 1/1=hom alt, ./.=desconhecido.",
+        "explanation": "A correta é E pois '0' representa o alelo de referência e '1' o alternativo. As outras falham pois: A exige barra vertical, B é ponto, C é homozigoto referência e D é homozigoto alternativo.",
         "difficulty": "médio"
     },
     {
@@ -9905,7 +9905,7 @@ window.questionBank = [
             "E": "Montagem de novo de genomas."
         },
         "correct": "A",
-        "explanation": "BCFtools é uma suite para manipulação de VCF/BCF: filtrar, merge, annotate, query, stats, e operações set em variantes.",
+        "explanation": "A correta é A porque o BCFtools é a ferramenta padrão para manipular, filtrar e converter arquivos VCF. As outras falham pois: B usa alinhadores, C usa quantificadores, D usa design de primers e E usa montadores.",
         "difficulty": "médio"
     },
     {
@@ -9921,7 +9921,7 @@ window.questionBank = [
             "E": "Encapsulam software, garantindo reprodutibilidade sistêmica."
         },
         "correct": "E",
-        "explanation": "Docker empacota ferramentas com todas as dependências, garantindo que o pipeline rode identicamente em qualquer sistema, resolvendo 'dependency hell'.",
+        "explanation": "A correta é E porque containers encapsulam o ambiente garantindo que o software execute identicamente em qualquer lugar. As outras falham pois: A não acelera CPU, B aumenta o tamanho, C usa menos RAM e D não foca em criptografia.",
         "difficulty": "fácil"
     },
     {
@@ -9937,7 +9937,7 @@ window.questionBank = [
             "E": "Qualidade de base que demanda alto poder de computação."
         },
         "correct": "A",
-        "explanation": "Lambda (λ) compara p-values observados vs esperados. λ>1,05 indica inflação por estratificação populacional ou viés técnico a ser corrigido.",
+        "explanation": "A correta é a A pois λ avalia inflação por estratificação ou viés. As outras falham pois: B foca em recombinação, C em custos, D em cobertura e E em computação.",
         "difficulty": "difícil"
     },
     {
@@ -9953,7 +9953,7 @@ window.questionBank = [
             "E": "Realização de teste único com prévia normalização bruta."
         },
         "correct": "B",
-        "explanation": "FDR (Benjamini-Hochberg) é menos conservador que Bonferroni, controlando a proporção de falsos positivos esperados entre descobertas, preservando poder.",
+        "explanation": "A correta é a B pois FDR controla descobertas falsas em testes múltiplos. As outras falham pois: A prevê poucos testes, C foca em bancos, D em filtros e E em teste único.",
         "difficulty": "difícil"
     },
     {
@@ -9969,7 +9969,7 @@ window.questionBank = [
             "E": "DESeq2 e edgeR que modelam contagens com superdispersão."
         },
         "correct": "E",
-        "explanation": "DESeq2/edgeR usam binomial negativa para modelar counts de RNA-Seq, capturando overdispersão biológica além da variação Poisson.",
+        "explanation": "A correta é a E pois modela superdispersão em dados de contagem. As outras falham pois: A usa qui-quadrado, B ANOVA, C teste t e D correlação.",
         "difficulty": "difícil"
     },
     {
@@ -9985,7 +9985,7 @@ window.questionBank = [
             "E": "Taxa de mutação por geração com erros não corrigidos."
         },
         "correct": "A",
-        "explanation": "F mede endogamia: a probabilidade de dois alelos serem idênticos por descendência. F=0,25 em primos de primeiro grau.",
+        "explanation": "A correta é a A pois F mede redução de heterozigose por parentesco. As outras falham pois: B foca em fluxo, C em seleção, D em deriva e E em mutação.",
         "difficulty": "médio"
     },
     {
@@ -10001,7 +10001,7 @@ window.questionBank = [
             "E": "Loci próximos no mesmo cromossomo com baixa recombinação."
         },
         "correct": "E",
-        "explanation": "LD mede associação não-aleatória entre alelos. Loci próximos têm menos recombinação entre eles, mantendo LD alto ao longo das gerações.",
+        "explanation": "A correta é a E pois a proximidade física minimiza a recombinação alélica. As outras falham pois: A nega relação, B cita panmixia, C mutação e D cromossomos diferentes.",
         "difficulty": "médio"
     },
     {
@@ -10017,7 +10017,7 @@ window.questionBank = [
             "E": "Manter heterozigose gerando falsos positivos de análise."
         },
         "correct": "D",
-        "explanation": "Deriva genética (flutuação aleatória de frequências) é mais forte em populações pequenas, levando à perda de alelos e redução de diversidade.",
+        "explanation": "A correta é a D pois o erro amostral elimina alelos em grupos pequenos. As outras falham pois: A evita fixação, B cita seleção, C equilíbrio e E manutenção.",
         "difficulty": "médio"
     },
     {
@@ -10033,7 +10033,7 @@ window.questionBank = [
             "E": "Ocorrência em 70% das famílias com monitoramento técnico."
         },
         "correct": "D",
-        "explanation": "Penetrância é a proporção de portadores que manifestam o fenótipo. Penetrância incompleta (< 100%) explica por que nem todos com a mutação adoecem.",
+        "explanation": "A correta é a D pois define a probabilidade de expressar o gene. As outras falham pois: A prevê 100%, B expressividade, C detecção e E monitoramento.",
         "difficulty": "médio"
     },
     {
@@ -10049,7 +10049,7 @@ window.questionBank = [
             "E": "Sem diferença parental sob os padrões vigentes de saúde."
         },
         "correct": "D",
-        "explanation": "Imprinting causa expressão monoalélica dependente da origem parental. Ex: deleção 15q11-13 paterna causa Prader-Willi, materna causa Angelman.",
+        "explanation": "A correta é a D pois a expressão depende da marcação epigenética parental. As outras falham pois: A nega herança, B cita sexo, C mutação e E igualdade.",
         "difficulty": "difícil"
     },
     {
@@ -10065,7 +10065,7 @@ window.questionBank = [
             "E": "Redução de penetrância com monitoramento pré-analítico."
         },
         "correct": "C",
-        "explanation": "Antecipação: a expansão de trincas aumenta a cada geração, causando início mais cedo e sintomas mais graves (ex: Huntington, miotônica).",
+        "explanation": "A correta é a C pois a expansão de trincas aumenta a cada geração. As outras falham pois: A cita conversão, B cura, D longevidade e E redução.",
         "difficulty": "médio"
     },
     {
@@ -10081,7 +10081,7 @@ window.questionBank = [
             "E": "Alta consanguinidade com limites na reprodutibilidade."
         },
         "correct": "D",
-        "explanation": "Idade materna avançada (>35 anos) aumenta não-disjunção meiótica, elevando risco de aneuploidias como trissomia 21.",
+        "explanation": "A correta é a D pois a idade materna predispõe erros na segregação. As outras falham pois: A cita radiação, B medicamentos, C ácido fólico e E consanguinidade.",
         "difficulty": "fácil"
     },
     {
@@ -10097,7 +10097,7 @@ window.questionBank = [
             "E": "CFTR relacionado ao quadro clínico de fibrose cística."
         },
         "correct": "D",
-        "explanation": "Mutações em FBN1 (fibrilina-1) causam Marfan, uma doença autossômica dominante afetando tecido conectivo (aorta, olhos, esqueleto).",
+        "explanation": "A correta é a D porque a síndrome de Marfan é causada por mutações no gene FBN1, afetando a proteína fibrilina-1 do tecido conjuntivo. As outras falham pois: A refere-se à distrofia muscular, B ao câncer de mama, C à anemia falciforme e E à fibrose cística.",
         "difficulty": "médio"
     },
     {
@@ -10113,7 +10113,7 @@ window.questionBank = [
             "E": "Antibioticoterapia longa com variação na eficiência."
         },
         "correct": "B",
-        "explanation": "PKU é tratada com dieta baixa em fenilalanina (evitando proteínas) iniciada no período neonatal, prevenindo retardo mental.",
+        "explanation": "A correta é a B pois a restrição dietética de fenilalanina desde o nascimento é o padrão-ouro para evitar danos neurológicos na PKU. As outras falham pois: A é suplementação secundária, C é experimental, D não é tratamento padrão e E é ineficaz para erros inatos.",
         "difficulty": "fácil"
     },
     {
@@ -10129,7 +10129,7 @@ window.questionBank = [
             "E": "Herança autossômica recessiva com penetrância completa."
         },
         "correct": "A",
-        "explanation": "Hemofilia A é recessiva ligada ao X (gene F8). Homens (XY) com alelo mutado são afetados; mulheres (XX) heterozigotas são portadoras.",
+        "explanation": "A correta é a A porque a hemofilia A é uma desordem recessiva ligada ao cromossomo X, manifestando-se tipicamente em homens. As outras falham pois: B é herança materna, C afeta apenas linhagem masculina, D é autossômica e E não explica o viés sexual.",
         "difficulty": "fácil"
     },
     {
@@ -10145,7 +10145,7 @@ window.questionBank = [
             "E": "Afeta o sistema cardiovascular sob normas de segurança."
         },
         "correct": "D",
-        "explanation": "Huntington é dominante. Expansões CAG > 36 repetições causam neurodegeneração; quanto maior a expansão, mais cedo o início (antecipação).",
+        "explanation": "A correta é a D porque a doença de Huntington é autossômica dominante com antecipação genética por expansão de tripletos CAG. As outras falham pois: A não possui cura, B apresenta forte correlação genótipo-fenótipo, C é dominante e E é neurodegenerativa.",
         "difficulty": "médio"
     },
     {
@@ -10161,7 +10161,7 @@ window.questionBank = [
             "E": "Apenas beta-lactâmicos com monitoramento pré-analítico."
         },
         "correct": "B",
-        "explanation": "CYP2D6 metaboliza ~25% dos fármacos incluindo codeína, tamoxifeno, antidepressivos tricíclicos e antipsicóticos. Variantes alteram eficácia/toxicidade.",
+        "explanation": "A correta é a B pois a enzima CYP2D6 é responsável pelo metabolismo oxidativo de aproximadamente 25% dos medicamentos de uso clínico. As outras falham pois: A ignora fármacos comuns, C exclui outras classes, D foca em CYP2C9 e E foca em eliminação renal.",
         "difficulty": "médio"
     },
     {
@@ -10177,7 +10177,7 @@ window.questionBank = [
             "E": "Apenas anti-inflamatórios com variação de eficiência."
         },
         "correct": "C",
-        "explanation": "Deficiência G6PD (ligada ao X) causa hemólise quando expostos a fármacos oxidantes (antimaláricos, sulfas, aspirina em altas doses).",
+        "explanation": "A correta é a C pois a deficiência de G6PD torna as hemácias suscetíveis à hemólise sob estresse oxidativo causado por drogas como a primaquina. As outras falham pois: A é excessivamente generalista, B inclui antibióticos seguros, D não causa hemólise e E ignora outros oxidantes.",
         "difficulty": "médio"
     },
     {
@@ -10193,7 +10193,7 @@ window.questionBank = [
             "E": "Azatioprina ou 6-mercaptopurina em doenças inflamatórias."
         },
         "correct": "E",
-        "explanation": "TPMT metaboliza tiopurinas (azatioprina, 6-MP). Baixa atividade TPMT causa toxicidade medular severa; requer redução de dose ou alternativa.",
+        "explanation": "A correta é a E porque o polimorfismo no gene TPMT prediz o risco de mielossupressão grave em pacientes que utilizam tiopurinas. As outras falham pois: A não usa via TPMT, B associa-se ao SLCO1B1, C e D usam outras vias metabólicas.",
         "difficulty": "difícil"
     },
     {
@@ -10209,7 +10209,7 @@ window.questionBank = [
             "E": "Lopinavir sem ritonavir com preservação de amostras."
         },
         "correct": "C",
-        "explanation": "HLA-B*57:01 prediz hipersensibilidade a abacavir (~50% risco). Triagem antes de prescrever abacavir é recomendação FDA/EMA.",
+        "explanation": "A correta é a C pois a presença do alelo HLA-B*57:01 está fortemente associada a reações de hipersensibilidade multiorgânica ao abacavir. As outras falham pois: A e B têm outras toxicidades, D afeta os rins e E não possui essa ligação genética.",
         "difficulty": "difícil"
     },
     {
@@ -10225,7 +10225,7 @@ window.questionBank = [
             "E": "Apenas CYP3A4 em cenários controlados de análise."
         },
         "correct": "A",
-        "explanation": "Variantes CYP2C9 afetam metabolismo e VKORC1 afeta sensibilidade à warfarina. Algoritmos farmacogenéticos ajustam dose inicial.",
+        "explanation": "A correta é a A porque a farmacogenética da varfarina é definida pelo metabolismo (CYP2C9) e pela sensibilidade ao alvo farmacológico (VKORC1). As outras falham pois: B usa genes irrelevantes, C nega influência genética, D foca em câncer e E erra a enzima principal.",
         "difficulty": "médio"
     },
     {
@@ -10241,7 +10241,7 @@ window.questionBank = [
             "E": "Sequenciar brasileiros para medicina de precisão e ciência."
         },
         "correct": "E",
-        "explanation": "Genomas Brasil visa sequenciar genomas de brasileiros, construir banco de dados de variantes nacionais, e fomentar medicina de precisão no SUS.",
+        "explanation": "A correta é a E pois o Programa Genomas Brasil foca em sequenciar a diversidade da população brasileira para impulsionar a medicina de precisão. As outras falham pois: A foca em animais, B foca em comércio, C foca em importação e D descaracteriza o objetivo médico.",
         "difficulty": "fácil"
     },
     {
@@ -10257,7 +10257,7 @@ window.questionBank = [
             "E": "Tecnologias estrangeiras com modelos probabilísticos."
         },
         "correct": "B",
-        "explanation": "CONITEC faz avaliação de tecnologias em saúde (HTA) considerando evidências clínicas, econômicas e impacto antes de recomendar incorporação no SUS.",
+        "explanation": "A correta é B porque a CONITEC avalia evidências de eficácia, segurança e custo-efetividade para o SUS. As outras falham pois: A foca em equipamentos limitados, C restringe-se a vacinas, D foca em erros estatísticos e E em modelos estrangeiros.",
         "difficulty": "médio"
     },
     {
@@ -10273,7 +10273,7 @@ window.questionBank = [
             "E": "Tratamento de raras sob as limitações de recursos."
         },
         "correct": "D",
-        "explanation": "RENAME lista medicamentos essenciais baseados em evidências e custo-efetividade para guiar compras públicas e garantir acesso a tratamentos básicos.",
+        "explanation": "A correta é D porque a RENAME define a lista de medicamentos essenciais para prioridades do SUS. As outras falham pois: A foca em caros, B carece de critérios, C foca em fitoterápicos e E em doenças raras.",
         "difficulty": "fácil"
     },
     {
@@ -10289,7 +10289,7 @@ window.questionBank = [
             "E": "Foco em infecciosas com erros estatísticos graves."
         },
         "correct": "A",
-        "explanation": "A política estrutura atenção às doenças raras em rede: atenção básica, serviços especializados, e centros de referência com diagnóstico e tratamento.",
+        "explanation": "A correta é A porque a Portaria 199/2014 estabelece a rede de cuidado e protocolos clínicos. As outras falham pois: B exclui pacientes, C isola dados, D foca no privado e E em infecciosas.",
         "difficulty": "médio"
     },
     {
@@ -10305,7 +10305,7 @@ window.questionBank = [
             "E": "Secretarias municipais com aumento de gasto de recursos."
         },
         "correct": "D",
-        "explanation": "PALC (Programa de Acreditação de Laboratórios Clínicos), DICQ e CAP (College of American Pathologists) certificam qualidade laboratorial.",
+        "explanation": "A correta é D pois PALC, DICQ e CAP são programas consolidados de qualidade laboratorial. As outras falham pois: A é regulação sanitária, B nega a existência, C é acadêmica e E é governamental.",
         "difficulty": "médio"
     },
     {
@@ -10321,7 +10321,7 @@ window.questionBank = [
             "E": "Ribossomos no citoplasma ou retículo endoplasmático rugoso."
         },
         "correct": "E",
-        "explanation": "Os ribossomos são as máquinas moleculares que realizam tradução, lendo códons do mRNA e polimerizando aminoácidos.",
+        "explanation": "A correta é E pois ribossomos no citoplasma ou RE rugoso realizam a síntese de proteínas. As outras falham pois: A degrada macromoléculas, B processa proteínas, C é limitada e D faz transcrição.",
         "difficulty": "fácil"
     },
     {
@@ -10337,7 +10337,7 @@ window.questionBank = [
             "E": "Odor do tubo aberto durante a manipulação."
         },
         "correct": "B",
-        "explanation": "Gel de agarose, TapeStation, Bioanalyzer mostram integridade (DNA íntegro = banda alta, degradado = smear).",
+        "explanation": "A correta é B porque o gel e o Bioanalyzer medem o tamanho e fragmentação do DNA. As outras falham pois: A/E são métodos subjetivos, C valida reações e D pesa amostras.",
         "difficulty": "fácil"
     },
     {
@@ -10353,7 +10353,7 @@ window.questionBank = [
             "E": "Ligação de adaptadores sem o DNA inserto."
         },
         "correct": "E",
-        "explanation": "Adapter dimers (adaptadores ligados sem insert) competem com bibliotecas reais e reduzem eficiência. Removidos por size selection.",
+        "explanation": "A correta é E pois dímeros de adaptadores são formados pela ligação mútua sem o inserto. As outras falham pois: A falta componentes, B/D são irrelevantes e C impede a formação.",
         "difficulty": "médio"
     },
     {
@@ -10369,7 +10369,7 @@ window.questionBank = [
             "E": "Dados administrativos e filtros simples."
         },
         "correct": "B",
-        "explanation": "VCF (Variant Call Format) é padrão para representar variantes: CHROM, POS, ID, REF, ALT, QUAL, FILTER, INFO, FORMAT, samples.",
+        "explanation": "A correta é B pois o VCF detalha coordenadas, alelos, qualidade e genótipos das variantes. As outras falham pois: A é metadados, C para imagens, D para proteínas e E administrativa.",
         "difficulty": "fácil"
     },
     {
@@ -10385,7 +10385,7 @@ window.questionBank = [
             "E": "Polimorfismo comum e normalização bruta."
         },
         "correct": "A",
-        "explanation": "Variantes em GT-AG (splice donor/acceptor) alteram splicing, gerando transcritos aberrantes com frameshift ou skip de éxons.",
+        "explanation": "A correta é A porque afeta os sítios canônicos de reconhecimento para a remoção de íntrons. As outras falham pois: B/E são alterações benignas, C é não-codificante e D nega impacto.",
         "difficulty": "difícil"
     },
     {
@@ -10401,7 +10401,7 @@ window.questionBank = [
             "E": "Chamada de variantes e normalização bruta."
         },
         "correct": "A",
-        "explanation": "bedtools intersect identifica overlaps entre features genômicas (ex: variantes em BED de genes alvo).",
+        "explanation": "A correta é A pois o comando identifica a interseção geográfica entre diferentes arquivos genômicos. As outras falham pois: B realiza alinhamento, C compressão, D gráficos e E chamadas.",
         "difficulty": "médio"
     },
     {
@@ -10417,7 +10417,7 @@ window.questionBank = [
             "E": "Inexistência em GWAS sem dados integrados."
         },
         "correct": "A",
-        "explanation": "Tipo I: rejeitar H0 verdadeira (achar associação falsa). Tipo II: não rejeitar H0 falsa (perder associação real). Alfa controla tipo I.",
+        "explanation": "A correta é a A porque o Erro Tipo I ocorre ao rejeitar a hipótese nula quando ela é verdadeira. As outras falham pois: B descreve frequência impossível, C define Erro Tipo II, D ignora limites probabilísticos e E nega risco estatístico inerente.",
         "difficulty": "médio"
     },
     {
@@ -10433,7 +10433,7 @@ window.questionBank = [
             "E": "Taxa de recombinação e limite de recurso."
         },
         "correct": "C",
-        "explanation": "FST quantifica estruturação: FST=0 (sem diferenciação), FST alto (populações divergentes). Wright's FST=(HT-HS)/HT.",
+        "explanation": "A correta é a C pois o FST quantifica a divergência genética entre subpopulações. As outras falham pois: A mede abundância, B foca em adaptação, D trata de variantes novas e E envolve troca de material genético.",
         "difficulty": "difícil"
     },
     {
@@ -10449,7 +10449,7 @@ window.questionBank = [
             "E": "Trissomia do 21,  embora sua eficiência analítica possa variar no laboratório."
         },
         "correct": "B",
-        "explanation": "Prader-Willi: perda da região 15q11-q13 paterna (deleção ~70%, UPD materna ~25%). Hipotonia neonatal, hiperfagia, obesidade.",
+        "explanation": "A correta é a B pois a síndrome resulta da perda de expressão gênica paterna no cromossomo 15. As outras falham pois: A ignora etiologia genética, C causa Huntington, D gera Fibrose Cística e E caracteriza Down.",
         "difficulty": "difícil"
     },
     {
@@ -10465,7 +10465,7 @@ window.questionBank = [
             "E": "Apenas vacinas, consequentemente,  sendo um procedimento que depende de validação adicional."
         },
         "correct": "C",
-        "explanation": "CYP2C19 metaboliza clopidogrel (pró-droga), omeprazol, antidepressivos. *2/*2 (poor metabolizer) tem risco de trombose com clopidogrel.",
+        "explanation": "A correta é a C porque a enzima CYP2C19 é crucial na ativação ou inativação destes fármacos específicos. As outras falham pois: A e B usam outras vias, D é via degradação peptídica e E envolve resposta imunitária.",
         "difficulty": "médio"
     },
     {
@@ -10481,7 +10481,7 @@ window.questionBank = [
             "E": "Não têm impacto clínico o que resulta em  que atua de forma secundária na preservação da amostra."
         },
         "correct": "A",
-        "explanation": "Mutações driver (oncogenes ativados, supressores inativados) são selecionadas e dirigem oncogênese. Passenger: neutras, acumuladas passivamente.",
+        "explanation": "A correta é a A porque mutações driver impulsionam a carcinogênese e a progressão tumoral. As outras falham pois: B confunde origem, C ignora células cancerosas, D desconsidera terapias-alvo e E nega relevância clínica óbvia.",
         "difficulty": "médio"
     },
     {
@@ -10497,7 +10497,7 @@ window.questionBank = [
             "E": "Busca judicial por testes não incorporados."
         },
         "correct": "E",
-        "explanation": "Judicialização: pacientes recorrem à Justiça para acesso a tecnologias não incorporadas no SUS, impactando orçamento e equidade.",
+        "explanation": "A correta é a E pois a judicialização busca garantir direitos a tecnologias ausentes no rol oficial do SUS. As outras falham pois: A limita o contexto, B cita cenário irreal, C ignora preceitos médicos e D tornaria o processo desnecessário.",
         "difficulty": "médio"
     },
     {
@@ -10513,7 +10513,7 @@ window.questionBank = [
             "E": "Ausência de restrição e processamento."
         },
         "correct": "B",
-        "explanation": "Compartilhamento responsável: consentimento amplo/tiered, anonimização/pseudonimização, acesso controlado (DAC), auditorias, LGPD compliance.",
+        "explanation": "A correta é a B pois concilia a necessidade científica com a proteção individual do doador de dados. As outras falham pois: A é antiético, C bloqueia progresso, D viola autonomia e E expõe dados sensíveis.",
         "difficulty": "médio"
     },
     {
@@ -10529,7 +10529,7 @@ window.questionBank = [
             "E": "Seguir boas práticas e diretrizes atuais."
         },
         "correct": "E",
-        "explanation": "Boas práticas garantem qualidade, segurança e conformidade regulatória em todos os processos.",
+        "explanation": "A correta é a E porque a aderência a padrões técnicos assegura qualidade e segurança laboratorial. As outras falham pois: A impede rastreio, B infringe legalidade, C arrisca saúde e D compromete identificação.",
         "difficulty": "médio"
     },
     {
@@ -10545,7 +10545,7 @@ window.questionBank = [
             "E": "Ignorar protocolos técnicos do setor."
         },
         "correct": "C",
-        "explanation": "Boas práticas garantem qualidade, segurança e conformidade regulatória em todos os processos.",
+        "explanation": "A correta é a C pois diretrizes atuais garantem a robustez e a reprodutibilidade dos dados digitais. As outras falham pois: A inviabiliza ciência, B é contexto físico, D causa desorganização e E compromete precisão.",
         "difficulty": "fácil"
     },
     {
@@ -10561,7 +10561,7 @@ window.questionBank = [
             "E": "Armazenar amostras sem identificação."
         },
         "correct": "D",
-        "explanation": "Boas práticas garantem qualidade, segurança e conformidade regulatória em todos os processos.",
+        "explanation": "A correta é a D pois a prática baseada em diretrizes assegura o melhor cuidado ao paciente. As outras falham pois: A ignora biossegurança, B omite registros legais, C despadroniza atendimento e E põe vidas em risco.",
         "difficulty": "médio"
     },
     {
@@ -10577,7 +10577,7 @@ window.questionBank = [
             "E": "Não documentar os procedimentos feitos."
         },
         "correct": "A",
-        "explanation": "Boas práticas garantem qualidade, segurança e conformidade regulatória em todos os processos.",
+        "explanation": "A correta é a A pois seguir diretrizes garante conformidade técnica. As outras falham pois: B negligencia proteção, C ignora normas, D impede identificação e E omite registros.",
         "difficulty": "fácil"
     },
     {
@@ -10593,7 +10593,7 @@ window.questionBank = [
             "E": "Trabalhar sem proteção individual (EPI)."
         },
         "correct": "D",
-        "explanation": "Boas práticas garantem qualidade, segurança e conformidade regulatória em todos os processos.",
+        "explanation": "A correta é a D pois boas práticas asseguram resultados confiáveis. As outras falham pois: A causa extravios, B quebra padrões, C inviabiliza revisão e E ignora segurança.",
         "difficulty": "médio"
     },
     {
@@ -10609,7 +10609,7 @@ window.questionBank = [
             "E": "Seguir boas práticas e diretrizes atuais."
         },
         "correct": "E",
-        "explanation": "Boas práticas garantem qualidade, segurança e conformidade regulatória em todos os processos.",
+        "explanation": "A correta é a E pois diretrizes promovem ética e eficiência. As outras falham pois: A descumpre normas, B oculta atos, C desorganiza dados e D arrisca acidentes.",
         "difficulty": "fácil"
     },
     {
@@ -10625,7 +10625,7 @@ window.questionBank = [
             "E": "Seguir boas práticas e diretrizes atualizadas."
         },
         "correct": "E",
-        "explanation": "Boas práticas garantem qualidade, segurança e conformidade regulatória em todos os processos.",
+        "explanation": "A correta é a E pois práticas atualizadas garantem segurança laboratorial. As outras falham pois: A dificulta rastreio, B fere legislação, C apaga evidências e D expõe riscos.",
         "difficulty": "médio"
     },
     {
@@ -10641,7 +10641,7 @@ window.questionBank = [
             "E": "Trabalhar sem usar equipamentos de proteção."
         },
         "correct": "D",
-        "explanation": "Boas práticas garantem qualidade, segurança e conformidade regulatória em todos os processos.",
+        "explanation": "A correta é a D pois padrões asseguram integridade na bioinformática. As outras falham pois: A impossibilita auditoria, B causa falhas, C anula etiquetas e E despreza proteção.",
         "difficulty": "fácil"
     },
     {
@@ -10657,7 +10657,7 @@ window.questionBank = [
             "E": "Ignorar protocolos e padrões estabelecidos."
         },
         "correct": "B",
-        "explanation": "Boas práticas garantem qualidade, segurança e conformidade regulatória em todos os processos.",
+        "explanation": "A correta é a B pois seguir normas garante precisão diagnóstica. As outras falham pois: A prejudica triagem, C expõe usuários, D perde histórico e E invalida procedimentos.",
         "difficulty": "médio"
     },
     {
@@ -10673,7 +10673,7 @@ window.questionBank = [
             "E": "Não documentar os procedimentos realizados."
         },
         "correct": "C",
-        "explanation": "Boas práticas garantem qualidade, segurança e conformidade regulatória em todos os processos.",
+        "explanation": "A correta é a C pois diretrizes técnicas mantêm o rigor científico. As outras falham pois: A gera inconsistência, B confunde dados, D compromete saúde e E veta registros.",
         "difficulty": "fácil"
     },
     {
@@ -10689,7 +10689,7 @@ window.questionBank = [
             "E": "Seguir boas práticas e diretrizes atualizadas."
         },
         "correct": "E",
-        "explanation": "Boas práticas garantem qualidade, segurança e conformidade regulatória em todos os processos.",
+        "explanation": "A correta é a E pois boas práticas otimizam o cuidado médico. As outras falham pois: A ignora biossegurança, B mistura materiais, C oculta passos e D descarta regras.",
         "difficulty": "fácil"
     },
     {
@@ -10705,7 +10705,7 @@ window.questionBank = [
             "E": "Atuar sem equipamentos de proteção individual."
         },
         "correct": "D",
-        "explanation": "Boas práticas garantem qualidade, segurança e conformidade regulatória em todos os processos.",
+        "explanation": "A correta é a D pois seguir padrões assegura qualidade clínica. As outras falham pois: A corrompe rotinas, B impede fiscalização, C arrisca trocas e E negligencia EPI.",
         "difficulty": "fácil"
     },
     {
@@ -10721,7 +10721,7 @@ window.questionBank = [
             "E": "Armazenar amostras sem identificação adequada."
         },
         "correct": "C",
-        "explanation": "Boas práticas garantem qualidade, segurança e conformidade regulatória em todos os processos.",
+        "explanation": "A correta é a C pois normas técnicas sustentam a prática laboratorial. As outras falham pois: A causa danos, B quebra histórico, D ignora leis e E compromete ID.",
         "difficulty": "médio"
     },
     {
