@@ -4,11 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Genoma SUS Quiz - Edital Exato</title>
+    
     <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
     <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet">
+    
+    <script src="banco.js"></script>
+
     <style>
         body { font-family: 'Inter', sans-serif; }
         .hide-scrollbar::-webkit-scrollbar { display: none; }
@@ -41,7 +45,7 @@
         };
         const getTheme = (area) => themeColors[area] || { bg: "bg-slate-50", text: "text-slate-700", border: "border-slate-200", bar: "bg-slate-500", highlight: "bg-slate-600" };
 
-        // --- EDITAL OFICIAL ENVIADO PELO USUÁRIO ---
+        // --- EDITAL OFICIAL ---
         const editalSyllabus = {
             "Laboratório": [
                 "Biologia, biologia molecular e genética",
@@ -61,158 +65,17 @@
             ]
         };
 
-        // --- BANCO DE DADOS EXTRAÍDO DO "banco.docx" (Mapeado exatamente para o Edital) ---
-        const questionBank = [
-            // ----- LABORATÓRIO -----
-            // 1. Biologia, biologia molecular e genética
-            { id: 301, area: "Laboratório", subject: "Biologia, biologia molecular e genética", 
-              text: "A RNA polimerase II em eucariotos é responsável pela transcrição de:", 
-              options: { A: "Apenas rRNA", B: "mRNA, e também a maioria dos snRNAs, miRNAs e lncRNAs", C: "Apenas tRNA", D: "DNA", E: "Apenas RNA mitocondrial" }, 
-              correct: "B", explanation: "A RNA polimerase II sintetiza os precursores do mRNA e muitos RNAs não-codificantes que regulam a expressão celular." },
-            { id: 302, area: "Laboratório", subject: "Biologia, biologia molecular e genética", 
-              text: "Sobre o código genético, é CORRETO afirmar que é 'degenerado' porque:", 
-              options: { A: "Cada aminoácido é codificado por um único códon", B: "Múltiplos códons podem codificar o mesmo aminoácido, sendo a degeneração maior na terceira posição do códon", C: "Cada códon codifica múltiplos aminoácidos diferentes", D: "O código varia significativamente entre espécies", E: "Alguns aminoácidos não possuem códon" }, 
-              correct: "B", explanation: "O código genético tem 64 códons para 20 aminoácidos, logo a maioria dos aminoácidos é codificada por mais de um códon." },
-            { id: 303, area: "Laboratório", subject: "Biologia, biologia molecular e genética", 
-              text: "Na eletroforese, o DNA migra em direção ao:", 
-              options: { A: "Cátodo (polo negativo), pois é carregado positivamente", B: "Ânodo (polo positivo), pois os grupos fosfato conferem carga negativa ao DNA", C: "Não migra, permanecendo no ponto de aplicação", D: "Lateralmente, perpendicular ao campo elétrico", E: "Para ambos os polos simultaneamente" }, 
-              correct: "B", explanation: "O esqueleto de açúcar-fosfato confere uma forte carga negativa ao DNA, fazendo-o migrar para o polo positivo (ânodo) em um campo elétrico." },
-
-            // 2. Tecnologias laboratoriais em genômica...
-            { id: 6, area: "Laboratório", subject: "Tecnologias laboratoriais em genômica (sequenciamento de nova geração - NGS, extração de DNA genômico, controle de qualidade, preparo de amostras)", 
-              text: "Em relação à extração de DNA genômico para sequenciamento de nova geração, assinale a alternativa CORRETA:", 
-              options: { A: "A razão A260/A280 obtida por NanoDrop é suficiente para avaliar a integridade do DNA.", B: "O método de beads magnéticas é altamente automatizável e o ratio bead:amostra pode ser ajustado para seleção de tamanho dos fragmentos.", C: "A extração por fenol-clorofórmio produz DNA de menor peso molecular que sílica.", D: "Tubos com heparina são preferíveis aos com EDTA.", E: "O Qubit avalia a integridade do DNA." }, 
-              correct: "B", explanation: "O método de beads magnéticas (SPRI) permite automação e size selection. O NanoDrop avalia apenas pureza. Heparina inibe a PCR." },
-            { id: 7, area: "Laboratório", subject: "Tecnologias laboratoriais em genômica (sequenciamento de nova geração - NGS, extração de DNA genômico, controle de qualidade, preparo de amostras)", 
-              text: "Sobre o sequenciamento Illumina (Sequencing by Synthesis), é CORRETO afirmar:", 
-              options: { A: "A geração de clusters ocorre por emulsion PCR.", B: "A cada ciclo, quatro nucleotídeos são incorporados simultaneamente.", C: "Os nucleotídeos utilizados possuem terminadores reversíveis 3'-O-azidomethyl que bloqueiam a extensão, garantindo incorporação de uma única base por ciclo.", D: "O sequenciamento paired-end envolve a leitura de duas moléculas distintas.", E: "A taxa de erro é predominantemente composta por indels." }, 
-              correct: "C", explanation: "A química Illumina usa terminadores reversíveis para ler uma base de cada vez fotograficamente. Os clusters são gerados por bridge amplification, não emulsão." },
-            { id: 8, area: "Laboratório", subject: "Tecnologias laboratoriais em genômica (sequenciamento de nova geração - NGS, extração de DNA genômico, controle de qualidade, preparo de amostras)", 
-              text: "Considerando o preparo de biblioteca para WGS Illumina, descreva CORRETAMENTE a sequência de etapas:", 
-              options: { A: "Ligação → Fragmentação → End repair → A-tailing", B: "Fragmentação → A-tailing → End repair → Ligação", C: "Fragmentação → End repair → A-tailing → Ligação de adaptadores → Seleção de tamanho → PCR", D: "End repair → Fragmentação → Ligação → A-tailing", E: "Fragmentação → Ligação → End repair → A-tailing" }, 
-              correct: "C", explanation: "O pipeline correto para DNA é: quebrar o DNA, reparar as pontas rombas, adicionar a cauda 'A', ligar os adaptadores em 'Y' (T-overhang), selecionar tamanho e amplificar." },
-            { id: 101, area: "Laboratório", subject: "Tecnologias laboratoriais em genômica (sequenciamento de nova geração - NGS, extração de DNA genômico, controle de qualidade, preparo de amostras)", 
-              text: "Em um laboratório, um lote de amostras em tubos de EDTA apresentou coagulação parcial. A causa mais provável é:", 
-              options: { A: "Excesso de EDTA", B: "Homogeneização insuficiente após a coleta — os tubos não foram invertidos", C: "Transporte em temperatura muito baixa", D: "Uso de agulhas 25G", E: "Centrifugação prematura" }, 
-              correct: "B", explanation: "Tubos de EDTA requerem inversão suave de 8 a 10 vezes imediatamente após a coleta para misturar o anticoagulante ao sangue." },
-
-            // 3. BPL, biossegurança e controle de qualidade
-            { id: 9, area: "Laboratório", subject: "Boas Práticas de Laboratório (BPL), biossegurança e controle de qualidade", 
-              text: "Qual métrica de controle de qualidade em NGS indica a MAIOR preocupação com a qualidade dos dados?", 
-              options: { A: "85% das bases com score Phred ≥ Q30", B: "Taxa de mapeamento de 97%", C: "Cobertura média de 32×", D: "Taxa de duplicação de 45% em biblioteca com amplificação por PCR", E: "Insert size com distribuição unimodal centrada em 380 bp" }, 
-              correct: "D", explanation: "Uma taxa de duplicação de 45% significa que quase metade dos seus reads são lixo (cópias exatas de PCR da mesma molécula original), indicando baixa complexidade." },
-            { id: 10, area: "Laboratório", subject: "Boas Práticas de Laboratório (BPL), biossegurança e controle de qualidade", 
-              text: "Segundo os princípios ALCOA+ de integridade de dados laboratoriais, representa uma violação GRAVE:", 
-              options: { A: "Manter registros em caderno de laboratório com assinatura.", B: "Corrigir um erro riscando com um traço único.", C: "Registrar resultados no dia seguinte com base em anotações em papel avulso que serão descartadas.", D: "Arquivar dados no LIMS com audit trail.", E: "Realizar calibração programada de pipetas." }, 
-              correct: "C", explanation: "Viola o princípio de Originalidade e Contemporaneidade (os dados devem ser registrados no exato momento da execução)." },
-            { id: 11, area: "Laboratório", subject: "Boas Práticas de Laboratório (BPL), biossegurança e controle de qualidade", 
-              text: "Em relação aos níveis de biossegurança, assinale a alternativa CORRETA:", 
-              options: { A: "Laboratórios com sangue humano devem operar em NB-3.", B: "Em NB-2, a CSB é obrigatória para pipetagem simples.", C: "A CSB Classe II Tipo A2 protege simultaneamente o operador, o produto e o ambiente.", D: "Autoclavação a 100°C por 30 min é o padrão.", E: "Acesso é irrestrito em NB-2." }, 
-              correct: "C", explanation: "A Cabine de Segurança Biológica Classe II garante um fluxo laminar seguro para a amostra e filtração HEPA na exaustão para proteger o operador e o ambiente." },
-            { id: 12, area: "Laboratório", subject: "Boas Práticas de Laboratório (BPL), biossegurança e controle de qualidade", 
-              text: "Sobre controle de qualidade laboratorial em genômica, é CORRETO afirmar:", 
-              options: { A: "O gráfico de Levey-Jennings estima incerteza.", B: "A regra 1_3s indica erro sistemático.", C: "O Genome in a Bottle (GIAB/NIST) fornece amostras de DNA de referência para validação de pipelines de WGS.", D: "Proficiency testing é calibração de equipamentos.", E: "O controle negativo (NTC) é dispensável." }, 
-              correct: "C", explanation: "As amostras do GIAB são as mais caracterizadas do mundo, usadas globalmente para validar se um sequenciador ou pipeline está achando as variantes certas." },
-
-            // 4. Ética em pesquisa e noções de estudos multicêntricos
-            { id: 13, area: "Laboratório", subject: "Ética em pesquisa e noções de estudos multicêntricos", 
-              text: "Em relação à ética em pesquisa genômica, assinale a alternativa CORRETA segundo a regulamentação brasileira:", 
-              options: { A: "O consentimento amplo (broad consent) é totalmente proibido.", B: "Dados genéticos são dados pessoais comuns pela LGPD.", C: "O direito de não saber do participante sobre seus resultados genéticos individuais deve ser respeitado e previsto no TCLE.", D: "Aprovação por um único CEP basta para todos os centros.", E: "O Relatório Belmont tem quatro princípios." }, 
-              correct: "C", explanation: "Muitos pacientes desejam contribuir para a ciência, mas não querem ser informados caso descubram que têm risco elevado para Alzheimer ou câncer. Esse é o 'Direito de não saber'." },
-            { id: 14, area: "Laboratório", subject: "Ética em pesquisa e noções de estudos multicêntricos", 
-              text: "Sobre estudos multicêntricos em genômica, assinale a alternativa INCORRETA:", 
-              options: { A: "A padronização de SOPs entre centros é essencial.", B: "Amostras de referência devem ser processadas por todos antes do início.", C: "Cada centro participante deve submeter o protocolo ao seu CEP local.", D: "A variabilidade de resultados entre centros é esperada e aceitável, não sendo necessário monitoramento contínuo.", E: "O Data Management Center é responsável pela curadoria centralizada." }, 
-              correct: "D", explanation: "O erro da letra D é afirmar que não é necessário monitoramento contínuo. Em genômica multicêntrica, 'Batch Effects' entre centros podem destruir os dados; monitoramento é crucial." },
-
-            // 5. Noções de saúde pública e ética em pesquisa
-            { id: 15, area: "Laboratório", subject: "Noções de saúde pública e ética em pesquisa", 
-              text: "Sobre o Sistema Único de Saúde (SUS) e a genômica em saúde pública, assinale a alternativa CORRETA:", 
-              options: { A: "A universalidade do SUS exclui estrangeiros.", B: "A integralidade pressupõe ações exclusivamente curativas.", C: "O Programa Genomas SUS visa sequenciar genomas de uma amostra representativa da população brasileira, criando um banco de dados de referência nacional.", D: "A equidade significa acesso idêntico e uniforme a todos.", E: "A participação social é exercida apenas por médicos." }, 
-              correct: "C", explanation: "A diversidade genética do Brasil é sub-representada em bancos europeus. O Genomas SUS visa corrigir isso para permitir medicina de precisão na nossa população." },
-
-            // ----- BIOINFORMÁTICA -----
-            // 1. Bioinformática e análise genômica
-            { id: 16, area: "Bioinformática", subject: "Bioinformática e análise genômica", 
-              text: "No pipeline GATK Best Practices para chamada de variantes em WGS, qual é a função da etapa de BQSR?", 
-              options: { A: "Remover reads duplicados do arquivo BAM.", B: "Recalibrar empiricamente os scores de qualidade das bases, corrigindo vieses sistemáticos da plataforma de sequenciamento.", C: "Recanalisar os reads ao genoma.", D: "Filtrar variantes com VQSR.", E: "Normalizar a cobertura." }, 
-              correct: "B", explanation: "O BQSR modela a taxa de erro física da máquina (ex: bases no final do read têm pior qualidade) e re-atribui o Phred Score para evitar chamadas de variantes falsas." },
-            { id: 17, area: "Bioinformática", subject: "Bioinformática e análise genômica", 
-              text: "Sobre o algoritmo do GATK HaplotypeCaller, é CORRETO afirmar:", 
-              options: { A: "Conta simplesmente o número de reads e aplica modelo binomial.", B: "Identifica regiões ativas, monta haplótipos locais usando grafos de De Bruijn, realinha reads via PairHMM e usa modelo bayesiano para determinar genótipos.", C: "O modo GVCF registra apenas variantes.", D: "O VQSR é aplicado automaticamente.", E: "Requer BAMs não ordenados." }, 
-              correct: "B", explanation: "Diferente de métodos obsoletos, o HaplotypeCaller faz a montagem de DNA em miniatura no local da variante (Grafos) para lidar com InDels de forma muito mais precisa." },
-            { id: 18, area: "Bioinformática", subject: "Bioinformática e análise genômica", 
-              text: "Interprete a linha VCF: chr17 43093449 rs80357713 G A 8500 PASS DP=60;AF=0.5 GT:DP:AD:GQ 0/1:60:30,30:99", 
-              options: { A: "Variante homozigota na posição chr17.", B: "Variante heterozigota (G>A) com 30 reads suportando a referência e 30 o alternativo, qualidade máxima, passando todos os filtros.", C: "Variante não filtrada com allele frequency populacional de 50%.", D: "Variante de baixa qualidade (QUAL=8500).", E: "Dois alelos alternativos detectados." }, 
-              correct: "B", explanation: "GT=0/1 (Heterozigoto). AD=30,30 (30 reads da ref 'G', 30 reads do alt 'A'). GQ=99 (Phred score máximo, altíssima confiança)." },
-
-            // 2. Programação e ferramentas computacionais
-            { id: 19, area: "Bioinformática", subject: "Programação e ferramentas computacionais", 
-              text: "Sobre os formatos de arquivo em bioinformática genômica, assinale a alternativa CORRETA:", 
-              options: { A: "O formato CRAM armazena alinhamentos sem referência ao genoma.", B: "O MAPQ (Mapping Quality) indica a probabilidade de o read ter sido sequenciado corretamente pelo instrumento.", C: "A flag SAM 0x400 (1024) identifica reads marcados como duplicados de PCR ou ópticos.", D: "O formato BED é um formato 1-based.", E: "O BAM é um arquivo texto comprimido com gzip legível com zcat." }, 
-              correct: "C", explanation: "A flag bitwise 1024 em SAM/BAM marca reads como duplicados (PCR/Optical). O CRAM precisa de referência. BED é 0-based. BAM é binário (BGZF)." },
-            { id: 21, area: "Bioinformática", subject: "Programação e ferramentas computacionais", 
-              text: "Qual dos seguintes comandos samtools/bcftools está CORRETAMENTE descrito?", 
-              options: { A: "samtools flagstat gera um pileup de reads.", B: "bcftools norm -m -both -f ref.fa input.vcf normaliza variantes por left-alignment e decompõe variantes multi-alélicas.", C: "samtools depth marca reads duplicados.", D: "bcftools merge divide VCFs.", E: "samtools sort -n ordena por coordenada genômica." }, 
-              correct: "B", explanation: "Normalizar VCFs é crucial antes da anotação clínica. O comando decompõe linhas onde há múltiplas variantes na mesma posição e as alinha à esquerda da referência." },
-            { id: 23, area: "Bioinformática", subject: "Programação e ferramentas computacionais", 
-              text: "Sobre gerenciadores de workflow em bioinformática (ex: pipelines Genomas SUS), é CORRETO afirmar:", 
-              options: { A: "Nextflow e Snakemake são ferramentas de visualização como o IGV.", B: "Nextflow utiliza DSL baseado em Groovy e suporta nativamente execução em containers (Docker) e plataformas de nuvem, facilitando reprodutibilidade.", C: "Snakemake não suporta paralelização.", D: "Pipelines nf-core são modelos proprietários pagos.", E: "Containers Docker são usados só para visualização." }, 
-              correct: "B", explanation: "O Nextflow orquestra a análise genômica disparando containers em servidores de alta performance, garantindo que o pipeline rode igual em qualquer computador do mundo." },
-
-            // 3. Estatística aplicada à genômica
-            { id: 24, area: "Bioinformática", subject: "Estatística aplicada à genômica", 
-              text: "Em um GWAS com 8 milhões de SNPs testados, qual é o limiar de significância genômica e qual a justificativa correta?", 
-              options: { A: "p < 0,05 — nível padrão.", B: "p < 5 × 10⁻⁸ — correção de Bonferroni para ~1 milhão de testes independentes efetivos (considerando LD).", C: "p < 0,001 — correção conservadora.", D: "p < 5 × 10⁻² — FDR de Benjamini-Hochberg.", E: "p < 1 × 10⁻¹⁰ — limiar arbitrário." }, 
-              correct: "B", explanation: "Como há Desequilíbrio de Ligação (LD), estima-se que existam 1 milhão de 'blocos' de genes independentes no genoma. O p-value 0.05 é dividido por 1 milhão (Bonferroni) = 5x10^-8." },
-            { id: 25, area: "Bioinformática", subject: "Estatística aplicada à genômica", 
-              text: "Sobre a Análise de Componentes Principais (PCA) em genômica, assinale a alternativa CORRETA:", 
-              options: { A: "O PCA é utilizado exclusivamente em RNA-Seq.", B: "Em um PCA genômico, os primeiros componentes capturam a estrutura de ancestralidade da amostra, e são usados como covariáveis em GWAS para controlar estratificação populacional.", C: "O fator lambda ideal é 0.", D: "Requer equilíbrio HW perfeito.", E: "É ineficaz em populações miscigenadas." }, 
-              correct: "B", explanation: "A PCA clusteriza os pacientes baseando-se em sua origem geográfica (Europeus, Africanos, Asiáticos). Controlar a PCA no GWAS evita que você ache que um gene causa a doença, quando na verdade ele é apenas característico de uma etnia." },
-
-            // 4. Princípios de saúde pública e epidemiologia genética
-            { id: 401, area: "Bioinformática", subject: "Princípios de saúde pública e epidemiologia genética", 
-              text: "No contexto do SUS, a identificação de variantes raras por WGS em um grande banco populacional auxilia na epidemiologia genética porque:", 
-              options: { A: "Garante que essas variantes serão eliminadas do genoma da população.", B: "Permite mapear a frequência de alelos de risco para doenças mendelianas específicas de subpopulações brasileiras (efeito fundador), desenhando políticas de triagem neonatal direcionadas.", C: "Comprova que o Brasil não tem diversidade genética.", D: "É irrelevante para a formulação de políticas públicas.", E: "O custo não justifica a aplicabilidade em epidemiologia." }, 
-              correct: "B", explanation: "A epidemiologia genética no SUS usa a genômica populacional para entender a distribuição de doenças raras e farmacogenômica, focando na prevenção e tratamento precoce." },
-            
-            // 5. Segurança de dados
-            { id: 31, area: "Bioinformática", subject: "Segurança de dados", 
-              text: "Sobre segurança de dados genômicos no armazenamento e transferência computacional, assinale a alternativa CORRETA:", 
-              options: { A: "A pseudonimização torna os dados completamente irreversíveis.", B: "A criptografia AES-256 é adequada para proteção de dados em repouso (discos), enquanto TLS protege dados em trânsito (rede).", C: "Dados podem ir para acesso aberto sem risco de reidentificação.", D: "O princípio do menor privilégio é irrelevante em pesquisa.", E: "A regra de backup 3-2-1 consiste em manter 3 cópias no mesmo HD." }, 
-              correct: "B", explanation: "Arquivos BAM e VCF humanos são dados sensíveis. Discos devem estar cifrados com AES. O tráfego de internet via portas da API deve ser TLS/HTTPS." },
-
-            // 6. Genética de populações
-            { id: 28, area: "Bioinformática", subject: "Genética de populações", 
-              text: "Em uma população em equilíbrio de Hardy-Weinberg, a frequência do alelo recessivo de uma doença é q = 0,02. Qual é a frequência esperada de portadores heterozigotos?", 
-              options: { A: "0,04%", B: "1,96%", C: "3,92%", D: "4,0%", E: "96,04%" }, 
-              correct: "C", explanation: "Se q = 0.02, então p = 0.98. Frequência de heterozigotos = 2pq = 2 * (0.98) * (0.02) = 0.0392 = 3.92%." },
-            { id: 29, area: "Bioinformática", subject: "Genética de populações", 
-              text: "Sobre o Fst (Fixation Index) em populações humanas, assinale a alternativa CORRETA:", 
-              options: { A: "O Fst global é ~0,85, indicando muita diferença entre populações.", B: "Fst = 0 significa alelos fixados e diferentes.", C: "O Fst global humano é ~0,12, indicando que aproximadamente 88% da variação genética humana está DENTRO das populações, não entre elas.", D: "É uma medida de heterozigosidade individual.", E: "Africanos têm menor diversidade interna." }, 
-              correct: "C", explanation: "Humanos são uma espécie muito homogênea. As diferenças raciais visíveis representam uma fração minúscula da variabilidade genética." },
-
-            // 7. Vocabulários controlados, ontologias e ETL
-            { id: 32, area: "Bioinformática", subject: "Vocabulários controlados, ontologias e técnicas de extração, transformação e carga de dados (ETL)", 
-              text: "Sobre vocabulários controlados e ontologias em genômica (estruturação de dados), assinale a alternativa CORRETA:", 
-              options: { A: "A Gene Ontology (GO) classifica variantes em patogênicas ou benignas.", B: "A Human Phenotype Ontology (HPO) é uma terminologia padronizada para descrever fenótipos clínicos humanos, sendo utilizada para priorização computacional de variantes candidatas.", C: "A Sequence Ontology descreve apenas proteínas.", D: "O padrão HL7 FHIR é um sequenciador da Illumina.", E: "Princípios FAIR aplicam-se exclusivamente a artigos PDF." }, 
-              correct: "B", explanation: "A HPO traduz sintomas (ex: 'Convulsão') para uma linguagem de máquina estruturada (HP:0001250), permitindo que algoritmos cruzem o sintoma com o genoma do paciente." },
-            { id: 33, area: "Bioinformática", subject: "Vocabulários controlados, ontologias e técnicas de extração, transformação e carga de dados (ETL)", 
-              text: "Sobre processos ETL (Extract, Transform, Load) aplicados a bancos de dados genômicos multicêntricos, é CORRETO afirmar:", 
-              options: { A: "A normalização de variantes em VCF é opcional na transformação.", B: "A carga incremental (Load) é preferível à carga completa em operação contínua, pois adiciona apenas novos dados sem reprocessar todo o banco (ex: Data Lake).", C: "O Hail é exclusivo para visualização.", D: "Apache Airflow gera FASTQs.", E: "Validação de dados (Schema validation) é desnecessária." }, 
-              correct: "B", explanation: "Bancos genômicos têm Terabytes. Um processo ETL moderno (ex: usando Apache Airflow e Spark) faz carga de dados incremental para otimizar custo e tempo de nuvem." }
-        ];
+        // O BANDO DE DADOS VEM DO ARQUIVO banco.js E FICA DISPONÍVEL AQUI AUTOMATICAMENTE
 
         const App = () => {
-            const [screen, setScreen] = useState('dashboard'); // dashboard | quiz | caderno | estatisticas
+            const [screen, setScreen] = useState('dashboard');
             const [quizConfig, setQuizConfig] = useState({ questions: [], title: "", mode: "study" });
             const [idx, setIdx] = useState(0);
             
-            // Estado Persistido
             const [history, setHistory] = useState(() => JSON.parse(localStorage.getItem('genomasus_vfinal_hist') || '{}'));
             const [flagged, setFlagged] = useState(() => JSON.parse(localStorage.getItem('genomasus_vfinal_flg') || '[]'));
             const [sessionAnswers, setSessionAnswers] = useState({});
             
-            // Filtro Global
             const [hideAnswered, setHideAnswered] = useState(false);
 
             useEffect(() => {
@@ -220,7 +83,6 @@
                 localStorage.setItem('genomasus_vfinal_flg', JSON.stringify(flagged));
             }, [history, flagged]);
 
-            // Motor do Caderno de Erros
             const cadernoStatus = useMemo(() => {
                 const status = {};
                 Object.keys(history).forEach(qId => {
@@ -257,7 +119,7 @@
                 }
 
                 if (toSolve.length === 0) {
-                    alert("Você já resolveu todas as questões desse filtro! Desmarque 'Ocultar questões já resolvidas' para refazê-las.");
+                    alert("Você já resolveu todas as questões desse filtro! Desmarque 'Ocultar resolvidas' para refazê-las.");
                     return;
                 }
 
@@ -308,7 +170,6 @@
                         </header>
 
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
-                            {/* Caderno de Erros */}
                             <button onClick={() => setScreen('caderno')} className="w-full bg-red-50 hover:bg-red-100 border border-red-200 rounded-[2rem] p-6 transition-all flex justify-between items-center group">
                                 <div className="flex items-center gap-4">
                                     <div className="p-3 bg-red-500 text-white rounded-xl shadow-lg"><Icons.BookX /></div>
@@ -320,7 +181,6 @@
                                 <span className="text-red-600 font-bold hidden md:block group-hover:translate-x-2 transition-transform">Abrir Caderno →</span>
                             </button>
 
-                            {/* Estatísticas */}
                             <button onClick={() => setScreen('estatisticas')} className="w-full bg-blue-50 hover:bg-blue-100 border border-blue-200 rounded-[2rem] p-6 transition-all flex justify-between items-center group">
                                 <div className="flex items-center gap-4">
                                     <div className="p-3 bg-blue-500 text-white rounded-xl shadow-lg"><Icons.BarChart /></div>
