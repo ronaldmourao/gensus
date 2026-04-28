@@ -34,8 +34,6 @@
         .diff-facil { @apply bg-emerald-100 text-emerald-700 border-emerald-200; }
         .diff-media { @apply bg-amber-100 text-amber-700 border-amber-200; }
         .diff-dificil { @apply bg-rose-100 text-rose-700 border-rose-200; }
-        
-        /* PWA Instalação (Opcional visual) */
         body { -webkit-tap-highlight-color: transparent; }
     </style>
 </head>
@@ -113,19 +111,49 @@
             const [showDifficultySelector, setShowDifficultySelector] = useState(false);
             const [pendingQuizData, setPendingQuizData] = useState(null);
             const [lastSyncTime, setLastSyncTime] = useState(null);
+            const [isLoadingGlobalUsers, setIsLoadingGlobalUsers] = useState(false);
 
             const activeBank = useMemo(() => window.questionBank || [], []);
 
-            // FORÇA O DARK MODE NO HTML ROOT
+            // Controle do Dark Mode no HTML
             useEffect(() => {
-                if (darkMode) {
-                    document.documentElement.classList.add('dark');
-                } else {
-                    document.documentElement.classList.remove('dark');
-                }
+                if (darkMode) document.documentElement.classList.add('dark');
+                else document.documentElement.classList.remove('dark');
                 localStorage.setItem('genomasus_dark_mode', darkMode);
             }, [darkMode]);
 
+            // NOVO: Busca TODOS os usuários da nuvem na tela de Login
+            useEffect(() => {
+                const fetchGlobalUsers = async () => {
+                    if (!CSV_URL || currentUser) return;
+                    setIsLoadingGlobalUsers(true);
+                    try {
+                        const response = await fetch(CSV_URL + "&t=" + new Date().getTime());
+                        const text = await response.text();
+                        const rows = text.split('\n').map(row => row.split(','));
+                        
+                        const cloudUsers = new Set();
+                        rows.slice(1).forEach(row => {
+                            const rowUser = row[1]?.replace(/"/g, '').trim().toLowerCase();
+                            if (rowUser) cloudUsers.add(rowUser);
+                        });
+
+                        setUserList(prev => {
+                            const mergedList = Array.from(new Set([...prev, ...cloudUsers]));
+                            localStorage.setItem('genomasus_user_list', JSON.stringify(mergedList));
+                            return mergedList;
+                        });
+                    } catch (e) {
+                        console.log("Offline: Usando apenas usuários salvos localmente.");
+                    } finally {
+                        setIsLoadingGlobalUsers(false);
+                    }
+                };
+
+                fetchGlobalUsers();
+            }, [currentUser]);
+
+            // Sincronização do Histórico do Usuário Ativo
             const syncFromCloud = async (userName, showMessage = true) => {
                 if (!CSV_URL) return;
                 setSyncStatus('syncing');
@@ -153,22 +181,21 @@
                     setLastSyncTime(new Date().toLocaleTimeString('pt-BR', { hour: '2-digit', minute: '2-digit' }));
                     setTimeout(() => setSyncStatus('idle'), 3000);
                 } catch (e) {
-                    console.error("Erro de sincronização", e);
                     setSyncStatus('error');
                     setSyncMessage('Offline');
                     setTimeout(() => setSyncStatus('idle'), 5000);
                 }
             };
 
+            // Loop de Sincronização em Background (após login)
             useEffect(() => {
                 if (!currentUser) return;
                 syncFromCloud(currentUser, false);
-                const interval = setInterval(() => {
-                    syncFromCloud(currentUser, false);
-                }, 30000);
+                const interval = setInterval(() => syncFromCloud(currentUser, false), 30000);
                 return () => clearInterval(interval);
             }, [currentUser]);
 
+            // Enviar Resposta para a Nuvem
             const syncAnswerToCloud = async (userName, qId, statusText) => {
                 try {
                     setSyncStatus('syncing');
@@ -192,16 +219,6 @@
                     setTimeout(() => setSyncStatus('idle'), 3000);
                 }
             };
-
-            useEffect(() => {
-                if (currentUser) {
-                    if (!userList.includes(currentUser)) {
-                        const newList = [...userList, currentUser];
-                        setUserList(newList);
-                        localStorage.setItem('genomasus_user_list', JSON.stringify(newList));
-                    }
-                }
-            }, [currentUser]);
 
             const handleLogin = (name) => {
                 const formatted = name.trim().toLowerCase();
@@ -234,7 +251,6 @@
 
             const startQuiz = (questions, title, mode) => {
                 if(questions.length === 0) return alert("Nenhuma questão disponível para este filtro.");
-                // SHUFFLE / RANDOMIZAÇÃO
                 const shuffled = [...questions].sort(() => 0.5 - Math.random());
                 setQuizConfig({ questions: shuffled, title, mode });
                 setSessionAnswers({});
@@ -245,7 +261,7 @@
             };
 
             const openDifficultySelector = (questions, title, mode) => {
-                if(questions.length === 0) return alert("Nenhuma questão disponível para este filtro.");
+                if(questions.length === 0) return alert("Nenhuma questão disponível.");
                 setPendingQuizData({ questions, title, mode });
                 setShowDifficultySelector(true);
             };
@@ -254,7 +270,7 @@
                 if (!pendingQuizData) return;
                 const filteredQuestions = difficulty === 'all' 
                     ? pendingQuizData.questions 
-                    : pendingQuizData.questions.filter(q => (q.difficulty || 'média').toLowerCase() === difficulty);
+                    : pendingQuizData.questions.filter(q => (q.difficulty || 'fácil').toLowerCase() === difficulty);
                 
                 if (filteredQuestions.length === 0) {
                     alert(`Nenhuma questão disponível neste nível.`);
@@ -326,15 +342,40 @@
                 return stats;
             }, [history, activeBank]);
 
+            const SyncIndicator = () => {
+                return (
+                    <div className={`fixed bottom-4 right-4 md:bottom-6 md:right-6 px-4 py-3 rounded-full border backdrop-blur-sm text-xs font-bold transition-all z-40 ${
+                        syncStatus === 'idle' ? 'opacity-0 pointer-events-none' :
+                        syncStatus === 'syncing' ? 'bg-blue-500/90 dark:bg-blue-600/90 border-blue-400 text-white' :
+                        syncStatus === 'success' ? 'bg-green-500/90 dark:bg-green-600/90 border-green-400 text-white' :
+                        'bg-red-500/90 dark:bg-red-600/90 border-red-400 text-white'
+                    }`}>
+                        <div className="flex items-center gap-2">
+                            {syncStatus === 'syncing' && <Icons.Loader />}
+                            {syncStatus === 'success' && <Icons.Check />}
+                            {syncStatus === 'error' && <Icons.AlertCircle />}
+                            <span>{syncMessage}</span>
+                        </div>
+                    </div>
+                );
+            };
+
             if (!currentUser) {
                 return (
-                    <div className="min-h-screen flex items-center justify-center p-6">
+                    <div className="min-h-screen flex items-center justify-center p-6 bg-slate-100 dark:bg-slate-900 transition-colors">
                         <div className="bg-white dark:bg-slate-800 p-8 md:p-10 rounded-[2rem] shadow-2xl w-full max-w-md border dark:border-slate-700 border-slate-200">
                             <div className="bg-blue-600 dark:bg-blue-700 w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-6 text-white shadow-lg"><Icons.Trophy /></div>
                             <h1 className="text-3xl font-black text-center text-slate-800 dark:text-white mb-2 tracking-tighter uppercase">Genoma SUS</h1>
-                            <p className="text-center text-slate-500 dark:text-slate-400 text-sm mb-8 font-medium">Treinamento de Elite</p>
+                            
+                            <div className="flex items-center justify-center gap-2 mb-8">
+                                <p className="text-center text-slate-500 dark:text-slate-400 text-sm font-medium">Treinamento de Elite</p>
+                                {isLoadingGlobalUsers && <span className="text-[10px] bg-slate-100 dark:bg-slate-700 text-slate-500 dark:text-slate-300 px-2 py-0.5 rounded font-bold animate-pulse">Buscando na Nuvem...</span>}
+                            </div>
                             
                             <div className="space-y-2 mb-8 max-h-60 overflow-y-auto pr-2 hide-scrollbar">
+                                {userList.length === 0 && !isLoadingGlobalUsers && (
+                                    <p className="text-center text-sm text-slate-400 dark:text-slate-500 italic py-4">Nenhum aluno encontrado localmente.</p>
+                                )}
                                 {userList.map(user => (
                                     <button key={user} onClick={() => handleLogin(user)} className="w-full flex items-center gap-3 p-3 rounded-xl bg-slate-50 dark:bg-slate-900 hover:bg-blue-50 dark:hover:bg-slate-700 border-2 border-transparent hover:border-blue-200 dark:hover:border-blue-600 transition-all group shadow-sm">
                                         <div className="p-2 bg-white dark:bg-slate-800 rounded-lg text-slate-400 dark:text-slate-300 group-hover:text-blue-500 dark:group-hover:text-blue-400 shadow-sm"><Icons.User /></div>
@@ -342,6 +383,7 @@
                                     </button>
                                 ))}
                             </div>
+                            
                             {!showNewUserForm ? (
                                 <button onClick={() => setShowNewUserForm(true)} className="w-full py-3 rounded-xl border-2 border-dashed border-slate-300 dark:border-slate-600 text-slate-500 dark:text-slate-400 font-bold hover:bg-slate-50 dark:hover:bg-slate-700 flex items-center justify-center gap-2 transition-all text-sm">
                                     <Icons.Plus /> Novo Aluno
@@ -358,7 +400,7 @@
 
                             <button onClick={() => setDarkMode(!darkMode)} className="mt-6 w-full flex items-center justify-center gap-2 py-2 px-4 rounded-lg bg-slate-100 dark:bg-slate-700/50 text-slate-600 dark:text-slate-400 text-xs font-bold hover:bg-slate-200 dark:hover:bg-slate-600 transition-all">
                                 {darkMode ? <Icons.Sun /> : <Icons.Moon />}
-                                {darkMode ? 'Modo Claro' : 'Modo Escuro'}
+                                {darkMode ? 'Mudar para Modo Claro' : 'Mudar para Modo Escuro'}
                             </button>
                         </div>
                     </div>
@@ -369,9 +411,9 @@
                 if (!showDifficultySelector || !pendingQuizData) return null;
                 const countByDiff = {
                     all: pendingQuizData.questions.length,
-                    fácil: pendingQuizData.questions.filter(q => (q.difficulty||'fácil') === 'fácil').length,
-                    médio: pendingQuizData.questions.filter(q => (q.difficulty||'fácil') === 'médio').length,
-                    difícil: pendingQuizData.questions.filter(q => (q.difficulty||'fácil') === 'difícil').length
+                    fácil: pendingQuizData.questions.filter(q => (q.difficulty||'fácil').toLowerCase() === 'fácil').length,
+                    médio: pendingQuizData.questions.filter(q => (q.difficulty||'fácil').toLowerCase() === 'médio').length,
+                    difícil: pendingQuizData.questions.filter(q => (q.difficulty||'fácil').toLowerCase() === 'difícil').length
                 };
 
                 return (
@@ -429,11 +471,10 @@
                                 <span className="text-sm font-bold text-slate-600 dark:text-slate-300 capitalize">Aluno: <span className="text-blue-600 dark:text-blue-400">{currentUser}</span></span>
                                 <div className="h-4 w-px bg-slate-300 dark:bg-slate-600 mx-1"></div>
                                 <button onClick={() => setDarkMode(!darkMode)} className="text-slate-400 dark:text-slate-500 hover:text-slate-800 dark:hover:text-white transition-colors">{darkMode ? <Icons.Sun /> : <Icons.Moon />}</button>
-                                <button onClick={handleLogout} className="text-slate-400 hover:text-red-500 transition-colors"><Icons.LogOut /></button>
+                                <button onClick={handleLogout} className="text-slate-400 hover:text-red-500 transition-colors ml-2"><Icons.LogOut /></button>
                             </div>
                         </div>
 
-                        {/* DESIGN 1: SHADOW-LG, HOVER SHADOW-2XL, TRANSLATE-Y */}
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
                             <button onClick={() => setScreen('caderno')} className="bg-white dark:bg-slate-800 hover:bg-red-50 dark:hover:bg-red-900/10 border dark:border-slate-700 border-slate-200 rounded-[2rem] p-6 transition-all duration-300 shadow-lg hover:shadow-2xl hover:-translate-y-1 flex justify-between items-center group">
                                 <div className="flex items-center gap-4">
@@ -462,7 +503,6 @@
                                 const ansCount = areaQs.filter(q => history[q.id]?.length > 0).length;
                                 return (
                                     <div key={area} className="bg-white dark:bg-slate-800 rounded-[2rem] border dark:border-slate-700 border-slate-200 shadow-lg hover:shadow-2xl transition-shadow duration-300 overflow-hidden flex flex-col">
-                                        {/* DESIGN 2: GRADIENTES SUTIS */}
                                         <div className={`${theme.bg} p-6 border-b ${theme.border}`}>
                                             <div className="flex justify-between items-center mb-4">
                                                 <h2 className={`text-xl font-black ${theme.text} uppercase tracking-tighter`}>{area}</h2>
@@ -507,11 +547,10 @@
                 return (
                     <div className="max-w-4xl mx-auto p-4 md:p-10 animate-in slide-in-from-right min-h-screen">
                         <header className="flex justify-between items-center mb-8">
-                            <button onClick={() => setScreen('dashboard')} className="text-slate-400 dark:text-slate-500 font-bold hover:text-slate-800 dark:hover:text-slate-300">← Pausar Treino</button>
+                            <button onClick={() => setScreen('dashboard')} className="text-slate-400 dark:text-slate-500 font-bold hover:text-slate-800 dark:hover:text-slate-300 text-sm md:text-base">← Pausar Treino</button>
                             <div className="bg-white dark:bg-slate-800 px-4 py-1.5 rounded-full border dark:border-slate-700 shadow-sm font-mono font-bold text-slate-500 dark:text-slate-400 text-sm">{idx + 1}/{quizConfig.questions.length}</div>
                         </header>
                         <div className="bg-white dark:bg-slate-800 rounded-[2rem] border dark:border-slate-700 border-slate-200 shadow-2xl overflow-hidden relative">
-                            {/* DESIGN 3: BARRA DE PROGRESSO ANIMADA COM SHIMMER */}
                             <div className="h-2 w-full bg-slate-100 dark:bg-slate-900">
                                 <div className={`h-full ${theme.bar} transition-all duration-500 relative overflow-hidden`} style={{width:`${((idx+1)/quizConfig.questions.length)*100}%`}}>
                                     <div className="absolute inset-0 w-full h-full animate-[shimmer_1.5s_infinite] -translate-x-full bg-gradient-to-r from-transparent via-white/40 to-transparent"></div>
@@ -555,50 +594,90 @@
             };
 
             const Estatisticas = () => (
-                <div className="max-w-6xl mx-auto p-4 md:p-8 animate-in slide-in-from-bottom-4">
-                    <button onClick={() => setScreen('dashboard')} className="mb-6 md:mb-8 font-bold text-slate-400 dark:text-slate-500 hover:text-slate-900 dark:hover:text-white">← Voltar ao Dashboard</button>
+                <div className="max-w-6xl mx-auto p-3 md:p-8 animate-in slide-in-from-bottom-4">
+                    <button onClick={() => setScreen('dashboard')} className="mb-6 md:mb-8 font-bold text-slate-400 dark:text-slate-500 hover:text-slate-900 dark:hover:text-white text-sm md:text-base">← Voltar ao Dashboard</button>
                     
+                    {/* BLOCO 1: VISÃO GERAL (BIG DATA) */}
                     <div className="bg-white dark:bg-slate-800 p-8 md:p-10 rounded-[2rem] shadow-xl border dark:border-slate-700 border-slate-200 mb-8 text-center relative overflow-hidden">
-                        <h2 className="text-3xl font-black text-slate-800 dark:text-white mb-6 uppercase tracking-tighter">Big Data do Concurseiro</h2>
-                        <div className="flex flex-col md:flex-row justify-center gap-6">
-                            {Object.entries(difficultyStats.global).map(([lvl, data]) => {
-                                const style = getDifficultyStyle(lvl);
-                                const perc = data.attempted > 0 ? Math.round((data.correct / data.attempted)*100) : 0;
+                        <h2 className="text-2xl md:text-3xl font-black text-slate-800 dark:text-white mb-6 uppercase tracking-tighter">Big Data do Concurseiro</h2>
+                        <div className="bg-blue-50 dark:bg-blue-900/20 p-6 md:p-8 rounded-[2rem] border dark:border-blue-700 border-blue-100 inline-block min-w-[200px] md:min-w-[250px]">
+                            <div className="text-5xl md:text-6xl font-black text-blue-600 dark:text-blue-400 mb-2">{Object.keys(history).length}</div>
+                            <div className="text-xs md:text-sm font-bold text-blue-800 dark:text-blue-300 uppercase tracking-widest">Questões na Nuvem</div>
+                        </div>
+                    </div>
+
+                    {/* BLOCO 2: DIAGNÓSTICO POR ASSUNTO (INÉDITAS / ERROS) */}
+                    <div className="bg-white dark:bg-slate-800 p-6 md:p-12 rounded-[3rem] shadow-xl border dark:border-slate-700 border-slate-200 mb-8">
+                        <h3 className="text-xl md:text-2xl font-black text-slate-800 dark:text-white mb-2">Diagnóstico de Guerra (Por Assunto)</h3>
+                        <p className="text-slate-500 dark:text-slate-400 mb-6 md:mb-10 font-medium text-sm md:text-base">Bata as metas do edital atacando o que você nunca viu ou o que errou.</p>
+                        
+                        <div className="space-y-4 md:space-y-6">
+                            {Object.entries(subjectsData).map(([name, data]) => {
+                                const coverage = Math.round((data.attempted / data.total) * 100);
+                                const accuracy = data.attempted > 0 ? Math.round((data.correct / data.attempted) * 100) : 0;
+                                
                                 return (
-                                    <div key={lvl} className={`${style.bg} border-2 border-transparent p-6 rounded-[2rem] min-w-[200px] shadow-sm`}>
-                                        <div className={`text-5xl font-black ${style.text} mb-2`}>{perc}%</div>
-                                        <div className={`text-[10px] font-black ${style.text} uppercase tracking-widest`}>Acerto Nível {lvl}</div>
+                                    <div key={name} className="p-4 md:p-6 border-2 dark:border-slate-700 border-slate-50 rounded-[2rem] bg-slate-50/30 dark:bg-slate-700/20 flex flex-col md:flex-row md:items-center gap-4 md:gap-6 group hover:bg-white dark:hover:bg-slate-700 hover:border-blue-100 dark:hover:border-blue-600 transition-all">
+                                        <div className="flex-1 min-w-0">
+                                            <span className="text-[10px] font-black uppercase text-slate-400 dark:text-slate-500 tracking-[0.2em] block mb-1">{data.area}</span>
+                                            <h4 className="font-bold text-slate-800 dark:text-white leading-tight mb-3 text-sm md:text-base line-clamp-2">{name}</h4>
+                                            <div className="flex gap-4 md:gap-6">
+                                                <div>
+                                                    <span className="text-[10px] font-bold text-slate-400 dark:text-slate-500 uppercase block">Cobertura</span>
+                                                    <span className={`text-lg md:text-lg font-black ${coverage > 80 ? 'text-green-500' : 'text-orange-500'}`}>{coverage}%</span>
+                                                </div>
+                                                <div>
+                                                    <span className="text-[10px] font-bold text-slate-400 dark:text-slate-500 uppercase block">Acerto</span>
+                                                    <span className={`text-lg md:text-lg font-black ${accuracy > 70 ? 'text-blue-600 dark:text-blue-400' : 'text-red-500'}`}>{accuracy}%</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div className="flex gap-2 flex-shrink-0">
+                                            <button onClick={() => startQuiz(data.questions.filter(q => !history[q.id]), "Inéditas: " + name, "study")} className="flex-1 md:flex-none px-4 md:px-6 py-2 md:py-3 bg-slate-900 dark:bg-slate-700 text-white text-[10px] md:text-xs font-black rounded-2xl hover:bg-slate-700 dark:hover:bg-slate-600 shadow-md whitespace-nowrap transition-all">SÓ INÉDITAS</button>
+                                            <button onClick={() => startQuiz(data.questions.filter(q => history[q.id] && !history[q.id][history[q.id].length-1].isCorrect), "Revisar Erros: " + name, "study")} className="flex-1 md:flex-none px-4 md:px-6 py-2 md:py-3 bg-red-100 dark:bg-red-900/30 text-red-600 dark:text-red-400 text-[10px] md:text-xs font-black rounded-2xl hover:bg-red-200 dark:hover:bg-red-900/50 transition-all">SÓ ERROS</button>
+                                        </div>
                                     </div>
                                 );
                             })}
                         </div>
                     </div>
 
-                    <div className="bg-white dark:bg-slate-800 p-6 md:p-10 rounded-[2rem] shadow-xl border dark:border-slate-700 border-slate-200 mb-8">
-                        <h3 className="text-2xl font-black text-slate-800 dark:text-white mb-2">Micro-Análise por Área</h3>
-                        <p className="text-slate-500 dark:text-slate-400 mb-8 font-medium text-sm">Identifique em qual nível de dificuldade você perde mais pontos.</p>
+                    {/* BLOCO 3: MICRO-ANÁLISE DE DIFICULDADE (FÁCIL/MÉDIO/DIFÍCIL) */}
+                    <div className="bg-white dark:bg-slate-800 p-6 md:p-12 rounded-[3rem] shadow-xl border dark:border-slate-700 border-slate-200">
+                        <h3 className="text-xl md:text-2xl font-black text-slate-800 dark:text-white mb-2">Micro-Análise de Dificuldade</h3>
+                        <p className="text-slate-500 dark:text-slate-400 mb-6 md:mb-8 font-medium text-sm md:text-base">Compare seu rendimento por nível de complexidade em cada área.</p>
                         
-                        <div className="space-y-6">
+                        <div className="space-y-6 md:space-y-8">
                             {Object.entries(difficultyStats.byArea).map(([area, diffs]) => {
                                 const theme = getTheme(area);
                                 return (
-                                    <div key={area} className={`p-6 rounded-[1.5rem] ${theme.bg} border ${theme.border}`}>
-                                        <h4 className={`text-base font-black ${theme.text} mb-5 uppercase tracking-tighter`}>{area}</h4>
-                                        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                                    <div key={area} className={`p-5 md:p-6 rounded-[2rem] ${theme.bg} border ${theme.border}`}>
+                                        <h4 className={`text-lg md:text-base font-black ${theme.text} mb-4 md:mb-6 uppercase tracking-tight`}>{area}</h4>
+                                        
+                                        <div className="grid grid-cols-1 md:grid-cols-3 gap-3 md:gap-4">
                                             {['fácil', 'médio', 'difícil'].map(diff => {
                                                 const data = diffs[diff];
                                                 const accuracy = data.attempted > 0 ? Math.round((data.correct / data.attempted) * 100) : 0;
                                                 const style = getDifficultyStyle(diff);
+                                                const Icon = style.icon;
+
                                                 return (
-                                                    <div key={diff} className="bg-white dark:bg-slate-800 p-4 rounded-xl shadow-sm">
-                                                        <div className="flex justify-between items-center mb-3">
-                                                            <span className={`text-xs font-black uppercase ${style.text}`}>{style.label}</span>
-                                                            <span className="text-[10px] font-bold text-slate-400">{data.attempted}/{data.total} feitas</span>
+                                                    <div key={diff} className="bg-white dark:bg-slate-700 p-3 md:p-4 rounded-xl shadow-sm">
+                                                        <div className="flex items-center gap-2 mb-3">
+                                                            <div className={`p-1.5 rounded ${style.bg} ${style.text}`}>
+                                                                <Icon />
+                                                            </div>
+                                                            <span className="text-xs font-bold text-slate-600 dark:text-slate-300 uppercase">{style.label}</span>
+                                                            <span className="ml-auto text-xs font-bold text-slate-400 dark:text-slate-500">{data.attempted}/{data.total}</span>
                                                         </div>
-                                                        <div className="flex items-end gap-2 mb-2">
-                                                            <span className={`text-3xl font-black ${style.text}`}>{accuracy}%</span>
+                                                        
+                                                        <div className="flex items-end gap-2">
+                                                            <span className={`text-2xl md:text-3xl font-black ${style.text}`}>{accuracy}%</span>
+                                                            <span className="text-[10px] text-slate-400 dark:text-slate-500 mb-1 uppercase font-bold">acerto</span>
                                                         </div>
-                                                        <div className="w-full bg-slate-100 dark:bg-slate-700 rounded-full h-1.5 overflow-hidden">
+                                                        
+                                                        <div className="w-full bg-slate-100 dark:bg-slate-600 rounded-full h-1.5 mt-2 overflow-hidden">
                                                             <div className={`h-full ${style.bg} transition-all duration-1000`} style={{width: `${accuracy}%`}}></div>
                                                         </div>
                                                     </div>
@@ -616,16 +695,17 @@
             return (
                 <div className="min-h-screen transition-colors duration-300">
                     <DifficultySelector />
+                    <SyncIndicator />
                     {screen === 'dashboard' && <Dashboard />}
                     {screen === 'quiz' && <Quiz />}
                     {screen === 'estatisticas' && <Estatisticas />}
                     {screen === 'caderno' && (
                         <div className="max-w-4xl mx-auto p-4 md:p-8 animate-in slide-in-from-bottom-4">
-                            <button onClick={() => setScreen('dashboard')} className="mb-6 md:mb-8 font-bold text-slate-400 dark:text-slate-500">← Voltar</button>
+                            <button onClick={() => setScreen('dashboard')} className="mb-6 md:mb-8 font-bold text-slate-400 dark:text-slate-500 hover:text-slate-900 dark:hover:text-white">← Voltar</button>
                             <div className="bg-white dark:bg-slate-800 p-8 md:p-12 rounded-[2rem] shadow-xl border dark:border-slate-700 text-center">
                                 <h2 className="text-3xl font-black text-slate-800 dark:text-white mb-8 uppercase tracking-tighter">O Funil da Aprovação</h2>
-                                <p className="text-slate-500 dark:text-slate-400 mb-8">Refaça as {errorQuestions.length} questões que você errou até dominá-las completamente.</p>
-                                <button disabled={errorQuestions.length === 0} onClick={() => startQuiz(errorQuestions, "Revisão Suprema", "study")} className="w-full py-5 bg-red-600 text-white font-black rounded-xl shadow-lg hover:bg-red-700 hover:scale-[1.02] transition-all disabled:opacity-50 disabled:grayscale">
+                                <p className="text-slate-500 dark:text-slate-400 mb-8 font-medium">Refaça as {errorQuestions.length} questões que você errou até dominá-las completamente.</p>
+                                <button disabled={errorQuestions.length === 0} onClick={() => startQuiz(errorQuestions, "Revisão Suprema", "study")} className="w-full py-5 bg-red-600 text-white font-black rounded-xl shadow-lg hover:bg-red-700 hover:-translate-y-1 transition-all disabled:opacity-50 disabled:grayscale disabled:hover:translate-y-0">
                                     INICIAR REVISÃO ({errorQuestions.length})
                                 </button>
                             </div>
