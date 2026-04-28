@@ -1,5 +1,7 @@
 // ====================================================================
-// BANCO COMPLETO DE QUESTÕES - REVISADO E AUDITADO
+// BANCO COMPLETO DE QUESTÕES - GENOMA SUS (FILTRADO)
+// Questões Originais: 745 | Questões Mantidas: 715
+// Removidos spans e fuga de tema com base em relevância técnica.
 // ====================================================================
 
 window.questionBank = [
@@ -468,22 +470,6 @@ window.questionBank = [
         "difficulty": "médio"
     },
     {
-        "id": 804,
-        "area": "Laboratório",
-        "subject": "Biologia, biologia molecular e genética",
-        "text": "Os telômeros têm função importante na estabilidade cromossômica porque:",
-        "options": {
-            "A": "Codificam proteínas essenciais,  uma característica que influencia a estabilidade in vitro o que resulta em  uma característica que influencia a estabilidade in vitro.",
-            "B": "Localizam-se no centro dos cromossomos além disso,  exigindo o uso de controles internos para validar a reação.",
-            "C": "Protegem as extremidades dos cromossomos lineares da degradação e fusão, sendo constituídos por repetições TTAGGG em humanos.",
-            "D": "Apenas existem em procariotos,  apresentando sensibilidade a variações de pH no tampão o que resulta em  o que requer calibração rigorosa dos métodos utilizados.",
-            "E": "Não têm função conhecida além disso,  o que requer calibração rigorosa dos métodos utilizados,  requerendo adequação aos padrões de segurança vigentes."
-        },
-        "correct": "C",
-        "explanation": "Os telômeros são sequências repetitivas nas extremidades dos cromossomos que previnem degradação por exonucleases e fusões cromossômicas. Em humanos, são compostos por repetições TTAGGG.",
-        "difficulty": "fácil"
-    },
-    {
         "id": 805,
         "area": "Laboratório",
         "subject": "Biologia, biologia molecular e genética",
@@ -657,22 +643,6 @@ window.questionBank = [
         },
         "correct": "A",
         "explanation": "O TCLE em genômica deve ser abrangente, cobrindo aspectos específicos como armazenamento em biobancos, possibilidade de uso futuro, achados incidentais e direitos do participante.",
-        "difficulty": "fácil"
-    },
-    {
-        "id": 816,
-        "area": "Laboratório",
-        "subject": "Ética em pesquisa e noções de estudos multicêntricos",
-        "text": "Em estudos multicêntricos, a harmonização entre centros significa:",
-        "options": {
-            "A": "Usar apenas reagentes de um fabricante, consequentemente,  o que demanda validação com métodos ortogonais de bancada.",
-            "B": "Garantir que métodos diferentes produzam resultados comparáveis.",
-            "C": "Processar o mesmo número de amostras,  sendo aplicável principalmente em cenários controlados.",
-            "D": "Ter o mesmo número de funcionários, consequentemente,  requerendo adequação aos padrões de segurança vigentes.",
-            "E": "Usar exatamente os mesmos equipamentos o que resulta em  sendo aplicável principalmente em cenários controlados."
-        },
-        "correct": "B",
-        "explanation": "Harmonização permite flexibilidade metodológica desde que seja demonstrada equivalência de resultados entre centros através de estudos de concordância.",
         "difficulty": "fácil"
     },
     {
@@ -1364,22 +1334,6 @@ window.questionBank = [
         "difficulty": "fácil"
     },
     {
-        "id": 1043,
-        "area": "Laboratório",
-        "subject": "Biologia, biologia molecular e genética",
-        "text": "Na tradução, o códon AUG codifica metionina e funciona como códon de iniciação. A sequência contextual que facilita o reconhecimento do AUG em eucariotos é denominada:",
-        "options": {
-            "A": "Poly-A.",
-            "B": "Cap 5'.",
-            "C": "Sequência Kozak.",
-            "D": "Shine-Dalgarno.",
-            "E": "TATA box."
-        },
-        "correct": "C",
-        "explanation": "Gabarito: Letra B. A sequência de Kozak ajuda o ribossomo eucariótico a ancorar e identificar o AUG correto para começar a tradução.",
-        "difficulty": "fácil"
-    },
-    {
         "id": 1044,
         "area": "Laboratório",
         "subject": "Biologia, biologia molecular e genética",
@@ -1713,22 +1667,6 @@ window.questionBank = [
         },
         "correct": "C",
         "explanation": "Gabarito: Letra B. O Ribossomo queima pesado GTP para atuar fisicamente como uma esteira mecânica que puxa e solta a proteína.",
-        "difficulty": "fácil"
-    },
-    {
-        "id": 1065,
-        "area": "Laboratório",
-        "subject": "Biologia, biologia molecular e genética",
-        "text": "O conceito de 'penetrância' em genética refere-se a:",
-        "options": {
-            "A": "A proporção de indivíduos com determinado genótipo que efetivamente manifestam o fenótipo esperado.",
-            "B": "Taxa de mutação, consequentemente,  o que requer calibração rigorosa dos métodos utilizados.",
-            "C": "Gravidade da doença o que resulta em  o que demanda validação com métodos ortogonais de bancada.",
-            "D": "Velocidade, consequentemente,  sendo aplicável principalmente em cenários controlados.",
-            "E": "Capacidade de penetrar a célula,  limitando a reprodutibilidade dos resultados entre lotes."
-        },
-        "correct": "A",
-        "explanation": "Gabarito: Letra B. Algumas pessoas têm a mutação dominante, mas a doença misteriosamente nunca 'penetra' no fenótipo (elas ficam saudáveis).",
         "difficulty": "fácil"
     },
     {
@@ -2402,22 +2340,6 @@ window.questionBank = [
         "correct": "E",
         "explanation": "Gabarito: B. É o arcabouço de proteção contra pirataria da biodiversidade (Lei 13.123/15). O lucro sobre nosso genoma deve retornar em benefícios de saúde ao nosso país.",
         "difficulty": "médio"
-    },
-    {
-        "id": 1108,
-        "area": "Laboratório",
-        "subject": "Ética em pesquisa e noções de estudos multicêntricos",
-        "text": "Segundo a Resolução CNS 441, biobancos e biorrepositórios diferem conceitualmente em pesquisa porque:",
-        "options": {
-            "A": "São sinônimos absolutos além disso,  permitindo a otimização do protocolo em condições controladas, consequentemente,  limitando a reprodutibilidade dos resultados entre lotes.",
-            "B": "Biorrepositório guarda tecido morto, Biobanco tecido vivo,  limitando a reprodutibilidade dos resultados entre lotes e  uma característica que influencia a estabilidade in vitro.",
-            "C": "O Biorrepositório é criado temporariamente para uma pesquisa específica e finda com ela; o Biobanco tem caráter institucional e perene para múltiplas pesquisas não previstas inicialmente.",
-            "D": "Biorrepositório é particular, Biobanco é público, consequentemente,  o que inviabiliza seu uso em amostras severamente degradadas, consequentemente,  um aspecto que aumenta o tempo de manipulação no fluxo de trabalho.",
-            "E": "Biobanco guarda bancos de dados digitais apenas e  requerendo adequação aos padrões de segurança vigentes,  um aspecto que aumenta o tempo de manipulação no fluxo de trabalho."
-        },
-        "correct": "C",
-        "explanation": "Gabarito: B. Biobancos são bibliotecas estruturadas a longo prazo. Biorrepositórios são 'gavetas' temporárias enquanto o projeto específico é escrito e finalizado.",
-        "difficulty": "fácil"
     },
     {
         "id": 1109,
@@ -5028,22 +4950,6 @@ window.questionBank = [
         "difficulty": "fácil"
     },
     {
-        "id": 1273,
-        "area": "Laboratório",
-        "subject": "Biologia, biologia molecular e genética",
-        "text": "O número normal de cromossomos encontrados em uma célula somática humana saudável (como uma célula da pele ou do fígado) é:",
-        "options": {
-            "A": "23 cromossomos totais, consequentemente,  apresentando sensibilidade a variações de pH no tampão.",
-            "B": "22 pares autossômicos e 2 pares sexuais.",
-            "C": "Depende da idade do indivíduo.",
-            "D": "46 pares, totalizando 92 cromossomos.",
-            "E": "23 pares, totalizando 46 cromossomos."
-        },
-        "correct": "E",
-        "explanation": "Gabarito: A. Células somáticas são diploides (2n), herdando 23 cromossomos da mãe e 23 do pai, resultando em 46 cromossomos. Apenas os gametas (espermatozoide/óvulo) possuem 23 (haploides).",
-        "difficulty": "fácil"
-    },
-    {
         "id": 1274,
         "area": "Laboratório",
         "subject": "Biologia, biologia molecular e genética",
@@ -5185,22 +5091,6 @@ window.questionBank = [
         },
         "correct": "B",
         "explanation": "Gabarito: C. A meiose reduz o número de cromossomos pela metade (23). Assim, quando o espermatozoide (23) encontra o óvulo (23), o bebê volta a ter o número normal (46).",
-        "difficulty": "fácil"
-    },
-    {
-        "id": 1283,
-        "area": "Laboratório",
-        "subject": "Biologia, biologia molecular e genética",
-        "text": "O código genético é lido em blocos de trincas. Quantas bases nitrogenadas formam um único 'códon' que o ribossomo traduzirá em um aminoácido?",
-        "options": {
-            "A": "Uma base.",
-            "B": "Duas bases.",
-            "C": "Vinte bases.",
-            "D": "Quatro bases.",
-            "E": "Três bases."
-        },
-        "correct": "E",
-        "explanation": "Gabarito: C. O códon é sempre uma trinca (três letras, ex: ATG, CCC, GAG). Cada trinca significa um aminoácido diferente.",
         "difficulty": "fácil"
     },
     {
@@ -7393,22 +7283,6 @@ window.questionBank = [
         },
         "correct": "A",
         "explanation": "Gabarito: D. A Uracila é a base exclusiva do RNA, substituindo a Timina que é exclusiva do DNA.",
-        "difficulty": "fácil"
-    },
-    {
-        "id": 1421,
-        "area": "Laboratório",
-        "subject": "Biologia, biologia molecular e genética",
-        "text": "As células reprodutivas humanas (espermatozoides e óvulos) são chamadas de gametas. Quantos cromossomos existem em um gameta humano normal?",
-        "options": {
-            "A": "92 cromossomos.",
-            "B": "44 cromossomos.",
-            "C": "46 cromossomos.",
-            "D": "23 cromossomos.",
-            "E": "23 pares."
-        },
-        "correct": "D",
-        "explanation": "Gabarito: C. Os gametas são células haploides (possuem apenas metade do material genético, 23). Ao se unirem na fecundação, formam um bebê com 46 cromossomos.",
         "difficulty": "fácil"
     },
     {
@@ -9956,22 +9830,6 @@ window.questionBank = [
         "difficulty": "fácil"
     },
     {
-        "id": 1632,
-        "area": "Bioinformática",
-        "subject": "Segurança de dados",
-        "text": "Ferramentas de predição in silico como SIFT, PolyPhen-2 e CADD avaliam variantes missense baseando-se em:",
-        "options": {
-            "A": "Dados de expressão gênica tecido-específica,  o que inviabiliza a montagem sem a integração de dados adicionais.",
-            "B": "Segregação familiar em grandes pedigrees, consequentemente,  requerendo a indexação prévia para otimizar o tempo de busca.",
-            "C": "Apenas a frequência populacional da variante, consequentemente,  o que inviabiliza a montagem sem a integração de dados adicionais.",
-            "D": "Evidências experimentais de função proteica, consequentemente,  um artefato que pode distorcer as frequências observadas.",
-            "E": "Conservação evolutiva e impacto na estrutura proteica previsto."
-        },
-        "correct": "E",
-        "explanation": "Preditores in silico analisam conservação entre espécies e mudanças nas propriedades físico-químicas do aminoácido para estimar patogenicidade.",
-        "difficulty": "médio"
-    },
-    {
         "id": 1633,
         "area": "Bioinformática",
         "subject": "Segurança de dados",
@@ -10049,22 +9907,6 @@ window.questionBank = [
         },
         "correct": "A",
         "explanation": "BCFtools é uma suite para manipulação de VCF/BCF: filtrar, merge, annotate, query, stats, e operações set em variantes.",
-        "difficulty": "médio"
-    },
-    {
-        "id": 1638,
-        "area": "Bioinformática",
-        "subject": "Programação e ferramentas computacionais",
-        "text": "Em um pipeline Nextflow ou Snakemake, qual é a principal vantagem sobre scripts bash tradicionais?",
-        "options": {
-            "A": "Execução mais rápida de comandos individuais o que resulta em  sendo necessário ajustar os parâmetros no software utilizado.",
-            "B": "Não requer instalação de dependências além disso,  exigindo uma etapa prévia de normalização dos dados brutos.",
-            "C": "Menor consumo de memória RAM, consequentemente,  necessitando de anotação cruzada com bancos de referência.",
-            "D": "Interface gráfica nativa para usuários o que resulta em  sendo necessário ajustar os parâmetros no software utilizado.",
-            "E": "Gerenciamento de workflow com paralelização, checkpoints e reprodutibilidade automatizada."
-        },
-        "correct": "E",
-        "explanation": "Workflow managers como Nextflow/Snakemake orquestram pipelines complexos com paralelização, checkpoint recovery, portabilidade e reprodutibilidade.",
         "difficulty": "médio"
     },
     {
@@ -10196,22 +10038,6 @@ window.questionBank = [
         "difficulty": "médio"
     },
     {
-        "id": 1647,
-        "area": "Laboratório",
-        "subject": "Ética em pesquisa e noções de estudos multicêntricos",
-        "text": "No aconselhamento genético para fibrose cística (herança autossômica recessiva), se ambos os pais são portadores, qual é o risco de um filho afetado?",
-        "options": {
-            "A": "50% de chance de ser portador assintomático.",
-            "B": "25% de chance de ser afetado (homozigoto recessivo).",
-            "C": "75% de chance de desenvolver sintomas.",
-            "D": "100% de chance de doença, consequentemente,  permitindo a otimização do protocolo em condições controladas.",
-            "E": "0% se os pais são assintomáticos além disso,  exigindo o uso de controles internos para validar a reação."
-        },
-        "correct": "B",
-        "explanation": "Cruzamento de heterozigotos (Aa x Aa): 25% AA (normal), 50% Aa (portador), 25% aa (afetado). Risco de doença = 1/4.",
-        "difficulty": "fácil"
-    },
-    {
         "id": 1648,
         "area": "Laboratório",
         "subject": "Ética em pesquisa e noções de estudos multicêntricos",
@@ -10241,22 +10067,6 @@ window.questionBank = [
         },
         "correct": "C",
         "explanation": "Antecipação: a expansão de trincas aumenta a cada geração, causando início mais cedo e sintomas mais graves (ex: Huntington, miotônica).",
-        "difficulty": "médio"
-    },
-    {
-        "id": 1650,
-        "area": "Laboratório",
-        "subject": "Ética em pesquisa e noções de estudos multicêntricos",
-        "text": "Mosaicismo somático ocorre quando:",
-        "options": {
-            "A": "Ambos os pais têm a mutação e  exigindo o uso de controles internos para validar a reação.",
-            "B": "A mutação é sempre letal em homozigotos e  apresentando sensibilidade a variações de pH no tampão.",
-            "C": "Uma mutação surge após a fertilização, afetando apenas parte das células do indivíduo.",
-            "D": "Apenas células germinativas são afetadas, consequentemente,  apresentando sensibilidade a variações de pH no tampão.",
-            "E": "Todas as células do corpo têm a mesma mutação e  que atua de forma secundária na preservação da amostra."
-        },
-        "correct": "C",
-        "explanation": "Mosaicismo somático = mutação pós-zigótica afetando subpopulação celular. Pode causar doença localizada ou sistêmica dependendo do timing.",
         "difficulty": "médio"
     },
     {
@@ -10516,22 +10326,6 @@ window.questionBank = [
         "difficulty": "fácil"
     },
     {
-        "id": 1732,
-        "area": "Laboratório",
-        "subject": "Biologia, biologia molecular e genética",
-        "text": "O códon de início da tradução que especifica metionina é:",
-        "options": {
-            "A": "AUG que inicia a síntese proteica.",
-            "B": "UAG exclusivamente,  sendo aplicável principalmente em cenários controlados.",
-            "C": "AAA lisina, consequentemente,  sendo um procedimento que depende de validação adicional.",
-            "D": "UGA apenas além disso,  que atua de forma secundária na preservação da amostra.",
-            "E": "UAA terminador além disso,  apresentando sensibilidade a variações de pH no tampão."
-        },
-        "correct": "A",
-        "explanation": "AUG codifica metionina e serve como start codon. UAA, UAG, UGA são stop codons.",
-        "difficulty": "fácil"
-    },
-    {
         "id": 1733,
         "area": "Laboratório",
         "subject": "Tecnologias laboratoriais em genômica (sequenciamento de nova geração - NGS, extração de DNA genômico, controle de qualidade, preparo de amostras)",
@@ -10642,22 +10436,6 @@ window.questionBank = [
         "correct": "C",
         "explanation": "FST quantifica estruturação: FST=0 (sem diferenciação), FST alto (populações divergentes). Wright's FST=(HT-HS)/HT.",
         "difficulty": "difícil"
-    },
-    {
-        "id": 1740,
-        "area": "Laboratório",
-        "subject": "Ética em pesquisa e noções de estudos multicêntricos",
-        "text": "Expressividade variável em genética significa:",
-        "options": {
-            "A": "Sempre fenótipo idêntico,  exigindo o uso de controles internos para validar a reação.",
-            "B": "Variação na gravidade/extensão do fenótipo entre indivíduos com o mesmo genótipo.",
-            "C": "Nenhum indivíduo manifesta,  o que demanda validação com métodos ortogonais de bancada.",
-            "D": "Apenas uma manifestação possível e  exigindo o uso de controles internos para validar a reação.",
-            "E": "Apenas em doenças recessivas o que resulta em  uma característica que influencia a estabilidade in vitro."
-        },
-        "correct": "B",
-        "explanation": "Expressividade variável: mesmo genótipo, diferentes severidades. Ex: NF1 - alguns têm apenas manchas café-au-lait, outros neurofibromas extensos.",
-        "difficulty": "médio"
     },
     {
         "id": 1741,
@@ -10900,38 +10678,6 @@ window.questionBank = [
         "difficulty": "fácil"
     },
     {
-        "id": 1766,
-        "area": "Laboratório",
-        "subject": "Ética em pesquisa e noções de estudos multicêntricos",
-        "text": "Qual das seguintes práticas é recomendada em clínica e genética médica?",
-        "options": {
-            "A": "Seguir boas práticas, padrões de qualidade e diretrizes científicas atualizadas.",
-            "B": "Trabalhar sem equipamento de proteção individual, consequentemente,  o que inviabiliza seu uso em amostras severamente degradadas.",
-            "C": "Ignorar protocolos estabelecidos completamente além disso,  embora sua eficiência analítica possa variar no laboratório.",
-            "D": "Armazenar amostras sem identificação adequada, consequentemente,  um fator técnico que deve ser monitorado na fase pré-analítica.",
-            "E": "Não documentar procedimentos realizados,  um aspecto que aumenta o tempo de manipulação no fluxo de trabalho."
-        },
-        "correct": "A",
-        "explanation": "Boas práticas garantem qualidade, segurança e conformidade regulatória em todos os processos.",
-        "difficulty": "fácil"
-    },
-    {
-        "id": 1768,
-        "area": "Bioinformática",
-        "subject": "Segurança de dados",
-        "text": "Qual das seguintes práticas é recomendada em gestão e políticas públicas?",
-        "options": {
-            "A": "Seguir boas práticas, padrões de qualidade e diretrizes científicas atualizadas.",
-            "B": "Não documentar procedimentos realizados,  requerendo a indexação prévia para otimizar o tempo de busca.",
-            "C": "Armazenar amostras sem identificação adequada,  necessitando de anotação cruzada com bancos de referência.",
-            "D": "Trabalhar sem equipamento de proteção individual o que resulta em  requerendo a indexação prévia para otimizar o tempo de busca.",
-            "E": "Ignorar protocolos estabelecidos completamente, consequentemente,  o que restringe sua aplicação prática a grandes bancos de dados."
-        },
-        "correct": "A",
-        "explanation": "Boas práticas garantem qualidade, segurança e conformidade regulatória em todos os processos.",
-        "difficulty": "fácil"
-    },
-    {
         "id": 1770,
         "area": "Laboratório",
         "subject": "Boas Práticas de Laboratório (BPL), biossegurança e controle de qualidade",
@@ -10976,38 +10722,6 @@ window.questionBank = [
             "E": "Armazenar amostras sem identificação adequada além disso,  requerendo adequação aos padrões de segurança vigentes."
         },
         "correct": "C",
-        "explanation": "Boas práticas garantem qualidade, segurança e conformidade regulatória em todos os processos.",
-        "difficulty": "fácil"
-    },
-    {
-        "id": 1776,
-        "area": "Bioinformática",
-        "subject": "Segurança de dados",
-        "text": "Qual das seguintes práticas é recomendada em gestão e políticas públicas?",
-        "options": {
-            "A": "Seguir boas práticas, padrões de qualidade e diretrizes científicas atualizadas.",
-            "B": "Ignorar protocolos estabelecidos completamente,  sendo uma limitação inerente aos recursos computacionais modernos.",
-            "C": "Trabalhar sem equipamento de proteção individual, consequentemente,  gerando falsos positivos se não corrigido estatisticamente.",
-            "D": "Não documentar procedimentos realizados,  gerando falsos positivos se não corrigido estatisticamente.",
-            "E": "Armazenar amostras sem identificação adequada,  um aspecto computacional que aumenta o consumo de recursos."
-        },
-        "correct": "A",
-        "explanation": "Boas práticas garantem qualidade, segurança e conformidade regulatória em todos os processos.",
-        "difficulty": "fácil"
-    },
-    {
-        "id": 1778,
-        "area": "Laboratório",
-        "subject": "Boas Práticas de Laboratório (BPL), biossegurança e controle de qualidade",
-        "text": "Qual das seguintes práticas é recomendada em laboratório?",
-        "options": {
-            "A": "Seguir boas práticas, padrões de qualidade e diretrizes científicas atualizadas.",
-            "B": "Trabalhar sem equipamento de proteção individual além disso,  limitando a reprodutibilidade dos resultados entre lotes.",
-            "C": "Não documentar procedimentos realizados,  embora sua eficiência analítica possa variar no laboratório.",
-            "D": "Ignorar protocolos estabelecidos completamente,  o que demanda validação com métodos ortogonais de bancada.",
-            "E": "Armazenar amostras sem identificação adequada, consequentemente,  o que inviabiliza seu uso em amostras severamente degradadas."
-        },
-        "correct": "A",
         "explanation": "Boas práticas garantem qualidade, segurança e conformidade regulatória em todos os processos.",
         "difficulty": "fácil"
     },
@@ -11188,38 +10902,6 @@ window.questionBank = [
         "difficulty": "fácil"
     },
     {
-        "id": 1802,
-        "area": "Laboratório",
-        "subject": "Boas Práticas de Laboratório (BPL), biossegurança e controle de qualidade",
-        "text": "Qual das seguintes práticas é recomendada em laboratório?",
-        "options": {
-            "A": "Seguir boas práticas, padrões de qualidade e diretrizes científicas atualizadas.",
-            "B": "Trabalhar sem equipamento de proteção individual e  um aspecto que aumenta o tempo de manipulação no fluxo de trabalho.",
-            "C": "Ignorar protocolos estabelecidos completamente, consequentemente,  apresentando sensibilidade a variações de pH no tampão.",
-            "D": "Não documentar procedimentos realizados além disso,  um fator técnico que deve ser monitorado na fase pré-analítica.",
-            "E": "Armazenar amostras sem identificação adequada, consequentemente,  exigindo o uso de controles internos para validar a reação."
-        },
-        "correct": "A",
-        "explanation": "Boas práticas garantem qualidade, segurança e conformidade regulatória em todos os processos.",
-        "difficulty": "fácil"
-    },
-    {
-        "id": 1804,
-        "area": "Bioinformática",
-        "subject": "Segurança de dados",
-        "text": "Qual das seguintes práticas é recomendada em bioinformática?",
-        "options": {
-            "A": "Seguir boas práticas, padrões de qualidade e diretrizes científicas atualizadas.",
-            "B": "Não documentar procedimentos realizados o que resulta em  o que inviabiliza a montagem sem a integração de dados adicionais.",
-            "C": "Trabalhar sem equipamento de proteção individual,  o que demanda alto poder de processamento em clusters HPC.",
-            "D": "Ignorar protocolos estabelecidos completamente além disso,  o que demanda alto poder de processamento em clusters HPC.",
-            "E": "Armazenar amostras sem identificação adequada o que resulta em  o que pode ser mitigado através de filtros de qualidade."
-        },
-        "correct": "A",
-        "explanation": "Boas práticas garantem qualidade, segurança e conformidade regulatória em todos os processos.",
-        "difficulty": "fácil"
-    },
-    {
         "id": 1806,
         "area": "Laboratório",
         "subject": "Ética em pesquisa e noções de estudos multicêntricos",
@@ -11348,22 +11030,6 @@ window.questionBank = [
         "difficulty": "fácil"
     },
     {
-        "id": 1822,
-        "area": "Laboratório",
-        "subject": "Ética em pesquisa e noções de estudos multicêntricos",
-        "text": "Qual das seguintes práticas é recomendada em clínica e genética médica?",
-        "options": {
-            "A": "Seguir boas práticas, padrões de qualidade e diretrizes científicas atualizadas.",
-            "B": "Ignorar protocolos estabelecidos completamente o que resulta em  limitando a reprodutibilidade dos resultados entre lotes.",
-            "C": "Trabalhar sem equipamento de proteção individual o que resulta em  que atua de forma secundária na preservação da amostra.",
-            "D": "Armazenar amostras sem identificação adequada,  o que inviabiliza seu uso em amostras severamente degradadas.",
-            "E": "Não documentar procedimentos realizados e  requerendo adequação aos padrões de segurança vigentes."
-        },
-        "correct": "A",
-        "explanation": "Boas práticas garantem qualidade, segurança e conformidade regulatória em todos os processos.",
-        "difficulty": "médio"
-    },
-    {
         "id": 1824,
         "area": "Bioinformática",
         "subject": "Segurança de dados",
@@ -11428,22 +11094,6 @@ window.questionBank = [
         "difficulty": "fácil"
     },
     {
-        "id": 1832,
-        "area": "Bioinformática",
-        "subject": "Segurança de dados",
-        "text": "Qual das seguintes práticas é recomendada em gestão e políticas públicas?",
-        "options": {
-            "A": "Seguir boas práticas, padrões de qualidade e diretrizes científicas atualizadas.",
-            "B": "Ignorar protocolos estabelecidos completamente e  um aspecto computacional que aumenta o consumo de recursos.",
-            "C": "Não documentar procedimentos realizados,  o que demanda alto poder de processamento em clusters HPC.",
-            "D": "Trabalhar sem equipamento de proteção individual, consequentemente,  necessitando de anotação cruzada com bancos de referência.",
-            "E": "Armazenar amostras sem identificação adequada,  o que restringe sua aplicação prática a grandes bancos de dados."
-        },
-        "correct": "A",
-        "explanation": "Boas práticas garantem qualidade, segurança e conformidade regulatória em todos os processos.",
-        "difficulty": "fácil"
-    },
-    {
         "id": 1834,
         "area": "Laboratório",
         "subject": "Boas Práticas de Laboratório (BPL), biossegurança e controle de qualidade",
@@ -11472,22 +11122,6 @@ window.questionBank = [
             "E": "Trabalhar sem equipamento de proteção individual o que resulta em  um aspecto computacional que aumenta o consumo de recursos."
         },
         "correct": "D",
-        "explanation": "Boas práticas garantem qualidade, segurança e conformidade regulatória em todos os processos.",
-        "difficulty": "médio"
-    },
-    {
-        "id": 1838,
-        "area": "Laboratório",
-        "subject": "Ética em pesquisa e noções de estudos multicêntricos",
-        "text": "Qual das seguintes práticas é recomendada em clínica e genética médica?",
-        "options": {
-            "A": "Seguir boas práticas, padrões de qualidade e diretrizes científicas atualizadas.",
-            "B": "Armazenar amostras sem identificação adequada, consequentemente,  uma característica que influencia a estabilidade in vitro.",
-            "C": "Não documentar procedimentos realizados, consequentemente,  sendo um procedimento que depende de validação adicional.",
-            "D": "Ignorar protocolos estabelecidos completamente,  o que demanda validação com métodos ortogonais de bancada.",
-            "E": "Trabalhar sem equipamento de proteção individual, consequentemente,  um fator técnico que deve ser monitorado na fase pré-analítica."
-        },
-        "correct": "A",
         "explanation": "Boas práticas garantem qualidade, segurança e conformidade regulatória em todos os processos.",
         "difficulty": "médio"
     },
@@ -11620,38 +11254,6 @@ window.questionBank = [
         "difficulty": "médio"
     },
     {
-        "id": 1856,
-        "area": "Bioinformática",
-        "subject": "Segurança de dados",
-        "text": "Qual das seguintes práticas é recomendada em gestão e políticas públicas?",
-        "options": {
-            "A": "Seguir boas práticas, padrões de qualidade e diretrizes científicas atualizadas.",
-            "B": "Armazenar amostras sem identificação adequada, consequentemente,  sendo uma limitação inerente aos recursos computacionais modernos.",
-            "C": "Ignorar protocolos estabelecidos completamente, consequentemente,  um artefato que pode distorcer as frequências observadas.",
-            "D": "Não documentar procedimentos realizados além disso,  uma abordagem comum em análises de modelos probabilísticos.",
-            "E": "Trabalhar sem equipamento de proteção individual,  um artefato que pode distorcer as frequências observadas."
-        },
-        "correct": "A",
-        "explanation": "Boas práticas garantem qualidade, segurança e conformidade regulatória em todos os processos.",
-        "difficulty": "fácil"
-    },
-    {
-        "id": 1858,
-        "area": "Laboratório",
-        "subject": "Boas Práticas de Laboratório (BPL), biossegurança e controle de qualidade",
-        "text": "Qual das seguintes práticas é recomendada em laboratório?",
-        "options": {
-            "A": "Trabalhar sem equipamento de proteção individual o que resulta em  que atua de forma secundária na preservação da amostra.",
-            "B": "Não documentar procedimentos realizados o que resulta em  uma característica que influencia a estabilidade in vitro.",
-            "C": "Seguir boas práticas, padrões de qualidade e diretrizes científicas atualizadas.",
-            "D": "Armazenar amostras sem identificação adequada,  uma característica que influencia a estabilidade in vitro.",
-            "E": "Ignorar protocolos estabelecidos completamente o que resulta em  um fator técnico que deve ser monitorado na fase pré-analítica."
-        },
-        "correct": "C",
-        "explanation": "Boas práticas garantem qualidade, segurança e conformidade regulatória em todos os processos.",
-        "difficulty": "médio"
-    },
-    {
         "id": 1860,
         "area": "Bioinformática",
         "subject": "Segurança de dados",
@@ -11698,38 +11300,6 @@ window.questionBank = [
         "correct": "B",
         "explanation": "Boas práticas garantem qualidade, segurança e conformidade regulatória em todos os processos.",
         "difficulty": "médio"
-    },
-    {
-        "id": 1866,
-        "area": "Laboratório",
-        "subject": "Boas Práticas de Laboratório (BPL), biossegurança e controle de qualidade",
-        "text": "Qual das seguintes práticas é recomendada em laboratório?",
-        "options": {
-            "A": "Seguir boas práticas, padrões de qualidade e diretrizes científicas atualizadas.",
-            "B": "Trabalhar sem equipamento de proteção individual,  exigindo o uso de controles internos para validar a reação.",
-            "C": "Armazenar amostras sem identificação adequada e  sendo um procedimento que depende de validação adicional.",
-            "D": "Ignorar protocolos estabelecidos completamente,  sendo um procedimento que depende de validação adicional.",
-            "E": "Não documentar procedimentos realizados além disso,  apresentando sensibilidade a variações de pH no tampão."
-        },
-        "correct": "A",
-        "explanation": "Boas práticas garantem qualidade, segurança e conformidade regulatória em todos os processos.",
-        "difficulty": "médio"
-    },
-    {
-        "id": 1868,
-        "area": "Bioinformática",
-        "subject": "Segurança de dados",
-        "text": "Qual das seguintes práticas é recomendada em bioinformática?",
-        "options": {
-            "A": "Seguir boas práticas, padrões de qualidade e diretrizes científicas atualizadas.",
-            "B": "Trabalhar sem equipamento de proteção individual, consequentemente,  o que demanda alto poder de processamento em clusters HPC.",
-            "C": "Ignorar protocolos estabelecidos completamente o que resulta em  o que demanda alto poder de processamento em clusters HPC.",
-            "D": "Não documentar procedimentos realizados, consequentemente,  o que pode ser mitigado através de filtros de qualidade.",
-            "E": "Armazenar amostras sem identificação adequada o que resulta em  o que restringe sua aplicação prática a grandes bancos de dados."
-        },
-        "correct": "A",
-        "explanation": "Boas práticas garantem qualidade, segurança e conformidade regulatória em todos os processos.",
-        "difficulty": "fácil"
     },
     {
         "id": 1870,
@@ -11796,22 +11366,6 @@ window.questionBank = [
         "difficulty": "médio"
     },
     {
-        "id": 1878,
-        "area": "Laboratório",
-        "subject": "Ética em pesquisa e noções de estudos multicêntricos",
-        "text": "Qual das seguintes práticas é recomendada em clínica e genética médica?",
-        "options": {
-            "A": "Armazenar amostras sem identificação adequada,  o que requer calibração rigorosa dos métodos utilizados.",
-            "B": "Seguir boas práticas, padrões de qualidade e diretrizes científicas atualizadas.",
-            "C": "Não documentar procedimentos realizados,  requerendo adequação aos padrões de segurança vigentes.",
-            "D": "Trabalhar sem equipamento de proteção individual o que resulta em  apresentando sensibilidade a variações de pH no tampão.",
-            "E": "Ignorar protocolos estabelecidos completamente e  sendo aplicável principalmente em cenários controlados."
-        },
-        "correct": "B",
-        "explanation": "Boas práticas garantem qualidade, segurança e conformidade regulatória em todos os processos.",
-        "difficulty": "fácil"
-    },
-    {
         "id": 1880,
         "area": "Bioinformática",
         "subject": "Segurança de dados",
@@ -11860,22 +11414,6 @@ window.questionBank = [
         "difficulty": "fácil"
     },
     {
-        "id": 1886,
-        "area": "Laboratório",
-        "subject": "Ética em pesquisa e noções de estudos multicêntricos",
-        "text": "Qual das seguintes práticas é recomendada em clínica e genética médica?",
-        "options": {
-            "A": "Seguir boas práticas, padrões de qualidade e diretrizes científicas atualizadas.",
-            "B": "Ignorar protocolos estabelecidos completamente e  requerendo adequação aos padrões de segurança vigentes.",
-            "C": "Trabalhar sem equipamento de proteção individual, consequentemente,  sendo um procedimento que depende de validação adicional.",
-            "D": "Não documentar procedimentos realizados,  que atua de forma secundária na preservação da amostra.",
-            "E": "Armazenar amostras sem identificação adequada e  requerendo adequação aos padrões de segurança vigentes."
-        },
-        "correct": "A",
-        "explanation": "Boas práticas garantem qualidade, segurança e conformidade regulatória em todos os processos.",
-        "difficulty": "fácil"
-    },
-    {
         "id": 1888,
         "area": "Bioinformática",
         "subject": "Segurança de dados",
@@ -11906,21 +11444,5 @@ window.questionBank = [
         "correct": "E",
         "explanation": "Boas práticas garantem qualidade, segurança e conformidade regulatória em todos os processos.",
         "difficulty": "fácil"
-    },
-    {
-        "id": 1892,
-        "area": "Bioinformática",
-        "subject": "Segurança de dados",
-        "text": "Qual das seguintes práticas é recomendada em bioinformática?",
-        "options": {
-            "A": "Armazenar amostras sem identificação adequada e  o que pode ser mitigado através de filtros de qualidade.",
-            "B": "Trabalhar sem equipamento de proteção individual,  reduzindo o poder preditivo do algoritmo aplicado.",
-            "C": "Seguir boas práticas, padrões de qualidade e diretrizes científicas atualizadas.",
-            "D": "Ignorar protocolos estabelecidos completamente e  sendo necessário ajustar os parâmetros no software utilizado.",
-            "E": "Não documentar procedimentos realizados além disso,  uma abordagem comum em análises de modelos probabilísticos."
-        },
-        "correct": "C",
-        "explanation": "Boas práticas garantem qualidade, segurança e conformidade regulatória em todos os processos.",
-        "difficulty": "médio"
     }
 ];
