@@ -35,6 +35,9 @@
         .diff-media { @apply bg-amber-100 text-amber-700 border-amber-200; }
         .diff-dificil { @apply bg-rose-100 text-rose-700 border-rose-200; }
         body { -webkit-tap-highlight-color: transparent; }
+        
+        /* Fundamental para o arrasto mobile funcionar liso */
+        .swipe-container { touch-action: pan-y; }
     </style>
 </head>
 <body class="bg-slate-50 text-slate-900 dark:bg-slate-900 dark:text-slate-100 transition-colors duration-300">
@@ -64,7 +67,8 @@
             Star: ({filled}) => <svg width="18" height="18" viewBox="0 0 24 24" fill={filled ? "currentColor" : "none"} stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>,
             Scissors: () => <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><line x1="20" y1="4" x2="8.12" y2="15.88"/><line x1="14.47" y1="14.48" x2="20" y2="20"/><line x1="8.12" y1="8.12" x2="12" y2="12"/></svg>,
             ChevronLeft: () => <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>,
-            ChevronRight: () => <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            ChevronRight: () => <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>,
+            RefreshCcw: () => <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="1 4 1 10 7 10"></polyline><polyline points="23 20 23 14 17 14"></polyline><path d="M20.49 9A9 9 0 0 0 5.64 5.64L1 10"></path><path d="M3.51 15A9 9 0 0 0 18.36 18.36L23 14"></path></svg>
         };
 
         const themeColors = {
@@ -599,12 +603,14 @@
                 const [eliminated, setEliminated] = useState({});
                 const [selectedOption, setSelectedOption] = useState(null);
                 
-                const touchStartX = useRef(null);
-                const isSwiping = useRef(false);
+                const [swipeData, setSwipeData] = useState({ key: null, offset: 0, startX: 0 });
 
+                // AUTO-SCROLL TO TOP QUANDO A QUESTÃO MUDA
                 useEffect(() => {
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
                     setEliminated({});
                     setSelectedOption(null);
+                    setSwipeData({ key: null, offset: 0, startX: 0 });
                 }, [currentQ?.id]);
 
                 const toggleEliminate = (k) => {
@@ -612,34 +618,52 @@
                 };
 
                 const handleOptionClick = (k) => {
-                    if (isSwiping.current) {
-                        isSwiping.current = false;
-                        return;
-                    }
                     if (!sessionAns) setSelectedOption(k);
                 };
 
-                const handleTouchStart = (e) => {
-                    touchStartX.current = e.touches[0].clientX;
-                    isSwiping.current = false;
+                // FÍSICA DE ARRASTO REAL E RESPONSIVA
+                const handleTouchStart = (e, k) => {
+                    if (!!sessionAns) return;
+                    setSwipeData({ key: k, offset: 0, startX: e.touches[0].clientX });
+                };
+
+                const handleTouchMove = (e, k) => {
+                    if (!!sessionAns) return;
+                    if (swipeData.key === k) {
+                        const currentX = e.touches[0].clientX;
+                        const diff = currentX - swipeData.startX;
+                        
+                        // Permite arrastar para a esquerda (eliminar) e direita (restaurar)
+                        if (!eliminated[k] && diff < 0) {
+                            setSwipeData(prev => ({ ...prev, offset: Math.max(diff, -100) }));
+                        } else if (eliminated[k] && diff > 0) {
+                            setSwipeData(prev => ({ ...prev, offset: Math.min(diff, 100) }));
+                        }
+                    }
                 };
 
                 const handleTouchEnd = (e, k) => {
-                    if (touchStartX.current === null) return;
-                    const touchEndX = e.changedTouches[0].clientX;
-                    const diff = touchStartX.current - touchEndX;
-                    
-                    if (Math.abs(diff) > 40) {
-                        isSwiping.current = true;
-                        toggleEliminate(k);
+                    if (!!sessionAns) return;
+                    if (swipeData.key === k) {
+                        // Se puxou pra esquerda e passou do limite
+                        if (swipeData.offset <= -50 && !eliminated[k]) {
+                            toggleEliminate(k);
+                            if (selectedOption === k) setSelectedOption(null);
+                        } 
+                        // Se puxou pra direita e passou do limite
+                        else if (swipeData.offset >= 50 && eliminated[k]) {
+                            toggleEliminate(k);
+                        }
+                        
+                        // Reseta a posição do card (ele volta pro lugar suavemente pelo CSS)
+                        setSwipeData({ key: null, offset: 0, startX: 0 });
                     }
-                    touchStartX.current = null;
                 };
                 
                 if (!currentQ) return null;
                 
                 return (
-                    <div className="max-w-4xl mx-auto p-4 md:p-10 animate-in slide-in-from-right min-h-screen flex flex-col">
+                    <div className="max-w-4xl mx-auto p-4 md:p-10 animate-in slide-in-from-right min-h-screen flex flex-col overflow-hidden">
                         <header className="flex justify-between items-center mb-6 md:mb-8">
                             <button onClick={() => setScreen('dashboard')} className="text-slate-400 dark:text-slate-500 font-bold hover:text-slate-800 dark:hover:text-slate-300 text-sm md:text-base">← Pausar Treino</button>
                             <div className="bg-white dark:bg-slate-800 px-4 py-1.5 rounded-full border dark:border-slate-700 shadow-sm font-mono font-bold text-slate-500 dark:text-slate-400 text-sm">{idx + 1}/{quizConfig.questions.length}</div>
@@ -660,7 +684,7 @@
                                             <DiffIcon />
                                             <span className="text-[10px] font-black uppercase tracking-widest">{diffStyle.label}</span>
                                         </div>
-                                        <span className="bg-slate-200 dark:bg-slate-700 text-slate-600 dark:text-slate-300 px-3 py-1 rounded-lg text-[10px] font-black uppercase tracking-widest shadow-sm">
+                                        <span className="bg-slate-200 dark:bg-slate-700 text-slate-600 dark:text-slate-300 px-3 py-1 rounded-lg text-[10px] font-black uppercase tracking-widest shadow-sm hidden sm:inline">
                                             ID: {currentQ.id}
                                         </span>
                                     </div>
@@ -672,20 +696,20 @@
                                 </div>
                                 <h2 className="text-xl md:text-2xl font-bold text-slate-800 dark:text-white mb-8 leading-relaxed">{currentQ.text}</h2>
                                 
-                                <div className="space-y-3">
+                                <div className="space-y-3 relative swipe-container">
                                     {Object.entries(currentQ.options).map(([k, v]) => {
                                         const isSubmittedSel = sessionAns === k;
                                         const isPendingSel = selectedOption === k;
                                         const isRight = currentQ.correct === k;
                                         const isEliminated = eliminated[k];
 
-                                        let bClass = "flex-1 text-left p-4 md:p-5 rounded-2xl border-2 transition-all duration-200 flex gap-4 text-sm md:text-base font-medium ";
+                                        let bClass = "flex-1 text-left p-4 md:p-5 rounded-2xl border-2 font-medium w-full flex items-start gap-4 ";
                                         
                                         if (!sessionAns) {
                                             if (isPendingSel) {
-                                                bClass += "border-blue-500 bg-blue-50 dark:bg-blue-900/40 text-blue-800 dark:text-blue-200 shadow-md transform -translate-y-1";
+                                                bClass += "border-blue-500 bg-blue-50 dark:bg-blue-900/40 text-blue-800 dark:text-blue-200 shadow-md ring-2 ring-blue-200 dark:ring-blue-900";
                                             } else {
-                                                bClass += "border-slate-100 dark:border-slate-700 hover:border-blue-300 dark:hover:border-blue-500 hover:bg-blue-50 dark:hover:bg-blue-900/20";
+                                                bClass += "border-slate-100 dark:border-slate-700 text-slate-700 dark:text-slate-300 hover:border-blue-300 dark:hover:border-blue-500 hover:bg-blue-50 dark:hover:bg-blue-900/20 shadow-sm";
                                             }
                                         } else {
                                             if (isRight) bClass += "border-emerald-500 bg-emerald-50 dark:bg-emerald-900/20 text-emerald-800 dark:text-emerald-200";
@@ -693,25 +717,47 @@
                                             else bClass += "border-slate-50 dark:border-slate-800 opacity-40 grayscale";
                                         }
 
+                                        const isSwipingThis = swipeData.key === k;
+                                        const swipeTransform = isSwipingThis ? `translateX(${swipeData.offset}px)` : 'translateX(0px)';
+                                        const swipeTransition = isSwipingThis ? 'none' : 'transform 0.2s cubic-bezier(0.2, 0.8, 0.2, 1)';
+
                                         return (
-                                            <div 
-                                                key={k} 
-                                                className="flex gap-2 items-stretch relative group"
-                                                onTouchStart={handleTouchStart}
-                                                onTouchEnd={(e) => handleTouchEnd(e, k)}
-                                            >
+                                            <div key={k} className="relative group overflow-hidden bg-slate-100 dark:bg-slate-800 rounded-2xl select-none">
+                                                
+                                                {/* Botão Tesoura (Apenas Desktop) - Fica Fora do fluxo de Swipe */}
                                                 <button
                                                     onClick={() => toggleEliminate(k)}
                                                     disabled={!!sessionAns}
-                                                    className={`px-3 md:px-4 flex items-center justify-center rounded-2xl border-2 transition-all duration-200 md:opacity-0 md:group-hover:opacity-100 ${isEliminated ? 'opacity-100 bg-slate-200 border-slate-300 text-slate-500 dark:bg-slate-700 dark:border-slate-600 dark:text-slate-400' : 'bg-transparent border-slate-100 text-slate-300 hover:text-slate-500 hover:bg-slate-50 dark:border-slate-700 dark:text-slate-600 dark:hover:text-slate-400 dark:hover:bg-slate-800'} ${!!sessionAns ? 'grayscale cursor-not-allowed' : ''}`}
-                                                    title="Eliminar alternativa (ou deslize para o lado)"
+                                                    className={`hidden md:flex px-4 absolute left-0 h-full items-center justify-center rounded-l-2xl border-y-2 border-l-2 transition-all duration-200 z-20 
+                                                        ${isEliminated ? 'opacity-100 bg-slate-200 border-slate-300 text-slate-500 dark:bg-slate-700 dark:border-slate-600 dark:text-slate-400' : 'opacity-0 group-hover:opacity-100 bg-white/90 border-slate-100 text-slate-300 hover:text-slate-500 hover:bg-slate-50 dark:border-slate-700 dark:bg-slate-800/90 dark:text-slate-500 dark:hover:text-slate-300'} 
+                                                        ${!!sessionAns ? 'hidden' : ''}`}
+                                                    title="Eliminar alternativa"
                                                 >
                                                     <Icons.Scissors />
                                                 </button>
 
-                                                <button onClick={() => handleOptionClick(k)} disabled={!!sessionAns} className={`${bClass} ${isEliminated && !sessionAns ? 'opacity-40 grayscale' : ''}`}>
+                                                {/* Fundo Vermelho (Aparece ao arrastar para esquerda) */}
+                                                <div className={`absolute inset-0 bg-rose-100 dark:bg-rose-900/50 flex items-center justify-end pr-6 text-rose-500 transition-opacity ${isSwipingThis && swipeData.offset < 0 ? 'opacity-100' : 'opacity-0'}`}>
+                                                    <Icons.Scissors />
+                                                </div>
+
+                                                {/* Fundo Azul (Aparece ao arrastar para direita para restaurar) */}
+                                                <div className={`absolute inset-0 bg-blue-100 dark:bg-blue-900/50 flex items-center justify-start pl-6 text-blue-500 transition-opacity ${isSwipingThis && swipeData.offset > 0 ? 'opacity-100' : 'opacity-0'}`}>
+                                                    <span className="font-bold text-xs uppercase tracking-widest">Restaurar</span>
+                                                </div>
+
+                                                {/* Alternativa Principal (Movimentável no Mobile) */}
+                                                <button 
+                                                    onClick={() => handleOptionClick(k)} 
+                                                    disabled={!!sessionAns} 
+                                                    onTouchStart={(e) => handleTouchStart(e, k)}
+                                                    onTouchMove={(e) => handleTouchMove(e, k)}
+                                                    onTouchEnd={(e) => handleTouchEnd(e, k)}
+                                                    className={`${bClass} relative z-10 bg-white dark:bg-slate-800 ${isEliminated && !sessionAns ? 'opacity-50 grayscale bg-slate-50 dark:bg-slate-900 border-dashed' : ''}`}
+                                                    style={{ transform: swipeTransform, transition: swipeTransition }}
+                                                >
                                                     <span className={`font-black text-blue-600 dark:text-blue-400 shrink-0 mt-0.5 ${isEliminated && !sessionAns ? 'line-through' : ''}`}>{k}</span>
-                                                    <span className={`${isEliminated && !sessionAns ? 'line-through italic text-slate-400' : ''}`}>{v}</span>
+                                                    <span className={`${isEliminated && !sessionAns ? 'line-through italic text-slate-400 dark:text-slate-500' : ''}`}>{v}</span>
                                                 </button>
                                             </div>
                                         );
@@ -729,24 +775,24 @@
                             )}
 
                             <div className="p-3 md:p-6 border-t-2 border-slate-100 dark:border-slate-700 bg-slate-50 dark:bg-slate-800/30 flex gap-2 md:gap-4 mt-auto">
-                                <button onClick={() => setIdx(i => i - 1)} disabled={idx === 0} className="flex-1 py-3 md:py-4 bg-white dark:bg-slate-800 border-2 border-slate-200 dark:border-slate-600 text-slate-600 dark:text-slate-300 font-black rounded-xl hover:bg-slate-50 dark:hover:bg-slate-700 transition-all disabled:opacity-40 disabled:hover:bg-white dark:disabled:hover:bg-slate-800 text-xs flex items-center justify-center gap-1">
+                                <button onClick={() => setIdx(i => i - 1)} disabled={idx === 0} className="flex-1 py-3 md:py-4 bg-white dark:bg-slate-800 border-2 border-slate-200 dark:border-slate-600 text-slate-600 dark:text-slate-300 font-black rounded-xl hover:bg-slate-50 dark:hover:bg-slate-700 transition-all disabled:opacity-40 disabled:hover:bg-white dark:disabled:hover:bg-slate-800 text-[10px] sm:text-xs flex items-center justify-center gap-1">
                                     <Icons.ChevronLeft /> <span className="hidden sm:inline">ANTERIOR</span>
                                 </button>
                                 
                                 <button 
                                     onClick={() => handleAnswerSubmit(currentQ.id, selectedOption)} 
                                     disabled={!!sessionAns || !selectedOption}
-                                    className={`flex-[1.5] py-3 md:py-4 font-black rounded-xl shadow-md transition-all text-xs flex items-center justify-center ${
+                                    className={`flex-[1.5] py-3 md:py-4 font-black rounded-xl shadow-md transition-all text-xs sm:text-sm flex items-center justify-center ${
                                         !!sessionAns ? 'bg-slate-200 text-slate-400 dark:bg-slate-700 dark:text-slate-500 hidden md:flex' : 
                                         !selectedOption ? 'bg-slate-300 text-slate-500 dark:bg-slate-600 dark:text-slate-400' : 
-                                        'bg-blue-600 text-white hover:bg-blue-700 hover:scale-[1.02]'
+                                        'bg-blue-600 text-white hover:bg-blue-700 hover:scale-[1.02] ring-4 ring-blue-200 dark:ring-blue-900'
                                     }`}
                                 >
                                     {!!sessionAns ? 'RESPONDIDA' : 'RESPONDER'}
                                 </button>
 
                                 <button onClick={() => { if(idx < quizConfig.questions.length - 1) setIdx(i=>i+1); else setScreen('dashboard'); }} 
-                                    className={`flex-1 py-3 md:py-4 font-black rounded-xl transition-all text-xs flex items-center justify-center gap-1 ${
+                                    className={`flex-1 py-3 md:py-4 font-black rounded-xl transition-all text-[10px] sm:text-xs flex items-center justify-center gap-1 ${
                                     !sessionAns ? 'bg-white dark:bg-slate-800 border-2 border-slate-200 dark:border-slate-600 text-slate-600 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-700' : 'bg-slate-900 dark:bg-slate-100 text-white dark:text-slate-900 shadow-md hover:scale-[1.02]'
                                 }`}>
                                     <span className="hidden sm:inline">{idx < quizConfig.questions.length - 1 ? (sessionAns ? 'PRÓXIMA' : 'PULAR') : 'FINALIZAR'}</span> <Icons.ChevronRight />
