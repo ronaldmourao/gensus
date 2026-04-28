@@ -298,9 +298,15 @@
 
             const startQuizWithDifficulty = (difficulty) => {
                 if (!pendingQuizData) return;
-                const filteredQuestions = difficulty === 'all' 
-                    ? pendingQuizData.questions 
-                    : pendingQuizData.questions.filter(q => (q.difficulty || 'fácil').toLowerCase() === difficulty);
+                
+                let filteredQuestions = [];
+                if (difficulty === 'all') {
+                    filteredQuestions = pendingQuizData.questions;
+                } else if (difficulty === 'ineditas') {
+                    filteredQuestions = pendingQuizData.questions.filter(q => !history[q.id]);
+                } else {
+                    filteredQuestions = pendingQuizData.questions.filter(q => (q.difficulty || 'fácil').toLowerCase() === difficulty);
+                }
                 
                 if (filteredQuestions.length === 0) {
                     alert(`Nenhuma questão disponível neste nível.`);
@@ -441,6 +447,7 @@
                 if (!showDifficultySelector || !pendingQuizData) return null;
                 const countByDiff = {
                     all: pendingQuizData.questions.length,
+                    ineditas: pendingQuizData.questions.filter(q => !history[q.id]).length,
                     fácil: pendingQuizData.questions.filter(q => (q.difficulty||'fácil').toLowerCase() === 'fácil').length,
                     médio: pendingQuizData.questions.filter(q => (q.difficulty||'fácil').toLowerCase() === 'médio').length,
                     difícil: pendingQuizData.questions.filter(q => (q.difficulty||'fácil').toLowerCase() === 'difícil').length
@@ -459,6 +466,14 @@
                                         <Icons.Play />
                                     </div>
                                     <span className="text-xs font-bold text-slate-500 dark:text-slate-400">{countByDiff.all} questões mistas</span>
+                                </button>
+
+                                <button onClick={() => startQuizWithDifficulty('ineditas')} disabled={countByDiff.ineditas === 0} className={`p-4 rounded-xl border-2 transition-all ${countByDiff.ineditas === 0 ? 'opacity-40 grayscale cursor-not-allowed' : 'hover:shadow-lg hover:-translate-y-1 bg-indigo-50 dark:bg-indigo-900/30 border-transparent hover:border-indigo-300 dark:hover:border-indigo-700/50 group'}`}>
+                                    <div className="flex items-center justify-between mb-2">
+                                        <span className="text-xl font-black text-indigo-700 dark:text-indigo-400 group-hover:text-indigo-800 dark:group-hover:text-indigo-300 uppercase">Só Inéditas</span>
+                                        <div className="text-indigo-700 dark:text-indigo-400"><Icons.Play /></div>
+                                    </div>
+                                    <span className="text-xs font-bold text-indigo-600 dark:text-indigo-400">{countByDiff.ineditas} não resolvidas</span>
                                 </button>
 
                                 {['fácil', 'médio', 'difícil'].map(diff => {
@@ -601,12 +616,15 @@
 
                             <div className="p-6 md:p-10">
                                 <div className="flex items-center justify-between gap-2 mb-6 flex-wrap">
-                                    <div className="flex items-center gap-2">
+                                    <div className="flex items-center gap-2 flex-wrap">
                                         <span className={`text-[10px] font-black uppercase tracking-widest px-3 py-1 rounded-lg ${theme.bg} ${theme.text}`}>{currentQ.subject}</span>
                                         <div className={`flex items-center gap-1.5 px-3 py-1 rounded-lg ${diffStyle.bg} ${diffStyle.text}`}>
                                             <DiffIcon />
                                             <span className="text-[10px] font-black uppercase tracking-widest">{diffStyle.label}</span>
                                         </div>
+                                        <span className="bg-slate-200 dark:bg-slate-700 text-slate-600 dark:text-slate-300 px-3 py-1 rounded-lg text-[10px] font-black uppercase tracking-widest shadow-sm">
+                                            ID: {currentQ.id}
+                                        </span>
                                     </div>
                                     
                                     <button onClick={() => toggleFavorite(currentQ.id)} className={`flex items-center gap-1.5 px-3 py-1 rounded-lg border-2 transition-all hover:-translate-y-0.5 ${isFav ? 'bg-amber-100 border-amber-300 text-amber-600 dark:bg-amber-900/40 dark:border-amber-700/50 dark:text-amber-400' : 'bg-slate-50 border-slate-200 text-slate-400 dark:bg-slate-800 dark:border-slate-700 hover:border-amber-300 hover:text-amber-500'}`}>
