@@ -10,8 +10,6 @@
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet">
-    
-    <script src="banco.js"></script>
 
     <style>
         body { font-family: 'Inter', sans-serif; }
@@ -22,6 +20,9 @@
 </head>
 <body class="bg-[#f8fafc] text-slate-900">
     <div id="root"></div>
+
+    <!-- O BANCO DE QUESTÕES DEVE SER CARREGADO AQUI DENTRO DO BODY -->
+    <script src="banco.js"></script>
 
     <script type="text/babel">
         const { useState, useMemo, useEffect } = React;
@@ -65,8 +66,6 @@
             ]
         };
 
-        // O BANDO DE DADOS VEM DO ARQUIVO banco.js E FICA DISPONÍVEL AQUI AUTOMATICAMENTE
-
         const App = () => {
             const [screen, setScreen] = useState('dashboard');
             const [quizConfig, setQuizConfig] = useState({ questions: [], title: "", mode: "study" });
@@ -98,7 +97,10 @@
                 return status;
             }, [history]);
 
-            const errorQuestions = questionBank.filter(q => cadernoStatus[q.id] === 'red' || cadernoStatus[q.id] === 'yellow');
+            // AQUI O APP ACESSA A VARIÁVEL DA JANELA (window) DO ARQUIVO banco.js
+            const activeBank = window.questionBank || [];
+            
+            const errorQuestions = activeBank.filter(q => cadernoStatus[q.id] === 'red' || cadernoStatus[q.id] === 'yellow');
 
             const handleAnswer = (qId, option) => {
                 if (sessionAnswers[qId] && quizConfig.mode === 'study') return;
@@ -134,13 +136,13 @@
             // ---- DASHBOARD ----
             const Dashboard = () => {
                 const getAreaProgress = (areaName) => {
-                    const areaQs = questionBank.filter(q => q.area === areaName);
+                    const areaQs = activeBank.filter(q => q.area === areaName);
                     if (areaQs.length === 0) return { ans: 0, tot: 0, pct: 0 };
                     const ans = areaQs.filter(q => history[q.id] && history[q.id].length > 0).length;
                     return { ans, tot: areaQs.length, pct: Math.round((ans/areaQs.length)*100) };
                 };
                 const getSubjectProgress = (areaName, subjName) => {
-                    const subjQs = questionBank.filter(q => q.area === areaName && q.subject === subjName);
+                    const subjQs = activeBank.filter(q => q.area === areaName && q.subject === subjName);
                     const ans = subjQs.filter(q => history[q.id] && history[q.id].length > 0).length;
                     return { ans, tot: subjQs.length };
                 };
@@ -207,7 +209,7 @@
                                                 </h2>
                                                 <span className="bg-white text-slate-600 text-xs font-bold px-3 py-1.5 rounded-full shadow-sm">{areaProg.ans}/{areaProg.tot}</span>
                                             </div>
-                                            <button onClick={() => startQuiz(questionBank.filter(q => q.area === area), `Simulado Geral: ${area}`, 'study')} className={`mt-4 w-full py-3 ${theme.highlight} text-white font-bold rounded-xl shadow-md hover:opacity-90 transition flex items-center justify-center gap-2`}>
+                                            <button onClick={() => startQuiz(activeBank.filter(q => q.area === area), `Simulado Geral: ${area}`, 'study')} className={`mt-4 w-full py-3 ${theme.highlight} text-white font-bold rounded-xl shadow-md hover:opacity-90 transition flex items-center justify-center gap-2`}>
                                                 <Icons.Play /> Resolver Categoria Completa
                                             </button>
                                         </div>
@@ -223,7 +225,7 @@
                                                             <h4 className="text-sm font-bold text-slate-700 leading-snug">{subj}</h4>
                                                             <span className="text-[10px] uppercase font-bold text-slate-400 tracking-widest">{sProg.ans}/{sProg.tot} QUESTÕES</span>
                                                         </div>
-                                                        <button disabled={!hasQuestionsInBank} onClick={() => startQuiz(questionBank.filter(q => q.area === area && q.subject === subj), "Estudo: " + subj.substring(0,25)+"...", 'study')} className={`shrink-0 px-4 py-2 rounded-lg text-xs font-bold transition ${hasQuestionsInBank ? 'bg-slate-900 text-white hover:bg-slate-700' : 'bg-slate-100 text-slate-300 cursor-not-allowed'}`}>
+                                                        <button disabled={!hasQuestionsInBank} onClick={() => startQuiz(activeBank.filter(q => q.area === area && q.subject === subj), "Estudo: " + subj.substring(0,25)+"...", 'study')} className={`shrink-0 px-4 py-2 rounded-lg text-xs font-bold transition ${hasQuestionsInBank ? 'bg-slate-900 text-white hover:bg-slate-700' : 'bg-slate-100 text-slate-300 cursor-not-allowed'}`}>
                                                             {hasQuestionsInBank ? 'Estudar' : 'Adicionar depois'}
                                                         </button>
                                                     </div>
@@ -242,7 +244,7 @@
             const Estatisticas = () => {
                 const stats = useMemo(() => {
                     const s = { overall: { correct: 0, wrong: 0, total: 0 }, areas: {}, subjects: {} };
-                    questionBank.forEach(q => {
+                    activeBank.forEach(q => {
                         const qHistory = history[q.id];
                         if (qHistory && qHistory.length > 0) {
                             const lastAttempt = qHistory[qHistory.length - 1];
