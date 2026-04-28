@@ -2422,5 +2422,779 @@ window.questionBank = [
   { id: 1419, area: "Bioinformática", subject: "Genética de populações", 
     text: "O que é 'Efeito Fundador' (Founder Effect) na Genética Populacional isolada do Genoma Brasil (Ex: Isolamentos geográficos do passado ou vilas do sertão de fundação por poucos casais ancestrais fugidos)?", 
     options: { A: "O aumento instantâneo do cérebro na cognição por excessos mitóticos anormais das redes do gene em gerações evolutivas aceleradas de tempo curto", B: "Quando um grupo minúsculo se separa da grande massa populacional fundando uma nova vila isolada no interior em séculos passados. Se um dos 4 colonos for portador de uma mutação letal rara (que na grande cidade sumiria no mar de genes), nessa micro-vila que só cruza entre si, essa mutação explode em frequência absurda dominando todo o pool gênico nativo fechado nas futuras gerações (Aumento brutal artificial de frequências de certas doenças regionais em ROH)", C: "Destruição do gene do câncer em massas ativas por cruzamento homólogo celular", D: "Morte das mitocôndrias pelo sol do hemisfério e falhas na ancestralidade", E: "Apenas mutações criadas hoje por reatores nas indústrias da metrópole das grandes malhas urbanas atuais dos grandes e capitais centros de cimentos ativos governamentais das bases industriais" }, 
-    correct: "B", explanation: "Gabarito: B. Típico do Brasil: algumas poucas famílias europeias ou quilombos isolados fundaram povoados isolados nas montanhas e fundões de vale em 1800 e não receberam imigrantes de fora. Mutações deletérias lá cruzaram entre parentes num funil (Bottle Neck e Efeito Fundador Isolado) criando um pico bizarro regional de doenças genéticas recessivas severas no município endêmico que o Genomas SUS tenta mapear para triagem pré-natal focado lá da rede básica PSF." }
+    correct: "B", explanation: "Gabarito: B. Típico do Brasil: algumas poucas famílias europeias ou quilombos isolados fundaram povoados isolados nas montanhas e fundões de vale em 1800 e não receberam imigrantes de fora. Mutações deletérias lá cruzaram entre parentes num funil (Bottle Neck e Efeito Fundador Isolado) criando um pico bizarro regional de doenças genéticas recessivas severas no município endêmico que o Genomas SUS tenta mapear para triagem pré-natal focado lá da rede básica PSF." },
+  // =========================================================
+  // MEGA BLOCO 9 - NÍVEL FÁCIL (LAB E BIOINFO - 50 QUESTÕES)
+  // =========================================================
+
+  // --- LABORATÓRIO: Biologia, biologia molecular e genética ---
+  { id: 1420, area: "Laboratório", subject: "Biologia, biologia molecular e genética", 
+    text: "Qual das seguintes bases nitrogenadas NÃO é encontrada na molécula de DNA, sendo exclusiva do RNA?", 
+    options: { A: "Adenina", B: "Timina", C: "Guanina", D: "Uracila", E: "Citosina" }, 
+    correct: "D", explanation: "Gabarito: D. A Uracila é a base exclusiva do RNA, substituindo a Timina que é exclusiva do DNA." },
+
+  { id: 1421, area: "Laboratório", subject: "Biologia, biologia molecular e genética", 
+    text: "As células reprodutivas humanas (espermatozoides e óvulos) são chamadas de gametas. Quantos cromossomos existem em um gameta humano normal?", 
+    options: { A: "46 cromossomos", B: "23 pares", C: "23 cromossomos", D: "92 cromossomos", E: "44 cromossomos" }, 
+    correct: "C", explanation: "Gabarito: C. Os gametas são células haploides (possuem apenas metade do material genético, 23). Ao se unirem na fecundação, formam um bebê com 46 cromossomos." },
+
+  { id: 1422, area: "Laboratório", subject: "Biologia, biologia molecular e genética", 
+    text: "A organela celular conhecida como a 'fábrica de energia' da célula, que inclusive possui seu próprio DNA circular, é:", 
+    options: { A: "Complexo de Golgi", B: "Ribossomo", C: "Mitocôndria", D: "Lisossomo", E: "Cloroplasto" }, 
+    correct: "C", explanation: "Gabarito: C. A mitocôndria produz ATP (energia) e guarda o DNA mitocondrial (mtDNA), herdado exclusivamente da mãe." },
+
+  { id: 1423, area: "Laboratório", subject: "Biologia, biologia molecular e genética", 
+    text: "O que é um 'Cromossomo'?", 
+    options: { A: "Uma proteína que digere açúcar", B: "Uma molécula de RNA transportador", C: "Uma longa molécula de DNA altamente condensada e enrolada em proteínas, que guarda a informação genética", D: "Uma parede que protege a célula", E: "Um vírus inativo" }, 
+    correct: "C", explanation: "Gabarito: C. O cromossomo é apenas o DNA enovelado de forma extremamente compacta para caber dentro do núcleo da célula." },
+
+  { id: 1424, area: "Laboratório", subject: "Biologia, biologia molecular e genética", 
+    text: "O termo 'Mutação' em biologia significa de forma simples:", 
+    options: { A: "O ganho de superpoderes", B: "A morte celular programada", C: "Qualquer alteração ou erro na sequência original de letras (bases) do DNA", D: "A cura de uma doença", E: "O transporte de oxigênio pelo sangue" }, 
+    correct: "C", explanation: "Gabarito: C. Mutação é simplesmente um erro de cópia. Uma letra do DNA foi trocada, adicionada ou apagada por acidente." },
+
+  // --- LABORATÓRIO: Tecnologias e Extração ---
+  { id: 1425, area: "Laboratório", subject: "Tecnologias laboratoriais em genômica (sequenciamento de nova geração - NGS, extração de DNA genômico, controle de qualidade, preparo de amostras)", 
+    text: "Qual é o principal objetivo da técnica de PCR no laboratório?", 
+    options: { A: "Matar bactérias da amostra", B: "Cortar o DNA em pedaços pequenos", C: "Fazer milhões de cópias (amplificar) de um trecho específico do DNA para que ele possa ser analisado", D: "Transformar DNA em RNA", E: "Mudar a cor do sangue" }, 
+    correct: "C", explanation: "Gabarito: C. A PCR (Reação em Cadeia da Polimerase) é uma máquina de xerox molecular. Ela multiplica o DNA para que possamos enxergá-lo nos exames." },
+
+  { id: 1426, area: "Laboratório", subject: "Tecnologias laboratoriais em genômica (sequenciamento de nova geração - NGS, extração de DNA genômico, controle de qualidade, preparo de amostras)", 
+    text: "A sigla NGS em genômica significa:", 
+    options: { A: "Novo Guia de Sangue", B: "Next-Generation Sequencing (Sequenciamento de Nova Geração)", C: "Núcleo de Genética Simples", D: "Normalização de Genes Somáticos", E: "Nível Global de Saúde" }, 
+    correct: "B", explanation: "Gabarito: B. NGS é a tecnologia moderna que permite ler milhões de pedaços de DNA ao mesmo tempo." },
+
+  { id: 1427, area: "Laboratório", subject: "Tecnologias laboratoriais em genômica (sequenciamento de nova geração - NGS, extração de DNA genômico, controle de qualidade, preparo de amostras)", 
+    text: "Na extração de DNA, usamos centrífugas. O que uma centrífuga faz?", 
+    options: { A: "Aquece a amostra até ferver", B: "Gira em alta velocidade para separar os componentes de uma mistura baseando-se no peso (densidade)", C: "Congela a amostra instantaneamente", D: "Lê o código de barras do tubo", E: "Mede o pH da solução" }, 
+    correct: "B", explanation: "Gabarito: B. A centrífuga usa a força centrífuga para jogar o que é pesado para o fundo (pellet) e deixar o que é leve em cima (sobrenadante)." },
+
+  { id: 1428, area: "Laboratório", subject: "Tecnologias laboratoriais em genômica (sequenciamento de nova geração - NGS, extração de DNA genômico, controle de qualidade, preparo de amostras)", 
+    text: "No sequenciamento Illumina, o local de vidro onde as reações químicas acontecem e são fotografadas chama-se:", 
+    options: { A: "Tubo Eppendorf", B: "Placa de Petri", C: "Flow Cell (Célula de Fluxo)", D: "Lâmina de microscópio", E: "Pipeta" }, 
+    correct: "C", explanation: "Gabarito: C. A Flow Cell é a peça-chave onde o DNA gruda e brilha para a máquina ler as letras." },
+
+  { id: 1429, area: "Laboratório", subject: "Tecnologias laboratoriais em genômica (sequenciamento de nova geração - NGS, extração de DNA genômico, controle de qualidade, preparo de amostras)", 
+    text: "O aparelho chamado 'Termociclador' é usado para:", 
+    options: { A: "Pesar reagentes", B: "Medir a pureza da água", C: "Realizar a técnica de PCR, alternando temperaturas (esquentar e esfriar) rapidamente", D: "Esterilizar luvas", E: "Fotografar células" }, 
+    correct: "C", explanation: "Gabarito: C. Ele realiza os 'ciclos térmicos' necessários para separar e copiar o DNA." },
+
+  // --- LABORATÓRIO: BPL e Biossegurança ---
+  { id: 1430, area: "Laboratório", subject: "Boas Práticas de Laboratório (BPL), biossegurança e controle de qualidade", 
+    text: "Qual é a regra mais básica para o descarte de agulhas e seringas usadas (perfurocortantes)?", 
+    options: { A: "Jogar no cesto de lixo da pia", B: "Colocar em sacos plásticos brancos", C: "Reencapar a agulha com a mão e jogar no lixo preto", D: "Descartar imediatamente na caixa amarela rígida e resistente a furos (Descarpack), sem reencapar", E: "Derreter a agulha com isqueiro" }, 
+    correct: "D", explanation: "Gabarito: D. Agulhas furam sacos e acidentam os lixeiros. Devem ir direto para caixas rígidas de papelão/plástico grosso." },
+
+  { id: 1431, area: "Laboratório", subject: "Boas Práticas de Laboratório (BPL), biossegurança e controle de qualidade", 
+    text: "A máquina Autoclave é usada no laboratório para:", 
+    options: { A: "Gelar amostras a -80ºC", B: "Destilar água da torneira", C: "Esterilizar materiais e matar bactérias usando calor e vapor sob alta pressão", D: "Extrair DNA automaticamente", E: "Medir a quantidade de proteínas" }, 
+    correct: "C", explanation: "Gabarito: C. A autoclave é uma panela de pressão gigante que mata qualquer micróbio com vapor fervente." },
+
+  { id: 1432, area: "Laboratório", subject: "Boas Práticas de Laboratório (BPL), biossegurança e controle de qualidade", 
+    text: "É estritamente PROIBIDO pela biossegurança:", 
+    options: { A: "Lavar as mãos antes de ir embora", B: "Usar óculos de proteção", C: "Comer, beber ou armazenar comida dentro da geladeira e bancadas do laboratório", D: "Descartar luvas no lixo infectante", E: "Amarrar o cabelo no laboratório" }, 
+    correct: "C", explanation: "Gabarito: C. O laboratório é cheio de venenos e vírus. Comer ali é um risco de intoxicação gravíssimo." },
+
+  { id: 1433, area: "Laboratório", subject: "Boas Práticas de Laboratório (BPL), biossegurança e controle de qualidade", 
+    text: "O uso de Jaleco dentro do laboratório serve principalmente para:", 
+    options: { A: "Identificar quem é o chefe", B: "Proteger a pele e as roupas normais do funcionário contra respingos de sangue e venenos químicos", C: "Esquentar o corpo no ar condicionado", D: "Guardar canetas nos bolsos", E: "Substituir o banho diário" }, 
+    correct: "B", explanation: "Gabarito: B. O jaleco é o seu escudo. Se cair ácido, cai no jaleco e não na sua pele." },
+
+  { id: 1434, area: "Laboratório", subject: "Boas Práticas de Laboratório (BPL), biossegurança e controle de qualidade", 
+    text: "Em caso de respingo de produto químico perigoso nos olhos do analista, qual deve ser a PRIMEIRA ação de emergência?", 
+    options: { A: "Gritar e correr para a rua", B: "Passar álcool 70% no olho", C: "Ir imediatamente para o 'Lava-olhos' de emergência e lavar com água em abundância por vários minutos", D: "Esfregar com papel toalha seco", E: "Aplicar colírio comum" }, 
+    correct: "C", explanation: "Gabarito: C. O lava-olhos dilui o ácido ou base instantaneamente, salvando o funcionário da cegueira." },
+
+  // --- LABORATÓRIO: Ética e Saúde Pública ---
+  { id: 1435, area: "Laboratório", subject: "Ética em pesquisa e noções de estudos multicêntricos", 
+    text: "A sigla TCLE significa:", 
+    options: { A: "Termo de Consulta Legal Estatística", B: "Teste de Câncer Leve Especial", C: "Termo de Consentimento Livre e Esclarecido", D: "Tratamento Curativo Limitado Exclusivo", E: "Técnica de Centrifugação Lenta Especial" }, 
+    correct: "C", explanation: "Gabarito: C. É o papel assinado pelo paciente provando que ele sabe dos riscos da pesquisa e aceitou de boa vontade." },
+
+  { id: 1436, area: "Laboratório", subject: "Ética em pesquisa e noções de estudos multicêntricos", 
+    text: "Um paciente voluntário de uma pesquisa genética decide que não quer mais participar. Ele pode sair da pesquisa?", 
+    options: { A: "Não, ele é obrigado a ficar até o fim", B: "Sim, a qualquer momento, sem precisar justificar e sem sofrer prejuízos no seu atendimento médico", C: "Apenas se ele pagar uma multa", D: "Apenas se o juiz liberar", E: "Sim, mas o hospital cancelará suas consultas futuras" }, 
+    correct: "B", explanation: "Gabarito: B. O princípio da Autonomia garante que o paciente entra e sai da pesquisa livremente." },
+
+  { id: 1437, area: "Laboratório", subject: "Noções de saúde pública e ética em pesquisa", 
+    text: "O que significa a letra 'S' em SUS?", 
+    options: { A: "Social", B: "Saúde", C: "Segurança", D: "Sistema", E: "Suporte" }, 
+    correct: "B", explanation: "Gabarito: B. Sistema Único de SAÚDE." },
+
+  { id: 1438, area: "Laboratório", subject: "Noções de saúde pública e ética em pesquisa", 
+    text: "O princípio do SUS que diz que 'todo e qualquer cidadão tem o direito de ser atendido nos hospitais públicos do Brasil' chama-se:", 
+    options: { A: "Equidade", B: "Integralidade", C: "Universalidade", D: "Descentralização", E: "Controle Social" }, 
+    correct: "C", explanation: "Gabarito: C. É Universal. Abrange todo mundo, independente de raça, cor ou dinheiro." },
+
+  { id: 1439, area: "Laboratório", subject: "Noções de saúde pública e ética em pesquisa", 
+    text: "Vacinação em massa de crianças nos postinhos de saúde é um exemplo clássico de:", 
+    options: { A: "Tratamento cirúrgico intensivo", B: "Prevenção Terciária", C: "Prevenção Secundária", D: "Prevenção Primária (evitar que a doença ocorra)", E: "Cuidados paliativos" }, 
+    correct: "D", explanation: "Gabarito: D. A vacina é prevenção primária porque age antes do vírus atingir a pessoa." },
+
+  // --- BIOINFORMÁTICA: Formatos e Alinhamento ---
+  { id: 1440, area: "Bioinformática", subject: "Bioinformática e análise genômica", 
+    text: "Na bioinformática, o arquivo do tipo FASTA é conhecido por:", 
+    options: { A: "Conter imagens de células", B: "Conter apenas as sequências de letras do DNA/RNA (A, C, T, G) e um cabeçalho simples, sem dados de qualidade", C: "Ser um arquivo exclusivo do Microsoft Word", D: "Ser um arquivo de vídeo do sequenciador", E: "Conter as planilhas financeiras do genoma" }, 
+    correct: "B", explanation: "Gabarito: B. O FASTA é o texto mais puro do DNA. Ele tem o nome da sequência em cima e as letrinhas embaixo, nada mais." },
+
+  { id: 1441, area: "Bioinformática", subject: "Bioinformática e análise genômica", 
+    text: "Diferente do FASTA, o arquivo FASTQ contém uma linha extra muito importante. Qual é ela?", 
+    options: { A: "O nome do paciente e CPF", B: "As pontuações de Qualidade (Phred scores) de cada letra, indicando se a máquina teve certeza ou dúvida ao ler aquela base", C: "A data de validade da amostra", D: "A tradução do RNA para espanhol", E: "Uma imagem em miniatura da célula" }, 
+    correct: "B", explanation: "Gabarito: B. O 'Q' significa Qualidade. Ele diz se aquele 'A' é realmente um 'A' ou se foi um borrão na foto da máquina." },
+
+  { id: 1442, area: "Bioinformática", subject: "Bioinformática e análise genômica", 
+    text: "Na análise de genomas, o que é o 'Genoma de Referência'?", 
+    options: { A: "O genoma de um paciente doente", B: "O DNA de um rato", C: "Um genoma modelo (um mapa padrão) montado por cientistas, usado como guia para compararmos as mutações do nosso paciente", D: "O manual de instruções da máquina", E: "Um arquivo de música digital" }, 
+    correct: "C", explanation: "Gabarito: C. É como a foto na caixa do quebra-cabeça. Usamos o Genoma de Referência para saber onde encaixar os pedacinhos do genoma do nosso paciente." },
+
+  { id: 1443, area: "Bioinformática", subject: "Bioinformática e análise genômica", 
+    text: "Um arquivo VCF (Variant Call Format) é gerado no fim da análise bioinformática. Ele serve para:", 
+    options: { A: "Listar todas as mutações/variantes que o paciente tem em relação ao genoma de referência", B: "Mostrar o gráfico financeiro do hospital", C: "Tirar fotos em 3D do DNA", D: "Traduzir textos em inglês", E: "Imprimir a receita médica" }, 
+    correct: "A", explanation: "Gabarito: A. VCF é a tabela de Mutações. Ele diz 'No cromossomo 1, deveria ter um A, mas o seu paciente tem um T'." },
+
+  { id: 1444, area: "Bioinformática", subject: "Bioinformática e análise genômica", 
+    text: "O que o algoritmo BWA faz no pipeline de bioinformática?", 
+    options: { A: "Extrai sangue", B: "Mede o peso da máquina", C: "É um Alinhador. Ele pega os reads soltos do paciente e tenta alinhar (colar) exatamente na posição correta do genoma de referência", D: "Edita fotos de células", E: "Desliga o computador" }, 
+    correct: "C", explanation: "Gabarito: C. O BWA pega as milhares de pecinhas do DNA do paciente e monta o quebra-cabeça em cima do mapa guia." },
+
+  // --- BIOINFORMÁTICA: Programação Básica ---
+  { id: 1445, area: "Bioinformática", subject: "Programação e ferramentas computacionais", 
+    text: "Qual é o Sistema Operacional padrão utilizado por 99% dos servidores e supercomputadores de bioinformática no mundo?", 
+    options: { A: "Windows XP", B: "Android", C: "Linux (ambiente Unix)", D: "iOS (Apple)", E: "Windows 98" }, 
+    correct: "C", explanation: "Gabarito: C. O Linux, operado por tela preta e comandos em texto (terminal), é a base mundial de servidores por ser rápido, seguro e não gastar energia com telas gráficas bonitas." },
+
+  { id: 1446, area: "Bioinformática", subject: "Programação e ferramentas computacionais", 
+    text: "No terminal Linux, o comando 'ls' serve para:", 
+    options: { A: "Apagar o computador inteiro", B: "Tocar um som", C: "Listar os arquivos e pastas que estão dentro de um diretório", D: "Criar uma planilha do Excel", E: "Aumentar a letra" }, 
+    correct: "C", explanation: "Gabarito: C. 'ls' vem de LiSt. É como abrir uma pasta no Windows e ver os arquivos lá dentro." },
+
+  { id: 1447, area: "Bioinformática", subject: "Programação e ferramentas computacionais", 
+    text: "Qual destas é uma das linguagens de programação mais populares e essenciais ensinadas na Bioinformática moderna para análise de dados?", 
+    options: { A: "Cobol", B: "HTML", C: "Python", D: "Assembly", E: "CSS" }, 
+    correct: "C", explanation: "Gabarito: C. Python e R são as duas rainhas da bioinformática. São linguagens limpas, com pacotes poderosos para ler genética." },
+
+  { id: 1448, area: "Bioinformática", subject: "Programação e ferramentas computacionais", 
+    text: "O que a plataforma 'GitHub' faz na rotina de um programador/bioinformata?", 
+    options: { A: "Edita vídeos de cirurgia", B: "É uma rede social para salvar, compartilhar e versionar os códigos de programação (scripts) de forma segura na nuvem", C: "Imprime laudos em papel", D: "Sequencia o DNA fisicamente", E: "Limpa vírus do pendrive" }, 
+    correct: "B", explanation: "Gabarito: B. O GitHub é o 'Google Drive' dos códigos de computador, permitindo que cientistas trabalhem no mesmo programa juntos." },
+
+  { id: 1449, area: "Bioinformática", subject: "Programação e ferramentas computacionais", 
+    text: "No terminal Linux, o comando 'cat arquivo.txt' faz o quê?", 
+    options: { A: "Insere uma foto de um gato", B: "Exclui o arquivo", C: "Imprime (mostra) todo o texto que está dentro do arquivo na sua tela", D: "Muda o nome do arquivo", E: "Liga a internet" }, 
+    correct: "C", explanation: "Gabarito: C. Cat (concatenate) apenas pega o texto do bloco de notas e vomita na sua tela preta para você ler rapidamente." },
+
+  // --- BIOINFORMÁTICA: Estatística e Genética de Populações Básica ---
+  { id: 1450, area: "Bioinformática", subject: "Estatística aplicada à genômica", 
+    text: "Na estatística básica, um 'Valor-p' (p-value) MENOR que 0.05 (p < 0,05) indica geralmente que:", 
+    options: { A: "A pesquisa foi um fracasso", B: "O resultado é lixo", C: "O resultado é 'estatisticamente significativo', ou seja, há pouca chance de o achado ter sido pura sorte ou coincidência", D: "Todos os pacientes morrerão", E: "A mutação é inofensiva" }, 
+    correct: "C", explanation: "Gabarito: C. P < 0.05 é o padrão universal para dizer: 'Opa, a diferença entre o doente e o saudável aqui é real, não foi por acaso'." },
+
+  { id: 1451, area: "Bioinformática", subject: "Genética de populações", 
+    text: "Em genética de populações, o que é 'Ancestralidade'?", 
+    options: { A: "Apenas a cor da pele atual da pessoa", B: "O estudo de quantas pessoas vivem num país hoje", C: "A origem geográfica histórica dos genes de uma pessoa (ex: raízes africanas, indígenas, europeias) passadas de geração em geração", D: "O valor em dinheiro herdado", E: "O estudo de animais de fazenda" }, 
+    correct: "C", explanation: "Gabarito: C. Ancestralidade genômica nos conta de qual continente os nossos antepassados vieram há centenas ou milhares de anos." },
+
+  { id: 1452, area: "Bioinformática", subject: "Genética de populações", 
+    text: "O 'Efeito Fundador' ocorre quando:", 
+    options: { A: "Um hospital é fundado", B: "Um pequeno grupo de indivíduos se separa para fundar uma nova vila/população, levando consigo apenas uma amostra reduzida da diversidade genética original", C: "Os pesquisadores acham uma cura nova", D: "A população cresce para bilhões de pessoas", E: "A pessoa funda uma empresa" }, 
+    correct: "B", explanation: "Gabarito: B. Ao fundar uma ilha com apenas 5 casais, os filhos terão apenas as genéticas daqueles 10 indivíduos, perdendo a diversidade do resto do mundo." },
+
+  { id: 1453, area: "Bioinformática", subject: "Genética de populações", 
+    text: "Consanguinidade significa o quê em termos populacionais?", 
+    options: { A: "Doar sangue no posto de saúde", B: "Cruzamento/Reprodução entre indivíduos com parentesco muito próximo (ex: primos de 1º grau), o que aumenta a chance de doenças genéticas raras aparecerem", C: "Troca de sangue no hospital", D: "Inimigos morando perto", E: "Ser do mesmo tipo sanguíneo O negativo" }, 
+    correct: "B", explanation: "Gabarito: B. Cruza consanguínea soma os genes recessivos ruins que estavam escondidos na família, fazendo a doença eclodir nos filhos." },
+
+  { id: 1454, area: "Bioinformática", subject: "Estatística aplicada à genômica", 
+    text: "O que a sigla GWAS (Genome-Wide Association Study) busca fazer?", 
+    options: { A: "Curar o câncer de imediato", B: "Pesquisar dezenas de milhares de pacientes para descobrir quais letras do DNA (SNPs) estão 'associadas' ao risco de ter uma doença complexa (como Diabetes ou Alzheimer)", C: "Imprimir laudos rápidos", D: "Pesar o paciente", E: "Medir a pressão arterial" }, 
+    correct: "B", explanation: "Gabarito: B. Estudo de Associação. Ele cruza os dados do mapa genético de pessoas sadias e doentes e procura onde está a diferença que causa o risco." },
+
+  // --- BIOINFORMÁTICA: Segurança e Saúde Pública Básica ---
+  { id: 1455, area: "Bioinformática", subject: "Segurança de dados", 
+    text: "No Brasil, a Lei que obriga hospitais e pesquisadores a protegerem rigorosamente os dados pessoais e os exames genéticos dos pacientes na internet chama-se:", 
+    options: { A: "CLT (Lei do Trabalho)", B: "Código de Trânsito", C: "LGPD (Lei Geral de Proteção de Dados)", D: "ECA (Estatuto da Criança)", E: "Lei da Informática Livre" }, 
+    correct: "C", explanation: "Gabarito: C. A LGPD pune com multas gigantescas empresas que deixam vazar resultados de exames e CPFs de clientes na web." },
+
+  { id: 1456, area: "Bioinformática", subject: "Segurança de dados", 
+    text: "Qual é a regra mais elementar e inquebrável de segurança digital (Compliance) no laboratório para um analista bioinformata?", 
+    options: { A: "Compartilhar sua senha de acesso do banco de dados com os colegas para facilitar o plantão", B: "Usar a senha '123456'", C: "Nunca compartilhar suas senhas de sistema com absolutamente ninguém, pois o seu login é sua assinatura legal do que foi modificado no paciente", D: "Deixar o computador desbloqueado ao ir almoçar", E: "Guardar senhas em post-it no monitor" }, 
+    correct: "C", explanation: "Gabarito: C. Se o colega logado na sua conta deletar o resultado de um tumor, a polícia baterá na sua porta. Senha não se compartilha, nunca." },
+
+  { id: 1457, area: "Bioinformática", subject: "Princípios de saúde pública e epidemiologia genética", 
+    text: "O que é Farmacogenômica?", 
+    options: { A: "A criação de farmácias em bairros rurais", B: "O estudo de como o DNA da pessoa afeta o modo como ela responde a certos remédios (alguns curam, outros podem dar alergias ou não fazer efeito)", C: "O estudo exclusivo de plantas curativas", D: "O processo de venda de remédios caros", E: "A mistura de remédios em copo" }, 
+    correct: "B", explanation: "Gabarito: B. A Farmacogenômica diz: 'Não dê o remédio X para o João, pois a genética dele avisa que ele sofrerá efeitos colaterais mortais. Dê o remédio Y'." },
+
+  { id: 1458, area: "Bioinformática", subject: "Princípios de saúde pública e epidemiologia genética", 
+    text: "O 'Teste do Pezinho' no Brasil ajuda a diagnosticar precocemente o quê?", 
+    options: { A: "Se o pé do bebê tem fraturas", B: "Se a criança terá cabelos lisos", C: "Doenças genéticas e metabólicas graves logo nos primeiros dias de vida, permitindo o tratamento antes que as sequelas comecem", D: "Qual será a altura do adulto", E: "Cáries dentárias" }, 
+    correct: "C", explanation: "Gabarito: C. É o maior programa de rastreio genético populacional primário. Um furo no calcanhar acha doenças que, se tratadas no mês 1, salvam a criança do retardo mental." },
+
+  { id: 1459, area: "Bioinformática", subject: "Segurança de dados", 
+    text: "O termo 'Cloud Computing' (Computação em Nuvem) na bioinformática se refere a:", 
+    options: { A: "Trabalhar apenas em dias chuvosos", B: "Usar computadores voadores", C: "Alugar servidores e supercomputadores potentes de empresas grandes (como Google ou Amazon) pela internet, em vez de comprar um servidor físico enorme para o hospital", D: "Criar uma fumaça na sala de servidores", E: "Perder todos os dados ao desligar" }, 
+    correct: "C", explanation: "Gabarito: C. Computação na Nuvem é usar um PC fortíssimo que fica num galpão da Amazon no exterior para rodar suas análises genéticas aqui do Brasil, via internet." },
+
+  // --- BIOINFORMÁTICA: Mistura de ETL, Vocabulários e Populações Básicas ---
+  { id: 1460, area: "Bioinformática", subject: "Vocabulários controlados, ontologias e técnicas de extração, transformação e carga de dados (ETL)", 
+    text: "A sigla 'ETL' no banco de dados do Ministério da Saúde significa:", 
+    options: { A: "Entender, Trabalhar, Limpar", B: "Extrair (dados do hospital), Transformar (limpar e organizar a bagunça) e Load / Carregar (salvar no banco central limpo)", C: "Eliminar Todas as Leis", D: "Escrever Textos Longos", E: "Enviar Tudo Longe" }, 
+    correct: "B", explanation: "Gabarito: B. ETL é o trabalho de arrumar a casa digital. Você pega os dados caóticos dos médicos, formata direitinho (Transform) e joga na nuvem oficial (Load)." },
+
+  { id: 1461, area: "Bioinformática", subject: "Vocabulários controlados, ontologias e técnicas de extração, transformação e carga de dados (ETL)", 
+    text: "Por que usamos dicionários universais de doenças, como a CID-10 (Classificação Internacional de Doenças), em sistemas de saúde?", 
+    options: { A: "Para dificultar a vida do médico", B: "Para que o governo cobre taxas", C: "Para padronizar a linguagem no mundo todo. Assim, 'Ataque Cardíaco' e 'Infarto' recebem o mesmo código, e o computador consegue contar quantos casos ocorreram no país sem se confundir com nomes diferentes", D: "Para escrever receitas maiores", E: "Apenas para dar nomes longos" }, 
+    correct: "C", explanation: "Gabarito: C. A padronização de vocabulário permite que a Inteligência Artificial e a estatística do Brasil entendam do que o médico japonês ou paulista estão falando com a mesma linguagem (códigos)." },
+
+  { id: 1462, area: "Bioinformática", subject: "Princípios de saúde pública e epidemiologia genética", 
+    text: "O que caracteriza uma 'Doença Rara' em termos populacionais?", 
+    options: { A: "Uma doença que atinge 50% das pessoas", B: "Uma gripe comum forte", C: "Uma condição que afeta um número muito pequeno de pessoas na população (ex: 1 caso a cada 2000 pessoas), dificultando o diagnóstico comum", D: "Uma doença que só dá em idosos", E: "Uma alergia de pele passageira" }, 
+    correct: "C", explanation: "Gabarito: C. Doenças Raras são o alvo principal do Sequenciamento (WES/WGS). Elas são raras isoladamente, mas somadas afetam milhares de famílias." },
+
+  { id: 1463, area: "Laboratório", subject: "Noções de saúde pública e ética em pesquisa", 
+    text: "Em um exame de triagem preventiva, o que é um 'Falso Positivo'?", 
+    options: { A: "A pessoa está doente e o exame acertou", B: "O exame diz que a pessoa TEM a doença, mas na verdade a pessoa está totalmente SAUDÁVEL", C: "A pessoa está doente, mas o exame não detectou nada", D: "A máquina do exame queimou", E: "A pessoa está saudável e o exame atestou saudável" }, 
+    correct: "B", explanation: "Gabarito: B. Falso Positivo é o 'alarme falso'. Gera pânico desnecessário e gasto médico com cirurgias em alguém que não tem a doença." },
+
+  { id: 1464, area: "Laboratório", subject: "Noções de saúde pública e ética em pesquisa", 
+    text: "Em um exame laboratorial, o que é um 'Falso Negativo'?", 
+    options: { A: "O exame aponta saúde e o paciente está de fato sadio", B: "O exame avisa que o paciente tem câncer corretamente", C: "A máquina quebrou antes de emitir o laudo", D: "O exame diz que está TUDO BEM, mas na verdade o paciente ESTÁ DOENTE, mandando uma pessoa com tumor para casa achando que está curada", E: "O papel do laudo rasgou" }, 
+    correct: "D", explanation: "Gabarito: D. Falso negativo é um erro fatal na saúde pública. O paciente sai feliz achando que está saudável e a doença continua evoluindo sem tratamento." },
+
+  { id: 1465, area: "Bioinformática", subject: "Programação e ferramentas computacionais", 
+    text: "O que é um 'Script' no jargão da bioinformática?", 
+    options: { A: "O nome de uma proteína extraída", B: "A marca do tubo de ensaio", C: "Um arquivo de texto contendo linhas de comandos/códigos em sequência que o computador lê e executa automaticamente de cima a baixo", D: "O uniforme da limpeza", E: "O modelo de impressora" }, 
+    correct: "C", explanation: "Gabarito: C. Fazer um script é escrever a 'receita' de comandos pro computador fazer todo o seu trabalho chato automaticamente enquanto você toma café." },
+
+  { id: 1466, area: "Bioinformática", subject: "Genética de populações", 
+    text: "Por que as pessoas de diferentes partes do mundo têm características visíveis diferentes, como a cor da pele ou intolerância à lactose?", 
+    options: { A: "Porque não pertencem à mesma espécie", B: "Porque o clima do ano em que nasceram altera o DNA na hora do parto", C: "Porque as populações se adaptaram gradualmente aos diferentes ambientes e dietas em seus continentes ao longo de milhares de anos (Seleção Natural e Adaptação Local)", D: "Porque comeram muito açúcar na infância", E: "Porque pintaram o corpo artificialmente no passado e ficou fixo" }, 
+    correct: "C", explanation: "Gabarito: C. A seleção natural escolheu os genes que melhor se adaptavam ao sol extremo da África ou ao frio extremo da Europa, moldando o nosso genoma visual ao longo das eras." },
+
+  { id: 1467, area: "Bioinformática", subject: "Segurança de dados", 
+    text: "Na regra de Backup 3-2-1 da TI hospitalar, o número '1' significa que:", 
+    options: { A: "Você deve salvar 1 vez por ano", B: "Você pode perder 1 HD sem problema", C: "Pelo menos 1 das cópias de segurança do seu genoma deve ficar guardada FORA do hospital (Off-site, ex: num servidor em outra cidade ou estado) para proteger contra incêndios locais", D: "Devemos ter apenas 1 arquivo no total", E: "Apenas 1 funcionário deve saber a senha" }, 
+    correct: "C", explanation: "Gabarito: C. 3 Cópias no total, 2 mídias diferentes, e 1 cópia bem longe (Off-site). Se o seu hospital inteiro pegar fogo, a cópia '1' que estava lá na nuvem de outro estado salvará todo mundo." },
+
+  { id: 1468, area: "Bioinformática", subject: "Segurança de dados", 
+    text: "O que significa 'Criptografia' de arquivos na genômica?", 
+    options: { A: "Colorir o DNA em azul", B: "Traduzir o resultado pro francês", C: "Baralhar e codificar (trancar) o arquivo VCF com fórmulas matemáticas complexas, de modo que apenas quem tenha a 'chave' (senha especial) consiga ler as letras originais", D: "Apagar os dados de quem já faleceu", E: "Imprimir em folhas seladas com cera" }, 
+    correct: "C", explanation: "Gabarito: C. Criptografia é o cadeado digital. Se um hacker furtar o seu arquivo, ele vai abrir e ver bilhões de números aleatórios absurdos, e não o genoma ou o nome do seu paciente." },
+
+  { id: 1469, area: "Laboratório", subject: "Biologia, biologia molecular e genética", 
+    text: "Em relação ao nosso genoma humano de mais de 3 bilhões de letras, a parte que REALMENTE codifica as receitas (éxons) para fazer proteínas é de aproximadamente:", 
+    options: { A: "100%", B: "50%", C: "Cerca de 1,5% a 2% (O Exoma)", D: "90%", E: "Menos de 0,01%" }, 
+    correct: "C", explanation: "Gabarito: C. Apesar de ser gigante, apenas 2% do nosso DNA de fato produz as peças da nossa vida. O restante são peças de controle estrutural, ligantes ou 'DNA antigo' residual." },
+  // =========================================================
+  // MEGA BLOCO 11 - FÁCIL/MÉDIA - BIOINFORMÁTICA E ESTATÍSTICA (50 Qs)
+  // =========================================================
+
+  // --- Bioinformática e análise genômica ---
+  { id: 1520, area: "Bioinformática", subject: "Bioinformática e análise genômica", 
+    text: "O que representa o 'Genoma de Referência' humano (como as versões GRCh37 ou GRCh38) na bioinformática?", 
+    options: { A: "É o DNA de um único paciente perfeitamente saudável", B: "É o DNA extraído de chimpanzés", C: "É um mapa modelo, um consenso criado a partir de vários doadores, usado como 'gabarito' para comparar e encontrar mutações em nossos pacientes", D: "É um banco de dados de vírus", E: "É um software de alinhamento" }, 
+    correct: "C", explanation: "Gabarito: C. O genoma de referência é como a foto na caixa de um quebra-cabeças. Ele nos guia para saber onde cada read do nosso paciente deve se encaixar e o que está diferente." },
+
+  { id: 1521, area: "Bioinformática", subject: "Bioinformática e análise genômica", 
+    text: "A etapa de 'Variant Calling' (Chamada de Variantes) em um pipeline NGS tem qual objetivo principal?", 
+    options: { A: "Colorir os cromossomos", B: "Descobrir as diferenças (mutações, inserções, deleções) entre o DNA sequenciado do paciente e o genoma de referência", C: "Limpar o computador de vírus", D: "Medir a quantidade de proteínas do sangue", E: "Copiar arquivos para um pendrive" }, 
+    correct: "B", explanation: "Gabarito: B. Variant Calling é a fase onde o computador vasculha o alinhamento e diz: 'Aqui o paciente tem um T, mas a referência dizia que era para ter um G'." },
+
+  { id: 1522, area: "Bioinformática", subject: "Bioinformática e análise genômica", 
+    text: "Qual é a principal diferença entre um arquivo SAM e um arquivo BAM?", 
+    options: { A: "Nenhuma, são de fabricantes diferentes", B: "SAM é exclusivo para RNA, BAM para DNA", C: "SAM é um arquivo de texto legível por humanos, enquanto o BAM é a versão binária (comprimida) do SAM, economizando muito espaço no HD", D: "SAM contém imagens, BAM contém textos", E: "BAM não guarda scores de qualidade" }, 
+    correct: "C", explanation: "Gabarito: C. BAM significa 'Binary Alignment Map'. Trabalhar com SAM (texto) gasta centenas de gigabytes. O BAM é a versão compactada para o computador ler mais rápido." },
+
+  { id: 1523, area: "Bioinformática", subject: "Bioinformática e análise genômica", 
+    text: "O IGV (Integrative Genomics Viewer) é uma ferramenta gráfica muito famosa na bioinformática. Para que ele serve?", 
+    options: { A: "Para montar genomas de vírus", B: "Para abrir uma janela visual interativa onde o cientista pode enxergar 'com os próprios olhos' os reads de DNA do paciente empilhados em cima do genoma de referência", C: "Para escrever códigos em Python", D: "Para fazer planilhas financeiras de custos de NGS", E: "Para desenhar gráficos em 3D de proteínas" }, 
+    correct: "B", explanation: "Gabarito: B. O IGV atua como um 'microscópio virtual' do genoma. Ele permite que o biomédico ou médico visualize a mutação diretamente na tela." },
+
+  { id: 1524, area: "Bioinformática", subject: "Bioinformática e análise genômica", 
+    text: "Na sigla de mutações, a diferença entre um SNP (ou SNV) e um InDel é que:", 
+    options: { A: "SNP é vírus, InDel é bactéria", B: "SNP afeta RNA, InDel afeta DNA", C: "SNP é a troca de apenas UMA letra (ex: A por G); InDel é a Inserção ou Deleção de uma ou mais letras no DNA", D: "SNP é sempre mortal, InDel é sempre benigno", E: "Não há diferença na contagem de bases" }, 
+    correct: "C", explanation: "Gabarito: C. SNP (Polimorfismo de Único Nucleotídeo) mexe com apenas uma posição. InDel (Insertion/Deletion) adiciona ou remove blocos de letras do código." },
+
+  { id: 1525, area: "Bioinformática", subject: "Bioinformática e análise genômica", 
+    text: "No arquivo VCF de um paciente, o campo 'REF' mostra a letra 'A' e o campo 'ALT' mostra a letra 'C'. O que isso significa?", 
+    options: { A: "O genoma normal humano tem 'C' e o paciente tem 'A'", B: "O genoma de referência humano possui a letra 'A' naquela posição, mas o genoma do paciente sofreu mutação e apresenta a letra 'C'", C: "A máquina quebrou a base 'A'", D: "O paciente não tem nenhuma das letras", E: "A letra A sumiu e nada entrou no lugar" }, 
+    correct: "B", explanation: "Gabarito: B. REF = Referência (o normal da humanidade). ALT = Alternativo (A mutação detectada no seu paciente)." },
+
+  { id: 1526, area: "Bioinformática", subject: "Bioinformática e análise genômica", 
+    text: "O que a 'Anotação Funcional' (usando ferramentas como SnpEff ou VEP) adiciona ao arquivo de variantes (VCF) do paciente?", 
+    options: { A: "Remove os vírus do arquivo", B: "Prevê o efeito biológico daquela mutação, informando por exemplo se a troca da letra altera uma proteína, quebra o gene ou se é uma mutação silenciosa e inofensiva", C: "Calcula a idade do paciente", D: "Criptografa o arquivo com senha", E: "Muda o genoma de referência" }, 
+    correct: "B", explanation: "Gabarito: B. Ter uma lista de letras mutadas não ajuda o médico. A anotação traduz isso e diz: 'Essa mutação G>C está no gene TP53 e destrói a proteína do câncer'." },
+
+  { id: 1527, area: "Bioinformática", subject: "Bioinformática e análise genômica", 
+    text: "O que significa dizer que um sequenciamento atingiu uma 'Profundidade de Cobertura de 30x' (30x Depth of Coverage)?", 
+    options: { A: "A máquina demorou 30 vezes mais para ler", B: "O genoma inteiro tem 30 cromossomos", C: "Na média, cada letra do genoma do paciente foi lida e confirmada 30 vezes por reads diferentes do sequenciador", D: "Foram testados 30 pacientes de uma vez", E: "Apenas 30% do genoma foi lido" }, 
+    correct: "C", explanation: "Gabarito: C. A 'Profundidade' é a nossa prova real. Se uma letra é fotografada 30 vezes e nas 30 vezes ela é um 'T', temos total certeza de que não foi um erro aleatório da câmera." },
+
+  { id: 1528, area: "Bioinformática", subject: "Bioinformática e análise genômica", 
+    text: "Em um alinhamento genômico, o que a palavra 'Mismatch' (desemparelhamento) indica?", 
+    options: { A: "O computador desligou no meio", B: "Uma falha de internet no cluster", C: "Uma posição onde a letra do read do paciente NÃO BATE (não é igual) à letra do genoma de referência", D: "Um read que colou perfeitamente 100% no alvo", E: "A ausência total de RNA na célula" }, 
+    correct: "C", explanation: "Gabarito: C. Se o gabarito era 'A' e a peça do paciente é 'T', eles não emparelham perfeitamente, ocorrendo um 'mismatch'." },
+
+  { id: 1529, area: "Bioinformática", subject: "Bioinformática e análise genômica", 
+    text: "Qual é a função básica da ferramenta de bioinformática chamada 'FastQC'?", 
+    options: { A: "Cortar adaptadores fora", B: "Fazer o download de genomas na web", C: "Analisar o arquivo FASTQ recém-saído do sequenciador e gerar relatórios visuais sobre a qualidade das leituras, informando se a corrida foi boa ou se conteve erros graves de química na máquina", D: "Apagar dados duplicados", E: "Montar árvores genealógicas" }, 
+    correct: "C", explanation: "Gabarito: C. O FastQC é o 'controle de qualidade' primário. Ele mostra gráficos que acusam se a luz do laser enfraqueceu ou se os adaptadores poluiram a amostra." },
+
+  { id: 1530, area: "Bioinformática", subject: "Bioinformática e análise genômica", 
+    text: "Qual a diferença biológica entre sequenciar o 'Genoma Inteiro' (WGS) e sequenciar o 'Transcriptoma' (RNA-Seq)?", 
+    options: { A: "Nenhuma, os dois usam RNA", B: "WGS analisa o DNA estático que a pessoa tem desde o nascimento; O Transcriptoma lê o RNA, mostrando quais genes estão de fato 'ligados' e ativos produzindo proteínas naquele exato momento do tecido", C: "WGS só acha doenças crônicas", D: "Transcriptoma só funciona em vegetais", E: "O Transcriptoma mapeia as mitocôndrias" }, 
+    correct: "B", explanation: "Gabarito: B. O DNA é o livro de receitas fechado. O RNA-Seq nos mostra quais receitas o cozinheiro está ativamente lendo e usando para fazer comida naquele dia." },
+
+  { id: 1531, area: "Bioinformática", subject: "Bioinformática e análise genômica", 
+    text: "O formato de arquivo BED é muito utilizado na bioinformática (ex: bedtools). Ele serve primariamente para:", 
+    options: { A: "Armazenar fotos microscópicas", B: "Armazenar a qualidade das bases Phed", C: "Guardar as coordenadas de início e fim de regiões de interesse no genoma, como os limites de um éxon ou de um gene, funcionando como um 'marcador de texto' em coordenadas numéricas", D: "Traduzir espanhol para inglês", E: "Fazer planilhas contábeis" }, 
+    correct: "C", explanation: "Gabarito: C. O arquivo BED tem geralmente 3 colunas: O cromossomo, o ponto inicial e o ponto final. Serve para o computador saber exatamente onde ele deve recortar os dados." },
+
+  { id: 1532, area: "Bioinformática", subject: "Bioinformática e análise genômica", 
+    text: "Em Bioinformática, o termo 'De Novo Assembly' (Montagem de Novo) se refere a:", 
+    options: { A: "Atualizar o software para uma versão nova", B: "Montar o genoma de um organismo apenas juntando as pecinhas curtas do sequenciador, sem utilizar nenhum genoma de referência guia por trás (como montar um quebra-cabeças sem a imagem da caixa)", C: "Refazer uma PCR que deu errado", D: "Comprar um computador zero na caixa", E: "Substituir o DNA por RNA" }, 
+    correct: "B", explanation: "Gabarito: B. Muito usado quando descobrimos uma espécie nova de bactéria ou bicho que a ciência não conhecia, obrigando a bioinformática a reconstruir a fita de DNA do zero." },
+
+  { id: 1533, area: "Bioinformática", subject: "Bioinformática e análise genômica", 
+    text: "No VCF, o genótipo '0/1' e o genótipo '1/1' indicam, respectivamente, o estado de uma mutação no paciente. O que eles significam?", 
+    options: { A: "Menino e Menina", B: "0/1 indica mutação no X, 1/1 mutação no Y", C: "0/1 indica que o paciente é Heterozigoto (tem uma cópia normal e uma mutada); 1/1 indica Homozigoto Mutado (as duas cópias do DNA têm a mutação)", D: "0/1 é sadio e 1/1 é morto", E: "0/1 é tumor benigno, 1/1 maligno" }, 
+    correct: "C", explanation: "Gabarito: C. O zero (0) representa a versão normal (Referência). O um (1) representa a mutação (Alternativo). Logo, 0/1 é um portador heterozigoto." },
+
+  { id: 1534, area: "Bioinformática", subject: "Bioinformática e análise genômica", 
+    text: "Por que as variantes de DNA (Mutações) encontradas no genoma de um tumor raramente são passadas para os filhos desse paciente?", 
+    options: { A: "Porque tumores não têm DNA", B: "Porque são mutações SOMÁTICAS (ocorreram em células de órgãos do corpo após o nascimento), e não mutações GERMINATIVAS (presentes no óvulo/espermatozoide)", C: "Porque o DNA da criança se limpa sozinho", D: "Porque mutações não passam em humanos", E: "Porque o RNA protege o feto" }, 
+    correct: "B", explanation: "Gabarito: B. O câncer de pulmão gerado pelo fumo altera as células do pulmão (somáticas). Ele não afeta o espermatozoide. Apenas mutações germinativas passam de pai para filho." },
+
+  { id: 1535, area: "Bioinformática", subject: "Bioinformática e análise genômica", 
+    text: "O que a sigla 'MAF' (Minor Allele Frequency) representa nos bancos de dados genômicos populacionais?", 
+    options: { A: "Maior Afinidade Frequente", B: "A frequência com que o segundo alelo menos comum (a mutação rara) aparece na população, ajudando a filtrar doenças raras genéticas", C: "O valor em dinheiro do gene", D: "A quantidade de Macs no servidor", E: "Mutação Acelerada Falha" }, 
+    correct: "B", explanation: "Gabarito: B. Se a MAF for de 0.001 (0,1%), significa que esse alelo é muito raro e pode ser forte candidato a causar uma doença rara mendeliana." },
+
+  // --- Programação e ferramentas computacionais ---
+  { id: 1536, area: "Bioinformática", subject: "Programação e ferramentas computacionais", 
+    text: "No terminal do sistema Linux, o que o comando 'cd' (Change Directory) faz?", 
+    options: { A: "Toca um CD-ROM", B: "Deleta a pasta", C: "Serve para o usuário 'entrar' ou 'sair' de uma pasta (navegar entre os diretórios do computador)", D: "Compacta o arquivo", E: "Mostra as horas do PC" }, 
+    correct: "C", explanation: "Gabarito: C. O comando 'cd' equivale a você clicar duas vezes numa pasta do Windows para entrar nela na tela de texto preta do Linux." },
+
+  { id: 1537, area: "Bioinformática", subject: "Programação e ferramentas computacionais", 
+    text: "Qual destas linguagens de programação foi criada por estatísticos, para estatísticos, e é hoje o padrão ouro em Bioinformática para desenhar gráficos e análises matemáticas?", 
+    options: { A: "HTML", B: "CSS", C: "A linguagem 'R'", D: "C++", E: "Java" }, 
+    correct: "C", explanation: "Gabarito: C. O 'R' (junto com o Bioconductor) é a ferramenta suprema para RNA-Seq, Microarrays e plotagem de gráficos como Vulcão e PCA na academia de biologia." },
+
+  { id: 1538, area: "Bioinformática", subject: "Programação e ferramentas computacionais", 
+    text: "No Linux, o comando 'grep' tem uma função incrivelmente útil para pesquisar dentro de arquivos de DNA gigantescos. Ele serve para:", 
+    options: { A: "Jogar o arquivo no lixo", B: "Imprimir na tela apenas as linhas que contêm uma palavra ou sequência de letras específicas que o usuário mandou procurar (ex: grep 'ATCG' genoma.txt)", C: "Traduzir o DNA", D: "Descompactar arquivos .zip", E: "Mostrar as configurações de rede" }, 
+    correct: "B", explanation: "Gabarito: B. É o 'Ctrl+F' turbinado do Linux. O grep vasculha gigabytes e te devolve só o que te interessa." },
+
+  { id: 1539, area: "Bioinformática", subject: "Programação e ferramentas computacionais", 
+    text: "O que um bioinformata quer dizer quando fala sobre 'Pipeline' de análise?", 
+    options: { A: "A marca do cano de água da pia", B: "Um fluxo de trabalho automatizado (vários programas rodando um após o outro de forma sequencial), onde a saída de uma análise vira a entrada da próxima até gerar o laudo final", C: "Um tipo de impressora", D: "Uma nova linguagem de programação russa", E: "Um cabo de internet" }, 
+    correct: "B", explanation: "Gabarito: B. Pipeline é a linha de montagem. O FASTQ entra, passa pela limpeza, passa pelo alinhador, passa pelo GATK e sai como um VCF perfeitinho no final do cano." },
+
+  { id: 1540, area: "Bioinformática", subject: "Programação e ferramentas computacionais", 
+    text: "O caractere Pipe '|' (barra reta vertical) no terminal do Linux faz uma das mágicas mais fortes da bioinformática. O que ele executa?", 
+    options: { A: "Trava o computador", B: "Deleta o arquivo silenciosamente", C: "Pega o resultado de um comando e o injeta diretamente como entrada do próximo comando, sem precisar salvar um arquivo temporário no disco", D: "Reinicia o Linux", E: "Desenha um gráfico no shell" }, 
+    correct: "C", explanation: "Gabarito: C. O Pipe conecta comandos. Exemplo: você manda o PC listar arquivos e liga num pipe para que ele apenas conte quantas linhas apareceram." },
+
+  { id: 1541, area: "Bioinformática", subject: "Programação e ferramentas computacionais", 
+    text: "Em programação Python, o que é a famosa biblioteca 'Pandas' e por que a usamos o tempo todo?", 
+    options: { A: "É um jogo de computador", B: "É um pacote feito para proteger os ursos na China", C: "É a biblioteca definitiva de manipulação de dados, perfeita para ler, filtrar e modificar planilhas (DataFrames) gigantescas como se fosse um Excel avançado", D: "Faz gráficos 3D da lua", E: "Calcula a física dos buracos negros" }, 
+    correct: "C", explanation: "Gabarito: C. Na genômica, lidamos com tabelas de 50.000 genes e colunas com pacientes. O Pandas lê isso e permite cruzar dados e achar respostas com apenas duas linhas de código em Python." },
+
+  { id: 1542, area: "Bioinformática", subject: "Programação e ferramentas computacionais", 
+    text: "Para que serve a ferramenta Git e a plataforma GitHub na rotina do laboratório digital?", 
+    options: { A: "Baixar músicas piratas", B: "Para controlar versões do código, evitando que você perca um trabalho se o código quebrar, e para permitir que você e cientistas no Japão colaborem no mesmo programa sem sobrepor arquivos um do outro", C: "Alinhar DNA contra genoma mitocondrial", D: "Hospedar o e-mail do laboratório", E: "Compactar vídeos de microscópio" }, 
+    correct: "B", explanation: "Gabarito: B. O Git é a máquina do tempo do programador. E o GitHub é a nuvem pública onde esses projetos salvos e colaborativos vivem." },
+
+  { id: 1543, area: "Bioinformática", subject: "Programação e ferramentas computacionais", 
+    text: "Muitos pipelines exigem criar um 'Container' usando ferramentas como Docker. Qual é o conceito fácil de Container?", 
+    options: { A: "Uma caixa de lixo físico da sala", B: "Um pendrive encriptado de alta segurança", C: "Uma 'caixa' virtual que embala o programa junto com todas as versões exatas que ele precisa para funcionar, garantindo que o programa rode perfeitamente igual no meu notebook e num supercomputador chinês", D: "Uma máquina que fabrica DNA", E: "Um arquivo de texto protegido" }, 
+    correct: "C", explanation: "Gabarito: C. O maior problema antigo era 'funciona no meu PC mas quebra no seu'. O Docker resolve isso encapsulando todo o ambiente de uma vez." },
+
+  { id: 1544, area: "Bioinformática", subject: "Programação e ferramentas computacionais", 
+    text: "Ao tentar rodar um script (`./meu_script.sh`), o Linux responde 'Permission denied' (Permissão negada). Qual comando simples resolve esse erro dizendo ao Linux que o arquivo é seguro para executar?", 
+    options: { A: "rm arquivo", B: "cd arquivo", C: "chmod +x meu_script.sh", D: "cat meu_script.sh", E: "mkdir permissao" }, 
+    correct: "C", explanation: "Gabarito: C. O `chmod +x` adiciona a propriedade de eXecução. O Linux, por segurança, bloqueia programas recém-criados até você avisar que ele é executável." },
+
+  { id: 1545, area: "Bioinformática", subject: "Programação e ferramentas computacionais", 
+    text: "O Jupyter Notebook é extremamente popular entre bioinformatas. Sua principal característica é:", 
+    options: { A: "Ser um sequenciador portátil", B: "Permitir a escrita de código, a visualização dos resultados/gráficos imediatos e textos explicativos tudo em uma mesma página interativa rolável na web", C: "Traduzir Python para R sozinho", D: "Descompactar arquivos raros", E: "Criar planilhas do pacote Office em C++" }, 
+    correct: "B", explanation: "Gabarito: B. O Jupyter mudou a forma de se ensinar código. Você aperta 'Play' no bloco e o gráfico de biologia já salta em cores logo abaixo." },
+
+  { id: 1546, area: "Bioinformática", subject: "Programação e ferramentas computacionais", 
+    text: "O comando `head arquivo.txt` no terminal do Linux ajuda o analista a economizar tempo fazendo o que?", 
+    options: { A: "Apagando o cabeçalho", B: "Mostrando apenas as 10 primeiras linhas do arquivo na tela, perfeito para dar uma espiada no formato de um VCF gigante sem travar o computador tentando abri-lo inteiro", C: "Compactando a cabeça do arquivo", D: "Renomeando a primeira linha", E: "Mostrando a data do HD" }, 
+    correct: "B", explanation: "Gabarito: B. Um VCF pode ter 40 GB. Tentar abrir no bloco de notas normal vai fritar seu notebook. Com `head`, ele mostra um rascunho instantâneo das primeiras linhas e encerra." },
+
+  { id: 1547, area: "Bioinformática", subject: "Programação e ferramentas computacionais", 
+    text: "Quando você vê a extensão `.json` em APIs da saúde, esse arquivo contém o que?", 
+    options: { A: "Apenas binários pesados de imagens", B: "Texto estruturado no modelo de 'Chave : Valor' (ex: 'Nome': 'João', 'Mutação': 'Positiva'), sendo fácil para programas lerem dados de sites", C: "Gráficos redondos prontos", D: "Drivers da placa de vídeo", E: "Tabelas de excel encriptadas" }, 
+    correct: "B", explanation: "Gabarito: B. O JSON (JavaScript Object Notation) virou a linguagem base de bancos de dados modernos por ser leve, flexível e universal em qualquer linguagem." },
+
+  { id: 1548, area: "Bioinformática", subject: "Programação e ferramentas computacionais", 
+    text: "No terminal Linux, se você quiser redirecionar (salvar) o texto da tela e forçar que ele grave e sobrescreva o conteúdo criando um arquivo novo, você usa qual operador?", 
+    options: { A: "|", B: ">", C: "<", D: "*", E: "&&" }, 
+    correct: "B", explanation: "Gabarito: B. O sinal de maior `>` é o redirecionador (ex: `echo 'Olá' > arquivo.txt`). Ele pega o que ia para a tela e joga dentro de um bloco de texto." },
+
+  // --- Estatística aplicada à genômica ---
+  { id: 1549, area: "Bioinformática", subject: "Estatística aplicada à genômica", 
+    text: "O que o p-valor (p-value) de 0.01 em um teste de associação genética simples quer dizer para o pesquisador em essência básica?", 
+    options: { A: "Que a máquina quebrou em 1%", B: "Que há apenas 1% de probabilidade do resultado observado ter acontecido por puro acaso se a variante não tivesse relação nenhuma com a doença", C: "Que a doença é mortal", D: "Que o gene mata 1% das células", E: "Que o erro do pesquisador foi de 10%" }, 
+    correct: "B", explanation: "Gabarito: B. P-valor é a chance da Sorte estar brincando com você. Um P-valor baixo (0.01) significa que a sorte não faria isso; o achado é muito sólido e real." },
+
+  { id: 1550, area: "Bioinformática", subject: "Estatística aplicada à genômica", 
+    text: "O que representa a 'Média' estatística de cobertura de um exame?", 
+    options: { A: "O valor exato do começo do exame", B: "O valor central se ordenarmos todos os dados em fila", C: "A soma de todas as leituras de cobertura dividida pela quantidade de bases analisadas", D: "O valor que mais se repetiu no exame", E: "A distância entre o maior e o menor valor" }, 
+    correct: "C", explanation: "Gabarito: C. A média simples é apenas somar tudo (todas as coberturas) e dividir pelo total. É a nota escolar clássica." },
+
+  { id: 1551, area: "Bioinformática", subject: "Estatística aplicada à genômica", 
+    text: "Em bioestatística, qual a vantagem da 'Mediana' sobre a 'Média' quando um dos resultados laboratórios deu um valor absurdamente anormal e gigantesco (um Outlier)?", 
+    options: { A: "Nenhuma, ambas erram igual", B: "A mediana é a metade do outlier", C: "A mediana (o valor exato do meio da fila) é resistente a outliers; ela não se deixa puxar por um valor extremo maluco que estragaria e distorceria a média simples do laboratório", D: "A mediana deleta os valores altos do papel", E: "A média é que é resistente" }, 
+    correct: "C", explanation: "Gabarito: C. Se os salários são 1, 2 e 90. A média infla injustamente para 31. A mediana protege os dados e crava em 2, mostrando o cenário mais real e imune ao valor doido de 90." },
+
+  { id: 1552, area: "Bioinformática", subject: "Estatística aplicada à genômica", 
+    text: "O que é 'Correlação' estatística na expressão de dois genes, A e B?", 
+    options: { A: "Que um gene destrói o outro", B: "Se há correlação positiva, quando a atividade do gene A sobe e aumenta, a do gene B também sobe no paciente de forma proporcional", C: "Significa que eles são do mesmo cromossomo fisicamente", D: "Ambos têm o mesmo tamanho em nucleotídeos", E: "Que o gene B é mutante" }, 
+    correct: "B", explanation: "Gabarito: B. Correlação mede o quanto dois valores andam de mãos dadas. Se um sobe e o outro desce sempre, é correlação negativa. Se andam juntos para o alto, positiva." },
+
+  { id: 1553, area: "Bioinformática", subject: "Estatística aplicada à genômica", 
+    text: "Na estatística e testes de hipóteses, a chamada 'Hipótese Nula (H0)' de uma pesquisa propõe a princípio que:", 
+    options: { A: "Que todos estão curados no Brasil", B: "Que o tratamento novo é um sucesso", C: "Que não há efeito, não há diferença e que a mutação e a doença não têm relação absolutamente nenhuma entre si (é o cenário que o cientista geralmente tenta provar que é falso para divulgar sua descoberta real)", D: "Que o DNA foi apagado da máquina de testes sem rastros", E: "Que a variância das amostras é infinita" }, 
+    correct: "C", explanation: "Gabarito: C. A ciência é cética por essência. A hipótese nula é o 'advogado do diabo' dizendo: Seu remédio é inútil. Você aplica o p-valor pra tentar quebrar a cara do H0." },
+
+  { id: 1554, area: "Bioinformática", subject: "Estatística aplicada à genômica", 
+    text: "O gráfico de 'Boxplot' (Diagrama de caixa) é rei em relatórios no R. A caixinha colorida no centro do gráfico representa onde se concentram:", 
+    options: { A: "Apenas 5% dos piores resultados", B: "50% de todos os dados intermediários e medianos da sua amostra (o intervalo interquartil), ajudando a ver facilmente onde a normalidade da população mora sem se assustar com os pontos soltos fora", C: "Todo o universo possível mundial", D: "As mutações não sinônimas das fitas soltas da célula basal e das contagens das RNA primases ativadas", E: "O desvio padrão ao quadrado bruto na variante P" }, 
+    correct: "B", explanation: "Gabarito: B. O Boxplot esconde os dados fora da curva nos pontinhos finos lá em cima e deixa na caixa colorida central os 50% dos resultados principais da sua turma, ajudando o olho humano a focar no grosso dos resultados." },
+
+  { id: 1555, area: "Bioinformática", subject: "Estatística aplicada à genômica", 
+    text: "O que o gráfico 'Volcano Plot' (Gráfico de Vulcão) exibe em estudos de genes?", 
+    options: { A: "O quanto a temperatura da máquina de laboratório subiu ao ligar o botão do estabilizador local por erro de resfriamento", B: "Ele exibe quais genes tiveram suas expressões drasticamente aumentadas/diminuídas (Fold-Change) e, ao mesmo tempo, quais tiveram p-valores excelentes que comprovam o achado no espaço Y. Ele joga as verdadeiras descobertas pra cima e para os lados do vulcão", C: "A distribuição do peso dos pacientes", D: "O efeito dos vulcões no genoma nativo havaiano estrito do país em foco nos exames de biologia nativos e geológicos das áreas puras limpas", E: "Nenhuma das respostas" }, 
+    correct: "B", explanation: "Gabarito: B. Um Volcano plot perfeito tem a forma de V (ejetando pra cima os genes que o pesquisador descobriu como marcadores fortíssimos do câncer)." },
+
+  { id: 1556, area: "Bioinformática", subject: "Estatística aplicada à genômica", 
+    text: "Em relação ao 'Erro Tipo I' em laudos de associação médica:", 
+    options: { A: "Deixar a máquina cair no chão", B: "É o famigerado 'Falso Positivo': o programa estatístico apita afirmando que o Gene X causa o Câncer Y, quando na verdade a realidade prova que o gene não tem relação nenhuma com o tumor e a pesquisa era infundada", C: "É quando você perde a prova científica das bases nulas no meio de formatações HD da nuvem Amazon", D: "É dizer que a pessoa está sadia e ela doente", E: "Ocorre quando a vacina não funciona no corpo das mucosas simples normais nas reações estáticas" }, 
+    correct: "B", explanation: "Gabarito: B. O Erro Tipo I é a ansiedade da publicação: Você grita 'Eureca, achei a causa!', mas era erro dos números. O Erro Tipo 2 é quando você acha que o Remédio X não funciona, joga ele no lixo, mas ele funcionava (Falso Negativo)." },
+
+  { id: 1557, area: "Bioinformática", subject: "Estatística aplicada à genômica", 
+    text: "A medida de 'Variância' em um grupo de dados nos ensina o quê?", 
+    options: { A: "Se o genoma é animal", B: "O quanto os dados do grupo 'variam' ou se espalham em relação à média central (Se todos têm 30 anos a variância é zero, se têm idades de 2 a 90 anos, a variância é gigante)", C: "Quantos megabytes pesa o arquivo", D: "Quem chegou primeiro na UTI municipal central limpa primária ambulatorial nativa e de exames basais com os enfermeiros puros noturnos logados no mês estático isolado", E: "Mede apenas pesos na farmácia" }, 
+    correct: "B", explanation: "Gabarito: B. Quanto maior a variância, mais diferente as pessoas daquela amostra são entre si. É a medida de dispersão mais forte." },
+
+  { id: 1558, area: "Bioinformática", subject: "Estatística aplicada à genômica", 
+    text: "No termo 'Fold-Change' comum na transcriptômica (RNA-seq), um valor FC = 2 significa que:", 
+    options: { A: "Dois genes morreram", B: "O gene está expressando e produzindo proteínas num grupo EXATAMENTE O DOBRO a mais de vezes do que no grupo saudável, indicando uma super-ativação metabólica local na amostra tumoral e foco investigativo limpo", C: "Duas pastas foram deletadas no disco", D: "O valor da prova caiu a zero", E: "Significa que dobrou de tamanho cromossômico físico na mitose" }, 
+    correct: "B", explanation: "Gabarito: B. 'Fold' (dobra/vezes). Se a FC deu negativo (-3), o grupo de doentes tem 3 vezes menos expressão daquele gene (Silenciamento)." },
+
+  { id: 1559, area: "Bioinformática", subject: "Estatística aplicada à genômica", 
+    text: "Em um gráfico de PCA (Análise de Componentes Principais), se as 'bolinhas' vermelhas (casos de câncer) ficarem amontoadas e bem distantes do cacho de 'bolinhas' verdes (sadios), o bioinformata conclui facilmente que:", 
+    options: { A: "O computador travou na escala Y de bases nulas e deu tela azul apagada no PCA normal visual básico estatístico e logado sem drivers ou placa visual pesada simples das conexões seriais HDMI e VGA e rede do PC Linux limpo", B: "Há uma 'separação clara' forte no nível molecular entre os doentes e não doentes com assinaturas e características exclusivas fortíssimas. Isso garante que a biologia oncológica fala alto o suficiente nas tabelas para que os grupos divirjam visivelmente em duas massas separadas na visualização multidimensional convertida para o 2D na nossa tela limpa", C: "As cores do gráfico estão com defeito RGB básico visual", D: "O experimento fracassou totalmente na biologia das organelas do núcleo nativo na máquina base química e manual", E: "Todos os pacientes se curaram ao acaso" }, 
+    correct: "B", explanation: "Gabarito: B. PCA resume milhares de números em pontos fáceis na tela. Bolinhas de doentes isoladas das sadias significam que a doença mexeu tanto nos números do corpo que eles não se misturam mais na estatística." },
+
+  { id: 1560, area: "Bioinformática", subject: "Estatística aplicada à genômica", 
+    text: "Por que as Análises de Expressão (DE) usam logaritmos base 2 (Log2) e não os números grandes reais puros das contagens das polimerases do RNA?", 
+    options: { A: "Apenas para o gráfico ficar mais bonito de se ver", B: "Porque em biologia a expressão dobra ou cai pela metade exponencialmente. O Log2 nivela os números matematicamente de uma forma simétrica: Se dobra, o Log2 dá +1. Se cai pela metade exata, o Log2 dá -1 de forma estática equilibrada e fácil de trabalhar na conta pesada baseada sem explodir gráficos com números tipo '2 milhões'", C: "A lei proíbe números inteiros nas universidades base do Brasil em teses de estatística", D: "Eles não afetam os VCFs nas contas da BWA", E: "Os programas no R só entendem números de zero a dez puros naturais" }, 
+    correct: "B", explanation: "Gabarito: B. O Log2 centraliza e amansa as proporções exponenciais. Uma subida vira número positivo (+1,+2) e uma queda vira número espelhado (-1,-2). Facilita o mapeamento visual no gráfico do Vulcão de RNA." },
+
+  { id: 1561, area: "Bioinformática", subject: "Estatística aplicada à genômica", 
+    text: "O que o famoso gráfico 'Manhattan Plot' mostra e onde é gerado em peso em hospitais NGS?", 
+    options: { A: "Mostra o preço de apartamentos em NY nos centros brutos empresariais ricos e bases bancárias do comércio global atrelados à doença de obesidade no norte rico metropolitano global atestada na bolsa geral unificada do estado analítico em dólares estritos numéricos básicos logados e purificados na conta do tesouro", B: "É exclusivo dos 'Estudos de Associação Ampla - GWAS'. Plota os cromossomos (1 a 22) na base, e sobe 'prédios e torres' nos p-valores para exibir quais genes (SNPs) quebram a régua de corte limiar da significância estatística, revelando montanhas altas onde moram os perigos de doenças complexas", C: "O peso fetal num gráfico 3D", D: "Mostra o batimento cardíaco puro da máquina do SUS da UTI local", E: "É um mapa geográfico do Google Maps" }, 
+    correct: "B", explanation: "Gabarito: B. Se a variante T231C for fortíssima associada com Obesidade, um 'arranha-céu' vai estourar a reta horizontal e subir no eixo Y no meio do Cromossomo 4, de forma lindamente visual e imediata." },
+
+  // --- Mix Final de Consolidação ---
+  { id: 1562, area: "Laboratório", subject: "Boas Práticas de Laboratório (BPL), biossegurança e controle de qualidade", 
+    text: "O uso de Jalecos fechados até o pescoço e de material que não pega fogo facilmente (algodão puro) no lugar de poliéster inflamável de supermercados nas capelas protege contra:", 
+    options: { A: "A chuva urbana em saídas rápidas das catracas laborais na capital", B: "O poliéster derrete como plástico puro colando e necrosando na pele do braço do técnico ao menor contato com uma lamparina bico de Bunsen na placa em BPL, enquanto o algodão pode ser retirado às pressas antes de soldar nas queimaduras dos acidentes da ciência e de frascos químicos orgânicos e voláteis inflamados normais na bancada", C: "Algodão atrai vírus e filtra o ar respirado", D: "Apenas para dar conforto e sono nas poltronas", E: "O jaleco afasta insetos macroscópicos simples não ligados a genoma no teto e luz amarela isolada limpa nos ares centrais brancos na higiene das mesas" }, 
+    correct: "B", explanation: "Gabarito: B. O poliéster não queima, ele 'derrete'. Se o funcionário estiver com tecido sintético num pequeno incêndio de bancada de acetona, o plástico vai grudar no osso derretendo. Jaleco tem que ser grosso e base de algodão puro pra agir de colete de bloqueio térmico ou arrancar a roupa antes." },
+
+  { id: 1563, area: "Bioinformática", subject: "Genética de populações", 
+    text: "Na genética global, qual continente guarda o título de berço ancestral populacional absoluto (onde está abrigada até os dias modernos quase toda a diversidade pesada natural de SNPs do genoma humano da história na terra sem gargalos evolutivos de perda nas travessias antigas das terras e glaciações)?", 
+    options: { A: "América do Sul indígena e ribeirinha nativa em tribos estritas puras isoladas no passado sem misturas globais", B: "O continente Africano (Out of Africa model). As populações de matriz africana têm o maior leque de diversidade basal na Terra, porque quem migrou e fundou os europeus e ameríndios carregou consigo nas mochilas de viagem física antigas apenas uma pequena parcela diminuta restrita de blocos de DNA da raiz principal, deixando a matriz grossa retida inteira no continente inicial da espécie Homo", C: "O Polo Norte isolado rústico e neolítico", D: "A Oceania nos aborígenes de ilhas remotas e litorais brutos não logados nos comércios navais com caravelas de misturas e doenças do leste central na Ásia limpa", E: "Europa ocidental de matriz celta viking" }, 
+    correct: "B", explanation: "Gabarito: B. Por não ter sofrido o 'Gargalo Populacional' da grande migração pelo deserto para sair pelo Oriente e Europa, os povos da África carregam quase toda a variação biológica existente de humanos de forma milenar intacta no pool biológico." },
+
+  { id: 1564, area: "Bioinformática", subject: "Programação e ferramentas computacionais", 
+    text: "Por que se utiliza o programa e extensão 'GZIP' ou 'BGZF' (Compressão tipo .gz no Linux) compulsivamente em arquivos gigantes do VCF e FASTQ sem exceções?", 
+    options: { A: "Pra colorir de rosa as fontes na tela bash central de vídeo digital e gráfico da bios logada", B: "Genomas puros podem ocupar 100 Gigabytes em formato txt texto simples; comprimir em .gz reduz tudo a 15 Gb mágicos. O formato salva a vida do cientista, evitando ter que estourar e quebrar a cota financeira gigante e as máquinas do HD/SSD Amazon da cloud logada nas bases clínicas diárias onerosas e salvar a infraestrutura da federação médica no backup das nuvens", C: "Ele criptografa senhas", D: "Ele injeta proteínas de RNA via algoritmos", E: "Ele insere vírus ocultos lógicos falsos nas extensões na máquina cega sem telas visuais do usuário" }, 
+    correct: "B", explanation: "Gabarito: B. Armazenamento e download de DNA são caríssimos. Compactar (gzip) tudo é a única forma financeira e logística da bioinformática funcionar trocando gigas entre estados e prefeituras sem queimar contas com terabytes caríssimos mensais." },
+
+  { id: 1565, area: "Laboratório", subject: "Boas Práticas de Laboratório (BPL), biossegurança e controle de qualidade", 
+    text: "Onde devem ser descartadas OBRIGATORIAMENTE luvas nitrílicas após uso laboratorial contendo soro infectado por arboviroses com risco no posto público BPL de testagem biomolecular e sangue humano nos esfregaços de placa do LIMS na mesa BPL limpa final?", 
+    options: { A: "Em sacos de papel picados pretos sem amarras abertos na esquina do lixo hospitalar do zelador base do asseio matinal comum externo diurno focado puramente das lixeiras limpas do banheiro e sanitários anexos laterais", B: "No Lixo Hospitalar Biológico Específico de Saco Branco Leitoso blindado demarcado (Infectante Grupo A biológico) para o devido processo das máquinas enormes autoclaves rústicas ou de incinerações químicas biológicas sem o risco severo inaceitável ético a limpeza pública da sociedade da cidade de rua nas calçadas do esgoto local", C: "Lixão urbano reciclável de plásticos", D: "Pia com cloro ativada ralo aberto na química geral do solvente central", E: "Reutilizar as luvas fervendo-as a oitenta graus centígrados e esticando e guardando" }, 
+    correct: "B", explanation: "Gabarito: B. Lixo infectante (Grupo A) exige o saco branco resistente clássico, evitando que os catadores de lixo municipal e as varredeiras públicas na rua sejam fatalmente atingidos com sangue cru hospitalar." },
+
+  { id: 1566, area: "Bioinformática", subject: "Segurança de dados", 
+    text: "A Anonimização no LGPD diz que não se deve ter CPFs em planilhas médicas. O que é uma Pseudo-anonimização em diferença do primeiro conceito estrito do SUS brasileiro no dado sensível oncológico da planilha de acesso e Excel em pastas online?", 
+    options: { A: "É pintar os nomes de fonte invisível", B: "Pseudo-anonimizar é substituir nomes e CPFs da Maria na planilha centralizada por uma série 'ID-PAC-771' limpo. E guardar o dicionário chave dessa decodificação (A Chave ID) fechado por um DPO oficial de segurança ou médico num envelope físico, longe dos estagiários. Assim os dados parecem anônimos, mas em caso do hospital necessitar da cura urgente cirúrgica do laudo da máquina, o chefe abre a chave restrita, revincula os achados salvos na máquina e trata o doente humano", C: "Anonimizar falsificando o rosto visual da identidade civil perante promotores cartorários", D: "É divulgar as listas e nomes da saúde oncológica de todos no exterior sem CPFs completos apenas primeiros nomes visíveis de forma rústica online nos painéis diários governamentais", E: "As opções não diferem e a LGPD bane de forma integral e total" }, 
+    correct: "B", explanation: "Gabarito: B. A anonimização pura quebra a ponte pro resto da vida (Nunca mais acharemos que dono é o doente). Na Pseudo, nós escondemos a chave no cofre, assim a Bioinformática analisa cega e tranquila, e o médico chefe que tem a chave resgata a cura pra pessoa real." },
+
+  { id: 1567, area: "Laboratório", subject: "Boas Práticas de Laboratório (BPL), biossegurança e controle de qualidade", 
+    text: "Para extrair o DNA do núcleo humano o que se utiliza em soluções químicas orgânicas tradicionais como fenoladas nas misturas e métodos de separação na química rotineira orgânica e pesada dos técnicos da equipe antes de puxar do robô?", 
+    options: { A: "Gelo seco", B: "Ação de Tensoativos como o forte detergente ativo químico (SDS - Dodecil sulfato) que explode e saboa rompendo severamente a barreira blindada dos lipídios biológicos (a capinha da gordura) celular da membrana plasmática vazando todo e derramando o recheio estrito das nucleases e do próprio enovelado código central nas tubulações úmidas molhadas da bancada do cientista em tampões atestados biológicos da biologia rotineira limpa da extração básica do núcleo em placa de fundo nos decantadores e nos mixers térmicos locais", C: "Adicionando vírus bacteriófagos", D: "Fervendo em estufa à gás metano de ar leve na química basal centralizada das vidrarias no escuro em temperaturas naturais das paredes termostáticas ativas no ambiente diurno isolado sem água", E: "Comprimir em pistão mecânico de alumínio purificado industrial nas câmaras do hospital e centros frios puros base industriais das metalúrgicas conectadas isoladas nativas limpas" }, 
+    correct: "B", explanation: "Gabarito: B. Assim como o detergente de cozinha derrete a gordura da panela, o detergente SDS de Lise laboratorial derrete o lipídio da membrana celular do paciente na ampolinha. Ao estourar a proteção gorda, a célula jorra o conteúdo (DNA) pra fora para coletarmos na pipeta." },
+
+  { id: 1568, area: "Laboratório", subject: "Tecnologias laboratoriais em genômica (sequenciamento de nova geração - NGS, extração de DNA genômico, controle de qualidade, preparo de amostras)", 
+    text: "O sequenciador Illumina emite as fotografias da base fluorescente numa corrida da lâmina (Flow cell). Qual a sigla do método enzimático básico dessa reação no qual ele tira e registra cada nova base incorporada fotográfica uma a uma a cada ciclo sem correr e parar o processo?", 
+    options: { A: "Sanger Gel de capilar laser UV simples longo contíguo base na metáfase simples limpa visual sem PCR", B: "Sequencing By Synthesis (SBS - Sequenciamento por Síntese). Cada base quimicamente adicionada ao rastro e amontoado da ponte na placa ativada emite uma lanterna e bloqueia a máquina para não adicionar outras juntas. Ele tira a foto da lanterna, apaga a lanterna (cleavage de bloqueador químico), destrava o bloqueio e permite a base da frente vir brilhar sozinha para tirar milhares de fotos focais únicas contíguas separadas milimetricamente seguras em gigabytes diários nos arquivos puros nativos das máquinas super potentes do NGS", C: "Massometria proteica elétrica focal da biologia iônica do laboratório oncológico focado geral nas áreas logísticas do espectro visível em peso sem radiação magnética da amostra cega de espectrofotômetros básicos na química unificada", D: "Hibridização eletrostática estrita purificada a vácuo com ressonância magnética nuclear de base logada nos servidores da UTI oncológica nativa ativada visual radiológica do paciente focado em laudo de raios X", E: "Nenhuma técnica, a Illumina não usa câmera fotográfica" }, 
+    correct: "B", explanation: "Gabarito: B. A genialidade da Illumina: as letrinhas artificiais deles têm 'Cadeado' e 'Lanterna'. A máquina adiciona uma letra no fio (ex: T verde), o cadeado impede o fio de crescer desgovernado. A câmera fotografa o pontinho verde (É um T). Enzimas tiram o cadeado, apagam a lanterna e deixam a próxima letra do genoma entrar pra uma nova foto. Milhões de vezes simultâneas." },
+
+  { id: 1569, area: "Bioinformática", subject: "Bioinformática e análise genômica", 
+    text: "O formato que se tornou onipresente em projetos de mutações clínicas entre consórcios SUS médicos do VCF e laudos. O que é o arquivo VCF do ponto da base crua médica legível analítica textual e estatística para doenças oncológicas ou de conselhos clínicos normais de genética atestadas na rotina unificada hospitalar biomédica?", 
+    options: { A: "É vídeo clínico fotográfico do paciente nos exames de sangue ou de endoscopias cruas ativas da mesa de cirurgião do bloco central gravados com softwares de edição primária estática da imagem gerencial administrativa e arquivada por biólogos", B: "Variant Call Format. Uma tabela mágica de excel puro texto que condensa os milhões de dados do seu BAM apontando exclusividade onde você falhou ou diferiu em letras na comparação exata e direta base a base na vida médica do genoma original universal humano puro da GRch38. Indica exatamente se no Cromossomo 5 Posição X a sua Mãe ou a polimerase te passou a mutação do câncer ou não no arquivo unificado em formato de dados lido mundialmente sem as bilhões de bases desinteressantes sadias puras no fundo do HD logístico", C: "O laudo em PDF feito no word assinado atestado médico com o carimbo biomédico e papel hospitalar sem codificações nativas bioinformáticas logadas criptografadas analiticamente na nuvem das planilhas em bash do técnico central", D: "O formato original com as imagens TIFF cruas gigantes da lente dos lasers da máquina baseadas no formato bruto sem filtros nem alinhamentos em algoritmos BWA normais fotográficos nativos na base Unix logada geral", E: "É o atestado de vacinação municipal" }, 
+    correct: "B", explanation: "Gabarito: B. O VCF é a listinha de defeitos e trocas da máquina (A tabela de infrações do paciente contra o Genoma de Referência). É o laudo de ouro do pipeline onde mostra que na coordenada tal ele tem a doença, poupando a gente de reler os 3 bilhões de letras do arquivo BAM puro gigantesco e entulhado nas máquinas base." },
+  // =========================================================
+  // MEGA BLOCO 12 - FÁCIL/MÉDIA - SEGURANÇA E ETL (50 QUESTÕES)
+  // =========================================================
+
+  // --- Segurança de dados ---
+  { id: 1570, area: "Bioinformática", subject: "Segurança de dados", 
+    text: "Qual é o principal objetivo da Lei Geral de Proteção de Dados (LGPD) no contexto hospitalar e genômico?", 
+    options: { A: "Proteger os computadores contra vírus", B: "Proteger os direitos fundamentais de liberdade e de privacidade das pessoas, regulando como os hospitais e laboratórios coletam, guardam e usam os dados dos pacientes", C: "Garantir internet rápida nos postos de saúde", D: "Proibir a realização de exames de DNA", E: "Obrigar os médicos a usarem senhas de 4 dígitos" }, 
+    correct: "B", explanation: "Gabarito: B. A LGPD (Lei 13.709/2018) foca na privacidade do cidadão. Ela garante que o dado (como um genoma ou endereço) pertence à pessoa, e a instituição deve tratá-lo com extremo cuidado e permissão." },
+
+  { id: 1571, area: "Bioinformática", subject: "Segurança de dados", 
+    text: "O que é 'Phishing' no dia a dia da segurança da informação de um laboratório?", 
+    options: { A: "Um tipo de peixe usado em testes", B: "Um ataque cibernético onde o criminoso envia um e-mail falso (ex: fingindo ser o suporte de TI do hospital) para 'pescar' e roubar a senha do funcionário", C: "Um programa que limpa o HD", D: "O processo de compactar arquivos VCF", E: "A quebra física do cabo de rede" }, 
+    correct: "B", explanation: "Gabarito: B. Phishing (Pescaria) é a engenharia social clássica. O hacker não invade o sistema à força; ele engana o biomédico com um e-mail falso para que o próprio biomédico entregue a senha de bandeja." },
+
+  { id: 1572, area: "Bioinformática", subject: "Segurança de dados", 
+    text: "Para acessar o sistema do Genomas SUS, o bioinformata digita sua senha e, em seguida, precisa inserir um código de 6 dígitos que chega no seu celular. Esse processo é conhecido como:", 
+    options: { A: "Autenticação em Duas Etapas (2FA / MFA)", B: "Criptografia de ponta a ponta", C: "Backup redundante", D: "Protocolo HTTPS", E: "Firewall dinâmico" }, 
+    correct: "A", explanation: "Gabarito: A. A Autenticação de Múltiplos Fatores (MFA) exige 'algo que você sabe' (sua senha) mais 'algo que você tem' (seu celular). Isso impede que um hacker acesse o sistema mesmo se descobrir sua senha." },
+
+  { id: 1573, area: "Bioinformática", subject: "Segurança de dados", 
+    text: "Na segurança de dados, o conceito da regra de 'Privilégio Mínimo' (Principle of Least Privilege) significa que:", 
+    options: { A: "Todos os funcionários devem ter a senha do diretor", B: "Os pacientes não podem ver seus exames", C: "Um funcionário deve ter acesso APENAS aos dados e sistemas estritamente necessários para ele fazer o seu trabalho, e nada mais", D: "O laboratório deve gastar o mínimo possível com antivírus", E: "Apenas um computador do hospital deve ter internet" }, 
+    correct: "C", explanation: "Gabarito: C. O estagiário da recepção não precisa ter acesso à pasta que deleta o banco de dados do genoma. Dar apenas o acesso mínimo necessário evita acidentes e vazamentos em massa." },
+
+  { id: 1574, area: "Bioinformática", subject: "Segurança de dados", 
+    text: "Qual é a principal razão pela qual o uso de Pendrives pessoais é estritamente PROIBIDO em laboratórios que lidam com genomas e dados do SUS?", 
+    options: { A: "Eles consomem muita energia da porta USB", B: "Eles são fáceis de perder, facilitando o vazamento de dados de milhares de pacientes, além de serem os maiores transmissores de vírus e malwares para dentro da rede do hospital", C: "Eles deixam o computador lento", D: "Eles alteram o formato do arquivo de FASTQ para PDF", E: "Apenas por questão de estética do ambiente" }, 
+    correct: "B", explanation: "Gabarito: B. Pendrives são o terror da TI hospitalar. Além de espalharem vírus como o Ransomware, perder um pendrive com 10.000 laudos na rua gera multas milionárias pela LGPD." },
+
+  { id: 1575, area: "Bioinformática", subject: "Segurança de dados", 
+    text: "Se você olhar para a barra de endereços do seu navegador ao acessar o sistema de laudos do SUS, verá um 'cadeado fechado' e as letras HTTPS. O que o 'S' final significa?", 
+    options: { A: "Sistema", B: "Saúde", C: "Secure (Seguro) - indicando que a comunicação entre seu computador e o servidor está criptografada e embaralhada para espiões na rede", D: "Sync (Sincronizado)", E: "Server (Servidor)" }, 
+    correct: "C", explanation: "Gabarito: C. O HTTP normal manda textos abertos na internet. O HTTPS (Secure) embaralha os dados. Se alguém interceptar a rede, verá apenas códigos ilegíveis em vez da senha ou do genoma do paciente." },
+
+  { id: 1576, area: "Bioinformática", subject: "Segurança de dados", 
+    text: "O que é um software de 'Ransomware'?", 
+    options: { A: "Um antivírus gratuito", B: "Um programa que acelera a leitura de genomas", C: "Um vírus criminoso que invade o hospital, criptografa (tranca) todos os dados dos pacientes e exige o pagamento de um resgate (geralmente em Bitcoin) para liberar a senha", D: "Um firewall de rede", E: "Um compactador de arquivos como o WinZip" }, 
+    correct: "C", explanation: "Gabarito: C. Ransomware é o crime digital moderno. Ele sequestra os arquivos do laboratório. Por isso o backup offline (que não está na rede) é a única salvação contra esse ataque." },
+
+  { id: 1577, area: "Bioinformática", subject: "Segurança de dados", 
+    text: "Qual destas práticas é uma Política de 'Mesa Limpa' (Clear Desk Policy) exigida pela Segurança da Informação no laboratório?", 
+    options: { A: "Lavar as mãos com álcool", B: "Passar desinfetante na bancada de extração", C: "Não deixar senhas anotadas em post-its colados no monitor e não deixar exames de pacientes impressos soltos em cima da mesa ao ir embora", D: "Tirar o pó do computador", E: "Não comer na mesa" }, 
+    correct: "C", explanation: "Gabarito: C. Segurança da informação não é só digital. Um visitante ou pessoal da limpeza pode facilmente ler um laudo de HIV/Câncer que ficou esquecido em cima da mesa. Guarde documentos em gavetas e não cole senhas no monitor." },
+
+  { id: 1578, area: "Bioinformática", subject: "Segurança de dados", 
+    text: "Para garantir a 'Disponibilidade' dos dados em caso de queima do servidor local, um laboratório faz Backups diários. Qual o conceito correto de Backup?", 
+    options: { A: "Apagar os dados antigos para liberar espaço", B: "Fazer uma cópia de segurança dos dados importantes e guardá-la em um local separado e seguro", C: "Traduzir os dados para inglês", D: "Compactar os dados numa pasta oculta", E: "Mudar o formato do VCF" }, 
+    correct: "B", explanation: "Gabarito: B. O Backup não é apenas salvar o arquivo, é salvar uma 'cópia' num HD diferente ou na Nuvem. Se o disco principal queimar, você tem a cópia intacta para restaurar." },
+
+  { id: 1579, area: "Bioinformática", subject: "Segurança de dados", 
+    text: "Em segurança de dados de saúde, a 'Trilha de Auditoria' (Audit Trail) é um recurso automático do sistema (LIMS) que tem a função de:", 
+    options: { A: "Auditar a qualidade da amostra de sangue", B: "Registrar como um 'filme' oculto exatamente QUEM acessou o sistema, em qual DATA/HORA e o QUE a pessoa alterou (ex: Maria mudou o laudo de Negativo para Positivo às 14h)", C: "Bloquear a tela após 5 minutos", D: "Calcular o valor do exame", E: "Apagar dados duplicados" }, 
+    correct: "B", explanation: "Gabarito: B. A trilha de auditoria é a 'câmera de segurança' do software. Garante a integridade e impede que um funcionário mal intencionado adultere um laudo sem ser rastreado." },
+
+  { id: 1580, area: "Bioinformática", subject: "Segurança de dados", 
+    text: "A Bioinformática na Nuvem (Cloud Computing, como AWS e Google Cloud) possui o modelo de 'Responsabilidade Compartilhada'. Isso quer dizer que:", 
+    options: { A: "O Google cuida da segurança dos prédios e servidores físicos, mas o laboratório é o responsável por criar senhas fortes e configurar quem tem acesso aos arquivos no painel", B: "A nuvem é 100% responsável por tudo e o laboratório não precisa se preocupar com senhas", C: "O paciente divide a responsabilidade com o hospital", D: "A conta de luz é dividida", E: "Os dados são abertos ao público" }, 
+    correct: "A", explanation: "Gabarito: A. A nuvem garante que ninguém vai roubar o HD físico com uma arma. Mas se o cientista do laboratório colocar a pasta de genomas em 'Acesso Público' na internet por engano, a culpa do vazamento é 100% do laboratório." },
+
+  { id: 1581, area: "Bioinformática", subject: "Segurança de dados", 
+    text: "Por que conectar o notebook do hospital à rede de 'Wi-Fi Público' (de aeroportos ou cafeterias) para analisar genomas do SUS é uma grave falha de segurança?", 
+    options: { A: "Porque a bateria do notebook acaba mais rápido", B: "Porque a tela perde a resolução", C: "Porque redes públicas são fáceis de serem interceptadas por hackers que estão no mesmo ambiente, permitindo o roubo dos dados transmitidos (Ataque Man-in-the-Middle)", D: "Porque a internet é muito lenta para gerar arquivos", E: "Porque quebra o HD do computador" }, 
+    correct: "C", explanation: "Gabarito: C. Nunca acesse sistemas sigilosos de saúde em Wi-Fi de padaria sem usar uma VPN corporativa forte, pois qualquer pessoa com um software básico na mesma rede pode ler seu tráfego." },
+
+  { id: 1582, area: "Bioinformática", subject: "Segurança de dados", 
+    text: "A técnica de 'Anonimização' citada na LGPD tem a principal função de:", 
+    options: { A: "Apagar o banco de dados após 30 dias", B: "Desvincular irreversivelmente um dado da pessoa a que ele se refere (ex: apagar nome, CPF e endereço, deixando apenas 'Paciente Masculino, 30 anos, Diabético')", C: "Proibir exames", D: "Mudar o genoma de referência", E: "Criptografar senhas do e-mail" }, 
+    correct: "B", explanation: "Gabarito: B. O dado anonimizado perde a capacidade de identificar o cidadão. Sem CPF e Nome, a tabela do genoma pode ser usada em pesquisas sem ferir a privacidade da pessoa." },
+
+  { id: 1583, area: "Bioinformática", subject: "Segurança de dados", 
+    text: "Um funcionário encontrou um Pendrive caído no estacionamento do hospital e conectou no computador do laboratório para ver de quem era. Qual regra de segurança ele violou?", 
+    options: { A: "Desperdício de energia elétrica", B: "Nunca conectar dispositivos USB desconhecidos (Baiting), pois é uma tática comum de hackers para espalhar vírus ou Ransomware automaticamente na rede interna do hospital", C: "Regra de esterilização química", D: "Uso indevido de internet", E: "Assinatura do TCLE" }, 
+    correct: "B", explanation: "Gabarito: B. Curiosidade mata a rede. Hackers jogam pendrives com vírus no chão do estacionamento de propósito, esperando que um funcionário curioso espete o USB no computador do hospital." },
+
+  { id: 1584, area: "Bioinformática", subject: "Segurança de dados", 
+    text: "A sigla 'VPN' (Virtual Private Network) é obrigatória no trabalho remoto da bioinformática. O que ela faz?", 
+    options: { A: "Limpa vírus da máquina local", B: "Aumenta a velocidade da internet em 10x", C: "Cria um túnel criptografado e seguro entre o computador da sua casa e o servidor do hospital, impedindo que seu provedor de internet ou espiões vejam os dados que estão passando", D: "Converte o formato BAM para VCF", E: "Desliga o computador do hospital de casa" }, 
+    correct: "C", explanation: "Gabarito: C. A VPN é um túnel blindado. Mesmo trabalhando de casa, o sistema acha que você está sentado dentro da segurança física da TI do hospital." },
+
+  { id: 1585, area: "Bioinformática", subject: "Segurança de dados", 
+    text: "O que é 'Engenharia Social' no roubo de dados médicos?", 
+    options: { A: "Construir robôs", B: "Programar códigos em Python", C: "O ato de enganar pessoas psicologicamente (ex: fingir ser do Ministério da Saúde no telefone) para que elas quebrem as regras de segurança e entreguem informações sigilosas", D: "Quebrar o firewall com força bruta", E: "Compartilhar dados autorizados" }, 
+    correct: "C", explanation: "Gabarito: C. É o famoso 'hackeamento de pessoas'. É mais fácil ligar chorando pro estagiário e pedir a senha do sistema do que passar meses tentando quebrar o firewall da instituição." },
+
+  { id: 1586, area: "Bioinformática", subject: "Segurança de dados", 
+    text: "A política de bloqueio automático de tela (Screen Lock após 5 minutos ocioso) serve para:", 
+    options: { A: "Economizar a tela de LED", B: "Garantir que se o médico ou analista for tomar café, ninguém que passe pelo corredor consiga ler ou alterar dados de pacientes no computador que ficou logado e desprotegido", C: "Baixar a temperatura da CPU", D: "Aumentar a memória RAM", E: "Apagar o cache do navegador" }, 
+    correct: "B", explanation: "Gabarito: B. Deixar a tela destravada com o sistema aberto na sua mesa é a mesma coisa que entregar a chave de casa na mão de desconhecidos." },
+
+  { id: 1587, area: "Bioinformática", subject: "Segurança de dados", 
+    text: "O que a DPO (Data Protection Officer / Encarregado de Dados) faz na instituição do Genomas SUS?", 
+    options: { A: "Instala o Windows nas máquinas", B: "Faz a extração de DNA", C: "É a pessoa ou equipe legalmente responsável por garantir que o laboratório cumpra todas as regras de privacidade da LGPD, atuando como ponte entre o hospital, os pacientes e o Governo", D: "É quem assina o cheque de pagamento", E: "É a recepcionista" }, 
+    correct: "C", explanation: "Gabarito: C. Toda empresa e hospital agora é obrigado a ter um DPO. Ele é o 'xerife da privacidade' que garante que os dados não estão sendo usados para fins indevidos." },
+
+  { id: 1588, area: "Bioinformática", subject: "Segurança de dados", 
+    text: "Ao descartar servidores e HDs antigos do laboratório genômico, a equipe de TI deve adotar qual medida?", 
+    options: { A: "Vender os HDs no mercado livre para reverter em caixa", B: "Formatar rapidamente com clique direito e doar", C: "Realizar o apagamento criptográfico de nível militar (Wipe/Destruição lógica) ou a destruição física (triturar o disco), garantindo que dados de pacientes antigos jamais sejam recuperados por terceiros", D: "Apenas apagar as pastas e jogar no lixo reciclável", E: "Guardar no almoxarifado abertos" }, 
+    correct: "C", explanation: "Gabarito: C. Deletar arquivos no Windows não apaga nada, apenas 'esconde'. HDs de saúde devem ser triturados fisicamente ou formatados com softwares especiais antes de sair do hospital." },
+
+  { id: 1589, area: "Bioinformática", subject: "Segurança de dados", 
+    text: "Na proteção do servidor Linux, manter os softwares e sistemas operacionais sempre 'atualizados' (Patching) é essencial porque:", 
+    options: { A: "Deixa os ícones mais bonitos", B: "As atualizações corrigem falhas de segurança (vulnerabilidades) recém-descobertas que hackers usariam para invadir o servidor", C: "Evita que o computador consuma energia", D: "É uma regra de beleza do software", E: "O software antigo não lê DNA" }, 
+    correct: "B", explanation: "Gabarito: B. Software desatualizado é igual a uma porta com a fechadura quebrada. As atualizações (patches) de segurança são os 'consertos' imediatos da fabricante para manter o hacker do lado de fora." },
+
+  { id: 1590, area: "Bioinformática", subject: "Segurança de dados", 
+    text: "Qual é o nome do sistema de defesa (muro) de uma rede de computadores que filtra e bloqueia acessos não autorizados vindos da internet tentando acessar os dados do laboratório?", 
+    options: { A: "Ransomware", B: "Phishing", C: "Firewall", D: "Navegador", E: "Bluetooth" }, 
+    correct: "C", explanation: "Gabarito: C. O Firewall (Parede de Fogo) é o porteiro do computador. Ele decide quem entra e quem sai da rede do hospital, bloqueando hackers." },
+
+  { id: 1591, area: "Bioinformática", subject: "Segurança de dados", 
+    text: "Qual a recomendação correta para a criação de uma senha forte no sistema LIMS de Genômica?", 
+    options: { A: "Usar datas de aniversário dos filhos", B: "Usar 'senha123'", C: "Criar uma senha longa (mais de 12 caracteres), misturando letras maiúsculas, minúsculas, números e símbolos, e não a reutilizar em sistemas pessoais", D: "Usar o próprio nome", E: "Usar a palavra 'Deus'" }, 
+    correct: "C", explanation: "Gabarito: C. Senhas fortes são longas. Uma senha complexa de 12 letras demora séculos para ser quebrada por um computador hacker." },
+
+  { id: 1592, area: "Bioinformática", subject: "Segurança de dados", 
+    text: "O que a propriedade de 'Não-Repúdio' garante num sistema de saúde logado por biometria?", 
+    options: { A: "Que o exame não dói", B: "Que o paciente gostou do atendimento", C: "Garante que um funcionário não possa negar ou mentir que foi ele quem autorizou ou emitiu um laudo (ex: assinatura digital inquestionável)", D: "Garante o repúdio total às falhas", E: "Impede o sistema de desligar" }, 
+    correct: "C", explanation: "Gabarito: C. Se o sistema usa seu cartão e sua digital, você não tem como dizer no tribunal: 'Não fui eu que liberei esse laudo de câncer falso'." },
+
+  { id: 1593, area: "Bioinformática", subject: "Segurança de dados", 
+    text: "Se um incidente de segurança grave ocorrer (ex: invasão hacker e cópia de 10.000 VCFs de pacientes), a LGPD obriga a instituição do Genomas SUS a:", 
+    options: { A: "Abafar o caso para não sujar a imagem do hospital", B: "Notificar as polícias de outros países", C: "Comunicar o incidente à Autoridade Nacional de Proteção de Dados (ANPD) e aos pacientes afetados em prazo razoável, informando os riscos", D: "Desligar a energia e não falar com ninguém", E: "Processar os médicos" }, 
+    correct: "C", explanation: "Gabarito: C. Ocultar vazamento é crime agravante. A instituição deve avisar a ANPD e os pacientes imediatamente para que as pessoas possam trocar suas senhas e monitorar fraudes em seus nomes." },
+
+  { id: 1594, area: "Bioinformática", subject: "Segurança de dados", 
+    text: "No modelo de segurança física do CPD (onde ficam os servidores do genoma), é prática comum e exigida:", 
+    options: { A: "Porta aberta para ventilar", B: "Controle restrito de acesso por crachá e biometria, CFTV (câmeras), ar-condicionado redundante e alarmes de temperatura e água", C: "Colocar os servidores na sala de café", D: "Deixar a chave na porta", E: "Permitir entrada de pacientes para ver as máquinas" }, 
+    correct: "B", explanation: "Gabarito: B. Servidores de NGS custam fortunas e guardam dados sensíveis. O datacenter é o cofre-forte da instituição: blindado, frio, vigiado e de acesso ultra-restrito." },
+
+  // --- Vocabulários controlados, ontologias e técnicas de ETL ---
+  { id: 1595, area: "Bioinformática", subject: "Vocabulários controlados, ontologias e técnicas de extração, transformação e carga de dados (ETL)", 
+    text: "Na TI da Saúde, o que significa a sigla do processo ETL?", 
+    options: { A: "Executar, Testar, Ler", B: "Extract (Extrair dados de várias fontes), Transform (Limpar e padronizar os dados), Load (Carregar/Salvar no banco de dados principal limpo)", C: "Eliminar Termos Longos", D: "Escrever Textos Livres", E: "Espaço Temporal Lógico" }, 
+    correct: "B", explanation: "Gabarito: B. ETL é a alma do Banco de Dados. Ele puxa o dado bruto sujo, limpa e padroniza, e joga bonito nas prateleiras do servidor da nuvem." },
+
+  { id: 1596, area: "Bioinformática", subject: "Vocabulários controlados, ontologias e técnicas de extração, transformação e carga de dados (ETL)", 
+    text: "Por que usamos 'Vocabulários Controlados' (como a CID-10) nos prontuários em vez de deixar o médico escrever 'texto livre' (qualquer palavra)?", 
+    options: { A: "Para censurar a liberdade do médico", B: "Para economizar tinta na impressora", C: "Porque o texto livre gera caos ('Ataque cardíaco', 'Infarto', 'IAM'). O vocabulário controlado padroniza em um único código universal, permitindo que a Inteligência Artificial e a estatística funcionem perfeitamente no SUS", D: "Apenas para cobrar mais impostos", E: "Para não ofender o paciente" }, 
+    correct: "C", explanation: "Gabarito: C. Computador é burro para entender sinônimos, gírias e erros de digitação médicos. Usar um Código/Vocabulário único garante que a pesquisa científica funcione redonda." },
+
+  { id: 1597, area: "Bioinformática", subject: "Vocabulários controlados, ontologias e técnicas de extração, transformação e carga de dados (ETL)", 
+    text: "A sigla HPO (Human Phenotype Ontology) é vital na genômica clínica mundial. Ela é um vocabulário focado em padronizar o quê?", 
+    options: { A: "O nome dos remédios e marcas de farmácia", B: "Os preços dos exames NGS", C: "As descrições exatas dos sintomas e anomalias físicas dos pacientes (fenótipos), facilitando o cruzamento de sintomas com suspeitas de síndromes genéticas raras pelo computador", D: "Os endereços dos hospitais", E: "Os nomes dos vírus" }, 
+    correct: "C", explanation: "Gabarito: C. O HPO traduz um sintoma, como 'Dedos a mais', para o código 'HP:0010442'. Isso permite que a Bioinformática busque esse código na rede mundial de mutações e entregue a doença rara correta." },
+
+  { id: 1598, area: "Bioinformática", subject: "Vocabulários controlados, ontologias e técnicas de extração, transformação e carga de dados (ETL)", 
+    text: "Na etapa de Transformação (o 'T' do ETL), qual destas tarefas o bioinformata ou engenheiro de dados está realizando?", 
+    options: { A: "Excluindo o banco de dados inteiro", B: "Fotografando o DNA", C: "Limpando espaços em branco nos textos, removendo exames duplicados e convertendo datas para um formato padrão (ex: de 10/12/23 para 2023-12-10)", D: "Aplicando vacinas no posto", E: "Baixando músicas na nuvem" }, 
+    correct: "C", explanation: "Gabarito: C. Transformar é higienizar a bagunça. Arrumar datas, corrigir nomes escritos errados e deletar informações em branco antes de salvar no sistema do governo." },
+
+  { id: 1599, area: "Bioinformática", subject: "Vocabulários controlados, ontologias e técnicas de extração, transformação e carga de dados (ETL)", 
+    text: "Qual é a diferença conceitual simples entre um Data Warehouse (Armazém de Dados) e um Data Lake (Lago de Dados)?", 
+    options: { A: "O Lake é mais quente", B: "O Warehouse aceita qualquer lixo. O Lake é restrito", C: "O Warehouse armazena dados já filtrados, limpos e organizados em tabelas perfeitas (SQL). O Data Lake aceita tudo misturado e bruto, como textos, vídeos, VCFs e tabelas sujas para uso livre da Inteligência Artificial", D: "Não há diferença no mercado de TI", E: "O Warehouse é analógico em papel" }, 
+    correct: "C", explanation: "Gabarito: C. O Warehouse é como uma prateleira de supermercado perfeitinha. O Lake é um grande galpão onde você joga as caixas pesadas do jeito que chegaram (Dados Brutos) e os cientistas fuçam nelas depois." },
+
+  { id: 1600, area: "Bioinformática", subject: "Vocabulários controlados, ontologias e técnicas de extração, transformação e carga de dados (ETL)", 
+    text: "A sigla API (Interface de Programação de Aplicação) no mundo dos dados de saúde permite:", 
+    options: { A: "O controle de temperatura do freezer", B: "Que dois sistemas de software diferentes (ex: o sistema do hospital e o banco de dados de mutações do governo) conversem e troquem dados diretamente e automaticamente pela internet", C: "O paciente conversar com o médico", D: "O conserto da placa de vídeo", E: "A criptografia do LIMS" }, 
+    correct: "B", explanation: "Gabarito: B. API é o garçom. O seu software bioinformático pede: 'Garçom, me traga os dados do Gene X'. O garçom vai até a cozinha (O banco global Ensembl), pega a informação e devolve direto pra sua tela." },
+
+  { id: 1601, area: "Bioinformática", subject: "Vocabulários controlados, ontologias e técnicas de extração, transformação e carga de dados (ETL)", 
+    text: "O padrão internacional 'HL7 FHIR' revolucionou a saúde digital moderna. Seu objetivo principal é:", 
+    options: { A: "Proibir a troca de dados", B: "Garantir a Interoperabilidade: criar um formato universal para que prontuários eletrônicos, resultados de laboratório genômico e celulares de pacientes troquem informações de saúde sem erros de linguagem", C: "Ser uma linguagem de programação como Python", D: "Medir o genoma do Covid-19", E: "Servir de antivírus de rede" }, 
+    correct: "B", explanation: "Gabarito: B. Interoperabilidade é a palavra chave. Se o Einstein, o Sírio Libanês e o SUS usam FHIR, os prontuários dos 3 conseguem se conversar perfeitamente, o que antes era impossível por causa de sistemas privados isolados." },
+
+  { id: 1602, area: "Bioinformática", subject: "Vocabulários controlados, ontologias e técnicas de extração, transformação e carga de dados (ETL)", 
+    text: "O formato de dados JSON (JavaScript Object Notation) é o queridinho das APIs modernas de bioinformática e web porque:", 
+    options: { A: "É criptografado por natureza", B: "Sua estrutura de 'Chave-Valor' (ex: { 'nome': 'João', 'idade': 30 }) é super leve, legível por humanos e facilmente interpretada por qualquer linguagem de programação (Python, R, Java)", C: "Ele toca áudio no navegador", D: "Ele só roda no Linux antigo", E: "Ele ocupa mais espaço que o Word" }, 
+    correct: "B", explanation: "Gabarito: B. JSON substituiu o antigo XML porque é puro, direto, fácil de ler (tanto pro PC quanto pra gente) e pesa quase nada na transferência da rede." },
+
+  { id: 1603, area: "Bioinformática", subject: "Vocabulários controlados, ontologias e técnicas de extração, transformação e carga de dados (ETL)", 
+    text: "No termo 'Big Data' aplicado ao Genomas SUS, existem os famosos 'Vês'. O que são o Volume e a Variedade?", 
+    options: { A: "Volume é o barulho do servidor, Variedade é a marca das máquinas", B: "Volume diz respeito à quantidade absurda de dados gerados (Terabytes de DNA); Variedade indica que os dados vêm de formas diferentes (imagens de ressonância, VCFs pesados de genoma, textos soltos de médicos)", C: "Volume é o peso da maca, variedade é a comida", D: "Volume e Variedade não se aplicam a dados da saúde", E: "Nenhuma das respostas" }, 
+    correct: "B", explanation: "Gabarito: B. Big Data na Saúde é lidar com Volume absurdo, gerado em altíssima Velocidade, com enorme Variedade (áudio, foto, tabelas) e garantindo a Veracidade (QC e Ética) do dado." },
+
+  { id: 1604, area: "Bioinformática", subject: "Vocabulários controlados, ontologias e técnicas de extração, transformação e carga de dados (ETL)", 
+    text: "Na extração de dados (Extract), os arquivos de saúde em formato '.CSV' (Comma-Separated Values) são extremamente comuns por serem:", 
+    options: { A: "Arquivos 3D complexos", B: "Tabelas simples de texto onde as colunas são separadas apenas por vírgulas ou ponto-e-vírgula, facilitando a abertura em Excel ou Python sem pesar o computador", C: "Arquivos confidenciais de senhas", D: "Aplicativos executáveis de instalação", E: "Formato nativo de imagens de raio-x" }, 
+    correct: "B", explanation: "Gabarito: B. O CSV é a essência da tabela. Se você tira a roupagem bonita do Excel, o que sobra é um texto limpo separado por vírgulas, maravilhoso e leve para a bioinformática ler no Python (Pandas)." },
+
+  { id: 1605, area: "Bioinformática", subject: "Vocabulários controlados, ontologias e técnicas de extração, transformação e carga de dados (ETL)", 
+    text: "Na criação de um banco de dados relacional, a linguagem padrão e clássica que o programador utiliza para fazer perguntas à tabela (ex: 'Me mostre todos os pacientes de 20 anos com mutação no BRCA1') chama-se:", 
+    options: { A: "Java", B: "C++", C: "HTML", D: "SQL (Structured Query Language)", E: "Ruby" }, 
+    correct: "D", explanation: "Gabarito: D. O SQL é a linguagem de consulta mestre. Com comandos simples (SELECT * FROM Genomas WHERE gene='BRCA1') você filtra milhões de linhas numa fração de segundos no banco de dados." },
+
+  { id: 1606, area: "Bioinformática", subject: "Vocabulários controlados, ontologias e técnicas de extração, transformação e carga de dados (ETL)", 
+    text: "A Ontologia de Genes (Gene Ontology - GO) foi criada no mundo da biologia computacional para padronizar três coisas fundamentais sobre os genes. Quais são?", 
+    options: { A: "Tamanho, cor e peso molecular", B: "Função Molecular, Componente Celular (onde ele age) e Processo Biológico (qual via ele afeta)", C: "Doença, Cura e Vacina", D: "Nome do cientista, data da descoberta e país de origem", E: "Preço, laboratório fabricante e validade" }, 
+    correct: "B", explanation: "Gabarito: B. A GO unificou a biologia. Ela diz em código de computador: O Gene XYZ é uma (Enzima Kinase), fica no (Núcleo) e age no (Processo de Divisão Celular). Isso facilita os scripts em R em análises de RNA-Seq." },
+
+  { id: 1607, area: "Bioinformática", subject: "Vocabulários controlados, ontologias e técnicas de extração, transformação e carga de dados (ETL)", 
+    text: "O que é 'Metadados' em um arquivo de genômica (ex: cabeçalho do VCF ou BAM)?", 
+    options: { A: "Os vírus ocultos", B: "O DNA descartado da amostra", C: "É o 'Dado sobre o Dado'. Informações vitais auxiliares como a data do sequenciamento, o modelo da máquina usada, o nome do hospital e o pipeline executado", D: "O peso do computador", E: "As fotos dos cientistas" }, 
+    correct: "C", explanation: "Gabarito: C. O dado real é o genoma. O metadado é a etiqueta da caixa dizendo 'Lido num NovaSeq, em 2024, pelo LIMS do Hospital São João'. Sem metadados, o genoma perde o valor científico por falta de rastreio." },
+
+  { id: 1608, area: "Bioinformática", subject: "Vocabulários controlados, ontologias e técnicas de extração, transformação e carga de dados (ETL)", 
+    text: "No contexto da gestão moderna do Genomas SUS na Cloud (AWS/GCP), utilizar o formato Apache Parquet ao invés de um VCF texto tradicional gigante é melhor por quê?", 
+    options: { A: "Ele tem imagens em Full HD", B: "Ele armazena os dados em formato de 'Colunas' de alta compressão. Isso significa que o cientista de dados consegue pesquisar uma coluna específica muito mais rápido e pagando centavos, sem precisar ler e abrir o arquivo inteiro no servidor", C: "O Parquet é escrito em português do Brasil", D: "Ele edita o DNA do paciente sozinho", E: "Ele ocupa mais espaço e trava o disco" }, 
+    correct: "B", explanation: "Gabarito: B. Formatos colunares (Parquet, Avro) são a revolução do Big Data. O Python pesca a coluna isolada em segundos e ignora as outras milhares de colunas do VCF." },
+
+  { id: 1609, area: "Bioinformática", subject: "Vocabulários controlados, ontologias e técnicas de extração, transformação e carga de dados (ETL)", 
+    text: "Qual é o papel de um Dicionário de Dados (Data Dictionary) no desenvolvimento do projeto Genomas SUS?", 
+    options: { A: "Traduzir termos médicos de inglês para português para os pacientes", B: "Criar um manual técnico que lista todas as colunas do banco de dados, seus tipos (texto, número, data) e o que cada código significa, garantindo que a equipe de TI saiba ler as planilhas clínicas sem erros de interpretação", C: "Ensinar crianças a ler manuais", D: "Ditar regras de conduta ética na internet", E: "Armazenar vídeos cirúrgicos" }, 
+    correct: "B", explanation: "Gabarito: B. Se a tabela tem uma coluna chamada 'ST_01', ninguém saberá o que é. O Dicionário de Dados avisa: 'ST_01 significa Status da Doença (1 Vivo, 0 Morto)'. É o mapa para os bioinformatas." },
+
+  { id: 1610, area: "Bioinformática", subject: "Vocabulários controlados, ontologias e técnicas de extração, transformação e carga de dados (ETL)", 
+    text: "A sigla LOINC (Logical Observation Identifiers Names and Codes) é a ontologia universalmente usada no mundo hospitalar e do SUS para padronizar estritamente os nomes de:", 
+    options: { A: "Procedimentos cirúrgicos de amputações", B: "Marcas de macas e seringas compradas pelo estado", C: "Exames de laboratório e observações clínicas (Ex: Padroniza mundialmente que o código de 'Glicose no Sangue' é o mesmo no Brasil e no Canadá)", D: "Tipos de planos de saúde", E: "Bactérias nativas de água" }, 
+    correct: "C", explanation: "Gabarito: C. A LOINC padronizou as análises clínicas. Isso impede que o laboratório 1 crie 'Glc.Sng' e o laboratório 2 crie 'Açúcar Sang.', o que impossibilitaria ao computador do estado saber que ambos são exames de Glicose." },
+
+  { id: 1611, area: "Bioinformática", subject: "Vocabulários controlados, ontologias e técnicas de extração, transformação e carga de dados (ETL)", 
+    text: "Quando fazemos 'Data Cleansing' (Limpeza de Dados) na fase de Transformação, a tarefa de identificar e remover 'Outliers' significa:", 
+    options: { A: "Apagar pacientes que já faleceram da base de dados", B: "Excluir dados que estão duplicados perfeitamente em duas linhas", C: "Remover ou tratar valores absurdamente fora da curva ou discrepantes que foram erro de digitação médica (Ex: Paciente anotado com '1500 anos' de idade), para não estragar a média e a inteligência artificial", D: "Pintar as linhas da tabela de cores fáceis", E: "Excluir as datas de feriados nas buscas" }, 
+    correct: "C", explanation: "Gabarito: C. Outliers (pontos fora da curva/aberrantes) estragam a estatística da IA. Limpar isso garante a precisão do estudo." },
+
+  { id: 1612, area: "Bioinformática", subject: "Vocabulários controlados, ontologias e técnicas de extração, transformação e carga de dados (ETL)", 
+    text: "Na estrutura em Grafos das ontologias (como HPO ou GO), os termos se conectam em relações pai-filho. Um termo 'Pai' é sempre:", 
+    options: { A: "Uma doença letal", B: "Um conceito mais AMPLO e genérico (Ex: Doença Ocular), enquanto os seus filhos são conceitos mais ESTREITOS e específicos (Ex: Catarata Senil, Glaucoma)", C: "O nome do pesquisador idoso que descobriu", D: "Um conceito sem ligação com a doença", E: "O cromossomo X" }, 
+    correct: "B", explanation: "Gabarito: B. A ontologia flui do geral para o específico. O PC pode agrupar centenas de sub-doenças (filhos) jogando-as na bacia do termo genérico pai (Anomalia do olho) para análise generalista de exoma." },
+
+  { id: 1613, area: "Bioinformática", subject: "Vocabulários controlados, ontologias e técnicas de extração, transformação e carga de dados (ETL)", 
+    text: "No contexto das APIs de Saúde (FHIR / REST), um 'Endpoint' é de forma simples:", 
+    options: { A: "O fim de um cabo de rede que vai no computador", B: "O botão de desligar a máquina base primária de laboratório", C: "A URL (Endereço Web específico) onde o seu programa (Python) vai bater na porta da internet para puxar um dado específico (Ex: meudominio.com/api/pacientes/123)", D: "A data de validade da senha na rede", E: "O HD corrompido do sistema Windows" }, 
+    correct: "C", explanation: "Gabarito: C. Endpoint é a 'porta de atendimento' do servidor. Cada endpoint da API devolve uma informação diferente (ex: um endpoint dá os genomas, o outro dá o nome dos médicos)." },
+
+  { id: 1614, area: "Bioinformática", subject: "Vocabulários controlados, ontologias e técnicas de extração, transformação e carga de dados (ETL)", 
+    text: "Um arquivo XML já foi muito usado para transferência de dados antes do JSON. A sua característica visual principal, similar à linguagem de sites HTML, é o uso de:", 
+    options: { A: "Chaves soltas sem textos", B: "Números puros de zero e um (Binário)", C: "Tags (Etiquetas) abertas e fechadas entre os símbolos de menor e maior (Ex: <paciente>João</paciente>)", D: "Planilhas exclusivas do sistema office da Microsoft com linhas colunas e abas abertas de cor verde", E: "Gráficos redondos prontos analíticos e imagens em flash animadas" }, 
+    correct: "C", explanation: "Gabarito: C. O XML (Extensible Markup Language) organiza dados como etiquetas dentro de etiquetas. Foi substituído aos poucos pelo JSON na Bioinformática por ser um texto mais verboso e pesado de ler no PC." },
+
+  { id: 1615, area: "Bioinformática", subject: "Vocabulários controlados, ontologias e técnicas de extração, transformação e carga de dados (ETL)", 
+    text: "Na fase de 'Load' (Carga) de um processo ETL para um repositório centralizado, a diferença entre 'Carga Completa' (Full Load) e 'Carga Incremental' é que:", 
+    options: { A: "Incremental gasta muito mais internet", B: "Carga Completa apaga todos os dados anteriores do HD e regrava tudo do zero novamente. Carga Incremental envia apenas os dados novos que surgiram desde ontem, economizando um tempo colossal da rede", C: "Incremental traduz do inglês para português", D: "Completa envia vírus, incremental não", E: "A carga completa não tem dados de DNA, só RNAs soltos no log de rede" }, 
+    correct: "B", explanation: "Gabarito: B. Você não quer transmitir 10 terabytes do Genomas SUS para o governo todo dia. Você faz Carga Completa uma vez no ano, e no dia a dia você faz a Incremental (manda só os dados de pacientes que deram entrada naquele dia específico)." },
+
+  { id: 1616, area: "Bioinformática", subject: "Vocabulários controlados, ontologias e técnicas de extração, transformação e carga de dados (ETL)", 
+    text: "O que a Ontologia clinica chamada SNOMED-CT resolve no Prontuário Eletrônico do Paciente (PEP)?", 
+    options: { A: "Controla o estoque de seringas e soros da enfermaria limpa hospitalar", B: "Fornece a maior e mais abrangente linguagem clínica multilingue e vocabulário eletrônico estruturado do mundo para descrever desde sintomas até procedimentos, exames e órgãos de forma padronizada pra IAs processarem sem erros cruciais de grafia", C: "Gera boletos e faturamento fiscal da nota das empresas de fornecimento biomédico da base unificada", D: "Apaga dados de prontuários com mais de vinte anos nos cartórios e no servidor federal estadual normativo isolado da conexão web base livre da internet", E: "Programa computadores antigos Linux nas UPAS e Unidades Básicas de atendimento de rua" }, 
+    correct: "B", explanation: "Gabarito: B. O SNOMED-CT é o gigante das ontologias médicas mundiais, mapeando cada termo médico com uma precisão cirúrgica de códigos para o mundo inteiro operar digitalmente a saúde dos prontuários das pessoas nas redes sem barreiras nativas e ambiguidades." },
+
+  { id: 1617, area: "Bioinformática", subject: "Vocabulários controlados, ontologias e técnicas de extração, transformação e carga de dados (ETL)", 
+    text: "Ao realizar uma Query (Consulta) num banco de dados SQL da saúde genômica. O comando que junta duas tabelas diferentes baseadas numa informação em comum delas (ex: Juntar a Tabela 'Pacientes' com a Tabela 'Mutações' baseadas no CPF e ID) é o famoso comando:", 
+    options: { A: "DROP DATABASE", B: "UPDATE e DELETE nas funções base orgânicas analíticas e numéricas primárias do script principal e da ramificação paralela nula", C: "JOIN (Ex: INNER JOIN, LEFT JOIN) - O comando que permite a unificação lógica provisória de dados vindos de origens e colunas separadas para emitir relatórios mesclados e unificados do cruzamento inteligente na tela fina", D: "ECHO do prompt e grep ativo", E: "FORMAT C: da máquina primária de dados brutos e binários originais no prompt e no log analógico serial interno puro nativo" }, 
+    correct: "C", explanation: "Gabarito: C. A mágica dos bancos Relacionais é o JOIN. É ele quem casa as informações espalhadas por mil planilhas numa visualização única e mastigada para o cientista ou o diretor médico analisar no Dashboard." },
+
+  { id: 1618, area: "Bioinformática", subject: "Vocabulários controlados, ontologias e técnicas de extração, transformação e carga de dados (ETL)", 
+    text: "O que são 'Silos de Dados' no contexto governamental e do ambiente hospitalar que as ferramentas de ETL tentam desesperadamente quebrar para fazer Saúde de Precisão fluir e funcionar nas regionais do Genoma Sus de alta biologia analítica das bases em unificação de sistemas?", 
+    options: { A: "Caixas e frascos de plástico físico onde o sangue apodrece sem validade ou lixo hospitalar esquecido", B: "Ambientes digitais e sistemas fechados de setores isolados que não se conversam (Ex: O banco de dados oncológico do hospital central que não envia e não compartilha dados digitais com o banco de DNA da Fiocruz por estarem em formatos incompatíveis ou barreiras políticas de acesso de TIs diferentes da mesma nação sem padronização)", C: "Nuvens da amazon que congelam em HDDs de cinco rotações mecânicas ativas e primárias em Data Centers e provedores locais nos países externos ao país matriz base original logado no sistema civil unificado base nacional aberta", D: "Arquivos de Word docx soltos da base de enfermagem das regionais médicas unificadas no hospital geral", E: "Os canos da central elétrica" }, 
+    correct: "B", explanation: "Gabarito: B. Silos de dados são a 'pior praga' do Big Data na Saúde. O Oncologista usa o Sistema X, o Postinho de Saúde usa o Sistema Y, e o Genoma tá na nuvem Z. Ferramentas de Interoperabilidade/ETL existem justamente para quebrar as paredes e unificar todos eles para a Saúde ser inteligente a nível Federal Global." },
+
+  { id: 1619, area: "Bioinformática", subject: "Vocabulários controlados, ontologias e técnicas de extração, transformação e carga de dados (ETL)", 
+    text: "A biblioteca em Python mais sagrada, universal e mundialmente adotada pelo cientista de dados e do analista bioinformata de ETL para a etapa de transformação limpa de dados, cruzamentos tubulares eficientes de linhas complexas massivas e análise estatística matricial de dataframes de tabelas cruas é:", 
+    options: { A: "O pygame (Jogos base ativos em C e C++ modulares gráficos de vetor puro)", B: "O Excel da Microsoft original corporativa da empresa atestada em nuvem isolada", C: "O MS-DOS puro da Windows nativa sem interfaces da década analógica básica anterior ao linux de kernel puro modular com bases nativas antigas de mainframes da base central analítica das matrizes corporativas pesadas e complexas", D: "A biblioteca Pandas. Perfeita e absoluta nas funcionalidades de ler, limpar Nulls, desanhar e cruzar genomas com VCFs baseados nas conversões do dado rápido no computador para IA sem queimar processador da matriz ativamente no sistema moderno das operações de bases científicas massivas e big datas", E: "A extensão em power point simples das laudas estáticas nativas de painel em apresentações básicas de hospitais com textos em artes limpas visuais nativas" }, 
+    correct: "D", explanation: "Gabarito: D. Import Pandas as pd. Essa é a primeira linha de código de 99% das ferramentas de manipulação de CSV, Data Lakes e estatísticas base ETL em Python. É ela quem manipula os chamados DataFrames turbinados da ciência moderna global." }
 ];
