@@ -3,26 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Genoma SUS Quiz - Edital Exato</title>
-    
+    <title>Genoma SUS - Cloud Sync</title>
     <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
     <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet">
-    
     <script src="banco.js"></script>
-
-    <style>
-        body { font-family: 'Inter', sans-serif; }
-        .hide-scrollbar::-webkit-scrollbar { display: none; }
-    </style>
+    <style>body { font-family: 'Inter', sans-serif; } .hide-scrollbar::-webkit-scrollbar { display: none; }</style>
 </head>
 <body class="bg-[#f8fafc] text-slate-900">
     <div id="root"></div>
 
     <script type="text/babel">
         const { useState, useMemo, useEffect } = React;
+
+        // --- CONEXÃO COM SUA PLANILHA ---
+        const CSV_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vSunO3dVP4m3_zA1WIBxLQCMDvwPD2gqJTX0DbyYCvR21DnDO2kNeJSLKgmOaIfRXWKFo5asfzR6SM5/pub?output=csv";
 
         const Icons = {
             Trophy: () => <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/></svg>,
@@ -55,7 +52,7 @@
                 "Princípios de saúde pública e epidemiologia genética",
                 "Segurança de dados",
                 "Genética de populações",
-                "Vocabulários controlados, ontologias e técnicas de extração, transformação e carga de dados (ETL)"
+                "Vocabulários controlados, ontologias e técnicas de extração, transformation e carga de dados (ETL)"
             ]
         };
 
@@ -69,13 +66,41 @@
             const [idx, setIdx] = useState(0);
             const [history, setHistory] = useState({});
             const [sessionAnswers, setSessionAnswers] = useState({});
+            const [isLoadingCloud, setIsLoadingCloud] = useState(false);
 
             const activeBank = useMemo(() => window.questionBank || [], []);
 
+            // --- SINCRONIZAÇÃO COM A PLANILHA (VIA CSV) ---
+            const syncFromCloud = async (userName) => {
+                if (!CSV_URL) return;
+                setIsLoadingCloud(true);
+                try {
+                    const response = await fetch(CSV_URL + "&t=" + new Date().getTime());
+                    const text = await response.text();
+                    const rows = text.split('\n').map(row => row.split(','));
+                    
+                    const newHistory = {};
+                    rows.slice(1).forEach(row => {
+                        const rowUser = row[1]?.replace(/"/g, '').trim().toLowerCase();
+                        const rowId = parseInt(row[2]?.replace(/"/g, ''));
+                        const rowStatus = row[3]?.replace(/"/g, '').trim();
+
+                        if (rowUser === userName.toLowerCase() && !isNaN(rowId)) {
+                            if (!newHistory[rowId]) newHistory[rowId] = [];
+                            newHistory[rowId].push({ ans: "?", isCorrect: rowStatus === "ACERTO", date: row[0] });
+                        }
+                    });
+                    setHistory(newHistory);
+                } catch (e) {
+                    console.error("Erro de sincronização", e);
+                } finally {
+                    setIsLoadingCloud(false);
+                }
+            };
+
             useEffect(() => {
                 if (currentUser) {
-                    const savedHist = localStorage.getItem(`genomasus_hist_${currentUser}`);
-                    setHistory(savedHist ? JSON.parse(savedHist) : {});
+                    syncFromCloud(currentUser);
                     if (!userList.includes(currentUser)) {
                         const newList = [...userList, currentUser];
                         setUserList(newList);
@@ -83,12 +108,6 @@
                     }
                 }
             }, [currentUser]);
-
-            useEffect(() => {
-                if (currentUser) {
-                    localStorage.setItem(`genomasus_hist_${currentUser}`, JSON.stringify(history));
-                }
-            }, [history]);
 
             const handleLogin = (name) => {
                 const formatted = name.trim().toLowerCase();
@@ -106,7 +125,6 @@
 
             const handleAnswer = (qId, option) => {
                 if (sessionAnswers[qId]) return;
-                
                 const question = quizConfig.questions.find(q => q.id === qId);
                 const isCorrect = question.correct === option;
                 const statusText = isCorrect ? "ACERTO" : "ERRO";
@@ -117,18 +135,13 @@
                     return { ...prev, [qId]: [...qHist, { ans: option, isCorrect, date: new Date().toISOString() }] };
                 });
 
-                // SINCRONIZAÇÃO COM OS NOVOS IDs QUE VOCÊ ENVIOU
                 const formID = "1FAIpQLSdLep-1NlhMCXeeGEVjZPXh-unPvuSkwqkNvfAuYwyCPDKzSw";
                 const formData = new URLSearchParams();
                 formData.append("entry.369347060", currentUser);
                 formData.append("entry.455774683", qId);
                 formData.append("entry.1700459455", statusText);
 
-                fetch(`https://docs.google.com/forms/d/e/${formID}/formResponse`, {
-                    method: 'POST',
-                    mode: 'no-cors',
-                    body: formData
-                });
+                fetch(`https://docs.google.com/forms/d/e/${formID}/formResponse`, { method: 'POST', mode: 'no-cors', body: formData });
             };
 
             const startQuiz = (questions, title, mode) => {
@@ -142,6 +155,7 @@
                 const status = {};
                 Object.keys(history).forEach(qId => {
                     const att = history[qId];
+                    if (!att || att.length === 0) return;
                     const last = att[att.length - 1];
                     const prev = att.length > 1 ? att[att.length - 2] : null;
                     if (!last.isCorrect) status[qId] = "red";
@@ -159,7 +173,6 @@
                         <div className="bg-white p-10 rounded-[3rem] shadow-2xl w-full max-w-md border border-slate-200">
                             <div className="bg-blue-600 w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-6 text-white shadow-lg"><Icons.Trophy /></div>
                             <h1 className="text-3xl font-black text-center text-slate-800 mb-8 tracking-tighter">Genoma SUS</h1>
-                            
                             <div className="space-y-3 mb-8 max-h-60 overflow-y-auto pr-2 hide-scrollbar">
                                 {userList.map(user => (
                                     <button key={user} onClick={() => handleLogin(user)} className="w-full flex items-center gap-4 p-4 rounded-2xl bg-slate-50 hover:bg-blue-50 border-2 border-transparent hover:border-blue-200 transition-all group">
@@ -168,16 +181,15 @@
                                     </button>
                                 ))}
                             </div>
-
                             {!showNewUserForm ? (
                                 <button onClick={() => setShowNewUserForm(true)} className="w-full py-4 rounded-2xl border-2 border-dashed border-slate-300 text-slate-500 font-bold hover:bg-slate-50 flex items-center justify-center gap-2 transition-all">
-                                    <Icons.Plus /> Criar novo perfil
+                                    <Icons.Plus /> Novo Aluno
                                 </button>
                             ) : (
                                 <form onSubmit={(e) => { e.preventDefault(); handleLogin(loginInput); }} className="animate-in slide-in-from-bottom-2">
-                                    <input autoFocus className="w-full p-4 rounded-2xl bg-slate-50 border-2 border-blue-500 outline-none font-bold text-lg mb-3" placeholder="Digite seu nome..." value={loginInput} onChange={e => setLoginInput(e.target.value)} />
+                                    <input autoFocus className="w-full p-4 rounded-2xl bg-slate-50 border-2 border-blue-500 outline-none font-bold text-lg mb-3" placeholder="Seu nome..." value={loginInput} onChange={e => setLoginInput(e.target.value)} />
                                     <div className="flex gap-2">
-                                        <button type="submit" className="flex-1 bg-blue-600 text-white font-black py-4 rounded-2xl shadow-lg">Entrar</button>
+                                        <button type="submit" className="flex-1 bg-blue-600 text-white font-black py-4 rounded-2xl shadow-lg">Criar</button>
                                         <button type="button" onClick={() => setShowNewUserForm(false)} className="px-6 bg-slate-200 text-slate-600 font-bold rounded-2xl">X</button>
                                     </div>
                                 </form>
@@ -192,7 +204,8 @@
                     <div className="flex justify-between items-center mb-8">
                         <div className="flex items-center gap-3">
                             <div className="bg-slate-900 p-2.5 rounded-xl text-white shadow-lg"><Icons.Trophy /></div>
-                            <h1 className="text-2xl font-black text-slate-900 tracking-tighter uppercase">Painel de Estudos</h1>
+                            <h1 className="text-2xl font-black text-slate-900 tracking-tight">GENOMA SUS</h1>
+                            {isLoadingCloud && <span className="animate-pulse text-blue-600 text-[10px] font-black uppercase">Sincronizando Nuvem...</span>}
                         </div>
                         <div className="flex items-center gap-3 bg-white px-4 py-2 rounded-full border border-slate-200 shadow-sm">
                             <span className="text-sm font-bold text-slate-600 capitalize">Aluno: <span className="text-blue-600">{currentUser}</span></span>
@@ -206,7 +219,7 @@
                                 <div className="p-3 bg-red-500 text-white rounded-xl shadow-lg"><Icons.BookX /></div>
                                 <div className="text-left">
                                     <h2 className="text-xl font-black text-slate-800">Caderno de Erros</h2>
-                                    <p className="text-slate-500 font-medium group-hover:text-red-700">{errorQuestions.length} questões para revisar</p>
+                                    <p className="text-slate-500 font-medium group-hover:text-red-700">{errorQuestions.length} revisões pendentes</p>
                                 </div>
                             </div>
                         </button>
@@ -215,7 +228,7 @@
                                 <div className="p-3 bg-blue-500 text-white rounded-xl shadow-lg"><Icons.BarChart /></div>
                                 <div className="text-left">
                                     <h2 className="text-xl font-black text-slate-800">Estatísticas</h2>
-                                    <p className="text-slate-500 font-medium group-hover:text-blue-700">Ver progresso na nuvem</p>
+                                    <p className="text-slate-500 font-medium group-hover:text-blue-700">Progresso Sincronizado</p>
                                 </div>
                             </div>
                         </button>
@@ -225,10 +238,14 @@
                         {Object.entries(editalSyllabus).map(([area, subjects]) => {
                             const theme = getTheme(area);
                             const areaQs = activeBank.filter(q => q.area === area);
+                            const ansCount = areaQs.filter(q => history[q.id]?.length > 0).length;
                             return (
                                 <div key={area} className="bg-white rounded-[2rem] border border-slate-200 shadow-sm overflow-hidden flex flex-col">
                                     <div className={`${theme.bg} p-6 border-b ${theme.border}`}>
-                                        <h2 className={`text-xl font-black ${theme.text} uppercase tracking-tighter mb-4`}>{area}</h2>
+                                        <div className="flex justify-between items-center mb-4">
+                                            <h2 className={`text-xl font-black ${theme.text} uppercase tracking-tighter`}>{area}</h2>
+                                            <span className="bg-white px-3 py-1 rounded-full text-xs font-bold shadow-sm">{ansCount}/{areaQs.length}</span>
+                                        </div>
                                         <button onClick={() => startQuiz(areaQs, area, 'study')} className={`w-full py-3 ${theme.highlight} text-white font-bold rounded-xl shadow-md flex items-center justify-center gap-2 hover:opacity-90 transition-all`}>
                                             <Icons.Play /> Iniciar Categoria
                                         </button>
@@ -236,10 +253,12 @@
                                     <div className="p-2">
                                         {subjects.map(subj => {
                                             const subQs = activeBank.filter(q => q.subject === subj && q.area === area);
+                                            const subAns = subQs.filter(q => history[q.id]?.length > 0).length;
                                             return (
                                                 <div key={subj} className="flex items-center justify-between p-4 hover:bg-slate-50 rounded-2xl transition group">
                                                     <div className="flex-1 pr-4">
-                                                        <h4 className="text-sm font-bold text-slate-700 leading-tight">{subj}</h4>
+                                                        <h4 className="text-sm font-bold text-slate-700 leading-tight mb-1">{subj}</h4>
+                                                        <span className="text-[10px] font-black text-slate-400 uppercase">{subAns}/{subQs.length} resolvidos</span>
                                                     </div>
                                                     <button onClick={() => startQuiz(subQs, subj, 'study')} className="shrink-0 bg-slate-900 text-white px-4 py-2 rounded-xl text-xs font-bold opacity-0 group-hover:opacity-100 transition-opacity">Estudar</button>
                                                 </div>
@@ -258,12 +277,11 @@
                 const theme = getTheme(currentQ?.area);
                 const sessionAns = sessionAnswers[currentQ?.id];
                 if (!currentQ) return null;
-
                 return (
                     <div className="max-w-4xl mx-auto p-4 md:p-10 animate-in slide-in-from-right">
                         <header className="flex justify-between items-center mb-8">
                             <button onClick={() => setScreen('dashboard')} className="text-slate-400 font-bold hover:text-slate-800">← Parar</button>
-                            <div className="bg-white px-4 py-1 rounded-full border shadow-sm font-mono font-bold text-slate-500">{idx + 1} / {quizConfig.questions.length}</div>
+                            <div className="bg-white px-4 py-1 rounded-full border shadow-sm font-mono font-bold text-slate-500">{idx + 1}/{quizConfig.questions.length}</div>
                         </header>
                         <div className="bg-white rounded-[3rem] border border-slate-200 shadow-xl overflow-hidden">
                             <div className="h-2 w-full bg-slate-100"><div className={`h-full ${theme.bar} transition-all duration-500`} style={{width:`${((idx+1)/quizConfig.questions.length)*100}%`}}></div></div>
@@ -279,22 +297,14 @@
                                         else if (isRight) bClass += "border-green-500 bg-green-50";
                                         else if (isSel) bClass += "border-red-500 bg-red-50";
                                         else bClass += "border-slate-50 opacity-40";
-                                        
-                                        return (
-                                            <button key={k} onClick={() => handleAnswer(currentQ.id, k)} className={bClass}>
-                                                <span className="font-black text-blue-600">{k}</span>
-                                                <span className="font-medium text-slate-700">{v}</span>
-                                            </button>
-                                        );
+                                        return <button key={k} onClick={() => handleAnswer(currentQ.id, k)} className={bClass}><span className="font-black text-blue-600">{k}</span><span className="font-medium text-slate-700">{v}</span></button>;
                                     })}
                                 </div>
                             </div>
                             {sessionAns && (
                                 <div className={`p-8 md:p-12 border-t-2 ${sessionAns === currentQ.correct ? 'bg-green-50/50' : 'bg-red-50/50'}`}>
-                                    <div className="bg-white p-6 rounded-3xl shadow-sm border border-slate-100 mb-8">
-                                        <p className="text-slate-600 leading-relaxed font-medium">{currentQ.explanation}</p>
-                                    </div>
-                                    <button onClick={() => { if(idx < quizConfig.questions.length - 1) setIdx(i=>i+1); else setScreen('dashboard'); }} className="w-full py-5 bg-slate-900 text-white font-black rounded-2xl shadow-lg hover:bg-slate-800 transition-all">PRÓXIMA QUESTÃO</button>
+                                    <div className="bg-white p-6 rounded-3xl shadow-sm border border-slate-100 mb-8"><p className="text-slate-600 leading-relaxed font-medium">{currentQ.explanation}</p></div>
+                                    <button onClick={() => { if(idx < quizConfig.questions.length - 1) setIdx(i=>i+1); else setScreen('dashboard'); }} className="w-full mt-8 py-5 bg-slate-900 text-white font-black rounded-2xl shadow-lg hover:bg-slate-800 transition-all">PRÓXIMA QUESTÃO</button>
                                 </div>
                             )}
                         </div>
@@ -309,9 +319,8 @@
                         <h2 className="text-3xl font-black text-slate-800 mb-10">Desempenho de <span className="capitalize text-blue-600">{currentUser}</span></h2>
                         <div className="bg-blue-50 p-8 rounded-[2rem] border border-blue-100">
                             <div className="text-6xl font-black text-blue-600 mb-2">{Object.keys(history).length}</div>
-                            <div className="text-sm font-bold text-blue-800 uppercase tracking-widest">Questões Respondidas</div>
+                            <div className="text-sm font-bold text-blue-800 uppercase tracking-widest">Questões Registradas na Nuvem</div>
                         </div>
-                        <p className="mt-8 text-slate-500 font-medium italic">Seu progresso está sendo enviado em tempo real para a planilha do Google.</p>
                     </div>
                 </div>
             );
@@ -325,8 +334,8 @@
                         <div className="max-w-4xl mx-auto p-8 animate-in slide-in-from-bottom-4">
                             <button onClick={() => setScreen('dashboard')} className="mb-8 font-bold text-slate-400 hover:text-slate-900">← Voltar</button>
                             <div className="bg-white p-10 rounded-[3rem] shadow-xl border border-slate-200">
-                                <h2 className="text-3xl font-black text-slate-800 mb-8">Caderno de Erros</h2>
-                                <button disabled={errorQuestions.length === 0} onClick={() => startQuiz(errorQuestions, "Revisão", "study")} className="w-full py-5 bg-red-600 text-white font-black rounded-2xl shadow-xl hover:bg-red-700 transition-all disabled:opacity-20">REVISAR ERROS ({errorQuestions.length})</button>
+                                <h2 className="text-3xl font-black text-slate-800 mb-8 uppercase tracking-tighter">Revisão na Nuvem</h2>
+                                <button disabled={errorQuestions.length === 0} onClick={() => startQuiz(errorQuestions, "Revisão", "study")} className="w-full py-5 bg-red-600 text-white font-black rounded-2xl shadow-xl hover:bg-red-700 transition-all">REVISAR ERROS ({errorQuestions.length})</button>
                             </div>
                         </div>
                     )}
