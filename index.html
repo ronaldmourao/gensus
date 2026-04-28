@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Genoma SUS - Com IA Gemini</title>
+    <title>Genoma SUS - Cloud Sync</title>
     <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
     <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
@@ -18,132 +18,6 @@
     <script type="text/babel">
         const { useState, useMemo, useEffect } = React;
 
-        // --- CONFIGURAÇÃO GEMINI IA ---
-        const GEMINI_CONFIG = {
-            apiKey: "AIzaSyDC8ULu_R6NB31qaHwbd_1p4zO3SxBelUs", // ⚠️ SUBSTITUA por sua nova key de ai.google.dev
-            baseURL: "https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent",
-            dailyLimit: 1500
-        };
-
-        // Controle de uso diário da IA
-        const AIUsage = {
-            getToday: () => {
-                const today = new Date().toDateString();
-                const stored = localStorage.getItem('gemini_usage_' + today);
-                return stored ? JSON.parse(stored) : { count: 0, date: today };
-            },
-            
-            increment: () => {
-                const usage = AIUsage.getToday();
-                usage.count++;
-                localStorage.setItem('gemini_usage_' + usage.date, JSON.stringify(usage));
-            },
-            
-            canUse: () => AIUsage.getToday().count < GEMINI_CONFIG.dailyLimit,
-            getRemainingUses: () => GEMINI_CONFIG.dailyLimit - AIUsage.getToday().count
-        };
-
-        // Função principal para chamar Gemini
-        const callGeminiAI = async (prompt) => {
-            if (!AIUsage.canUse()) return null;
-            
-            try {
-                const response = await fetch(
-                    `${GEMINI_CONFIG.baseURL}?key=${GEMINI_CONFIG.apiKey}`,
-                    {
-                        method: "POST",
-                        headers: { "Content-Type": "application/json" },
-                        body: JSON.stringify({
-                            contents: [{ parts: [{ text: prompt }] }],
-                            generationConfig: {
-                                maxOutputTokens: 200,
-                                temperature: 0.2,
-                                topP: 0.8
-                            }
-                        })
-                    }
-                );
-
-                if (!response.ok) throw new Error(`Gemini API Error: ${response.status}`);
-                
-                const data = await response.json();
-                if (data.candidates?.[0]?.content?.parts?.[0]?.text) {
-                    AIUsage.increment();
-                    return data.candidates[0].content.parts[0].text;
-                }
-                return null;
-            } catch (error) {
-                console.error("Gemini Error:", error);
-                return null;
-            }
-        };
-
-        // Explicação IA personalizada
-        const getAIExplanation = async (question, userAnswer) => {
-            const prompt = `Você é professor especialista em concursos Genoma SUS.
-
-QUESTÃO ERRADA: "${question.text}"
-ÁREA: ${question.area} - ${question.subject}
-CANDIDATO MARCOU: ${userAnswer}
-RESPOSTA CORRETA: ${question.correct}
-
-Explique de forma DIDÁTICA por que errou:
-- Máximo 150 palavras
-- Linguagem clara
-- Foque no conceito confundido
-- Seja encorajador mas preciso
-
-Resposta:`;
-
-            const aiResponse = await callGeminiAI(prompt);
-            if (aiResponse) return aiResponse.trim();
-            
-            // Fallback
-            return getFallbackExplanation(question, userAnswer);
-        };
-
-        // Dica inteligente
-        const getAIHint = async (question) => {
-            const prompt = `Dê uma DICA (sem revelar resposta) para esta questão Genoma SUS:
-
-"${question.text}"
-
-A dica deve:
-- Ajudar sem entregar a resposta
-- Focar no conceito principal  
-- Máximo 80 palavras
-- Área: ${question.area}
-
-Dica:`;
-
-            return await callGeminiAI(prompt);
-        };
-
-        // Resumo do conceito
-        const getConceptSummary = async (subject, area) => {
-            const prompt = `Resumo executivo sobre "${subject}" para concurso ${area} - Genoma SUS:
-
-- Pontos-chave que caem na prova
-- Conceitos que confundem
-- Dica memorização
-- Máximo 180 palavras
-
-Resumo:`;
-
-            return await callGeminiAI(prompt);
-        };
-
-        // Fallbacks quando IA não disponível
-        const getFallbackExplanation = (question, userAnswer) => {
-            const fallbacks = {
-                "Bioinformática e análise genômica": "Pipeline GATK é usado APÓS sequenciamento NGS para identificar variantes. Não confundir com técnicas de amplificação (PCR).",
-                "Tecnologias laboratoriais em genômica (sequenciamento de nova geração - NGS, extração de DNA genômico, controle de qualidade, preparo de amostras)": "Foque nos valores: A260/280 ~1.8 (proteínas) e A260/230 ~2.0 (sais). Memorize estes números de referência!",
-                "Boas Práticas de Laboratório (BPL), biossegurança e controle de qualidade": "NB-2 é padrão para amostras humanas. CSB Classe II protege operador, produto e ambiente."
-            };
-            
-            return fallbacks[question.subject] || "Revise os conceitos fundamentais deste assunto no material de estudo.";
-        };
-
         // --- CONEXÃO COM SUA PLANILHA ---
         const CSV_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vSunO3dVP4m3_zA1WIBxLQCMDvwPD2gqJTX0DbyYCvR21DnDO2kNeJSLKgmOaIfRXWKFo5asfzR6SM5/pub?output=csv";
 
@@ -154,8 +28,7 @@ Resumo:`;
             Plus: () => <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>,
             Play: () => <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polygon points="5 3 19 12 5 21 5 3"/></svg>,
             BarChart: () => <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="12" y1="20" x2="12" y2="10"/><line x1="18" y1="20" x2="18" y2="4"/><line x1="6" y1="20" x2="6" y2="16"/></svg>,
-            BookX: () => <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/><line x1="9" y1="8" x2="15" y2="14"/><line x1="15" y1="8" x2="9" y2="14"/></svg>,
-            Brain: () => <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 2a3 3 0 0 0-3 3 3 3 0 0 0-3 3v6a3 3 0 0 0 3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0 3-3V8a3 3 0 0 0-3-3 3 3 0 0 0-3-3Z"/><path d="M12 12v4"/></svg>
+            BookX: () => <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/><line x1="9" y1="8" x2="15" y2="14"/><line x1="15" y1="8" x2="9" y2="14"/></svg>
         };
 
         const themeColors = {
@@ -181,114 +54,6 @@ Resumo:`;
                 "Genética de populações",
                 "Vocabulários controlados, ontologias e técnicas de extração, transformation e carga de dados (ETL)"
             ]
-        };
-
-        // --- COMPONENTES IA ---
-        const AIExplanationButton = ({ question, userAnswer }) => {
-            const [explanation, setExplanation] = useState("");
-            const [loading, setLoading] = useState(false);
-            
-            const handleExplanation = async () => {
-                setLoading(true);
-                const result = await getAIExplanation(question, userAnswer);
-                setExplanation(result || "IA indisponível. Consulte a explicação oficial acima.");
-                setLoading(false);
-            };
-            
-            return (
-                <div>
-                    <button 
-                        onClick={handleExplanation}
-                        disabled={loading || !AIUsage.canUse()}
-                        className={`w-full py-3 font-bold rounded-xl transition flex items-center justify-center gap-2 ${
-                            AIUsage.canUse() 
-                                ? "bg-purple-100 text-purple-700 border border-purple-200 hover:bg-purple-200" 
-                                : "bg-gray-100 text-gray-400 cursor-not-allowed"
-                        }`}
-                    >
-                        {loading ? (
-                            <>🤖 Gemini analisando...</>
-                        ) : (
-                            <><Icons.Brain /> Por que errei? (IA)</>
-                        )}
-                    </button>
-                    
-                    {explanation && (
-                        <div className="mt-3 p-4 bg-purple-50 rounded-xl border border-purple-100 animate-in slide-in-from-bottom-2">
-                            <div className="text-sm font-bold text-purple-900 mb-2 flex items-center gap-2">
-                                🤖 Professor IA Personalizado:
-                            </div>
-                            <div className="text-sm text-purple-800 leading-relaxed whitespace-pre-line">
-                                {explanation}
-                            </div>
-                        </div>
-                    )}
-                </div>
-            );
-        };
-
-        const AIHintButton = ({ question }) => {
-            const [hint, setHint] = useState("");
-            const [loading, setLoading] = useState(false);
-            
-            const handleHint = async () => {
-                setLoading(true);
-                const result = await getAIHint(question);
-                setHint(result || "Dica: Revise os conceitos principais deste assunto.");
-                setLoading(false);
-            };
-            
-            return (
-                <div>
-                    <button 
-                        onClick={handleHint}
-                        disabled={loading || !AIUsage.canUse()}
-                        className="w-full py-3 bg-yellow-100 text-yellow-700 font-bold rounded-xl border border-yellow-200 hover:bg-yellow-200 transition disabled:bg-gray-100 disabled:text-gray-400 flex items-center justify-center gap-2"
-                    >
-                        {loading ? "💡 Pensando..." : "💡 Dica Inteligente"}
-                    </button>
-                    
-                    {hint && (
-                        <div className="mt-3 p-4 bg-yellow-50 rounded-xl border border-yellow-100 animate-in slide-in-from-bottom-2">
-                            <div className="text-sm font-bold text-yellow-900 mb-1">💡 Dica IA:</div>
-                            <div className="text-sm text-yellow-800">{hint}</div>
-                        </div>
-                    )}
-                </div>
-            );
-        };
-
-        const AIConceptButton = ({ question }) => {
-            const [summary, setSummary] = useState("");
-            const [loading, setLoading] = useState(false);
-            
-            const handleSummary = async () => {
-                setLoading(true);
-                const result = await getConceptSummary(question.subject, question.area);
-                setSummary(result || "Resumo não disponível. Consulte o material de estudo.");
-                setLoading(false);
-            };
-            
-            return (
-                <div>
-                    <button 
-                        onClick={handleSummary}
-                        disabled={loading || !AIUsage.canUse()}
-                        className="w-full py-2 bg-blue-100 text-blue-700 font-bold rounded-xl text-sm border border-blue-200 hover:bg-blue-200 transition disabled:bg-gray-100 disabled:text-gray-400"
-                    >
-                        {loading ? "📚 Resumindo..." : "📚 Resumir conceito"}
-                    </button>
-                    
-                    {summary && (
-                        <div className="mt-3 p-4 bg-blue-50 rounded-xl border border-blue-100 animate-in slide-in-from-bottom-2">
-                            <div className="text-sm font-bold text-blue-900 mb-2">📚 Resumo do Conceito:</div>
-                            <div className="text-sm text-blue-800 leading-relaxed whitespace-pre-line">
-                                {summary}
-                            </div>
-                        </div>
-                    )}
-                </div>
-            );
         };
 
         const App = () => {
@@ -423,8 +188,7 @@ Resumo:`;
                     <div className="min-h-screen flex items-center justify-center bg-slate-100 p-6">
                         <div className="bg-white p-10 rounded-[3rem] shadow-2xl w-full max-w-md border border-slate-200">
                             <div className="bg-blue-600 w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-6 text-white shadow-lg"><Icons.Trophy /></div>
-                            <h1 className="text-3xl font-black text-center text-slate-800 mb-2 tracking-tighter">Genoma SUS</h1>
-                            <p className="text-center text-sm text-purple-600 font-bold mb-8">🤖 Com IA Gemini</p>
+                            <h1 className="text-3xl font-black text-center text-slate-800 mb-8 tracking-tighter">Genoma SUS</h1>
                             <div className="space-y-3 mb-8 max-h-60 overflow-y-auto pr-2 hide-scrollbar">
                                 {userList.map(user => (
                                     <button key={user} onClick={() => handleLogin(user)} className="w-full flex items-center gap-4 p-4 rounded-2xl bg-slate-50 hover:bg-blue-50 border-2 border-transparent hover:border-blue-200 transition-all group">
@@ -456,34 +220,12 @@ Resumo:`;
                     <div className="flex justify-between items-center mb-8">
                         <div className="flex items-center gap-3">
                             <div className="bg-slate-900 p-2.5 rounded-xl text-white shadow-lg"><Icons.Trophy /></div>
-                            <div>
-                                <h1 className="text-2xl font-black text-slate-900 tracking-tight">GENOMA SUS</h1>
-                                <div className="flex items-center gap-2">
-                                    <span className="text-xs text-purple-600 font-bold">🤖 IA Gemini</span>
-                                    {isLoadingCloud && <span className="animate-pulse text-blue-600 text-[10px] font-black uppercase tracking-widest">Cloud Sync...</span>}
-                                </div>
-                            </div>
+                            <h1 className="text-2xl font-black text-slate-900 tracking-tight">GENOMA SUS</h1>
+                            {isLoadingCloud && <span className="animate-pulse text-blue-600 text-[10px] font-black uppercase tracking-widest">Cloud Sync...</span>}
                         </div>
                         <div className="flex items-center gap-3 bg-white px-4 py-2 rounded-full border border-slate-200 shadow-sm">
                             <span className="text-sm font-bold text-slate-600 capitalize">Aluno: <span className="text-blue-600">{currentUser}</span></span>
                             <button onClick={handleLogout} className="text-slate-300 hover:text-red-500 transition-colors"><Icons.LogOut /></button>
-                        </div>
-                    </div>
-
-                    {/* Status IA */}
-                    <div className="bg-gradient-to-r from-purple-50 to-blue-50 border border-purple-200 rounded-2xl p-4 mb-8">
-                        <div className="flex items-center justify-between">
-                            <div className="flex items-center gap-3">
-                                <div className="bg-purple-500 p-2 rounded-xl text-white"><Icons.Brain /></div>
-                                <div>
-                                    <h3 className="font-bold text-purple-900">IA Gemini Ativa</h3>
-                                    <p className="text-xs text-purple-700">Explicações personalizadas para seus erros</p>
-                                </div>
-                            </div>
-                            <div className="text-right">
-                                <div className="text-2xl font-black text-purple-600">{AIUsage.getRemainingUses()}</div>
-                                <div className="text-[10px] font-bold text-purple-700 uppercase">Usos hoje</div>
-                            </div>
                         </div>
                     </div>
 
@@ -550,10 +292,7 @@ Resumo:`;
                 const currentQ = quizConfig.questions[idx];
                 const theme = getTheme(currentQ?.area);
                 const sessionAns = sessionAnswers[currentQ?.id];
-                const isCorrect = sessionAns === currentQ?.correct;
-                
                 if (!currentQ) return null;
-                
                 return (
                     <div className="max-w-4xl mx-auto p-4 md:p-10 animate-in slide-in-from-right">
                         <header className="flex justify-between items-center mb-8">
@@ -574,45 +313,14 @@ Resumo:`;
                                         else if (isRight) bClass += "border-green-500 bg-green-50";
                                         else if (isSel) bClass += "border-red-500 bg-red-50";
                                         else bClass += "border-slate-50 opacity-40";
-                                        return <button key={k} onClick={() => handleAnswer(currentQ.id, k)} disabled={!!sessionAns} className={bClass}><span className="font-black text-blue-600">{k}</span><span className="font-medium text-slate-700">{v}</span></button>;
+                                        return <button key={k} onClick={() => handleAnswer(currentQ.id, k)} className={bClass}><span className="font-black text-blue-600">{k}</span><span className="font-medium text-slate-700">{v}</span></button>;
                                     })}
                                 </div>
                             </div>
                             {sessionAns && (
                                 <div className={`p-8 md:p-12 border-t-2 ${sessionAns === currentQ.correct ? 'bg-green-50/50' : 'bg-red-50/50'}`}>
-                                    {/* Explicação oficial */}
-                                    <div className="bg-white p-6 rounded-3xl shadow-sm border border-slate-100 mb-8">
-                                        <h4 className="font-bold text-slate-700 mb-3">📖 Explicação Oficial:</h4>
-                                        <p className="text-slate-600 leading-relaxed font-medium">{currentQ.explanation}</p>
-                                    </div>
-
-                                    {/* Funcionalidades IA */}
-                                    <div className="bg-gradient-to-r from-purple-50 to-blue-50 p-6 rounded-3xl border border-purple-100 mb-8">
-                                        <div className="text-xs text-purple-600 text-center mb-4 flex items-center justify-center gap-2">
-                                            <Icons.Brain />
-                                            <span className="font-bold">IA Gemini disponível: {AIUsage.getRemainingUses()} usos hoje</span>
-                                        </div>
-                                        
-                                        <div className="space-y-3">
-                                            {/* Dica sempre disponível */}
-                                            <AIHintButton question={currentQ} />
-                                            
-                                            {/* Explicação personalizada só se errou */}
-                                            {!isCorrect && (
-                                                <AIExplanationButton 
-                                                    question={currentQ} 
-                                                    userAnswer={sessionAns} 
-                                                />
-                                            )}
-                                            
-                                            {/* Resumo do conceito */}
-                                            <AIConceptButton question={currentQ} />
-                                        </div>
-                                    </div>
-
-                                    <button onClick={() => { if(idx < quizConfig.questions.length - 1) setIdx(i=>i+1); else setScreen('dashboard'); }} className="w-full mt-8 py-5 bg-slate-900 text-white font-black rounded-2xl shadow-lg hover:bg-slate-800 transition-all">
-                                        {idx < quizConfig.questions.length - 1 ? 'PRÓXIMA QUESTÃO' : 'FINALIZAR'}
-                                    </button>
+                                    <div className="bg-white p-6 rounded-3xl shadow-sm border border-slate-100 mb-8"><p className="text-slate-600 leading-relaxed font-medium">{currentQ.explanation}</p></div>
+                                    <button onClick={() => { if(idx < quizConfig.questions.length - 1) setIdx(i=>i+1); else setScreen('dashboard'); }} className="w-full mt-8 py-5 bg-slate-900 text-white font-black rounded-2xl shadow-lg hover:bg-slate-800 transition-all">PRÓXIMA QUESTÃO</button>
                                 </div>
                             )}
                         </div>
@@ -626,15 +334,9 @@ Resumo:`;
                     
                     <div className="bg-white p-10 rounded-[3rem] shadow-xl border border-slate-200 mb-10 text-center">
                         <h2 className="text-3xl font-black text-slate-800 mb-6">Desempenho de <span className="capitalize text-blue-600">{currentUser}</span></h2>
-                        <div className="flex justify-center gap-8">
-                            <div className="bg-blue-50 p-8 rounded-[2rem] border border-blue-100 inline-block min-w-[200px]">
-                                <div className="text-4xl font-black text-blue-600 mb-2">{Object.keys(history).length}</div>
-                                <div className="text-sm font-bold text-blue-800 uppercase tracking-widest">Questões na Nuvem</div>
-                            </div>
-                            <div className="bg-purple-50 p-8 rounded-[2rem] border border-purple-100 inline-block min-w-[200px]">
-                                <div className="text-4xl font-black text-purple-600 mb-2">{AIUsage.getRemainingUses()}</div>
-                                <div className="text-sm font-bold text-purple-800 uppercase tracking-widest">IA Disponível Hoje</div>
-                            </div>
+                        <div className="bg-blue-50 p-8 rounded-[2rem] border border-blue-100 inline-block min-w-[250px]">
+                            <div className="text-6xl font-black text-blue-600 mb-2">{Object.keys(history).length}</div>
+                            <div className="text-sm font-bold text-blue-800 uppercase tracking-widest">Questões na Nuvem</div>
                         </div>
                     </div>
 
@@ -686,7 +388,7 @@ Resumo:`;
                             <button onClick={() => setScreen('dashboard')} className="mb-8 font-bold text-slate-400 hover:text-slate-900">← Voltar</button>
                             <div className="bg-white p-10 rounded-[3rem] shadow-xl border border-slate-200">
                                 <h2 className="text-3xl font-black text-slate-800 mb-8 uppercase tracking-tighter">Revisão na Nuvem</h2>
-                                <button disabled={errorQuestions.length === 0} onClick={() => startQuiz(errorQuestions, "Revisão", "study")} className="w-full py-5 bg-red-600 text-white font-black rounded-2xl shadow-xl hover:bg-red-700 transition-all disabled:bg-gray-300">REVISAR ERROS ({errorQuestions.length})</button>
+                                <button disabled={errorQuestions.length === 0} onClick={() => startQuiz(errorQuestions, "Revisão", "study")} className="w-full py-5 bg-red-600 text-white font-black rounded-2xl shadow-xl hover:bg-red-700 transition-all">REVISAR ERROS ({errorQuestions.length})</button>
                             </div>
                         </div>
                     )}
