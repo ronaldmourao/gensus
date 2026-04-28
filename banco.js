@@ -624,5 +624,258 @@ window.questionBank = [
     text: "A propriedade do código genético de ser 'universal' significa que:", 
     options: { A: "Cada organismo tem o seu próprio", B: "O mesmo conjunto de códons codifica os mesmos aminoácidos na grande maioria dos organismos, com algumas exceções notáveis em mitocôndrias", C: "Só eucariotos usam códons", D: "DNA = RNA", E: "Mesma proteína no mundo todo" }, 
     correct: "B", explanation: "Gabarito: Letra B. Um códon ATG num humano e num besouro produzirão rigorosamente o mesmo aminoácido metionina. A linguagem é literalmente universal."
-  }
+  },
+ { id: 1070, area: "Laboratório", subject: "Biologia, biologia molecular e genética", 
+    text: "O genoma mitocondrial (mtDNA) apresenta características únicas que devem ser consideradas no sequenciamento WGS. Assinale a afirmativa CORRETA sobre o mtDNA:", 
+    options: { A: "Apresenta baixa taxa de mutação devido ao eficiente sistema de reparo mitocondrial.", B: "É herança biparental na maioria das famílias.", C: "Pode apresentar heteroplasmia, onde células de um mesmo tecido possuem misturas de mitocôndrias com mtDNA mutado e selvagem, exigindo alta cobertura (depth) no sequenciamento para detecção precisa.", D: "Seus genes contêm grandes íntrons que requerem processamento complexo.", E: "Apresenta o mesmo código genético universal nuclear sem exceções." }, 
+    correct: "C", explanation: "Gabarito: C. A heteroplasmia (diferentes genomas mitocondriais na mesma célula) faz com que variantes mitocondriais apareçam em frações baixas (ex: 15% dos reads), exigindo coberturas altíssimas (>1000x) para não serem confundidas com erro da máquina." },
+  
+  { id: 1071, area: "Laboratório", subject: "Biologia, biologia molecular e genética", 
+    text: "Em farmacogenômica aplicada ao SUS, o gene CYP2D6 é altamente polimórfico. Uma das variantes mais difíceis de detectar por técnicas convencionais, mas que WGS pode mapear, é a presença de alelos de perda de função por deleção total do gene (ex: alelo *5). Esse tipo de variante é classicamente conhecido como:", 
+    options: { A: "Mutação de mudança de matriz (Frameshift)", B: "Variação de Número de Cópias (CNV)", C: "Polimorfismo de Nucleotídeo Único (SNP)", D: "Inversão paracêntrica", E: "Mutação sem sentido (Nonsense)" }, 
+    correct: "B", explanation: "Gabarito: B. A deleção do gene inteiro (ou duplicação, como nos alelos ultrarrápidos) caracteriza uma Copy Number Variation (CNV), alterando a dosagem do gene e, consequentemente, a metabolização de fármacos." },
+  
+  { id: 1072, area: "Laboratório", subject: "Biologia, biologia molecular e genética", 
+    text: "Mutações intrônicas profundas (deep intronic mutations) podem causar doenças graves porque:", 
+    options: { A: "Alteram a sequência de aminoácidos diretamente", B: "Criam sítios crípticos de splicing, levando à inclusão de pseudoéxons (fragmentos de íntron) no mRNA maduro e resultando em proteínas truncadas ou afuncionais", C: "Sempre deletam o promotor do gene", D: "Inativam o DNA mitocondrial", E: "Impedem a replicação do DNA na fase S" }, 
+    correct: "B", explanation: "Gabarito: B. Embora os íntrons não codifiquem proteínas, mutações neles podem 'enganar' o spliceossomo, fazendo-o costurar partes do íntron no RNA maduro (pseudoéxons)." },
+  
+  { id: 1073, area: "Laboratório", subject: "Biologia, biologia molecular e genética", 
+    text: "A penetrância incompleta é um conceito vital no aconselhamento genético populacional (Genomas SUS). Ela descreve a situação em que:", 
+    options: { A: "Um indivíduo carrega a variante patogênica, mas não manifesta o fenótipo (doença) clinicamente", B: "O gene só é expresso na fase embrionária", C: "A doença apresenta sintomas muito leves em todos os portadores", D: "Apenas homens são afetados pela mutação", E: "O gene sofre inativação apenas no cromossomo X" }, 
+    correct: "A", explanation: "Gabarito: A. Penetrância incompleta ocorre quando o genótipo da doença está presente, mas por razões genéticas ou ambientais o indivíduo não desenvolve a doença (ex: mutações BRCA1 não causam câncer em 100% das portadoras)." },
+  
+  { id: 1074, area: "Laboratório", subject: "Biologia, biologia molecular e genética", 
+    text: "Variantes de 'perda de função' (Loss-of-Function - LoF) são frequentemente associadas a doenças recessivas, mas podem causar doenças dominantes através do mecanismo de:", 
+    options: { A: "Epistasia", B: "Pleiotropia", C: "Haploinsuficiência, onde apenas 50% do produto proteico normal (do alelo selvagem) não é suficiente para manter a função celular normal", D: "Expressão bialélica forçada", E: "Supressão em cis" }, 
+    correct: "C", explanation: "Gabarito: C. Na haploinsuficiência, perder a cópia do pai ou da mãe (LoF) gera doença, pois a célula precisa de 100% da proteína para funcionar perfeitamente, tornando o traço dominante." },
+
+  // --- Tecnologias laboratoriais em genômica ---
+  { id: 1075, area: "Laboratório", subject: "Tecnologias laboratoriais em genômica (sequenciamento de nova geração - NGS, extração de DNA genômico, controle de qualidade, preparo de amostras)", 
+    text: "Um laboratório obteve baixo rendimento (yield) na preparação de bibliotecas NGS usando método PCR-Free. Uma possível causa é:", 
+    options: { A: "Uso de DNA inicial excessivamente quantificado por NanoDrop (superestimado), resultando em input real insuficiente, já que o PCR-Free não compensa a perda de moléculas com amplificação", B: "Uso de proteinase K durante a fragmentação", C: "Aumento da concentração de dNTPs", D: "Adição excessiva de PhiX", E: "Tempo de incubação longo demais na etapa de A-tailing" }, 
+    correct: "A", explanation: "Gabarito: A. O PCR-Free exige quantidades massivas e precisas de DNA (medidas por fluorimetria - Qubit). Se você usa NanoDrop, ele superestima a quantidade, você coloca menos DNA do que deveria, e sem a PCR para multiplicar a biblioteca, não sobra material para sequenciar." },
+  
+  { id: 1076, area: "Laboratório", subject: "Tecnologias laboratoriais em genômica (sequenciamento de nova geração - NGS, extração de DNA genômico, controle de qualidade, preparo de amostras)", 
+    text: "Ao utilizar DNA extraído de saliva no Genomas SUS, um problema comum no WGS é:", 
+    options: { A: "A saliva não contém DNA humano", B: "A presença massiva de DNA bacteriano (microbiota oral), que consome parte dos reads do sequenciamento, reduzindo a cobertura efetiva do genoma humano alvo", C: "As enzimas salivares destroem a flow cell do sequenciador Illumina", D: "A extração de saliva impossibilita a detecção de SNPs", E: "O DNA de saliva é invariavelmente convertido em RNA" }, 
+    correct: "B", explanation: "Gabarito: B. Até 50% do DNA extraído de saliva pode vir de bactérias da boca. Isso significa que você pagou para sequenciar o genoma bacteriano e perdeu dados valiosos do paciente." },
+  
+  { id: 1077, area: "Laboratório", subject: "Tecnologias laboratoriais em genômica (sequenciamento de nova geração - NGS, extração de DNA genômico, controle de qualidade, preparo de amostras)", 
+    text: "Sobre as tecnologias de captura para Exoma Clínico (WES), é OBRIGATÓRIO monitorar a métrica de:", 
+    options: { A: "Tamanho dos telômeros", B: "On-target rate (proporção de reads mapeados nas regiões exônicas capturadas), pois baixos valores indicam falha na etapa de hibridização/lavagem, desperdiçando o sequenciamento", C: "Sequenciamento de RNA mitocondrial", D: "Rendimento da extração por precipitação em etanol", E: "Tamanho da flow cell vazia" }, 
+    correct: "B", explanation: "Gabarito: B. Se a captura falhar (sondas lavadas incorretamente), o sequenciador lerá o genoma inteiro (off-target) em vez de focar apenas nos éxons (on-target), reduzindo drasticamente a cobertura." },
+  
+  { id: 1078, area: "Laboratório", subject: "Tecnologias laboratoriais em genômica (sequenciamento de nova geração - NGS, extração de DNA genômico, controle de qualidade, preparo de amostras)", 
+    text: "Na extração automatizada de ácidos nucleicos por partículas magnéticas, o papel do etanol nas etapas de lavagem (Wash) é:", 
+    options: { A: "Lisar a membrana celular", B: "Destruir as DNases", C: "Manter o DNA precipitado e ligado à superfície de sílica das beads, enquanto dissolve e remove os sais caotrópicos e proteínas", D: "Eluir o DNA para fora das beads", E: "Neutralizar o pH da solução" }, 
+    correct: "C", explanation: "Gabarito: C. Em altas concentrações de álcool, o DNA permanece insolúvel e grudado na bead magnética, permitindo que a água suja (cheia de sais da lise) seja descartada." },
+  
+  { id: 1079, area: "Laboratório", subject: "Tecnologias laboratoriais em genômica (sequenciamento de nova geração - NGS, extração de DNA genômico, controle de qualidade, preparo de amostras)", 
+    text: "O 'index hopping' é mitigado nas plataformas de alta escala da Illumina (como o NovaSeq) pelo uso de:", 
+    options: { A: "Unique Dual Indexes (UDI), onde ambos os adaptadores p5 e p7 recebem barcodes exclusivos, permitindo que reads com índices espúrios trocados sejam filtrados", B: "Aumento da concentração de primers na PCR", C: "Uso de índices simples (Single Index) extremamente longos", D: "Sequenciamento Single-End", E: "Aumento do tempo de sonicação" }, 
+    correct: "A", explanation: "Gabarito: A. Plataformas com patterned flow cells têm problema de 'pulo de índice' entre amostras. O UDI funciona como uma senha e contra-senha: se um índice pular, as senhas não vão bater e o algoritmo joga o read fora." },
+
+  { id: 1080, area: "Laboratório", subject: "Tecnologias laboratoriais em genômica (sequenciamento de nova geração - NGS, extração de DNA genômico, controle de qualidade, preparo de amostras)", 
+    text: "A formação de 'chimeras' (fragmentos quiméricos) durante o preparo de bibliotecas é agravada por:", 
+    options: { A: "Falta de MgCl2", B: "Excesso de ciclos de PCR, onde o DNA parcialmente estendido atua como primer em outra fita não relacionada (template switching), fundindo sequências artificiais", C: "Falta de dNTPs", D: "Sonicação em baixa temperatura", E: "Uso de beads magnéticas velhas" }, 
+    correct: "B", explanation: "Gabarito: B. Se você faz muitos ciclos de PCR, os reagentes acabam e as fitas de DNA começam a se hibridizar entre si, criando um DNA frankenstein (quimera) que o computador vai ler como uma grande variante estrutural falsa." },
+
+  { id: 1081, area: "Laboratório", subject: "Tecnologias laboratoriais em genômica (sequenciamento de nova geração - NGS, extração de DNA genômico, controle de qualidade, preparo de amostras)", 
+    text: "No sequenciamento de Terceira Geração (ex: Oxford Nanopore), a principal característica técnica é:", 
+    options: { A: "Leitura óptica da emissão de fluorescência de fluoróforos", B: "Medição da alteração da corrente elétrica enquanto a fita única de DNA passa através de um poro proteico (nanoporo), gerando reads ultralongos", C: "Uso obrigatório de bridge amplification", D: "Leitura baseada na liberação de íons hidrogênio (pH)", E: "Requer fragmentação em peças de 150 pb" }, 
+    correct: "B", explanation: "Gabarito: B. O Nanopore não usa luz nem câmera. É um sequenciamento elétrico que permite ler moléculas nativas de mais de 100 mil bases de uma só vez." },
+
+  { id: 1082, area: "Laboratório", subject: "Tecnologias laboratoriais em genômica (sequenciamento de nova geração - NGS, extração de DNA genômico, controle de qualidade, preparo de amostras)", 
+    text: "A biblioteca NGS foi preparada com excesso crítico de adaptador (adapter dimers). Qual etapa técnica provavelmente falhou?", 
+    options: { A: "A lise celular", B: "A quantificação final no Qubit", C: "A limpeza por beads SPRI pós-ligação (clean-up), que deveria ter retido os adaptadores livres na solução e descartado", D: "A etapa de A-tailing", E: "O controle de temperatura ambiente" }, 
+    correct: "C", explanation: "Gabarito: C. A etapa de wash com SPRI serve exatamente para lavar as impurezas pequenas (como adaptadores não ligados). Falhar nessa lavagem leva adaptadores direto para a flow cell." },
+
+  { id: 1083, area: "Laboratório", subject: "Tecnologias laboratoriais em genômica (sequenciamento de nova geração - NGS, extração de DNA genômico, controle de qualidade, preparo de amostras)", 
+    text: "A validação clínica de uma variante encontrada por WGS muitas vezes requer confirmação ortogonal. O padrão-ouro histórico para confirmar uma mutação de ponto (SNV) é:", 
+    options: { A: "Repetir o WGS", B: "Eletroforese em gel de poliacrilamida", C: "Sequenciamento Sanger bidirecional focando na região de interesse", D: "Microarray de CGH", E: "Cariótipo com banda G" }, 
+    correct: "C", explanation: "Gabarito: C. Por seu altíssimo grau de certeza para pequenos fragmentos, o método de Sanger ainda é o árbitro final quando uma variante clínica gera dúvida no NGS." },
+
+  { id: 1084, area: "Laboratório", subject: "Tecnologias laboratoriais em genômica (sequenciamento de nova geração - NGS, extração de DNA genômico, controle de qualidade, preparo de amostras)", 
+    text: "No contexto do preparo de biblioteca, o que significa a etapa de 'End Repair'?", 
+    options: { A: "Adicionar promotores T7", B: "Preencher as extremidades irregulares (overhangs 5' ou 3') geradas pela fragmentação física usando polimerases, deixando o fragmento 'blunt' (cego)", C: "Digerir as extremidades do DNA com nucleases", D: "Adicionar bases fluorescentes", E: "Reparar dímeros de timina induzidos por UV" }, 
+    correct: "B", explanation: "Gabarito: B. Quando quebramos o DNA no ultrassom, ele parte de forma torta. O End-Repair atua como uma 'lixa' enzimática, deixando a ponta reta (blunt end) para o adaptador poder colar." },
+
+  { id: 1085, area: "Laboratório", subject: "Tecnologias laboratoriais em genômica (sequenciamento de nova geração - NGS, extração de DNA genômico, controle de qualidade, preparo de amostras)", 
+    text: "Para amostras de sangue cujo processamento e extração de DNA sofrerão atraso (transporte regional no SUS), o uso de tubos PAXgene ou estabilizadores equivalentes visa:", 
+    options: { A: "Evaporar a água do sangue", B: "Lisear instantaneamente as células e inativar nucleases/proteases, congelando o perfil molecular no momento da coleta", C: "Permitir o cultivo das células posteriormente", D: "Aumentar a atividade mitótica no transporte", E: "Substituir a necessidade de código de barras" }, 
+    correct: "B", explanation: "Gabarito: B. Esses tubos possuem um 'veneno' químico que lisea tudo e destrói as enzimas que degradariam o RNA/DNA, estabilizando a amostra à temperatura ambiente por semanas." },
+
+  { id: 1086, area: "Laboratório", subject: "Tecnologias laboratoriais em genômica (sequenciamento de nova geração - NGS, extração de DNA genômico, controle de qualidade, preparo de amostras)", 
+    text: "Ao avaliar a qualidade de RNA para sequenciamento (RNA-Seq), a métrica RIN (RNA Integrity Number) é fundamental. Um RIN = 9 indica:", 
+    options: { A: "RNA totalmente degradado", B: "Alta integridade do RNA, com bandas nítidas de 28S e 18S sem smear significativo de degradação basal", C: "Excesso de contaminação por DNA genômico", D: "Presença exclusiva de microRNAs", E: "Baixa concentração volumétrica" }, 
+    correct: "B", explanation: "Gabarito: B. A escala RIN vai de 1 (totalmente destruído) a 10 (intacto). O software do bioanalyzer calcula matematicamente a razão entre as ribossomais 28S e 18S para dar essa nota." },
+
+  { id: 1087, area: "Laboratório", subject: "Tecnologias laboratoriais em genômica (sequenciamento de nova geração - NGS, extração de DNA genômico, controle de qualidade, preparo de amostras)", 
+    text: "Em bibliotecas de WGS, o viés de composição de bases (GC-bias) é problemático porque:", 
+    options: { A: "Regiões extremas (muito ricas em GC ou AT) tendem a amplificar mal na PCR, gerando vales de baixa ou nenhuma cobertura que podem esconder variantes patogênicas", B: "Destrói a flow cell do sequenciador", C: "Inverte as leituras paired-end", D: "Adiciona metilações anormais no arquivo", E: "Produz fragmentos pequenos demais" }, 
+    correct: "A", explanation: "Gabarito: A. Fitas com muito GC são difíceis de derreter (abrir) na PCR. Isso faz com que essas regiões (geralmente primeiros éxons) percam reads, parecendo que o paciente tem uma deleção que não existe." },
+
+  { id: 1088, area: "Laboratório", subject: "Tecnologias laboratoriais em genômica (sequenciamento de nova geração - NGS, extração de DNA genômico, controle de qualidade, preparo de amostras)", 
+    text: "A biblioteca NGS para sequenciadores Illumina exige 'quantificação funcional'. Isso se refere a:", 
+    options: { A: "Medir o volume da pipeta", B: "Usar qPCR visando os adaptadores ligados, quantificando apenas as moléculas que possuem ambos adaptadores (P5 e P7) e que efetivamente vão se ligar na flow cell", C: "Pesar a biblioteca na balança analítica", D: "Verificar a funcionalidade das células", E: "Contar os fragmentos ao microscópio" }, 
+    correct: "B", explanation: "Gabarito: B. Quantificar por Qubit não é suficiente. Fragmentos sem adaptador brilham no Qubit, mas não grudam na máquina. A qPCR (quantificação funcional) mede APENAS o que vai colar no vidro." },
+
+  { id: 1089, area: "Laboratório", subject: "Tecnologias laboratoriais em genômica (sequenciamento de nova geração - NGS, extração de DNA genômico, controle de qualidade, preparo de amostras)", 
+    text: "No sequenciamento em grande escala, a contaminação cruzada (cross-contamination) laboratorial intra-placa de 96 poços pode ser confirmada bioinformaticamente por:", 
+    options: { A: "Uso exagerado de memória RAM", B: "Elevada taxa de heterozigose excessiva e fração alélica de variantes distantes de ~50% (ex: variantes em 5-10% dos reads) não esperadas", C: "Alta taxa de mapeamento no genoma", D: "Score Q30 acima de 95%", E: "Presença de dímeros de adaptador" }, 
+    correct: "B", explanation: "Gabarito: B. Se a amostra é humana normal, os alelos devem ser 100% ou 50%. Se o software mostra muitas variantes com 10%, é porque um paciente 'espirrou' DNA na amostra do outro." },
+
+  // --- Boas Práticas (BPL), Biossegurança e QC ---
+  { id: 1090, area: "Laboratório", subject: "Boas Práticas de Laboratório (BPL), biossegurança e controle de qualidade", 
+    text: "Em um laboratório de biologia molecular operando WGS, a pressão de ar da Sala Pré-PCR (Preparo de Reagentes) em relação ao corredor deve ser:", 
+    options: { A: "Negativa, para evitar que reagentes saiam", B: "Positiva, garantindo que o ar saia da sala e impedindo que qualquer contaminante externo (como amplicons do corredor) entre e suje os kits limpos", C: "Neutra, não havendo fluxo de ar", D: "Variável com a umidade", E: "Isolada a vácuo" }, 
+    correct: "B", explanation: "Gabarito: B. Salas limpas (Mastermix/Pré-PCR) precisam empurrar o ar para fora (pressão positiva) para que partículas sujas não consigam entrar." },
+  
+  { id: 1091, area: "Laboratório", subject: "Boas Práticas de Laboratório (BPL), biossegurança e controle de qualidade", 
+    text: "Para inativar amplicons de PCR derramados em uma bancada de genômica, o procedimento mais eficaz recomendado pelas boas práticas é:", 
+    options: { A: "Apenas passar álcool 70%", B: "Lavar com água deionizada quente", C: "Uso sequencial de solução de hipoclorito de sódio 10% seguida de limpeza e aplicação de reagentes desativadores de DNA específicos (ex: DNAZap)", D: "Deixar exposto ao ar condicionado por 24h", E: "Passar sabão neutro e secar com papel toalha" }, 
+    correct: "C", explanation: "Gabarito: C. Amplicons são minúsculos e resistentes. Álcool 70% apenas fixa o DNA na bancada. É necessário destruição química com água sanitária (hipoclorito) ou removedores próprios de ácidos nucleicos." },
+
+  { id: 1092, area: "Laboratório", subject: "Boas Práticas de Laboratório (BPL), biossegurança e controle de qualidade", 
+    text: "Durante a auditoria de um centro parceiro do Genomas SUS, nota-se ausência de 'Audit Trails' no LIMS. Isso fere BPL porque:", 
+    options: { A: "Reduz a velocidade do software", B: "Impossibilita rastrear quem inseriu, deletou ou modificou dados laboratoriais, quebrando a integridade e segurança do registro histórico eletrônico", C: "Viola as regras de biossegurança de resíduos", D: "Desalinha os gráficos de Levey-Jennings", E: "Aumenta o consumo de papel no centro" }, 
+    correct: "B", explanation: "Gabarito: B. Sem Audit Trail (Trilha de Auditoria), qualquer funcionário pode alterar o resultado de um teste sem deixar rastro. A norma FDA CFR 21 Part 11 exige trilhas inalteráveis." },
+
+  { id: 1093, area: "Laboratório", subject: "Boas Práticas de Laboratório (BPL), biossegurança e controle de qualidade", 
+    text: "A implementação de lotes novos de reagentes de extração em um laboratório de rotina clínica/pesquisa exige:", 
+    options: { A: "O descarte obrigatório de todo o lote antigo, mesmo na validade", B: "Uma validação lote-a-lote: processar amostras de controle conhecidas com o lote antigo e o novo simultaneamente, comparando rendimento, pureza e desempenho na PCR", C: "Autorização prévia do Ministério da Ciência e Tecnologia", D: "Aumento do tempo de sonicação em 15 minutos", E: "Mudança do Procedimento Operacional Padrão (POP)" }, 
+    correct: "B", explanation: "Gabarito: B. Nunca assuma que o fabricante mandou um kit perfeito. É obrigatório fazer a 'validação cruzada de lote' para garantir que os resultados continuarão consistentes." },
+
+  { id: 1094, area: "Laboratório", subject: "Boas Práticas de Laboratório (BPL), biossegurança e controle de qualidade", 
+    text: "Ao manusear Fenol-Clorofórmio para extração de DNA, os EPIs essenciais além de luvas e jaleco incluem obrigatoriamente:", 
+    options: { A: "Apenas toca descartável", B: "Óculos de proteção química e máscara contra gases, e a manipulação deve ser feita ESTRITAMENTE em capela de exaustão química (não biológica)", C: "Sapatos estéreis isolantes de eletricidade", D: "Roupa com proteção radiológica", E: "Cabine de Segurança Biológica de Fluxo Laminar" }, 
+    correct: "B", explanation: "Gabarito: B. Fenol causa queimaduras graves e seus vapores são tóxicos para o sistema nervoso. A Cabine de Fluxo Laminar joga o ar na sua cara, a manipulação exige Capela de Exaustão Química." },
+
+  { id: 1095, area: "Laboratório", subject: "Boas Práticas de Laboratório (BPL), biossegurança e controle de qualidade", 
+    text: "A falta de calibração anual dos blocos térmicos (Termocicladores) pode resultar em:", 
+    options: { A: "Alteração da cor do DNA extraído", B: "Falha no preparo de bibliotecas, pois variações de poucos graus alteram a eficiência enzimática da fragmentação, end-repair e bias de amplificação na PCR", C: "Problemas no software de demultiplexação", D: "Oxidação dos poços de plástico", E: "Aumento no volume de tampão consumido" }, 
+    correct: "B", explanation: "Gabarito: B. Enzimas de NGS operam em janelas térmicas estreitas. Se o termociclador diz que está a 37ºC mas o bloco físico está a 40ºC, você perderá a biblioteca." },
+
+  { id: 1096, area: "Laboratório", subject: "Boas Práticas de Laboratório (BPL), biossegurança e controle de qualidade", 
+    text: "No contexto de BPL para genômica (RDC ANVISA), a retenção de 'Contramostras' de DNA (alíquotas de guarda) serve primariamente para:", 
+    options: { A: "Serem vendidas posteriormente", B: "Garantir material idêntico e preservado para reanálise em caso de questionamento de resultados, auditoria ou falha na corrida principal de sequenciamento", C: "Dobrar os lucros do laboratório", D: "Doar a bancos de sangue", E: "Testar a eficiência dos freezers do laboratório" }, 
+    correct: "B", explanation: "Gabarito: B. A contramostra é a garantia de segurança do laboratório contra processos legais e falsos positivos, garantindo a rastreabilidade original." },
+
+  { id: 1097, area: "Laboratório", subject: "Boas Práticas de Laboratório (BPL), biossegurança e controle de qualidade", 
+    text: "O Controle Interno de Qualidade (CIQ) é monitorado usando a regra 1(3s) de Westgard. Isso significa que a corrida será rejeitada se:", 
+    options: { A: "Uma amostra for sequenciada 3 vezes com o mesmo erro", B: "O valor da amostra-controle ultrapassar 3 desvios padrão para cima ou para baixo da média histórica do laboratório, indicando erro sistemático ou aleatório grave", C: "O custo aumentar em 300%", D: "O sequenciador parar por 3 segundos", E: "3 funcionários diferentes cometerem o mesmo erro" }, 
+    correct: "B", explanation: "Gabarito: B. Essa é a regra ouro laboratorial. Valores fora de 3 desvios padrão da média são anomalias graves inaceitáveis estatisticamente." },
+
+  { id: 1098, area: "Laboratório", subject: "Boas Práticas de Laboratório (BPL), biossegurança e controle de qualidade", 
+    text: "Um derramamento de 10 mL de sangue total de paciente desconhecido numa centrífuga de laboratório NB-2 exige, na contenção primária, o uso de:", 
+    options: { A: "Desinfecção com álcool isopropílico absoluto aquecido", B: "Uso de EPI completo pelo operador e aplicação de solução de hipoclorito de sódio ou desinfetante hospitalar compatível, aguardando tempo de contato antes de recolher com papel absorvente", C: "Esponja estéril e descarte imediato no lixo reciclável", D: "Aquecimento da centrífuga a 100ºC", E: "Neutralização por amônia" }, 
+    correct: "B", explanation: "Gabarito: B. Não basta secar, a superfície deve ficar submersa em desinfetante eficaz (hipoclorito) por 20 a 30 minutos (tempo de contato) para destruir agentes como HBV ou HIV." },
+
+  { id: 1099, area: "Laboratório", subject: "Boas Práticas de Laboratório (BPL), biossegurança e controle de qualidade", 
+    text: "O controle de temperatura de uma sala de sequenciamento NovaSeq/NextSeq deve ser mantido estritamente controlado (geralmente 22°C ± 2) primariamente por que:", 
+    options: { A: "Os funcionários precisam de conforto térmico extremo", B: "As câmeras CCD, lasers e lentes ópticas de super-resolução dos sequenciadores são altamente sensíveis à dilatação térmica, o que distorce o foco óptico e arruína a chamada das bases", C: "O DNA derrete acima dessa temperatura instantaneamente", D: "Evita a formação de ozônio na sala", E: "O software do Linux é dependente da temperatura" }, 
+    correct: "B", explanation: "Gabarito: B. Uma variação de 3ºC na sala faz as peças de vidro e metal do laser dilatarem micrômetros, perdendo o foco dos clusters nanométricos." },
+
+  // --- Ética em pesquisa e estudos multicêntricos ---
+  { id: 1100, area: "Laboratório", subject: "Ética em pesquisa e noções de estudos multicêntricos", 
+    text: "No compartilhamento de amostras biológicas do banco Genomas SUS para análise de bioinformática no exterior, a CONEP exige:", 
+    options: { A: "Apenas que o laboratório estrangeiro pague pelo transporte", B: "Que o remetente retenha amostras depositárias no Brasil e firme um Termo de Transferência de Material (MTA), proibindo uso além do objetivo original sem autorização do CEP brasileiro", C: "Tradução de todos os prontuários para o inglês", D: "Acesso permanente dos estrangeiros ao sistema do SUS", E: "Venda dos dados com royalties ao paciente" }, 
+    correct: "B", explanation: "Gabarito: B. O patrimônio genético permanece brasileiro. O laboratório externo é apenas prestador de serviço/colaborador, regulado por um MTA (Material Transfer Agreement) estrito." },
+
+  { id: 1101, area: "Laboratório", subject: "Ética em pesquisa e noções de estudos multicêntricos", 
+    text: "Devolução de resultados: Se o pipeline de WGS identificar uma variante patogênica em BRCA1 (Gene ACMG-73) em um participante assintomático, as boas práticas éticas em estudos de genômica populacional preconizam:", 
+    options: { A: "Ignorar, pois não era o foco do estudo", B: "Acionar o protocolo de achados incidentais: revalidar a amostra por método ortogonal (Sanger) no mesmo paciente e comunicar o voluntário caso ele tenha optado por receber esse tipo de informação no TCLE", C: "Informar a família sem o paciente saber", D: "Publicar no Twitter os riscos", E: "Internar o voluntário compulsoriamente" }, 
+    correct: "B", explanation: "Gabarito: B. Essa mutação confere altíssimo risco de câncer. O protocolo prevê que, se o paciente assinou querer saber, o resultado deve ser confirmado isoladamente antes de gerar pânico." },
+
+  { id: 1102, area: "Laboratório", subject: "Ética em pesquisa e noções de estudos multicêntricos", 
+    text: "Estudos com populações originárias/indígenas no Brasil (com interesse genômico no Genomas SUS) requerem aprovação especial porque:", 
+    options: { A: "Eles possuem genes exclusicos de alienígenas", B: "São populações vulneráveis cujos direitos e saberes tradicionais possuem marco regulatório de proteção adicional (incluindo aprovação obrigatória de colegiados representativos - FUNAI e CONEP/Brasília)", C: "Eles não são considerados brasileiros", D: "Não é necessário aprovar", E: "A lei proíbe sequenciamento indígena totalmente" }, 
+    correct: "B", explanation: "Gabarito: B. A CONEP exige ritos extras para evitar a exploração biopirata de povos tradicionais sob o verniz da pesquisa genômica (Resolução nº 304)." },
+
+  { id: 1103, area: "Laboratório", subject: "Ética em pesquisa e noções de estudos multicêntricos", 
+    text: "O Comitê Independente de Monitoramento de Dados (DMC - Data Monitoring Committee) em um ensaio multicêntrico tem como objetivo principal:", 
+    options: { A: "Corrigir bugs de software do LIMS", B: "Revisar dados acumulados de eficácia e segurança durante o estudo, possuindo autoridade para recomendar interrupção antecipada do estudo se danos inaceitáveis forem detectados", C: "Escrever os artigos finais de forma autônoma", D: "Demultiplexar reads", E: "Pagar as bolsas dos cientistas" }, 
+    correct: "B", explanation: "Gabarito: B. É o conselho externo que zela pela vida dos pacientes. Se a genômica indicar grave risco nos pacientes em meio à pesquisa, eles abortam o ensaio para proteger as vidas." },
+
+  { id: 1104, area: "Laboratório", subject: "Ética em pesquisa e noções de estudos multicêntricos", 
+    text: "O conceito de 'Risco de Reidentificação' em bases de dados genômicas anonimizadas refere-se a:", 
+    options: { A: "Risco do paciente esquecer sua senha", B: "O risco de pesquisadores conseguirem cruzar os dados de um perfil genômico com bases públicas (genealogia, SNPs demográficos) revelando a identidade de uma pessoa supostamente anônima", C: "Risco de trocar a etiqueta do tubo", D: "Identificação da variante na máquina", E: "Perda da identificação da placa" }, 
+    correct: "B", explanation: "Gabarito: B. O DNA nunca é 100% anônimo. Se a pessoa jogou dados em sites de ancestralidade, a base do governo, mesmo sem CPF, pode ser cruzada com a comercial identificando o paciente." },
+
+  { id: 1105, area: "Laboratório", subject: "Ética em pesquisa e noções de estudos multicêntricos", 
+    text: "O que deve acontecer caso um indivíduo exerça seu direito de revogação de consentimento num biobanco genômico?", 
+    options: { A: "Ele paga uma multa de rescisão", B: "Seu material biológico deve ser destruído/descartado, e o uso futuro de seus dados em novas análises deve ser suspenso, garantindo pleno respeito à autonomia", C: "Os dados já publicados devem ser apagados da internet", D: "Apenas o DNA de saliva é apagado", E: "Ele perde o direito de usar o SUS" }, 
+    correct: "B", explanation: "Gabarito: B. A autonomia impera. A partir do momento da retirada da assinatura, a instituição cessa imediatamente o uso das alíquotas remanescentes." },
+
+  { id: 1106, area: "Laboratório", subject: "Ética em pesquisa e noções de estudos multicêntricos", 
+    text: "Na redação de Standard Operating Procedures (SOPs) de extração em pesquisa multicêntrica, a principal exigência técnica da ISO 15189 é:", 
+    options: { A: "Estar disponível em 3 idiomas diferentes", B: "Ter rastreabilidade de controle de versões, controle de revisão periódica e estar inequivocamente disponível na bancada do operador", C: "Ter mais de 50 páginas", D: "Ser assinado por um Ministro de Estado", E: "Ficar guardado em cofre fechado" }, 
+    correct: "B", explanation: "Gabarito: B. Todo POP precisa de controle de versão (ex: Versão 2.1) para que, se um lote dar erro, possamos ver qual instrução exatamente o biomédico seguiu naquele mês." },
+
+  { id: 1107, area: "Laboratório", subject: "Ética em pesquisa e noções de estudos multicêntricos", 
+    text: "A Repartição de Benefícios estipulada pelo SISGEN/CGEN baseia-se no princípio de que:", 
+    options: { A: "Os lucros das pesquisas pertencem apenas ao estado de origem da amostra", B: "Ao utilizar recursos genéticos nativos e obter retorno comercial/tecnológico, o pesquisador/empresa deve reverter ganhos monetários ou não monetários para a sociedade e povos originários", C: "A genômica não pode ser comercializada", D: "Laboratórios estrangeiros são isentos da lei brasileira", E: "Patentes biológicas humanas são permitidas" }, 
+    correct: "B", explanation: "Gabarito: B. É o arcabouço de proteção contra pirataria da biodiversidade (Lei 13.123/15). O lucro sobre nosso genoma deve retornar em benefícios de saúde ao nosso país." },
+
+  { id: 1108, area: "Laboratório", subject: "Ética em pesquisa e noções de estudos multicêntricos", 
+    text: "Segundo a Resolução CNS 441, biobancos e biorrepositórios diferem conceitualmente em pesquisa porque:", 
+    options: { A: "São sinônimos absolutos", B: "O Biorrepositório é criado temporariamente para uma pesquisa específica e finda com ela; o Biobanco tem caráter institucional e perene para múltiplas pesquisas não previstas inicialmente", C: "Biorrepositório guarda tecido morto, Biobanco tecido vivo", D: "Biobanco guarda bancos de dados digitais apenas", E: "Biorrepositório é particular, Biobanco é público" }, 
+    correct: "B", explanation: "Gabarito: B. Biobancos são bibliotecas estruturadas a longo prazo. Biorrepositórios são 'gavetas' temporárias enquanto o projeto específico é escrito e finalizado." },
+
+  { id: 1109, area: "Laboratório", subject: "Ética em pesquisa e noções de estudos multicêntricos", 
+    text: "O processo de validação analítica para incorporar um painel genômico de BRCA1/2 na rotina pública (estudos) engloba testar:", 
+    options: { A: "Apenas se ele funciona para a população Europeia", B: "Reprodutibilidade (precisão intra e inter-ensaios), especificidade analítica, limite de detecção de variantes raras e acurácia com material de referência atestado", C: "Apenas a marca do kit na ANVISA", D: "A calibração do termociclador", E: "O sabor da solução tampão" }, 
+    correct: "B", explanation: "Gabarito: B. Para se transformar de pesquisa para prática rotineira (Clinical Grade), o painel passa por estresse exaustivo confirmando as métricas de segurança." },
+
+  // --- Noções de saúde pública e ética ---
+  { id: 1110, area: "Laboratório", subject: "Noções de saúde pública e ética em pesquisa", 
+    text: "Um dos pilares da implementação da genômica no Sistema Único de Saúde é a transição da pesquisa pura para a 'Saúde de Precisão'. Isso se reflete na:", 
+    options: { A: "Proibição do uso de vacinas", B: "Substituição do paradigma de 'um tratamento para todos' pela identificação de subgrupos genômicos da população que melhor respondem a terapias específicas ou que necessitam de rastreio precoce diferenciado", C: "Privatização dos bancos de sangue do SUS", D: "Exclusividade de leitos para pacientes triados", E: "Fim da atenção primária nos postos de saúde" }, 
+    correct: "B", explanation: "Gabarito: B. Genômica populacional não quer substituir o posto de saúde, quer ajudar o médico a saber de antemão qual remédio exato funcionará ou falhará miseravelmente naquele paciente específico." },
+
+  { id: 1111, area: "Laboratório", subject: "Noções de saúde pública e ética em pesquisa", 
+    text: "Qual destas interações farmacogenômicas já impacta de maneira real a prescrição oncológica em sistemas públicos, devido à toxicidade letal severa?", 
+    options: { A: "Mutações em FOXP2 e uso de analgésicos", B: "Mutações no gene DPYD (Dihidropirimidina Desidrogenase) e uso do quimioterápico 5-Fluorouracil (5-FU)", C: "Variantes de HLA e uso de Tylenol", D: "Gene da lactase e insulina", E: "Expressão de queratina e quimioterapia" }, 
+    correct: "B", explanation: "Gabarito: B. Portadores da deficiência de DPYD (mutação clássica farmacogenômica) morrem envenenados se receberem as doses padronizadas da droga comum contra Câncer Colorretal. A genômica antevê e reduz a dose." },
+
+  { id: 1112, area: "Laboratório", subject: "Noções de saúde pública e ética em pesquisa", 
+    text: "Em relação ao Teste do Pezinho (Triagem Neonatal) e a genômica no SUS, a evolução natural esperada é:", 
+    options: { A: "Pular etapas bioquímicas e usar apenas Raio-X", B: "Uso combinado de proteômica (Espectrometria de Massas) confirmada por WGS rápido nos casos alterados (Teste Molecular Reflexo), para diagnóstico etiológico precoce e início de terapias como TRG (ex: Zolgensma)", C: "Cancelar os testes moleculares", D: "Cobrar pelo exame no primeiro ano", E: "Isolar as crianças afetadas" }, 
+    correct: "B", explanation: "Gabarito: B. A triagem de 1ª linha sempre será a gota de sangue/bioquímica por ser barata. Porém, quando detecta algo errado, a 2ª linha moderna passa a ser o WGS instantâneo do bebê." },
+
+  { id: 1113, area: "Laboratório", subject: "Noções de saúde pública e ética em pesquisa", 
+    text: "A Rede Nacional de Dados em Saúde (RNDS) tem como propósito em uma era de genômica governamental:", 
+    options: { A: "Atuar como plataforma exclusiva do IBGE", B: "Ser o ecossistema tecnológico e semântico (usando FHIR, por exemplo) que unifica prontuários eletrônicos de múltiplos hospitais, base essencial para conectar dados genômicos ao histórico do paciente brasileiro", C: "Deletar dados anualmente", D: "Abolir receitas médicas físicas", E: "Controlar acesso físico aos hospitais" }, 
+    correct: "B", explanation: "Gabarito: B. Sem prontuário único interoperável (RNDS), a genômica não serve de nada, pois o médico no interior não teria como ler que o paciente foi sequenciado na capital do estado." },
+
+  { id: 1114, area: "Laboratório", subject: "Noções de saúde pública e ética em pesquisa", 
+    text: "Doenças Monogênicas Raras sobrecarregam as famílias e o sistema judiciário (judicialização da saúde). A inserção do WGS de trios (Paciente-Pai-Mãe) no início do quadro clínico visa:", 
+    options: { A: "Prolongar os dias de internação da família", B: "Encerrar a 'odisseia diagnóstica', poupando o sistema de custos absurdos em ressonâncias inconclusivas, internações empíricas inúteis e dando fechamento à família para o manejo sintomático adequado", C: "Gerar provas em processos cíveis", D: "Substituir testagem de DSTs", E: "Diminuir o contato humano-médico" }, 
+    correct: "B", explanation: "Gabarito: B. O sequenciamento é caro, mas estudos de economia da saúde provam que sequenciar a família logo no primeiro mês economiza milhares de reais do SUS que seriam gastos em anos de UTIs às cegas." },
+
+  { id: 1115, area: "Laboratório", subject: "Noções de saúde pública e ética em pesquisa", 
+    text: "O conceito de Custo-Efetividade de WGS num sistema como o SUS avalia:", 
+    options: { A: "Se o equipamento custa menos de 10 mil reais", B: "A relação entre o custo investido na tecnologia molecular frente aos anos de vida ganhos com qualidade (QALYs) ou gastos não incorridos por internações evitadas no longo prazo", C: "Apenas qual é o teste mais rápido do mercado", D: "A capacidade do teste de aprovar faturamento", E: "Se o paciente gosta do método" }, 
+    correct: "B", explanation: "Gabarito: B. Avaliação de Tecnologias em Saúde (ATS - feita pela CONITEC) usa parâmetros econômicos (ex: Dólares por QALY) para provar que a prevenção de um agravo severo paga a máquina milionária da genômica." },
+
+  { id: 1116, area: "Laboratório", subject: "Noções de saúde pública e ética em pesquisa", 
+    text: "Muitos painéis genômicos importados possuem viés de ancestralidade. Como isso afeta o SUS brasileiro?", 
+    options: { A: "Não afeta, genoma é universal", B: "Resulta em alta taxa de Variantes de Significado Incerto (VUS) nas populações não-brancas, gerando subdiagnóstico e exacerbando a desigualdade em saúde", C: "Aumenta a precisão para índigenas", D: "Torna mais barato o tratamento oncológico", E: "Causa hiper-diagnóstico" }, 
+    correct: "B", explanation: "Gabarito: B. Se a ciência baseou seus escores na genética caucasiana, uma mutação encontrada num afrodescendente brasileiro pode ser classificada como VUS, negando o benefício preventivo àquela família (Racismo genômico estrutural)." },
+
+  { id: 1117, area: "Laboratório", subject: "Noções de saúde pública e ética em pesquisa", 
+    text: "Vigilância Genômica Integrada (One Health) se popularizou. Em laboratórios centrais do governo (LACENs/SUS), significa:", 
+    options: { A: "Sequenciar animais extintos", B: "Usar NGS para rastrear evolução simultânea de cepas de patógenos (ex: dengue, Covid, resistências bacterianas hospitalares), vetor ambiental e as respostas imunes das populações humanas associadas", C: "Investigar criminalidade urbana com DNA", D: "Rastrear árvores genealógicas sem fim epidemiológico", E: "Sequenciar apenas bactérias gram-positivas" }, 
+    correct: "B", explanation: "Gabarito: B. Saúde Única (One Health) entende que a saúde animal, humana e ambiental está interligada, tudo codificado e monitorado pelo DNA circulante nos patógenos e reservatórios." },
+
+  { id: 1118, area: "Laboratório", subject: "Noções de saúde pública e ética em pesquisa", 
+    text: "O 'aconselhamento genético' no SUS atua fortemente pré e pós testagem de genômica populacional para:", 
+    options: { A: "Convencer a não ter filhos", B: "Garantir a autonomia de decisão, traduzindo as complexidades estatísticas do risco (ex: 20% de ter câncer) para linguagem acessível, abordando as implicações familiares e psicossociais dos laudos", C: "Obrigar o paciente a operar a mama preventivamente", D: "Dar receitas controladas de psicotrópicos", E: "Forçar rastreio em toda a vizinhança" }, 
+    correct: "B", explanation: "Gabarito: B. Não se pode entregar um PDF cheio de mutações nas mãos do cidadão. O geneticista/conselheiro acolhe, esclarece que 'risco não é diagnóstico absoluto' e guia as tomadas preventivas." },
+
+  { id: 1119, area: "Laboratório", subject: "Noções de saúde pública e ética em pesquisa", 
+    text: "O impacto da genômica do 'Traço Falciforme' no Norte do Brasil é vital porque:", 
+    options: { A: "Causa gripe severa", B: "Carreadores da mutação (HbAS) costumam ser assintomáticos, mas ao reproduzirem com parceiros locais também com o traço (alta incidência em locais afro-indígenas), o risco do recém-nascido ter a severa Anemia Falciforme de doença falciforme (HbSS) dispara", C: "O traço protege contra malária apenas no primeiro ano de vida", D: "A condição só atinge moradores urbanos", E: "Exige quimioterapia no 1º mês de vida" }, 
+    correct: "B", explanation: "Gabarito: B. A genômica preventiva no casamento (rastreio de portadores assintomáticos) permite orientação familiar profunda sobre a probabilidade (25%) de ter bebês que exigirão intensos cuidados com dores isquêmicas da doença SS." }
 ];
