@@ -29,15 +29,16 @@
     <script src="banco.js"></script>
     
     <style>
-        body { font-family: 'Inter', sans-serif; } 
+        body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; } 
         .hide-scrollbar::-webkit-scrollbar { display: none; }
         .diff-facil { @apply bg-emerald-100 text-emerald-700 border-emerald-200; }
         .diff-media { @apply bg-amber-100 text-amber-700 border-amber-200; }
         .diff-dificil { @apply bg-rose-100 text-rose-700 border-rose-200; }
         body { -webkit-tap-highlight-color: transparent; }
         
-        /* Fundamental para o arrasto mobile funcionar liso */
-        .swipe-container { touch-action: pan-y; }
+        /* Previne o scroll da tela ao arrastar a questão pro lado no mobile */
+        .swipe-container { touch-action: pan-y; overflow: hidden; }
+        .swipe-option { will-change: transform; }
     </style>
 </head>
 <body class="bg-slate-50 text-slate-900 dark:bg-slate-900 dark:text-slate-100 transition-colors duration-300">
@@ -68,7 +69,7 @@
             Scissors: () => <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><line x1="20" y1="4" x2="8.12" y2="15.88"/><line x1="14.47" y1="14.48" x2="20" y2="20"/><line x1="8.12" y1="8.12" x2="12" y2="12"/></svg>,
             ChevronLeft: () => <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>,
             ChevronRight: () => <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>,
-            RefreshCcw: () => <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="1 4 1 10 7 10"></polyline><polyline points="23 20 23 14 17 14"></polyline><path d="M20.49 9A9 9 0 0 0 5.64 5.64L1 10"></path><path d="M3.51 15A9 9 0 0 0 18.36 18.36L23 14"></path></svg>
+            Flash: () => <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
         };
 
         const themeColors = {
@@ -268,6 +269,11 @@
                 });
 
                 syncCommandToCloud(currentUser, qId, statusText);
+                
+                // Desce a tela suavemente para ler a justificativa
+                setTimeout(() => {
+                    window.scrollTo({ top: document.documentElement.scrollHeight, behavior: 'smooth' });
+                }, 100);
             };
 
             const toggleFavorite = (qId) => {
@@ -331,6 +337,7 @@
             }, [history]);
 
             const errorQuestions = activeBank.filter(q => cadernoStatus[q.id] === 'red');
+            const correctQuestions = activeBank.filter(q => cadernoStatus[q.id] === 'green');
 
             const subjectsData = useMemo(() => {
                 const map = {};
@@ -521,34 +528,37 @@
                             </div>
                         </div>
 
-                        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 mb-10">
-                            <button onClick={() => setScreen('caderno')} className="bg-white dark:bg-slate-800 hover:bg-red-50 dark:hover:bg-red-900/10 border dark:border-slate-700 border-slate-200 rounded-[2rem] p-6 transition-all duration-300 shadow-lg hover:shadow-2xl hover:-translate-y-1 flex justify-between items-center group">
-                                <div className="flex items-center gap-4">
-                                    <div className="p-3 bg-red-500 text-white rounded-xl shadow-md"><Icons.BookX /></div>
-                                    <div className="text-left">
-                                        <h2 className="text-xl font-black text-slate-800 dark:text-white group-hover:text-red-600 dark:group-hover:text-red-400 transition-colors">Caderno</h2>
-                                        <p className="text-sm text-slate-500 dark:text-slate-400 font-medium">{errorQuestions.length} erros</p>
-                                    </div>
+                        {/* MENU PRINCIPAL: 4 BOTÕES */}
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 mb-10">
+                            <button onClick={() => setScreen('caderno')} className="bg-white dark:bg-slate-800 hover:bg-red-50 dark:hover:bg-red-900/10 border dark:border-slate-700 border-slate-200 rounded-[2rem] p-5 transition-all duration-300 shadow-lg hover:shadow-2xl hover:-translate-y-1 flex items-center gap-4 group">
+                                <div className="p-3 bg-red-500 text-white rounded-xl shadow-md shrink-0"><Icons.BookX /></div>
+                                <div className="text-left">
+                                    <h2 className="text-lg font-black text-slate-800 dark:text-white group-hover:text-red-600 dark:group-hover:text-red-400 transition-colors">Caderno</h2>
+                                    <p className="text-xs text-slate-500 dark:text-slate-400 font-medium">{errorQuestions.length} pendentes</p>
                                 </div>
                             </button>
                             
-                            <button onClick={() => startQuiz(activeBank.filter(q => favorites.includes(q.id)), "Questões Favoritas", "study")} className="bg-white dark:bg-slate-800 hover:bg-amber-50 dark:hover:bg-amber-900/10 border dark:border-slate-700 border-slate-200 hover:border-amber-200 dark:hover:border-amber-700 rounded-[2rem] p-6 transition-all duration-300 shadow-lg hover:shadow-2xl hover:-translate-y-1 flex justify-between items-center group">
-                                <div className="flex items-center gap-4">
-                                    <div className="p-3 bg-amber-500 text-white rounded-xl shadow-md"><Icons.Star filled={true} /></div>
-                                    <div className="text-left">
-                                        <h2 className="text-xl font-black text-slate-800 dark:text-white group-hover:text-amber-600 dark:group-hover:text-amber-400 transition-colors">Favoritas</h2>
-                                        <p className="text-sm text-slate-500 dark:text-slate-400 font-medium">{favorites.length} salvas</p>
-                                    </div>
+                            <button onClick={() => setScreen('revisao_emergencial')} className="bg-white dark:bg-slate-800 hover:bg-emerald-50 dark:hover:bg-emerald-900/10 border dark:border-slate-700 border-slate-200 rounded-[2rem] p-5 transition-all duration-300 shadow-lg hover:shadow-2xl hover:-translate-y-1 flex items-center gap-4 group">
+                                <div className="p-3 bg-emerald-500 text-white rounded-xl shadow-md shrink-0"><Icons.Flash /></div>
+                                <div className="text-left">
+                                    <h2 className="text-lg font-black text-slate-800 dark:text-white group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors">Leitura Turbo</h2>
+                                    <p className="text-xs text-slate-500 dark:text-slate-400 font-medium">{correctQuestions.length} acertos diretos</p>
                                 </div>
                             </button>
 
-                            <button onClick={() => setScreen('estatisticas')} className="bg-white dark:bg-slate-800 hover:bg-blue-50 dark:hover:bg-blue-900/10 border dark:border-slate-700 border-slate-200 rounded-[2rem] p-6 transition-all duration-300 shadow-lg hover:shadow-2xl hover:-translate-y-1 flex justify-between items-center group">
-                                <div className="flex items-center gap-4">
-                                    <div className="p-3 bg-blue-600 text-white rounded-xl shadow-md"><Icons.BarChart /></div>
-                                    <div className="text-left">
-                                        <h2 className="text-xl font-black text-slate-800 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">Estatísticas</h2>
-                                        <p className="text-sm text-slate-500 dark:text-slate-400 font-medium">Diagnóstico</p>
-                                    </div>
+                            <button onClick={() => startQuiz(activeBank.filter(q => favorites.includes(q.id)), "Questões Favoritas", "study")} className="bg-white dark:bg-slate-800 hover:bg-amber-50 dark:hover:bg-amber-900/10 border dark:border-slate-700 border-slate-200 hover:border-amber-200 dark:hover:border-amber-700 rounded-[2rem] p-5 transition-all duration-300 shadow-lg hover:shadow-2xl hover:-translate-y-1 flex items-center gap-4 group">
+                                <div className="p-3 bg-amber-500 text-white rounded-xl shadow-md shrink-0"><Icons.Star filled={true} /></div>
+                                <div className="text-left">
+                                    <h2 className="text-lg font-black text-slate-800 dark:text-white group-hover:text-amber-600 dark:group-hover:text-amber-400 transition-colors">Favoritas</h2>
+                                    <p className="text-xs text-slate-500 dark:text-slate-400 font-medium">{favorites.length} salvas</p>
+                                </div>
+                            </button>
+
+                            <button onClick={() => setScreen('estatisticas')} className="bg-white dark:bg-slate-800 hover:bg-blue-50 dark:hover:bg-blue-900/10 border dark:border-slate-700 border-slate-200 rounded-[2rem] p-5 transition-all duration-300 shadow-lg hover:shadow-2xl hover:-translate-y-1 flex items-center gap-4 group">
+                                <div className="p-3 bg-blue-600 text-white rounded-xl shadow-md shrink-0"><Icons.BarChart /></div>
+                                <div className="text-left">
+                                    <h2 className="text-lg font-black text-slate-800 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">Estatísticas</h2>
+                                    <p className="text-xs text-slate-500 dark:text-slate-400 font-medium">Diagnóstico de guerra</p>
                                 </div>
                             </button>
                         </div>
@@ -592,6 +602,62 @@
                 </div>
             );
 
+            const RevisaoEmergencial = () => {
+                // Agrupa as questões corretas por Área
+                const correctByArea = useMemo(() => {
+                    const grouped = {};
+                    correctQuestions.forEach(q => {
+                        if (!grouped[q.area]) grouped[q.area] = [];
+                        grouped[q.area].push(q);
+                    });
+                    return grouped;
+                }, [correctQuestions]);
+
+                return (
+                    <div className="max-w-4xl mx-auto p-4 md:p-8 animate-in slide-in-from-bottom-4">
+                        <header className="flex justify-between items-center mb-8">
+                            <button onClick={() => setScreen('dashboard')} className="text-slate-400 dark:text-slate-500 font-bold hover:text-slate-800 dark:hover:text-slate-300">← Voltar</button>
+                        </header>
+                        
+                        <div className="bg-white dark:bg-slate-800 p-8 md:p-12 rounded-[2rem] shadow-xl border dark:border-slate-700 text-center mb-8">
+                            <div className="inline-flex p-4 bg-emerald-100 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-400 rounded-2xl mb-6 shadow-sm"><Icons.Flash /></div>
+                            <h2 className="text-3xl font-black text-slate-800 dark:text-white mb-4 uppercase tracking-tighter">Leitura Turbo</h2>
+                            <p className="text-slate-500 dark:text-slate-400 font-medium">Lista de fixação apenas com as {correctQuestions.length} alternativas corretas das questões que você já dominou.</p>
+                        </div>
+
+                        {Object.entries(correctByArea).map(([area, questions]) => {
+                            const theme = getTheme(area);
+                            return (
+                                <div key={area} className={`mb-8 bg-white dark:bg-slate-800 rounded-[2rem] shadow-md border ${theme.border} overflow-hidden`}>
+                                    <div className={`${theme.bg} p-6 border-b ${theme.border}`}>
+                                        <h3 className={`text-xl font-black ${theme.text} uppercase tracking-tight`}>{area}</h3>
+                                    </div>
+                                    <div className="p-6">
+                                        <div className="space-y-4">
+                                            {questions.map((q, i) => (
+                                                <div key={q.id} className="flex gap-4 p-4 rounded-xl bg-slate-50 dark:bg-slate-900/50 border border-slate-100 dark:border-slate-700">
+                                                    <div className="shrink-0 mt-0.5 text-emerald-500 dark:text-emerald-400"><Icons.Check /></div>
+                                                    <div>
+                                                        <span className="text-[10px] font-black uppercase tracking-widest text-slate-400 dark:text-slate-500 block mb-1">[{q.subject}]</span>
+                                                        <p className="text-slate-800 dark:text-slate-200 font-medium leading-relaxed">{q.options[q.correct]}</p>
+                                                    </div>
+                                                </div>
+                                            ))}
+                                        </div>
+                                    </div>
+                                </div>
+                            );
+                        })}
+                        
+                        {correctQuestions.length === 0 && (
+                            <div className="text-center p-10 bg-white dark:bg-slate-800 rounded-2xl border dark:border-slate-700">
+                                <p className="text-slate-500 dark:text-slate-400">Você ainda não possui acertos registrados.</p>
+                            </div>
+                        )}
+                    </div>
+                );
+            };
+
             const Quiz = () => {
                 const currentQ = quizConfig.questions[idx];
                 const theme = getTheme(currentQ?.area);
@@ -603,14 +669,15 @@
                 const [eliminated, setEliminated] = useState({});
                 const [selectedOption, setSelectedOption] = useState(null);
                 
-                const [swipeData, setSwipeData] = useState({ key: null, offset: 0, startX: 0 });
+                // Ref de Física do Swipe via DOM (Ignorando estado do React para evitar "engasgo")
+                const touchState = useRef({ key: null, startX: 0, currentX: 0 });
 
-                // AUTO-SCROLL TO TOP QUANDO A QUESTÃO MUDA
+                // Sobe a tela automaticamente ao mudar de questão
                 useEffect(() => {
                     window.scrollTo({ top: 0, behavior: 'smooth' });
                     setEliminated({});
                     setSelectedOption(null);
-                    setSwipeData({ key: null, offset: 0, startX: 0 });
+                    touchState.current = { key: null, startX: 0, currentX: 0 };
                 }, [currentQ?.id]);
 
                 const toggleEliminate = (k) => {
@@ -621,43 +688,65 @@
                     if (!sessionAns) setSelectedOption(k);
                 };
 
-                // FÍSICA DE ARRASTO REAL E RESPONSIVA
+                // ===== MOTOR DE FÍSICA DO SWIPE (60FPS) =====
                 const handleTouchStart = (e, k) => {
                     if (!!sessionAns) return;
-                    setSwipeData({ key: k, offset: 0, startX: e.touches[0].clientX });
+                    touchState.current = {
+                        key: k,
+                        startX: e.touches[0].clientX,
+                        currentX: e.touches[0].clientX
+                    };
+                    const el = document.getElementById(`swipe-card-${k}`);
+                    if (el) el.style.transition = 'none'; // Desliga a transição para grudar no dedo
                 };
 
                 const handleTouchMove = (e, k) => {
-                    if (!!sessionAns) return;
-                    if (swipeData.key === k) {
-                        const currentX = e.touches[0].clientX;
-                        const diff = currentX - swipeData.startX;
+                    if (!!sessionAns || touchState.current.key !== k) return;
+                    
+                    const diffX = e.touches[0].clientX - touchState.current.startX;
+                    let offset = diffX;
+
+                    // Trava o arraste para o lado errado
+                    if (!eliminated[k] && offset > 0) offset = 0; // Só deixa puxar pra esquerda se não estiver cortado
+                    if (eliminated[k] && offset < 0) offset = 0; // Só deixa puxar pra direita se estiver cortado
+
+                    // Limite elástico
+                    if (offset < -100) offset = -100;
+                    if (offset > 100) offset = 100;
+
+                    const el = document.getElementById(`swipe-card-${k}`);
+                    const bgRed = document.getElementById(`bg-red-${k}`);
+                    const bgBlue = document.getElementById(`bg-blue-${k}`);
+
+                    if (el) {
+                        el.style.transform = `translateX(${offset}px)`;
                         
-                        // Permite arrastar para a esquerda (eliminar) e direita (restaurar)
-                        if (!eliminated[k] && diff < 0) {
-                            setSwipeData(prev => ({ ...prev, offset: Math.max(diff, -100) }));
-                        } else if (eliminated[k] && diff > 0) {
-                            setSwipeData(prev => ({ ...prev, offset: Math.min(diff, 100) }));
-                        }
+                        // Feedback visual (Opacidade da lixeira aumenta após 40px)
+                        if (bgRed && offset < 0) bgRed.style.opacity = offset <= -40 ? '1' : '0.4';
+                        if (bgBlue && offset > 0) bgBlue.style.opacity = offset >= 40 ? '1' : '0.4';
                     }
                 };
 
                 const handleTouchEnd = (e, k) => {
-                    if (!!sessionAns) return;
-                    if (swipeData.key === k) {
-                        // Se puxou pra esquerda e passou do limite
-                        if (swipeData.offset <= -50 && !eliminated[k]) {
-                            toggleEliminate(k);
-                            if (selectedOption === k) setSelectedOption(null);
-                        } 
-                        // Se puxou pra direita e passou do limite
-                        else if (swipeData.offset >= 50 && eliminated[k]) {
-                            toggleEliminate(k);
-                        }
-                        
-                        // Reseta a posição do card (ele volta pro lugar suavemente pelo CSS)
-                        setSwipeData({ key: null, offset: 0, startX: 0 });
+                    if (!!sessionAns || touchState.current.key !== k) return;
+                    
+                    const el = document.getElementById(`swipe-card-${k}`);
+                    const diffX = e.changedTouches[0].clientX - touchState.current.startX;
+                    
+                    // Liga a transição suave de volta
+                    if (el) el.style.transition = 'transform 0.3s cubic-bezier(0.2, 0.8, 0.2, 1)';
+                    
+                    // Verifica se passou do limite (40px)
+                    if (!eliminated[k] && diffX <= -40) {
+                        toggleEliminate(k);
+                        if (selectedOption === k) setSelectedOption(null);
+                    } else if (eliminated[k] && diffX >= 40) {
+                        toggleEliminate(k);
                     }
+                    
+                    // Volta o card pro zero visualmente
+                    if (el) el.style.transform = 'translateX(0px)';
+                    touchState.current.key = null;
                 };
                 
                 if (!currentQ) return null;
@@ -717,16 +806,12 @@
                                             else bClass += "border-slate-50 dark:border-slate-800 opacity-40 grayscale";
                                         }
 
-                                        const isSwipingThis = swipeData.key === k;
-                                        const swipeTransform = isSwipingThis ? `translateX(${swipeData.offset}px)` : 'translateX(0px)';
-                                        const swipeTransition = isSwipingThis ? 'none' : 'transform 0.2s cubic-bezier(0.2, 0.8, 0.2, 1)';
-
                                         return (
                                             <div key={k} className="relative group overflow-hidden bg-slate-100 dark:bg-slate-800 rounded-2xl select-none">
                                                 
-                                                {/* Botão Tesoura (Apenas Desktop) - Fica Fora do fluxo de Swipe */}
+                                                {/* Botão Tesoura (Apenas Desktop) - Escondido no mobile */}
                                                 <button
-                                                    onClick={() => toggleEliminate(k)}
+                                                    onClick={(e) => { e.stopPropagation(); toggleEliminate(k); }}
                                                     disabled={!!sessionAns}
                                                     className={`hidden md:flex px-4 absolute left-0 h-full items-center justify-center rounded-l-2xl border-y-2 border-l-2 transition-all duration-200 z-20 
                                                         ${isEliminated ? 'opacity-100 bg-slate-200 border-slate-300 text-slate-500 dark:bg-slate-700 dark:border-slate-600 dark:text-slate-400' : 'opacity-0 group-hover:opacity-100 bg-white/90 border-slate-100 text-slate-300 hover:text-slate-500 hover:bg-slate-50 dark:border-slate-700 dark:bg-slate-800/90 dark:text-slate-500 dark:hover:text-slate-300'} 
@@ -736,29 +821,32 @@
                                                     <Icons.Scissors />
                                                 </button>
 
-                                                {/* Fundo Vermelho (Aparece ao arrastar para esquerda) */}
-                                                <div className={`absolute inset-0 bg-rose-100 dark:bg-rose-900/50 flex items-center justify-end pr-6 text-rose-500 transition-opacity ${isSwipingThis && swipeData.offset < 0 ? 'opacity-100' : 'opacity-0'}`}>
+                                                {/* Fundo Vermelho (Mobile Swipe Esquerda) */}
+                                                <div id={`bg-red-${k}`} className="absolute inset-0 bg-rose-100 dark:bg-rose-900/50 flex items-center justify-end pr-6 text-rose-500 opacity-0 z-0 pointer-events-none transition-opacity duration-100">
                                                     <Icons.Scissors />
                                                 </div>
 
-                                                {/* Fundo Azul (Aparece ao arrastar para direita para restaurar) */}
-                                                <div className={`absolute inset-0 bg-blue-100 dark:bg-blue-900/50 flex items-center justify-start pl-6 text-blue-500 transition-opacity ${isSwipingThis && swipeData.offset > 0 ? 'opacity-100' : 'opacity-0'}`}>
-                                                    <span className="font-bold text-xs uppercase tracking-widest">Restaurar</span>
+                                                {/* Fundo Azul (Mobile Swipe Direita) */}
+                                                <div id={`bg-blue-${k}`} className="absolute inset-0 bg-blue-100 dark:bg-blue-900/50 flex items-center justify-start pl-6 text-blue-500 opacity-0 z-0 pointer-events-none transition-opacity duration-100">
+                                                    <span className="font-bold text-[10px] uppercase tracking-widest">Restaurar</span>
                                                 </div>
 
-                                                {/* Alternativa Principal (Movimentável no Mobile) */}
+                                                {/* Alternativa Principal (Deslizável no Mobile) */}
                                                 <button 
+                                                    id={`swipe-card-${k}`}
                                                     onClick={() => handleOptionClick(k)} 
                                                     disabled={!!sessionAns} 
                                                     onTouchStart={(e) => handleTouchStart(e, k)}
                                                     onTouchMove={(e) => handleTouchMove(e, k)}
                                                     onTouchEnd={(e) => handleTouchEnd(e, k)}
-                                                    className={`${bClass} relative z-10 bg-white dark:bg-slate-800 ${isEliminated && !sessionAns ? 'opacity-50 grayscale bg-slate-50 dark:bg-slate-900 border-dashed' : ''}`}
-                                                    style={{ transform: swipeTransform, transition: swipeTransition }}
+                                                    className={`${bClass} relative z-10 bg-white dark:bg-slate-800 swipe-option ${isEliminated && !sessionAns ? 'opacity-50 grayscale bg-slate-50 dark:bg-slate-900 border-dashed' : ''}`}
                                                 >
-                                                    <span className={`font-black text-blue-600 dark:text-blue-400 shrink-0 mt-0.5 ${isEliminated && !sessionAns ? 'line-through' : ''}`}>{k}</span>
-                                                    <span className={`${isEliminated && !sessionAns ? 'line-through italic text-slate-400 dark:text-slate-500' : ''}`}>{v}</span>
+                                                    <div className="flex gap-4 items-start w-full pointer-events-none">
+                                                        <span className={`font-black text-blue-600 dark:text-blue-400 shrink-0 mt-0.5 ${isEliminated && !sessionAns ? 'line-through' : ''}`}>{k}</span>
+                                                        <span className={`text-left ${isEliminated && !sessionAns ? 'line-through italic text-slate-400 dark:text-slate-500' : ''}`}>{v}</span>
+                                                    </div>
                                                 </button>
+
                                             </div>
                                         );
                                     })}
@@ -803,109 +891,6 @@
                 );
             };
 
-            const Estatisticas = () => (
-                <div className="max-w-6xl mx-auto p-3 md:p-8 animate-in slide-in-from-bottom-4">
-                    <button onClick={() => setScreen('dashboard')} className="mb-6 md:mb-8 font-bold text-slate-400 dark:text-slate-500 hover:text-slate-900 dark:hover:text-white text-sm md:text-base">← Voltar ao Dashboard</button>
-                    
-                    <div className="bg-white dark:bg-slate-800 p-8 md:p-10 rounded-[2rem] shadow-xl border dark:border-slate-700 border-slate-200 mb-8 text-center relative overflow-hidden">
-                        <h2 className="text-2xl md:text-3xl font-black text-slate-800 dark:text-white mb-6 uppercase tracking-tighter">Big Data do Concurseiro</h2>
-                        <div className="bg-blue-50 dark:bg-blue-900/20 p-6 md:p-8 rounded-[2rem] border dark:border-blue-700 border-blue-100 inline-block min-w-[200px] md:min-w-[250px]">
-                            <div className="text-5xl md:text-6xl font-black text-blue-600 dark:text-blue-400 mb-2">{Object.keys(history).length}</div>
-                            <div className="text-xs md:text-sm font-bold text-blue-800 dark:text-blue-300 uppercase tracking-widest">Questões na Nuvem</div>
-                        </div>
-                    </div>
-
-                    <div className="bg-white dark:bg-slate-800 p-6 md:p-12 rounded-[3rem] shadow-xl border dark:border-slate-700 border-slate-200 mb-8">
-                        <h3 className="text-xl md:text-2xl font-black text-slate-800 dark:text-white mb-2">Diagnóstico de Guerra (Por Assunto)</h3>
-                        <p className="text-slate-500 dark:text-slate-400 mb-6 md:mb-10 font-medium text-sm md:text-base">Bata as metas do edital atacando o que você nunca viu ou o que errou.</p>
-                        
-                        <div className="space-y-4 md:space-y-6">
-                            {Object.entries(subjectsData).map(([name, data]) => {
-                                const coverage = Math.round((data.attempted / data.total) * 100);
-                                const accuracy = data.attempted > 0 ? Math.round((data.correct / data.attempted) * 100) : 0;
-                                
-                                return (
-                                    <div key={name} className="p-4 md:p-6 border-2 dark:border-slate-700 border-slate-50 rounded-[2rem] bg-slate-50/30 dark:bg-slate-700/20 flex flex-col md:flex-row md:items-center gap-4 md:gap-6 group hover:bg-white dark:hover:bg-slate-700 hover:border-blue-100 dark:hover:border-blue-600 transition-all">
-                                        <div className="flex-1 min-w-0">
-                                            <span className="text-[10px] font-black uppercase text-slate-400 dark:text-slate-500 tracking-[0.2em] block mb-1">{data.area}</span>
-                                            <h4 className="font-bold text-slate-800 dark:text-white leading-tight mb-3 text-sm md:text-base line-clamp-2">{name}</h4>
-                                            <div className="flex gap-4 md:gap-6">
-                                                <div>
-                                                    <span className="text-[10px] font-bold text-slate-400 dark:text-slate-500 uppercase block">Cobertura</span>
-                                                    <span className={`text-lg md:text-lg font-black ${coverage > 80 ? 'text-green-500' : 'text-orange-500'}`}>{coverage}%</span>
-                                                </div>
-                                                <div>
-                                                    <span className="text-[10px] font-bold text-slate-400 dark:text-slate-500 uppercase block">Acerto</span>
-                                                    <span className={`text-lg md:text-lg font-black ${accuracy > 70 ? 'text-blue-600 dark:text-blue-400' : 'text-red-500'}`}>{accuracy}%</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        
-                                        <div className="flex gap-2 flex-shrink-0">
-                                            <button onClick={() => startQuiz(data.questions.filter(q => !history[q.id]), "Inéditas: " + name, "study")} className="flex-1 md:flex-none px-4 md:px-6 py-2 md:py-3 bg-slate-900 dark:bg-slate-700 text-white text-[10px] md:text-xs font-black rounded-2xl hover:bg-slate-700 dark:hover:bg-slate-600 shadow-md whitespace-nowrap transition-all">SÓ INÉDITAS</button>
-                                            <button onClick={() => startQuiz(data.questions.filter(q => history[q.id] && !history[q.id][history[q.id].length-1].isCorrect), "Revisar Erros: " + name, "study")} className="flex-1 md:flex-none px-4 md:px-6 py-2 md:py-3 bg-red-100 dark:bg-red-900/30 text-red-600 dark:text-red-400 text-[10px] md:text-xs font-black rounded-2xl hover:bg-red-200 dark:hover:bg-red-900/50 transition-all">SÓ ERROS</button>
-                                        </div>
-                                    </div>
-                                );
-                            })}
-                        </div>
-                    </div>
-
-                    <div className="bg-white dark:bg-slate-800 p-6 md:p-12 rounded-[3rem] shadow-xl border dark:border-slate-700 border-slate-200">
-                        <h3 className="text-xl md:text-2xl font-black text-slate-800 dark:text-white mb-2">Micro-Análise de Dificuldade</h3>
-                        <p className="text-slate-500 dark:text-slate-400 mb-6 md:mb-8 font-medium text-sm md:text-base">Compare seu rendimento por nível de complexidade em cada área.</p>
-                        
-                        <div className="space-y-6 md:space-y-8">
-                            {Object.entries(difficultyStats.byArea).map(([area, diffs]) => {
-                                const theme = getTheme(area);
-                                
-                                const totalAreaQs = Object.values(diffs).reduce((a, b) => a + b.total, 0);
-                                const totalAreaAttempted = Object.values(diffs).reduce((a, b) => a + b.attempted, 0);
-
-                                return (
-                                    <div key={area} className={`p-5 md:p-6 rounded-[2rem] ${theme.bg} border ${theme.border}`}>
-                                        <div className="mb-4 md:mb-6">
-                                            <h4 className={`text-lg md:text-base font-black ${theme.text} uppercase tracking-tight`}>{area}</h4>
-                                            <p className={`text-xs font-bold ${theme.text} opacity-70 mt-1`}>{totalAreaAttempted} de {totalAreaQs} questões totais resolvidas</p>
-                                        </div>
-                                        
-                                        <div className="grid grid-cols-1 md:grid-cols-3 gap-3 md:gap-4">
-                                            {['fácil', 'médio', 'difícil'].map(diff => {
-                                                const data = diffs[diff];
-                                                const accuracy = data.attempted > 0 ? Math.round((data.correct / data.attempted) * 100) : 0;
-                                                const style = getDifficultyStyle(diff);
-                                                const Icon = style.icon;
-
-                                                return (
-                                                    <div key={diff} className="bg-white dark:bg-slate-700 p-3 md:p-4 rounded-xl shadow-sm">
-                                                        <div className="flex items-center gap-2 mb-3">
-                                                            <div className={`p-1.5 rounded ${style.bg} ${style.text}`}>
-                                                                <Icon />
-                                                            </div>
-                                                            <span className="text-xs font-bold text-slate-600 dark:text-slate-300 uppercase">{style.label}</span>
-                                                            <span className="ml-auto text-xs font-bold text-slate-400 dark:text-slate-500">{data.attempted}/{data.total}</span>
-                                                        </div>
-                                                        
-                                                        <div className="flex items-end gap-2">
-                                                            <span className={`text-2xl md:text-3xl font-black ${style.text}`}>{accuracy}%</span>
-                                                            <span className="text-[10px] text-slate-400 dark:text-slate-500 mb-1 uppercase font-bold">acerto</span>
-                                                        </div>
-                                                        
-                                                        <div className="w-full bg-slate-100 dark:bg-slate-600 rounded-full h-1.5 mt-2 overflow-hidden">
-                                                            <div className={`h-full ${style.bg} transition-all duration-1000`} style={{width: `${accuracy}%`}}></div>
-                                                        </div>
-                                                    </div>
-                                                );
-                                            })}
-                                        </div>
-                                    </div>
-                                );
-                            })}
-                        </div>
-                    </div>
-                </div>
-            );
-
             return (
                 <div className="min-h-screen transition-colors duration-300">
                     <DifficultySelector />
@@ -913,6 +898,7 @@
                     {screen === 'dashboard' && <Dashboard />}
                     {screen === 'quiz' && <Quiz />}
                     {screen === 'estatisticas' && <Estatisticas />}
+                    {screen === 'revisao_emergencial' && <RevisaoEmergencial />}
                     {screen === 'caderno' && (
                         <div className="max-w-4xl mx-auto p-4 md:p-8 animate-in slide-in-from-bottom-4">
                             <button onClick={() => setScreen('dashboard')} className="mb-6 md:mb-8 font-bold text-slate-400 dark:text-slate-500 hover:text-slate-900 dark:hover:text-white">← Voltar</button>
