@@ -61,6 +61,7 @@
             Check: () => <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3"><polyline points="20 6 9 17 4 12"/></svg>,
             AlertCircle: () => <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>,
             Loader: () => <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3"><path d="M21 12a9 9 0 1 1-6.219-8.56" style={{animation: 'spin 1s linear infinite'}}/></svg>,
+            Star: ({filled}) => <svg width="18" height="18" viewBox="0 0 24 24" fill={filled ? "currentColor" : "none"} stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
         };
 
         const themeColors = {
@@ -103,8 +104,11 @@
             const [screen, setScreen] = useState('dashboard');
             const [quizConfig, setQuizConfig] = useState({ questions: [], title: "", mode: "study" });
             const [idx, setIdx] = useState(0);
+            
             const [history, setHistory] = useState({});
+            const [favorites, setFavorites] = useState(() => JSON.parse(localStorage.getItem(`genomasus_fav_${currentUser}`) || "[]"));
             const [sessionAnswers, setSessionAnswers] = useState({});
+            
             const [darkMode, setDarkMode] = useState(() => localStorage.getItem('genomasus_dark_mode') === 'true');
             const [syncStatus, setSyncStatus] = useState('idle'); 
             const [syncMessage, setSyncMessage] = useState('');
@@ -115,14 +119,16 @@
 
             const activeBank = useMemo(() => window.questionBank || [], []);
 
-            // Controle do Dark Mode no HTML
             useEffect(() => {
                 if (darkMode) document.documentElement.classList.add('dark');
                 else document.documentElement.classList.remove('dark');
                 localStorage.setItem('genomasus_dark_mode', darkMode);
             }, [darkMode]);
 
-            // NOVO: Busca TODOS os usuários da nuvem na tela de Login
+            useEffect(() => {
+                if (currentUser) localStorage.setItem(`genomasus_fav_${currentUser}`, JSON.stringify(favorites));
+            }, [favorites, currentUser]);
+
             useEffect(() => {
                 const fetchGlobalUsers = async () => {
                     if (!CSV_URL || currentUser) return;
@@ -149,15 +155,13 @@
                         setIsLoadingGlobalUsers(false);
                     }
                 };
-
                 fetchGlobalUsers();
             }, [currentUser]);
 
-            // Sincronização do Histórico do Usuário Ativo
             const syncFromCloud = async (userName, showMessage = true) => {
                 if (!CSV_URL) return;
                 setSyncStatus('syncing');
-                if (showMessage) setSyncMessage('Sincronizando com a nuvem...');
+                if (showMessage) setSyncMessage('Sincronizando...');
                 
                 try {
                     const response = await fetch(CSV_URL + "&t=" + new Date().getTime());
@@ -165,17 +169,30 @@
                     const rows = text.split('\n').map(row => row.split(','));
                     
                     const newHistory = {};
+                    const newFavorites = new Set();
+
                     rows.slice(1).forEach(row => {
                         const rowUser = row[1]?.replace(/"/g, '').trim().toLowerCase();
-                        const rowId = parseInt(row[2]?.replace(/"/g, ''));
+                        const rawId = parseInt(row[2]?.replace(/"/g, ''));
                         const rowStatus = row[3]?.replace(/"/g, '').trim();
 
-                        if (rowUser === userName.toLowerCase() && !isNaN(rowId)) {
-                            if (!newHistory[rowId]) newHistory[rowId] = [];
-                            newHistory[rowId].push({ ans: "?", isCorrect: rowStatus === "ACERTO", date: row[0] });
+                        if (rowUser === userName.toLowerCase() && !isNaN(rawId)) {
+                            // SE ID > 0: É histórico de estudo normal
+                            if (rawId > 0 && (rowStatus === "ACERTO" || rowStatus === "ERRO")) {
+                                if (!newHistory[rawId]) newHistory[rawId] = [];
+                                newHistory[rawId].push({ ans: "?", isCorrect: rowStatus === "ACERTO", date: row[0] });
+                            } 
+                            // SE ID < 0: É ação da estrela (Arquitetura blindada)
+                            else if (rawId < 0) {
+                                const targetId = Math.abs(rawId);
+                                if (rowStatus === "FAVORITOU") newFavorites.add(targetId);
+                                else if (rowStatus === "DESFAVORITOU") newFavorites.delete(targetId);
+                            }
                         }
                     });
+                    
                     setHistory(newHistory);
+                    setFavorites(Array.from(newFavorites));
                     setSyncStatus('success');
                     if (showMessage) setSyncMessage('Sincronizado');
                     setLastSyncTime(new Date().toLocaleTimeString('pt-BR', { hour: '2-digit', minute: '2-digit' }));
@@ -187,7 +204,6 @@
                 }
             };
 
-            // Loop de Sincronização em Background (após login)
             useEffect(() => {
                 if (!currentUser) return;
                 syncFromCloud(currentUser, false);
@@ -195,8 +211,7 @@
                 return () => clearInterval(interval);
             }, [currentUser]);
 
-            // Enviar Resposta para a Nuvem
-            const syncAnswerToCloud = async (userName, qId, statusText) => {
+            const syncCommandToCloud = async (userName, qId, statusText) => {
                 try {
                     setSyncStatus('syncing');
                     const formID = "1FAIpQLSdLep-1NlhMCXeeGEVjZPXh-unPvuSkwqkNvfAuYwyCPDKzSw";
@@ -225,6 +240,7 @@
                 if (formatted) {
                     localStorage.setItem('genomasus_active_user', formatted);
                     setCurrentUser(formatted);
+                    setFavorites(JSON.parse(localStorage.getItem(`genomasus_fav_${formatted}`) || "[]"));
                 }
             };
 
@@ -246,7 +262,21 @@
                     return { ...prev, [qId]: [...qHist, { ans: option, isCorrect, date: new Date().toISOString() }] };
                 });
 
-                syncAnswerToCloud(currentUser, qId, statusText);
+                // Envia ID Positivo para Histórico
+                syncCommandToCloud(currentUser, qId, statusText);
+            };
+
+            const toggleFavorite = (qId) => {
+                const isFav = favorites.includes(qId);
+                const newStatus = isFav ? "DESFAVORITOU" : "FAVORITOU";
+                
+                setFavorites(prev => {
+                    if (isFav) return prev.filter(id => id !== qId);
+                    return [...prev, qId];
+                });
+
+                // Envia ID Negativo para proteger o formulário de estatísticas
+                syncCommandToCloud(currentUser, -qId, newStatus);
             };
 
             const startQuiz = (questions, title, mode) => {
@@ -345,10 +375,10 @@
             const SyncIndicator = () => {
                 return (
                     <div className={`fixed bottom-4 right-4 md:bottom-6 md:right-6 px-4 py-3 rounded-full border backdrop-blur-sm text-xs font-bold transition-all z-40 ${
-                        syncStatus === 'idle' ? 'opacity-0 pointer-events-none' :
-                        syncStatus === 'syncing' ? 'bg-blue-500/90 dark:bg-blue-600/90 border-blue-400 text-white' :
-                        syncStatus === 'success' ? 'bg-green-500/90 dark:bg-green-600/90 border-green-400 text-white' :
-                        'bg-red-500/90 dark:bg-red-600/90 border-red-400 text-white'
+                        syncStatus === 'idle' ? 'opacity-0 pointer-events-none translate-y-4' :
+                        syncStatus === 'syncing' ? 'bg-blue-500/90 dark:bg-blue-600/90 border-blue-400 text-white translate-y-0' :
+                        syncStatus === 'success' ? 'bg-emerald-500/90 dark:bg-emerald-600/90 border-emerald-400 text-white translate-y-0' :
+                        'bg-rose-500/90 dark:bg-rose-600/90 border-rose-400 text-white translate-y-0'
                     }`}>
                         <div className="flex items-center gap-2">
                             {syncStatus === 'syncing' && <Icons.Loader />}
@@ -475,22 +505,33 @@
                             </div>
                         </div>
 
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 mb-10">
                             <button onClick={() => setScreen('caderno')} className="bg-white dark:bg-slate-800 hover:bg-red-50 dark:hover:bg-red-900/10 border dark:border-slate-700 border-slate-200 rounded-[2rem] p-6 transition-all duration-300 shadow-lg hover:shadow-2xl hover:-translate-y-1 flex justify-between items-center group">
                                 <div className="flex items-center gap-4">
                                     <div className="p-3 bg-red-500 text-white rounded-xl shadow-md"><Icons.BookX /></div>
                                     <div className="text-left">
-                                        <h2 className="text-xl font-black text-slate-800 dark:text-white group-hover:text-red-600 dark:group-hover:text-red-400 transition-colors">Caderno de Erros</h2>
-                                        <p className="text-sm text-slate-500 dark:text-slate-400 font-medium">{errorQuestions.length} revisões de elite</p>
+                                        <h2 className="text-xl font-black text-slate-800 dark:text-white group-hover:text-red-600 dark:group-hover:text-red-400 transition-colors">Caderno</h2>
+                                        <p className="text-sm text-slate-500 dark:text-slate-400 font-medium">{errorQuestions.length} erros</p>
                                     </div>
                                 </div>
                             </button>
+                            
+                            <button onClick={() => startQuiz(activeBank.filter(q => favorites.includes(q.id)), "Questões Favoritas", "study")} className="bg-white dark:bg-slate-800 hover:bg-amber-50 dark:hover:bg-amber-900/10 border dark:border-slate-700 border-slate-200 hover:border-amber-200 dark:hover:border-amber-700 rounded-[2rem] p-6 transition-all duration-300 shadow-lg hover:shadow-2xl hover:-translate-y-1 flex justify-between items-center group">
+                                <div className="flex items-center gap-4">
+                                    <div className="p-3 bg-amber-500 text-white rounded-xl shadow-md"><Icons.Star filled={true} /></div>
+                                    <div className="text-left">
+                                        <h2 className="text-xl font-black text-slate-800 dark:text-white group-hover:text-amber-600 dark:group-hover:text-amber-400 transition-colors">Favoritas</h2>
+                                        <p className="text-sm text-slate-500 dark:text-slate-400 font-medium">{favorites.length} salvas</p>
+                                    </div>
+                                </div>
+                            </button>
+
                             <button onClick={() => setScreen('estatisticas')} className="bg-white dark:bg-slate-800 hover:bg-blue-50 dark:hover:bg-blue-900/10 border dark:border-slate-700 border-slate-200 rounded-[2rem] p-6 transition-all duration-300 shadow-lg hover:shadow-2xl hover:-translate-y-1 flex justify-between items-center group">
                                 <div className="flex items-center gap-4">
                                     <div className="p-3 bg-blue-600 text-white rounded-xl shadow-md"><Icons.BarChart /></div>
                                     <div className="text-left">
-                                        <h2 className="text-xl font-black text-slate-800 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">Diagnóstico Completo</h2>
-                                        <p className="text-sm text-slate-500 dark:text-slate-400 font-medium">Métricas por Nível e Área</p>
+                                        <h2 className="text-xl font-black text-slate-800 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">Estatísticas</h2>
+                                        <p className="text-sm text-slate-500 dark:text-slate-400 font-medium">Diagnóstico</p>
                                     </div>
                                 </div>
                             </button>
@@ -541,6 +582,7 @@
                 const sessionAns = sessionAnswers[currentQ?.id];
                 const diffStyle = getDifficultyStyle((currentQ?.difficulty || 'fácil').toLowerCase());
                 const DiffIcon = diffStyle.icon;
+                const isFav = currentQ ? favorites.includes(currentQ.id) : false;
                 
                 if (!currentQ) return null;
                 
@@ -558,12 +600,19 @@
                             </div>
 
                             <div className="p-6 md:p-10">
-                                <div className="flex items-center gap-2 mb-6 flex-wrap">
-                                    <span className={`text-[10px] font-black uppercase tracking-widest px-3 py-1 rounded-lg ${theme.bg} ${theme.text}`}>{currentQ.subject}</span>
-                                    <div className={`flex items-center gap-1.5 px-3 py-1 rounded-lg ${diffStyle.bg} ${diffStyle.text}`}>
-                                        <DiffIcon />
-                                        <span className="text-[10px] font-black uppercase tracking-widest">{diffStyle.label}</span>
+                                <div className="flex items-center justify-between gap-2 mb-6 flex-wrap">
+                                    <div className="flex items-center gap-2">
+                                        <span className={`text-[10px] font-black uppercase tracking-widest px-3 py-1 rounded-lg ${theme.bg} ${theme.text}`}>{currentQ.subject}</span>
+                                        <div className={`flex items-center gap-1.5 px-3 py-1 rounded-lg ${diffStyle.bg} ${diffStyle.text}`}>
+                                            <DiffIcon />
+                                            <span className="text-[10px] font-black uppercase tracking-widest">{diffStyle.label}</span>
+                                        </div>
                                     </div>
+                                    
+                                    <button onClick={() => toggleFavorite(currentQ.id)} className={`flex items-center gap-1.5 px-3 py-1 rounded-lg border-2 transition-all hover:-translate-y-0.5 ${isFav ? 'bg-amber-100 border-amber-300 text-amber-600 dark:bg-amber-900/40 dark:border-amber-700/50 dark:text-amber-400' : 'bg-slate-50 border-slate-200 text-slate-400 dark:bg-slate-800 dark:border-slate-700 hover:border-amber-300 hover:text-amber-500'}`}>
+                                        <Icons.Star filled={isFav} />
+                                        <span className="text-[10px] font-black uppercase tracking-widest hidden sm:inline">{isFav ? 'Salva' : 'Salvar'}</span>
+                                    </button>
                                 </div>
                                 <h2 className="text-xl md:text-2xl font-bold text-slate-800 dark:text-white mb-8 leading-relaxed">{currentQ.text}</h2>
                                 <div className="space-y-3">
@@ -597,7 +646,6 @@
                 <div className="max-w-6xl mx-auto p-3 md:p-8 animate-in slide-in-from-bottom-4">
                     <button onClick={() => setScreen('dashboard')} className="mb-6 md:mb-8 font-bold text-slate-400 dark:text-slate-500 hover:text-slate-900 dark:hover:text-white text-sm md:text-base">← Voltar ao Dashboard</button>
                     
-                    {/* BLOCO 1: VISÃO GERAL (BIG DATA) */}
                     <div className="bg-white dark:bg-slate-800 p-8 md:p-10 rounded-[2rem] shadow-xl border dark:border-slate-700 border-slate-200 mb-8 text-center relative overflow-hidden">
                         <h2 className="text-2xl md:text-3xl font-black text-slate-800 dark:text-white mb-6 uppercase tracking-tighter">Big Data do Concurseiro</h2>
                         <div className="bg-blue-50 dark:bg-blue-900/20 p-6 md:p-8 rounded-[2rem] border dark:border-blue-700 border-blue-100 inline-block min-w-[200px] md:min-w-[250px]">
@@ -606,7 +654,6 @@
                         </div>
                     </div>
 
-                    {/* BLOCO 2: DIAGNÓSTICO POR ASSUNTO (INÉDITAS / ERROS) */}
                     <div className="bg-white dark:bg-slate-800 p-6 md:p-12 rounded-[3rem] shadow-xl border dark:border-slate-700 border-slate-200 mb-8">
                         <h3 className="text-xl md:text-2xl font-black text-slate-800 dark:text-white mb-2">Diagnóstico de Guerra (Por Assunto)</h3>
                         <p className="text-slate-500 dark:text-slate-400 mb-6 md:mb-10 font-medium text-sm md:text-base">Bata as metas do edital atacando o que você nunca viu ou o que errou.</p>
@@ -643,7 +690,6 @@
                         </div>
                     </div>
 
-                    {/* BLOCO 3: MICRO-ANÁLISE DE DIFICULDADE (FÁCIL/MÉDIO/DIFÍCIL) */}
                     <div className="bg-white dark:bg-slate-800 p-6 md:p-12 rounded-[3rem] shadow-xl border dark:border-slate-700 border-slate-200">
                         <h3 className="text-xl md:text-2xl font-black text-slate-800 dark:text-white mb-2">Micro-Análise de Dificuldade</h3>
                         <p className="text-slate-500 dark:text-slate-400 mb-6 md:mb-8 font-medium text-sm md:text-base">Compare seu rendimento por nível de complexidade em cada área.</p>
@@ -717,18 +763,6 @@
 
         const root = ReactDOM.createRoot(document.getElementById('root'));
         root.render(<App />);
-    </script>
-
-    <script>
-        if ('serviceWorker' in navigator) {
-            window.addEventListener('load', () => {
-                navigator.serviceWorker.register('./sw.js').then(reg => {
-                    console.log('Modo Offline Ativado! SW registrado com sucesso.', reg.scope);
-                }).catch(err => {
-                    console.warn('Falha ao ativar o Modo Offline: Crie o arquivo sw.js na mesma pasta.', err);
-                });
-            });
-        }
     </script>
 </body>
 </html>
