@@ -64,13 +64,10 @@
         };
 
         const App = () => {
-            // Gerenciamento de Usuários
             const [currentUser, setCurrentUser] = useState(() => localStorage.getItem('genomasus_active_user'));
             const [userList, setUserList] = useState(() => JSON.parse(localStorage.getItem('genomasus_user_list') || "[]"));
             const [showNewUserForm, setShowNewUserForm] = useState(false);
             const [loginInput, setLoginInput] = useState('');
-
-            // Estado do Quiz
             const [screen, setScreen] = useState('dashboard');
             const [quizConfig, setQuizConfig] = useState({ questions: [], title: "", mode: "study" });
             const [idx, setIdx] = useState(0);
@@ -79,10 +76,8 @@
             const [sessionAnswers, setSessionAnswers] = useState({});
             const [hideAnswered, setHideAnswered] = useState(false);
 
-            // Tenta pegar o banco de questões global com verificação
-            const activeBank = window.questionBank || [];
+            const activeBank = useMemo(() => window.questionBank || [], []);
 
-            // Carrega dados do usuário logado
             useEffect(() => {
                 if (currentUser) {
                     const savedHist = localStorage.getItem(`genomasus_hist_${currentUser}`);
@@ -92,7 +87,6 @@
                 }
             }, [currentUser]);
 
-            // Salva dados do usuário logado
             useEffect(() => {
                 if (currentUser) {
                     localStorage.setItem(`genomasus_hist_${currentUser}`, JSON.stringify(history));
@@ -121,12 +115,28 @@
 
             const handleAnswer = (qId, option) => {
                 if (sessionAnswers[qId]) return;
+                
                 const question = quizConfig.questions.find(q => q.id === qId);
                 const isCorrect = question.correct === option;
+                const statusText = isCorrect ? "ACERTO" : "ERRO";
+
                 setSessionAnswers(prev => ({ ...prev, [qId]: option }));
                 setHistory(prev => {
                     const qHist = prev[qId] || [];
                     return { ...prev, [qId]: [...qHist, { ans: option, isCorrect, date: new Date().toISOString() }] };
+                });
+
+                // ENVIO PARA O GOOGLE SHEETS
+                const formID = "1FAIpQLSdLep-1NlhMCXeeGEVjZPXh-unPvuSkwqkNvfAuYwyCPDKzSw";
+                const formData = new URLSearchParams();
+                formData.append("entry.2127267500", currentUser);
+                formData.append("entry.348493144", qId);
+                formData.append("entry.1747805128", statusText);
+
+                fetch(`https://docs.google.com/forms/d/e/${formID}/formResponse`, {
+                    method: 'POST',
+                    mode: 'no-cors',
+                    body: formData
                 });
             };
 
@@ -134,7 +144,7 @@
                 let toSolve = [...questions];
                 if (hideAnswered) toSolve = toSolve.filter(q => !history[q.id] || history[q.id].length === 0);
                 if (toSolve.length === 0) {
-                    alert("Tudo resolvido neste filtro!");
+                    alert("Filtro concluído!");
                     return;
                 }
                 setQuizConfig({ questions: toSolve.sort(() => 0.5 - Math.random()), title, mode });
@@ -158,13 +168,12 @@
 
             const errorQuestions = activeBank.filter(q => cadernoStatus[q.id] === 'red' || cadernoStatus[q.id] === 'yellow');
 
-            // --- TELA DE SELEÇÃO DE PERFIL ---
             if (!currentUser) {
                 return (
                     <div className="min-h-screen flex items-center justify-center bg-slate-100 p-6">
                         <div className="bg-white p-10 rounded-[3rem] shadow-2xl w-full max-w-md border border-slate-200">
                             <div className="bg-blue-600 w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-6 text-white shadow-lg"><Icons.Trophy /></div>
-                            <h1 className="text-3xl font-black text-center text-slate-800 mb-8">Quem vai estudar?</h1>
+                            <h1 className="text-3xl font-black text-center text-slate-800 mb-8 tracking-tighter">Entrar no Perfil</h1>
                             
                             <div className="space-y-3 mb-8 max-h-60 overflow-y-auto pr-2 hide-scrollbar">
                                 {userList.map(user => (
@@ -177,19 +186,13 @@
 
                             {!showNewUserForm ? (
                                 <button onClick={() => setShowNewUserForm(true)} className="w-full py-4 rounded-2xl border-2 border-dashed border-slate-300 text-slate-500 font-bold hover:bg-slate-50 flex items-center justify-center gap-2 transition-all">
-                                    <Icons.Plus /> Criar novo perfil
+                                    <Icons.Plus /> Novo Aluno
                                 </button>
                             ) : (
                                 <form onSubmit={(e) => { e.preventDefault(); handleLogin(loginInput); }} className="animate-in slide-in-from-bottom-2">
-                                    <input 
-                                        autoFocus
-                                        className="w-full p-4 rounded-2xl bg-slate-50 border-2 border-blue-500 outline-none font-bold text-lg mb-3"
-                                        placeholder="Nome do novo aluno..."
-                                        value={loginInput}
-                                        onChange={e => setLoginInput(e.target.value)}
-                                    />
+                                    <input autoFocus className="w-full p-4 rounded-2xl bg-slate-50 border-2 border-blue-500 outline-none font-bold text-lg mb-3" placeholder="Seu nome..." value={loginInput} onChange={e => setLoginInput(e.target.value)} />
                                     <div className="flex gap-2">
-                                        <button type="submit" className="flex-1 bg-blue-600 text-white font-black py-4 rounded-2xl shadow-lg">Começar</button>
+                                        <button type="submit" className="flex-1 bg-blue-600 text-white font-black py-4 rounded-2xl shadow-lg">Criar</button>
                                         <button type="button" onClick={() => setShowNewUserForm(false)} className="px-6 bg-slate-200 text-slate-600 font-bold rounded-2xl">X</button>
                                     </div>
                                 </form>
@@ -199,37 +202,35 @@
                 );
             }
 
-            // --- COMPONENTES DO PAINEL ---
             const Dashboard = () => (
                 <div className="max-w-7xl mx-auto p-4 md:p-8 animate-in fade-in">
                     <div className="flex justify-between items-center mb-8">
                         <div className="flex items-center gap-3">
-                            <div className="bg-slate-900 p-2.5 rounded-xl text-white"><Icons.Trophy /></div>
-                            <h1 className="text-2xl font-black text-slate-900 tracking-tight">GENOMA SUS</h1>
-                            <span className="bg-blue-100 text-blue-800 text-[10px] font-black px-2 py-1 rounded-md">{activeBank.length} Qs</span>
+                            <div className="bg-slate-900 p-2.5 rounded-xl text-white shadow-lg"><Icons.Trophy /></div>
+                            <h1 className="text-2xl font-black text-slate-900 tracking-tighter">GENOMA SUS</h1>
                         </div>
                         <div className="flex items-center gap-3 bg-white px-4 py-2 rounded-full border border-slate-200 shadow-sm">
-                            <span className="text-sm font-bold text-slate-600 capitalize">Aluno: <span className="text-blue-600">{currentUser}</span></span>
+                            <span className="text-sm font-bold text-slate-600 capitalize">Olá, <span className="text-blue-600">{currentUser}</span></span>
                             <button onClick={handleLogout} className="text-slate-300 hover:text-red-500 transition-colors"><Icons.LogOut /></button>
                         </div>
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
-                        <button onClick={() => setScreen('caderno')} className="bg-red-50 hover:bg-red-100 border border-red-200 rounded-[2rem] p-6 transition-all flex justify-between items-center group">
+                        <button onClick={() => setScreen('caderno')} className="bg-white hover:bg-red-50 border border-slate-200 hover:border-red-200 rounded-[2rem] p-6 transition-all flex justify-between items-center shadow-sm group">
                             <div className="flex items-center gap-4">
                                 <div className="p-3 bg-red-500 text-white rounded-xl shadow-lg"><Icons.BookX /></div>
                                 <div className="text-left">
-                                    <h2 className="text-xl font-black text-red-900">Caderno de Erros</h2>
-                                    <p className="text-red-700 font-medium">{errorQuestions.length} revisões</p>
+                                    <h2 className="text-xl font-black text-slate-800 group-hover:text-red-900">Caderno de Erros</h2>
+                                    <p className="text-slate-500 font-medium group-hover:text-red-700">{errorQuestions.length} revisões pendentes</p>
                                 </div>
                             </div>
                         </button>
-                        <button onClick={() => setScreen('estatisticas')} className="bg-blue-50 hover:bg-blue-100 border border-blue-200 rounded-[2rem] p-6 transition-all flex justify-between items-center group">
+                        <button onClick={() => setScreen('estatisticas')} className="bg-white hover:bg-blue-50 border border-slate-200 hover:border-blue-200 rounded-[2rem] p-6 transition-all flex justify-between items-center shadow-sm group">
                             <div className="flex items-center gap-4">
                                 <div className="p-3 bg-blue-500 text-white rounded-xl shadow-lg"><Icons.BarChart /></div>
                                 <div className="text-left">
-                                    <h2 className="text-xl font-black text-blue-900">Desempenho</h2>
-                                    <p className="text-blue-700 font-medium">Ver meu progresso</p>
+                                    <h2 className="text-xl font-black text-slate-800 group-hover:text-blue-900">Meu Desempenho</h2>
+                                    <p className="text-slate-500 font-medium group-hover:text-blue-700">Ver estatísticas detalhadas</p>
                                 </div>
                             </div>
                         </button>
@@ -247,8 +248,8 @@
                                             <h2 className={`text-xl font-black ${theme.text} uppercase tracking-tighter`}>{area}</h2>
                                             <span className="bg-white px-3 py-1 rounded-full text-xs font-bold shadow-sm">{ans}/{areaQs.length}</span>
                                         </div>
-                                        <button onClick={() => startQuiz(areaQs, area, 'study')} className={`w-full py-3 ${theme.highlight} text-white font-bold rounded-xl shadow-md flex items-center justify-center gap-2 hover:opacity-90`}>
-                                            <Icons.Play /> Iniciar Categoria
+                                        <button onClick={() => startQuiz(areaQs, area, 'study')} className={`w-full py-3 ${theme.highlight} text-white font-bold rounded-xl shadow-md flex items-center justify-center gap-2 hover:opacity-90 transition-all`}>
+                                            <Icons.Play /> Iniciar Simulado Categoria
                                         </button>
                                     </div>
                                     <div className="p-2">
@@ -259,9 +260,9 @@
                                                 <div key={subj} className="flex items-center justify-between p-4 hover:bg-slate-50 rounded-2xl transition group">
                                                     <div className="flex-1 pr-4">
                                                         <h4 className="text-sm font-bold text-slate-700 leading-tight mb-1">{subj}</h4>
-                                                        <div className="text-[10px] font-black text-slate-400 uppercase tracking-widest">{subAns}/{subQs.length} Questões</div>
+                                                        <div className="text-[10px] font-black text-slate-400 uppercase tracking-widest">{subAns}/{subQs.length} Questões respondidas</div>
                                                     </div>
-                                                    <button onClick={() => startQuiz(subQs, subj, 'study')} className="shrink-0 bg-slate-900 text-white px-4 py-2 rounded-xl text-xs font-bold opacity-0 group-hover:opacity-100 transition-opacity">Estudar</button>
+                                                    <button onClick={() => startQuiz(subQs, subj, 'study')} className="shrink-0 bg-slate-900 text-white px-4 py-2 rounded-xl text-xs font-bold opacity-0 group-hover:opacity-100 transition-opacity shadow-lg">Estudar</button>
                                                 </div>
                                             );
                                         })}
@@ -273,9 +274,6 @@
                 </div>
             );
 
-            // --- QUIZ, ESTATÍSTICAS E CADERNO (Resumidos para caber) ---
-            // [O código abaixo mantém a lógica anterior, mas conectada ao activeBank]
-
             const Quiz = () => {
                 const currentQ = quizConfig.questions[idx];
                 const theme = getTheme(currentQ?.area);
@@ -286,10 +284,10 @@
                     <div className="max-w-4xl mx-auto p-4 md:p-10 animate-in slide-in-from-right">
                         <header className="flex justify-between items-center mb-8">
                             <button onClick={() => setScreen('dashboard')} className="text-slate-400 font-bold hover:text-slate-800">← Parar</button>
-                            <div className="bg-white px-4 py-1 rounded-full border shadow-sm font-mono font-bold text-slate-500">{idx + 1}/{quizConfig.questions.length}</div>
+                            <div className="bg-white px-4 py-1 rounded-full border shadow-sm font-mono font-bold text-slate-500">{idx + 1} / {quizConfig.questions.length}</div>
                         </header>
                         <div className="bg-white rounded-[3rem] border border-slate-200 shadow-xl overflow-hidden">
-                            <div className="h-2 w-full bg-slate-100"><div className={`h-full ${theme.bar} transition-all`} style={{width:`${((idx+1)/quizConfig.questions.length)*100}%`}}></div></div>
+                            <div className="h-2 w-full bg-slate-100"><div className={`h-full ${theme.bar} transition-all duration-500`} style={{width:`${((idx+1)/quizConfig.questions.length)*100}%`}}></div></div>
                             <div className="p-8 md:p-12">
                                 <span className={`text-[10px] font-black uppercase tracking-widest px-3 py-1 rounded-lg ${theme.bg} ${theme.text} mb-6 inline-block`}>{currentQ.subject}</span>
                                 <h2 className="text-xl md:text-2xl font-bold text-slate-800 mb-10 leading-relaxed">{currentQ.text}</h2>
@@ -315,7 +313,7 @@
                             {sessionAns && (
                                 <div className={`p-8 md:p-12 border-t-2 ${sessionAns === currentQ.correct ? 'bg-green-50/50' : 'bg-red-50/50'}`}>
                                     <div className="bg-white p-6 rounded-3xl shadow-sm border border-slate-100">
-                                        <div className="font-black uppercase text-[10px] tracking-[0.2em] text-slate-400 mb-3">Explicação Técnica</div>
+                                        <div className="font-black uppercase text-[10px] tracking-widest text-slate-400 mb-3 underline">Comentário Técnico</div>
                                         <p className="text-slate-600 leading-relaxed font-medium">{currentQ.explanation}</p>
                                     </div>
                                     <button onClick={() => { if(idx < quizConfig.questions.length - 1) setIdx(i=>i+1); else setScreen('dashboard'); }} className="w-full mt-8 py-5 bg-slate-900 text-white font-black rounded-2xl shadow-lg hover:bg-slate-800 transition-all">PRÓXIMA QUESTÃO</button>
@@ -326,35 +324,35 @@
                 );
             };
 
-            const Estatisticas = () => (
-                <div className="max-w-4xl mx-auto p-8 animate-in slide-in-from-bottom-4">
-                    <button onClick={() => setScreen('dashboard')} className="mb-8 font-bold text-slate-400 hover:text-slate-900">← Voltar</button>
-                    <div className="bg-white p-10 rounded-[3rem] shadow-xl border border-slate-200">
-                        <h2 className="text-3xl font-black text-slate-800 mb-2">Desempenho de <span className="capitalize text-blue-600">{currentUser}</span></h2>
-                        <p className="text-slate-500 mb-10">Métricas baseadas no seu histórico local.</p>
-                        <div className="grid grid-cols-2 gap-4">
-                            <div className="bg-slate-50 p-6 rounded-3xl border border-slate-100 text-center">
-                                <div className="text-4xl font-black text-slate-800">{Object.keys(history).length}</div>
-                                <div className="text-[10px] font-black text-slate-400 uppercase tracking-widest mt-1">Total de Questões Vistas</div>
+            const Estatisticas = () => {
+                const masteryCount = activeBank.filter(q => cadernoStatus[q.id] === 'green').length;
+                return (
+                    <div className="max-w-4xl mx-auto p-8 animate-in slide-in-from-bottom-4">
+                        <button onClick={() => setScreen('dashboard')} className="mb-8 font-bold text-slate-400 hover:text-slate-900">← Voltar</button>
+                        <div className="bg-white p-10 rounded-[3rem] shadow-xl border border-slate-200">
+                            <h2 className="text-3xl font-black text-slate-800 mb-2">Desempenho: <span className="capitalize text-blue-600">{currentUser}</span></h2>
+                            <p className="text-slate-500 mb-10 font-medium">Progresso salvo automaticamente na nuvem Google.</p>
+                            <div className="grid grid-cols-2 gap-4">
+                                <div className="bg-slate-50 p-6 rounded-3xl border border-slate-100 text-center shadow-sm">
+                                    <div className="text-4xl font-black text-slate-800">{Object.keys(history).length}</div>
+                                    <div className="text-[10px] font-black text-slate-400 uppercase tracking-widest mt-1">Questões Resolvidas</div>
+                                </div>
+                                <div className="bg-emerald-50 p-6 rounded-3xl border border-emerald-100 text-center shadow-sm">
+                                    <div className="text-4xl font-black text-emerald-600">{masteryCount}</div>
+                                    <div className="text-[10px] font-black text-emerald-500 uppercase tracking-widest mt-1">Questões Dominadas</div>
+                                </div>
                             </div>
-                            <div className="bg-emerald-50 p-6 rounded-3xl border border-emerald-100 text-center">
-                                <div className="text-4xl font-black text-emerald-600">{activeBank.filter(q => cadernoStatus[q.id] === 'green').length}</div>
-                                <div className="text-[10px] font-black text-emerald-500 uppercase tracking-widest mt-1">Questões Dominadas</div>
+                            <div className="mt-10 p-8 bg-blue-600 rounded-[2.5rem] text-white flex justify-between items-center shadow-2xl shadow-blue-200">
+                                <div><h3 className="text-xl font-bold">Domínio do Edital</h3><p className="opacity-80 font-medium">Status da aprovação</p></div>
+                                <div className="text-6xl font-black">{Math.round((masteryCount / activeBank.length) * 100) || 0}%</div>
                             </div>
-                        </div>
-                        <div className="mt-10 p-8 bg-blue-600 rounded-[2rem] text-white flex justify-between items-center shadow-xl shadow-blue-100">
-                            <div>
-                                <h3 className="text-xl font-bold">Resumo Geral</h3>
-                                <p className="opacity-80">Continue praticando para dominar o edital!</p>
-                            </div>
-                            <div className="text-5xl font-black">{Math.round((activeBank.filter(q => cadernoStatus[q.id] === 'green').length / activeBank.length) * 100)}%</div>
                         </div>
                     </div>
-                </div>
-            );
+                );
+            };
 
             return (
-                <div className="min-h-screen pb-20">
+                <div className="min-h-screen pb-10">
                     {screen === 'dashboard' && <Dashboard />}
                     {screen === 'quiz' && <Quiz />}
                     {screen === 'estatisticas' && <Estatisticas />}
@@ -363,11 +361,11 @@
                             <button onClick={() => setScreen('dashboard')} className="mb-8 font-bold text-slate-400 hover:text-slate-900">← Voltar</button>
                             <div className="bg-white p-10 rounded-[3rem] shadow-xl border border-slate-200">
                                 <div className="flex items-center gap-4 mb-8">
-                                    <div className="p-4 bg-red-100 text-red-600 rounded-2xl"><Icons.BookX /></div>
-                                    <h2 className="text-3xl font-black text-slate-800">Revisão</h2>
+                                    <div className="p-4 bg-red-100 text-red-600 rounded-2xl shadow-sm"><Icons.BookX /></div>
+                                    <h2 className="text-3xl font-black text-slate-800">Revisão Crítica</h2>
                                 </div>
-                                <p className="text-slate-500 mb-8 font-medium italic">Faltam {errorQuestions.length} questões para atingir a meta de 100% de acertos.</p>
-                                <button onClick={() => startQuiz(errorQuestions, "Revisão de Erros", "study")} className="w-full py-5 bg-red-600 text-white font-black rounded-2xl shadow-xl hover:bg-red-700 transition-all">REVISAR ERROS ({errorQuestions.length})</button>
+                                <p className="text-slate-500 mb-10 font-medium leading-relaxed italic">Você tem {errorQuestions.length} questões no caderno. O sistema remove uma questão quando você a acerta duas vezes consecutivas.</p>
+                                <button disabled={errorQuestions.length === 0} onClick={() => startQuiz(errorQuestions, "Revisão Intensiva", "study")} className="w-full py-5 bg-red-600 text-white font-black rounded-2xl shadow-xl hover:bg-red-700 transition-all disabled:opacity-20 disabled:grayscale">REVISAR ERROS ({errorQuestions.length})</button>
                             </div>
                         </div>
                     )}
